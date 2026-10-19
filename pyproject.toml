@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "liner-notes"
+version = "0.1.0"
+description = "A second screen for cliamp: liner notes, lyrics and pop culture that follow what you play."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+media = ["Pillow>=10"]
+generate = ["anthropic>=0.40"]
+dev = ["pytest>=8", "ruff>=0.6", "Pillow>=10"]
+
+[project.scripts]
+liner-notes = "liner_notes.cli:main"
+
+[tool.setuptools]
+packages = ["liner_notes"]
+
+[tool.setuptools.package-data]
+liner_notes = ["web/*", "prompts/*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "E731", "B008"]
