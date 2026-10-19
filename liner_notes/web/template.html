@@ -332,6 +332,8 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
   .lenses { flex-wrap: nowrap; }
   .chip { flex: none; }
 }
+/* Hidden tooltips near the right edge of the chart used to widen the page on phones. clip (not hidden) keeps sticky positioning working. */
+html, body { overflow-x: clip; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .coastline path { stroke-dashoffset: 0; } .coastline circle { opacity: 1; }
@@ -1085,7 +1087,7 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
     stg.artistImg = an ? BRIDGE + '/m/' + D.slug + '/' + SD.artists[an] : null;
     if (stg.artistImg) $('#svArtist').src = stg.artistImg; else $('#svArtist').removeAttribute('src');
     $('#svCover').src = s.cover; toneOf(s).then(t => { if (stg.s === s) SV.style.setProperty('--tone', t); });
-    $('#svEra').textContent = `era ${e.n}/${eras.length} · ${e.name} · ${e.years}`;
+    $('#svEra').textContent = `era ${e.n}/${eras.length} · ${e.name} · ${e.years}${s.draft ? ' · draft notes, AI-written' : ''}`;
     $('#svTitle').textContent = s.title; $('#svBy').textContent = s.artist; paintStamp();
     stg.beats = beatsFor(s, stg.dur, stg.prev); stg.beat = -1; paintTicks(); paintNote(null);
     if (fresh) {
