@@ -19,8 +19,8 @@ dev = ["pytest>=8", "ruff>=0.6", "Pillow>=10"]
 [project.scripts]
 liner-notes = "liner_notes.cli:main"
 
-[tool.setuptools]
-packages = ["liner_notes"]
+[tool.setuptools.packages.find]
+include = ["liner_notes*"]
 
 [tool.setuptools.package-data]
 liner_notes = ["web/*", "prompts/*"]

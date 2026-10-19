@@ -1,0 +1,30 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/jampick/liner-notes/schemas/journey.schema.json",
+ "title": "A Liner Notes journey",
+ "type": "object",
+ "required": ["slug", "title", "titleA", "titleB", "kicker", "description", "fonts", "copy", "eras", "songs"],
+ "properties": {
+  "slug": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+  "title": {"type": "string"},
+  "fonts": {"type": "string", "pattern": "^https://fonts\\.googleapis\\.com/"},
+  "copy": {"type": "object"},
+  "panel": {
+   "type": "object",
+   "properties": {
+    "judges": {"type": "object"},
+    "express": {"type": "object", "properties": {"note": {"type": "string"}, "songs": {"type": "array", "items": {"type": "string"}}}},
+    "quotes": {"type": "object"}
+   }
+  },
+  "eras": {
+   "type": "array", "minItems": 1,
+   "items": {"type": "object", "required": ["n", "name", "years", "from", "to", "essay", "scene"],
+             "properties": {"n": {"type": "integer"}, "from": {"type": "integer"}, "to": {"type": "integer"}, "image": {"type": "string"}}}
+  },
+  "songs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+  "pins": {"type": "object"},
+  "threads": {"type": "array", "items": {"type": "object", "required": ["from", "to", "kind"]}},
+  "review": {"type": "object"}
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/jampick/liner-notes/schemas/culture-year.schema.json",
+ "title": "What else was going on in one year",
+ "type": "object",
+ "required": ["year", "items"],
+ "properties": {
+  "year": {"type": "integer"},
+  "items": {"type": "array", "items": {"type": "object", "required": ["kind", "title", "line", "source"],
+            "properties": {"source": {"type": "string", "pattern": "^https?://"}, "wiki": {"type": "string"}}}}
+ }
+}
