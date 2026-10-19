@@ -6,6 +6,7 @@ import time
 import pytest
 
 from liner_notes import bridge
+from liner_notes.adapters.cliamp import CliampAdapter
 from liner_notes.bank import write_json
 
 from .fake_cliamp import FakeCliamp
@@ -58,7 +59,7 @@ def j(r):
 def server(env, monkeypatch):
     fake, root = env
     lib = bridge.Library([root])
-    now = bridge.Now(lib)
+    now = bridge.Now(lib, CliampAdapter())
 
     def run(lan=False):
         token = "tok-123" if lan else None
@@ -156,4 +157,48 @@ def test_lyrics_and_history(server):
     assert j(req(port, "GET", "/journey/demo.json"))["title"] == "Demo"
     assert j(req(port, "GET", "/song/christopher-cross--sailing.json"))["year"] == 1979
     assert req(port, "GET", "/song/../../etc.json")[0] == 404
+    srv.shutdown()
+
+
+def test_lyrics_only_for_the_song_asked_about(server):
+    fake, run = server
+    srv, port, _ = run()
+    assert j(req(port, "GET", "/lyrics?yt=0Rw-UsRPNqc"))["ok"]
+    assert j(req(port, "GET", "/lyrics?song=massive-attack--protection"))["ok"]
+    r = j(req(port, "GET", "/lyrics?yt=AAAAAAAAAAA&song=christopher-cross--sailing"))
+    assert not r["ok"] and r["error"] == "not playing"
+    srv.shutdown()
+
+
+def test_adapter_without_extras(env, tmp_path):
+    from liner_notes.adapters import Adapter, NowPlaying
+
+    class Plain(Adapter):
+        name = "plain"
+        capabilities = frozenset({"control"})
+
+        def available(self):
+            return True
+
+        def now(self):
+            return NowPlaying(title="Sailing", artist="Christopher Cross", duration=255, position=10, position_at=0, state="paused", source="plain")
+
+        def watch(self, interval=2.0):
+            yield self.now()
+
+        def command(self, op):
+            self.op = op
+            return True
+
+    fake, root = env
+    lib, ad = bridge.Library([root]), Plain()
+    srv = bridge.ThreadingHTTPServer(("127.0.0.1", 0), lambda *a: None)
+    port = srv.server_address[1]
+    srv.RequestHandlerClass = bridge.make_handler(lib, bridge.Now(lib, ad), port)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    n = j(req(port, "GET", "/now"))
+    assert n["song"] == "christopher-cross--sailing" and n["source"] == "plain" and n["position"] == 10
+    assert not j(req(port, "GET", "/lyrics"))["ok"]
+    assert j(req(port, "POST", "/play", {"song": "christopher-cross--sailing"}, origin=f"http://127.0.0.1:{port}"))["error"].endswith("can't jump to a song")
+    assert j(req(port, "POST", "/cmd", {"op": "next"}, origin=f"http://127.0.0.1:{port}"))["ok"] and ad.op == "next"
     srv.shutdown()

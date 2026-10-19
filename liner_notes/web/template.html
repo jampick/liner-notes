@@ -663,7 +663,8 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
         el('button', { class: 'act', type: 'button', 'aria-pressed': String(state.keep.has(s.n)), id: 'keepBtn', onclick: toggleKeep }, state.keep.has(s.n) ? 'Kept' : 'Keep'),
         sync.on ? null : el('button', { class: 'act', type: 'button', onclick: () => playPreview(true) }, 'Again'),
         el('a', { class: 'act', href: s.youtube, target: '_blank', rel: 'noopener' }, 'Full track ↗'),
-        s.apple ? el('a', { class: 'act', href: s.apple, target: '_blank', rel: 'noopener' }, 'Apple Music ↗') : null),
+        s.apple ? el('a', { class: 'act', href: s.apple, target: '_blank', rel: 'noopener' }, 'Apple Music ↗') : null,
+        s.preview && s.apple ? el('span', { class: 'act mono', style: 'border:0', text: 'Preview provided courtesy of iTunes' }) : null),
       el('div', { class: 'status mono', id: 'pstatus' }, sync.on ? syncStatus(s) : s.preview ? (state.companion ? 'Companion mode: previews stay quiet until you press play.' : '') : 'No preview here. The full track link plays it.'));
     const right = el('div', { class: 'right reveal' },
       el('div', { class: 'stamp mono' }, el('span', { text: `Stop ${pad(s.n)} of ${stops.length}` }), el('span', { class: 'era', text: e.name }), el('span', { class: 'yy', text: String(s.year) }), s.album ? el('span', { text: s.album }) : null, s.dissent ? el('span', { class: 'badge', text: 'Close call' }) : null, s.draft ? el('span', { class: 'badge', title: 'Written and sourced, not yet checked by a person', text: 'Draft notes' }) : null),
@@ -815,7 +816,7 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
   const byYt = new Map(stops.filter(s => s.yt).map(s => [s.yt, s]));
   const byId = new Map(stops.map(s => [s.id, s]));
   /* The bridge names the song it matched (any provider, any upload); the page keys stops on their YouTube id. */
-  const norm = j => { if (j && j.song && byId.has(j.song)) j.yt = byId.get(j.song).yt || 'song:' + j.song; return j; };
+  const norm = j => { if (j && !('rawYt' in j)) j.rawYt = j.yt; if (j && j.song && byId.has(j.song)) j.yt = byId.get(j.song).yt || 'song:' + j.song; return j; };
   const followBtn = $('#followBtn');
   const syncStatus = s => !sync.now ? 'Connected to cliamp.' : sync.now.yt === s.yt ? (sync.now.state === 'playing' ? 'Playing in cliamp now.' : 'Paused in cliamp.') : 'Press play to hear this one in cliamp.';
   function setFollow(on) {
@@ -830,8 +831,13 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
   }
   let evs = null;
   function openEvents() { if (evs || !window.EventSource) return; try { evs = new EventSource(BRIDGE + '/events'); evs.onmessage = () => poll(); evs.onerror = () => { evs.close(); evs = null; }; } catch {} }
+  /* A screen on a stand shouldn't sleep mid-song. The browser drops the lock whenever the tab is hidden, so take it again on return.
+     Wake Lock needs a secure context: localhost or HTTPS (liner-notes serve --tailscale), not plain http on a LAN address. */
+  let wake = null;
+  async function keepAwake() { try { if (sync.on && navigator.wakeLock && document.visibilityState === 'visible' && !wake) { wake = await navigator.wakeLock.request('screen'); wake.addEventListener('release', () => { wake = null; }); } } catch {} }
+  document.addEventListener('visibilitychange', keepAwake);
   function openBands() {
-    openEvents();
+    openEvents(); keepAwake();
     if (sync.es || !window.EventSource) return;
     try { sync.es = new EventSource(BRIDGE + '/bands'); sync.es.onmessage = ev => { try { const j = JSON.parse(ev.data); if (j.bands) sync.bands = j.bands; } catch {} }; sync.es.onerror = () => { sync.es.close(); sync.es = null; sync.bands = null; }; } catch {}
   }
@@ -964,7 +970,9 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
     document.head.append(el('script', { src: 'https://www.youtube.com/iframe_api' }));
   }
   function syncVideo(now, pos, playing) {
-    const s = stg.s, want = s && SD && SD.tracks[s.yt] && SD.tracks[s.yt].motion && !vid.failed.has(s.yt) && /^https?:$/.test(location.protocol) ? s.yt : null;
+    /* The muted video is a local, personal-use opt-in (liner-notes build --video): never in a shareable file, and only
+       when cliamp is playing that exact YouTube upload, never laid over audio from another source. */
+    const s = stg.s, want = s && D.video && sync.now && sync.now.rawYt === s.yt && SD && SD.tracks[s.yt] && SD.tracks[s.yt].motion && !vid.failed.has(s.yt) && /^https?:$/.test(location.protocol) ? s.yt : null;
     SV.classList.toggle('cinema', !!want && vid.live);
     const vl = !stg.s ? '•— cliamp' : want && vid.live ? '•— video · muted · synced to cliamp' : `•— cover · ${stg.s.album || stg.s.title}`;
     if ($('#svVisLabel').textContent !== vl) $('#svVisLabel').textContent = vl;
@@ -1037,8 +1045,14 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
     $('#svTrailNote').textContent = P.length ? `${P.length} tonight · ${es.size}/${eras.length} eras` : '';
   }
   async function fetchLyrics(yt) {
-    if (!stg.lyricsOn) return;
-    try { const r = norm(await (await fetch(BRIDGE + '/lyrics', { cache: 'no-store' })).json()); if (r.ok && r.yt === yt && stg.yt === yt) { stg.lines = r.lines; stg.line = -2; } } catch {}
+    /* The first ask can land while cliamp is still switching songs (a Stream Deck key loads, then jumps), so keep asking for this song for a while.
+       The bridge answers only for the song asked about, never for whatever happens to be playing at that instant. */
+    const s = byYt.get(yt), q = yt && yt.startsWith('song:') ? 'song=' + encodeURIComponent(yt.slice(5)) : 'yt=' + encodeURIComponent(yt) + (s && s.id ? '&song=' + encodeURIComponent(s.id) : '');
+    for (const wait of [0, 2, 5, 10, 20]) {
+      if (wait) await new Promise(res => setTimeout(res, wait * 1000));
+      if (!stg.lyricsOn || stg.yt !== yt || stg.lines) return;
+      try { const r = norm(await (await fetch(BRIDGE + '/lyrics?' + q, { cache: 'no-store' })).json()); if (r.ok && r.yt === yt && stg.yt === yt) { stg.lines = r.lines; stg.line = -2; return; } } catch {}
+    }
   }
   /* A play counts if the next one started at least 30 seconds later; a gap of 20 minutes past the end of a song ends the night. */
   async function fetchPlays() {

@@ -33,10 +33,11 @@ import subprocess
 import sys
 import threading
 import time
+import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-from . import cliamp, paths
+from . import adapters, paths
 from .bank import Bank
 from .ids import slug as slugify
 from .ids import youtube_id
@@ -82,21 +83,17 @@ class Library:
 
 
 class Now:
-    """The latest now-playing, kept fresh by cliamp's event stream, with a polling fallback."""
+    """The latest now-playing, kept fresh by the adapter's watch() (cliamp's event stream, D-Bus signals...)."""
 
-    def __init__(self, lib):
-        self.lib, self.snap, self.version = lib, None, 0
+    def __init__(self, lib, adapter):
+        self.lib, self.adapter, self.np, self.version = lib, adapter, None, 0
         self.cond = threading.Condition()
         threading.Thread(target=self._watch, daemon=True).start()
 
-    def _sig(self, snap):
-        t = (snap or {}).get("track") or {}
-        return (t.get("path"), (snap or {}).get("state"), (snap or {}).get("index"), (snap or {}).get("playlist_revision"))
-
-    def _update(self, snap):
+    def _update(self, np):
         with self.cond:
-            changed = self._sig(snap) != self._sig(self.snap)
-            self.snap = snap
+            changed = (np.key() if np else None) != (self.np.key() if self.np else None)
+            self.np = np
             if changed:
                 self.version += 1
                 self.cond.notify_all()
@@ -104,29 +101,30 @@ class Now:
     def _watch(self):
         while True:
             try:
-                self._update(cliamp.state())
-                for ev in cliamp.subscribe():
-                    if ev.get("event") in ("runtime.state", "runtime.playback", "runtime.playlist") and isinstance(ev.get("data"), dict) and "track" in ev["data"]:
-                        self._update(ev["data"])
-            except cliamp.Unavailable:
-                self._update(cliamp.state())
-                time.sleep(2)
-            except Exception:  # keep watching whatever happens
-                time.sleep(2)
+                for np in self.adapter.watch():
+                    self._update(np)
+            except Exception:  # the player went away or isn't there yet; look again shortly
+                pass
+            try:
+                self._update(self.adapter.now())
+            except Exception:
+                pass
+            time.sleep(2)
 
     def payload(self):
-        s = cliamp.state()  # fresh, for the position
-        if s:
-            self._update(s)
-        if not s or not s.get("track"):
-            return {"ok": False}
-        t = s["track"]
+        try:
+            np = self.adapter.now()  # fresh, for the position
+        except Exception:
+            np = None
+        self._update(np)
+        if not np:
+            return {"ok": False, "source": self.adapter.name}
         _, m = self.lib.get()
-        song = m.match(t)
-        return {"ok": True, "state": s.get("state"), "title": t.get("title"), "artist": t.get("artist"),
-                "yt": youtube_id(t.get("path")), "song": song, "journey": self.lib.journey_for(song, s.get("playlist")),
-                "position": s.get("position") or 0, "duration": s.get("duration") or t.get("duration_secs") or 0,
-                "shuffle": s.get("shuffle"), "playlist": s.get("playlist")}
+        song = m.match(np.as_track())
+        return {"ok": True, "source": np.source, "state": np.state, "title": np.title, "artist": np.artist, "album": np.album,
+                "yt": np.ids.get("youtube"), "song": song, "journey": self.lib.journey_for(song, np.ids.get("cliamp_playlist")),
+                "position": np.position_now(), "duration": np.duration, "playlist": np.ids.get("cliamp_playlist"),
+                "can": sorted(self.adapter.capabilities)}
 
     def wait(self, version, timeout=15):
         with self.cond:
@@ -228,12 +226,14 @@ def make_handler(lib, now, port, lan=False, token=None):
             if path == "/lyrics":
                 return self.lyrics(matcher)
             if path == "/history":
-                res = cliamp.result("history", {"limit": 200}) or {}
+                if "history" not in now.adapter.capabilities:
+                    return self.send_json({"ok": False, "plays": [], "error": f"{now.adapter.name} keeps no history"})
+                rows = now.adapter.history(200)
                 out = []
-                for h in res.get("history") or []:
+                for h in rows:
                     t = h.get("track") or {}
                     out.append({"yt": youtube_id(t.get("path")), "song": matcher.match(t), "at": h.get("played_at"), "secs": t.get("duration_secs") or 0})
-                return self.send_json({"ok": bool(res), "plays": out})
+                return self.send_json({"ok": True, "plays": out})
             if path == "/theme":
                 return self.send_json(theme())
             if path in ("/", "/index.html"):
@@ -283,6 +283,8 @@ def make_handler(lib, now, port, lan=False, token=None):
             self.close_connection = True
 
         def bands(self):
+            if "bands" not in now.adapter.capabilities:
+                return self.send_json({"ok": False, "error": f"{now.adapter.name} has no visualizer stream"}, 404)
             self.head(200, "text/event-stream", {"Connection": "keep-alive"})
             try:
                 proc = subprocess.Popen(["cliamp", "visstream", "--fps", "24"], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True)
@@ -300,14 +302,20 @@ def make_handler(lib, now, port, lan=False, token=None):
                 self.close_connection = True
 
         def lyrics(self, matcher):
-            s = cliamp.state() or {}
-            t = s.get("track") or {}
-            k = t.get("path")
-            if not k:
+            """Lyrics for the song the page asks about (?yt= and/or ?song=), and only if it is the one playing."""
+            if "lyrics" not in now.adapter.capabilities:
+                return self.send_json({"ok": False, "error": f"{now.adapter.name} has no lyrics"})
+            np = now.adapter.now()
+            if not np:
                 return self.send_json({"ok": False})
-            out = {"yt": youtube_id(k), "song": matcher.match(t)}
+            k = np.ids.get("path") or np.ids.get("url") or f"{np.artist}|{np.title}"
+            out = {"yt": np.ids.get("youtube"), "song": matcher.match(np.as_track())}
+            q = self.query()
+            want_yt, want_song = urllib.parse.unquote(q.get("yt", "")), urllib.parse.unquote(q.get("song", ""))
+            if (want_yt or want_song) and not ((want_yt and want_yt == out["yt"]) or (want_song and want_song == out["song"])):
+                return self.send_json({"ok": False, "error": "not playing", **out})
             if k not in lyrics:
-                res = cliamp.result("lyrics", timeout=20)
+                res = now.adapter.lyrics()
                 if not res or not res.get("ok"):
                     return self.send_json({"ok": False, **out})
                 lyrics[k] = [{"start": ln.get("start") or 0, "text": ln.get("text") or ""} for ln in res.get("lyrics") or []]
@@ -321,18 +329,19 @@ def make_handler(lib, now, port, lan=False, token=None):
             except (json.JSONDecodeError, ValueError):
                 return self.send_json({"ok": False, "error": "bad json"}, 400)
             if self.path == "/cmd" and body.get("op") in ("toggle", "next", "prev"):
-                job = cliamp.call(body["op"])
-                return self.send_json({"ok": bool(job) and job.get("state") == "succeeded"})
+                return self.send_json({"ok": now.adapter.command(body["op"])})
             if self.path == "/play" and (re.fullmatch(r"[\w-]{11}", str(body.get("yt") or "")) or re.fullmatch(r"[a-z0-9-]+", str(body.get("song") or ""))):
+                if "jump" not in now.adapter.capabilities:
+                    return self.send_json({"ok": False, "error": f"{now.adapter.name} can't jump to a song"})
                 _, matcher = lib.get()
-                tracks = cliamp.queue()
+                tracks = now.adapter.queue()
                 yt, song = body.get("yt"), body.get("song")
                 idx = next((i for i, t in enumerate(tracks) if yt and youtube_id(t.get("path")) == yt), None)
                 if idx is None and song:
                     idx = next((i for i, t in enumerate(tracks) if matcher.match(t) == song), None)
                 if idx is None:
                     return self.send_json({"ok": False, "error": "not in the loaded playlist"})
-                cliamp.call("queue.play", {"index": idx})
+                now.adapter.jump(idx)
                 return self.send_json({"ok": True, "index": idx})
             self.send_json({"ok": False, "error": "unknown"}, 400)
 
@@ -367,9 +376,9 @@ def lan_address():
         s.close()
 
 
-def make_server(port=PORT, lan=False, token=None, roots=None):
+def make_server(port=PORT, lan=False, token=None, roots=None, adapter=None):
     lib = Library(roots)
-    now = Now(lib)
+    now = Now(lib, adapter or adapters.pick())
     token = token or (secrets.token_urlsafe(18) if lan else None)
     srv = ThreadingHTTPServer(("0.0.0.0" if lan else "127.0.0.1", port), make_handler(lib, now, port, lan, token))
     srv.daemon_threads = True
