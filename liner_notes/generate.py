@@ -26,9 +26,9 @@ from .bank import Bank, read_json, write_json
 from .ids import clean_artist, clean_title, slug, song_id, split_upload_title, youtube_id
 from .match import Matcher
 
-MODEL = "claude-opus-5-5"
-# Claude Opus 5.5 list prices, USD per million tokens, and web search per request (as of 2026-10).
-PRICE = {"input": 4.00, "output": 20.00, "cache_read": 0.20, "cache_write": 5.00, "search": 0.01}
+MODEL = "claude-sonnet-5-5"
+# Claude Sonnet 5.5 list prices, USD per million tokens, and web search per request (as of 2026-10).
+PRICE = {"input": 2.00, "output": 10.00, "cache_read": 0.10, "cache_write": 2.50, "search": 0.01}
 BRIEF = paths.PACKAGE / "prompts" / "SONG-BRIEF.md"
 DEFAULT_COPY = {
     "start": "Start listening", "resume": "Pick up at", "express": "Express: one per era",

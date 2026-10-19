@@ -38,7 +38,7 @@ class FakeClient:
         title = kw["messages"][0]["content"].split('"')[1]
         usage = NS(input_tokens=2000, output_tokens=1500, cache_read_input_tokens=3000, cache_creation_input_tokens=0,
                    server_tool_use=NS(web_search_requests=4))
-        return FakeStream(NS(content=[NS(type="text", text=reply(title))], stop_reason="end_turn", usage=usage, model="claude-opus-5-5"))
+        return FakeStream(NS(content=[NS(type="text", text=reply(title))], stop_reason="end_turn", usage=usage, model=gen.MODEL))
 
 
 def lookup(artist, title, yt):
@@ -97,20 +97,21 @@ def test_write_with_budget(tmp_path, monkeypatch):
     j, spent = gen.generate("Test Mix", write=True, budget=5, client=client, lookup=lookup, log=lambda *a: None)
     assert len(client.calls) == 2  # Protection already had notes
     call = client.calls[0]
-    assert call["model"] == "claude-opus-5-5" and call["fallbacks"] == "default"
+    assert call["model"] == gen.MODEL and call["fallbacks"] == "default"
     assert call["system"][0]["cache_control"] == {"type": "ephemeral"}
     assert {t["type"] for t in call["tools"]} == {"web_search_20260209", "web_fetch_20260209"}
     s = read_json(data / "songs/christopher-cross--sailing.json")
     assert s["notes"]["sources"] and s["provenance"]["ai_generated"] and s["review"]["state"] == "draft"
     assert "—" not in json.dumps(s, ensure_ascii=False)
-    per = (2000 * 4 + 1500 * 20 + 3000 * 0.2) / 1e6 + 4 * 0.01
+    P = gen.PRICE
+    per = (2000 * P["input"] + 1500 * P["output"] + 3000 * P["cache_read"]) / 1e6 + 4 * P["search"]
     assert abs(spent - 2 * per) < 1e-9
 
 
 def test_budget_stops_early(tmp_path, monkeypatch):
     setup(tmp_path, monkeypatch)
     client = FakeClient()
-    gen.generate("Test Mix", write=True, budget=0.12, client=client, lookup=lookup, log=lambda *a: None)
+    gen.generate("Test Mix", write=True, budget=0.08, client=client, lookup=lookup, log=lambda *a: None)
     assert len(client.calls) == 1
 
 

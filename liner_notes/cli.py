@@ -1,12 +1,14 @@
 """liner-notes: a second screen for cliamp (and any player)."""
 import argparse
 import datetime as dt
+import json
 import os
 import shutil
 import subprocess
 import sys
 import time
 import urllib.request
+from pathlib import Path
 
 from . import __version__, paths
 from .bank import Bank, write_json
@@ -28,22 +30,61 @@ def bridge_up(port):
         return False
 
 
+def desktop_env():
+    """cliamp runs plugin programs with only PATH, HOME and LANG, so find the session's runtime dir,
+    Wayland socket, D-Bus and Hyprland instance ourselves when they're missing."""
+    env = dict(os.environ)
+    run = env.get("XDG_RUNTIME_DIR") or f"/run/user/{os.getuid()}"
+    env.setdefault("XDG_RUNTIME_DIR", run)
+    if "WAYLAND_DISPLAY" not in env:
+        socks = sorted(p.name for p in Path(run).glob("wayland-[0-9]") if p.is_socket())
+        if socks:
+            env["WAYLAND_DISPLAY"] = socks[0]
+    if "DBUS_SESSION_BUS_ADDRESS" not in env and os.path.exists(f"{run}/bus"):
+        env["DBUS_SESSION_BUS_ADDRESS"] = f"unix:path={run}/bus"
+    if "HYPRLAND_INSTANCE_SIGNATURE" not in env:
+        hy = [p for p in Path(run, "hypr").glob("*") if (p / ".socket.sock").exists()]
+        if hy:
+            env["HYPRLAND_INSTANCE_SIGNATURE"] = max(hy, key=lambda p: p.stat().st_mtime).name
+    return env
+
+
+def hypr_json(env, *args):
+    r = subprocess.run(["hyprctl", *args, "-j"], capture_output=True, text=True, env=env)
+    try:
+        return json.loads(r.stdout or "null")
+    except ValueError:
+        return None
+
+
+def playing_journey(port):
+    try:
+        with urllib.request.urlopen(f"http://127.0.0.1:{port}/now", timeout=3) as r:
+            return json.loads(r.read()).get("journey")
+    except (OSError, ValueError):
+        return None
+
+
 def cmd_open(a):
-    """Open a journey's page, starting the bridge first. The default opens it in your usual browser."""
-    page = paths.dist() / f"{a.slug}.html"
-    if not page.exists():
-        sys.exit(f"liner-notes: build it first: liner-notes build {a.slug}")
+    """Open a journey's page, starting the bridge first. With no slug, the journey that holds the
+    playing song. The default opens it in your usual browser."""
+    env = desktop_env()
     if not bridge_up(a.port):
         subprocess.Popen([sys.executable, "-m", "liner_notes.cli", "serve", "--port", str(a.port)], stdout=subprocess.DEVNULL,
-                         stderr=subprocess.DEVNULL, start_new_session=True)
+                         stderr=subprocess.DEVNULL, start_new_session=True, env=env)
         for _ in range(25):
             if bridge_up(a.port):
                 break
             time.sleep(0.2)
-    url = f"http://127.0.0.1:{a.port}/p/{a.slug}.html#companion"
+    slug = a.slug or playing_journey(a.port)
+    if not slug:
+        sys.exit("liner-notes: no journey has the song that's playing; name one, or make one with liner-notes generate")
+    if not (paths.dist() / f"{slug}.html").exists():
+        sys.exit(f"liner-notes: build it first: liner-notes build {slug}")
+    url = f"http://127.0.0.1:{a.port}/p/{slug}.html#companion"
     if not (a.app or a.workspace):
         opener = "open" if sys.platform == "darwin" else "xdg-open"
-        subprocess.Popen([opener, url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+        subprocess.Popen([opener, url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True, env=env)
         return
     # An app window with its own Chromium profile, so it starts its own process (window rules then apply to it).
     browser = next((b for b in ("chromium", "google-chrome-stable", "google-chrome", "brave") if shutil.which(b)), None)
@@ -51,11 +92,28 @@ def cmd_open(a):
         sys.exit("liner-notes: --app needs Chromium or Chrome")
     profile = paths.state() / "chromium"
     cmd = f"{browser} --user-data-dir={profile} --no-first-run --app={url}"
-    if a.workspace and os.environ.get("HYPRLAND_INSTANCE_SIGNATURE"):
-        # Hyprland: place it silently on that workspace, full screen, so whatever has focus keeps it.
-        subprocess.run(["hyprctl", "dispatch", f'hl.dsp.exec_cmd("{cmd}", {{ workspace = "{a.workspace} silent", fullscreen = true }})'], capture_output=True)
-    else:
-        subprocess.Popen(cmd.split(), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
+    if not (a.workspace and env.get("HYPRLAND_INSTANCE_SIGNATURE")):
+        subprocess.Popen(cmd.split(), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True, env=env)
+        return
+    # Hyprland: a page already open for this journey stays (it follows the player on its own). One for another
+    # journey is replaced. The new window goes silently onto its workspace, full screen, and focus goes back to
+    # whatever had it, so a game on another workspace is never interrupted.
+    clients = hypr_json(env, "clients") or []
+    ours = [c for c in clients if c.get("class", "").startswith("chrome-127.0.0.1__p_")]
+    if any(c["class"] == f"chrome-127.0.0.1__p_{slug}.html-Default" for c in ours):
+        return
+    focus = (hypr_json(env, "activewindow") or {}).get("address")
+    for c in ours:
+        subprocess.run(["hyprctl", "dispatch", f'hl.dsp.window.close({{ window = "address:{c["address"]}" }})'], capture_output=True, env=env)
+    for _ in range(25):
+        if subprocess.run(["pgrep", "-f", f"user-data-dir={profile}"], capture_output=True).returncode:
+            break
+        time.sleep(0.2)
+    subprocess.run(["hyprctl", "dispatch", f'hl.dsp.exec_cmd("{cmd}", {{ workspace = "{a.workspace} silent", fullscreen = true }})'],
+                   capture_output=True, env=env)
+    if focus:
+        time.sleep(2)
+        subprocess.run(["hyprctl", "dispatch", f'hl.dsp.focus({{ window = "address:{focus}" }})'], capture_output=True, env=env)
 
 
 def cmd_list(a):
@@ -125,7 +183,7 @@ def main(argv=None):
     p.set_defaults(fn=cmd_serve)
 
     p = sub.add_parser("open", help="open a journey's page in companion mode")
-    p.add_argument("slug")
+    p.add_argument("slug", nargs="?", help="default: the journey that has the playing song")
     p.add_argument("--port", type=int, default=PORT)
     p.add_argument("--app", action="store_true", help="a Chromium app window with its own profile")
     p.add_argument("--workspace", help="Hyprland: put the app window on this workspace, full screen, without taking focus")
