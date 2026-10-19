@@ -1,0 +1,45 @@
+name: ci
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e '.[dev]'
+      - run: ruff check liner_notes tests tools
+      - run: pytest -q
+      - name: Songs and journeys match their schemas
+        run: liner-notes check
+      - name: Build the example journey for sharing
+        run: liner-notes build downtempo-drift --public --out dist/downtempo-drift.public.html
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Headless checks (both themes, phone width, disclosures, companion mode)
+        env:
+          CHROMIUM: /usr/bin/google-chrome
+        run: |
+          cd tools && npm install --no-audit --no-fund && cd ..
+          mkdir -p shots
+          node tools/shoot.js dist/downtempo-drift.public.html shots
+          liner-notes build downtempo-drift --public
+          python tools/fake_bridge.py downtempo-drift 47399 &
+          sleep 2
+          node tools/companion.js http://127.0.0.1:47399 downtempo-drift shots
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screenshots-${{ matrix.python }}
+          path: shots/
