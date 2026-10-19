@@ -4,6 +4,8 @@ Put it on a monitor, a tablet or a phone next to your player. It shows what's pl
 
 It started as a page for one playlist, Downtempo Drift (49 songs, Bristol 1991 to Texas 2020), and turned into a small engine for any playlist. That journey ships here as the example.
 
+An AI model wrote every note in the bank, working from the sources listed in each file. As of 0.1.0 all 49 songs are drafts: nobody has checked them against their sources yet, and the page labels them "Draft notes".
+
 ## What you need
 
 - Python 3.11 or newer. The bridge and the page builder use only the standard library.
