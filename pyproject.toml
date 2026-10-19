@@ -13,7 +13,7 @@ dependencies = []
 
 [project.optional-dependencies]
 media = ["Pillow>=10"]
-generate = ["anthropic>=0.40"]
+generate = ["anthropic>=1.15"]
 dev = ["pytest>=8", "ruff>=0.6", "Pillow>=10"]
 
 [project.scripts]
