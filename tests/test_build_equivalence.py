@@ -33,7 +33,7 @@ def old_data(tmp):
     html = (work / "dist/downtempo-drift.html").read_text()
     tpl = (PILOT / "engine/template.html").read_text()
     pre = tpl.split("/*__DATA__*/null")[0].split("\n")[-1]
-    line = next(l for l in html.split("\n") if l.startswith(pre))
+    line = next(ln for ln in html.split("\n") if ln.startswith(pre))
     blob = line[len(pre):]
     post = tpl.split("/*__DATA__*/null")[1].split("\n")[0]
     return json.loads(blob[: len(blob) - len(post)] if post else blob)

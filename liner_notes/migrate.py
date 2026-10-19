@@ -158,7 +158,7 @@ def migrate(folder, root=None, cache=None, log=print):
 
     # The journey.
     eras = []
-    for f, doc in era_docs:
+    for _f, doc in era_docs:
         e = doc["era"]
         n = int(e["n"])
         lo, hi = meta["eraBounds"][n - 1]

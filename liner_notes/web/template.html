@@ -653,7 +653,7 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
   /* ---------- render one stop ---------- */
   const svgPlay = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l14 8-14 8z"/></svg>';
   function render() {
-    const s = stops[state.i], e = eraOf(s), j = judges[s.judge];
+    const s = stops[state.i], e = eraOf(s), j = judges[s.judge] || null;
     const root = $('#stop'); root.innerHTML = ''; root.className = 'stop paused';
     const left = el('div', { class: 'left' },
       el('div', { class: 'cover' }, el('canvas', { id: 'rings', 'aria-hidden': 'true' }), el('img', { src: s.cover, alt: `Cover of ${s.album || s.title}` }),
@@ -666,13 +666,13 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
         s.apple ? el('a', { class: 'act', href: s.apple, target: '_blank', rel: 'noopener' }, 'Apple Music ↗') : null),
       el('div', { class: 'status mono', id: 'pstatus' }, sync.on ? syncStatus(s) : s.preview ? (state.companion ? 'Companion mode: previews stay quiet until you press play.' : '') : 'No preview here. The full track link plays it.'));
     const right = el('div', { class: 'right reveal' },
-      el('div', { class: 'stamp mono' }, el('span', { text: `Stop ${pad(s.n)} of ${stops.length}` }), el('span', { class: 'era', text: e.name }), el('span', { class: 'yy', text: String(s.year) }), s.album ? el('span', { text: s.album }) : null, s.dissent ? el('span', { class: 'badge', text: 'Close call' }) : null),
+      el('div', { class: 'stamp mono' }, el('span', { text: `Stop ${pad(s.n)} of ${stops.length}` }), el('span', { class: 'era', text: e.name }), el('span', { class: 'yy', text: String(s.year) }), s.album ? el('span', { text: s.album }) : null, s.dissent ? el('span', { class: 'badge', text: 'Close call' }) : null, s.draft ? el('span', { class: 'badge', title: 'Written and sourced, not yet checked by a person', text: 'Draft notes' }) : null),
       el('div', {}, el('h1', { class: 'title', text: s.title }), el('div', { class: 'by', text: s.artist })),
-      el('figure', { class: 'quote' }, el('blockquote', { text: `“${s.quote}”` }),
-        el('figcaption', { class: 'mono' }, el('button', { type: 'button', title: `Walk ${j.name}'s stops`, onclick: () => setLens(s.judge) }, `${j.name}, ${j.title}`), s.dissent ? el('span', { text: '· voted it a close call' }) : null)),
+      s.quote && j ? el('figure', { class: 'quote' }, el('blockquote', { text: `“${s.quote}”` }),
+        el('figcaption', { class: 'mono' }, el('button', { type: 'button', title: `Walk ${j.name}'s stops`, onclick: () => setLens(s.judge) }, `${j.name}, ${j.title}`), s.dissent ? el('span', { text: '· voted it a close call' }) : null)) : null,
       s.listen.length ? el('section', { class: 'sec' }, el('h2', { text: 'Listen for' }), el('ul', { class: 'listen' }, s.listen.map(l => el('li', {}, el('div', {}, el('span', { class: 'w', text: l.where }), l.note))))) : null,
-      el('section', { class: 'sec' }, el('h2', { text: 'How it was made' }), el('p', { text: s.made })),
-      el('section', { class: 'sec' }, el('h2', { text: 'What was going on' }), el('p', { text: s.context })),
+      s.made ? el('section', { class: 'sec' }, el('h2', { text: 'How it was made' }), el('p', { text: s.made })) : null,
+      s.context ? el('section', { class: 'sec' }, el('h2', { text: 'What was going on' }), el('p', { text: s.context })) : null,
       s.leads ? el('section', { class: 'sec' }, el('h2', { text: 'Where it leads' }), el('div', { class: 'leads' },
         el('div', { class: 't' }, `${s.leads.artist}, “${s.leads.title}”`, s.leads.year ? el('i', { text: ` (${s.leads.year})` }) : null),
         el('p', { style: 'margin: 6px 0 10px', text: s.leads.why }),
@@ -688,7 +688,7 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
     if (dr.left < sr.left + 40 || dr.right > sr.right - 40) sc.scrollTo({ left: sc.scrollLeft + dr.left - sr.left - sr.width / 2, behavior: reduced ? 'auto' : 'smooth' });
     setScene(s.era); updateWalk(); drawThreads(); writeHash();
     if (sync.on) setPaused(!(sync.now && sync.now.yt === s.yt && sync.now.state === 'playing'));
-    live.textContent = `Stop ${s.n} of ${stops.length}. ${s.title}, ${s.artist}, ${s.year}. ${j.name}: ${s.quote}`;
+    live.textContent = `Stop ${s.n} of ${stops.length}. ${s.title}, ${s.artist}, ${s.year}. ${j ? `${j.name}: ${s.quote}` : ''}`;
     document.title = `${s.title} · ${D.title}`;
   }
 
@@ -810,9 +810,12 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
   });
 
   /* ---------- follow cliamp through the local bridge (engine/bridge.py) ---------- */
-  const BRIDGE = /^https?:$/.test(location.protocol) && /^(127\.0\.0\.1|localhost)$/.test(location.hostname) ? location.origin : 'http://127.0.0.1:47391';
+  const BRIDGE = /^https?:$/.test(location.protocol) && (/^(127\.0\.0\.1|localhost)$/.test(location.hostname) || location.pathname.startsWith('/p/')) ? location.origin : 'http://127.0.0.1:47391';
   const sync = { on: false, follow: true, now: null, at: 0, bands: null, hist: [], es: null, timer: 0 };
   const byYt = new Map(stops.filter(s => s.yt).map(s => [s.yt, s]));
+  const byId = new Map(stops.map(s => [s.id, s]));
+  /* The bridge names the song it matched (any provider, any upload); the page keys stops on their YouTube id. */
+  const norm = j => { if (j && j.song && byId.has(j.song)) j.yt = byId.get(j.song).yt || 'song:' + j.song; return j; };
   const followBtn = $('#followBtn');
   const syncStatus = s => !sync.now ? 'Connected to cliamp.' : sync.now.yt === s.yt ? (sync.now.state === 'playing' ? 'Playing in cliamp now.' : 'Paused in cliamp.') : 'Press play to hear this one in cliamp.';
   function setFollow(on) {
@@ -825,13 +828,16 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
     const lbl = followBtn.querySelector('.lbl'), n = sync.now, s = n && byYt.get(n.yt);
     lbl.textContent = !n ? 'cliamp' : !s ? `cliamp: ${n.title} (not on this list)` : sync.follow ? `Following cliamp · ${s.title}` : `Back to cliamp · ${s.title}`;
   }
+  let evs = null;
+  function openEvents() { if (evs || !window.EventSource) return; try { evs = new EventSource(BRIDGE + '/events'); evs.onmessage = () => poll(); evs.onerror = () => { evs.close(); evs = null; }; } catch {} }
   function openBands() {
+    openEvents();
     if (sync.es || !window.EventSource) return;
     try { sync.es = new EventSource(BRIDGE + '/bands'); sync.es.onmessage = ev => { try { const j = JSON.parse(ev.data); if (j.bands) sync.bands = j.bands; } catch {} }; sync.es.onerror = () => { sync.es.close(); sync.es = null; sync.bands = null; }; } catch {}
   }
   async function poll() {
     let j = null;
-    try { const r = await fetch(BRIDGE + '/now', { cache: 'no-store' }); j = await r.json(); } catch {}
+    try { const r = await fetch(BRIDGE + '/now', { cache: 'no-store' }); j = norm(await r.json()); } catch {}
     const was = sync.on;
     sync.on = !!(j && j.ok);
     if (sync.on !== was) {
@@ -854,7 +860,7 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
   async function syncPlay() {
     const s = stops[state.i];
     if (sync.now && sync.now.yt === s.yt) await bridgePost('/cmd', { op: 'toggle' });
-    else { const r = await bridgePost('/play', { yt: s.yt }); if (!r.ok) { const st = $('#pstatus'); if (st) st.textContent = r.error === 'not in the loaded playlist' ? 'cliamp has a different playlist loaded.' : 'cliamp did not answer.'; return; } sync.follow = true; followBtn.setAttribute('aria-pressed', 'true'); }
+    else { const r = await bridgePost('/play', { yt: s.yt, song: s.id }); if (!r.ok) { const st = $('#pstatus'); if (st) st.textContent = r.error === 'not in the loaded playlist' ? 'cliamp has a different playlist loaded.' : 'cliamp did not answer.'; return; } sync.follow = true; followBtn.setAttribute('aria-pressed', 'true'); }
     setTimeout(poll, 400);
   }
   followBtn.onclick = () => setFollow(!sync.follow);
@@ -912,14 +918,14 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
     const yearAll = (SD && SD.years[s.year]) || [], k0 = stops.filter(x => x.year === s.year && x.n < s.n).length;
     const yearC = [...new Set([0, 1].map(i => yearAll[(k0 * 2 + i) % (yearAll.length || 1)]).filter(Boolean))];
     const culture = (p, it, year) => add(p, year ? `Meanwhile · ${s.year} · ${kinds[it.kind] || it.kind}` : kinds[it.kind] || it.kind, it.line, false, pic(it), it.title);
-    const e = eraOf(s), j = judges[s.judge];
+    const e = eraOf(s), j = judges[s.judge] || null;
     const intro = s.listen.filter(l => /open|first|intro|start|from the/i.test(l.where));
     const late = s.listen.filter(l => !intro.includes(l) && /end|toward|goes on|outro|last/i.test(l.where));
     const mid = s.listen.filter(l => !intro.includes(l) && !late.includes(l));
     if (!prev || prev.era !== s.era) add(1, `${prev ? 'Into' : 'Tonight starts in'} era ${e.n} · ${e.name} · ${e.years}`, sentences(e.essay).slice(0, 2).join(' '));
     intro.forEach(l => add(1, `Listen for · ${l.where}`, l.note));
     vidC.slice(0, 1).forEach(it => culture(1, it));
-    add(1, `${j.name} · ${j.title}${s.dissent ? ' · voted it a close call' : ''}`, `“${s.quote}”`, true);
+    if (j && s.quote) add(1, `${j.name} · ${j.title}${s.dissent ? ' · voted it a close call' : ''}`, `“${s.quote}”`, true);
     chunks(s.made).forEach((c, k) => add(k ? 3 : 2, 'How it was made', c));
     restC.slice(0, 1).forEach(it => culture(2, it));
     mid.forEach(l => add(2, `Listen for · ${l.where}`, l.note));
@@ -1032,12 +1038,12 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
   }
   async function fetchLyrics(yt) {
     if (!stg.lyricsOn) return;
-    try { const r = await (await fetch(BRIDGE + '/lyrics', { cache: 'no-store' })).json(); if (r.ok && r.yt === yt && stg.yt === yt) { stg.lines = r.lines; stg.line = -2; } } catch {}
+    try { const r = norm(await (await fetch(BRIDGE + '/lyrics', { cache: 'no-store' })).json()); if (r.ok && r.yt === yt && stg.yt === yt) { stg.lines = r.lines; stg.line = -2; } } catch {}
   }
   /* A play counts if the next one started at least 30 seconds later; a gap of 20 minutes past the end of a song ends the night. */
   async function fetchPlays() {
     let r; try { r = await (await fetch(BRIDGE + '/history', { cache: 'no-store' })).json(); } catch { return; }
-    const P = (r.plays || []).map(p => ({ ...p, t: Date.parse(p.at) })).filter(p => p.t), run = [];
+    const P = (r.plays || []).map(p => ({ ...norm(p), t: Date.parse(p.at) })).filter(p => p.t), run = [];
     for (let k = 0; k < P.length; k++) {
       if (k && P[k].t + ((P[k].secs || 300) * 1000) + 20 * 60e3 < P[k - 1].t) break;
       if (!k || P[k - 1].t - P[k].t >= 30e3) run.push(P[k]);
