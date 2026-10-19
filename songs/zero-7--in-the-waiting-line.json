@@ -1,0 +1,71 @@
+{
+ "id": "zero-7--in-the-waiting-line",
+ "title": "In the Waiting Line",
+ "artist": "Zero 7",
+ "year": 2001,
+ "year_note": "",
+ "album": "Simple Things",
+ "aliases": {
+  "youtube": [
+   "V1zrEGsj234"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/02/b9/0602b98b-4e2a-0e59-60ef-e463c50cc3e1/mzaf_13560225367846859793.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/in-the-waiting-line/1814440892?i=1814441080&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Sophie Barker wrote it with Henry Binns and Sam Hardaker, and it's the one track on the standard Simple Things that she sings alone. The band under her is the album's core crew: Pete Trotman on bass, Jeremy Stacey on drums, Dedi Madden on guitar. Binns and Hardaker learned the trade as tape operators (and tea-makers) at RAK Studios in London, and they mixed the record out of Pro Tools through an old Trident desk that Hardaker described as beat-up and dirty.",
+  "context": "It was the fourth single from Simple Things, out 5 November 2001, and it didn't chart high; Zero 7's only top-40 single was \"Destiny\". Its real life came on screens: Sex and the City in season 6, House in season 3, and track 3 of the Garden State soundtrack in August 2004, sandwiched between two Shins songs. That album went platinum in the US and won the Grammy for Best Compilation Soundtrack.",
+  "listen_for": [
+   {
+    "where": "the first verse",
+    "note": "Barker carries the whole song. On Simple Things she shares \"Destiny\" with Sia, but this one is hers, and she co-wrote it."
+   },
+   {
+    "where": "under the vocal, from the start",
+    "note": "That's a played kit and a played bass (Jeremy Stacey and Pete Trotman are both credited on this track), which is why it breathes more than a loop would."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Shins",
+   "title": "New Slang",
+   "year": 2001,
+   "why": "It sits right after this song on the Garden State soundtrack, and it's the one Natalie Portman's character says \"will change your life\" in the film."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Simple_Things_(Zero_7_album)",
+   "https://en.wikipedia.org/wiki/Garden_State_(soundtrack)",
+   "https://en.wikipedia.org/wiki/New_Slang",
+   "https://uk.style.yahoo.com/zero-7-never-set-music-085708953.html",
+   "https://equipboard.com/albums/zero-7-simple-things",
+   "https://encyclopedia.com/education/news-wires-white-papers-and-books/zero-7"
+  ],
+  "unverified": "UK chart peak of the single (couldn't find it). Exact studio where the album was recorded."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Garden State, 2004",
+   "line": "Zach Braff's Garden State used it on its soundtrack, which he hand-picked and which won the Grammy for Best Compilation Soundtrack for Visual Media. It is track 3.",
+   "wiki": "Garden_State_(soundtrack)",
+   "source": "https://en.wikipedia.org/wiki/Garden_State_(soundtrack)"
+  },
+  {
+   "kind": "screen",
+   "title": "Sex and the City and House",
+   "line": "It turned up in the Sex and the City episode \"The Domino Effect\" (season 6) and in House, \"Needle in a Haystack\" (season 3), as well as Garden State.",
+   "wiki": "Simple_Things_(Zero_7_album)",
+   "source": "https://en.wikipedia.org/wiki/Simple_Things_(Zero_7_album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

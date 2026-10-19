@@ -1,0 +1,58 @@
+{
+ "id": "moloko--sing-it-back",
+ "title": "Sing It Back",
+ "artist": "Moloko",
+ "year": 1998,
+ "year_note": "On the album I Am Not a Doctor (1998). First released as a single on 8 March 1999 (UK 45); the Boris Dlugosch remix reached UK 4 in September 1999.",
+ "album": "I Am Not a Doctor",
+ "aliases": {
+  "youtube": [
+   "w1eN8vyVFIM"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a0/c3/8b/a0c38ba6-3a1e-515a-6569-892eee6570fd/mzaf_14850749165227185372.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/sing-it-back-boris-musical-mix-edit/1436341968?i=1436341970&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Róisín Murphy and Mark Brydon wrote it. The album version runs 4:24 and AllMusic called it a 'techno torch song'. For the single the band commissioned a Todd Terry mix, didn't like it, and had to talk Echo into releasing Boris Dlugosch's version instead; in exchange Murphy co-wrote and sang on Dlugosch's own single.",
+  "context": "Murphy and Brydon met at a Sheffield party in 1994, where her chat-up line ('Do you like my tight sweater?') became their first album title; the band name is the drugged milk in A Clockwork Orange. I Am Not a Doctor only reached 64 in the UK. The Dlugosch remix went to 4 in the UK and number 1 on the US dance club chart, with a Dawn Shadforth video of Murphy dancing alone in a metallic flapper dress.",
+  "listen_for": [
+   {
+    "where": "Murphy's vocal, all the way through the album version",
+    "note": "Sung as a torch song at a slow club tempo, which is the mood the panel wanted and the remix traded for a dancefloor."
+   }
+  ],
+  "leads_to": {
+   "artist": "Boris Dlugosch featuring Róisín Murphy",
+   "title": "Never Enough",
+   "year": 2001,
+   "why": "The payback for the remix: Murphy's first credited appearance on the UK singles chart outside Moloko."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sing_It_Back",
+   "https://en.wikipedia.org/wiki/Moloko",
+   "https://en.wikipedia.org/wiki/Never_Enough_(Boris_Dlugosch_song)",
+   "https://www.officialcharts.com/artist/3353/roisin-murphy/"
+  ],
+  "unverified": "I couldn't find production detail on the album version (gear, bass part), so there's only one listen note."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "The Boris Dlugosch remix",
+   "line": "The album version came out as a single on 8 March 1999 and reached 45 in the UK. Boris Dlugosch's remix climbed to 4 that September and topped the US Dance Club chart.",
+   "wiki": "Moloko",
+   "source": "https://en.wikipedia.org/wiki/Sing_It_Back"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

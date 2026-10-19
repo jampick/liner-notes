@@ -1,0 +1,72 @@
+{
+ "id": "air--all-i-need",
+ "title": "All I Need",
+ "artist": "Air",
+ "year": 1998,
+ "year_note": "",
+ "album": "Moon Safari",
+ "aliases": {
+  "youtube": [
+   "kxWFyvTg6mc"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/77/30/7f/77307f8e-2f86-6354-213f-a65d8ff5ca7b/mzaf_6039890285325898305.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/all-i-need/693063670?i=693063920&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Beth Hirsch, an American singer living in Montmartre like Godin and Dunckel, wrote the words and melody after Godin heard her demo; the music grew out of Air's earlier track 'Les professionnels'. Godin played acoustic guitar, bass, drums and Solina strings, Patrick Woodcock added acoustic guitar, Dunckel played Rhodes, Wurlitzer and Korg MS-20, and the strings were recorded at Abbey Road.",
+  "context": "Released as a single on 9 November 1998, it reached 29 in the UK. Mike Mills's video follows a young skateboarding couple from Ventura, California, who were a real couple and later split up; Mills called it a turning point in how openly emotional he let his work be. Godin later said the band got annoyed at being filed under chill-out because of songs like this, and went darker on The Virgin Suicides and 10 000 Hz Legend.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Gently plucked acoustic guitar. Hirsch came from playing guitar and singing folk, and the band built the track around that."
+   },
+   {
+    "where": "Hirsch's vocal",
+    "note": "Dunckel wanted a mellow, slightly melancholic ending to the album, and her folk-leaning voice is how they got it."
+   },
+   {
+    "where": "when the strings come in",
+    "note": "Recorded at Abbey Road by Peter Cobbin, under a song that otherwise sounds like a home recording."
+   }
+  ],
+  "leads_to": {
+   "artist": "Air",
+   "title": "Les professionnels",
+   "year": 1997,
+   "why": "The earlier Air instrumental, on the Premiers Symptômes EP, that 'All I Need' was built from."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/All_I_Need_(Air_song)",
+   "https://en.wikipedia.org/wiki/Moon_Safari",
+   "https://stereogum.com/2254698/air-moon-safari-behind-the-scenes/interviews"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Skateboarders in Ventura",
+   "line": "Mike Mills directed the video of a young skateboarding couple talking about each other. They were a real couple from Ventura, California, who have since broken up.",
+   "wiki": "Moon_Safari",
+   "source": "https://en.wikipedia.org/wiki/All_I_Need_(Air_song)"
+  },
+  {
+   "kind": "sample",
+   "title": "Reworked from Les professionnels",
+   "line": "Beth Hirsch wrote the melody and lyrics, and the track grew from Air's earlier 'Les professionnels' (1997). The strings were recorded at Abbey Road in London.",
+   "wiki": "Abbey_Road_Studios",
+   "source": "https://en.wikipedia.org/wiki/All_I_Need_(Air_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "id": "toro-y-moi--ordinary-pleasure",
+ "title": "Ordinary Pleasure",
+ "artist": "Toro y Moi",
+ "year": 2018,
+ "year_note": "Released as a single on 4 December 2018 (Carpark Records); the album Outer Peace came out 18 January 2019.",
+ "album": "Outer Peace",
+ "aliases": {
+  "youtube": [
+   "7hJb9MxI2NY"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ea/ce/8d/eace8d4f-5ad7-dbbc-0b2f-4cf49d895ebf/mzaf_3554316760317277476.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/ordinary-pleasure/1583616655?i=1583616663&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Chaz Bear (born Chaz Bundick) wrote, produced, engineered and mixed it and played every instrument. He made most of Outer Peace on a two-week solo retreat in a cabin near the Russian River, getting away from Oakland and his friends to finish faster. He said the album drew on club nights over concert nights, and on Daft Punk and Wally Badarou's synths. Reviewers heard a smooth, rubbery bass line, bongos and light synths.",
+  "context": "Bear grew up in Columbia, South Carolina, and around 2010 he was the face of chillwave. A decade later he was living in the Bay Area with his own studio in Oakland and making dance music. He called Outer Peace a response to how disposable culture had become, and said you could pay attention or ignore it and either was fine, which fits Pelly's playlist economy almost too neatly. The video, directed by Mancy Gant, is a performance and dance party at his Company studio in Oakland.",
+  "listen_for": [
+   {
+    "where": "the opening groove",
+    "note": "The bass and bongos come in first, and that's the whole engine: one person playing every part and building a club groove at home."
+   },
+   {
+    "where": "the synth parts in the choruses",
+    "note": "Bright, clean synths that Bear tied to Wally Badarou and Daft Punk, far from the washed-out tape haze of his chillwave years."
+   }
+  ],
+  "leads_to": {
+   "artist": "Wally Badarou",
+   "title": "Chief Inspector",
+   "year": 1985,
+   "why": "Bear named Badarou's synths as a model for Outer Peace, and this synth-funk instrumental (UK number 46 in 1985) shows where the sound came from."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ordinary_Pleasure",
+   "https://en.wikipedia.org/wiki/Outer_Peace",
+   "https://en.wikipedia.org/wiki/Toro_y_Moi",
+   "https://music.mxdwn.com/2018/12/24/news/toro-y-moi-gets-groovy-on-new-electro-pop-song-ordinary-pleasure/",
+   "https://www.npr.org/transcripts/686536203",
+   "https://en.wikipedia.org/wiki/Wally_Badarou"
+  ],
+  "unverified": "The Russian River cabin and the 'get away from Oakland' quote come from an SF Chronicle interview that I could only see through search summaries, not open directly. The section placement ('bass and bongos come in first', 'synths in the choruses') is my description of the song's structure, which no source lays out; the elements themselves are sourced. Sources disagree on the year of Badarou's Echoes album (1984 or 1985); the single charted in October 1985."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Company Records tour",
+   "line": "The video tours Chaz Bear's own Company Records studio, with the band playing live and a dance party outside. Carpark posted it in February 2019.",
+   "source": "https://www.carparkrecords.com/news/ordinary-pleasure-music-video/"
+  },
+  {
+   "kind": "chart",
+   "title": "Outer Peace",
+   "line": "The second single from Outer Peace, out January 18, 2019 on Carpark. The album peaked at number 114 on the Billboard 200.",
+   "wiki": "Outer_Peace",
+   "source": "https://en.wikipedia.org/wiki/Outer_Peace"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

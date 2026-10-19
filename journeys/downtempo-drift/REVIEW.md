@@ -1,0 +1,101 @@
+# Review: Downtempo Drift
+
+Every song here starts as a draft. A draft shows as "draft notes" on the stage. Tick a song once
+you've checked its facts against the sources, then set `review.state` to `reviewed` in its file
+(`liner-notes review <song id>` does both).
+
+- [ ] `massive-attack--unfinished-sympathy` Unfinished Sympathy, Massive Attack (1991)
+    - writer couldn't confirm: Exact orchestra size and room: Abbey Road's own page says both 42 players in Studio One and a 40-piece section in Studio Two. Year of Willie Dynamite (sources split 1973/1974), so it is left undated. 909originals says the bell riff was inspired by Bob James's "Take Me to the Mardi Gras"; not a sample, and only one source, so left out.
+- [ ] `mazzy-star--fade-into-you` Fade Into You, Mazzy Star (1993)
+    - writer couldn't confirm: Where and when the album was recorded, and who plays drums on this track (album credits list Keith Mitchell and William Cooper but not per track). I couldn't find a production interview, so only two listen-for notes.
+- [ ] `portishead--glory-box` Glory Box, Portishead (1994)
+    - writer couldn't confirm: Which element of "Ike's Rap II" is looped (strings, keys, drums) and whether it was slowed down. The theremin-like sound on Dummy is credited by one forum commenter to a Roland SH-101; not confirmed, left out.
+- [ ] `portishead--sour-times` Sour Times, Portishead (1994)
+    - writer couldn't confirm: Which instruments the "Danube Incident" sample carries: PopMatters says the guitar, Songfacts says percussion and guitar, nobody I found says strings. Exactly which part comes from "Spin It Jig".
+- [ ] `massive-attack--protection` Protection, Massive Attack (1994)
+    - writer couldn't confirm: Who plays the piano and bass on the title track (album credits don't say). Thorn's "about 10 minutes" quote appears in one Substack piece; I paraphrased it as "one sitting" instead.
+- [ ] `sneaker-pimps--6-underground` 6 Underground, Sneaker Pimps (1996)
+    - writer couldn't confirm: No studio session details beyond the bedroom studio. The film placement in The Saint is in Wikipedia but its citation there is flagged as unreliable; the claim that the film drove the radio play comes from that article.
+- [ ] `sneaker-pimps--spin-spin-sugar` Spin Spin Sugar, Sneaker Pimps (1996)
+    - writer couldn't confirm: Wikipedia categorises it as produced by Flood, but the article text doesn't say so, so I left the producer out.
+- [ ] `mono--life-in-mono` Life in Mono, Mono (1996)
+    - writer couldn't confirm: Wikipedia says Robert De Niro reportedly chose the song for the film; I couldn't confirm it, so it's out. I couldn't confirm which exact element of the Ipcress File score is sampled, so the note doesn't name an instrument.
+- [ ] `dj-shadow--midnight-in-a-perfect-world` Midnight in a Perfect World, DJ Shadow (1996)
+    - writer couldn't confirm: I couldn't confirm where in the track each sample enters, so the listen notes describe layers rather than sections.
+- [ ] `thievery-corporation--lebanese-blonde` Lebanese Blonde, Thievery Corporation (1998)
+    - writer couldn't confirm: I couldn't find any sample credits for the track. A forum claim that the opening instrument is a veena, not a sitar, is unsourced; AllMusic says sitar.
+- [ ] `groove-armada--at-the-river` At the River, Groove Armada (1997)
+    - writer couldn't confirm: Accounts differ on whether the Patti Page record was a vinyl compilation or a CD from a village shop; I said compilation and left the format out.
+- [ ] `massive-attack--teardrop` Teardrop, Massive Attack (1998)
+    - writer couldn't confirm: Some sources date Layers to November 1972 rather than 1973; Wikipedia says released 1973, recorded November 1972.
+- [ ] `air--la-femme-dargent` La Femme d'argent, Air (1998)
+    - writer couldn't confirm: Official title on Wikipedia's track list is 'La femme d'argent' (lowercase f); the panel's 'La Femme d'Argent' is a styling choice. The 'pre-9/11' line is quoted from the Stereogum interview.
+- [ ] `air--all-i-need` All I Need, Air (1998)
+- [ ] `morcheeba--the-sea` The Sea, Morcheeba (1998)
+    - writer couldn't confirm: I couldn't confirm slide guitar on this track specifically, or a UK chart position for the single.
+- [ ] `moloko--sing-it-back` Sing It Back, Moloko (1998)
+    - writer couldn't confirm: I couldn't find production detail on the album version (gear, bass part), so there's only one listen note.
+- [ ] `moby--porcelain` Porcelain, Moby (1999)
+    - writer couldn't confirm: Sources disagree on Play's track count in the licensing claim (Stereogum says 17; the album has 18). I wrote 'every track' without a number.
+- [ ] `hooverphonic--mad-about-you` Mad About You, Hooverphonic (2000)
+    - writer couldn't confirm: I found no source tying the strings to John Barry or Bond themes. The Swan Lake link is documented for the later orchestral live version, not the studio recording.
+- [ ] `st-germain--rose-rouge` Rose Rouge, St Germain (2000)
+    - writer couldn't confirm: Release day differs between sources (5 May vs 30 May 2000). I couldn't confirm which session players solo on this track.
+- [ ] `zero-7--in-the-waiting-line` In the Waiting Line, Zero 7 (2001)
+    - writer couldn't confirm: UK chart peak of the single (couldn't find it). Exact studio where the album was recorded.
+- [ ] `zero-7--destiny` Destiny, Zero 7 (2001)
+    - writer couldn't confirm: The panel quote mentions a Rhodes. The Simple Things credits list a Rhodes player (Max Beesley) only on the title track, not on "Destiny", though Zero 7 owned a Rhodes and a Wurlitzer.
+- [ ] `gorillaz--clint-eastwood` Clint Eastwood, Gorillaz (2001)
+    - writer couldn't confirm: Manufacturer of the Omnichord isn't named in the source.
+- [ ] `royksopp--eple` Eple, Röyksopp (2001)
+    - writer couldn't confirm: Stereogum says the track also draws on Skyy's "Disco Dancing"; I couldn't confirm that on a sample database, so it's left out.
+- [ ] `lamb--gabriel` Gabriel, Lamb (2001)
+    - writer couldn't confirm: UK singles chart peak for Gabriel. Which What Sound guests actually play on this track.
+- [ ] `lemon-jelly--nice-weather-for-ducks` Nice Weather for Ducks, Lemon Jelly (2002)
+    - writer couldn't confirm: The year of John Langstaff's original recording.
+- [ ] `zero-7--somersault` Somersault, Zero 7 (2004)
+- [ ] `sia--breathe-me` Breathe Me, Sia (2004)
+    - writer couldn't confirm: Dan Pontifex as the boyfriend behind Healing Is Difficult (AllMusic via Wikipedia doesn't name him).
+- [ ] `gorillaz-featuring-de-la-soul--feel-good-inc` Feel Good Inc., Gorillaz featuring De La Soul (2005)
+    - writer couldn't confirm: The bassline (couldn't find a reliable source on who plays it).
+- [ ] `nightmares-on-wax--you-wish` You Wish, Nightmares on Wax (2006)
+    - writer couldn't confirm: Any sync or streaming numbers for You Wish.
+- [ ] `mgmt--electric-feel` Electric Feel, MGMT (2007)
+    - writer couldn't confirm: VanWyngarden's Letterman line that the song is 'about drugs' comes only via Songfacts, so I left it out. No production interview names who played bass on the record.
+- [ ] `little-dragon--twice` Twice, Little Dragon (2007)
+    - writer couldn't confirm: The Norman Records page blocked direct fetching; its description reached me through search results. Other TV placements (90210, Revenge, Vampire Diaries) appeared only in search snippets, so I left them out. Exact single date is disputed (see year_note).
+- [ ] `washed-out--feel-it-all-around` Feel It All Around, Washed Out (2009)
+    - writer couldn't confirm: The 87 BPM figure comes from a single Resident Advisor review. No source I found named Greene's gear for this track.
+- [ ] `foster-the-people--pumped-up-kicks` Pumped Up Kicks, Foster the People (2010)
+    - writer couldn't confirm: Hours spent writing it differ by source (Wikipedia says five, Stereogum quotes Foster saying eight), so I wrote 'a single day'. The CNN interview Wikipedia cites for the mental-illness quote was blocked to me; WGRD carries the same paraphrase. I did not read Billboard's 2019 piece directly, only Stereogum's and Axios's reports of it. Reports that the Parkland shooter was a fan are left out as too thinly sourced for this page.
+- [ ] `bonobo--kiara` Kiara, Bonobo (2010)
+    - writer couldn't confirm: I could not confirm whether Kiara's strings are sampled or played, or that Green plays the bass on this track specifically. WhoSampled was blocked.
+- [ ] `alt-j--breezeblocks` Breezeblocks, alt-J (2012)
+- [ ] `hiatus-kaiyote--nakamarra` Nakamarra, Hiatus Kaiyote (2012)
+    - writer couldn't confirm: Which language group 'Nakamarra' belongs to (I couldn't confirm Warlpiri). One blog says the lyric honours a friend and the painter Doreen Nakamarra; Red Bull says it's about a friend who went to live with an Aboriginal community. Left both out.
+- [ ] `glass-animals--gooey` Gooey, Glass Animals (2014)
+    - writer couldn't confirm: No interview I found explains what the Gooey lyric is about. Only one source-backed listen-for note.
+- [ ] `tycho--awake` Awake, Tycho (2014)
+    - writer couldn't confirm: Single release date for the title track.
+- [ ] `khruangbin--white-gloves` White Gloves, Khruangbin (2015)
+    - writer couldn't confirm: The cassette detail (Thai music on tape, via Monrakplengthai) only appears in label and retailer press copy. Independent interviews confirm the Thai listening on drives and the Monrakplengthai blog, but don't mention cassettes. I didn't find a primary source saying the debut itself was tracked in the barn as opposed to rehearsed and written there; Bandcamp Daily says it was recorded in Speer's barn, and Wikipedia says the barn hosted many later sessions.
+- [ ] `tame-impala--the-less-i-know-the-better` The Less I Know the Better, Tame Impala (2015)
+    - writer couldn't confirm: Parker's guitar-synth and octave-pedal quotes come to me through Reverb Machine, which quotes him without naming the original interview. The two quotes don't fully agree: one says the bass goes through the guitar synth, the other says it's a guitar with an octave pedal. I couldn't confirm which guitar synth he used (Reverb Machine guesses a Roland GR-55 and says it isn't sure). Also left out: the 1,057 vocal takes figure, because Parker himself couldn't remember if it was for this song or 'Cause I'm a Man'. The thread to 30 (MGMT) is my own pairing, not a documented link.
+- [ ] `thundercat--them-changes` Them Changes, Thundercat (2015)
+    - writer couldn't confirm: I couldn't confirm which bass Thundercat played on this recording. He's known for six-string basses, but his Ibanez six-string signature model was announced in November 2017, after this track. Where the sax sits in the arrangement ('toward the end') comes from my memory of the record, not a source; the director may want to cut that 'where' or change it to a general note. Sources also disagree on whether 'Footsteps in the Dark' first came out as a B-side or as an album track in 1977.
+- [ ] `unknown-mortal-orchestra--hunnybee` Hunnybee, Unknown Mortal Orchestra (2018)
+    - writer couldn't confirm: Which city 'Hunnybee' itself was recorded in. Atwood says it was written in Vietnam, but the album credits list several studios without assigning tracks. The Rhodes entering after the strings comes from the credits (Ruban plays Rhodes) plus Atwood's 'spectral strings' intro; no source says in what order the parts come in, so the director may want to drop 'then gives way to the Rhodes'. The Hendrix 'why' is partly my reading.
+- [ ] `khruangbin--maria-tambien` Maria También, Khruangbin (2017)
+    - writer couldn't confirm: The SF Chronicle piece (Middle Eastern Funk and Soul playlist) came to me through a search summary; I couldn't open the article itself. Several outlets write 'María' with an accent, but the band's Bandcamp and NPR both use 'Maria También'. Promonews says the video drew on recordings of pre-revolution Iranian TV shows; I didn't confirm specific performers' names, so none are given. I left out any claim that the 'Apache' break is a sample: the band only said it's where the breakbeat comes from, and it may be replayed.
+- [ ] `khruangbin--evan-finds-the-third-room` Evan Finds the Third Room, Khruangbin (2018)
+    - writer couldn't confirm: What 'the third room' refers to; no source explains it. The 'People Everywhere (Still Alive)' leads_to is not off the band's catalogue, so the director may prefer an Antillean record; I couldn't verify a specific late-'70s proto-zouk recording and year that Speer named.
+- [ ] `men-i-trust--show-me-how` Show Me How, Men I Trust (2018)
+    - writer couldn't confirm: How and where it was recorded (no interview found; one online 'production breakdown' is a recreation, not the band's account). The 'massive streaming hit' wording comes from press coverage; I didn't find an official stream count. Nothing confirms 'never on the radio'. Wikipedia gives the band's founding as Montreal in the text and Quebec City in the infobox; the Laval detail comes from press coverage via search summary.
+- [ ] `toro-y-moi--ordinary-pleasure` Ordinary Pleasure, Toro y Moi (2018)
+    - writer couldn't confirm: The Russian River cabin and the 'get away from Oakland' quote come from an SF Chronicle interview that I could only see through search summaries, not open directly. The section placement ('bass and bongos come in first', 'synths in the choruses') is my description of the song's structure, which no source lays out; the elements themselves are sourced. Sources disagree on the year of Badarou's Echoes album (1984 or 1985); the single charted in October 1985.
+- [ ] `black-pumas--colors` Colors, Black Pumas (2019)
+    - writer couldn't confirm: Recording details for 'Colors' itself (studio, gear, who played drums); Quesada's studio is said to be Electric Deluxe in Austin, but I didn't confirm the song was cut there. Sources disagree on when the band formed (2017 per Garden & Gun, 2018 per Wikipedia), so I left out a year. The exact single release date isn't confirmed; Wikipedia says 2019. 'Black Moon Rising' as the first session comes from CBS; its 2019 year is the album release, and it may have come out earlier as a single. Leon Bridges' Fort Worth roots come from general knowledge, not a source fetched here.
+- [ ] `khruangbin--time` Time (You and I), Khruangbin (2020)
+    - writer couldn't confirm: The tempo; the only BPM I found (110) is an automated estimate, so 'disco tempo' rests on reviewers calling it a disco beat. Sources list the second comedian as both 'Lunda' and 'Lunga' Anele-Skosana; Rolling Stone AU's 'Lunga' is used here. XLR8R wrongly credits the Post-it video to this song; it belongs to 'So We Won't Forget'. 'Biggest chart showing to that point' is my inference from Wikipedia's chart table (earlier albums peaked at UK 82).
+- [ ] `khruangbin-leon-bridges--texas-sun` Texas Sun, Khruangbin & Leon Bridges (2019)
+    - writer couldn't confirm: Where the EP was recorded (one account says a Houston studio; I found nothing tying it to the Burton barn). 'A sound Khruangbin rarely use' is my own judgment, though the debut does credit Wilhelm Van Horn on pedal steel, so the director may want to cut that clause. The 'Coming Home' leads_to (Bridges' 2015 debut) wasn't separately verified in this session. Speer's 'spaghetti western' guitar on this track comes from a review I saw only in a search summary.

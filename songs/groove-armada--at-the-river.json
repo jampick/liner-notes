@@ -1,0 +1,72 @@
+{
+ "id": "groove-armada--at-the-river",
+ "title": "At the River",
+ "artist": "Groove Armada",
+ "year": 1997,
+ "year_note": "First pressed in 1997 as a 7-inch limited to 500 copies; reissued 26 July 1999, when it charted.",
+ "album": "Northern Star (1998), later Vertigo (1999)",
+ "aliases": {
+  "youtube": [
+   "m-uztVX6QFQ"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/fc/7b/d9fc7bfa-fe1b-d865-7939-aa804ac189a7/mzaf_14290936875219383559.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/at-the-river/304756740?i=304756750&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Andy Cato and Tom Findlay wrote it in a cottage in Ambleside in the Lake District, using a 1950s compilation they bought from a bargain bin for 50p. The hook is Patti Page's multi-tracked close harmony from 'Old Cape Cod', over synth bass and slowed-down drums; their sampler could only hold ten seconds, which is why only one fragment of the lyric is there. Cato had his trombone with him to practise for a jazz gig and played a blues solo inspired by 'Shall We Gather at the River?', recorded through a microphone he made by rewiring a speaker from the cottage's Alba hi-fi.",
+  "context": "Radio 1's playlist committee first thought it was too slow for radio, though Rob da Bank made it his DJ Mag single of the week and Zoe Ball played it on the breakfast show. The 1999 reissue reached 19. Marks & Spencer used it for its food adverts in 2006, which Findlay later said he regretted, and for a while the duo wouldn't play it live, bringing it back at Glastonbury 2008.",
+  "listen_for": [
+   {
+    "where": "the opening and every return of the hook",
+    "note": "Patti Page singing in harmony with herself (she multi-tracked her own voice in the Fifties). The loop is short because the sampler was."
+   },
+   {
+    "where": "the trombone solo",
+    "note": "Cato's blues line, recorded through a hi-fi speaker used backwards as a microphone, which is where the muffled, vintage edge comes from."
+   },
+   {
+    "where": "the drums",
+    "note": "Programmed and slowed right down, so the whole thing walks rather than grooves."
+   }
+  ],
+  "leads_to": {
+   "artist": "Patti Page",
+   "title": "Old Cape Cod",
+   "year": 1957,
+   "why": "The Mercury single the hook comes from, a US top-ten hit in 1957."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/At_the_River",
+   "https://en.wikipedia.org/wiki/Northern_Star_(Groove_Armada_album)",
+   "https://en.wikipedia.org/wiki/Old_Cape_Cod"
+  ],
+  "unverified": "Accounts differ on whether the Patti Page record was a vinyl compilation or a CD from a village shop; I said compilation and left the format out."
+ },
+ "culture": [
+  {
+   "kind": "sample",
+   "title": "Old Cape Cod from a 50p bargain bin",
+   "line": "The loop is Patti Page's 'Old Cape Cod', from a 50p compilation found in Ambleside. Their sampler held ten seconds, so they used one lyric line. Andy Cato added the trombone.",
+   "wiki": "Groove_Armada",
+   "source": "https://en.wikipedia.org/wiki/At_the_River"
+  },
+  {
+   "kind": "screen",
+   "title": "Adverts and About Time",
+   "line": "Marks & Spencer Food used it in adverts in 2006, which Tom Findlay later said he regretted. It also appears in the films About Time (2013) and The Low Down.",
+   "wiki": "About_Time_(2013_film)",
+   "source": "https://en.wikipedia.org/wiki/At_the_River"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

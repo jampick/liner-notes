@@ -1,0 +1,47 @@
+{
+ "year": 2015,
+ "items": [
+  {
+   "kind": "internet",
+   "title": "The dress",
+   "line": "In late February a badly lit photo of a dress split the internet into white and gold or blue and black. Over 10 million tweets in a week. It was blue and black.",
+   "wiki": "The_dress_(viral_phenomenon)",
+   "source": "https://en.wikipedia.org/wiki/The_dress"
+  },
+  {
+   "kind": "music",
+   "title": "Hotline Bling",
+   "line": "Drake's Hotline Bling video came out on Apple Music on October 19, and the dance got copied everywhere. The single peaked at number 2 on the Hot 100.",
+   "wiki": "Hotline_Bling",
+   "source": "https://en.wikipedia.org/wiki/Hotline_Bling"
+  },
+  {
+   "kind": "film",
+   "title": "Mad Max: Fury Road",
+   "line": "It opened May 15. George Miller shot it in the Namibian desert with Tom Hardy and Charlize Theron, and it won six Oscars the next February.",
+   "wiki": "Mad_Max:_Fury_Road",
+   "source": "https://en.wikipedia.org/wiki/Mad_Max:_Fury_Road"
+  },
+  {
+   "kind": "film",
+   "title": "Star Wars: The Force Awakens",
+   "line": "It opened December 18, directed by J. J. Abrams, and ended up around $2.07 billion worldwide. The teaser had been out since November 2014.",
+   "wiki": "Star_Wars:_The_Force_Awakens",
+   "source": "https://en.wikipedia.org/wiki/Star_Wars:_The_Force_Awakens"
+  },
+  {
+   "kind": "tech",
+   "title": "Apple Watch",
+   "line": "It went on sale April 24, with pre-orders from April 10. The gold Edition models ran from $10,000 to $17,000.",
+   "wiki": "Apple_Watch",
+   "source": "https://en.wikipedia.org/wiki/Apple_Watch"
+  },
+  {
+   "kind": "news",
+   "title": "New Horizons at Pluto",
+   "line": "On July 14 the probe passed about 12,500 km above Pluto, after a trip that began on January 19, 2006.",
+   "wiki": "New_Horizons",
+   "source": "https://en.wikipedia.org/wiki/New_Horizons"
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "id": "khruangbin--maria-tambien",
+ "title": "Maria También",
+ "artist": "Khruangbin",
+ "year": 2017,
+ "year_note": "Released as the lead single with its video on 2 November 2017; the album Con Todo El Mundo followed on 26 January 2018 (Dead Oceans / Night Time Stories). The official title is \"Maria También\", with no accent on Maria (Bandcamp, NPR).",
+ "album": "Con Todo El Mundo",
+ "aliases": {
+  "youtube": [
+   "7hlGqj3ImQI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/08/26/cc/0826ccbb-9d64-8077-b9d1-3bce0dc13b89/mzaf_13645777050131647488.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/maria-tambi%C3%A9n/1299241642?i=1299241645&uo=4"
+  }
+ },
+ "notes": {
+  "made": "It was the first song they wrote for the album, after a long stretch of writer's block. The band said it draws on Middle Eastern music, particularly pre-revolution Iran. Speer said he listened to Googoosh, whom he called \"the Michael Jackson of Iran\", more than anything else while they made the record, and he and Laura Lee had a playlist called Middle Eastern Funk and Soul. The breakbeat comes from \"Apache\": Speer used to run sound at a Houston youth center where breakdancers taught kids to b-boy, and it stuck in his head.",
+  "context": "The video, directed by Chris Boyle from a concept by Sanam Petri and Laura Lee, uses footage of Iranian women singers, dancers and TV performers from the 1970s who were exiled or silenced after the 1979 revolution. A newscaster talks about Persia \"moving up in the world\", then a man in a control room presses a button and the women vanish from an empty stage. The album title comes from Laura Lee's grandfather in Brownsville, Texas, who would ask her how much he loved her and only accept \"con todo el mundo\" (with all the world) as the answer.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "The bass line is a surf-rock gallop that Grammy.com compares to the Surfaris' \"Wipe Out\". Handclaps and bells sit on top."
+   },
+   {
+    "where": "the breakdown",
+    "note": "The drum break is \"Apache\", hip-hop's oldest borrowed beat, and Bandcamp Daily says it sounds uncannily like Run-DMC's \"Peter Piper\"."
+   },
+   {
+    "where": "the guitar lead",
+    "note": "Speer plays a melody shaped like a singer's line from 1970s Iranian pop. He said he wanted his guitar to move people the way a song not sung in English can."
+   }
+  ],
+  "leads_to": {
+   "artist": "Incredible Bongo Band",
+   "title": "Apache",
+   "year": 1973,
+   "why": "This is the version of \"Apache\" that b-boys danced to and that turned into a hip-hop breakbeat, and Speer's drum break comes from it."
+  },
+  "sources": [
+   "https://khruangbin.bandcamp.com/album/con-todo-el-mundo",
+   "https://www.wwno.org/2017-11-02/khruangbin-returns-with-maria-tambien-celebrating-irans-lost-female-artists",
+   "https://www.wgbh.org/news/2018-01-26/khruangbins-vibrant-con-todo-el-mundo-is-drawn-from-life",
+   "https://daily.bandcamp.com/features/khruangbin-con-todo-el-mundo-interview",
+   "https://promonews.tv/videos/2017/11/15/khruangbin-maria-también-chris-boyle/50491",
+   "https://www.booooooom.com/submissions/khruangbin-maria-tambien",
+   "https://grammy.com/news/5-important-khruangbin-songs-new-album-a-la-sala",
+   "https://en.wikipedia.org/wiki/Khruangbin"
+  ],
+  "unverified": "The SF Chronicle piece (Middle Eastern Funk and Soul playlist) came to me through a search summary; I couldn't open the article itself. Several outlets write 'María' with an accent, but the band's Bandcamp and NPR both use 'Maria También'. Promonews says the video drew on recordings of pre-revolution Iranian TV shows; I didn't confirm specific performers' names, so none are given. I left out any claim that the 'Apache' break is a sample: the band only said it's where the breakbeat comes from, and it may be replayed."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Iranian women, in archive",
+   "line": "Director Chris Boyle used archive footage of Iranian women artists from before 1979, many later exiled or silenced. Concept by Sanam Petri and Laura Lee.",
+   "wiki": "Iranian_Revolution",
+   "source": "https://xlr8r.com/news/khruangbin-return-with-second-lp/"
+  },
+  {
+   "kind": "chart",
+   "title": "Lead single",
+   "line": "Released November 2, 2017, as the first single from Con Todo El Mundo, which followed on January 26, 2018.",
+   "wiki": "Con_Todo_el_Mundo",
+   "source": "https://en.wikipedia.org/wiki/Con_Todo_el_Mundo"
+  },
+  {
+   "kind": "live",
+   "title": "KEXP",
+   "line": "Mark Speer told Relix it echoes the surf classic Apache and Iranian, Turkish and Spanish music. The band played it live at KEXP in Seattle in April 2018.",
+   "wiki": "KEXP",
+   "source": "https://relix.com/news/detail/watch_khruangbin_perform_lady_and_man_maria_tambien_and_august_10_live_on_kexp"
+  },
+  {
+   "kind": "live",
+   "title": "Tiny Desk",
+   "line": "It was one of three songs in their May 2018 NPR Tiny Desk Concert, with August 10 and White Gloves.",
+   "wiki": "Tiny_Desk_Concerts",
+   "source": "https://relix.com/features/detail/watch_khruangbins_full_performance_on_nprs_tiny_desk_concerts"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "year": 2020,
+ "items": [
+  {
+   "kind": "news",
+   "title": "The lockdowns",
+   "line": "By April about half the world was under some form of lockdown, more than 3.9 billion people in over 90 countries.",
+   "wiki": "COVID-19_lockdowns",
+   "source": "https://en.wikipedia.org/wiki/COVID-19_lockdowns"
+  },
+  {
+   "kind": "game",
+   "title": "Animal Crossing: New Horizons",
+   "line": "It came out March 20, just as lockdowns spread. Nintendo reported 11.77 million sold in 12 days, and people held weddings and graduations on their islands.",
+   "wiki": "Animal_Crossing:_New_Horizons",
+   "source": "https://en.wikipedia.org/wiki/Animal_Crossing:_New_Horizons"
+  },
+  {
+   "kind": "tv",
+   "title": "Tiger King",
+   "line": "It hit Netflix on March 20, seven episodes about Joe Exotic and an Oklahoma zoo. Nielsen counted 34.3 million viewers in the first 10 days.",
+   "wiki": "Tiger_King",
+   "source": "https://en.wikipedia.org/wiki/Tiger_King"
+  },
+  {
+   "kind": "tech",
+   "title": "Zoom",
+   "line": "Zoom said it had 10 million daily meeting participants in December 2019 and over 300 million by April 2020, a count it later walked back.",
+   "wiki": "Zoom_(software)",
+   "source": "https://en.wikipedia.org/wiki/Zoom_(software)"
+  },
+  {
+   "kind": "game",
+   "title": "Among Us",
+   "line": "Innersloth released it in 2018, and nobody cared until streamers found it in summer 2020. It hit about 1.5 million concurrent players in September.",
+   "wiki": "Among_Us",
+   "source": "https://en.wikipedia.org/wiki/Among_Us"
+  },
+  {
+   "kind": "tv",
+   "title": "The Queen's Gambit",
+   "line": "It landed October 23. Netflix said 62 million households watched in its first month, and one US company reported chess set sales up over 1,000 percent.",
+   "wiki": "The_Queen's_Gambit_(miniseries)",
+   "source": "https://en.wikipedia.org/wiki/The_Queen%27s_Gambit_(miniseries)"
+  },
+  {
+   "kind": "internet",
+   "title": "The lofi girl gets pulled",
+   "line": "In February 2020 YouTube briefly removed ChilledCow's lofi radio stream, then restored it after public backlash. Viewing grew through the pandemic.",
+   "wiki": "Lofi_girl",
+   "source": "https://en.wikipedia.org/wiki/Lofi_girl"
+  }
+ ]
+}

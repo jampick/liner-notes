@@ -1,0 +1,16 @@
+# Corrections to carry into every artifact (chat tables, review doc, page)
+- Sour Times (Kwame): sample is Lalo Schifrin "Danube Incident" (no "The"), from More Mission: Impossible (1967), TV music; Portishead sped it up; sampled part is guitar/percussion, not strings. New quote: "Built on Lalo Schifrin's 'Danube Incident', 1960s Mission: Impossible TV music. Spy-show records, looped until they ache."
+- Glory Box (Kwame): drop "slowed". New quote: "Isaac Hayes' 'Ike's Rap II' turned into a torch song. Trip-hop in one sample."
+- Unfinished Sympathy (Theo): "Every best British single list has it" is opinion; soften: "Shara Nelson and those strings. It's on nearly every best-British-singles list worth reading." (NME 2002 #9)
+- Teardrop (Theo): US House theme used the instrumental, no vocal. New quote: "Its instrumental became the House theme in America, so a generation knows it without knowing the band."
+- The Sea (Kwame): not slide guitar. New quote: "Skye Edwards over a bluesy steel guitar and a hip-hop beat. Morcheeba at their most patient."
+- Mad About You (Kwame): Bond link unsourced; soften: "Belgian trip-hop with a string section straight out of a spy film. It belongs right next to Sneaker Pimps." (opinion)
+- Lebanese Blonde: year 1998 not 1997 (4AD BAD8017, UK #96) -> reorder playlist/page.
+- La femme d'argent: lowercase f per track list.
+- 6 Underground: Kelli Dayton at the time (later Kelli Ali).
+- Nakamarra: year 2012 (Tawk Tomahawk, April 2012); Grammy nom was the 2013 Q-Tip version -> reorder.
+- Kiara (Ines): "plays bass himself" unverified. New quote: "Simon Green plays most of Black Sands himself, and the loop keeps folding in on itself."
+- Twice (Wren): add the strings. New quote: "Yukimi Nagano, a piano and a few strings. It's barely there, and that's the point."
+- Awake (Ines dissent) is contestable; soften: "Pretty, and the bass drives it, but it rolls past instead of sitting in a groove."
+- Destiny (Ines): no Rhodes credited on Destiny. New quote: "The keys and bass sit so far back that Sia and Sophie Barker seem to float."
+- Breathe Me (Theo): New quote: "The Six Feet Under finale. Sia's the most famous Zero 7 graduate, and this is why."

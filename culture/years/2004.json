@@ -1,0 +1,54 @@
+{
+ "year": 2004,
+ "items": [
+  {
+   "kind": "tech",
+   "title": "Thefacebook",
+   "line": "Mark Zuckerberg and his Harvard roommates launched TheFacebook on 4 February 2004. It was Harvard-only at first, built around the printed student directories called face books.",
+   "wiki": "Facebook",
+   "source": "https://en.wikipedia.org/wiki/Facebook"
+  },
+  {
+   "kind": "film",
+   "title": "Shaun of the Dead",
+   "line": "Edgar Wright's zombie comedy opened in UK cinemas on 9 April 2004, on a budget of about 4 million pounds. The pub fight is cued to Queen's \"Don't Stop Me Now\".",
+   "wiki": "Shaun_of_the_Dead",
+   "source": "https://en.wikipedia.org/wiki/Shaun_of_the_Dead"
+  },
+  {
+   "kind": "film",
+   "title": "Garden State",
+   "line": "Zach Braff wrote, directed and starred in it on a $2.5 million budget. It premiered at Sundance on 16 January 2004 and its hand-picked soundtrack went on to win a Grammy.",
+   "wiki": "Garden_State_(film)",
+   "source": "https://en.wikipedia.org/wiki/Garden_State_(film)"
+  },
+  {
+   "kind": "sport",
+   "title": "Athens Olympics",
+   "line": "The Games came home to Greece, running 13 to 29 August 2004 with 201 nations taking part. It was Athens' first time hosting since the first modern Games in 1896.",
+   "wiki": "2004_Summer_Olympics",
+   "source": "https://en.wikipedia.org/wiki/2004_Summer_Olympics"
+  },
+  {
+   "kind": "tv",
+   "title": "Lost",
+   "line": "Lost debuted on ABC on 22 September 2004, after a pilot that reportedly cost $10 to $14 million. Oceanic 815 crashed on a Hawaiian beach, and season one averaged about 15.7 million viewers.",
+   "wiki": "Lost_(TV_series)",
+   "source": "https://en.wikipedia.org/wiki/Lost_(TV_series)"
+  },
+  {
+   "kind": "game",
+   "title": "Half-Life 2",
+   "line": "Valve released Half-Life 2 on 16 November 2004, and you had to have Steam running to play it, which annoyed plenty of people. The gravity gun made the physics the fun part.",
+   "wiki": "Half-Life_2",
+   "source": "https://en.wikipedia.org/wiki/Half-Life_2"
+  },
+  {
+   "kind": "game",
+   "title": "Nintendo DS",
+   "line": "The Nintendo DS arrived in North America on 21 November 2004 at US$149.99, with two screens and a touch screen on the bottom. It went on to sell about 154 million units.",
+   "wiki": "Nintendo_DS",
+   "source": "https://en.wikipedia.org/wiki/Nintendo_DS"
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "year": 2000,
+ "items": [
+  {
+   "kind": "game",
+   "title": "PlayStation 2",
+   "line": "The PlayStation 2 launched in Japan on 4 March 2000, North America on 26 October at $299 and Europe on 24 November. It played DVDs, and sales passed 155 million.",
+   "wiki": "PlayStation_2",
+   "source": "https://en.wikipedia.org/wiki/PlayStation_2"
+  },
+  {
+   "kind": "game",
+   "title": "The Sims",
+   "line": "The Sims came out on 4 February 2000. Will Wright's virtual dollhouse passed Myst as the best-selling PC game, with over 6.3 million sold by March 2002.",
+   "wiki": "The_Sims",
+   "source": "https://en.wikipedia.org/wiki/The_Sims"
+  },
+  {
+   "kind": "news",
+   "title": "Tate Modern opens",
+   "line": "Tate Modern opened on 11 May 2000 in the old Bankside Power Station on the Thames, converted by Herzog & de Meuron. It drew 5.25 million visitors in its first year.",
+   "wiki": "Tate_Modern",
+   "source": "https://en.wikipedia.org/wiki/Tate_Modern"
+  },
+  {
+   "kind": "tv",
+   "title": "Big Brother",
+   "line": "Big Brother began on Channel 4 on 18 July 2000. Davina McCall presented, and Craig Phillips won after 64 days in the house.",
+   "wiki": "Big_Brother_(British_TV_series)",
+   "source": "https://en.wikipedia.org/wiki/Big_Brother_(British_TV_series)"
+  },
+  {
+   "kind": "sport",
+   "title": "Euro 2000",
+   "line": "Euro 2000, co-hosted by Belgium and the Netherlands, ran from 10 June to 2 July. France beat Italy 2-1 in the final with a David Trezeguet golden goal.",
+   "wiki": "UEFA_Euro_2000",
+   "source": "https://en.wikipedia.org/wiki/UEFA_Euro_2000"
+  },
+  {
+   "kind": "news",
+   "title": "The Millennium Dome",
+   "line": "The Millennium Dome opened on 1 January 2000 after a New Year's Eve party with the Queen. About 6.5 million came, half the 12 million forecast, and the total bill hit £789 million.",
+   "wiki": "Millennium_Dome",
+   "source": "https://en.wikipedia.org/wiki/Millennium_Dome"
+  },
+  {
+   "kind": "film",
+   "title": "Gladiator",
+   "line": "Gladiator opened in the US on 5 May 2000. Ridley Scott's film won five Oscars, including Best Picture and Best Actor for Russell Crowe, on a $103 million budget.",
+   "wiki": "Gladiator_(2000_film)",
+   "source": "https://en.wikipedia.org/wiki/Gladiator_(2000_film)"
+  }
+ ]
+}

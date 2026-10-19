@@ -1,0 +1,80 @@
+{
+ "id": "massive-attack--teardrop",
+ "title": "Teardrop",
+ "artist": "Massive Attack",
+ "year": 1998,
+ "year_note": "",
+ "album": "Mezzanine",
+ "aliases": {
+  "youtube": [
+   "u7K72X4eo_s"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a3/a6/91/a3a691b0-8e49-399d-2585-ddcd6694c9f2/mzaf_16325826545413166648.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/teardrop/724466069?i=724466700&uo=4"
+  }
+ },
+ "notes": {
+  "made": "It started as a harpsichord riff Neil Davidge played in the studio in April 1997 while Andrew Vowles listened; the two of them built the track from there. The beat is a sped-up sample of Les McCann's 'Sometimes I Cry'. Elizabeth Fraser of Cocteau Twins wrote and sang the words, many of them adapted from Gaston Bachelard. Vowles had sent the demo to Madonna, who wanted it, but Robert Del Naja and Grantley Marshall preferred Fraser and outvoted him two to one.",
+  "context": "During the sessions Fraser learned that Jeff Buckley, her former partner, had disappeared; he was found drowned, and in 2009 she said the song is 'kind of about him'. Released on 27 April 1998, it reached 10 in the UK, the band's only top-ten single there. Walter Stern's video put a latex foetus in the womb singing it. In the US, the instrumental became the House theme, picked partly because its tempo is close to a heartbeat; many European broadcasts used different music for rights reasons.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "The harpsichord riff, Davidge's original idea, played straight and left mostly alone."
+   },
+   {
+    "where": "under the harpsichord",
+    "note": "Les McCann's drums from 'Sometimes I Cry', sped up into the slow heartbeat that got the song chosen for House."
+   },
+   {
+    "where": "the vocal",
+    "note": "Fraser's lines borrow from Bachelard's writing on reverie, which is why they read more like images than a story."
+   }
+  ],
+  "leads_to": {
+   "artist": "Les McCann",
+   "title": "Sometimes I Cry",
+   "year": 1973,
+   "why": "The opening track of McCann's Atlantic album Layers, and the source of the beat."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Teardrop_(Massive_Attack_song)",
+   "https://en.wikipedia.org/wiki/House_(TV_series)",
+   "https://www.imdb.com/title/tt0412142/alternateversions/?tab=cz",
+   "https://en.wikipedia.org/wiki/Layers_(Les_McCann_album)"
+  ],
+  "unverified": "Some sources date Layers to November 1972 rather than 1973; Wikipedia says released 1973, recorded November 1972."
+ },
+ "culture": [
+  {
+   "kind": "sample",
+   "title": "Madonna lost the vote",
+   "line": "Andrew Vowles sent the demo to Madonna, but Del Naja and Marshall outvoted him for Elizabeth Fraser. The beat is a sped-up Les McCann sample, 'Sometimes I Cry'.",
+   "wiki": "Madonna",
+   "source": "https://en.wikipedia.org/wiki/Teardrop_(song)"
+  },
+  {
+   "kind": "video",
+   "title": "The singing foetus",
+   "line": "Walter Stern directed the video, which shows a foetus singing the song from inside the womb.",
+   "wiki": "Teardrop_(song)",
+   "source": "https://en.wikipedia.org/wiki/Teardrop_(song)"
+  },
+  {
+   "kind": "screen",
+   "title": "House opening theme",
+   "line": "Instrumental parts of Teardrop open House, which premiered on Fox on 16 November 2004. Producers liked that its tempo resembles a heartbeat.",
+   "wiki": "Hugh_Laurie",
+   "source": "https://en.wikipedia.org/wiki/House_(TV_series)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

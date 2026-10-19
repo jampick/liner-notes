@@ -1,0 +1,54 @@
+{
+ "year": 2012,
+ "items": [
+  {
+   "kind": "internet",
+   "title": "Gangnam Style",
+   "line": "Psy posted it on 15 July 2012. On 21 December it became the first YouTube video to reach a billion views.",
+   "wiki": "Gangnam_Style",
+   "source": "https://en.wikipedia.org/wiki/Gangnam_Style"
+  },
+  {
+   "kind": "sport",
+   "title": "London Olympics",
+   "line": "Danny Boyle directed the opening ceremony on 27 July 2012. Team GB finished third with 65 medals, 29 of them gold, and Michael Phelps won his 22nd medal.",
+   "wiki": "2012_Summer_Olympics",
+   "source": "https://en.wikipedia.org/wiki/2012_Summer_Olympics"
+  },
+  {
+   "kind": "film",
+   "title": "The Avengers",
+   "line": "Joss Whedon's team-up opened in the US on 4 May 2012 and grossed about $1.52 billion worldwide.",
+   "wiki": "The_Avengers_(2012_film)",
+   "source": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+  },
+  {
+   "kind": "film",
+   "title": "The Hunger Games",
+   "line": "Opened 23 March 2012 with $152.5 million in North America and ended near $695 million worldwide on a $78 million budget.",
+   "wiki": "The_Hunger_Games_(film)",
+   "source": "https://en.wikipedia.org/wiki/The_Hunger_Games_(film)"
+  },
+  {
+   "kind": "news",
+   "title": "Curiosity lands on Mars",
+   "line": "It touched down in Gale crater at 05:17 UTC on 6 August 2012, via a sky crane maneuver NASA called the Seven Minutes of Terror.",
+   "wiki": "Curiosity_(rover)",
+   "source": "https://en.wikipedia.org/wiki/Curiosity_(rover)"
+  },
+  {
+   "kind": "film",
+   "title": "Skyfall",
+   "line": "UK release 26 October 2012. It was the first Bond film past $1 billion, and Adele's theme was the first Bond theme to win an Oscar.",
+   "wiki": "Skyfall",
+   "source": "https://en.wikipedia.org/wiki/Skyfall"
+  },
+  {
+   "kind": "news",
+   "title": "Obama re-elected",
+   "line": "6 November 2012. Obama beat Mitt Romney 332 to 206 in the Electoral College, 51.1 percent to 47.2 percent of the popular vote.",
+   "wiki": "2012_United_States_presidential_election",
+   "source": "https://en.wikipedia.org/wiki/2012_United_States_presidential_election"
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "id": "massive-attack--protection",
+ "title": "Protection",
+ "artist": "Massive Attack",
+ "year": 1994,
+ "year_note": "Album Protection released 26 September 1994; the single (edit 4:53) followed on 9 January 1995 and reached UK number 14.",
+ "album": "Protection",
+ "aliases": {
+  "youtube": [
+   "0Rw-UsRPNqc"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1c/da/e4/1cdae4ed-3a3c-5979-bc70-cd199bbfc0f1/mzaf_8298589690493237661.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/protection/724410562?i=724410734&uo=4"
+  }
+ },
+ "notes": {
+  "made": "In late 1993 Tracey Thorn of Everything but the Girl got a cassette of an untitled backing track with no melody or words, and wrote both in one sitting. The lyric drew on a friend's story and on her protectiveness toward Ben Watt after his serious illness. The beat is a sample of James Brown's \"The Payback\" (the hi-hat and bass figure and a recurring wah-wah guitar chord), produced by the band with Nellee Hooper. The album version runs 7:51.",
+  "context": "The band wanted out of the \"Motown reggae\" of Blue Lines, and Thorn's dry, unshowy voice was a long way from Shara Nelson's gospel lift. Michel Gondry's single-take video, the camera floating across the windows of one apartment block, won Video of the Year at the 1995 MTV Europe Music Awards. About six weeks after the single, on 17 February 1995, Mad Professor's dub of the whole album, No Protection, came out.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "The Payback break on its own, dry, with gaps in it. The silences between hits do as much work as the hits."
+   },
+   {
+    "where": "the guitar stab that keeps returning",
+    "note": "A single wah-wah chord lifted from James Brown, used as punctuation rather than a riff."
+   },
+   {
+    "where": "the last couple of minutes",
+    "note": "The beat drops away and leaves piano and synths over a sound like waves on a shore, which is why the long version feels like it drifts out to sea."
+   }
+  ],
+  "leads_to": {
+   "artist": "Massive Attack v Mad Professor",
+   "title": "Radiation Ruling the Nation",
+   "year": 1995,
+   "why": "Mad Professor's dub of \"Protection\" from No Protection, which pulls the track back toward the Jamaican sound-system roots the Wild Bunch started from."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Protection_(Massive_Attack_song)",
+   "https://en.wikipedia.org/wiki/Protection_(Massive_Attack_album)",
+   "https://bestsong.substack.com/p/protection-by-massive-attack",
+   "https://en.wikipedia.org/wiki/Tracey_Thorn",
+   "https://en.wikipedia.org/wiki/No_Protection_(Massive_Attack_album)",
+   "https://en.wikipedia.org/wiki/6_Underground_(song)",
+   "https://en.wikipedia.org/wiki/Four_Walls_/_Paradise_Circus"
+  ],
+  "unverified": "Who plays the piano and bass on the title track (album credits don't say). Thorn's \"about 10 minutes\" quote appears in one Substack piece; I paraphrased it as \"one sitting\" instead."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Michel Gondry's one take",
+   "line": "Gondry shot a seven-minute single take moving through a building, planned with a Lego model. Robert Del Naja said it took around 15 takes in cold Paris weather.",
+   "wiki": "Michel_Gondry",
+   "source": "https://en.wikipedia.org/wiki/Protection_(Massive_Attack_song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Video award and chart",
+   "line": "The video won MTV Europe's Video of the Year at the 1995 MTV EMAs. The single reached number 14 in the UK.",
+   "wiki": "Protection_(Massive_Attack_song)",
+   "source": "https://en.wikipedia.org/wiki/Protection_(Massive_Attack_song)"
+  },
+  {
+   "kind": "sample",
+   "title": "The Payback sample",
+   "line": "Tracey Thorn wrote the lyrics in 1993 after hearing a backing track, partly thinking of Ben Watt's illness. The track samples a James Brown's The Payback hi-hat and guitar chord.",
+   "source": "https://en.wikipedia.org/wiki/Protection_(Massive_Attack_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

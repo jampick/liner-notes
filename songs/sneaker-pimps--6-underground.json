@@ -1,0 +1,75 @@
+{
+ "id": "sneaker-pimps--6-underground",
+ "title": "6 Underground",
+ "artist": "Sneaker Pimps",
+ "year": 1996,
+ "year_note": "",
+ "album": "Becoming X",
+ "aliases": {
+  "youtube": [
+   "Wuwfe3DRJzE"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/70/fd/3e/70fd3e5f-e60e-cf93-a307-174e20d5ffe0/mzaf_6674796276425930512.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/6-underground/1726639434?i=1726639440&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Liam Howe recorded Becoming X in his bedroom studio in Elwick, County Durham, and built a cupboard into a vocal booth. The horns and harp line come from John Barry's 'Golden Girl' on the Goldfinger soundtrack, which is why Barry shares the writing credit with Chris Corner, Howe and lyricist Ian Pickering. Jim Abbiss produced it with Line of Flight, the name Howe and Corner worked under before the band. Kelli Dayton (later Kelli Ali) sang; the manager sent her the demos and she joined on condition she became a songwriting partner.",
+  "context": "The band formed in Hartlepool in 1994, which put trip-hop in a north-east bedroom a couple of years after Bristol made it famous. Clean Up Records released it on 30 September 1996 and it reached 15 in the UK; after it turned up in the 1997 film The Saint it was reissued and got to 9. In the US it reached 45 on the Hot 100 and 7 on Modern Rock, and Becoming X went on to sell over a million copies.",
+  "listen_for": [
+   {
+    "where": "the opening bars",
+    "note": "The slow horn and harp figure is a sample of John Barry's 'Golden Girl' from Goldfinger (1964). A Bond cue from three decades earlier is what makes it feel like a spy film at half speed."
+   },
+   {
+    "where": "the verses",
+    "note": "Dayton's vocal sits close and dry, the sound of a singer in a small home booth (Howe's converted cupboard) rather than a big studio room."
+   }
+  ],
+  "leads_to": {
+   "artist": "John Barry",
+   "title": "Golden Girl",
+   "year": 1964,
+   "why": "The source of the horns and harp, from the Goldfinger soundtrack."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/6_Underground_(song)",
+   "https://en.wikipedia.org/wiki/Becoming_X",
+   "https://en.wikipedia.org/wiki/Sneaker_Pimps"
+  ],
+  "unverified": "No studio session details beyond the bedroom studio. The film placement in The Saint is in Wikipedia but its citation there is flagged as unreliable; the claim that the film drove the radio play comes from that article."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Dentist's chair video",
+   "line": "Toby Tremlett directed the video, first shown 14 January 1997. Kelli Dayton spins in a dentist's chair in a dark room ringed by small lit windows, one with a man eating spaghetti.",
+   "wiki": "6_Underground_(song)",
+   "source": "https://en.wikipedia.org/wiki/6_Underground_(song)"
+  },
+  {
+   "kind": "sample",
+   "title": "Goldfinger harp and horns",
+   "line": "The opening horns and harp come from 'Golden Girl' in the 1964 Bond film Goldfinger. Nellee Hooper's mix adds the 'a-one two' from De La Soul's 'Breakadawn'.",
+   "wiki": "Goldfinger_(film)",
+   "source": "https://en.wikipedia.org/wiki/6_Underground_(song)"
+  },
+  {
+   "kind": "screen",
+   "title": "The Saint (1997)",
+   "line": "It played over the end credits of The Saint (Val Kilmer, 4 April 1997) and radio picked it up. A May 1997 re-release hit number 9 in the UK and 45 on the US Hot 100.",
+   "wiki": "The_Saint_(1997_film)",
+   "source": "https://en.wikipedia.org/wiki/The_Saint_(1997_film)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

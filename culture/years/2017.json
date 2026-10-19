@@ -1,0 +1,47 @@
+{
+ "year": 2017,
+ "items": [
+  {
+   "kind": "tech",
+   "title": "Nintendo Switch",
+   "line": "It launched March 3 at $299.99, a console you could lift out of the dock and carry. Nintendo expected to ship two million in the first month.",
+   "wiki": "Nintendo_Switch",
+   "source": "https://en.wikipedia.org/wiki/Nintendo_Switch"
+  },
+  {
+   "kind": "film",
+   "title": "Get Out",
+   "line": "Jordan Peele's debut opened wide on February 24 on a $4.5 million budget and made over $255 million. The sunken place became everyone's shorthand.",
+   "wiki": "Get_Out",
+   "source": "https://en.wikipedia.org/wiki/Get_Out"
+  },
+  {
+   "kind": "music",
+   "title": "Despacito",
+   "line": "Released January 13, it spent 16 straight weeks at number one on the Hot 100 from May. Its video was the first on YouTube to reach 3 billion views, on August 4.",
+   "wiki": "Despacito",
+   "source": "https://en.wikipedia.org/wiki/Despacito"
+  },
+  {
+   "kind": "fashion",
+   "title": "Fidget spinners",
+   "line": "They took over 2017, sold at Amazon, 7-Eleven and Toys R Us, and a lot of school districts banned them from classrooms.",
+   "wiki": "Fidget_spinner",
+   "source": "https://en.wikipedia.org/wiki/Fidget_spinner"
+  },
+  {
+   "kind": "news",
+   "title": "The 2017 total solar eclipse",
+   "line": "On August 21 totality crossed 14 US states from Oregon to South Carolina. The longest stretch was 2 minutes 41.6 seconds, near Carbondale, Illinois.",
+   "wiki": "Solar_eclipse_of_August_21,_2017",
+   "source": "https://en.wikipedia.org/wiki/Solar_eclipse_of_August_21,_2017"
+  },
+  {
+   "kind": "internet",
+   "title": "Lofi hip hop radio",
+   "line": "ChilledCow started its nonstop 'beats to relax/study to' stream on February 25. It was pulled that summer over anime footage and came back in September with new animation.",
+   "wiki": "Lofi_girl",
+   "source": "https://en.wikipedia.org/wiki/Lofi_girl"
+  }
+ ]
+}

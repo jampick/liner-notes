@@ -1,0 +1,72 @@
+{
+ "id": "khruangbin--white-gloves",
+ "title": "White Gloves",
+ "artist": "Khruangbin",
+ "year": 2015,
+ "year_note": "",
+ "album": "The Universe Smiles Upon You",
+ "aliases": {
+  "youtube": [
+   "wJzoos4rE_o"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/73/61/ae/7361aec8-493f-421f-a86e-32b1d61387ec/mzaf_11992163634501343526.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/white-gloves/1098176465?i=1098176720&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Khruangbin is Laura Lee on bass, Mark Speer on guitar and Donald \"DJ\" Johnson on drums, and the debut was produced by Speer with Houston engineer Steve Christensen. The band worked it up in a barn on Speer's family property in Burton, Texas, where, Speer says, you can open all the doors (they had to clear the bees out first). On the drives out from Houston they played 1960s and '70s Thai groups like Yodrak Salakchai and the Impossibles, so-called shadow music, and their label's notes say a lot of it came off the Monrakplengthai blog. \"White Gloves\" was one of the band's first songs with words: Laura Lee sings about a queen in white gloves who died in a fight.",
+  "context": "It came out as the album's only single on 4 September 2015, two months before the record, on Night Time Stories (the label behind the Late Night Tales series). The band had picked up its early following when Bonobo put \"A Calf Born in Winter\" on his 2013 Late Night Tales mix. After the album The Guardian made them New Band of the Week, and they went out opening for Tycho and Massive Attack. The name is Thai for \"airplane\" (literally \"engine fly\"), and it was Laura Lee's favorite Thai word when she was learning the language.",
+  "listen_for": [
+   {
+    "where": "the opening bars",
+    "note": "Johnson keeps a slow, steady beat and doesn't fill. Speer's guitar echoes over the top, and Laura Lee's bass is the only part that moves much at all."
+   },
+   {
+    "where": "when the voice comes in",
+    "note": "This was one of the band's first tries at singing, from a group that started out instrumental. Laura Lee's vocal stays soft and close, mostly oohs, and the lyric never says how the queen died."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Shadows",
+   "title": "Apache",
+   "year": 1960,
+   "why": "Thai guitar bands of the '60s copied the Shadows so closely that their sound got called 'shadow music', and that's the music Khruangbin played in the car to Burton."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Khruangbin",
+   "https://en.wikipedia.org/wiki/The_Universe_Smiles_upon_You",
+   "https://daily.bandcamp.com/features/khruangbin-con-todo-el-mundo-interview",
+   "https://thecurrent.org/feature/2018/04/23/khruangbin-perform-in-the-current-studio",
+   "https://latenighttales.co.uk/product.php/405/khruangbin-the-universe-smiles-upon-you",
+   "https://www.wbgo.org/2018-05-16/khruangbin-tiny-desk-concert",
+   "https://grammy.com/news/5-important-khruangbin-songs-new-album-a-la-sala"
+  ],
+  "unverified": "The cassette detail (Thai music on tape, via Monrakplengthai) only appears in label and retailer press copy. Independent interviews confirm the Thai listening on drives and the Monrakplengthai blog, but don't mention cassettes. I didn't find a primary source saying the debut itself was tracked in the barn as opposed to rehearsed and written there; Bandcamp Daily says it was recorded in Speer's barn, and Wikipedia says the barn hosted many later sessions."
+ },
+ "culture": [
+  {
+   "kind": "live",
+   "title": "Tiny Desk",
+   "line": "Khruangbin played White Gloves at their NPR Tiny Desk Concert in May 2018, alongside Maria También and August 10. It was the only song in the set with vocals.",
+   "wiki": "Tiny_Desk_Concerts",
+   "source": "https://relix.com/features/detail/watch_khruangbins_full_performance_on_nprs_tiny_desk_concerts"
+  },
+  {
+   "kind": "chart",
+   "title": "The barn album",
+   "line": "White Gloves was the only single off The Universe Smiles Upon You, released November 6, 2015. The album was recorded in a barn in Burton, Texas.",
+   "wiki": "The_Universe_Smiles_upon_You",
+   "source": "https://en.wikipedia.org/wiki/The_Universe_Smiles_Upon_You"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

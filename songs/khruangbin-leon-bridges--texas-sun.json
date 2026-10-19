@@ -1,0 +1,75 @@
+{
+ "id": "khruangbin-leon-bridges--texas-sun",
+ "title": "Texas Sun",
+ "artist": "Khruangbin & Leon Bridges",
+ "year": 2019,
+ "year_note": "The single came out on 3 December 2019; the Texas Sun EP followed on 7 February 2020 (Dead Oceans, with Columbia and Night Time Stories).",
+ "album": "Texas Sun (EP)",
+ "aliases": {
+  "youtube": [
+   "zSWNWWREtsI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/64/0d/bc/640dbc64-93ac-1322-20bf-0c929bfcadb6/mzaf_10048206250487462970.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/texas-sun/1485581308?i=1485581309&uo=4"
+  }
+ },
+ "notes": {
+  "made": "The two acts toured North America together in 2018, coast to coast, both promoting their second albums. Later a Khruangbin session turned up an instrumental that sounded right for Bridges' voice, so they sent it over, and he sent it back with vocals the next day. They went into the studio with engineer Steve Christensen meaning to make a B-side, and it grew into a four-song EP. The track opens on gentle strums, with pedal steel and Speer's guitar behind Bridges' croon.",
+  "context": "They first played \"Texas Sun\" and \"C-Side\" live when Bridges sat in at Khruangbin's Houston hometown show in November 2019. Laura Lee said the record felt like a cross-country Texas drive to her. It went to number 17 on US AAA radio and was certified Gold in the US and Silver in the UK, and Barack Obama put it on his 2020 summer playlist. Grammy.com called it the band's biggest song to date.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Soft strummed guitar before the band comes in, and it sets the pace of a slow drive."
+   },
+   {
+    "where": "behind the verses",
+    "note": "Pedal steel, a sound Khruangbin rarely use, which pulls the trio's Thai and Iranian influences toward Texas country soul."
+   }
+  ],
+  "leads_to": {
+   "artist": "Leon Bridges",
+   "title": "Coming Home",
+   "year": 2015,
+   "why": "Bridges' debut album title track, the 1960s-style soul that made his name, so you can hear what he brought to the barn."
+  },
+  "sources": [
+   "https://liveforlivemusic.com/news/khruangbin-leon-bridges-texas-sun-ep/",
+   "https://xlr8r.com/news/khruangbin-and-leon-bridges-collaborate-on-new-ep/",
+   "https://treblezine.com/khruangbin-leon-bridges-texas-sun-review-album-of-the-week",
+   "https://en.wikipedia.org/wiki/Khruangbin",
+   "https://grammy.com/news/5-important-khruangbin-songs-new-album-a-la-sala"
+  ],
+  "unverified": "Where the EP was recorded (one account says a Houston studio; I found nothing tying it to the Burton barn). 'A sound Khruangbin rarely use' is my own judgment, though the debut does credit Wilhelm Van Horn on pedal steel, so the director may want to cut that clause. The 'Coming Home' leads_to (Bridges' 2015 debut) wasn't separately verified in this session. Speer's 'spaghetti western' guitar on this track comes from a review I saw only in a search summary."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "East Texas road trip",
+   "line": "Philip Andelman drove from Marfa through East Texas with a camera, incandescent bulbs, a tripod and ratchet straps. The video came out in February 2020.",
+   "source": "https://guitar.com/news/music-news/leon-bridges-and-khruangbin-texas-sun-video"
+  },
+  {
+   "kind": "chart",
+   "title": "The EP",
+   "line": "The single came out December 6, 2019 and the EP on February 7, 2020. It reached number 20 on Billboard's Rock Songs and went RIAA Gold.",
+   "wiki": "Leon_Bridges",
+   "source": "https://en.wikipedia.org/wiki/Texas_Sun_(EP)"
+  },
+  {
+   "kind": "live",
+   "title": "Room mic",
+   "line": "Laura Lee said Leon Bridges would pick up a guitar between takes, the engineer left a room mic up, and one of those songs became Texas Sun.",
+   "source": "https://guitar.com/news/music-news/leon-bridges-and-khruangbin-texas-sun-video"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

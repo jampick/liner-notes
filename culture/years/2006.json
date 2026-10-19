@@ -1,0 +1,46 @@
+{
+ "year": 2006,
+ "items": [
+  {
+   "kind": "game",
+   "title": "Nintendo Wii",
+   "line": "The Wii launched in North America on 19 November 2006 at $249.99, with Wii Sports in most boxes. It was codenamed Revolution and has sold about 101 million units.",
+   "wiki": "Wii",
+   "source": "https://en.wikipedia.org/wiki/Wii"
+  },
+  {
+   "kind": "tech",
+   "title": "Twitter",
+   "line": "Twitter was created in March 2006 and opened to the public on 15 July. Posts were limited to 140 characters, and that limit stayed until 2017.",
+   "source": "https://en.wikipedia.org/wiki/Twitter"
+  },
+  {
+   "kind": "sport",
+   "title": "Zidane's headbutt",
+   "line": "The 2006 World Cup final in Berlin on 9 July ended 1-1 after extra time. Zidane headbutted Materazzi in the 108th minute and was sent off. Italy won 5-3 on penalties.",
+   "wiki": "2006_FIFA_World_Cup_final",
+   "source": "https://en.wikipedia.org/wiki/2006_FIFA_World_Cup_final"
+  },
+  {
+   "kind": "film",
+   "title": "Casino Royale",
+   "line": "Daniel Craig's first Bond film opened in the UK on 16 November 2006. Martin Campbell directed, Chris Cornell sang \"You Know My Name\", and it took about $606 million.",
+   "wiki": "Casino_Royale_(2006_film)",
+   "source": "https://en.wikipedia.org/wiki/Casino_Royale_(2006_film)"
+  },
+  {
+   "kind": "film",
+   "title": "Borat",
+   "line": "Borat opened on 3 November 2006 in the US, taking $26.4 million that weekend on an $18 million budget. It finished near $262.6 million, with Sacha Baron Cohen as the star.",
+   "wiki": "Borat",
+   "source": "https://en.wikipedia.org/wiki/Borat"
+  },
+  {
+   "kind": "film",
+   "title": "The Devil Wears Prada",
+   "line": "Released in the US on 30 June 2006, with Meryl Streep as Miranda Priestly and Anne Hathaway in the cerulean sweater scene. It grossed $327 million and got Streep her 14th nomination.",
+   "wiki": "The_Devil_Wears_Prada_(film)",
+   "source": "https://en.wikipedia.org/wiki/The_Devil_Wears_Prada_(film)"
+  }
+ ]
+}

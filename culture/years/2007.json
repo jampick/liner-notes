@@ -1,0 +1,47 @@
+{
+ "year": 2007,
+ "items": [
+  {
+   "kind": "tech",
+   "title": "iPhone",
+   "line": "Jobs unveiled it on 9 January 2007 and it went on sale 29 June, $499 for 4 GB on a two-year contract. A million were sold in the first 74 days.",
+   "wiki": "IPhone_(1st_generation)",
+   "source": "https://en.wikipedia.org/wiki/IPhone_(1st_generation)"
+  },
+  {
+   "kind": "internet",
+   "title": "Harry Potter and the Deathly Hallows",
+   "line": "Out 21 July 2007. About 8.3 million copies sold in the US and 2.65 million in the UK in the first 24 hours, from an initial US print run of 12 million.",
+   "wiki": "Harry_Potter_and_the_Deathly_Hallows",
+   "source": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows"
+  },
+  {
+   "kind": "tv",
+   "title": "Mad Men",
+   "line": "AMC premiered it on 19 July 2007. Matthew Weiner's Madison Avenue drama won the Emmy for best drama four years running, the first basic cable show to do it.",
+   "wiki": "Mad_Men",
+   "source": "https://en.wikipedia.org/wiki/Mad_Men"
+  },
+  {
+   "kind": "game",
+   "title": "Halo 3",
+   "line": "Released 25 September 2007. It took US$170 million in the US in its first 24 hours and more than US$300 million worldwide in the first week.",
+   "wiki": "Halo_3",
+   "source": "https://en.wikipedia.org/wiki/Halo_3"
+  },
+  {
+   "kind": "tech",
+   "title": "Amazon Kindle",
+   "line": "The first Kindle went on sale 19 November 2007 for $399, with a 6-inch, four-shade grayscale screen at 600 by 800 pixels.",
+   "wiki": "Amazon_Kindle",
+   "source": "https://en.wikipedia.org/wiki/Amazon_Kindle"
+  },
+  {
+   "kind": "news",
+   "title": "Writers Guild strike",
+   "line": "Writers walked out on 5 November 2007, mostly over pay for online and new media work. It ran until 12 February 2008, about 100 days.",
+   "wiki": "2007–2008_Writers_Guild_of_America_strike",
+   "source": "https://en.wikipedia.org/wiki/2007%E2%80%932008_Writers_Guild_of_America_strike"
+  }
+ ]
+}

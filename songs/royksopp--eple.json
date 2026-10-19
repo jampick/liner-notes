@@ -1,0 +1,57 @@
+{
+ "id": "royksopp--eple",
+ "title": "Eple",
+ "artist": "Röyksopp",
+ "year": 2001,
+ "year_note": "First released 23 July 2001 (UK no. 57); re-released in 2003 as a single from Melody A.M., when it reached no. 16.",
+ "album": "Melody A.M.",
+ "aliases": {
+  "youtube": [
+   "sFP7jVIxE2c"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/22/9b/18/229b1855-93ff-c757-a67a-24f16494ba6c/mzaf_10676304811546663966.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/eple-edit/699898209?i=699899284&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Svein Berge and Torbjørn Brundtland finished school in Tromsø and made Melody A.M. in the living room of their bedsit in Bergen. Brundtland's list of the key gear was an Akai sampler, a very simple mixer and a reverb that somebody (not them, he said) had nicked from a radio station. \"Eple\" is built mainly on a sample of the keyboard part from Bob James's \"You're as Right as Rain\", from his 1975 album Two, whose cover shows a golden hand holding an apple. Eple is Norwegian for apple.",
+  "context": "This was the Bergen Wave, with Kings of Convenience and Annie coming up out of the same city. Wall of Sound put the song out in 2001 and it stalled at 57; by the 2003 reissue Melody A.M. had gone platinum in the UK, and it reached 16. Apple licensed it as the intro music for the Mac OS X Panther setup assistant, so it played on the first start-up of every Mac running Panther.",
+  "listen_for": [
+   {
+    "where": "from the opening bars",
+    "note": "The keyboard backdrop running under the whole track is Bob James, lifted from \"You're as Right as Rain\". Röyksopp built the song around it."
+   }
+  ],
+  "leads_to": {
+   "artist": "Bob James",
+   "title": "You're as Right as Rain",
+   "year": 1975,
+   "why": "The source of the keyboard sample, from Two, the album with the apple on the cover."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Eple",
+   "https://en.wikipedia.org/wiki/Melody_A.M.",
+   "https://stereogum.com/2159383/royksopp-melody-a-m-turns-20/reviews/the-anniversary"
+  ],
+  "unverified": "Stereogum says the track also draws on Skyy's \"Disco Dancing\"; I couldn't confirm that on a sample database, so it's left out."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Mac OS X Panther",
+   "line": "Apple licensed it as the intro music to the Mac OS X Panther setup assistant. Eple is Norwegian for apple, which could hardly have been a better match.",
+   "wiki": "Eple",
+   "source": "https://en.wikipedia.org/wiki/Eple"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

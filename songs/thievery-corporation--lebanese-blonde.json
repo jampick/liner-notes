@@ -1,0 +1,76 @@
+{
+ "id": "thievery-corporation--lebanese-blonde",
+ "title": "Lebanese Blonde",
+ "artist": "Thievery Corporation",
+ "year": 1998,
+ "year_note": "The panel had 1997. The song's Wikipedia page, the 4AD catalogue number (BAD8017) and the UK chart entry all point to a 1998 single; the band's Wikipedia page says 1997 and one reissue listing agrees. I went with 1998. It was later collected on The Mirror Conspiracy (2000).",
+ "album": "single (later on The Mirror Conspiracy)",
+ "aliases": {
+  "youtube": [
+   "1t7W6NtTKAw"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2d/b7/4d/2db74d41-9c9f-0418-b173-09a033cbc600/mzaf_10180023775185737091.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/lebanese-blonde/1875052690?i=1875052694&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Rob Garza and Eric Hilton wrote and produced it. Pam Bricker sings, Rob Myers plays live sitar, and there is a Jamaican-style horn section underneath. The title refers to Lebanese hashish.",
+  "context": "Garza and Hilton met in summer 1995 at the Eighteenth Street Lounge in Washington DC, which Hilton co-owned, and started the Eighteenth Street Lounge Music label (later ESL) in 1996. Their debut was dedicated to Antonio Carlos Jobim. The single scraped 96 in the UK on 4AD in 1998; it found its real audience in 2004 on Zach Braff's Garden State soundtrack, which went Platinum in the US and won a Grammy.",
+  "listen_for": [
+   {
+    "where": "the sitar lines",
+    "note": "Played live by Rob Myers rather than sampled, so they move with the vocal instead of sitting on a loop."
+   },
+   {
+    "where": "the horns",
+    "note": "A Jamaican-style horn section, the dub side of a duo who listened to bossa nova and reggae in equal measure."
+   },
+   {
+    "where": "the vocal",
+    "note": "Pam Bricker. When the band remade the song in 2020 for Symphonik, Elin Melgarejo took her place."
+   }
+  ],
+  "leads_to": {
+   "artist": "Antônio Carlos Jobim",
+   "title": "Wave",
+   "year": 1967,
+   "why": "Thievery Corporation dedicated their first album to Jobim, and this CTI record is the easy-listening bossa nova their lounge grew out of."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lebanese_Blonde",
+   "https://en.wikipedia.org/wiki/Thievery_Corporation",
+   "https://quimby.gnus.org/html/group/thieverycorporation.html",
+   "https://www.mightyape.co.nz/product/The-Mirror-Conspiracy/21796068?ref=lasoo",
+   "https://en.wikipedia.org/wiki/Garden_State_(soundtrack)",
+   "https://music.mxdwn.com/2020/01/10/news/thievery-corporation-announce-new-album-symphonik-reworking-older-material-and-release-new-single-lebanese-blonde/amp/",
+   "https://en.wikipedia.org/wiki/Ant%C3%B4nio_Carlos_Jobim_discography"
+  ],
+  "unverified": "I couldn't find any sample credits for the track. A forum claim that the opening instrument is a veena, not a sitar, is unsourced; AllMusic says sitar."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Garden State",
+   "line": "It is on the soundtrack of Zach Braff's 2004 film Garden State, which he wrote, directed and starred in.",
+   "wiki": "Garden_State_(film)",
+   "source": "https://en.wikipedia.org/wiki/Lebanese_Blonde"
+  },
+  {
+   "kind": "chart",
+   "title": "Hashish, and a French maxi",
+   "line": "The title refers to Lebanese hashish. A 1998 single, it was later added to the 2000 album The Mirror Conspiracy, and a French maxi single carried an extra French mix.",
+   "wiki": "Thievery_Corporation",
+   "source": "https://en.wikipedia.org/wiki/Lebanese_Blonde"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

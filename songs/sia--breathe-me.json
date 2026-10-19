@@ -1,0 +1,66 @@
+{
+ "id": "sia--breathe-me",
+ "title": "Breathe Me",
+ "artist": "Sia",
+ "year": 2004,
+ "year_note": "",
+ "album": "Colour the Small One",
+ "aliases": {
+  "youtube": [
+   "ghPcYqn0p4Y"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/17/51/17/175117ad-343a-edbf-37a0-893bb6082426/mzaf_10139696102523454626.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/breathe-me/716175746?i=716176156&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Sia wrote it with Dan Carey. Jimmy Hogarth produced Colour the Small One in 2003 at Heliocentric Studios in Rye, East Sussex, Tchad Blake mixed it, and Martin Slattery plays the piano on this track. Will Malone arranged the album's strings.",
+  "context": "After Healing Is Difficult, Sia fired her manager, left Sony and signed to Go! Beat, and she said touring with Zero 7 shaped the new record. \"Breathe Me\" came out on 19 April 2004 and peaked at 71. Then Alan Ball used it over the closing montage of the Six Feet Under finale, \"Everyone's Waiting\", on HBO on 21 August 2005: Claire drives out of Los Angeles while the show flashes forward to the death of every main character. Astralwerks re-released the album in the US in January 2006, and by 2014 the song had sold more than 1.2 million copies there.",
+  "listen_for": [
+   {
+    "where": "the opening bars",
+    "note": "The piano that starts it is Martin Slattery's."
+   }
+  ],
+  "leads_to": {
+   "artist": "Zero 7",
+   "title": "Distractions",
+   "year": 2001,
+   "why": "The other song Sia and Zero 7 wrote the afternoon they wrote \"Destiny\", and a good map of where her solo voice came from."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Breathe_Me",
+   "https://en.wikipedia.org/wiki/Colour_the_Small_One",
+   "https://en.wikipedia.org/wiki/Everyone%27s_Waiting",
+   "https://uk.style.yahoo.com/zero-7-never-set-music-085708953.html",
+   "https://www.drownedinsound.org/archive-new-lamb-single-and-album-inbound-2159/"
+  ],
+  "unverified": "Dan Pontifex as the boyfriend behind Healing Is Difficult (AllMusic via Wikipedia doesn't name him)."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Six Feet Under finale",
+   "line": "It plays over the flash-forward montage in \"Everyone's Waiting\", the finale aired by HBO on 21 August 2005, written and directed by Alan Ball. Claire drives out of Los Angeles.",
+   "wiki": "Everyone's_Waiting",
+   "source": "https://en.wikipedia.org/wiki/Everyone's_Waiting"
+  },
+  {
+   "kind": "video",
+   "title": "The Polaroid video",
+   "line": "Daniel Askill directed it: three days in a themed London hotel, built from over 2,500 individual Polaroid stills.",
+   "wiki": "Breathe_Me",
+   "source": "https://en.wikipedia.org/wiki/Breathe_Me"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

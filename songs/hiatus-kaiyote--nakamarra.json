@@ -1,0 +1,70 @@
+{
+ "id": "hiatus-kaiyote--nakamarra",
+ "title": "Nakamarra",
+ "artist": "Hiatus Kaiyote",
+ "year": 2012,
+ "year_note": "First released on the self-released Tawk Tomahawk in April 2012. The Flying Buddha reissue in 2013 added a new version featuring Q-Tip, and that version earned the Grammy nomination.",
+ "album": "Tawk Tomahawk",
+ "aliases": {
+  "youtube": [
+   "MvB77oYXlvU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/68/8b/f3/688bf36b-f491-3d72-3500-9c8234fad1fc/mzaf_14488602946420162711.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/nakamarra/1692856313?i=1692856324&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Nai Palm and bassist Paul Bender began as a duo in Melbourne in 2010 and added keyboardist Simon Mavin and drummer Perrin Moss in 2011. Bender went from grunge and metal to Coltrane and jazz school, Mavin studied jazz and spent about ten years as a session player, Moss taught himself; Nai Palm said Bender and Mavin 'can actually dissect it' while she plays from feeling. The title is an Aboriginal skin name, tied to the red earth Nai Palm grew up around.",
+  "context": "Tawk Tomahawk got passed hand to hand: Animal Collective, then Erykah Badu, Questlove and Prince talked it up, and Gilles Peterson named them breakthrough artists of 2013. Salaam Remi signed them to Flying Buddha, and the Q-Tip version of Nakamarra was nominated for Best R&B Performance at the 2014 Grammys, the first Australian act nominated in an R&B category. Within a few years Kendrick Lamar, Drake and Beyoncé and Jay-Z were sampling them.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "A Rhodes electric piano sets the chords before anyone sings. That's Mavin's jazz training showing."
+   },
+   {
+    "where": "as it builds",
+    "note": "Nai Palm's voice takes unexpected leaps over a backbeat one writer compared to The Roots."
+   }
+  ],
+  "leads_to": {
+   "artist": "Kendrick Lamar",
+   "title": "DUCKWORTH.",
+   "year": 2017,
+   "why": "It samples Hiatus Kaiyote's Atari, proof of how far their records travelled after Nakamarra."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hiatus_Kaiyote",
+   "https://en.wikipedia.org/wiki/Tawk_Tomahawk",
+   "https://www.stampthewax.com/2013/07/17/artist-spotlight-hiatus-kaiyote-interview-session/",
+   "https://artofthemixtape.com/tag/tawk-tomahawk/",
+   "https://barleyarts.com/en/?p=186428"
+  ],
+  "unverified": "Which language group 'Nakamarra' belongs to (I couldn't confirm Warlpiri). One blog says the lyric honours a friend and the painter Doreen Nakamarra; Red Bull says it's about a friend who went to live with an Aboriginal community. Left both out."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Grammy nomination",
+   "line": "The Q-Tip version was nominated for Best R&B Performance at the 2014 Grammys, making Hiatus Kaiyote the first Australian act nominated in an R&B category.",
+   "wiki": "Hiatus_Kaiyote",
+   "source": "https://en.wikipedia.org/wiki/Hiatus_Kaiyote"
+  },
+  {
+   "kind": "chart",
+   "title": "Self-released, then reissued",
+   "line": "Tawk Tomahawk came out independently on 1 April 2012. When Salaam Remi's Flying Buddha label licensed it, the band added a Q-Tip version of Nakamarra.",
+   "wiki": "Tawk_Tomahawk",
+   "source": "https://en.wikipedia.org/wiki/Tawk_Tomahawk"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

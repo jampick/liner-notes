@@ -1,0 +1,77 @@
+{
+ "id": "hooverphonic--mad-about-you",
+ "title": "Mad About You",
+ "artist": "Hooverphonic",
+ "year": 2000,
+ "year_note": "",
+ "album": "The Magnificent Tree",
+ "aliases": {
+  "youtube": [
+   "xVKGXgHDMvQ"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/84/f4/7b/84f47b78-54b6-7b52-afe3-2d8b4810d5dc/mzaf_10567788793423123686.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/mad-about-you/186057800?i=186057914&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Alex Callier, the bassist who founded Hooverphonic in 1995 and writes nearly all their songs, wrote it and produced it with Roland Herrington. It was recorded in 1999 in three Belgian studios: ACP in Sint-Niklaas, Midas in Lokeren and SynSound in Brussels. Geike Arnaert, who joined for Blue Wonder Power Milk in 1998, sings over a sweeping string arrangement. Callier says it's about Cathy Dennis, whom he met at a songwriting camp in Devon.",
+  "context": "It was the band's biggest hit and their international breakthrough: 8 in Italy, 23 in Flanders, 39 in France, and on Columbia. Film and TV kept finding it, from Driven (2001) and A Lot Like Love (2005) to Cold Case and The Umbrella Academy. Callier has named David Bowie's early string arrangements and Serge Gainsbourg's 'Manon' as where his love of strings came from.",
+  "listen_for": [
+   {
+    "where": "when the strings come in",
+    "note": "The sweeping arrangement is the hook. Strings run through Hooverphonic's whole catalogue, and this is the song that took them abroad."
+   },
+   {
+    "where": "the vocal",
+    "note": "Arnaert sings it level and cool against the drama of the strings."
+   }
+  ],
+  "leads_to": {
+   "artist": "Wallace Collection",
+   "title": "Daydream",
+   "year": 1969,
+   "why": "Another Belgian band, another string-led hit borrowing from Swan Lake; Hooverphonic's orchestral live version opens the same way."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mad_About_You_(Hooverphonic_song)",
+   "https://www.brusselstimes.com/art-culture/394323/mad-about-hooverphonic",
+   "https://ink19.com/2000/12/magazine/music-reviews/hooverphonic",
+   "https://www.highresaudio.com/album/view/kbg2p8/hooverphonic-in-wonderland",
+   "https://en.wikipedia.org/wiki/Daydream_(Wallace_Collection_song)"
+  ],
+  "unverified": "I found no source tying the strings to John Barry or Bond themes. The Swan Lake link is documented for the later orchestral live version, not the studio recording."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "A plant creature in London",
+   "line": "Philippe André directed it over two days in London. Geike Arnaert sings about loving a strange plant creature in her flat while police try to break in.",
+   "wiki": "Hooverphonic",
+   "source": "https://en.wikipedia.org/wiki/Mad_About_You_(Hooverphonic_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Film and TV",
+   "line": "It turned up in Driven (2001), A Lot Like Love (2005), an episode of Cold Case, and season 1 of The Umbrella Academy.",
+   "wiki": "Cold_Case",
+   "source": "https://en.wikipedia.org/wiki/Mad_About_You_(Hooverphonic_song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Biggest in Italy",
+   "line": "The lead single from The Magnificent Tree hit 8 in Italy, 23 in Flanders and 39 in France. It peaked at only 104 in the UK.",
+   "wiki": "The_Magnificent_Tree",
+   "source": "https://en.wikipedia.org/wiki/Mad_About_You_(Hooverphonic_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

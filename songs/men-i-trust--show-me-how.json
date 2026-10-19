@@ -1,0 +1,63 @@
+{
+ "id": "men-i-trust--show-me-how",
+ "title": "Show Me How",
+ "artist": "Men I Trust",
+ "year": 2018,
+ "year_note": "Released as a single with a video on 28 February 2018; an album version later appeared as track 15 of Oncle Jazz (13 September 2019).",
+ "album": "single (later on Oncle Jazz)",
+ "aliases": {
+  "youtube": [
+   "OZRYzH0Q0pU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/88/eb/69/88eb69f2-9029-7791-b54f-55e18a05cc99/mzaf_15673037154131469534.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/show-me-how/1719975687?i=1719975688&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Men I Trust is Emma Proulx on vocals and guitar, Jessy Caron on bass and guitar, and Dragos Chiriac on keyboards. Chiriac and Caron started the band in 2014 while studying music at Université Laval in Quebec City and brought Proulx in after seeing a video of her singing by a campfire. Chiriac wrote the song. Reviews singled out three things: Caron's bass, Proulx's breathy, grainy voice and hazy washes of guitar.",
+  "context": "The band has self-released all of its music with no label, and this became a massive streaming hit without radio or a major-label push behind it. It got them to Coachella in April 2019. In 2022 the producers Statik Selektah and Heavy Mellow built Joey Bada$$'s \"Show Me\" on a sample of it, and the band played it with him on The Tonight Show that November.",
+  "listen_for": [
+   {
+    "where": "the bass under the first verse",
+    "note": "Jessy Caron's line carries the tune while the guitars blur into the background."
+   },
+   {
+    "where": "when Proulx starts singing",
+    "note": "Her voice is breathy and a little grainy and sits right in the mix. Joey Bada$$'s producers lifted that voice for their 2022 track."
+   }
+  ],
+  "leads_to": {
+   "artist": "Joey Bada$$",
+   "title": "Show Me",
+   "year": 2022,
+   "why": "Statik Selektah and Heavy Mellow built it on this song, with Proulx's vocal sampled under Joey's verses, so you get to hear the Montreal haze turned into a New York rap beat."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Men_I_Trust",
+   "https://menitrust.bandcamp.com/album/oncle-jazz",
+   "https://styrofoamdrone.com/2018/04/09/song-of-the-day-57-men-i-trust-show-me-how/",
+   "https://en.wikipedia.org/wiki/2000_(Joey_Badass_album)",
+   "https://consequence.net/2022/11/joey-badass-show-me-men-i-trust-fallon-watch"
+  ],
+  "unverified": "How and where it was recorded (no interview found; one online 'production breakdown' is a recreation, not the band's account). The 'massive streaming hit' wording comes from press coverage; I didn't find an official stream count. Nothing confirms 'never on the radio'. Wikipedia gives the band's founding as Montreal in the text and Quebec City in the infobox; the Laval detail comes from press coverage via search summary."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Singles run",
+   "line": "Men I Trust released it February 28, 2018 with a video, one of a run of self-released singles before Oncle Jazz on September 13, 2019.",
+   "wiki": "Men_I_Trust",
+   "source": "https://en.wikipedia.org/wiki/Men_I_Trust"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

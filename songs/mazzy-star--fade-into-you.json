@@ -1,0 +1,77 @@
+{
+ "id": "mazzy-star--fade-into-you",
+ "title": "Fade Into You",
+ "artist": "Mazzy Star",
+ "year": 1993,
+ "year_note": "Album track released September 1993 (UK 27 Sept, US 5 Oct) and sent to US modern rock radio that month; the US CD single followed in April 1994 and the UK single on 15 August 1994. Wikipedia styles it \"Fade into You\"; the album sleeve and most sources capitalise \"Into\".",
+ "album": "So Tonight That I Might See",
+ "aliases": {
+  "youtube": [
+   "ImKY6TZEyrI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4c/db/e8/4cdbe88c-b737-617d-0c1c-35ba36445750/mzaf_4038354414747356567.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/fade-into-you/1440848808?i=1440848810&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Hope Sandoval wrote the words and David Roback wrote the music and produced it, released on Capitol. Roback came out of the LA Paisley Underground (Rain Parade, then Opal with Kendra Smith); when Smith left Opal on tour, Sandoval took her place and the band became Mazzy Star in 1989. The record is mostly slide guitar, brushed drums and tambourine, with Sandoval's voice trailing off at the end of every line.",
+  "context": "This is the American side of the same slowdown, built from slide guitar and LA psychedelia rather than breakbeats. It peaked at number 44 on the Billboard Hot 100 (their only entry) and number 3 on Modern Rock Tracks in 1994, and the album went platinum in the US. TV music supervisors never let it go: Vulture called it the most overused song in film and TV in 2013, and in 2025 it passed a billion Spotify plays.",
+  "listen_for": [
+   {
+    "where": "the end of each sung line",
+    "note": "Roback's slide guitar answers Sandoval and smears the last note out. Paste described every syllable \"trailing off into that slow-motion haze of slide guitar\"."
+   },
+   {
+    "where": "under the verses",
+    "note": "The rhythm section is brushed drums and tambourine, no kick-drum push at all. It's the hushed counterpart to the Bristol beats: slow because nobody is hitting anything hard."
+   }
+  ],
+  "leads_to": {
+   "artist": "Opal",
+   "title": "Rocket Machine",
+   "year": 1987,
+   "why": "Opener of Happy Nightmare Baby on SST, Roback's band with Kendra Smith before Hope Sandoval replaced her; you can hear the Mazzy Star guitar sound taking shape."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Fade_into_You",
+   "https://en.wikipedia.org/wiki/So_Tonight_That_I_Might_See",
+   "https://en.wikipedia.org/wiki/Mazzy_Star",
+   "https://en.wikipedia.org/wiki/Opal_(band)",
+   "https://en.wikipedia.org/wiki/Happy_Nightmare_Baby",
+   "https://en.wikipedia.org/wiki/Four_Walls_/_Paradise_Circus"
+  ],
+  "unverified": "Where and when the album was recorded, and who plays drums on this track (album credits list Keith Mitchell and William Cooper but not per track). I couldn't find a production interview, so only two listen-for notes."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Two videos",
+   "line": "Merlyn Rosenberg's black and white clip, with the band in a dark ballroom and 1930s San Francisco footage, aired on MTV's 120 Minutes in October 1993. Kevin Kerslake shot a desert one.",
+   "wiki": "Fade_into_You",
+   "source": "https://en.wikipedia.org/wiki/Fade_into_You"
+  },
+  {
+   "kind": "chart",
+   "title": "Chart peaks",
+   "line": "It reached 44 on the Billboard Hot 100, 3 on US Alternative Airplay and 48 in the UK. It is UK Platinum, and in November 2025 it passed one billion Spotify plays.",
+   "source": "https://en.wikipedia.org/wiki/Fade_into_You"
+  },
+  {
+   "kind": "screen",
+   "title": "The most overused song",
+   "line": "In 2013 Vulture called it the most overused song in film and TV, citing Gilmore Girls, CSI, Psych, Starship Troopers and End of Watch.",
+   "wiki": "Starship_Troopers_(film)",
+   "source": "https://en.wikipedia.org/wiki/Fade_into_You"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "year": 2005,
+ "items": [
+  {
+   "kind": "tv",
+   "title": "Doctor Who returns",
+   "line": "Doctor Who came back on BBC One on 26 March 2005 with \"Rose\", Christopher Eccleston and Billie Piper, written by Russell T Davies. The final tally was 10.81 million viewers.",
+   "wiki": "Doctor_Who_(series_1)",
+   "source": "https://en.wikipedia.org/wiki/Doctor_Who_(series_1)"
+  },
+  {
+   "kind": "tech",
+   "title": "YouTube",
+   "line": "YouTube was founded on 14 February 2005 by three ex-PayPal staff. The first upload, \"Me at the zoo\", went up on 23 April: Jawed Karim at the San Diego Zoo.",
+   "wiki": "YouTube",
+   "source": "https://en.wikipedia.org/wiki/YouTube"
+  },
+  {
+   "kind": "music",
+   "title": "Live 8 in Hyde Park",
+   "line": "On 2 July 2005 Pink Floyd's classic line-up played together for the first time in 24 years. Bob Geldof hosted, and the show overran its 21:30 close to nearly half past midnight.",
+   "wiki": "Live_8_concert,_London",
+   "source": "https://en.wikipedia.org/wiki/Live_8_concert,_London"
+  },
+  {
+   "kind": "sport",
+   "title": "The 2005 Ashes",
+   "line": "England won the Ashes 2-1, their first win since 1986-87. The Edgbaston Test was decided by 2 runs, the narrowest margin in Ashes history, and Flintoff took 24 wickets.",
+   "wiki": "2005_Ashes_series",
+   "source": "https://en.wikipedia.org/wiki/2005_Ashes_series"
+  },
+  {
+   "kind": "tech",
+   "title": "iPod nano",
+   "line": "Apple announced the iPod nano on 7 September 2005 to replace the mini. It was 6.9 mm thin and held 2 or 4 GB, with a 1 GB version added in February 2006.",
+   "wiki": "IPod_Nano",
+   "source": "https://en.wikipedia.org/wiki/IPod_Nano"
+  },
+  {
+   "kind": "game",
+   "title": "Xbox 360",
+   "line": "The Xbox 360 went on sale in the US and Canada on 22 November 2005 at $399 for the Premium pack and $299 for Core. Europe got it on 2 December, at 279 pounds.",
+   "source": "https://en.wikipedia.org/wiki/Xbox_360"
+  }
+ ]
+}

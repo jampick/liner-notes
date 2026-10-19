@@ -1,0 +1,90 @@
+{
+ "id": "massive-attack--unfinished-sympathy",
+ "title": "Unfinished Sympathy",
+ "artist": "Massive Attack",
+ "year": 1991,
+ "year_note": "Single released 11 February 1991, credited to \"Massive\"; the album Blue Lines followed on 8 April 1991.",
+ "album": "Blue Lines",
+ "aliases": {
+  "youtube": [
+   "ZWmrfgj0MZI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/4f/4b/ba4f4b0d-2cef-7d92-0c10-91b2f4fc1b99/mzaf_13885964260998975744.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/unfinished-sympathy-feat-shara-nelson-2012-mix-master/715864097?i=715864380&uo=4"
+  }
+ },
+ "notes": {
+  "made": "It started at the Coach House in Bristol in mid-1990 from a melody Shara Nelson had been working on, provisionally called \"Kiss and Tell\". Jonny Dollar wrote the string part on a synth first; it sounded too cheap, so Wil Malone arranged and conducted it for a roughly 40-piece section at Abbey Road. The band hadn't budgeted for an orchestra, and Mushroom sold his Mitsubishi Shogun to cover it. Underneath, the drums are a break from J. J. Johnson's \"Parade Strut\" from the Willie Dynamite soundtrack, and the recurring \"hey, hey, hey\" is lifted from the Mahavishnu Orchestra's \"Planetary Citizen\".",
+  "context": "The single came out during the Gulf War, and on advice from management and the label the band dropped \"Attack\" from the sleeve to avoid a radio ban. It reached number 13 in the UK and number 1 on the Dutch Top 40, and NME put it at number 9 in its 100 greatest singles list in 2002. Baillie Walsh shot the video as one continuous take of Nelson walking down West Pico Boulevard in Los Angeles, with Leigh Bowery as art director.",
+  "listen_for": [
+   {
+    "where": "the opening bars, and all the way through",
+    "note": "The drum loop is J. J. Johnson's \"Parade Strut\", a 1970s blaxploitation soundtrack break slowed into something that walks rather than dances. Everything else sits on it."
+   },
+   {
+    "where": "the high \"hey, hey, hey\" that keeps coming back",
+    "note": "That falsetto is Ralphe Armstrong, the Mahavishnu Orchestra's bassist, from \"Planetary Citizen\" (1976). It was used without clearance, and Armstrong later sued after hearing it in an Adidas ad."
+   },
+   {
+    "where": "whenever the strings rise behind Shara Nelson",
+    "note": "Those are real players at Abbey Road, not the synth demo. Jonny Dollar's part was written on a keyboard and only became an orchestra because the demo sounded \"too tacky\", in Andrew Vowles's words."
+   }
+  ],
+  "leads_to": {
+   "artist": "Mahavishnu Orchestra",
+   "title": "Planetary Citizen",
+   "year": 1976,
+   "why": "A two-minute funk oddity from Inner Worlds, sung by bassist Ralphe Armstrong, that supplied the chant Massive Attack built their most famous chorus around."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Unfinished_Sympathy",
+   "https://www.abbeyroad.com/news/30-years-of-massive-attacks-unfinished-sympathy-2907",
+   "https://909originals.com/2021/02/11/five-things-you-might-not-know-about-massive-attacks-unfinished-sympathy/",
+   "https://liquisearch.com/unfinished_sympathy/composition",
+   "https://www.jazz.com/music/mahavishnu-orchestra-planetary-citizen",
+   "https://en.wikipedia.org/wiki/Inner_Worlds",
+   "https://www.nme.com/?p=1370871",
+   "https://en.wikipedia.org/wiki/Geoff_Barrow"
+  ],
+  "unverified": "Exact orchestra size and room: Abbey Road's own page says both 42 players in Studio One and a 40-piece section in Studio Two. Year of Willie Dynamite (sources split 1973/1974), so it is left undated. 909originals says the bell riff was inspired by Bob James's \"Take Me to the Mardi Gras\"; not a sample, and only one source, so left out."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "The one-take video",
+   "line": "Baillie Walsh filmed Shara Nelson walking one continuous Steadicam shot along South New Hampshire Avenue to West Pico Boulevard, LA. It took six takes before the operator gave out.",
+   "wiki": "Unfinished_Sympathy",
+   "source": "https://en.wikipedia.org/wiki/Unfinished_Sympathy"
+  },
+  {
+   "kind": "chart",
+   "title": "Chart peak",
+   "line": "It reached number 13 on the UK singles chart and stayed nine weeks. In the Netherlands it went to number one.",
+   "source": "https://en.wikipedia.org/wiki/Unfinished_Sympathy"
+  },
+  {
+   "kind": "screen",
+   "title": "Sliver, 1993",
+   "line": "The song is on the soundtrack of the erotic thriller Sliver (1993), two years after its release.",
+   "wiki": "Sliver_(film)",
+   "source": "https://en.wikipedia.org/wiki/Unfinished_Sympathy"
+  },
+  {
+   "kind": "sample",
+   "title": "Tina Turner cover",
+   "line": "Tina Turner covered it on her 1996 album Wildest Dreams. The opening beat is built on a percussion break from J. J. Johnson's Parade Strut.",
+   "wiki": "Wildest_Dreams_(Tina_Turner_album)",
+   "source": "https://en.wikipedia.org/wiki/Unfinished_Sympathy"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "id": "bonobo--kiara",
+ "title": "Kiara",
+ "artist": "Bonobo",
+ "year": 2010,
+ "year_note": "",
+ "album": "Black Sands",
+ "aliases": {
+  "youtube": [
+   "L-kyRh7N-kE"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/31/ab/c3/31abc3dc-79ac-adab-e8d7-9df3928e1fc1/mzaf_8321749889646442017.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/kiara/416292276?i=416292278&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Simon Green built Black Sands after leaving Brighton for London, and a review at the time says he played most of the album's live instruments himself on top of his digital production. Kiara is the second half of a pair: Kiara Prelude opens the album with stately piano and an East Asian-sounding string melody, then Kiara picks the strings back up over a thumping beat, deep synths and cut-up vocal fragments.",
+  "context": "Green has called the record 'a transition of falling in love with beat-making again,' set off by watching UK electronic music get reinvented in east London club basements around the end of the 2000s. Black Sands came out on Ninja Tune in March 2010, won DJ Mag's best album award that year, and Bonobo toured it with a full band. Kiara later turned up in the 2012 video game Sleeping Dogs.",
+  "listen_for": [
+   {
+    "where": "the first bars (out of Kiara Prelude)",
+    "note": "The string figure from the prelude comes back, now riding a heavy beat. Play the two tracks together, the way the album runs."
+   },
+   {
+    "where": "under the strings, once the beat lands",
+    "note": "Chopped vocal fragments and deep synths, the part that a 2010 reviewer heard as borrowed from the new UK club sound."
+   }
+  ],
+  "leads_to": {
+   "artist": "Burial",
+   "title": "Archangel",
+   "year": 2007,
+   "why": "The cut-up, pitched vocal sound coming out of London that Black Sands was absorbing; this is where it starts."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Black_Sands_(album)",
+   "https://en.wikipedia.org/wiki/Bonobo_(musician)",
+   "http://www.textura.org/reviews/bonobo.htm",
+   "https://bonobomusic.bandcamp.com/album/black-sands",
+   "https://xlr8r.com/?p=130097",
+   "https://custom-made.org.uk/2010/12/17/bonobo-at-le-plan-after-winning-best-album-award/",
+   "https://en.wikipedia.org/wiki/Untrue_(album)"
+  ],
+  "unverified": "I could not confirm whether Kiara's strings are sampled or played, or that Green plays the bass on this track specifically. WhoSampled was blocked."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Sleeping Dogs",
+   "line": "Kiara is in Sleeping Dogs, the Hong Kong open-world game released 14 August 2012 in North America.",
+   "wiki": "Sleeping_Dogs_(video_game)",
+   "source": "https://en.wikipedia.org/wiki/Black_Sands_(album)"
+  },
+  {
+   "kind": "chart",
+   "title": "Black Sands",
+   "line": "Black Sands came out 29 March 2010 on Ninja Tune. Mike Simmonds plays violins on Kiara, and a BBC review heard oriental strings against cut-up beats.",
+   "wiki": "Black_Sands_(album)",
+   "source": "https://en.wikipedia.org/wiki/Bonobo_(musician)"
+  },
+  {
+   "kind": "live",
+   "title": "The Black Sands band",
+   "line": "In 2010 Bonobo took Black Sands on tour with a full band: singer, keyboardist, guitarist, saxophonist, strings and drummer.",
+   "source": "https://en.wikipedia.org/wiki/Bonobo_(musician)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

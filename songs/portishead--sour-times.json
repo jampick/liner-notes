@@ -1,0 +1,84 @@
+{
+ "id": "portishead--sour-times",
+ "title": "Sour Times",
+ "artist": "Portishead",
+ "year": 1994,
+ "year_note": "Single released 1 August 1994 (UK number 57), before Dummy; reissued after \"Glory Box\" and peaked at number 13 in April 1995.",
+ "album": "Dummy",
+ "aliases": {
+  "youtube": [
+   "un8EW82GwKc"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7e/f6/e3/7ef6e383-ff78-f34f-4824-78be29bc7aae/mzaf_2959336855850238077.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/sour-times/1440653096?i=1440653101&uo=4"
+  }
+ },
+ "notes": {
+  "made": "The bed is Lalo Schifrin's \"Danube Incident\" from the 1967 album More Mission: Impossible, sped up to Barrow's tempo, which pushed Schifrin's arrangement up nearly a semitone. Smokey Brooks's \"Spin It Jig\" is also credited as a sample. Utley plays guitar (his Gretsch, with Barrow working the Bigsby for pitch bends) and Neil Solman adds Rhodes and Hammond. Barrow has called the core of it \"a straight up hip hop loop\" from records he borrowed off DJ Andy Smith.",
+  "context": "It flopped first time, then came back on the strength of \"Glory Box\". In the US it was the record that broke them on alternative radio (number 5 on Alternative Airplay) and their only Billboard Hot 100 entry, at number 53. The video was cut from To Kill a Dead Man, a ten-minute spy-thriller short the band made with themselves cast in it.",
+  "listen_for": [
+   {
+    "where": "the opening loop",
+    "note": "That's Schifrin's Mission: Impossible TV music, sped up so it sits a shade sharp of the original. Barrow's whole sound starts with 1960s spy-show records."
+   },
+   {
+    "where": "the guitar under the verses",
+    "note": "Utley's Gretsch G6129, with bends that Barrow made by pushing the Bigsby arm. The wobble is physical, not an effect."
+   }
+  ],
+  "leads_to": {
+   "artist": "Lalo Schifrin",
+   "title": "Danube Incident",
+   "year": 1967,
+   "why": "The source loop, from More Mission: Impossible; hearing it at its own speed shows how little Barrow had to change to make it ache."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sour_Times",
+   "https://en.wikipedia.org/wiki/More_Mission:_Impossible",
+   "https://www.officialcharts.com/artist/30605/portishead/",
+   "https://333sound.com/portishead-week-day-2-from-film/",
+   "https://www.kexp.org/read/2019/8/22/portisheads-geoff-barrow-and-adrian-utley-breakdown-dummy-25-years-later/",
+   "https://www.gearnews.com/glory-box-of-tricks-how-to-sound-like-portishead/",
+   "https://en.wikipedia.org/wiki/6_Underground_(song)"
+  ],
+  "unverified": "Which instruments the \"Danube Incident\" sample carries: PopMatters says the guitar, Songfacts says percussion and guitar, nobody I found says strings. Exactly which part comes from \"Spin It Jig\"."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "To Kill a Dead Man",
+   "line": "Alexander Hemming's video, out 25 July 1994, was cut from a 10-minute short film called To Kill a Dead Man, with the band cast in a thriller.",
+   "wiki": "Sour_Times",
+   "source": "https://en.wikipedia.org/wiki/Sour_Times"
+  },
+  {
+   "kind": "chart",
+   "title": "Chart peaks",
+   "line": "It peaked at 57 in the UK in 1994, then hit 13 on a re-release in April 1995. In the US it reached 53, the band's only Hot 100 entry.",
+   "source": "https://en.wikipedia.org/wiki/Sour_Times"
+  },
+  {
+   "kind": "screen",
+   "title": "The Vice and Assassins",
+   "line": "ITV's drama The Vice used it as its theme. It also turned up in the 1995 film Assassins and in The People v. O.J. Simpson: American Crime Story.",
+   "wiki": "Assassins_(1995_film)",
+   "source": "https://en.wikipedia.org/wiki/Sour_Times"
+  },
+  {
+   "kind": "sample",
+   "title": "Lalo Schifrin sample",
+   "line": "The track samples Lalo Schifrin's Danube Incident from 1967's More Mission: Impossible, sped up by nearly a semitone, which gives it a sour tuning.",
+   "source": "https://en.wikipedia.org/wiki/Sour_Times"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

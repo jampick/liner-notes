@@ -1,0 +1,68 @@
+{
+ "id": "unknown-mortal-orchestra--hunnybee",
+ "title": "Hunnybee",
+ "artist": "Unknown Mortal Orchestra",
+ "year": 2018,
+ "year_note": "The panel had 2015, but \"Hunnybee\" is on Sex & Food (Jagjaguwar, 6 April 2018), the album after 2015's Multi-Love. The single and video came out around June 2018.",
+ "album": "Sex & Food",
+ "aliases": {
+  "youtube": [
+   "IJrKlSkxRHA"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/30/81/95/30819524-957f-27d6-baaa-a1fbafda9601/mzaf_10012784831559024024.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/hunnybee/1334720786?i=1334720791&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Ruban Nielson wrote it while the band was working in Vietnam during monsoon season, stuck indoors and missing home. The credits list Ruban on vocals, guitars, Rhodes, synth and piano, his brother Kody Nielson on drums, Jacob Portrait on bass and Naomi Win on violin, with Ruban and Portrait producing. The album was cut across Mexico City, Seoul, Hanoi, Reykjavík, Auckland and Ruban's basement in Portland, Oregon.",
+  "context": "Hunnybee is the middle name of Nielson's daughter, Iris, and he's described it as a platonic love song to her with some advice encoded in it. It's a New Zealand band based in Portland, recording on a world tour of rented rooms, which was cheaper than one good studio and fit the drifting mood. Sex & Food went to number 9 in New Zealand.",
+  "listen_for": [
+   {
+    "where": "the opening seconds",
+    "note": "A short wash of strings (Naomi Win's violin) comes before the band, then gives way to the Rhodes."
+   },
+   {
+    "where": "the guitar break",
+    "note": "Nielson's solo cuts through what is otherwise a soft, lo-fi mix."
+   }
+  ],
+  "leads_to": {
+   "artist": "Jimi Hendrix Experience",
+   "title": "All Along the Watchtower",
+   "year": 1968,
+   "why": "Nielson was listening to it in Vietnam while writing the album, and you can hear it in the way his guitar solos float above the song."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sex_%26_Food",
+   "https://atwoodmagazine.com/umoh-hunnybee-unknown-mortal-orchestra/",
+   "https://pastemagazine.com/articles/2018/06/unknown-mortal-orchestra-hunnybee-music-video.html",
+   "https://www.treblezine.com/unknown-mortal-orchestra-new-album-sex-food/"
+  ],
+  "unverified": "Which city 'Hunnybee' itself was recorded in. Atwood says it was written in Vietnam, but the album credits list several studios without assigning tracks. The Rhodes entering after the strings comes from the credits (Ruban plays Rhodes) plus Atwood's 'spectral strings' intro; no source says in what order the parts come in, so the director may want to drop 'then gives way to the Rhodes'. The Hendrix 'why' is partly my reading."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "The train window",
+   "line": "Greg Sharp's animated video follows a woman on a train staring out at green countryside. It came out June 14, 2018, the fourth video from the Sex & Food campaign.",
+   "source": "https://itsnicethat.com/articles/greg-sharp-hunnybee-unknown-mortal-orchestra-animation-140618"
+  },
+  {
+   "kind": "chart",
+   "title": "Six studios",
+   "line": "Sex & Food came out April 6, 2018 on Jagjaguwar, recorded across Mexico City, Seoul, Hanoi, Reykjavik, Portland and Auckland. Hunnybee is track 4.",
+   "wiki": "Sex_&_Food",
+   "source": "https://en.wikipedia.org/wiki/Sex_%26_Food"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

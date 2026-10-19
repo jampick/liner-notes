@@ -1,0 +1,75 @@
+{
+ "id": "washed-out--feel-it-all-around",
+ "title": "Feel It All Around",
+ "artist": "Washed Out",
+ "year": 2009,
+ "year_note": "",
+ "album": "Life of Leisure (EP)",
+ "aliases": {
+  "youtube": [
+   "3Pt0V6K7WpM"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/7b/07/6e/7b076ec2-81ff-dc6b-816d-26f50e0ab9f9/mzaf_5993930348715446970.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/feel-it-all-around/331330323?i=331332298&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Ernest Greene made it in a bedroom studio at his parents' house after moving home to Perry, Georgia, unable to find work with his library science master's. The whole bed is Gary Low's 1983 Italo disco single I Want You, slowed to around 87 BPM until the bright dance track turns to syrup. Greene sings low and soft on top.",
+  "context": "Bloggers found Greene on Myspace in 2009, the same summer Hipster Runoff's Carles coined \"chillwave\" as a joke label. Feel It All Around came out in July 2009 and then on the Life of Leisure EP via Mexican Summer that September; Pitchfork made it Best New Track and its 10th best song of the year. From 2011 it opened every episode of Portlandia, which is how a lot of people heard it without knowing what it was.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "That's Gary Low's I Want You, pitched and slowed. If you know the original, the drop in speed is the whole idea of chillwave in one move."
+   },
+   {
+    "where": "the opening seconds",
+    "note": "If it sounds familiar, it's the Portlandia theme."
+   }
+  ],
+  "leads_to": {
+   "artist": "Gary Low",
+   "title": "I Want You",
+   "year": 1983,
+   "why": "The Italo disco record underneath it, at its original, much faster speed."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Feel_It_All_Around",
+   "https://en.wikipedia.org/wiki/Washed_Out",
+   "https://en.wikipedia.org/wiki/Life_of_Leisure",
+   "https://en.wikipedia.org/wiki/Chillwave",
+   "https://de.ra.co/reviews/7968"
+  ],
+  "unverified": "The 87 BPM figure comes from a single Resident Advisor review. No source I found named Greene's gear for this track."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Portlandia theme",
+   "line": "The opening theme of Portlandia, which started on IFC on 21 January 2011 and ran 77 episodes until 22 March 2018.",
+   "source": "https://en.wikipedia.org/wiki/Portlandia_(TV_series)"
+  },
+  {
+   "kind": "sample",
+   "title": "Gary Low's I Want You",
+   "line": "The track samples Gary Low's 1983 song I Want You.",
+   "source": "https://en.wikipedia.org/wiki/Life_of_Leisure"
+  },
+  {
+   "kind": "chart",
+   "title": "Best of 2009 lists",
+   "line": "It made best-of-2009 lists including Pitchfork's Top 100 Tracks (14 December 2009) and NME's, and later went RIAA Platinum.",
+   "wiki": "Feel_It_All_Around",
+   "source": "https://en.wikipedia.org/wiki/Life_of_Leisure"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

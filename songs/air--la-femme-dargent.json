@@ -1,0 +1,68 @@
+{
+ "id": "air--la-femme-dargent",
+ "title": "La Femme d'argent",
+ "artist": "Air",
+ "year": 1998,
+ "year_note": "",
+ "album": "Moon Safari",
+ "aliases": {
+  "youtube": [
+   "YUX8fUrKRNU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/65/30/ab65300f-3134-9391-4f1a-329e2bbd946b/mzaf_743568926842265821.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/la-femme-dargent/693063670?i=693063876&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Nicolas Godin and Jean-Benoît Dunckel recorded Moon Safari between April and June 1997 in Paris, with the strings done at Abbey Road. Godin plays the bass, Eric Regert plays the organ solo, and the handclaps are engineer Stéphane 'Alf' Briat and Caroline L. Dunckel has described it as a loop of chords they improvised around, building to a peak, and compared its repetition to an Andy Warhol painting.",
+  "context": "Moon Safari came out on 16 January 1998 on Source/Virgin, reached 6 in the UK and sold about two million copies. Godin said plenty of people wanted 'Sexy Boy' first, but this track could only open or close the record. Looking back, he called the album's mood the late Nineties, 'pre-9/11'.",
+  "listen_for": [
+   {
+    "where": "the bass line",
+    "note": "Godin's high, melodic bass is the lead instrument. At a San Francisco show on a later tour he stretched it into a long overdriven solo."
+   },
+   {
+    "where": "the middle",
+    "note": "The organ solo is Eric Regert, a guest, over the same loop."
+   },
+   {
+    "where": "the last stretch",
+    "note": "The main theme from the opening comes back at the end, which is how seven minutes on one loop lands like a single statement."
+   }
+  ],
+  "leads_to": {
+   "artist": "Air",
+   "title": "Modular Mix",
+   "year": 1995,
+   "why": "Their first release, made on an eight-track with drum loops and old keyboards, issued by Source and later Mo' Wax."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Moon_Safari",
+   "https://stereogum.com/2254698/air-moon-safari-behind-the-scenes/interviews",
+   "https://alijamieson.co.uk/2017/11/22/air-la-femme-dargent/",
+   "https://riffmagazine.com/?p=113261",
+   "https://happymag.tv/?p=237321",
+   "https://www.eatsdrinksandleaves.com/air-modular-mix/"
+  ],
+  "unverified": "Official title on Wikipedia's track list is 'La femme d'argent' (lowercase f); the panel's 'La Femme d'Argent' is a styling choice. The 'pre-9/11' line is quoted from the Stereogum interview."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Opening Moon Safari",
+   "line": "It opens Moon Safari (16 January 1998) at 7:08. The album reached 6 in the UK, went 2x Platinum there and has sold about 2 million copies worldwide.",
+   "wiki": "Moon_Safari",
+   "source": "https://en.wikipedia.org/wiki/Moon_Safari"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

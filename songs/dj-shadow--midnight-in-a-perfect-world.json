@@ -1,0 +1,79 @@
+{
+ "id": "dj-shadow--midnight-in-a-perfect-world",
+ "title": "Midnight in a Perfect World",
+ "artist": "DJ Shadow",
+ "year": 1996,
+ "year_note": "",
+ "album": "Endtroducing.....",
+ "aliases": {
+  "youtube": [
+   "InFbBlpDTfQ"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/de/3f/ef/de3fef5c-45b6-c406-74b3-19b1a7d36801/mzaf_5889275247233806044.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/midnight-in-a-perfect-world/1660485817?i=1660486423&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Josh Davis built Endtroducing almost entirely on an Akai MPC60 MKII, starting in his apartment and finishing at the Glue Factory, Dan the Automator's home studio in San Francisco. This one stands on the piano from David Axelrod's 'The Human Abstract' (1969), with the bass line from Pekka Pohjola's 'The Madness Subsides' and voices from Meredith Monk's 'Dolmen Music', plus pieces of Baraka, Organized Konfusion and Marlena Shaw's 'California Soul'. The records came from Rare Records in Sacramento, where he spent hours a day digging.",
+  "context": "It was the album's first single, out on James Lavelle's Mo' Wax on 2 September 1996, and reached 54 in the UK. B Plus directed the video, which MTV's Amp played heavily, and the US sleeve shows John Hillyard, who ran the shop where Shadow found many of the samples. Guinness later listed Endtroducing as the first album made completely from samples.",
+  "listen_for": [
+   {
+    "where": "under the whole track",
+    "note": "The mournful piano is David Axelrod's, from 'The Human Abstract'. Everything else is arranged around it."
+   },
+   {
+    "where": "the low end",
+    "note": "The bass line is lifted from Pekka Pohjola's 'The Madness Subsides', a jazz-rock record few hip-hop producers would have owned."
+   },
+   {
+    "where": "the wordless voices",
+    "note": "Those come from Meredith Monk's 'Dolmen Music', an avant-garde vocal piece, sitting on top of a hip-hop drum beat."
+   }
+  ],
+  "leads_to": {
+   "artist": "David Axelrod",
+   "title": "The Human Abstract",
+   "year": 1969,
+   "why": "The piano this track is built on, from Axelrod's Capitol album Songs of Experience."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Midnight_in_a_Perfect_World",
+   "https://en.wikipedia.org/wiki/Endtroducing.....",
+   "https://en.wikipedia.org/wiki/Songs_of_Experience_(David_Axelrod_album)"
+  ],
+  "unverified": "I couldn't confirm where in the track each sample enters, so the listen notes describe layers rather than sections."
+ },
+ "culture": [
+  {
+   "kind": "sample",
+   "title": "A piano from 1969",
+   "line": "The mournful piano comes from David Axelrod's 'The Human Abstract' (1969). Other samples include Pekka Pohjola, Meredith Monk and Marlena Shaw's 'California Soul'.",
+   "wiki": "David_Axelrod_(musician)",
+   "source": "https://en.wikipedia.org/wiki/Midnight_in_a_Perfect_World"
+  },
+  {
+   "kind": "video",
+   "title": "B Plus video",
+   "line": "B Plus directed the video, which got plays on MTV's Amp. The US sleeve shows John Hillyard, owner of a record store where Shadow found many of his samples.",
+   "wiki": "DJ_Shadow",
+   "source": "https://en.wikipedia.org/wiki/Midnight_in_a_Perfect_World"
+  },
+  {
+   "kind": "chart",
+   "title": "Endtroducing.....",
+   "line": "The single came out on 2 September 1996 and hit 54 in the UK. Shadow built the album on an Akai MPC60 MKII, and Guinness cites it as the first album made entirely from samples.",
+   "wiki": "Endtroducing.....",
+   "source": "https://en.wikipedia.org/wiki/Endtroducing....."
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

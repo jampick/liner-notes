@@ -1,0 +1,1200 @@
+{
+ "slug": "downtempo-drift",
+ "title": "Downtempo Drift",
+ "titleA": "Downtempo",
+ "titleB": "Drift",
+ "kicker": "49 soundings in slow water · Bristol 1991 to Texas 2020",
+ "description": "A walk through 49 slow, bass-led songs from Bristol trip-hop to Texas psych-soul, with a taste of each, what to listen for, and how they connect.",
+ "lede": "Bristol sound systems slowed hip-hop down to the speed of a hangover. Thirty years later a trio in a Texas barn was still playing at that tempo. This is the drift between them, one song at a time, in the order the records came out.",
+ "fonts": "https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Chivo+Mono:wght@400;500&display=swap",
+ "copy": {
+  "start": "Drop the line",
+  "resume": "Pick up at",
+  "express": "Express: five stops",
+  "companion": "Already playing the full playlist in cliamp? Companion mode keeps the previews quiet until you ask for one.",
+  "panelNote": "The panel is fictional: five invented judges who argued the list into shape. The facts under each song are real and sourced; open Sources on any stop.",
+  "endKept": "These are the ones you kept. The link below carries them, so whoever opens it lands on your flight.",
+  "endEmpty": "You didn't keep anything this time. Press K on a stop to keep it, and the link remembers your picks.",
+  "credits": "Picked by Wren, Kwame, Ines, Theo and Priya, a fictional panel. Researched from the sources listed on each stop. Previews courtesy of Apple Music, covers from Apple Music and the Cover Art Archive, era photographs generated for this page."
+ },
+ "panel": {
+  "judges": {
+   "wren": {
+    "name": "Wren Halloran",
+    "title": "the Vibe Keeper",
+    "lens": "Holds the mood. Can veto anything that breaks it."
+   },
+   "kwame": {
+    "name": "Kwame Asante-Bligh",
+    "title": "the Crate Digger",
+    "lens": "Bristol, Mo' Wax, Ninja Tune, Warp. Knows where every sample came from."
+   },
+   "ines": {
+    "name": "Ines Carvalho",
+    "title": "the Bass Player",
+    "lens": "The Khruangbin test: does the bass carry the song?"
+   },
+   "theo": {
+    "name": "Theo Brannigan",
+    "title": "the Chart & Sync Historian",
+    "lens": "Charts, films, TV and ads. How the songs actually reached people."
+   },
+   "priya": {
+    "name": "Priya Nandakumar",
+    "title": "the Under-30 Listener",
+    "lens": "What people her age actually stream, so this never turns into a museum."
+   }
+  },
+  "express": {
+   "note": "Wren's one-per-era picks, for when you have ten minutes.",
+   "songs": [
+    "portishead--glory-box",
+    "massive-attack--teardrop",
+    "zero-7--in-the-waiting-line",
+    "washed-out--feel-it-all-around",
+    "khruangbin--white-gloves"
+   ]
+  },
+  "quotes": {
+   "massive-attack--unfinished-sympathy": {
+    "j": "theo",
+    "q": "Shara Nelson and those strings. It's on nearly every best-British-singles list worth reading."
+   },
+   "mazzy-star--fade-into-you": {
+    "j": "wren",
+    "q": "Hope Sandoval invented the hush half of this playlist."
+   },
+   "portishead--glory-box": {
+    "j": "kwame",
+    "q": "Isaac Hayes' \"Ike's Rap II\" turned into a torch song. Trip-hop in one sample."
+   },
+   "portishead--sour-times": {
+    "j": "kwame",
+    "q": "Built on Lalo Schifrin's \"Danube Incident\", 1960s Mission: Impossible TV music. Spy-show records, looped until they ache."
+   },
+   "massive-attack--protection": {
+    "j": "wren",
+    "q": "Tracey Thorn over a slow beat. The whole playlist's mood in eight minutes."
+   },
+   "sneaker-pimps--6-underground": {
+    "j": "wren",
+    "q": "Kelli Dayton sings it like a secret. This is the dark corner of the room."
+   },
+   "sneaker-pimps--spin-spin-sugar": {
+    "j": "wren",
+    "q": "The version everyone knows is Armand Van Helden's club remix. That's a dancefloor, not this.",
+    "dissent": true
+   },
+   "mono--life-in-mono": {
+    "j": "theo",
+    "q": "The Great Expectations trailer made it, and it's \"Sour Times\"' kid sister."
+   },
+   "dj-shadow--midnight-in-a-perfect-world": {
+    "j": "kwame",
+    "q": "Endtroducing was built entirely from samples. This is its loneliest four minutes."
+   },
+   "thievery-corporation--lebanese-blonde": {
+    "j": "theo",
+    "q": "Also on Garden State. That soundtrack is this playlist's 2004."
+   },
+   "groove-armada--at-the-river": {
+    "j": "wren",
+    "q": "Patti Page's \"Old Cape Cod\" and a trombone. The most relaxed song ever made."
+   },
+   "massive-attack--teardrop": {
+    "j": "theo",
+    "q": "Its instrumental became the House theme in America, so a generation knows it without knowing the band."
+   },
+   "air--la-femme-dargent": {
+    "j": "ines",
+    "q": "Seven minutes on one bass figure and it never gets boring. Moon Safari opens like a door."
+   },
+   "air--all-i-need": {
+    "j": "wren",
+    "q": "Beth Hirsch's vocal is morning light. The warm end of the list."
+   },
+   "morcheeba--the-sea": {
+    "j": "kwame",
+    "q": "Skye Edwards over a bluesy steel guitar and a hip-hop beat. Morcheeba at their most patient."
+   },
+   "moloko--sing-it-back": {
+    "j": "wren",
+    "q": "Same problem as Spin Spin Sugar. The hit is the house mix.",
+    "dissent": true
+   },
+   "moby--porcelain": {
+    "j": "theo",
+    "q": "Every song on Play was licensed for ads, film or TV. This one is the gentlest."
+   },
+   "hooverphonic--mad-about-you": {
+    "j": "kwame",
+    "q": "Belgian trip-hop with a string section straight out of a spy film. It belongs right next to Sneaker Pimps."
+   },
+   "st-germain--rose-rouge": {
+    "j": "kwame",
+    "q": "Marlena Shaw's \"Woman of the Ghetto\" looped over jazz house. Lounge without the cheese."
+   },
+   "zero-7--in-the-waiting-line": {
+    "j": "theo",
+    "q": "The Garden State soundtrack put it in every dorm room in America."
+   },
+   "zero-7--destiny": {
+    "j": "ines",
+    "q": "The keys and bass sit so far back that Sia and Sophie Barker seem to float."
+   },
+   "gorillaz--clint-eastwood": {
+    "j": "kwame",
+    "q": "Dan the Automator co-produced it, and under the cartoon it's a dub track."
+   },
+   "royksopp--eple": {
+    "j": "wren",
+    "q": "Bergen in summer, all chimes and sunlight. Zero 7's Norwegian cousin."
+   },
+   "lamb--gabriel": {
+    "j": "wren",
+    "q": "Lou Rhodes sings it like a prayer, and the beat waits for her."
+   },
+   "lemon-jelly--nice-weather-for-ducks": {
+    "j": "wren",
+    "q": "Charming, and too whimsical. It breaks the mood with a smile.",
+    "dissent": true
+   },
+   "zero-7--somersault": {
+    "j": "priya",
+    "q": "Sia before she was Sia. People find it backwards from \"Chandelier\"."
+   },
+   "sia--breathe-me": {
+    "j": "theo",
+    "q": "The Six Feet Under finale. Sia's the most famous Zero 7 graduate, and this is why."
+   },
+   "gorillaz-featuring-de-la-soul--feel-good-inc": {
+    "j": "wren",
+    "q": "The laugh and the rap break the spell. \"Clint Eastwood\" already covers Gorillaz.",
+    "dissent": true
+   },
+   "nightmares-on-wax--you-wish": {
+    "j": "kwame",
+    "q": "Warp's longest-serving act, and this is the sunny one."
+   },
+   "mgmt--electric-feel": {
+    "j": "ines",
+    "q": "A falsetto funk bass line, and the bridge from Zero 7 to Foster the People."
+   },
+   "little-dragon--twice": {
+    "j": "wren",
+    "q": "Yukimi Nagano, a piano and a few strings. It's barely there, and that's the point."
+   },
+   "washed-out--feel-it-all-around": {
+    "j": "theo",
+    "q": "The Portlandia theme, and the chillwave scene's best-known song."
+   },
+   "foster-the-people--pumped-up-kicks": {
+    "j": "priya",
+    "q": "A bright whistle and a groovy bass carrying a dark lyric. Everybody under 35 knows it word for word."
+   },
+   "bonobo--kiara": {
+    "j": "ines",
+    "q": "Simon Green plays most of Black Sands himself, and the loop keeps folding in on itself."
+   },
+   "alt-j--breezeblocks": {
+    "j": "ines",
+    "q": "It's built on the drums, and the bass barely shows up.",
+    "dissent": true
+   },
+   "hiatus-kaiyote--nakamarra": {
+    "j": "ines",
+    "q": "Nai Palm's band plays neo-soul like jazz musicians. Grammy-nominated, still a secret."
+   },
+   "glass-animals--gooey": {
+    "j": "priya",
+    "q": "Trip-hop for people born after Mezzanine. It's sticky in exactly the right way."
+   },
+   "tycho--awake": {
+    "j": "ines",
+    "q": "Pretty, and the bass drives it, but it rolls past instead of sitting in a groove.",
+    "dissent": true
+   },
+   "khruangbin--white-gloves": {
+    "j": "wren",
+    "q": "The quietest song on the list, and the one I'd play first."
+   },
+   "tame-impala--the-less-i-know-the-better": {
+    "j": "ines",
+    "q": "The best bass line of the 2010s. Khruangbin fans all have it saved."
+   },
+   "thundercat--them-changes": {
+    "j": "kwame",
+    "q": "The Isley Brothers' \"Footsteps in the Dark\" under Thundercat's bass. The groove passes Ines' test too."
+   },
+   "unknown-mortal-orchestra--hunnybee": {
+    "j": "kwame",
+    "q": "Lovely, but it's psych-pop, and Tame Impala already holds that seat.",
+    "dissent": true
+   },
+   "khruangbin--maria-tambien": {
+    "j": "ines",
+    "q": "Laura Lee's bass line is the hook. Mark Speer's guitar just decorates it."
+   },
+   "khruangbin--evan-finds-the-third-room": {
+    "j": "theo",
+    "q": "A fan favorite, but four Khruangbin tracks is already plenty of Khruangbin.",
+    "dissent": true
+   },
+   "men-i-trust--show-me-how": {
+    "j": "priya",
+    "q": "Montreal's answer to Khruangbin, and a huge streaming hit."
+   },
+   "toro-y-moi--ordinary-pleasure": {
+    "j": "theo",
+    "q": "Great groove, but nobody outside the scene knows it.",
+    "dissent": true
+   },
+   "black-pumas--colors": {
+    "j": "wren",
+    "q": "A big soul shout of a chorus. Too loud for 1 a.m.",
+    "dissent": true
+   },
+   "khruangbin--time": {
+    "j": "ines",
+    "q": "Disco tempo with the bass playing half as many notes as you'd expect. That's the trick."
+   },
+   "khruangbin-leon-bridges--texas-sun": {
+    "j": "priya",
+    "q": "Leon Bridges brings the band their biggest crowd. It's a long drive at golden hour."
+   }
+  }
+ },
+ "eras": [
+  {
+   "n": 1,
+   "name": "Bristol Basement",
+   "years": "1991–95",
+   "from": 1991,
+   "to": 1995,
+   "essay": "Bristol at the start of the nineties was a port city with a sound-system habit. The Wild Bunch had spent the eighties playing hip-hop, reggae and punk at The Dug Out on Park Row, a club that sat between St Pauls and Clifton, and when the crew split, Grant Marshall, Robert Del Naja and Andrew Vowles became Massive Attack. Neneh Cherry and Cameron McVey got them into a studio. Much of Blue Lines was cut at the Coach House in Bristol, where a young tape op called Geoff Barrow ended up with an Akai S1000 and an Atari computer the band gave him. In February 1991, with the Gulf War on, the band's first single from that record went out credited to just \"Massive\". Money was tight. Barrow met Beth Gibbons on an Enterprise Allowance course, the Thatcher-era scheme that paid people £40 a week to run their own business and ended up bankrolling a lot of bands. In June 1994 Mixmag gave the slowed, sampled sound a name, trip-hop, and Bristol mostly refused it. Dummy and Protection came out five weeks apart that autumn. In Los Angeles, Mazzy Star were slowing down from the other side with no sampler at all, just slide guitar, reverb and Hope Sandoval barely raising her voice.",
+   "scene": {
+    "cities": [
+     "Bristol",
+     "London",
+     "Los Angeles"
+    ],
+    "labels": [
+     "Wild Bunch Records",
+     "Circa",
+     "Virgin Records",
+     "Go! Beat",
+     "Capitol Records"
+    ],
+    "gear": [
+     "Akai S1000 sampler",
+     "Atari 1040 computer",
+     "Gretsch G6129 guitar (Adrian Utley)",
+     "a 40-odd piece string section at Abbey Road"
+    ],
+    "artifact": "The Dug Out on Park Row, Bristol: the small club where the Wild Bunch played on Wednesdays and the Bristol sound got its first rehearsals in front of a crowd."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Blue_Lines",
+    "https://en.wikipedia.org/wiki/Unfinished_Sympathy",
+    "https://en.wikipedia.org/wiki/Dummy_(album)",
+    "https://en.wikipedia.org/wiki/Protection_(Massive_Attack_album)",
+    "https://en.wikipedia.org/wiki/Geoff_Barrow",
+    "https://en.wikipedia.org/wiki/Trip_hop",
+    "https://www.gearnews.com/glory-box-of-tricks-how-to-sound-like-portishead/",
+    "https://www.watershed.co.uk/archive-sites/electricpavilion/dugout/vaults/reading/mashup.html",
+    "https://huffingtonpost.co.uk/entry/class-and-the-arts_b_8647352",
+    "https://en.wikipedia.org/wiki/Enterprise_Allowance_Scheme",
+    "https://en.wikipedia.org/wiki/Mazzy_Star",
+    "https://en.wikipedia.org/wiki/Opal_(band)"
+   ],
+   "image": "media/eras/era1.webp"
+  },
+  {
+   "n": 2,
+   "name": "The Comedown Lounge",
+   "years": "1996–2000",
+   "from": 1996,
+   "to": 2000,
+   "essay": "By 1996 the Bristol sound had left Bristol. Sneaker Pimps made Becoming X in Liam Howe's bedroom in Elwick, County Durham, with a cupboard rigged as a vocal booth. DJ Shadow dug his records out of Rare Records in Sacramento and stacked them on an Akai MPC60 at Dan the Automator's home studio in San Francisco. Thievery Corporation came out of a Washington DC bar, the Eighteenth Street Lounge, and named their label after it. Groove Armada cut At the River in a Lake District cottage with a microphone rewired from a hi-fi speaker. Air were two lads from Versailles. Moby made Play in his Little Italy apartment. The money was the strangest it has ever been. US recorded music revenue hit its all-time high of about $14.6 billion in 1999, almost all of it CDs, and that June Napster launched from a Northeastern University dorm. Play showed the way out before most people knew they needed one: Moby licensed every track to ads, films and TV, and the album went on to sell around 12 million. Half the songs on this stretch reached people through a film, a TV show or a chill-out compilation rather than the radio, and two of them only became hits once a house producer sped them up.",
+   "scene": {
+    "cities": [
+     "Hartlepool",
+     "London",
+     "San Francisco",
+     "Washington DC",
+     "Ambleside",
+     "Bristol",
+     "Paris",
+     "Sheffield",
+     "New York",
+     "Sint-Niklaas"
+    ],
+    "labels": [
+     "Clean Up Records",
+     "Mo' Wax",
+     "The Echo Label",
+     "ESL Music",
+     "4AD",
+     "Tummy Touch",
+     "Circa",
+     "Source / Virgin",
+     "China Records",
+     "Mute / V2",
+     "Columbia",
+     "Blue Note"
+    ],
+    "gear": [
+     "Akai MPC60 MKII sampler",
+     "Korg MS-20",
+     "Solina String Ensemble",
+     "a ten-second sampler and a hi-fi speaker wired up as a microphone"
+    ],
+    "artifact": "The Café del Mar compilations: José Padilla's sunset sets at an Ibiza bar, sold first on cassette to customers who asked what was playing, then on CD from 1994, and from 1999 on the café's own label."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Becoming_X",
+    "https://en.wikipedia.org/wiki/Endtroducing.....",
+    "https://en.wikipedia.org/wiki/Thievery_Corporation",
+    "https://en.wikipedia.org/wiki/At_the_River",
+    "https://en.wikipedia.org/wiki/Air_(French_band)",
+    "https://en.wikipedia.org/wiki/Porcelain_(Moby_song)",
+    "https://rainnews.com/u-s-music-revenue-driven-by-streaming-on-pace-to-set-new-record-in-2021-rain-projection/",
+    "https://www.cbsnews.com/news/after-napster-the-music-industry-winds-up-humming/",
+    "https://sociallifemagazine.com/the-archive/napster-streaming-90s-copyright-fortunes/",
+    "https://stereogum.com/2044078/play-turns-20/franchises/the-anniversary",
+    "https://en.wikipedia.org/wiki/List_of_Caf%C3%A9_del_Mar_compilations",
+    "https://en.wikipedia.org/wiki/Caf%C3%A9_del_Mar"
+   ],
+   "image": "media/eras/era2.webp"
+  },
+  {
+   "n": 3,
+   "name": "The Soundtrack Years",
+   "years": "2001–06",
+   "from": 2001,
+   "to": 2006,
+   "essay": "Napster shut its network down in July 2001, months after peaking at about 26 million users, and the record business spent the next five years hunting for money that didn't depend on a CD in a shop. For music this slow, the money came from placements. Zero 7's Simple Things came out on Ultimate Dilemma in April 2001, went platinum in the UK, and then had a second life on television: \"In the Waiting Line\" turned up in Sex and the City and on Zach Braff's Garden State soundtrack, which went platinum in the US and won a Grammy. Sia's \"Breathe Me\" stalled at 71 in the UK in 2004 until it closed the Six Feet Under finale in August 2005. Apple put Röyksopp's \"Eple\" inside the Mac OS X Panther setup screen and Gorillaz' \"Feel Good Inc.\" under a roller-skating silhouette. The iTunes Store opened in April 2003 and sold more than a million tracks in its first five days, so a song heard on TV could be bought the same evening. The records were cheap to make. Röyksopp made Melody A.M. in the living room of a Bergen bedsit around an Akai sampler, and Zero 7 ran their sequencers off an old Atari. The price was a reputation as cookery-show music, which Henry Binns still groans about.",
+   "scene": {
+    "cities": [
+     "London",
+     "Bergen",
+     "Manchester",
+     "Leeds"
+    ],
+    "labels": [
+     "Ultimate Dilemma",
+     "Wall of Sound",
+     "Warp",
+     "XL Recordings",
+     "Go! Beat",
+     "Parlophone",
+     "Mercury"
+    ],
+    "gear": [
+     "Fender Rhodes and Wurlitzer electric pianos",
+     "Akai S5000 sampler",
+     "Atari 1040 ST sequencer",
+     "Omnichord",
+     "melodica"
+    ],
+    "artifact": "The Garden State soundtrack CD (2004): Zach Braff's own mix of the songs he wrote the film to, platinum in the US, a Grammy winner, and the place a lot of Americans first heard Zero 7 and Thievery Corporation."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Napster",
+    "https://en.wikipedia.org/wiki/ITunes_Store",
+    "https://en.wikipedia.org/wiki/Simple_Things_(Zero_7_album)",
+    "https://en.wikipedia.org/wiki/Garden_State_(soundtrack)",
+    "https://en.wikipedia.org/wiki/Breathe_Me",
+    "https://en.wikipedia.org/wiki/Eple",
+    "https://www.macrumors.com/2005/05/08/ipod-ad-rollerskating",
+    "https://stereogum.com/2159383/royksopp-melody-a-m-turns-20/reviews/the-anniversary",
+    "https://equipboard.com/albums/zero-7-simple-things",
+    "https://uk.style.yahoo.com/zero-7-never-set-music-085708953.html"
+   ],
+   "image": "media/eras/era3.webp"
+  },
+  {
+   "n": 4,
+   "name": "The Blog Haze",
+   "years": "2007–14",
+   "from": 2007,
+   "to": 2014,
+   "essay": "By 2007 the gatekeeper was a blog. Anthony Volodkin had built the Hype Machine in 2005 as a Hunter College sophomore, and it scraped around 800 MP3 blogs into one ranked list, so a song posted in a Georgia bedroom on Monday could top the Popular chart by Friday. Then the money went. After the 2008 crash, jobs dried up for exactly the people making this music: Ernest Greene had a master's in library science and no library job, so he moved back in with his parents in Perry, Georgia and made Washed Out tracks in his bedroom, and bloggers found them on Myspace in 2009. Mark Foster was writing ad jingles at Mophonics in Venice, California and gave Pumped Up Kicks away as a free download before Columbia came calling. Jon Pareles called chillwave \"recession-era music: low-budget and danceable.\" The tools were cheap and on the laptop already. alt-J started on GarageBand in Leeds student halls, where noise limits shaped the sound, and Foster built his hit in Logic Pro and released the demo. The haze in these records is partly a mood and partly what a $0 budget sounds like.",
+   "scene": {
+    "cities": [
+     "Middletown, Connecticut",
+     "Gothenburg",
+     "Perry, Georgia",
+     "Los Angeles",
+     "London",
+     "Leeds",
+     "Melbourne",
+     "Oxford",
+     "San Francisco"
+    ],
+    "labels": [
+     "Columbia",
+     "Peacefrog",
+     "Mexican Summer",
+     "Startime International",
+     "Ninja Tune",
+     "Infectious",
+     "Flying Buddha",
+     "Wolf Tone",
+     "Ghostly International"
+    ],
+    "gear": [
+     "Logic Pro",
+     "GarageBand",
+     "a saucepan standing in for a hi-hat",
+     "REAPER",
+     "Minimoog"
+    ],
+    "artifact": "The Hype Machine's Popular list: one page that ranked whatever 800 music blogs had posted that week, and for a few years it decided which bedroom record you heard next."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/The_Hype_Machine",
+    "https://en.wikipedia.org/wiki/Washed_Out",
+    "https://en.wikipedia.org/wiki/Chillwave",
+    "https://en.wikipedia.org/wiki/Pumped_Up_Kicks",
+    "https://en.wikipedia.org/wiki/Alt-J",
+    "https://en.wikipedia.org/wiki/Tycho_(musician)"
+   ],
+   "image": "media/eras/era4.webp"
+  },
+  {
+   "n": 5,
+   "name": "The Groove Revival",
+   "years": "2015–20",
+   "from": 2015,
+   "to": 2020,
+   "essay": "By 2015 the slow, groove-first idea that came out of Bristol had moved to a barn. Khruangbin rehearsed and recorded in a corrugated tin barn with a dirt floor on Mark Speer's family property in Burton, Texas, a town of about 300, driving out from Houston on a diet of 1960s and '70s Thai funk. Speer and drummer DJ Johnson had met in a Houston church gospel band in 2004, and Speer and Laura Lee had toured in Yppah's band opening for Bonobo. Kevin Parker made Currents alone in his home studio in Fremantle. Thundercat made his EP in Los Angeles between sessions for To Pimp a Butterfly. The money moved as well. Spotify's mood playlists rewarded songs that could sit in the background, and in December 2017 Liz Pelly wrote in The Baffler that they turned music into \"emotional wallpaper.\" That year a YouTube channel called ChilledCow had started a round-the-clock lo-fi hip-hop stream, the Bristol mood boiled down to a study aid. It survived on stage too. Khruangbin opened for Massive Attack, Men I Trust self-released everything and still played Coachella in 2019, and Black Pumas drew lines down the block at C-Boy's in Austin. Mordechai arrived in June 2020, to a locked-down world listening on headphones.",
+   "scene": {
+    "cities": [
+     "Houston",
+     "Burton, Texas",
+     "Austin",
+     "Fremantle",
+     "Los Angeles",
+     "Montreal",
+     "Oakland",
+     "Portland, Oregon"
+    ],
+    "labels": [
+     "Night Time Stories",
+     "Dead Oceans",
+     "Brainfeeder",
+     "Jagjaguwar",
+     "Carpark Records",
+     "ATO Records"
+    ],
+    "gear": [
+     "Guitar synth and octave pedal (Kevin Parker's disguised 'bass' on Currents)",
+     "Ibanez TCB1006 six-string hollow-body bass (Thundercat's signature model, announced November 2017)"
+    ],
+    "artifact": "The ChilledCow (now Lofi Girl) YouTube stream \"lofi hip hop radio - beats to relax/study to\", streaming lo-fi hip-hop around the clock from February 2017, with a cartoon girl doing homework by a window since 2018: thirty years after the Wild Bunch, slow beats had become something you left on so you could get on with your work."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Khruangbin",
+    "https://thecurrent.org/feature/2018/04/23/khruangbin-perform-in-the-current-studio",
+    "https://daily.bandcamp.com/features/khruangbin-con-todo-el-mundo-interview",
+    "https://en.wikipedia.org/wiki/The_Less_I_Know_the_Better",
+    "https://en.wikipedia.org/wiki/The_Beyond_/_Where_the_Giants_Roam",
+    "https://thebaffler.com/salvos/the-problem-with-muzak-pelly",
+    "https://en.wikipedia.org/wiki/Lofi_Girl",
+    "https://en.wikipedia.org/wiki/Men_I_Trust",
+    "https://www.cbsnews.com/news/black-pumas-eric-burton-adrian-quesada-grammy-nominated",
+    "https://en.wikipedia.org/wiki/Mordechai_(album)",
+    "https://grammy.com/news/5-important-khruangbin-songs-new-album-a-la-sala"
+   ],
+   "image": "media/eras/era5.webp"
+  }
+ ],
+ "songs": [
+  "massive-attack--unfinished-sympathy",
+  "mazzy-star--fade-into-you",
+  "portishead--glory-box",
+  "portishead--sour-times",
+  "massive-attack--protection",
+  "sneaker-pimps--6-underground",
+  "sneaker-pimps--spin-spin-sugar",
+  "mono--life-in-mono",
+  "dj-shadow--midnight-in-a-perfect-world",
+  "thievery-corporation--lebanese-blonde",
+  "groove-armada--at-the-river",
+  "massive-attack--teardrop",
+  "air--la-femme-dargent",
+  "air--all-i-need",
+  "morcheeba--the-sea",
+  "moloko--sing-it-back",
+  "moby--porcelain",
+  "hooverphonic--mad-about-you",
+  "st-germain--rose-rouge",
+  "zero-7--in-the-waiting-line",
+  "zero-7--destiny",
+  "gorillaz--clint-eastwood",
+  "royksopp--eple",
+  "lamb--gabriel",
+  "lemon-jelly--nice-weather-for-ducks",
+  "zero-7--somersault",
+  "sia--breathe-me",
+  "gorillaz-featuring-de-la-soul--feel-good-inc",
+  "nightmares-on-wax--you-wish",
+  "mgmt--electric-feel",
+  "little-dragon--twice",
+  "washed-out--feel-it-all-around",
+  "foster-the-people--pumped-up-kicks",
+  "bonobo--kiara",
+  "alt-j--breezeblocks",
+  "hiatus-kaiyote--nakamarra",
+  "glass-animals--gooey",
+  "tycho--awake",
+  "khruangbin--white-gloves",
+  "tame-impala--the-less-i-know-the-better",
+  "thundercat--them-changes",
+  "unknown-mortal-orchestra--hunnybee",
+  "khruangbin--maria-tambien",
+  "khruangbin--evan-finds-the-third-room",
+  "men-i-trust--show-me-how",
+  "toro-y-moi--ordinary-pleasure",
+  "black-pumas--colors",
+  "khruangbin--time",
+  "khruangbin-leon-bridges--texas-sun"
+ ],
+ "pins": {
+  "massive-attack--unfinished-sympathy": {
+   "youtube": "ZWmrfgj0MZI"
+  },
+  "mazzy-star--fade-into-you": {
+   "youtube": "ImKY6TZEyrI"
+  },
+  "portishead--glory-box": {
+   "youtube": "4qQyUi4zfDs"
+  },
+  "portishead--sour-times": {
+   "youtube": "un8EW82GwKc"
+  },
+  "massive-attack--protection": {
+   "youtube": "0Rw-UsRPNqc"
+  },
+  "sneaker-pimps--6-underground": {
+   "youtube": "Wuwfe3DRJzE"
+  },
+  "sneaker-pimps--spin-spin-sugar": {
+   "youtube": "MZWWI3ryw2o"
+  },
+  "mono--life-in-mono": {
+   "youtube": "qP0qeQrjh2k"
+  },
+  "dj-shadow--midnight-in-a-perfect-world": {
+   "youtube": "InFbBlpDTfQ"
+  },
+  "thievery-corporation--lebanese-blonde": {
+   "youtube": "1t7W6NtTKAw"
+  },
+  "groove-armada--at-the-river": {
+   "youtube": "m-uztVX6QFQ"
+  },
+  "massive-attack--teardrop": {
+   "youtube": "u7K72X4eo_s"
+  },
+  "air--la-femme-dargent": {
+   "youtube": "YUX8fUrKRNU"
+  },
+  "air--all-i-need": {
+   "youtube": "kxWFyvTg6mc"
+  },
+  "morcheeba--the-sea": {
+   "youtube": "LyTUApaZBLg"
+  },
+  "moloko--sing-it-back": {
+   "youtube": "w1eN8vyVFIM"
+  },
+  "moby--porcelain": {
+   "youtube": "IJWlBfo5Oj0"
+  },
+  "hooverphonic--mad-about-you": {
+   "youtube": "xVKGXgHDMvQ"
+  },
+  "st-germain--rose-rouge": {
+   "youtube": "6QImCMjW-PM"
+  },
+  "zero-7--in-the-waiting-line": {
+   "youtube": "V1zrEGsj234"
+  },
+  "zero-7--destiny": {
+   "youtube": "U_OKigBRqBI"
+  },
+  "gorillaz--clint-eastwood": {
+   "youtube": "1V_xRb0x9aw"
+  },
+  "royksopp--eple": {
+   "youtube": "sFP7jVIxE2c"
+  },
+  "lamb--gabriel": {
+   "youtube": "KovEbIXZUkQ"
+  },
+  "lemon-jelly--nice-weather-for-ducks": {
+   "youtube": "gFeOa2vBZeI"
+  },
+  "zero-7--somersault": {
+   "youtube": "pO-3U5m9N0w"
+  },
+  "sia--breathe-me": {
+   "youtube": "ghPcYqn0p4Y"
+  },
+  "gorillaz-featuring-de-la-soul--feel-good-inc": {
+   "youtube": "HyHNuVaZJ-k"
+  },
+  "nightmares-on-wax--you-wish": {
+   "youtube": "TwDOa-lvizM"
+  },
+  "mgmt--electric-feel": {
+   "youtube": "MmZexg8sxyk"
+  },
+  "little-dragon--twice": {
+   "youtube": "TrpMncSZe-I"
+  },
+  "washed-out--feel-it-all-around": {
+   "youtube": "3Pt0V6K7WpM"
+  },
+  "foster-the-people--pumped-up-kicks": {
+   "youtube": "SDTZ7iX4vTQ"
+  },
+  "bonobo--kiara": {
+   "youtube": "L-kyRh7N-kE"
+  },
+  "alt-j--breezeblocks": {
+   "youtube": "rVeMiVU77wo"
+  },
+  "hiatus-kaiyote--nakamarra": {
+   "youtube": "MvB77oYXlvU"
+  },
+  "glass-animals--gooey": {
+   "youtube": "jeo3an2M_Lo"
+  },
+  "tycho--awake": {
+   "youtube": "VZBrZV3nHAA"
+  },
+  "khruangbin--white-gloves": {
+   "youtube": "wJzoos4rE_o"
+  },
+  "tame-impala--the-less-i-know-the-better": {
+   "youtube": "2SUwOgmvzK4"
+  },
+  "thundercat--them-changes": {
+   "youtube": "BuzJ5NArvgw"
+  },
+  "unknown-mortal-orchestra--hunnybee": {
+   "youtube": "IJrKlSkxRHA"
+  },
+  "khruangbin--maria-tambien": {
+   "youtube": "7hlGqj3ImQI"
+  },
+  "khruangbin--evan-finds-the-third-room": {
+   "youtube": "QcD_YXCxxZM"
+  },
+  "men-i-trust--show-me-how": {
+   "youtube": "OZRYzH0Q0pU"
+  },
+  "toro-y-moi--ordinary-pleasure": {
+   "youtube": "7hJb9MxI2NY"
+  },
+  "black-pumas--colors": {
+   "youtube": "2EntxPIULUI"
+  },
+  "khruangbin--time": {
+   "youtube": "oc50wHexbwg"
+  },
+  "khruangbin-leon-bridges--texas-sun": {
+   "youtube": "zSWNWWREtsI"
+  }
+ },
+ "threads": [
+  {
+   "from": "massive-attack--unfinished-sympathy",
+   "to": "massive-attack--protection",
+   "kind": "producer",
+   "note": "Same band three years on, with Nellee Hooper (another Wild Bunch alumnus) producing."
+  },
+  {
+   "from": "massive-attack--unfinished-sympathy",
+   "to": "massive-attack--teardrop",
+   "kind": "singer",
+   "note": "Massive Attack again hand the lead to a guest woman's voice: Shara Nelson here, Elizabeth Fraser on Teardrop."
+  },
+  {
+   "from": "massive-attack--unfinished-sympathy",
+   "to": "portishead--glory-box",
+   "kind": "city",
+   "note": "Geoff Barrow was assisting at the Coach House while Blue Lines was being made, and the band gave him his first sampler."
+  },
+  {
+   "from": "massive-attack--unfinished-sympathy",
+   "to": "portishead--sour-times",
+   "kind": "city",
+   "note": "Same Coach House studio: Dummy was recorded there and at State of Art in Bristol."
+  },
+  {
+   "from": "mazzy-star--fade-into-you",
+   "to": "massive-attack--protection",
+   "kind": "singer",
+   "note": "Hope Sandoval later sang with Massive Attack on \"Paradise Circus\" (Heligoland, 2010)."
+  },
+  {
+   "from": "portishead--glory-box",
+   "to": "portishead--sour-times",
+   "kind": "producer",
+   "note": "Same album, same three people: Barrow, Gibbons, Utley."
+  },
+  {
+   "from": "portishead--glory-box",
+   "to": "massive-attack--unfinished-sympathy",
+   "kind": "city",
+   "note": "Barrow's first sampler came from Massive Attack while he was working at the Coach House."
+  },
+  {
+   "from": "portishead--sour-times",
+   "to": "portishead--glory-box",
+   "kind": "producer",
+   "note": "Same album and trio."
+  },
+  {
+   "from": "portishead--sour-times",
+   "to": "sneaker-pimps--6-underground",
+   "kind": "sample",
+   "note": "Sneaker Pimps also built a hit on 1960s spy music: John Barry's \"Golden Girl\" from Goldfinger."
+  },
+  {
+   "from": "massive-attack--protection",
+   "to": "massive-attack--unfinished-sympathy",
+   "kind": "producer",
+   "note": "Same band; Nellee Hooper, who left the Wild Bunch for Soul II Soul, comes back to produce."
+  },
+  {
+   "from": "massive-attack--protection",
+   "to": "sneaker-pimps--6-underground",
+   "kind": "producer",
+   "note": "Nellee Hooper also did the remix of \"6 Underground\" that became the radio version."
+  },
+  {
+   "from": "massive-attack--protection",
+   "to": "massive-attack--teardrop",
+   "kind": "singer",
+   "note": "Massive Attack's habit of borrowing a voice from another band: Thorn here, Elizabeth Fraser on Teardrop."
+  },
+  {
+   "from": "massive-attack--protection",
+   "to": "mazzy-star--fade-into-you",
+   "kind": "singer",
+   "note": "Hope Sandoval would become another of their guest voices, on \"Paradise Circus\" (2010)."
+  },
+  {
+   "from": "sneaker-pimps--6-underground",
+   "to": "sneaker-pimps--spin-spin-sugar",
+   "kind": "singer",
+   "note": "Same band, same singer, same album."
+  },
+  {
+   "from": "sneaker-pimps--6-underground",
+   "to": "mono--life-in-mono",
+   "kind": "producer",
+   "note": "Jim Abbiss co-produced both, and both are built on a John Barry sample."
+  },
+  {
+   "from": "sneaker-pimps--spin-spin-sugar",
+   "to": "sneaker-pimps--6-underground",
+   "kind": "singer",
+   "note": "Same band, singer and album."
+  },
+  {
+   "from": "sneaker-pimps--spin-spin-sugar",
+   "to": "moloko--sing-it-back",
+   "kind": "influence",
+   "note": "Both songs reached most listeners through a house remix rather than the version on this list."
+  },
+  {
+   "from": "mono--life-in-mono",
+   "to": "portishead--sour-times",
+   "kind": "sample",
+   "note": "Both built on a Sixties spy-film score: Barry's Ipcress File here, Schifrin's 'Danube Incident' on 'Sour Times'."
+  },
+  {
+   "from": "mono--life-in-mono",
+   "to": "sneaker-pimps--6-underground",
+   "kind": "producer",
+   "note": "Jim Abbiss co-produced both, and both sample John Barry."
+  },
+  {
+   "from": "mono--life-in-mono",
+   "to": "moloko--sing-it-back",
+   "kind": "label",
+   "note": "Mono and Moloko were both on Echo."
+  },
+  {
+   "from": "dj-shadow--midnight-in-a-perfect-world",
+   "to": "st-germain--rose-rouge",
+   "kind": "sample",
+   "note": "Marlena Shaw again: 'California Soul' here, 'Woman of the Ghetto' on 'Rose Rouge'."
+  },
+  {
+   "from": "dj-shadow--midnight-in-a-perfect-world",
+   "to": "air--la-femme-dargent",
+   "kind": "label",
+   "note": "Mo' Wax also put out Air's first single, 'Modular Mix'."
+  },
+  {
+   "from": "thievery-corporation--lebanese-blonde",
+   "to": "zero-7--in-the-waiting-line",
+   "kind": "soundtrack",
+   "note": "Both on the Garden State soundtrack (2004)."
+  },
+  {
+   "from": "massive-attack--teardrop",
+   "to": "massive-attack--unfinished-sympathy",
+   "kind": "city",
+   "note": "Massive Attack, Bristol, seven years after 'Unfinished Sympathy'."
+  },
+  {
+   "from": "massive-attack--teardrop",
+   "to": "massive-attack--protection",
+   "kind": "city",
+   "note": "Same band; Mezzanine follows Protection."
+  },
+  {
+   "from": "air--la-femme-dargent",
+   "to": "air--all-i-need",
+   "kind": "producer",
+   "note": "Same album, same two producers."
+  },
+  {
+   "from": "air--la-femme-dargent",
+   "to": "dj-shadow--midnight-in-a-perfect-world",
+   "kind": "label",
+   "note": "Air's first single was also put out by DJ Shadow's label, Mo' Wax."
+  },
+  {
+   "from": "air--all-i-need",
+   "to": "air--la-femme-dargent",
+   "kind": "producer",
+   "note": "Same album, same producers."
+  },
+  {
+   "from": "moloko--sing-it-back",
+   "to": "sneaker-pimps--spin-spin-sugar",
+   "kind": "influence",
+   "note": "Another slow album track made famous by a house remix."
+  },
+  {
+   "from": "moloko--sing-it-back",
+   "to": "mono--life-in-mono",
+   "kind": "label",
+   "note": "Moloko and Mono were both on Echo."
+  },
+  {
+   "from": "st-germain--rose-rouge",
+   "to": "dj-shadow--midnight-in-a-perfect-world",
+   "kind": "sample",
+   "note": "Marlena Shaw again: 'California Soul' turns up in 'Midnight in a Perfect World'."
+  },
+  {
+   "from": "zero-7--in-the-waiting-line",
+   "to": "zero-7--destiny",
+   "kind": "producer",
+   "note": "Same album, same producers; Sophie Barker sings on both."
+  },
+  {
+   "from": "zero-7--in-the-waiting-line",
+   "to": "zero-7--somersault",
+   "kind": "producer",
+   "note": "Zero 7 again, three years later."
+  },
+  {
+   "from": "zero-7--in-the-waiting-line",
+   "to": "thievery-corporation--lebanese-blonde",
+   "kind": "soundtrack",
+   "note": "Thievery Corporation's \"Lebanese Blonde\" is track 9 on the same Garden State soundtrack."
+  },
+  {
+   "from": "zero-7--in-the-waiting-line",
+   "to": "air--la-femme-dargent",
+   "kind": "influence",
+   "note": "Pitchfork's review knocked Simple Things for sounding too close to Air's Moon Safari."
+  },
+  {
+   "from": "zero-7--destiny",
+   "to": "zero-7--in-the-waiting-line",
+   "kind": "singer",
+   "note": "Sophie Barker sings on both."
+  },
+  {
+   "from": "zero-7--destiny",
+   "to": "zero-7--somersault",
+   "kind": "singer",
+   "note": "Sia back with Zero 7 in 2004."
+  },
+  {
+   "from": "zero-7--destiny",
+   "to": "sia--breathe-me",
+   "kind": "singer",
+   "note": "Sia's solo breakthrough."
+  },
+  {
+   "from": "zero-7--destiny",
+   "to": "air--la-femme-dargent",
+   "kind": "influence",
+   "note": "Critics heard Air's Moon Safari all over Simple Things."
+  },
+  {
+   "from": "gorillaz--clint-eastwood",
+   "to": "gorillaz-featuring-de-la-soul--feel-good-inc",
+   "kind": "producer",
+   "note": "Gorillaz four years later, with Danger Mouse in the chair."
+  },
+  {
+   "from": "royksopp--eple",
+   "to": "gorillaz-featuring-de-la-soul--feel-good-inc",
+   "kind": "soundtrack",
+   "note": "Apple used both: Eple in the Panther setup screen, Feel Good Inc. in an iPod ad."
+  },
+  {
+   "from": "lamb--gabriel",
+   "to": "massive-attack--unfinished-sympathy",
+   "kind": "producer",
+   "note": "Wil Malone arranged strings for both."
+  },
+  {
+   "from": "lamb--gabriel",
+   "to": "sia--breathe-me",
+   "kind": "producer",
+   "note": "Malone also arranged the strings on Sia's Colour the Small One."
+  },
+  {
+   "from": "lemon-jelly--nice-weather-for-ducks",
+   "to": "zero-7--in-the-waiting-line",
+   "kind": "city",
+   "note": "London duos; both albums were Mercury Prize nominees."
+  },
+  {
+   "from": "zero-7--somersault",
+   "to": "zero-7--destiny",
+   "kind": "singer",
+   "note": "Sia's first Zero 7 single."
+  },
+  {
+   "from": "zero-7--somersault",
+   "to": "sia--breathe-me",
+   "kind": "singer",
+   "note": "Same voice, same spring, solo."
+  },
+  {
+   "from": "zero-7--somersault",
+   "to": "zero-7--in-the-waiting-line",
+   "kind": "producer",
+   "note": "Zero 7."
+  },
+  {
+   "from": "sia--breathe-me",
+   "to": "zero-7--destiny",
+   "kind": "singer",
+   "note": "Sia, three years earlier, with Zero 7."
+  },
+  {
+   "from": "sia--breathe-me",
+   "to": "zero-7--somersault",
+   "kind": "singer",
+   "note": "Sia with Zero 7 the same year."
+  },
+  {
+   "from": "sia--breathe-me",
+   "to": "portishead--glory-box",
+   "kind": "label",
+   "note": "Go! Beat, Portishead's label."
+  },
+  {
+   "from": "sia--breathe-me",
+   "to": "massive-attack--unfinished-sympathy",
+   "kind": "producer",
+   "note": "Strings by Wil Malone, who arranged \"Unfinished Sympathy\"."
+  },
+  {
+   "from": "gorillaz-featuring-de-la-soul--feel-good-inc",
+   "to": "gorillaz--clint-eastwood",
+   "kind": "producer",
+   "note": "Gorillaz' debut single, four years earlier."
+  },
+  {
+   "from": "gorillaz-featuring-de-la-soul--feel-good-inc",
+   "to": "royksopp--eple",
+   "kind": "soundtrack",
+   "note": "Apple synced both."
+  },
+  {
+   "from": "mgmt--electric-feel",
+   "to": "foster-the-people--pumped-up-kicks",
+   "kind": "label",
+   "note": "Both broke on Columbia: MGMT directly, Foster the People through its Startime International imprint."
+  },
+  {
+   "from": "little-dragon--twice",
+   "to": "gorillaz--clint-eastwood",
+   "kind": "singer",
+   "note": "Nagano and Little Dragon later joined Gorillaz on Plastic Beach (Empire Ants, To Binge) and its tour."
+  },
+  {
+   "from": "little-dragon--twice",
+   "to": "gorillaz-featuring-de-la-soul--feel-good-inc",
+   "kind": "singer",
+   "note": "Same Gorillaz link."
+  },
+  {
+   "from": "washed-out--feel-it-all-around",
+   "to": "toro-y-moi--ordinary-pleasure",
+   "kind": "influence",
+   "note": "Toro y Moi came up in the same 2009 chillwave wave alongside Washed Out and Neon Indian."
+  },
+  {
+   "from": "foster-the-people--pumped-up-kicks",
+   "to": "mgmt--electric-feel",
+   "kind": "label",
+   "note": "Columbia again, through the Startime International imprint."
+  },
+  {
+   "from": "bonobo--kiara",
+   "to": "hiatus-kaiyote--nakamarra",
+   "kind": "label",
+   "note": "Ninja Tune: Hiatus Kaiyote's 2024 album came out on Brainfeeder and Ninja Tune."
+  },
+  {
+   "from": "hiatus-kaiyote--nakamarra",
+   "to": "bonobo--kiara",
+   "kind": "label",
+   "note": "Their later albums came out on Brainfeeder and, in 2024, Ninja Tune, Bonobo's label."
+  },
+  {
+   "from": "hiatus-kaiyote--nakamarra",
+   "to": "thundercat--them-changes",
+   "kind": "label",
+   "note": "Brainfeeder, Thundercat's home, released Mood Valiant in 2021."
+  },
+  {
+   "from": "glass-animals--gooey",
+   "to": "massive-attack--teardrop",
+   "kind": "influence",
+   "note": "Priya's line points at Mezzanine (1998), the Massive Attack album Teardrop comes from. A comparison, not a documented influence."
+  },
+  {
+   "from": "khruangbin--white-gloves",
+   "to": "bonobo--kiara",
+   "kind": "influence",
+   "note": "Speer and Laura Lee toured in Yppah's band opening for Bonobo, and Bonobo put Khruangbin on his 2013 Late Night Tales mix"
+  },
+  {
+   "from": "khruangbin--white-gloves",
+   "to": "tycho--awake",
+   "kind": "influence",
+   "note": "Khruangbin opened for Tycho after this album came out"
+  },
+  {
+   "from": "khruangbin--white-gloves",
+   "to": "massive-attack--unfinished-sympathy",
+   "kind": "influence",
+   "note": "Khruangbin opened for Massive Attack, which closes the Bristol-to-Texas loop"
+  },
+  {
+   "from": "khruangbin--white-gloves",
+   "to": "khruangbin--maria-tambien",
+   "kind": "producer",
+   "note": "same trio, same barn, same engineer (Steve Christensen)"
+  },
+  {
+   "from": "tame-impala--the-less-i-know-the-better",
+   "to": "unknown-mortal-orchestra--hunnybee",
+   "kind": "influence",
+   "note": "two 2010s psych-rock frontmen from Australia and New Zealand who went toward soul and disco"
+  },
+  {
+   "from": "tame-impala--the-less-i-know-the-better",
+   "to": "mgmt--electric-feel",
+   "kind": "influence",
+   "note": "psych-pop that crossed into the mainstream, eight years after Electric Feel"
+  },
+  {
+   "from": "unknown-mortal-orchestra--hunnybee",
+   "to": "tame-impala--the-less-i-know-the-better",
+   "kind": "influence",
+   "note": "a fellow Antipodean psych-rock songwriter turning toward soft soul in the same years"
+  },
+  {
+   "from": "khruangbin--maria-tambien",
+   "to": "khruangbin--evan-finds-the-third-room",
+   "kind": "producer",
+   "note": "same album, Con Todo El Mundo"
+  },
+  {
+   "from": "khruangbin--maria-tambien",
+   "to": "khruangbin--white-gloves",
+   "kind": "influence",
+   "note": "the debut leaned on Thai records; this album turned to Iran"
+  },
+  {
+   "from": "khruangbin--evan-finds-the-third-room",
+   "to": "khruangbin--maria-tambien",
+   "kind": "producer",
+   "note": "same album"
+  },
+  {
+   "from": "khruangbin--evan-finds-the-third-room",
+   "to": "khruangbin--white-gloves",
+   "kind": "influence",
+   "note": "reuses a melody from the debut that 'White Gloves' is on"
+  },
+  {
+   "from": "toro-y-moi--ordinary-pleasure",
+   "to": "washed-out--feel-it-all-around",
+   "kind": "influence",
+   "note": "Bear and Washed Out's Ernest Greene came up together in South Carolina chillwave; Toro y Moi remixed 'Feel It All Around' in 2009"
+  },
+  {
+   "from": "black-pumas--colors",
+   "to": "khruangbin-leon-bridges--texas-sun",
+   "kind": "city",
+   "note": "the Texas revival: Austin's Black Pumas and Houston's Khruangbin with Fort Worth's Leon Bridges"
+  },
+  {
+   "from": "khruangbin--time",
+   "to": "khruangbin-leon-bridges--texas-sun",
+   "kind": "producer",
+   "note": "same band and engineer, same year"
+  },
+  {
+   "from": "khruangbin--time",
+   "to": "khruangbin--white-gloves",
+   "kind": "city",
+   "note": "back to the Burton barn"
+  },
+  {
+   "from": "khruangbin-leon-bridges--texas-sun",
+   "to": "khruangbin--time",
+   "kind": "producer",
+   "note": "same trio and engineer, same year"
+  },
+  {
+   "from": "khruangbin-leon-bridges--texas-sun",
+   "to": "black-pumas--colors",
+   "kind": "city",
+   "note": "the Texas revival"
+  },
+  {
+   "from": "khruangbin-leon-bridges--texas-sun",
+   "to": "khruangbin--white-gloves",
+   "kind": "influence",
+   "note": "the band's Houston and Burton story comes full circle with a Texas singer"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ }
+}

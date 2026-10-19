@@ -1,0 +1,68 @@
+{
+ "id": "little-dragon--twice",
+ "title": "Twice",
+ "artist": "Little Dragon",
+ "year": 2007,
+ "year_note": "Wikipedia dates the Twice/Test single to 2007 and the album to August/September 2007. Drowned in Sound gives 2006 for a Twice/Test 7-inch on Off The Wall; Wikipedia says the 2006 single was Test/4ever. I kept 2007.",
+ "album": "Little Dragon",
+ "aliases": {
+  "youtube": [
+   "TrpMncSZe-I"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/11/43/0c/11430cea-8edf-8fc4-2e0d-684890bda575/mzaf_156987645944055872.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/twice/258615649?i=258615662&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Yukimi Nagano met Fredrik Wallin and Erik Bodin in 1996 in her first year of high school in Gothenburg, where they jammed and played De La Soul, A Tribe Called Quest and Alice Coltrane records; Håkan Wirenstrand joined later. Twice opens their debut album, and it's the quiet one: a store description calls it a minimalist ballad built on sparse piano, swirling strings and hushed synths. Nagano had already sung for Koop, the Swedish jazz-lounge duo, on Summer Sun in 2001.",
+  "context": "The single got them signed to Peacefrog, the British indie, and the album came out first in Japan on Village Again in August 2007, then in the UK. In 2009 it turned up in a Grey's Anatomy episode, An Honest Mistake. Three years later Damon Albarn, on his wife's recommendation, put Nagano on Gorillaz's Plastic Beach.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "Piano and Nagano, almost nothing else. The space around her voice is the arrangement."
+   },
+   {
+    "where": "as the song goes on",
+    "note": "Strings and soft synths creep in underneath the piano without ever pushing it aside."
+   }
+  ],
+  "leads_to": {
+   "artist": "Koop",
+   "title": "Summer Sun",
+   "year": 2001,
+   "why": "Nagano's voice six years earlier, on the Swedish duo's jazz-sampling lounge record that opened doors for her."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Little_Dragon",
+   "https://en.wikipedia.org/wiki/Little_Dragon_(album)",
+   "https://en.wikipedia.org/wiki/Yukimi_Nagano",
+   "https://www.normanrecords.com/records/93106-little-dragon-little-dragon",
+   "https://criticalhits.com.br/cinema-e-tv/todas-as-musicas-da-trilha-sonora-da-5a-temporada-de-greys-anatomy/"
+  ],
+  "unverified": "The Norman Records page blocked direct fetching; its description reached me through search results. Other TV placements (90210, Revenge, Vampire Diaries) appeared only in search snippets, so I left them out. Exact single date is disputed (see year_note)."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "The puppet video",
+   "line": "The Twice video was directed by Johannes Nyholm, and as The Fader noted in February 2008, it has puppets in it.",
+   "source": "https://en.wikipedia.org/wiki/Little_Dragon"
+  },
+  {
+   "kind": "screen",
+   "title": "Grey's Anatomy",
+   "line": "It played in Grey's Anatomy season 5, episode 16, An Honest Mistake.",
+   "source": "https://criticalhits.com.br/cinema-e-tv/todas-as-musicas-da-trilha-sonora-da-5a-temporada-de-greys-anatomy/"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

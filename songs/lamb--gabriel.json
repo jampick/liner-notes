@@ -1,0 +1,62 @@
+{
+ "id": "lamb--gabriel",
+ "title": "Gabriel",
+ "artist": "Lamb",
+ "year": 2001,
+ "year_note": "",
+ "album": "What Sound",
+ "aliases": {
+  "youtube": [
+   "KovEbIXZUkQ"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ce/e9/9e/cee99e07-3dc8-bbe0-ceb4-d08c8cb2cdfc/mzaf_372131098203604515.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/gabriel/6781383681?i=6781383933&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Lamb were Andy Barlow (production, keys, programming) and Lou Rhodes (vocals) from Manchester, signed to Mercury on the strength of three songs. What Sound brought in far more live players than before, among them Me'Shell NdegéOcello on bass, Arto Lindsay on guitar and Jimi Goodwin of Doves, and the album's strings were arranged by Wil Malone, who did the strings on \"Unfinished Sympathy\". Rhodes said the song is about having a big love for one particular person and just being glad they're out there in the world.",
+  "context": "It was the lead single, due 1 October 2001, a week ahead of the album and less than three weeks after September 11. In Britain the album only reached 54, but in Portugal \"Gabriel\" went to number 1 and What Sound went double platinum. Sean Ellis, the fashion photographer who shot All Saints' \"Never Ever\" video, directed the clip. Lamb split after a farewell show at the Paradiso in Amsterdam in 2004 and reformed in 2009.",
+  "listen_for": [
+   {
+    "where": "the first verse",
+    "note": "Read the lyric against what Rhodes said it's about: being glad one particular person exists, a love song with no drama in it."
+   },
+   {
+    "where": "the string parts",
+    "note": "What Sound's string arranger was Wil Malone, the same hand behind Massive Attack's \"Unfinished Sympathy\" strings ten years earlier."
+   }
+  ],
+  "leads_to": {
+   "artist": "Lamb",
+   "title": "Górecki",
+   "year": 1996,
+   "why": "From Lamb's 1996 debut (a single in 1997, UK no. 30), built on the second movement of Górecki's Symphony of Sorrowful Songs; Moulin Rouge! borrowed it in 2001."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/What_Sound",
+   "https://en.wikipedia.org/wiki/Lamb_(electronic_band)",
+   "https://www.drownedinsound.org/archive-new-lamb-single-and-album-inbound-2159/",
+   "https://en.wikipedia.org/wiki/G%C3%B3recki_(song)"
+  ],
+  "unverified": "UK singles chart peak for Gabriel. Which What Sound guests actually play on this track."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number 1 in Portugal",
+   "line": "The first single from What Sound (out 8 October 2001 on Mercury) reached number 1 in Portugal. The album itself peaked at 54 in the UK.",
+   "wiki": "What_Sound",
+   "source": "https://en.wikipedia.org/wiki/What_Sound"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

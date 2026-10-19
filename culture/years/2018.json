@@ -1,0 +1,47 @@
+{
+ "year": 2018,
+ "items": [
+  {
+   "kind": "film",
+   "title": "Black Panther",
+   "line": "It opened February 16 and passed $1.3 billion worldwide. Ryan Coogler's film became the first superhero movie nominated for Best Picture.",
+   "wiki": "Black_Panther_(film)",
+   "source": "https://en.wikipedia.org/wiki/Black_Panther_(film)"
+  },
+  {
+   "kind": "film",
+   "title": "Avengers: Infinity War",
+   "line": "It opened April 27 and finished around $2.05 billion worldwide. Anthony and Joe Russo directed it.",
+   "wiki": "Avengers:_Infinity_War",
+   "source": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War"
+  },
+  {
+   "kind": "news",
+   "title": "Tham Luang cave rescue",
+   "line": "Twelve boys and their coach were trapped in a Thai cave from June 23. Divers found them alive on July 2, and the last of them came out on July 10.",
+   "wiki": "Tham_Luang_cave_rescue",
+   "source": "https://en.wikipedia.org/wiki/Tham_Luang_cave_rescue"
+  },
+  {
+   "kind": "sport",
+   "title": "2018 World Cup",
+   "line": "Russia hosted from June 14 to July 15. France beat Croatia 4-2 in the final at Luzhniki Stadium in Moscow.",
+   "wiki": "2018_FIFA_World_Cup",
+   "source": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup"
+  },
+  {
+   "kind": "game",
+   "title": "Red Dead Redemption 2",
+   "line": "It came out October 26 and took over $725 million in its first three days. Roger Clark won a Game Award for playing Arthur Morgan.",
+   "wiki": "Red_Dead_Redemption_2",
+   "source": "https://en.wikipedia.org/wiki/Red_Dead_Redemption_2"
+  },
+  {
+   "kind": "film",
+   "title": "Into the Spider-Verse",
+   "line": "It arrived December 14, drawn to look like a moving comic page, halftone dots included. It won the Oscar for Best Animated Feature.",
+   "wiki": "Spider-Man:_Into_the_Spider-Verse",
+   "source": "https://en.wikipedia.org/wiki/Spider-Man:_Into_the_Spider-Verse"
+  }
+ ]
+}

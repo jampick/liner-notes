@@ -1,0 +1,72 @@
+{
+ "id": "morcheeba--the-sea",
+ "title": "The Sea",
+ "artist": "Morcheeba",
+ "year": 1998,
+ "year_note": "",
+ "album": "Big Calm",
+ "aliases": {
+  "youtube": [
+   "LyTUApaZBLg"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ef/85/8d/ef858de3-8605-08b6-f66f-860d50000d62/mzaf_3365731730840329240.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/the-sea/358317593?i=358317744&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Paul and Ross Godfrey started Big Calm on Christmas Day 1995 while waiting for their first album to come out, making demos in a home studio before bringing in Skye Edwards and guests. The song is credited to the two brothers and Edwards; Paul handled beats, scratching and live drums, Ross played every guitar on the album including pedal steel and lap steel, and Steve Bentley-Klein arranged the strings. It opens the album at 5:47.",
+  "context": "The Godfreys came from Saltwood near Hythe in Kent and met Edwards at a party in Greenwich; the band name joins MOR to 'cheeba', the cannabis slang of Paul's hero Schoolly D. Big Calm came out on 16 March 1998 on Indochina, reached 18 in the UK and went double Platinum there, and 'The Sea' became the radio favourite that is still their signature song.",
+  "listen_for": [
+   {
+    "where": "the strings",
+    "note": "Steve Bentley-Klein's arrangement, the part that moves this away from the band's harder trip-hop debut."
+   },
+   {
+    "where": "the drums",
+    "note": "A relaxed hip-hop beat from Paul Godfrey, whose roots were in hip-hop, kept well under the vocal."
+   },
+   {
+    "where": "the guitars",
+    "note": "Ross Godfrey's bluesy playing; on this album he also used pedal steel and lap steel."
+   }
+  ],
+  "leads_to": {
+   "artist": "Morcheeba",
+   "title": "Trigger Hippie",
+   "year": 1995,
+   "why": "Their first release, on China Records, the harder trip-hop they were moving away from on Big Calm."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Big_Calm",
+   "https://en.wikipedia.org/wiki/Morcheeba",
+   "https://headlinerhub.com/skye-edwards-on-three-decades-with-morcheeba-and-escape-the-chaos-%E2%80%9Cits-like-weve-been-through-a-divorce!%E2%80%9D.html"
+  ],
+  "unverified": "I couldn't confirm slide guitar on this track specifically, or a UK chart position for the single."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Opening Big Calm",
+   "line": "It opens Big Calm (16 March 1998) and runs 5:47. The album reached 18 in the UK, and Morcheeba put the track out as the second single that year.",
+   "wiki": "Big_Calm",
+   "source": "https://en.wikipedia.org/wiki/Big_Calm"
+  },
+  {
+   "kind": "sample",
+   "title": "Strings by Steve Bentley-Klein",
+   "line": "Paul Godfrey, Ross Godfrey and Skye Edwards wrote it. Steve Bentley-Klein wrote the string arrangement for the track.",
+   "wiki": "Morcheeba",
+   "source": "https://en.wikipedia.org/wiki/Big_Calm"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

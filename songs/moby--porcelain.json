@@ -1,0 +1,71 @@
+{
+ "id": "moby--porcelain",
+ "title": "Porcelain",
+ "artist": "Moby",
+ "year": 1999,
+ "year_note": "On Play (May 1999); released as a single in 2000 (US radio April, UK 12 June).",
+ "album": "Play",
+ "aliases": {
+  "youtube": [
+   "IJWlBfo5Oj0"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cb/7f/60/cb7f606e-7e11-cea4-cd07-6134bde231f5/mzaf_13105072326584009753.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/porcelain/281242279?i=281242336&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Moby wrote, produced and sang it in his apartment in Little Italy, Manhattan. The reversed strings are sampled from Ernest Gold's 'Fight for Survival' from the Exodus soundtrack (1960), under synth chords, piano, cello and a drum machine at 95 BPM, with extra vocals from Pilar Basso. He thought the production was 'mushy' and his own vocal 'really weak' and had to be talked into putting it on the album.",
+  "context": "Play came out just as Napster arrived, and Moby licensed every track to ads, films or TV, and the album went on to sell around 12 million. 'Porcelain' was already in Playing by Heart (1998) before Play existed; Danny Boyle's The Beach (2000) made it known, and it debuted at 5 in the UK. Moby has said the lyric is about being in love with someone you know you shouldn't be with.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "The strings run backwards. They are Ernest Gold's Exodus score reversed, which is why they swell in rather than starting."
+   },
+   {
+    "where": "the vocal",
+    "note": "Moby's own thin, close voice, the part he thought was too weak. That's the sound that sold it."
+   },
+   {
+    "where": "the beat",
+    "note": "A plain drum machine at 95 BPM, nothing dropped in or out to build tension."
+   }
+  ],
+  "leads_to": {
+   "artist": "Ernest Gold",
+   "title": "Fight for Survival",
+   "year": 1960,
+   "why": "The Exodus cue whose strings Moby turned around."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Porcelain_(Moby_song)",
+   "https://stereogum.com/2044078/play-turns-20/franchises/the-anniversary"
+  ],
+  "unverified": "Sources disagree on Play's track count in the licensing claim (Stereogum says 17; the album has 18). I wrote 'every track' without a number."
+ },
+ "culture": [
+  {
+   "kind": "sample",
+   "title": "Recorded in Moby's apartment",
+   "line": "Moby wrote, produced and sang it in his Manhattan apartment at 95 BPM. The reversed strings are from Ernest Gold's 'Fight for Survival' (Exodus, 1960).",
+   "wiki": "Moby",
+   "source": "https://en.wikipedia.org/wiki/Porcelain_(Moby_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Film and adverts",
+   "line": "It was on Playing by Heart (1998) before Play, then in Danny Boyle's The Beach (2000), and in ads for Volkswagen Polo, Bosch and France Télécom.",
+   "wiki": "The_Beach_(film)",
+   "source": "https://en.wikipedia.org/wiki/Porcelain_(Moby_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

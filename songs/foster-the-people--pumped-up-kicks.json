@@ -1,0 +1,87 @@
+{
+ "id": "foster-the-people--pumped-up-kicks",
+ "title": "Pumped Up Kicks",
+ "artist": "Foster the People",
+ "year": 2010,
+ "year_note": "Free download on Foster's website in early 2010; official release 14 September 2010. Chart peak came in 2011.",
+ "album": "Torches (first on the 2011 Foster the People EP)",
+ "aliases": {
+  "youtube": [
+   "SDTZ7iX4vTQ"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/06/5b/df/065bdfe1-4d16-53c9-f24d-f1ad16983f92/mzaf_15283020811004936626.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/pumped-up-kicks/435761204?i=435761212&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Mark Foster wrote and recorded it in a single day in 2009 while working as a commercial jingle writer at Mophonics, playing every part himself (bass, keys, synths, drums, percussion) and editing it in Logic Pro. He thought it was a demo, and the demo is the released version. The music came first and is bright on purpose; the lyric is a troubled, isolated teenager imagining shooting his classmates. The title points at the expensive Reebok Pumps Foster's classmates wore.",
+  "context": "Foster said he wrote it after reading about rising mental illness among teenagers and wanted to get inside the head of an isolated kid to raise awareness of youth gun violence; he told USA Today it was \"not about condoning violence at all.\" It went to No. 3 on the Billboard Hot 100 and No. 1 on Alternative Songs in 2011, while MTV cut the words 'gun' and 'bullet' and listeners called stations saying it glorified school shootings. After Sandy Hook in December 2012 many stations pulled it, and Foster wrote, \"I respect people's decision to press pause.\" In 2017, the night after the Las Vegas shooting, the band left it out of a Charlotte show, and in 2019 Foster told Billboard he was seriously thinking of retiring it, saying he couldn't control other people playing it but could control his own part; by the 2025 Paradise State of Mind tour it was back in the encore.",
+  "listen_for": [
+   {
+    "where": "the verses",
+    "note": "The LA Times heard 'Strokes-y vocal distortion atop a loping synth bass.' Foster's voice is pushed through grit and kept small, so the bass carries the tune."
+   },
+   {
+    "where": "the chorus",
+    "note": "Handclaps and a sing-along hook over that lyric. The gap between how it sounds and what it says is the point Foster was making."
+   },
+   {
+    "where": "the whistled section",
+    "note": "The whistle line, which is what most people remember, sits right next to some of the darkest lines in the song."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Boomtown Rats",
+   "title": "I Don't Like Mondays",
+   "year": 1979,
+   "why": "An earlier UK No. 1 about a real school shooting in San Diego, which also had stations refuse to play it and drew the same arguments 30 years before."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pumped_Up_Kicks",
+   "https://wgrd.com/foster-the-people-respond-to-pumped-up-kicks-being-pulled-from-radio-after-sandy-hook-shooting/",
+   "https://www.spinmagazine.com/2017/10/foster-the-people-decline-to-play-pumped-up-kicks-after-las-vegas-shooting-it-felt-wrong/",
+   "https://stereogum.com/2066841/foster-the-people-pumped-up-kicks-retirement/news",
+   "https://soundcheckentertainment.substack.com/p/foster-the-people-brings-their-paradise",
+   "https://en.wikipedia.org/wiki/I_Don%27t_Like_Mondays"
+  ],
+  "unverified": "Hours spent writing it differ by source (Wikipedia says five, Stereogum quotes Foster saying eight), so I wrote 'a single day'. The CNN interview Wikipedia cites for the mental-illness quote was blocked to me; WGRD carries the same paraphrase. I did not read Billboard's 2019 piece directly, only Stereogum's and Axios's reports of it. Reports that the Parkland shooter was a fan are left out as too thinly sourced for this page."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Josef Geiger's tour video",
+   "line": "Josef Geiger cut it from California shows, frisbee and surfing. Parts were shot at UC Riverside and a Lincoln Heights parking lot. A darker first version was shelved.",
+   "wiki": "Pumped_Up_Kicks",
+   "source": "https://en.wikipedia.org/wiki/Pumped_Up_Kicks"
+  },
+  {
+   "kind": "chart",
+   "title": "No. 3 for eight weeks",
+   "line": "No. 3 on the Hot 100 for eight straight weeks, No. 1 in Australia, No. 18 in the UK. About 5.17 million US copies sold by August 2013.",
+   "source": "https://en.wikipedia.org/wiki/Pumped_Up_Kicks"
+  },
+  {
+   "kind": "screen",
+   "title": "Entourage and beyond",
+   "line": "Entourage used it in July 2010. Friends with Benefits and Fright Night (both 2011), Suits and American Horror Story followed, plus Rock Band Blitz.",
+   "wiki": "Entourage_(American_TV_series)",
+   "source": "https://en.wikipedia.org/wiki/Pumped_Up_Kicks"
+  },
+  {
+   "kind": "chart",
+   "title": "The lyric",
+   "line": "The narrator is a troubled kid planning a school shooting. Foster meant it to raise youth gun violence. MTV cut \"gun\" and \"bullet\"; some stations pulled it after Sandy Hook.",
+   "source": "https://en.wikipedia.org/wiki/Pumped_Up_Kicks"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

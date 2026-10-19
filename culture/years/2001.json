@@ -1,0 +1,54 @@
+{
+ "year": 2001,
+ "items": [
+  {
+   "kind": "news",
+   "title": "Wikipedia goes live",
+   "line": "Wikipedia went live on 15 January 2001, started by Jimmy Wales and Larry Sanger. Nobody sat down that winter expecting to look things up there for the next twenty-five years.",
+   "wiki": "Wikipedia",
+   "source": "https://en.wikipedia.org/wiki/Wikipedia"
+  },
+  {
+   "kind": "film",
+   "title": "Amélie",
+   "line": "Jean-Pierre Jeunet's Paris fairy tale opened in France on 25 April 2001, with Audrey Tautou and Yann Tiersen's accordion-and-toy-piano score. Five Oscar nominations, no wins.",
+   "wiki": "Amélie",
+   "source": "https://en.wikipedia.org/wiki/Amélie"
+  },
+  {
+   "kind": "tech",
+   "title": "The iPod",
+   "line": "Steve Jobs announced the iPod on 23 October 2001: a 5 GB hard drive and \"1,000 songs in your pocket\". It reached shops on 10 November.",
+   "wiki": "IPod",
+   "source": "https://en.wikipedia.org/wiki/IPod"
+  },
+  {
+   "kind": "tech",
+   "title": "Windows XP",
+   "line": "Windows XP reached shops on 25 October 2001, with the green Bliss hill from Napa Valley as its default wallpaper. It replaced Windows Me at home and Windows 2000 at work.",
+   "wiki": "Windows_XP",
+   "source": "https://en.wikipedia.org/wiki/Windows_XP"
+  },
+  {
+   "kind": "game",
+   "title": "Grand Theft Auto III",
+   "line": "Released on PlayStation 2 on 23 October 2001 by an Edinburgh team of about 23 people. It was the best-selling game in the US that year, and a lot of parents hated it.",
+   "wiki": "Grand_Theft_Auto_III",
+   "source": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_III"
+  },
+  {
+   "kind": "game",
+   "title": "Halo: Combat Evolved",
+   "line": "Bungie's Halo launched with the Xbox in North America on 15 November 2001. The console cost US$299 and had a built-in 8 GB hard drive, a first for a games machine.",
+   "wiki": "Halo:_Combat_Evolved",
+   "source": "https://en.wikipedia.org/wiki/Halo:_Combat_Evolved"
+  },
+  {
+   "kind": "film",
+   "title": "Harry Potter and the Philosopher's Stone",
+   "line": "Premiered at the Odeon Leicester Square on 4 November 2001 and opened in the UK and US on 16 November. Chris Columbus directed, and it took $90.3 million in its US opening weekend.",
+   "wiki": "Harry_Potter_and_the_Philosopher's_Stone_(film)",
+   "source": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher's_Stone_(film)"
+  }
+ ]
+}

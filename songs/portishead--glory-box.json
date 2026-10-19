@@ -1,0 +1,82 @@
+{
+ "id": "portishead--glory-box",
+ "title": "Glory Box",
+ "artist": "Portishead",
+ "year": 1994,
+ "year_note": "On Dummy (22 August 1994). The single entered the UK chart on 14 January 1995, so it was a 1995 single; Wikipedia's 26 September 1994 single date conflicts with the Official Charts entry and looks wrong.",
+ "album": "Dummy",
+ "aliases": {
+  "youtube": [
+   "4qQyUi4zfDs"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/40/b2/a4/40b2a45b-eacf-818f-7af6-f7f8b3885230/mzaf_16256497095178600689.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/glory-box/1440653096?i=1440653206&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Geoff Barrow built it on a loop from Isaac Hayes's \"Ike's Rap II\" (Black Moses, 1971); Hayes gets a writing credit. Adrian Utley added a distorted guitar line on his Gretsch G6129 and Hammond organ, and Beth Gibbons sang it quietly into a lot of reverb. Dummy's method was to record parts, cut them to vinyl or tape, wreck them, and sample them back, mostly in mono.",
+  "context": "Portishead didn't want it out; Barrow said they rowed with Go! Beat because it felt too commercial. It went to number 13 in the UK, later went platinum there, and dragged \"Sour Times\" back into the top 20. Dummy won the 1995 Mercury Prize. Alexander Hemming's video is set in a 1950s jazz club where everyone except the band is in drag.",
+  "listen_for": [
+   {
+    "where": "the first bars, before Gibbons comes in",
+    "note": "That loop is Isaac Hayes's \"Ike's Rap II\". Tricky used the same record for \"Hell Is Round the Corner\" in the same stretch, so two Bristol acts released classics on one Hayes sample within months."
+   },
+   {
+    "where": "the guitar between vocal lines",
+    "note": "Utley's Gretsch, run through a distorted, raspy tone. It's the one rock gesture in the song and it never gets loud."
+   },
+   {
+    "where": "Gibbons's verses",
+    "note": "Utley has said the vocal is quiet with \"loads of reverb\", and Barrow that the band play it \"so quietly\". The intimacy is a mix decision."
+   }
+  ],
+  "leads_to": {
+   "artist": "Tricky",
+   "title": "Hell Is Round the Corner",
+   "year": 1995,
+   "why": "From Maxinquaye: the same Isaac Hayes sample, flipped darker by a former Wild Bunch member, which makes it the best side-by-side in Bristol."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Glory_Box",
+   "https://en.wikipedia.org/wiki/Dummy_(album)",
+   "https://www.officialcharts.com/artist/30605/portishead/",
+   "https://www.kexp.org/read/2019/8/22/portisheads-geoff-barrow-and-adrian-utley-breakdown-dummy-25-years-later/",
+   "https://www.gearnews.com/glory-box-of-tricks-how-to-sound-like-portishead/",
+   "https://www.songfacts.com/facts/portishead/glory-box",
+   "https://therunoutgrooves.substack.com/p/a-thousand-flowers-could-bloom",
+   "https://www.skiddle.com/news/all/Top-5-Influential-tracks-to-come-out-of-Bristol/32306/amp.html"
+  ],
+  "unverified": "Which element of \"Ike's Rap II\" is looped (strings, keys, drums) and whether it was slowed down. The theremin-like sound on Dummy is credited by one forum commenter to a Roland SH-101; not confirmed, left out."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "A 1950s jazz club",
+   "line": "Alexander Hemming's video, released 14 November 1994, has Beth Gibbons singing in a 1950s jazz club to office workers. Everyone in the cast except the band is in drag.",
+   "wiki": "Glory_Box",
+   "source": "https://en.wikipedia.org/wiki/Glory_Box"
+  },
+  {
+   "kind": "chart",
+   "title": "Chart peak",
+   "line": "It reached number 13 on the UK singles chart. In the US it got to 49 on the Radio & Records Alternative Top 50 but did not enter the Hot 100.",
+   "source": "https://en.wikipedia.org/wiki/Glory_Box"
+  },
+  {
+   "kind": "sample",
+   "title": "Isaac Hayes sample",
+   "line": "The loop comes from Isaac Hayes's Ike's Rap II, and Hayes is credited as a songwriter. One 1995 review traced the sample to his album Isaac Moods instead.",
+   "source": "https://en.wikipedia.org/wiki/Glory_Box"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "id": "thundercat--them-changes",
+ "title": "Them Changes",
+ "artist": "Thundercat",
+ "year": 2015,
+ "year_note": "First released on the EP The Beyond / Where the Giants Roam (22 June 2015, Brainfeeder), then included on the album Drunk (24 February 2017).",
+ "album": "The Beyond / Where the Giants Roam",
+ "aliases": {
+  "youtube": [
+   "BuzJ5NArvgw"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/31/62/1d3162b7-750a-117c-aff8-f81a6b644f7c/mzaf_17255235749372432606.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/them-changes/1197789099?i=1197789431&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Stephen \"Thundercat\" Bruner produced it with Flying Lotus, and the two of them wrote it. Kamasi Washington plays saxophone and Dennis Hamm plays keyboards. The drums are sampled from the Isley Brothers' \"Footsteps in the Dark\" (1977), and Thundercat's bass and a wah-treated texture play over them. He said the EP came together while he was also working on Flying Lotus's You're Dead!, Kamasi Washington's The Epic and Kendrick Lamar's To Pimp a Butterfly.",
+  "context": "In 2015 the Los Angeles jazz and beat scene around Brainfeeder fed straight into Kendrick Lamar's To Pimp a Butterfly, and this sixteen-minute EP was the bassist stepping out under his own name. Pitchfork ranked it 24th on its albums of 2015 list. The lyric is plain heartbreak sung over a party beat. It was popular enough that Thundercat put it on Drunk two years later, where Ninja Tune called it a fan favourite.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "That hi-hat and kick pattern is the Isley Brothers' \"Footsteps in the Dark\", the same record Ice Cube built \"It Was a Good Day\" on."
+   },
+   {
+    "where": "under the vocal in the verses",
+    "note": "Thundercat's bass trades lines with a wah-treated, pointillist texture, which is why a sampled-drum track feels like a live band."
+   },
+   {
+    "where": "toward the end",
+    "note": "Kamasi Washington's saxophone, recorded in the same year as The Epic."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Isley Brothers",
+   "title": "Footsteps in the Dark, Pts. 1 & 2",
+   "year": 1977,
+   "why": "It's the source of the drums, from Go for Your Guns, and the slow Isley groove that West Coast rap kept going back to."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Beyond_/_Where_the_Giants_Roam",
+   "https://thesinglesjukebox.com/thundercat-ft-flying-lotus-and-kamasi-washington-them-changes/",
+   "https://en.wikipedia.org/wiki/It_Was_a_Good_Day",
+   "https://glidemagazine.com/324377/golden-age-thursday-samples-the-isley-brothers-footsteps-in-the-dark-pts-1-2-1977-becomes-classic-hip-hop-landmark-via-ice-cube-1992-j-dilla-2006",
+   "https://www.ninjatune.com/release/thundercat/drunk",
+   "https://www.notreble.com/buzz/2017/11/21/ibanez-and-thundercat-team-up-for-the-tcb1006-bass/"
+  ],
+  "unverified": "I couldn't confirm which bass Thundercat played on this recording. He's known for six-string basses, but his Ibanez six-string signature model was announced in November 2017, after this track. Where the sax sits in the arrangement ('toward the end') comes from my memory of the record, not a source; the director may want to cut that 'where' or change it to a general note. Sources also disagree on whether 'Footsteps in the Dark' first came out as a B-side or as an album track in 1977."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "The samurai video",
+   "line": "Carlos López Estrada directed it in July 2015. A samurai sits at home watching TV after a duel, and Thundercat plays an infomercial salesman.",
+   "source": "https://www.rollingstone.com/music/music-news/samurai-sits-stares-in-thundercats-surreal-sad-them-changes-video-50919/"
+  },
+  {
+   "kind": "sample",
+   "title": "Isley Brothers beat",
+   "line": "The beat comes from Footsteps in the Dark, the Isley Brothers' 1977 song. The Isleys and Chris Jasper share the writing credit.",
+   "wiki": "Footsteps_in_the_Dark",
+   "source": "https://en.wikipedia.org/wiki/Them_Changes_(Thundercat_song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Back on TikTok",
+   "line": "A sped-up version went viral on TikTok in 2022. The song peaked at number 19 on Billboard's Hot R&B Songs chart.",
+   "wiki": "Drunk_(album)",
+   "source": "https://en.wikipedia.org/wiki/Them_Changes_(Thundercat_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

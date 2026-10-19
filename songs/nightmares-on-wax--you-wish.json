@@ -1,0 +1,58 @@
+{
+ "id": "nightmares-on-wax--you-wish",
+ "title": "You Wish",
+ "artist": "Nightmares on Wax",
+ "year": 2006,
+ "year_note": "",
+ "album": "In a Space Outta Sound",
+ "aliases": {
+  "youtube": [
+   "TwDOa-lvizM"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/89/0e/68/890e684b-0273-5b3a-ddf4-99a47c3dfbd7/mzaf_11112914945559783035.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/you-wish/282007471?i=282007477&uo=4"
+  }
+ },
+ "notes": {
+  "made": "George Evelyn produced it with Robin Taylor-Firth. The track is built on multiple elements of \"Private Number\", the 1968 duet by Judy Clay and William Bell, which runs all the way through it.",
+  "context": "Evelyn started Nightmares on Wax in Leeds in 1988, and \"Dextrous\" was only the second release on Warp, in 1989, selling 30,000 copies. By the 2010s Time Out and Future Music were calling him the label's longest-serving act. In a Space Outta Sound came out on 7 March 2006 and reached 93 in the UK and 12 on the US dance albums chart. \"You Wish\" wasn't one of its three singles.",
+  "listen_for": [
+   {
+    "where": "all the way through",
+    "note": "The Judy Clay and William Bell record isn't a one-off stab. WhoSampled lists multiple elements of \"Private Number\" running across the track."
+   }
+  ],
+  "leads_to": {
+   "artist": "Judy Clay & William Bell",
+   "title": "Private Number",
+   "year": 1968,
+   "why": "The duet the whole track sits on."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/In_a_Space_Outta_Sound",
+   "https://en.wikipedia.org/wiki/Nightmares_on_Wax",
+   "https://www.whosampled.com/sample/2326/Nightmares-on-Wax-You-Wish-Judy-Clay-William-Bell-Private-Number/",
+   "https://timeout.com/leeds/blog/how-leeds-helped-develop-britains-best-respected-indie-record-label-070815"
+  ],
+  "unverified": "Any sync or streaming numbers for You Wish."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "In a Space Outta Sound",
+   "line": "Track 6 of the album, 3:30 long, released 7 March 2006 on Warp. The album reached 93 in the UK and 12 on the US Top Dance Albums chart.",
+   "wiki": "In_a_Space_Outta_Sound",
+   "source": "https://en.wikipedia.org/wiki/In_a_Space_Outta_Sound"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "id": "black-pumas--colors",
+ "title": "Colors",
+ "artist": "Black Pumas",
+ "year": 2019,
+ "year_note": "",
+ "album": "Black Pumas",
+ "aliases": {
+  "youtube": [
+   "2EntxPIULUI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/02/7c/f7/027cf730-de9d-cee0-7434-13649f4f7c2c/mzaf_7335463530370623613.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/colors/1459935143?i=1459935484&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Eric Burton wrote it years before the band existed, on his uncle's rooftop overlooking Alamogordo, New Mexico, and called it a hymn of his own. He busked it on the Santa Monica Pier, where buskers drew lots for 14 daily spots, and then on the corner of Sixth and Congress in Austin with the same battery-powered amp. A mutual friend introduced him to Adrian Quesada, a guitarist and producer who'd spent 13 years in the Grammy-winning Latin funk band Grupo Fantasma, and Quesada had instrumental demos waiting for a singer.",
+  "context": "The band built its crowd with a weekly residency at C-Boy's Heart & Soul in Austin, where the owner said the line went around the block. The self-titled debut came out on ATO Records on 21 June 2019. \"Colors\" went to number one on US AAA radio, was certified Platinum in the US, and was nominated for Record of the Year at the 2021 Grammys, after the band's Best New Artist nomination the year before. It's the retro-soul end of the revival.",
+  "listen_for": [
+   {
+    "where": "the opening guitar riff",
+    "note": "CBS called it the hook that put the band on the map, and Quesada said he knew from the start it was special."
+   },
+   {
+    "where": "the chorus",
+    "note": "Burton opens up to full voice. This was a song built for a street corner, and it's the loudest moment in this part of the journey."
+   }
+  ],
+  "leads_to": {
+   "artist": "Black Pumas",
+   "title": "Black Moon Rising",
+   "year": 2019,
+   "why": "It's the first thing Burton and Quesada cut together, and it shows the slower, darker side of the band before 'Colors' took over."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Black_Pumas",
+   "https://www.cbsnews.com/news/black-pumas-eric-burton-adrian-quesada-grammy-nominated",
+   "https://gardenandgun.com/the-grammy-nominated-austin-band-everyones-talking-about",
+   "https://tapeop.com/interviews/bonus/adrian-quesada-black-pumas/"
+  ],
+  "unverified": "Recording details for 'Colors' itself (studio, gear, who played drums); Quesada's studio is said to be Electric Deluxe in Austin, but I didn't confirm the song was cut there. Sources disagree on when the band formed (2017 per Garden & Gun, 2018 per Wikipedia), so I left out a year. The exact single release date isn't confirmed; Wikipedia says 2019. 'Black Moon Rising' as the first session comes from CBS; its 2019 year is the album release, and it may have come out earlier as a single. Leon Bridges' Fort Worth roots come from general knowledge, not a source fetched here."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "The Bronx video",
+   "line": "Kristian Mercado directed it, shot entirely in the Bronx. It came out November 22, 2019 and, he said, is about family, connection and movement.",
+   "source": "https://en.wikipedia.org/wiki/Colors_(Black_Pumas_song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Rock radio",
+   "line": "It peaked at number 21 on Billboard's Hot Rock & Alternative Songs and number 13 on Rock & Alternative Airplay.",
+   "wiki": "Black_Pumas_(album)",
+   "source": "https://en.wikipedia.org/wiki/Colors_(Black_Pumas_song)"
+  },
+  {
+   "kind": "live",
+   "title": "Colbert",
+   "line": "They performed it on The Late Show with Stephen Colbert in January 2021, on a set styled after 1960s and 1970s music shows.",
+   "source": "https://www.rollingstone.com/music/music-news/black-pumas-colors-performance-late-show-colbert-1116622/"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

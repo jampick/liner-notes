@@ -1,0 +1,74 @@
+{
+ "id": "tycho--awake",
+ "title": "Awake",
+ "artist": "Tycho",
+ "year": 2014,
+ "year_note": "",
+ "album": "Awake",
+ "aliases": {
+  "youtube": [
+   "VZBrZV3nHAA"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/04/35/47/043547d9-84f3-6bfa-96d0-44264264b090/mzaf_2326799450272337125.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/awake/793928184?i=793928278&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Scott Hansen and guitarist-bassist Zac Brown spent a few weeks in a cabin near Tahoe recording; going through the stems, Hansen found Brown noodling on guitar after a take had ended, cut it out and looped it. He then bought his first electric bass, after years of trying to make synth bass sound like a real one, and played the driving bass line, which he chopped into single notes and rearranged. Hansen added a muted, picked electric guitar, a pile of synths he says he makes sound the same anyway (a Minimoog among them), and a hidden vocal of his own. Rory O'Connor's live drums were why Hansen wanted the record to hit harder than the earlier ones.",
+  "context": "Hansen was a graphic designer by day (as ISO50) and made Tycho at night; he named the track because this was the first time he'd put that much of himself into anything. Awake came out on Ghostly International on 18 March 2014 and reached No. 23 on the Billboard 200, the project's highest US placement. He told The Fader it was 'the first true Tycho record' and that he was moving past 'the Instagram approach to making music.'",
+  "listen_for": [
+   {
+    "where": "the opening guitar figure",
+    "note": "That's Zac Brown messing about after the tape should have stopped in a Tahoe cabin, looped."
+   },
+   {
+    "where": "when the bass comes in",
+    "note": "Hansen's first real electric bass, cut note by note so it sounds almost machine-like, which is how he likes it."
+   },
+   {
+    "where": "the repeating synth line",
+    "note": "In every measure the second-to-last note lands early. Hansen misplayed it once and copy-pasted it through the whole song. He says you can't unhear it."
+   }
+  ],
+  "leads_to": {
+   "artist": "Interpol",
+   "title": "PDA",
+   "year": 2002,
+   "why": "Hansen named its ending, where the song stops and turns into a different instrumental, as the influence on Awake."
+  },
+  "sources": [
+   "https://songexploder.net/tycho",
+   "http://songexploder.net/transcripts/tycho-transcript.pdf",
+   "https://en.wikipedia.org/wiki/Awake_(Tycho_album)",
+   "https://en.wikipedia.org/wiki/Tycho_(musician)",
+   "https://www.thefader.com/2014/02/05/interview-tycho-awake",
+   "https://submergemag.com/music/tycho-2014/"
+  ],
+  "unverified": "Single release date for the title track."
+ },
+ "culture": [
+  {
+   "kind": "live",
+   "title": "Song Exploder, episode 24",
+   "line": "Scott Hansen took the track apart in front of a live audience in San Francisco, presented with Noise Pop. The episode ran 8 December 2014.",
+   "source": "https://songexploder.net/tycho"
+  },
+  {
+   "kind": "chart",
+   "title": "Awake on the charts",
+   "line": "The album Awake reached No. 23 on the Billboard 200 and No. 2 on the US Dance/Electronic Albums chart in 2014, and No. 24 on the UK Indie chart.",
+   "wiki": "Awake_(Tycho_album)",
+   "source": "https://en.wikipedia.org/wiki/Awake_(Tycho_album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

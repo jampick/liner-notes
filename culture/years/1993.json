@@ -1,0 +1,47 @@
+{
+ "year": 1993,
+ "items": [
+  {
+   "kind": "film",
+   "title": "Jurassic Park",
+   "line": "Opened in the US on 11 June 1993. Industrial Light & Magic's computer dinosaurs helped it take $914 million in its first run, the biggest film ever until Titanic.",
+   "wiki": "Jurassic_Park_(film)",
+   "source": "https://en.wikipedia.org/wiki/Jurassic_Park_(film)"
+  },
+  {
+   "kind": "film",
+   "title": "Schindler's List",
+   "line": "Spielberg shot it in black and white in Krakow from March 1993, while editing Jurassic Park in the evenings. It won seven Oscars, including Best Picture.",
+   "wiki": "Schindler's_List",
+   "source": "https://en.wikipedia.org/wiki/Schindler's_List"
+  },
+  {
+   "kind": "game",
+   "title": "Doom",
+   "line": "id Software put the first episode online at midnight on 10 December 1993 and let people copy it. By June 1996 it had reportedly been downloaded 20 million times.",
+   "wiki": "Doom_(1993_video_game)",
+   "source": "https://en.wikipedia.org/wiki/Doom_(1993_video_game)"
+  },
+  {
+   "kind": "tv",
+   "title": "The X-Files",
+   "line": "Fox aired the pilot on 10 September 1993. Mulder and Scully drew about 12 million viewers, and season one averaged 11.21 million.",
+   "wiki": "The_X-Files",
+   "source": "https://en.wikipedia.org/wiki/The_X-Files"
+  },
+  {
+   "kind": "tech",
+   "title": "NCSA Mosaic",
+   "line": "Version 1.0 of the browser appeared on 21 April 1993. It was the first to show images inline with text, and its creators went on to found Netscape.",
+   "wiki": "NCSA_Mosaic",
+   "source": "https://en.wikipedia.org/wiki/NCSA_Mosaic"
+  },
+  {
+   "kind": "game",
+   "title": "Mortal Kombat",
+   "line": "The home versions landed on 13 September 1993, 'Mortal Monday'. On the Genesis a cheat code unlocked the blood, while the SNES version swapped it for sweat.",
+   "wiki": "Mortal_Kombat_(1992_video_game)",
+   "source": "https://en.wikipedia.org/wiki/Mortal_Kombat_(1992_video_game)"
+  }
+ ]
+}

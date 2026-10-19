@@ -1,0 +1,47 @@
+{
+ "year": 2014,
+ "items": [
+  {
+   "kind": "film",
+   "title": "Frozen",
+   "line": "In theaters from 27 November 2013 and still everywhere in 2014. It grossed over $1.28 billion, and Let It Go won the Oscar for Best Original Song.",
+   "wiki": "Frozen_(2013_film)",
+   "source": "https://en.wikipedia.org/wiki/Frozen_(2013_film)"
+  },
+  {
+   "kind": "game",
+   "title": "Flappy Bird",
+   "line": "Out since May 2013, it hit the top of the app charts in January 2014 and reportedly earned about $50,000 a day in ads. Dong Nguyen pulled it on 10 February.",
+   "wiki": "Flappy_Bird",
+   "source": "https://en.wikipedia.org/wiki/Flappy_Bird"
+  },
+  {
+   "kind": "internet",
+   "title": "Ice Bucket Challenge",
+   "line": "Summer 2014. More than 1.2 million videos were shared on Facebook between 1 June and 13 August, and over $115 million was raised for ALS that year.",
+   "wiki": "Ice_Bucket_Challenge",
+   "source": "https://en.wikipedia.org/wiki/Ice_Bucket_Challenge"
+  },
+  {
+   "kind": "internet",
+   "title": "Serial",
+   "line": "The podcast launched 3 October 2014. Sarah Koenig reopened the 1999 killing of Hae Min Lee, and it was reported as the fastest podcast to 5 million iTunes downloads.",
+   "wiki": "Serial_(podcast)",
+   "source": "https://en.wikipedia.org/wiki/Serial_(podcast)"
+  },
+  {
+   "kind": "sport",
+   "title": "Brazil 1-7 Germany",
+   "line": "8 July 2014, Belo Horizonte. Germany led 5-0 after 29 minutes and won 7-1, Brazil's worst World Cup defeat. Klose took the all-time record for World Cup goals.",
+   "wiki": "Brazil_v_Germany_(2014_FIFA_World_Cup)",
+   "source": "https://en.wikipedia.org/wiki/Brazil_v_Germany_(2014_FIFA_World_Cup)"
+  },
+  {
+   "kind": "film",
+   "title": "Guardians of the Galaxy",
+   "line": "Opened 1 August 2014. James Gunn filled it with 1960s and 70s songs, Chris Pratt played Star-Lord, and it grossed about $773 million.",
+   "wiki": "Guardians_of_the_Galaxy_(film)",
+   "source": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)"
+  }
+ ]
+}

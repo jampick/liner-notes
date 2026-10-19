@@ -1,0 +1,81 @@
+{
+ "id": "mono--life-in-mono",
+ "title": "Life in Mono",
+ "artist": "Mono",
+ "year": 1996,
+ "year_note": "First released 28 October 1996 in the UK; US radio release 10 February 1998 and a UK re-release on 20 April 1998.",
+ "album": "Formica Blues",
+ "aliases": {
+  "youtube": [
+   "qP0qeQrjh2k"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/f4/64/e9f46497-5619-2e7d-d8c7-fe0bded694d8/mzaf_4985520715634569627.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/life-in-mono/1439671684?i=1439671685&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Mono were two people: Siobhan de Maré singing, and Martin Virgo on production, keyboards, programming and guitar, with Jim Abbiss co-producing. Formica Blues was recorded at Britannia Row and Strongroom in London. The track samples John Barry's music for The Ipcress File (1965), which is why Barry has a co-writing credit, and the chorus runs on the Amen break played at double time.",
+  "context": "It only reached 60 in the UK the first time round. Then the 1998 Great Expectations used it as the film's theme and in the trailer, Mercury pushed it in the US, and it got to 70 on the Hot 100. It turned up in a Daria episode and the launch ad for the Rover 25, and Emma Bunton covered it in 2006.",
+  "listen_for": [
+   {
+    "where": "the intro and verses",
+    "note": "The John Barry Ipcress File sample gives it the same Sixties spy-film chill that Lalo Schifrin's Mission: Impossible sample gives Portishead's 'Sour Times'."
+   },
+   {
+    "where": "the chorus",
+    "note": "The drums switch to the Amen break, possibly the most sampled drum loop of all time, run at double time under a vocal that doesn't speed up."
+   },
+   {
+    "where": "de Maré's vocal",
+    "note": "Billboard compared her to Roberta Flack and Billie Holiday at the time. She stays level and unhurried the whole way through."
+   }
+  ],
+  "leads_to": {
+   "artist": "John Barry",
+   "title": "The Ipcress File (original soundtrack)",
+   "year": 1965,
+   "why": "The score Mono sampled, all harpsichord and cold-war unease."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Life_in_Mono",
+   "https://en.wikipedia.org/wiki/Formica_Blues",
+   "https://www.beautifulsongoftheweek.com/week-483-life-in-mono-by-mono/",
+   "https://en.wikipedia.org/wiki/Great_Expectations_(1998_film)",
+   "https://en.wikipedia.org/wiki/Sour_Times"
+  ],
+  "unverified": "Wikipedia says Robert De Niro reportedly chose the song for the film; I couldn't confirm it, so it's out. I couldn't confirm which exact element of the Ipcress File score is sampled, so the note doesn't name an instrument."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Great Expectations (1998)",
+   "line": "It is the theme of Alfonso Cuarón's Great Expectations (US release 30 January 1998), with Ethan Hawke and Gwyneth Paltrow. The song was reportedly chosen by Robert De Niro.",
+   "wiki": "Great_Expectations_(1998_film)",
+   "source": "https://en.wikipedia.org/wiki/Life_in_Mono"
+  },
+  {
+   "kind": "screen",
+   "title": "Daria and the Rover 25",
+   "line": "The song turns up in the Daria episode 'Monster' and was used for the launch TV advert for the Rover 25.",
+   "wiki": "Rover_200_/_25",
+   "source": "https://en.wikipedia.org/wiki/Life_in_Mono"
+  },
+  {
+   "kind": "chart",
+   "title": "Chart peaks and a cover",
+   "line": "Released 28 October 1996, it reached 60 in the UK, 70 on the US Hot 100 and 28 on Modern Rock. Emma Bunton covered it in 2006 and named her third album after it.",
+   "wiki": "Formica_Blues",
+   "source": "https://en.wikipedia.org/wiki/Life_in_Mono"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

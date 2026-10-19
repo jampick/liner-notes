@@ -1,0 +1,72 @@
+{
+ "id": "khruangbin--evan-finds-the-third-room",
+ "title": "Evan Finds the Third Room",
+ "artist": "Khruangbin",
+ "year": 2018,
+ "year_note": "",
+ "album": "Con Todo El Mundo",
+ "aliases": {
+  "youtube": [
+   "QcD_YXCxxZM"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/76/56/fc/7656fc96-3ccd-c56f-2928-6117778d563c/mzaf_248158471736885326.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/evan-finds-the-third-room/1299241642?i=1299241649&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Evan is the band's tour manager, and the lyrics are mostly inside jokes Laura Lee made up while they jammed. They decided it was fine if the words only made sense to them. Musically it comes from Speer's interest in late-1970s proto-zouk from the French Antilles: he took that style's choppy chord rhythm and put the lead lines from \"People Everywhere (Still Alive)\", off the first album, over it.",
+  "context": "Con Todo El Mundo was recorded at what the band calls a remote Texas farm, where the only entertainment was an old VHS player. Drummer DJ Johnson said they pushed the kick drum up in the mix on this record so people would dance. That's the move from the first album's late-night drift to something you could move to. Bandcamp Daily called it a syrupy, disco-leaning version of \"People Everywhere\".",
+  "listen_for": [
+   {
+    "where": "the rhythm guitar under the verses",
+    "note": "That short chopped chord pattern is Speer's take on late-'70s Antillean proto-zouk."
+   },
+   {
+    "where": "the lead guitar line",
+    "note": "If you know the first album, this is the melody of \"People Everywhere (Still Alive)\", sped up and taken to the dance floor."
+   },
+   {
+    "where": "the kick drum throughout",
+    "note": "Johnson's kick sits louder than on the debut, which he said they did on purpose to get people dancing."
+   }
+  ],
+  "leads_to": {
+   "artist": "Khruangbin",
+   "title": "People Everywhere (Still Alive)",
+   "year": 2015,
+   "why": "Its lead lines turn up here, so the two songs make sense played together."
+  },
+  "sources": [
+   "https://www.wgbh.org/news/2018-01-26/khruangbins-vibrant-con-todo-el-mundo-is-drawn-from-life",
+   "https://daily.bandcamp.com/features/khruangbin-con-todo-el-mundo-interview",
+   "https://khruangbin.bandcamp.com/album/con-todo-el-mundo",
+   "https://en.wikipedia.org/wiki/Khruangbin"
+  ],
+  "unverified": "What 'the third room' refers to; no source explains it. The 'People Everywhere (Still Alive)' leads_to is not off the band's catalogue, so the director may prefer an Antillean record; I couldn't verify a specific late-'70s proto-zouk recording and year that Speer named."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "The invisible hula hoop",
+   "line": "Josh King, Felix Heyes and Mi Tian shot it in Shanghai: a woman fights an invisible hoop through supermarkets and backstreets. Laura Lee asked for it. April 2018.",
+   "source": "https://www.itsnicethat.com/articles/josh-king-khruangbins-evan-finds-the-third-room-film-090418"
+  },
+  {
+   "kind": "chart",
+   "title": "Con Todo El Mundo",
+   "line": "Track 7 of the album, 4:00 long, out January 26, 2018 on Dead Oceans and Night Time Stories.",
+   "wiki": "Con_Todo_el_Mundo",
+   "source": "https://en.wikipedia.org/wiki/Con_Todo_el_Mundo"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

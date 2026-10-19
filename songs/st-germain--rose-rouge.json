@@ -1,0 +1,71 @@
+{
+ "id": "st-germain--rose-rouge",
+ "title": "Rose Rouge",
+ "artist": "St Germain",
+ "year": 2000,
+ "year_note": "",
+ "album": "Tourist",
+ "aliases": {
+  "youtube": [
+   "6QImCMjW-PM"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/35/96/b935965a-a769-15a3-8ef4-dc88e6a8280d/mzaf_13598190173129099410.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/rose-rouge/717406560?i=717406613&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Ludovic Navarre built it on two samples: the spoken and sung intro from Marlena Shaw's 'Woman of the Ghetto', recorded live at Montreux on 5 July 1973, and Dave Brubeck's 'Take Five' used as the drum and bass loop. Navarre, Shaw and Brubeck share the writing credit. Tourist was recorded at The Magic House Studio, and this opens it at just over seven minutes.",
+  "context": "Tourist came out on Blue Note in 2000, the same label that released Shaw's Montreux record, and by 2018 had sold over four million copies, topping the US jazz chart and going triple Platinum in France. The same Shaw performance had already given Blue Boy his hit 'Remember Me'. In 2020 Jorja Smith covered 'Rose Rouge' to open Blue Note Re:imagined.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "The loop is 'Take Five', the Brubeck Quartet's 5/4 rhythm section (Joe Morello asked for a tune in five, Paul Desmond wrote it), cut into something you can dance to."
+   },
+   {
+    "where": "the vocal",
+    "note": "Marlena Shaw on stage at Montreux in 1973, introducing 'Woman of the Ghetto'. You can hear the room."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Dave Brubeck Quartet",
+   "title": "Take Five",
+   "year": 1959,
+   "why": "The loop under the whole track, from the album Time Out."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Tourist_(St_Germain_album)",
+   "https://en.wikipedia.org/wiki/Marlena_Shaw_Live_at_Montreux",
+   "https://www.udiscovermusic.com/stories/blue-boy-remember-me-song/",
+   "https://thefindmag.com/features/grooves-and-samples/grooves-samples-37-marlena-shaw-california-soul-1969/",
+   "https://www.bluenote.com/announcing-blue-note-reimagined-lead-single-jorja-smith-rose-rouge-out-now/",
+   "https://en.wikipedia.org/wiki/Take_Five"
+  ],
+  "unverified": "Release day differs between sources (5 May vs 30 May 2000). I couldn't confirm which session players solo on this track."
+ },
+ "culture": [
+  {
+   "kind": "sample",
+   "title": "Marlena Shaw and Brubeck",
+   "line": "The credits list Marlena Shaw and Dave Brubeck. Wikipedia says the vocal is from Shaw's 'Woman of the Ghetto' (Live at Montreux) and the loop is from 'Take Five'.",
+   "wiki": "Tourist_(St_Germain_album)",
+   "source": "https://en.wikipedia.org/wiki/Tourist_(St_Germain_album)"
+  },
+  {
+   "kind": "screen",
+   "title": "Much Ado About Nothing trailer",
+   "line": "The song was in the 2013 trailer for Joss Whedon's Much Ado About Nothing.",
+   "wiki": "Much_Ado_About_Nothing_(2012_film)",
+   "source": "https://en.wikipedia.org/wiki/St_Germain_(musician)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

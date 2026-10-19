@@ -1,0 +1,54 @@
+{
+ "year": 1997,
+ "items": [
+  {
+   "kind": "film",
+   "title": "The Fifth Element",
+   "line": "Luc Besson's The Fifth Element opened in France on 7 May 1997 and opened Cannes. Jean Paul Gaultier did the costumes, and it grossed over $263 million.",
+   "wiki": "The_Fifth_Element",
+   "source": "https://en.wikipedia.org/wiki/The_Fifth_Element"
+  },
+  {
+   "kind": "tech",
+   "title": "Deep Blue beats Kasparov",
+   "line": "In New York, 3 to 11 May 1997, IBM's Deep Blue beat Garry Kasparov 3.5 to 2.5. He resigned game 6 after 19 moves and had already accused IBM of cheating.",
+   "wiki": "Deep_Blue_versus_Garry_Kasparov",
+   "source": "https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov"
+  },
+  {
+   "kind": "news",
+   "title": "Death of Princess Diana",
+   "line": "Diana died in the Pont de l'Alma tunnel in Paris on 31 August 1997. An estimated 31.5 million people in Britain watched the Westminster Abbey funeral on 6 September.",
+   "wiki": "Death_of_Diana,_Princess_of_Wales",
+   "source": "https://en.wikipedia.org/wiki/Death_of_Diana,_Princess_of_Wales"
+  },
+  {
+   "kind": "film",
+   "title": "Titanic",
+   "line": "Titanic opened in the US on 19 December 1997. It cost $200 million, ran 195 minutes, won 11 Oscars from 14 nominations and has grossed about $2.26 billion over its releases.",
+   "wiki": "Titanic_(1997_film)",
+   "source": "https://en.wikipedia.org/wiki/Titanic_(1997_film)"
+  },
+  {
+   "kind": "tv",
+   "title": "Teletubbies",
+   "line": "Teletubbies began on BBC2 on 31 March 1997, filmed on a Warwickshire farm. Their Eh-oh single reached number one in December and stayed in the UK Top 75 for 32 weeks.",
+   "wiki": "Teletubbies",
+   "source": "https://en.wikipedia.org/wiki/Teletubbies"
+  },
+  {
+   "kind": "game",
+   "title": "Gran Turismo",
+   "line": "Gran Turismo reached Japan on 23 December 1997 with 140 cars and 11 tracks. Kazunori Yamauchi directed it, and it became the best-selling PlayStation game at about 10.85 million.",
+   "wiki": "Gran_Turismo_(1997_video_game)",
+   "source": "https://en.wikipedia.org/wiki/Gran_Turismo_(1997_video_game)"
+  },
+  {
+   "kind": "news",
+   "title": "Harry Potter",
+   "line": "Bloomsbury published Harry Potter and the Philosopher's Stone on 26 June 1997. The first print run was 500 hardbacks, 300 of them for libraries, and Rowling's advance was £2,500.",
+   "wiki": "Harry_Potter_and_the_Philosopher's_Stone",
+   "source": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone"
+  }
+ ]
+}

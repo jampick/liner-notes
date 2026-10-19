@@ -1,0 +1,64 @@
+{
+ "id": "gorillaz--clint-eastwood",
+ "title": "Clint Eastwood",
+ "artist": "Gorillaz",
+ "year": 2001,
+ "year_note": "",
+ "album": "Gorillaz",
+ "aliases": {
+  "youtube": [
+   "1V_xRb0x9aw"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/da/4c/0a/da4c0a95-59bd-adec-3b05-74e411d5d57b/mzaf_11898479491904626644.plus.aac.p.m4a",
+   "url": "https://music.apple.com/gb/album/clint-eastwood/939589897?i=939589925&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Damon Albarn demoed it on a four-track with a drum machine and a guitar, and the finished track was built around a melodica line. The beat is the first preset on an Omnichord. Dan the Automator co-produced, with sessions at Studio 13 in London, Geejam in Jamaica and The Glue Factory in San Francisco. Del the Funky Homosapien's verses came in late: Phi Life Cypher had recorded the first ones, and Dan the Automator had Del write and record his own during a Deltron 3030 session, in about half an hour.",
+  "context": "Gorillaz' debut single came out on 5 March 2001: a cartoon band drawn by Jamie Hewlett, with Albarn of Blur behind the curtain. It reached 4 in the UK, number 1 in Italy and 57 on the Hot 100, and has sold 1.2 million copies in Britain. The name came from how much the tune reminded them of Morricone's Good, the Bad and the Ugly theme; Albarn said it came up while they were recording in Jamaica, listening to dancehall.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "The beat is an Omnichord's first factory preset, left as is."
+   },
+   {
+    "where": "the main riff",
+    "note": "The melodica came first and the rest of the track was built around it. The melodica plus that echo-friendly space is why it gets filed under dub as much as hip-hop."
+   },
+   {
+    "where": "the rap verses",
+    "note": "Del wrote and cut these in about 30 minutes, replacing an earlier set by Phi Life Cypher."
+   }
+  ],
+  "leads_to": {
+   "artist": "Ennio Morricone",
+   "title": "The Good, the Bad and the Ugly (main theme)",
+   "year": 1966,
+   "why": "The coyote-howl theme the song was named after."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Clint_Eastwood_(song)",
+   "https://en.wikipedia.org/wiki/The_Good,_the_Bad_and_the_Ugly_(theme)"
+  ],
+  "unverified": "Manufacturer of the Omnichord isn't named in the source."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "The graveyard video",
+   "line": "Hewlett and Candeland's animation: Del rises as a blue phantom from under Russel's cap, zombie gorilla hands dance, Murdoc gets zapped. It won at the 2001 Rushes Soho awards.",
+   "wiki": "Clint_Eastwood_(song)",
+   "source": "https://en.wikipedia.org/wiki/Clint_Eastwood_(song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

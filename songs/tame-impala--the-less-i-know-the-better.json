@@ -1,0 +1,84 @@
+{
+ "id": "tame-impala--the-less-i-know-the-better",
+ "title": "The Less I Know the Better",
+ "artist": "Tame Impala",
+ "year": 2015,
+ "year_note": "On Currents (17 July 2015); released as the album's fourth and final single on 29 November 2015.",
+ "album": "Currents",
+ "aliases": {
+  "youtube": [
+   "2SUwOgmvzK4"
+  ]
+ },
+ "notes": {
+  "made": "Kevin Parker wrote and produced it himself in his home studio in Fremantle, Western Australia, over 2014 and 2015. It sits around 118 BPM in C-sharp minor. Parker has said that apart from the drums and vocals, everything in the verses is guitar synth, including organs and pads, and that the famous bass riff is a guitar through an octave pedal. He called the result \"dorky, white disco funk\" and said he'd been obsessed with disco for a year or two.",
+  "context": "Parker nearly left it off a Tame Impala record for sounding too disco. It came in at number 4 in Triple J's Hottest 100 of 2015, and in March 2020 it topped Triple J's Hottest 100 of the 2010s. It passed one billion streams in 2021 and two billion in June 2025, and it's 4x Platinum in the US. The video, by the Barcelona collective Canada, mixes animation and live action: a high-school basketball player loses the cheerleader he likes to the team's gorilla mascot, Trevor.",
+  "listen_for": [
+   {
+    "where": "the very first notes",
+    "note": "The track comes in on the last two beats of the riff, not the downbeat, so it feels like you've walked in after it started."
+   },
+   {
+    "where": "the verses",
+    "note": "Except for drums and voice, it's all one guitar run through a guitar synth. Parker uses it to fake the organ, the pads and even the bass."
+   },
+   {
+    "where": "the riff that runs under the whole song",
+    "note": "That fat low line is a guitar through an octave pedal, and Parker says he used the same take for the whole song."
+   }
+  ],
+  "leads_to": {
+   "artist": "Rihanna",
+   "title": "Same Ol' Mistakes",
+   "year": 2016,
+   "why": "Rihanna covered another Currents song, \"New Person, Same Old Mistakes\", for Anti, which shows how far Parker's bedroom disco traveled in a year."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Less_I_Know_the_Better",
+   "https://www.apraamcos.com.au/about-us/news-and-events/kevin-parker-honoured-for-billion-stream-achievement",
+   "https://www.reverbmachine.com/blog/tame-impala-synths-pt-2",
+   "https://www.beautifulsongoftheweek.com/week-665-the-less-i-know-the-better-by-tame-impala/",
+   "https://www.nme.com/news/tame-impala/91076"
+  ],
+  "unverified": "Parker's guitar-synth and octave-pedal quotes come to me through Reverb Machine, which quotes him without naming the original interview. The two quotes don't fully agree: one says the bass goes through the guitar synth, the other says it's a guitar with an octave pedal. I couldn't confirm which guitar synth he used (Reverb Machine guesses a Roland GR-55 and says it isn't sure). Also left out: the 1,057 vocal takes figure, because Parker himself couldn't remember if it was for this song or 'Cause I'm a Man'. The thread to 30 (MGMT) is my own pairing, not a documented link."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "The gorilla video",
+   "line": "Barcelona collective Canada shot it: a basketball player loses a cheerleader to the team gorilla mascot, Trevor, from the lyric. It went up on November 29, 2015.",
+   "wiki": "The_Less_I_Know_the_Better",
+   "source": "https://en.wikipedia.org/wiki/The_Less_I_Know_the_Better"
+  },
+  {
+   "kind": "screen",
+   "title": "Apple Watch ad",
+   "line": "NME reported on October 23, 2015 that Apple used the song in a commercial short for the Apple Watch.",
+   "wiki": "Apple_Watch",
+   "source": "https://www.nme.com/news/music/tame-impala-27-1206536"
+  },
+  {
+   "kind": "chart",
+   "title": "Hottest 100",
+   "line": "It came 4th in Triple J's Hottest 100 of 2015, then topped the Hottest 100 of the 2010s in March 2020. It passed one billion streams in 2021.",
+   "wiki": "Currents_(album)",
+   "source": "https://en.wikipedia.org/wiki/The_Less_I_Know_the_Better"
+  },
+  {
+   "kind": "live",
+   "title": "Colbert",
+   "line": "Tame Impala played it on The Late Show with Stephen Colbert in October 2015, per NME.",
+   "wiki": "Tame_Impala",
+   "source": "https://www.nme.com/news/music/tame-impala-28-1214675"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

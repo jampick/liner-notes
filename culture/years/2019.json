@@ -1,0 +1,47 @@
+{
+ "year": 2019,
+ "items": [
+  {
+   "kind": "news",
+   "title": "The first black hole image",
+   "line": "On April 10 the Event Horizon Telescope team showed a glowing ring around the black hole in M87. They put its mass at about 6.5 billion Suns.",
+   "wiki": "Event_Horizon_Telescope",
+   "source": "https://en.wikipedia.org/wiki/Event_Horizon_Telescope"
+  },
+  {
+   "kind": "tv",
+   "title": "Game of Thrones, season 8",
+   "line": "The final season ran six episodes, April 14 to May 19. The finale had 13.61 million US viewers.",
+   "wiki": "Game_of_Thrones_season_8",
+   "source": "https://en.wikipedia.org/wiki/Game_of_Thrones_season_8"
+  },
+  {
+   "kind": "film",
+   "title": "Avengers: Endgame",
+   "line": "It opened April 26 and made about $2.8 billion in its first run, passing Avatar as the highest-grossing film ever for a while.",
+   "wiki": "Avengers:_Endgame",
+   "source": "https://en.wikipedia.org/wiki/Avengers:_Endgame"
+  },
+  {
+   "kind": "tv",
+   "title": "Chernobyl",
+   "line": "HBO's miniseries started May 6, written by Craig Mazin. Lithuania stood in for Pripyat, and it won the Emmy for Outstanding Limited Series.",
+   "wiki": "Chernobyl_(miniseries)",
+   "source": "https://en.wikipedia.org/wiki/Chernobyl_(miniseries)"
+  },
+  {
+   "kind": "film",
+   "title": "Parasite",
+   "line": "Bong Joon Ho's film won the Palme d'Or in May, the first for a South Korean film. In February 2020 it became the first non-English Best Picture winner.",
+   "wiki": "Parasite_(2019_film)",
+   "source": "https://en.wikipedia.org/wiki/Parasite_(2019_film)"
+  },
+  {
+   "kind": "tech",
+   "title": "Disney+ launches",
+   "line": "It went live November 12 in the US, Canada and the Netherlands. Ten million people had signed up by the end of day one.",
+   "wiki": "Disney+",
+   "source": "https://en.wikipedia.org/wiki/Disney%2B"
+  }
+ ]
+}

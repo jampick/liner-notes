@@ -1,0 +1,71 @@
+{
+ "id": "gorillaz-featuring-de-la-soul--feel-good-inc",
+ "title": "Feel Good Inc.",
+ "artist": "Gorillaz featuring De La Soul",
+ "year": 2005,
+ "year_note": "",
+ "album": "Demon Days",
+ "aliases": {
+  "youtube": [
+   "HyHNuVaZJ-k"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9a/a7/90/9aa790e3-651e-9674-26ac-14aba4d3b8d1/mzaf_10454527198707970464.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/feel-good-inc-feat-david-jolicoeur-kelvin-mercer-vincent/850571319?i=850571371&uo=4"
+  },
+  "artists": [
+   "Gorillaz"
+  ]
+ },
+ "notes": {
+  "made": "Danger Mouse joined on 7 April 2004, brought in on the strength of The Grey Album, his remix of Jay-Z's The Black Album. Most of Demon Days was cut at Studio 13 in London, with overdubs and mixing at Pierce Rooms. De La Soul's Trugoy (David Jolicoeur) co-wrote the song, and the laugh was his idea; it's Maseo laughing.",
+  "context": "Apple's \"Rollerskating\" iPod ad went out with it on 7 May 2005, two days before the single. It reached 2 in the UK and 14 on the Hot 100, spent eight weeks on top of the US alternative chart and won the Grammy for Best Pop Collaboration with Vocals. Hewlett and Pete Candeland's video put the band on a windmill-powered floating island borrowed in part from Miyazaki's Castle in the Sky, a jab at media dumbing-down.",
+  "listen_for": [
+   {
+    "where": "the very start",
+    "note": "That laugh is Maseo of De La Soul. Trugoy suggested putting it on."
+   },
+   {
+    "where": "the rap verse",
+    "note": "De La Soul on a Gorillaz record, the hip-hop elders sharing a single with a cartoon band."
+   }
+  ],
+  "leads_to": {
+   "artist": "Danger Mouse",
+   "title": "The Grey Album",
+   "year": 2004,
+   "why": "The bootleg that got him the Demon Days job."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Feel_Good_Inc.",
+   "https://en.wikipedia.org/wiki/Demon_Days",
+   "https://www.macrumors.com/2005/05/08/ipod-ad-rollerskating"
+  ],
+  "unverified": "The bassline (couldn't find a reliable source on who plays it)."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Windmill island",
+   "line": "Jamie Hewlett and Pete Candeland made the video at Passion Pictures, filmed February 2005. A windmill-powered floating island is chased by helicopters, and Hewlett cited Miyazaki.",
+   "wiki": "Feel_Good_Inc.",
+   "source": "https://en.wikipedia.org/wiki/Feel_Good_Inc."
+  },
+  {
+   "kind": "live",
+   "title": "Demon Days Live",
+   "line": "Instead of a tour, Gorillaz played Demon Days Live residencies in Manchester and New York, five shows in each city.",
+   "wiki": "Demon_Days",
+   "source": "https://en.wikipedia.org/wiki/Demon_Days"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

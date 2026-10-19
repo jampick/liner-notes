@@ -1,0 +1,74 @@
+{
+ "id": "khruangbin--time",
+ "title": "Time (You and I)",
+ "artist": "Khruangbin",
+ "year": 2020,
+ "year_note": "Lead single, released 27 April 2020; Mordechai followed on 26 June 2020.",
+ "album": "Mordechai",
+ "aliases": {
+  "youtube": [
+   "oc50wHexbwg"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1e/21/03/1e2103fc-ed75-9791-3cc1-46808939067d/mzaf_14788516841272531148.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/time-you-and-i/1501585499?i=1501585505&uo=4"
+  }
+ },
+ "notes": {
+  "made": "After about three and a half years on the road, the band went back to their farmhouse studio in Burton in summer 2019 and produced the album with Steve Christensen. Laura Lee had taken a day of silence and filled hundreds of pages, and those pages became the lyrics: this was the first Khruangbin album with vocals on nearly every song. The album is named after a near-stranger who talked her into jumping off a waterfall on a hike and shouted her full name as she jumped.",
+  "context": "The band announced the album in late April 2020, a month into lockdown, with a disco single about time spent together. Grammy.com later called it a fitting anthem for a world that had just shut down. The video, by Felix Heyes and Josh R.R. King, sends comedians Stephen K. Amos and Lunga Anele-Skosana around London leaving single sandcastles in odd places. Mordechai went to number 7 in the UK and 31 in the US, the band's biggest chart showing to that point.",
+  "listen_for": [
+   {
+    "where": "the drums from the first bar",
+    "note": "A steady disco beat (Rolling Stone called the rhythm section crisp) with cowbell flicks on top, played by a band that used to drift."
+   },
+   {
+    "where": "the guitar fills between vocal lines",
+    "note": "Treble heard James Brown piano licks played on guitar. Speer plays the comping parts a keyboard player would."
+   },
+   {
+    "where": "the vocals",
+    "note": "Laura Lee's half-spoken, airy delivery, which Treble compared to Tom Tom Club."
+   }
+  ],
+  "leads_to": {
+   "artist": "Tom Tom Club",
+   "title": "Genius of Love",
+   "year": 1981,
+   "why": "A Treble reviewer heard Tom Tom Club in the vocals, and this is that band's own bass-led groove with breezy vocals, made by a rhythm section on the side."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mordechai_(album)",
+   "https://bassmagazine.com/khruangbin-announce-new-album-mordechai-out-june-26th/",
+   "https://au.rollingstone.com/music/music-news/khruangbin-new-song-time-you-and-i-10250",
+   "https://www.treblezine.com/?p=49714",
+   "https://grammy.com/news/5-important-khruangbin-songs-new-album-a-la-sala",
+   "https://xlr8r.com/news/hear-a-new-single-from-khruangbin/"
+  ],
+  "unverified": "The tempo; the only BPM I found (110) is an automated estimate, so 'disco tempo' rests on reviewers calling it a disco beat. Sources list the second comedian as both 'Lunda' and 'Lunga' Anele-Skosana; Rolling Stone AU's 'Lunga' is used here. XLR8R wrongly credits the Post-it video to this song; it belongs to 'So We Won't Forget'. 'Biggest chart showing to that point' is my inference from Wikipedia's chart table (earlier albums peaked at UK 82)."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Two grown-ups, one mission",
+   "line": "Felix Heyes and Josh R.R. King directed it, with comedians Stephen K. Amos and Lunda Anele-Skosana as two adults on a childlike mission.",
+   "source": "https://www.undertheradarmag.com/news/khruangbin_announce_new_album_share_video_for_new_song_time_you_and_i/"
+  },
+  {
+   "kind": "chart",
+   "title": "Mordechai",
+   "line": "First single from Mordechai, released April 27, 2020. The album followed June 26 and reached number 31 in the US and number 7 in the UK.",
+   "wiki": "Mordechai_(album)",
+   "source": "https://en.wikipedia.org/wiki/Mordechai_(album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

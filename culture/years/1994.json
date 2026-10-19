@@ -1,0 +1,54 @@
+{
+ "year": 1994,
+ "items": [
+  {
+   "kind": "film",
+   "title": "Pulp Fiction",
+   "line": "Won the Palme d'Or at Cannes in May 1994 and opened across the US on 14 October. It cost about $8 million and made roughly $214 million, with Dick Dale's Misirlou over the titles.",
+   "wiki": "Pulp_Fiction",
+   "source": "https://en.wikipedia.org/wiki/Pulp_Fiction"
+  },
+  {
+   "kind": "tv",
+   "title": "Friends",
+   "line": "NBC aired the first episode on 22 September 1994. The pitch was called Insomnia Cafe, and NBC worried the coffee shop was too hip and asked for a diner.",
+   "wiki": "Friends",
+   "source": "https://en.wikipedia.org/wiki/Friends"
+  },
+  {
+   "kind": "news",
+   "title": "Kurt Cobain",
+   "line": "His body was found in the greenhouse of his Seattle home on 8 April 1994. He was 27, and police thought he had died about three days earlier.",
+   "wiki": "Kurt_Cobain",
+   "source": "https://en.wikipedia.org/wiki/Kurt_Cobain"
+  },
+  {
+   "kind": "news",
+   "title": "Channel Tunnel",
+   "line": "The Queen and Francois Mitterrand opened it on 6 May 1994, in Folkestone and Calais. It is 50.46 km long, and Eurostar passenger trains began running that November.",
+   "wiki": "Channel_Tunnel",
+   "source": "https://en.wikipedia.org/wiki/Channel_Tunnel"
+  },
+  {
+   "kind": "music",
+   "title": "Parklife",
+   "line": "Blur's third album came out on 25 April 1994 and went straight to number one in the UK. Phil Daniels narrates the title track, and it won Best British Album at the 1995 Brits.",
+   "wiki": "Parklife_(album)",
+   "source": "https://en.wikipedia.org/wiki/Parklife_(album)"
+  },
+  {
+   "kind": "fashion",
+   "title": "Wonderbra",
+   "line": "The 'Hello Boys' poster with Eva Herzigova went up in the UK in 1994. Sales of the plunge style had already quadrupled between 1991 and 1993.",
+   "wiki": "Wonderbra",
+   "source": "https://en.wikipedia.org/wiki/Wonderbra"
+  },
+  {
+   "kind": "tech",
+   "title": "PlayStation",
+   "line": "Sony's console launched in Japan on 3 December 1994 at 39,800 yen and sold about 100,000 on day one. It reached the US and Europe in September 1995.",
+   "wiki": "PlayStation_(console)",
+   "source": "https://en.wikipedia.org/wiki/PlayStation_(console)"
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "id": "alt-j--breezeblocks",
+ "title": "Breezeblocks",
+ "artist": "alt-J",
+ "year": 2012,
+ "year_note": "",
+ "album": "An Awesome Wave",
+ "aliases": {
+  "youtube": [
+   "rVeMiVU77wo"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/74/46/c7/7446c74e-36eb-75a0-f95e-a689282a5744/mzaf_771359046077069774.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/breezeblocks/558262493?i=558262504&uo=4"
+  }
+ },
+ "notes": {
+  "made": "alt-J formed at the University of Leeds in 2007; Joe Newman and Gwil Sainsbury started out recording on GarageBand in student halls, where noise rules kept everything quiet. The album was made with Charlie Andrew at Iguana Studio in London. Thom Sonny Green plays without cymbals; Andrew said the only cymbal-like thing on the kit was the back of a saucepan used as a hi-hat. Newman said the song is about wanting someone so much you want to hurt yourself and them, and the closing refrain borrows from Maurice Sendak's Where the Wild Things Are.",
+  "context": "Breezeblocks came out on Infectious on 18 May 2012, a week before the album. It only reached No. 75 in the UK singles chart, but the album won the Mercury Prize that November and the song has since gone triple platinum in the US. The video, a violent fight played backwards, has passed 290 million YouTube views.",
+  "listen_for": [
+   {
+    "where": "the drums, all the way through",
+    "note": "No cymbals. The bright tick you'd expect from a hi-hat is a saucepan. That gap at the top end is why the song feels close and dry."
+   },
+   {
+    "where": "the last section",
+    "note": "The repeated refrain lifts its 'eat you up' love from Sendak's book."
+   }
+  ],
+  "leads_to": {
+   "artist": "Karen O and the Kids",
+   "title": "All Is Love",
+   "year": 2009,
+   "why": "From Spike Jonze's Where the Wild Things Are soundtrack, the same Sendak book coming out of the speakers three years earlier."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Breezeblocks_(song)",
+   "https://en.wikipedia.org/wiki/An_Awesome_Wave",
+   "https://en.wikipedia.org/wiki/Alt-J",
+   "https://en.wikipedia.org/wiki/Where_the_Wild_Things_Are_(soundtrack)"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Ellis Bahl's reversed fight",
+   "line": "Ellis Bahl directed it, with Jonathan Dwyer, Jessica DiGiovanni and Eleanore Pienta. A violent fight plays in reverse. It won Best Alternative Video at the 2012 UK Music Video Awards.",
+   "wiki": "Breezeblocks_(song)",
+   "source": "https://en.wikipedia.org/wiki/Breezeblocks_(song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Charts and certifications",
+   "line": "No. 75 in the UK, No. 6 on the UK Indie chart, No. 9 on US Alternative Airplay. It has since gone 3x Platinum in the US and 2x in the UK.",
+   "source": "https://en.wikipedia.org/wiki/Breezeblocks_(song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Mercury Prize",
+   "line": "An Awesome Wave won the 2012 Mercury Prize. It jumped from No. 19 to No. 13 on the UK albums chart afterwards.",
+   "wiki": "An_Awesome_Wave",
+   "source": "https://en.wikipedia.org/wiki/An_Awesome_Wave"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

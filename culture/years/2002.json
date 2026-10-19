@@ -1,0 +1,40 @@
+{
+ "year": 2002,
+ "items": [
+  {
+   "kind": "film",
+   "title": "Spider-Man",
+   "line": "Sam Raimi's film opened in the US on 3 May 2002 and took $114.8 million that weekend, the biggest opening in history at the time. Tobey Maguire wore the suit.",
+   "wiki": "Spider-Man_(2002_film)",
+   "source": "https://en.wikipedia.org/wiki/Spider-Man_(2002_film)"
+  },
+  {
+   "kind": "news",
+   "title": "The Queen's Golden Jubilee",
+   "line": "The jubilee weekend ran 1 to 4 June 2002. At the Party at the Palace, Brian May opened by playing \"God Save the Queen\" from the palace roof, and Paul McCartney closed the night.",
+   "wiki": "Golden_Jubilee_of_Elizabeth_II",
+   "source": "https://en.wikipedia.org/wiki/Golden_Jubilee_of_Elizabeth_II"
+  },
+  {
+   "kind": "sport",
+   "title": "World Cup in Japan and Korea",
+   "line": "The first World Cup held in Asia ran from 31 May to 30 June 2002. Brazil beat Germany 2-0 in Yokohama for a fifth title, and Ronaldo finished top scorer with 8 goals.",
+   "wiki": "2002_FIFA_World_Cup",
+   "source": "https://en.wikipedia.org/wiki/2002_FIFA_World_Cup"
+  },
+  {
+   "kind": "tv",
+   "title": "The Wire",
+   "line": "HBO aired the first episode of The Wire on 2 June 2002. David Simon's Baltimore story ran five seasons and 60 episodes, and it was mostly watched later, on box sets.",
+   "wiki": "The_Wire",
+   "source": "https://en.wikipedia.org/wiki/The_Wire"
+  },
+  {
+   "kind": "film",
+   "title": "The Two Towers",
+   "line": "The Lord of the Rings: The Two Towers reached US cinemas on 18 December 2002. Andy Serkis's motion-capture Gollum was the talking point, and the film took about $942 million worldwide.",
+   "wiki": "The_Lord_of_the_Rings:_The_Two_Towers_(film)",
+   "source": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Two_Towers_(film)"
+  }
+ ]
+}

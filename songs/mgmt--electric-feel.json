@@ -1,0 +1,81 @@
+{
+ "id": "mgmt--electric-feel",
+ "title": "Electric Feel",
+ "artist": "MGMT",
+ "year": 2007,
+ "year_note": "Album track on Oracular Spectacular (digital release 2 October 2007). Released as a single on 23 June 2008.",
+ "album": "Oracular Spectacular",
+ "aliases": {
+  "youtube": [
+   "MmZexg8sxyk"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/b4/35/cbb4358f-5a88-69c5-5e8f-4db3f59b2915/mzaf_8008487862830214512.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/electric-feel/273519664?i=273519677&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Andrew VanWyngarden and Ben Goldwasser wrote it in their dorm at Wesleyan University in Middletown, Connecticut, and Goldwasser has said it was the first real song with lyrics they wrote. They cut it in March and April 2007 with Dave Fridmann at Tarbox Road Studios in Cassadaga, New York, after Columbia signed a duo that had more or less stopped being a band. Fridmann later insisted the album was \"not a dance record\" and pointed to the big distorted drum kits all over it. The song sits mostly in 6/4, which is why its phrases feel a beat longer than pop phrases should.",
+  "context": "Columbia's A&R found MGMT through a 2005 EP, and the album came out digitally months before the January 2008 CD. It took a while: the album only reached No. 38 in the US, but it sold steadily for two years and Electric Feel went top ten in Australia and New Zealand. The Justice remix won the 2009 Grammy for Best Remixed Recording, which carried the song into clubs that would never have played the original.",
+  "listen_for": [
+   {
+    "where": "the opening groove",
+    "note": "A reviewer at the time called it a \"swerving bassline\" under a slow groove. Follow the bass instead of the vocal on first listen; it does the singing."
+   },
+   {
+    "where": "the verses",
+    "note": "VanWyngarden in falsetto, light and high over the funk. Count the bars and you'll feel the 6/4 stretching each line out a beat longer than you expect."
+   }
+  ],
+  "leads_to": {
+   "artist": "MGMT",
+   "title": "Electric Feel (Justice Remix)",
+   "year": 2008,
+   "why": "The French duo's remix won a Grammy and shows how much harder the same bass line hits when you take the haze off."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Electric_Feel",
+   "https://en.wikipedia.org/wiki/Oracular_Spectacular",
+   "https://www.songfacts.com/facts/mgmt/electric-feel",
+   "https://diffuser.fm/mgmt-oracular-spectacular/",
+   "https://beta.dailyvault.com/?p=67017"
+  ],
+  "unverified": "VanWyngarden's Letterman line that the song is 'about drugs' comes only via Songfacts, so I left it out. No production interview names who played bass on the record."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Ray Tintori's neon jungle",
+   "line": "Ray Tintori directed it: the band partying in a jungle, cutting open the Moon, painting themselves in its neon ooze, then riding motorbikes into it. MTV VMA art direction nominee, 2008.",
+   "source": "https://en.wikipedia.org/wiki/Electric_Feel"
+  },
+  {
+   "kind": "chart",
+   "title": "Justice remix and chart peaks",
+   "line": "Justice's remix won the 2009 Grammy for Best Remixed Recording. The original reached No. 22 in the UK and No. 7 in Australia.",
+   "wiki": "Electric_Feel",
+   "source": "https://en.wikipedia.org/wiki/Electric_Feel"
+  },
+  {
+   "kind": "screen",
+   "title": "Dior and Gossip Girl",
+   "line": "Christian Dior used it for its Spring 2009 ready-to-wear show in September 2008. It also ran in Gossip Girl season 2 and on the NBA 2K10 soundtrack.",
+   "source": "https://en.wikipedia.org/wiki/Electric_Feel"
+  },
+  {
+   "kind": "live",
+   "title": "Katy Perry's Live Lounge",
+   "line": "Katy Perry covered it for BBC Radio 1's Live Lounge in September 2008.",
+   "source": "https://en.wikipedia.org/wiki/Electric_Feel"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

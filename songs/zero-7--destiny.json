@@ -1,0 +1,62 @@
+{
+ "id": "zero-7--destiny",
+ "title": "Destiny",
+ "artist": "Zero 7",
+ "year": 2001,
+ "year_note": "",
+ "album": "Simple Things",
+ "aliases": {
+  "youtube": [
+   "U_OKigBRqBI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/be/d9/f4/bed9f411-2581-0280-7e56-9d1f5a5a92c4/mzaf_14423363380986280904.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/destiny/712439140?i=712439367&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Sia Furler sings the verses and Sophie Barker joins her on the choruses, and both are credited writers alongside Binns and Hardaker. Binns told The Independent in 2020 that Sia worked so fast you worried you'd lose the vocal if you missed the first take, and that \"Destiny\" and \"Distractions\" were both written in one afternoon. Pete Trotman plays bass and Allan Simpson guitar.",
+  "context": "Released as a single on 6 August 2001, it entered the UK chart at 30 and went no higher, three weeks in all, which still makes it Zero 7's only top-40 single. Tommy Pallotta directed a rotoscoped video for it. The surf film Blue Crush used it in 2002, and in July 2021, twenty years on, it went silver in the UK on sales and streams.",
+  "listen_for": [
+   {
+    "where": "the first chorus",
+    "note": "Barker's voice slides in under Sia's. Two singers who'd go very different ways (Sia to pop songwriting, Barker to folk) blended into one."
+   },
+   {
+    "where": "the chorus chords",
+    "note": "The song is in C Phrygian, and the chorus runs E♭6, Dm7, D♭maj7 and lands on C. That half-step drop from D♭ to C is what makes the chorus feel like it's sinking rather than lifting."
+   }
+  ],
+  "leads_to": {
+   "artist": "Sia",
+   "title": "Taken for Granted",
+   "year": 2000,
+   "why": "Sia's own UK top-10 single from the year before, on Healing Is Difficult, an album AllMusic says she wrote while grieving her boyfriend's death."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Destiny_(Zero_7_song)",
+   "https://en.wikipedia.org/wiki/Simple_Things_(Zero_7_album)",
+   "https://uk.style.yahoo.com/zero-7-never-set-music-085708953.html",
+   "https://en.wikipedia.org/wiki/Healing_Is_Difficult"
+  ],
+  "unverified": "The panel quote mentions a Rhodes. The Simple Things credits list a Rhodes player (Max Beesley) only on the title track, not on \"Destiny\", though Zero 7 owned a Rhodes and a Wurlitzer."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Blue Crush, 2002",
+   "line": "The surf film Blue Crush used it in 2002. Sia co-wrote it with Binns, Hardaker and Sophie Barker, and she and Barker share the vocals.",
+   "wiki": "Simple_Things_(Zero_7_album)",
+   "source": "https://en.wikipedia.org/wiki/Simple_Things_(Zero_7_album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

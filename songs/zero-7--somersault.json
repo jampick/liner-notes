@@ -1,0 +1,71 @@
+{
+ "id": "zero-7--somersault",
+ "title": "Somersault",
+ "artist": "Zero 7",
+ "year": 2004,
+ "year_note": "",
+ "album": "When It Falls",
+ "aliases": {
+  "youtube": [
+   "pO-3U5m9N0w"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/64/99/a6/6499a684-ceb5-2bd7-0383-7c70c6a3caeb/mzaf_9177110570796462446.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/somersault/1814454399?i=1814454643&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Sia wrote it with Sam Hardaker. Neil Cowley plays the Wurlitzer, Dedi Madden the acoustic and electric guitars, and the Brilliant Strings are conducted by Sally Herbert, who'd played violin on Simple Things.",
+  "context": "When It Falls came out on 1 March 2004 and reached 3 in the UK, the duo's best. \"Somersault\" followed on 17 May, the third Zero 7 single sung by Sia after \"Destiny\" and \"Distractions\", and it managed two weeks on the chart with a peak of 56. Sia had released her own Colour the Small One two months earlier, and The Independent later called her the group's unofficial lead singer across their first three albums.",
+  "listen_for": [
+   {
+    "where": "the verses",
+    "note": "The electric piano is a Wurlitzer, played by Neil Cowley."
+   },
+   {
+    "where": "the string parts",
+    "note": "The Brilliant Strings under Sally Herbert, the same string players Zero 7 used on Simple Things."
+   }
+  ],
+  "leads_to": {
+   "artist": "Sia",
+   "title": "Chandelier",
+   "year": 2014,
+   "why": "Where that voice ended up: written for another singer, kept for herself, no. 8 in the US."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/When_It_Falls",
+   "https://en.wikipedia.org/wiki/Zero_7",
+   "https://www.officialcharts.com/songs/zero-7-ft-sia-somersault/",
+   "https://en.wikipedia.org/wiki/Somersault_(song)",
+   "https://uk.style.yahoo.com/zero-7-never-set-music-085708953.html",
+   "https://en.wikipedia.org/wiki/Chandelier_(Sia_song)"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "The single",
+   "line": "Released as a single on 17 May 2004 in the UK, with a radio edit of 3:57 and a Yam Who reworking on the 12-inch. The album version runs 6:57, with Sia on vocals.",
+   "wiki": "When_It_Falls",
+   "source": "https://en.wikipedia.org/wiki/When_It_Falls"
+  },
+  {
+   "kind": "chart",
+   "title": "When It Falls",
+   "line": "Its parent album, When It Falls, reached number 3 on the UK albums chart, Zero 7's highest to that point.",
+   "wiki": "Zero_7",
+   "source": "https://en.wikipedia.org/wiki/Zero_7"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "written_by": "journeys pilot era writer (downtempo-drift, era-3)",
+  "written_on": "2026-10-18"
+ }
+}
