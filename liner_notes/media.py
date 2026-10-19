@@ -46,10 +46,15 @@ class Fetcher:
             except urllib.error.HTTPError as e:
                 if e.code != 429 or n == tries - 1:
                     raise
-                time.sleep(int(e.headers.get("Retry-After") or 0) or 15 * (n + 1))
+                wait = int(e.headers.get("Retry-After") or 0) or 15 * (n + 1)
+                print(f"  429 from {url.split('/')[2]}, waiting {wait}s", flush=True)
+                time.sleep(wait)
 
     def memo(self, k, fn):
         if k not in self.http:
+            if len(self.http) % 25 == 0:
+                self.save()  # so an interrupted run keeps what it fetched
+                print(f"  ... {len(self.http)} lookups cached", flush=True)
             try:
                 self.http[k] = fn()
             except Exception as e:  # a miss is remembered too, so a rerun doesn't hammer the same URL

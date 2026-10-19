@@ -10,12 +10,20 @@ only gains aliases, alternative titles and culture items it didn't have. Picture
 go to the cache, never into the repo; our own era photographs go into the journey folder.
 """
 import datetime as dt
+import re
 import shutil
 from pathlib import Path
 
 from . import paths
 from .bank import read_json, write_json
-from .ids import key, song_id, youtube_id
+from .ids import key as _key
+from .ids import song_id, youtube_id
+
+
+def key(title):
+    """Titles compared without parentheticals, as the pilot's build did: 'I.G.Y. (What a Beautiful World)' is 'I.G.Y.'."""
+    t = re.sub(r"\s*\([^)]*\)", "", title or "")
+    return _key(t or title)
 
 
 def _merge_list(old, new, ident):
