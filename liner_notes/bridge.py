@@ -11,6 +11,7 @@ GET  /bands                    cliamp's visualizer bands as server-sent events (
 GET  /lyrics                   timed lyrics for the current track (cliamp's `lyrics` operation, cached)
 GET  /history                  what cliamp played recently, newest first, with song ids
 GET  /theme                    the current Omarchy theme's colours, mode and font, when there is one
+GET  /song                     the playing song's liner notes, with its journey and era (read-only, for widgets)
 GET  /journey/<slug>.json      a journey;  GET /song/<id>.json  one song from the bank
 GET  /p/<slug>.html            a built page;  GET /p/<slug>.stage.json  its stage data (liner-notes media)
 GET  /m/<slug>/<dir>/<file>    a stage picture from the cache
@@ -221,6 +222,8 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http"):
             bank, matcher = lib.get()
             if path == "/now":
                 return self.send_json(now.payload())
+            if path == "/song":
+                return self.send_json(playing_song(now.payload(), bank))
             if path == "/events":
                 return self.events()
             if path == "/bands":
@@ -348,6 +351,30 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http"):
             self.send_json({"ok": False, "error": "unknown"}, 400)
 
     return Handler
+
+
+def playing_song(np, bank):
+    """/now plus the notes for the song it matched, its journey and the era its year falls in.
+    Read-only and small, so a bar widget can poll it without building a page."""
+    if not np.get("ok"):
+        return np
+    out = {k: np.get(k) for k in ("ok", "source", "state", "title", "artist", "album", "song")}
+    out.update(year=None, journey=None, era=None, notes=None, review=None, draft=False)
+    s = bank.songs.get(np.get("song") or "")
+    if not s:
+        return out
+    review = s.get("review") or {"state": "draft"}
+    notes = s.get("notes") or {}
+    out.update(title=s["title"], artist=s["artist"], album=s.get("album") or np.get("album"), year=s.get("year"),
+               notes={k: notes[k] for k in ("listen_for", "made", "context", "leads_to", "unverified") if notes.get(k)},
+               review=review, draft=review.get("state") != "reviewed")
+    j = bank.journeys.get(np.get("journey") or "")
+    if j:
+        out["journey"] = {"slug": j["slug"], "title": j["title"]}
+        era = next((e for e in j.get("eras") or [] if e["from"] <= (s.get("year") or 0) <= e["to"]), None)
+        if era:
+            out["era"] = {"n": era["n"], "name": era["name"], "years": era["years"]}
+    return out
 
 
 def theme():

@@ -21,9 +21,13 @@ TRACKS = [
 @pytest.fixture
 def env(tmp_path, monkeypatch):
     root = tmp_path / "root"
-    write_json(root / "songs/massive-attack--protection.json", {"id": "massive-attack--protection", "title": "Protection", "artist": "Massive Attack", "year": 1994, "aliases": {"youtube": ["0Rw-UsRPNqc"]}})
+    write_json(root / "songs/massive-attack--protection.json", {
+        "id": "massive-attack--protection", "title": "Protection", "artist": "Massive Attack", "year": 1994, "album": "Protection",
+        "aliases": {"youtube": ["0Rw-UsRPNqc"]}, "review": {"state": "draft", "by": None, "date": None},
+        "notes": {"made": "Tracey Thorn sang it.", "context": "", "listen_for": [{"where": "the start", "note": "The beat."}], "sources": ["https://example.org"]}})
     write_json(root / "songs/christopher-cross--sailing.json", {"id": "christopher-cross--sailing", "title": "Sailing", "artist": "Christopher Cross", "year": 1979, "aliases": {}})
-    write_json(root / "journeys/demo/journey.json", {"slug": "demo", "title": "Demo", "songs": ["massive-attack--protection", "christopher-cross--sailing"]})
+    write_json(root / "journeys/demo/journey.json", {"slug": "demo", "title": "Demo", "songs": ["massive-attack--protection", "christopher-cross--sailing"],
+                                                     "eras": [{"n": 1, "name": "Bristol", "years": "1991–95", "from": 1991, "to": 1995}]})
     sock = tmp_path / "c.sock"
     monkeypatch.setenv("LINER_NOTES_CLIAMP_SOCKET", str(sock))
     monkeypatch.setenv("LINER_NOTES_CACHE", str(tmp_path / "cache"))
@@ -157,6 +161,25 @@ def test_lyrics_and_history(server):
     assert j(req(port, "GET", "/journey/demo.json"))["title"] == "Demo"
     assert j(req(port, "GET", "/song/christopher-cross--sailing.json"))["year"] == 1979
     assert req(port, "GET", "/song/../../etc.json")[0] == 404
+    srv.shutdown()
+
+
+def test_song_has_the_playing_notes(server):
+    fake, run = server
+    srv, port, _ = run()
+    r = j(req(port, "GET", "/song"))
+    assert r["ok"] and r["song"] == "massive-attack--protection" and r["title"] == "Protection" and r["year"] == 1994
+    assert r["journey"] == {"slug": "demo", "title": "Demo"} and r["era"]["name"] == "Bristol"
+    assert r["draft"] and r["review"]["state"] == "draft"
+    # Empty fields and the source list stay out; the widget links to the page for those.
+    assert r["notes"] == {"made": "Tracey Thorn sang it.", "listen_for": [{"where": "the start", "note": "The beat."}]}
+    fake.index = 1  # in the bank, no notes yet, outside every era
+    r = j(req(port, "GET", "/song"))
+    assert r["song"] == "christopher-cross--sailing" and r["notes"] == {} and r["era"] is None and r["draft"]
+    fake.index = 2  # playing, but not in the bank
+    r = j(req(port, "GET", "/song"))
+    assert r["ok"] and r["song"] is None and r["title"] == "Unknown Song" and r["notes"] is None and not r["draft"]
+    assert req(port, "GET", "/song", host="evil.example:47391")[0] == 403
     srv.shutdown()
 
 
