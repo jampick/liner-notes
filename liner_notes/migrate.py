@@ -96,7 +96,8 @@ def migrate(folder, root=None, cache=None, log=print):
                 },
                 "culture": [],
                 "review": {"state": "draft", "by": None, "date": None},
-                "provenance": {"written_by": f"journeys pilot era writer ({slug}, {f.stem})", "written_on": _day(f)},
+                "provenance": {"ai_generated": True, "model": "Claude (Anthropic), research agents with web search",
+                               "written_by": f"journeys pilot era writer ({slug}, {f.stem})", "written_on": _day(f)},
             }
         else:
             merged += 1

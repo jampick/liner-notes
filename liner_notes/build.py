@@ -35,7 +35,7 @@ def lettered(title, artist):
     return "data:image/svg+xml;base64," + base64.b64encode(svg.encode()).decode()
 
 
-def compose(slug, bank=None, public=False, cache=None):
+def compose(slug, bank=None, public=False, cache=None, video=False):
     """Return (data, problems, meta) for the template."""
     bank = bank or Bank()
     cache = Path(cache or paths.cache())
@@ -115,19 +115,53 @@ def compose(slug, bank=None, public=False, cache=None):
         "lede": j["lede"], "copy": j["copy"], "judges": panel.get("judges") or {},
         "express": {"note": express.get("note", ""), "n": [n_of[x] for x in express.get("songs", []) if x in n_of]},
         "eras": eras, "stops": stops, "product": "Liner Notes",
+        # The muted, synced music video is a personal-use opt-in for local builds only: YouTube's developer
+        # policies don't allow separating a video from its audio, so a shareable file never carries it.
+        "video": bool(video and not public),
+        "provenance": provenance(stops),
     }
+    copy = dict(data["copy"])
+    if DISCLOSURE not in copy.get("credits", ""):
+        copy["credits"] = (copy.get("credits", "") + " " + DISCLOSURE).strip()
+    data["copy"] = copy
     return data, problems, j
+
+
+DISCLOSURE = ("An AI model wrote the notes from the sources listed under each song. "
+              "Songs marked Draft notes haven't been checked by a person yet.")
+
+
+def provenance(stops):
+    reviewed = sum(1 for s in stops if not s["draft"])
+    return {"aiGenerated": True, "songs": len(stops), "reviewedByPerson": reviewed,
+            "statement": f"Notes written by an AI model (Claude, Anthropic) from cited sources; {reviewed} of {len(stops)} songs reviewed by a person."}
+
+
+def head_tags(data, meta):
+    """Machine-readable AI disclosure (EU AI Act Article 50 applies from 2 August 2026)."""
+    from . import __version__
+
+    ld = {"@context": "https://schema.org", "@type": "CreativeWork", "name": meta["title"], "description": meta["description"],
+          "creativeWorkStatus": "draft" if data["provenance"]["reviewedByPerson"] < data["provenance"]["songs"] else "reviewed",
+          "creator": {"@type": "SoftwareApplication", "name": "Liner Notes", "softwareVersion": __version__},
+          "additionalProperty": [{"@type": "PropertyValue", "name": "aiGenerated", "value": True},
+                                 {"@type": "PropertyValue", "name": "aiDisclosure", "value": data["provenance"]["statement"]}]}
+    blob = json.dumps(ld, ensure_ascii=False).replace("</", "<\\/")
+    return (f'<meta name="generator" content="Liner Notes {__version__}">\n'
+            f'<meta name="ai-disclosure" content="{htmllib.escape(data["provenance"]["statement"])}">\n'
+            f'<script type="application/ld+json">{blob}</script>\n')
 
 
 def render(data, meta):
     html = TEMPLATE.read_text()
+    html = html.replace("<title>", head_tags(data, meta) + "<title>", 1)
     blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     return (html.replace("__TITLE__", htmllib.escape(meta["title"]) + " · Liner Notes").replace("__DESCRIPTION__", htmllib.escape(meta["description"]))
                 .replace("__FONTS__", meta["fonts"]).replace("/*__DATA__*/null", blob))
 
 
-def build(slug, out=None, public=False, bank=None, cache=None, log=print):
-    data, problems, meta = compose(slug, bank, public, cache)
+def build(slug, out=None, public=False, bank=None, cache=None, video=False, log=print):
+    data, problems, meta = compose(slug, bank, public, cache, video)
     html = render(data, meta)
     out = Path(out) if out else paths.dist() / f"{slug}.html"
     out.parent.mkdir(parents=True, exist_ok=True)

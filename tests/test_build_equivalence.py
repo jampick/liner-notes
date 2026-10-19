@@ -41,7 +41,9 @@ def old_data(tmp):
 
 def strip(d):
     d = json.loads(json.dumps(d))
-    d.pop("product", None)
+    for k in ("product", "video", "provenance"):
+        d.pop(k, None)
+    d["copy"]["credits"] = d["copy"]["credits"].split(" An AI model wrote")[0]
     for e in d["eras"]:
         e["image"] = bool(e["image"])
     for s in d["stops"]:

@@ -132,13 +132,14 @@ class Now:
             return self.version
 
 
-def make_handler(lib, now, port, lan=False, token=None):
+def make_handler(lib, now, port, lan=False, token=None, scheme="http"):
     allowed = {"null", f"http://127.0.0.1:{port}", f"http://localhost:{port}"}
     loop_hosts = {f"127.0.0.1:{port}", f"localhost:{port}", f"[::1]:{port}"}
     lyrics = {}
 
     class Handler(BaseHTTPRequestHandler):
         protocol_version = "HTTP/1.1"
+        now_adapter = now.adapter.name
 
         def log_message(self, *a):
             pass
@@ -156,7 +157,7 @@ def make_handler(lib, now, port, lan=False, token=None):
 
         def origin_ok(self):
             o = self.headers.get("Origin")
-            if lan and o and o == f"http://{self.headers.get('Host', '')}":
+            if lan and o and o == f"{scheme}://{self.headers.get('Host', '')}":
                 return True
             return o is None or o in allowed
 
@@ -187,11 +188,12 @@ def make_handler(lib, now, port, lan=False, token=None):
             self.send_header("Cache-Control", "no-store")
             self.send_header("X-Content-Type-Options", "nosniff")
             o = self.headers.get("Origin")
-            if o in allowed or (lan and o and o == f"http://{self.headers.get('Host', '')}"):
+            if o in allowed or (lan and o and o == f"{scheme}://{self.headers.get('Host', '')}"):
                 self.send_header("Access-Control-Allow-Origin", o)
                 self.send_header("Vary", "Origin")
             if lan and self.query().get("t") and self.token_ok():
-                self.send_header("Set-Cookie", f"ln_token={token}; Path=/; HttpOnly; SameSite=Strict; Max-Age=31536000")
+                secure = "; Secure" if scheme == "https" else ""
+                self.send_header("Set-Cookie", f"ln_token={token}; Path=/; HttpOnly; SameSite=Strict; Max-Age=31536000{secure}")
             for k, v in (extra or {}).items():
                 self.send_header(k, v)
             self.end_headers()
@@ -376,24 +378,65 @@ def lan_address():
         s.close()
 
 
-def make_server(port=PORT, lan=False, token=None, roots=None, adapter=None):
+def tailscale_cert():
+    """(DNS name, Tailscale IP, cert file, key file) for this machine's *.ts.net name, or raise with what to do.
+
+    The certificate comes from Let's Encrypt through Tailscale, so the machine's tailnet name ends up in the
+    public Certificate Transparency logs. Tailscale documents this; it's why HTTPS is opt-in (--tailscale).
+    """
+    try:
+        st = json.loads(subprocess.run(["tailscale", "status", "--json"], capture_output=True, text=True, timeout=10).stdout)
+    except (OSError, subprocess.SubprocessError, ValueError) as e:
+        raise RuntimeError("tailscale isn't running here") from e
+    me = st.get("Self") or {}
+    name, ips = (me.get("DNSName") or "").rstrip("."), me.get("TailscaleIPs") or []
+    if not name.endswith(".ts.net") or not ips:
+        raise RuntimeError("this machine has no MagicDNS name; turn on MagicDNS and HTTPS certificates in the Tailscale admin console")
+    d = paths.state() / "tls"
+    d.mkdir(parents=True, exist_ok=True)
+    crt, key = d / f"{name}.crt", d / f"{name}.key"
+    if not crt.exists() or time.time() - crt.stat().st_mtime > 30 * 86400:
+        r = subprocess.run(["tailscale", "cert", "--cert-file", str(crt), "--key-file", str(key), name], capture_output=True, text=True, timeout=60)
+        if r.returncode != 0:
+            raise RuntimeError(f"tailscale cert failed: {r.stderr.strip()}. If it's a permissions error: sudo tailscale set --operator=$USER")
+    return name, next((i for i in ips if ":" not in i), ips[0]), crt, key
+
+
+def make_server(port=PORT, lan=False, token=None, roots=None, adapter=None, tls=None, bind=None):
+    """tls = (cert file, key file) serves HTTPS, which a phone needs for Wake Lock and offline caching."""
     lib = Library(roots)
     now = Now(lib, adapter or adapters.pick())
     token = token or (secrets.token_urlsafe(18) if lan else None)
-    srv = ThreadingHTTPServer(("0.0.0.0" if lan else "127.0.0.1", port), make_handler(lib, now, port, lan, token))
+    srv = ThreadingHTTPServer((bind or ("0.0.0.0" if lan else "127.0.0.1"), port), make_handler(lib, now, port, lan, token, "https" if tls else "http"))
+    if tls:
+        import ssl
+
+        ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+        ctx.load_cert_chain(str(tls[0]), str(tls[1]))
+        srv.socket = ctx.wrap_socket(srv.socket, server_side=True)
     srv.daemon_threads = True
     return srv, token
 
 
-def serve(port=PORT, lan=False, token=None):
+def serve(port=PORT, lan=False, token=None, tailscale=False, adapter=None):
+    tls, bind, host = None, None, None
+    if tailscale:
+        try:
+            host, bind, crt, key = tailscale_cert()
+        except RuntimeError as e:
+            sys.exit(f"liner-notes: {e}")
+        tls, lan = (crt, key), True
     try:
-        srv, token = make_server(port, lan, token)
+        srv, token = make_server(port, lan, token, adapter=adapter, tls=tls, bind=bind)
     except OSError as e:
         sys.exit(f"liner-notes: {e}")
-    print(f"Liner Notes is serving http://127.0.0.1:{port}/")
+    if not tailscale:
+        print(f"Liner Notes is serving http://127.0.0.1:{port}/  (player: {srv.RequestHandlerClass.now_adapter})")
     if lan:
-        url = f"http://{lan_address()}:{port}/?t={token}"
-        print(f"On your network: {url}\nAnyone with this address can see what you play and skip tracks. Stop the server to revoke it.")
+        url = f"https://{host}:{port}/?t={token}" if tailscale else f"http://{lan_address()}:{port}/?t={token}"
+        print(f"On your {'tailnet' if tailscale else 'network'}: {url}\nAnyone with this address can see what you play and skip tracks. Stop the server to revoke it.")
+        if not tailscale:
+            print("Plain http on a network address isn't a secure context, so phones won't keep the screen awake. --tailscale serves HTTPS.")
         try:
             print(subprocess.run(["qrencode", "-t", "ansiutf8", url], capture_output=True, text=True, timeout=5).stdout)
         except (OSError, subprocess.SubprocessError):

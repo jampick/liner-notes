@@ -68,6 +68,8 @@
   "date": null
  },
  "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
   "written_by": "journeys pilot era writer (downtempo-drift, era-3)",
   "written_on": "2026-10-18"
  }
