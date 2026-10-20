@@ -22,6 +22,7 @@ import re
 import secrets
 import select
 import socket
+import ssl
 import subprocess
 import sys
 import threading
@@ -251,10 +252,22 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
                     left -= len(chunk)
 
         def client_gone(self):
-            """True once the client has closed its end (readable with nothing to read)."""
+            """True once the client has closed its end (readable with nothing to read). A stream's client
+            sends nothing after its request, so on TLS, where a peek isn't possible, one byte is read."""
+            conn = self.connection
             try:
-                r, _, _ = select.select([self.connection], [], [], 0)
-                return bool(r) and self.connection.recv(1, socket.MSG_PEEK) == b""
+                r, _, _ = select.select([conn], [], [], 0)
+                if not r:
+                    return False
+                if not hasattr(conn, "pending"):
+                    return conn.recv(1, socket.MSG_PEEK) == b""
+                conn.settimeout(0.05)
+                try:
+                    return conn.recv(1) == b""
+                except (ssl.SSLWantReadError, TimeoutError, BlockingIOError):
+                    return False
+                finally:
+                    conn.settimeout(self.timeout)
             except (OSError, ValueError):
                 return True
 
@@ -579,8 +592,6 @@ def make_server(port=PORT, lan=False, token=None, roots=None, adapter=None, tls=
     srv = Server((bind or ("0.0.0.0" if lan else "127.0.0.1"), port), lambda *a: None)
     srv.RequestHandlerClass = make_handler(lib, now, srv.server_address[1], lan, token, "https" if tls else "http")
     if tls:
-        import ssl
-
         ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
         ctx.load_cert_chain(str(tls[0]), str(tls[1]))
         srv.socket = ctx.wrap_socket(srv.socket, server_side=True)

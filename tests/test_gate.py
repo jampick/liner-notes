@@ -143,3 +143,47 @@ def test_requests_are_logged_without_the_query(start, caplog):
     assert any(lv == logging.INFO and m.startswith("GET /history 200 ") for lv, m in lines)
     assert any(lv == logging.WARNING and m.startswith("GET /now 401 ") for lv, m in lines)
     assert not any(b.token in m for _, m in lines)  # the ?t= pairing token stays out of the journal
+
+
+def test_streams_stay_open_over_tls(env):
+    import shutil
+    import ssl
+    import subprocess
+    import threading
+
+    import pytest
+
+    from liner_notes import bridge
+    from liner_notes.adapters.cliamp import CliampAdapter
+
+    from .bridge_kit import TRACKS
+    from .fake_cliamp import FakeCliamp
+
+    if not shutil.which("openssl"):
+        pytest.skip("no openssl to make a test certificate")
+    crt, key = env["tmp"] / "t.crt", env["tmp"] / "t.key"
+    subprocess.run(["openssl", "req", "-x509", "-newkey", "rsa:2048", "-nodes", "-subj", "/CN=localhost", "-days", "1",
+                    "-keyout", str(key), "-out", str(crt)], check=True, capture_output=True)
+    fake = FakeCliamp(env["sock"], [dict(t) for t in TRACKS])
+    srv, _ = bridge.make_server(0, adapter=CliampAdapter(), roots=[env["root"]], tls=(crt, key))
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    port = srv.server_address[1]
+    ctx = ssl.create_default_context()
+    ctx.check_hostname, ctx.verify_mode = False, ssl.CERT_NONE
+    s = ctx.wrap_socket(socket.create_connection(("127.0.0.1", port), timeout=5), server_hostname="localhost")
+    try:
+        s.sendall(f"GET /events HTTP/1.1\r\nHost: 127.0.0.1:{port}\r\n\r\n".encode())
+        f = s.makefile("rb")
+        while not f.readline().startswith(b"data:"):
+            pass
+        time.sleep(1.2)  # the gone-client check runs; a TLS socket used to look closed
+        fake.play(1)
+        line = f.readline()
+        while line in (b"\n", b": ping\n"):
+            line = f.readline()
+        assert line.startswith(b"data:")
+    finally:
+        s.close()
+        srv.shutdown()
+        srv.server_close()
+        fake.close()
