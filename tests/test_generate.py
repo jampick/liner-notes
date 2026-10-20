@@ -111,8 +111,37 @@ def test_write_with_budget(tmp_path, monkeypatch):
 def test_budget_stops_early(tmp_path, monkeypatch):
     setup(tmp_path, monkeypatch)
     client = FakeClient()
-    gen.generate("Test Mix", write=True, budget=0.08, client=client, lookup=lookup, log=lambda *a: None)
+    gen.generate("Test Mix", write=True, budget=0.08, client=client, lookup=lookup, log=lambda *a: None, estimate=0.05)
     assert len(client.calls) == 1
+
+
+def test_budget_checked_before_the_first_song(tmp_path, monkeypatch):
+    setup(tmp_path, monkeypatch)
+    client = FakeClient()
+    log = []
+    j, spent = gen.generate("Test Mix", write=True, budget=0.10, client=client, lookup=lookup, log=log.append)
+    assert gen.ESTIMATE > 0.10 and client.calls == [] and spent == 0
+    assert any("stopping" in x for x in log)
+
+
+class RefusingClient(FakeClient):
+    """Answers with a refusal, after doing (and billing) the work."""
+
+    def stream(self, **kw):
+        out = super().stream(**kw)
+        out.msg.stop_reason = "refusal"
+        out.msg.stop_details = NS(category="test")
+        return out
+
+
+def test_failed_attempts_count(tmp_path, monkeypatch):
+    setup(tmp_path, monkeypatch)
+    client = RefusingClient()
+    j, spent = gen.generate("Test Mix", write=True, budget=5, client=client, lookup=lookup, log=lambda *a: None)
+    P = gen.PRICE
+    per = (2000 * P["input"] + 1500 * P["output"] + 3000 * P["cache_read"]) / 1e6 + 4 * P["search"]
+    assert len(client.calls) == 2 and abs(spent - 2 * per) < 1e-9
+    assert not read_json(tmp_path / "data/songs/christopher-cross--sailing.json")["notes"]
 
 
 def test_cut_eras():

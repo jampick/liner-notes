@@ -11,8 +11,11 @@ the bank keep their notes. The rest are listed, and the page shows them with wha
 With --write, each missing song gets one Claude API request (Claude Opus 5.5 with web search and
 web fetch) that follows prompts/SONG-BRIEF.md and must list its sources. The brief is the cached
 system prompt, so every song after the first reads it at the cache price. Every written song is
-marked a draft and AI-written; nothing becomes "reviewed" until a person says so. The run stops
-before a song that could push the spend past --budget.
+marked a draft and AI-written; nothing becomes "reviewed" until a person says so.
+
+The budget is checked before every song, the first one included: the next song is assumed to cost
+the larger of ESTIMATE and the average so far, and the run stops if that could pass --budget. Every
+request counts, including the ones that end in a refusal or a reply that won't parse.
 """
 import datetime as dt
 import json
@@ -29,6 +32,8 @@ from .match import Matcher
 MODEL = "claude-sonnet-5-5"
 # Claude Sonnet 5.5 list prices, USD per million tokens, and web search per request (as of 2026-10).
 PRICE = {"input": 2.00, "output": 10.00, "cache_read": 0.10, "cache_write": 2.50, "search": 0.01}
+# What one song costs before we've seen one: about 30k input and 6k output tokens and 8 searches.
+ESTIMATE = (30_000 * PRICE["input"] + 6_000 * PRICE["output"]) / 1e6 + 8 * PRICE["search"]
 BRIEF = paths.PACKAGE / "prompts" / "SONG-BRIEF.md"
 DEFAULT_COPY = {
     "start": "Start listening", "resume": "Pick up at", "express": "Express: one per era",
@@ -160,17 +165,31 @@ def cost_of(usage):
             + (getattr(u, "cache_creation_input_tokens", 0) or 0) * PRICE["cache_write"]) / 1e6 + search * PRICE["search"]
 
 
-def write_song(client, song, effort="medium", log=print):
-    """One song's notes from the Claude API. Returns (notes dict, cost in USD)."""
+class Meter:
+    """Money spent on requests, counted as each answer arrives, so a failure later still counts."""
+
+    def __init__(self):
+        self.spent = 0.0
+
+    def add(self, usage):
+        c = cost_of(usage)
+        self.spent += c
+        return c
+
+
+def write_song(client, song, effort="medium", log=print, meter=None):
+    """One song's notes from the Claude API. Returns (notes dict, cost in USD, model)."""
     import anthropic
 
+    meter = meter or Meter()
+    start = meter.spent
     system = [{"type": "text", "text": BRIEF.read_text(), "cache_control": {"type": "ephemeral"}}]
     ask = (f"Write the liner notes for \"{song['title']}\" by {song['artist']}"
            + (f" (released {song['year']}, per MusicBrainz; check it)" if song.get("year") else "") + ".")
     messages = [{"role": "user", "content": ask}]
     tools = [{"type": "web_search_20260209", "name": "web_search", "max_uses": 8},
              {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 6}]
-    spent, final = 0.0, None
+    final = None
     for _turn in range(5):  # pause_turn: a long server-tool turn hands back control; send it back to continue
         try:
             with client.beta.messages.stream(
@@ -183,7 +202,7 @@ def write_song(client, song, effort="medium", log=print):
             log(f"  rate limited, waiting {wait}s")
             time.sleep(wait)
             continue
-        spent += cost_of(final.usage)
+        meter.add(final.usage)
         if final.stop_reason == "pause_turn":
             messages.append({"role": "assistant", "content": final.content})
             continue
@@ -194,15 +213,15 @@ def write_song(client, song, effort="medium", log=print):
         raise RuntimeError(f"declined ({getattr(final.stop_details, 'category', None)})")
     text = "".join(b.text for b in final.content if b.type == "text")
     try:
-        return parse_reply(text), spent, final.model
+        return parse_reply(text), meter.spent - start, final.model
     except (ValueError, json.JSONDecodeError):
         messages += [{"role": "assistant", "content": final.content},
                      {"role": "user", "content": "Reply again with only the JSON object in a ```json block, in the shape the brief gives."}]
         with client.beta.messages.stream(model=MODEL, max_tokens=16000, system=system, messages=messages,
                                          output_config={"effort": "low"}, betas=["server-side-fallback-2026-07-01"], fallbacks="default") as stream:
             again = stream.get_final_message()
-        spent += cost_of(again.usage)
-        return parse_reply("".join(b.text for b in again.content if b.type == "text")), spent, again.model
+        meter.add(again.usage)
+        return parse_reply("".join(b.text for b in again.content if b.type == "text")), meter.spent - start, again.model
 
 
 def apply_notes(song, d, model, day):
@@ -216,7 +235,8 @@ def apply_notes(song, d, model, day):
     return song
 
 
-def generate(name=None, provider=None, playlist=None, write=False, budget=2.0, effort="medium", root=None, client=None, lookup=None, log=print):
+def generate(name=None, provider=None, playlist=None, write=False, budget=2.0, effort="medium", root=None, client=None, lookup=None, log=print,
+             estimate=ESTIMATE):
     root = Path(root or paths.user_data())
     bank = Bank()
     if provider:
@@ -239,22 +259,23 @@ def generate(name=None, provider=None, playlist=None, write=False, budget=2.0, e
         import anthropic
 
         client = anthropic.Anthropic()
-    spent, per, day, done = 0.0, None, dt.date.today().isoformat(), 0
+    meter, day, done, tried = Meter(), dt.date.today().isoformat(), 0, 0
+    log(f"  about ${estimate:.2f} a song before the first answer; budget ${budget:.2f}")
     for sid in missing:
-        if per and spent + per * 1.5 > budget:
-            log(f"  stopping: the next song could pass the ${budget:.2f} budget (spent ${spent:.2f})")
+        nxt = max(estimate, meter.spent / tried if tried else 0.0)
+        if meter.spent + nxt > budget:
+            log(f"  stopping: the next song could cost ${nxt:.2f} and pass the ${budget:.2f} budget (spent ${meter.spent:.2f})")
             break
         f = root / "songs" / f"{sid}.json"
         song = read_json(f) if f.exists() else dict(Bank().songs[sid])
+        tried += 1
         try:
-            d, cost, model = write_song(client, song, effort, log)
+            d, cost, model = write_song(client, song, effort, log, meter)
         except Exception as e:
-            log(f"  {song['title']}: {e}")
+            log(f"  {song['title']}: {e} (spent ${meter.spent:.2f} so far)")
             continue
-        spent += cost
         done += 1
-        per = spent / done
         write_json(f, apply_notes(song, d, model, day))
         log(f"  wrote {song['title']}, {song['artist']}  ${cost:.3f}  ({len(d['sources'])} sources)")
-    log(f"wrote {done} songs for ${spent:.2f} (${(spent / done if done else 0):.3f} a song)")
-    return journey, spent
+    log(f"wrote {done} of {tried} songs tried for ${meter.spent:.2f} (${(meter.spent / tried if tried else 0):.3f} a request)")
+    return journey, meter.spent
