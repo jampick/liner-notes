@@ -6,9 +6,10 @@
 <title>__TITLE__</title>
 <meta name="description" content="__DESCRIPTION__">
 <link rel="icon" href="data:,">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="__FONTS__">
+<!-- The bridge puts its per-start token here when it serves the page; POSTs to the bridge carry it. -->
+<meta name="liner-token" content="">
+<!-- Web fonts load only in a shared copy; a page the bridge serves uses the desktop's fonts (its CSP allows no others). -->
+<meta name="liner-fonts" content="__FONTS__">
 <style>
 /* Layout: a fixed era photograph behind everything, the coastline chart across the top,
    one stop at a time below it (cover and controls left, the notes right), walk bar at the bottom. */
@@ -17,7 +18,7 @@
   --sea: #2b6372; --amber: #a8672b; --amber-ink: #fff8ef; --rule: rgba(23,48,58,0.14); --card: rgba(23,48,58,0.06);
   --band-a: rgba(43,99,114,0.12); --band-b: rgba(43,99,114,0.05); --band-warm: rgba(168,103,43,0.14);
   --veil-top: rgba(227,235,234,0.80); --veil-bottom: rgba(227,235,234,0.94); --grain: 0.10;
-  --display: "Spectral", Georgia, "Times New Roman", serif; --body: "Spectral", Georgia, serif; --mono: "Chivo Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --display: "Spectral", "Noto Serif", "Liberation Serif", Georgia, serif; --body: "Spectral", "Noto Serif", "Liberation Serif", Georgia, serif; --mono: "Chivo Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
@@ -47,7 +48,9 @@ button { font: inherit; color: inherit; }
 .scene img.on { opacity: 1; animation: drift 60s ease-in-out infinite alternate; }
 @keyframes drift { from { transform: scale(1.04) translate(0,0); } to { transform: scale(1.10) translate(-1.5%, -1%); } }
 .scene::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--veil-top), var(--veil-bottom) 55%); }
-.grain { position: fixed; inset: -50%; z-index: 1; pointer-events: none; opacity: var(--grain); background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); animation: grain 1.2s steps(6) infinite; }
+/* The grain layer is 20% bigger than the viewport, enough for its 3% steps. At twice the viewport it took four
+   times the raster memory, a 3840x2160 layer on a 1080p screen, animated forever. */
+.grain { position: fixed; inset: -10%; z-index: 1; pointer-events: none; opacity: var(--grain); background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); animation: grain 1.2s steps(6) infinite; }
 @keyframes grain { 0%{transform:translate(0,0)} 20%{transform:translate(-3%,2%)} 40%{transform:translate(2%,-3%)} 60%{transform:translate(-2%,-1%)} 80%{transform:translate(3%,3%)} 100%{transform:translate(0,0)} }
 
 .app { position: relative; z-index: 2; min-height: 100vh; display: flex; flex-direction: column; }
@@ -172,7 +175,7 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
 /* Overlays */
 .layer { position: fixed; inset: 0; z-index: 10; overflow-y: auto; background: var(--bg); }
 .layer[hidden] { display: none; }
-.opening { display: grid; place-items: center; background: #071013; color: #dbe7e5; --ink: #dbe7e5; --mid: #a9bfc0; --faint: #87a0a4; --sea: #74b8c4; --amber: #e0a35f; --rule: rgba(219,231,229,0.16); }
+.opening { display: grid; align-items: safe center; justify-items: center; background: #071013; color: #dbe7e5; --ink: #dbe7e5; --mid: #a9bfc0; --faint: #87a0a4; --sea: #74b8c4; --amber: #e0a35f; --rule: rgba(219,231,229,0.16); }
 .opening .bgimg { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.35; filter: saturate(0.8); }
 .opening .inner { position: relative; width: 100%; max-width: 1100px; padding: 48px max(20px, env(safe-area-inset-left, 0px)); display: flex; flex-direction: column; gap: 26px; }
 .opening h1 { margin: 0; font-family: var(--display); font-weight: 300; font-size: clamp(58px, 11vw, 150px); line-height: 0.86; letter-spacing: -0.035em; }
@@ -224,101 +227,127 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
 .kept-list li { display: grid; grid-template-columns: 56px 1fr auto; gap: 14px; align-items: center; }
 .kept-list img { width: 56px; height: 56px; object-fit: cover; }
 
+
+/* While the stage is up nothing behind it needs painting. */
+html.stage-on .scene, html.stage-on .grain, html.stage-on .app { visibility: hidden; }
+
 /* Stage: the lean-back companion for a second screen. It's laid out like a tiled Hyprland workspace (10px gaps,
    2px pane borders, one active pane in the theme's accent) and leaves the player's job to cliamp. The focus
    moves with the song: to the lyrics while someone sings, to the liner notes in between. Mono for what's live,
-   the serif for the writing, like sleeve notes in a terminal. */
-.stagev { --svbg: 9,5,3; --ink: #e3c2ad; --mid: #b39a8b; --faint: #7d6a62; --sea: #a6e3a1; --amber: #b16237; --pane: #585b70; --rule: rgba(227,194,173,0.15);
+   the serif for the writing, like sleeve notes in a terminal. It's read from across the room, so nothing that
+   carries information is under 18px or under 4.5:1 against the background. */
+.stagev { --svbg: 9,5,3; --ink: #e3c2ad; --mid: #b39a8b; --faint: #968078; --sea: #a6e3a1; --amber: #b16237; --pane: #585b70; --rule: rgba(227,194,173,0.15);
   --green: #a6e3a1; --yellow: #f9e2af; --red: #f38ba8; --tone: 116,184,196; --tmono: "JetBrainsMono Nerd Font", "JetBrains Mono", var(--mono);
-  position: fixed; inset: 0; z-index: 11; overflow: hidden; cursor: none; background: rgb(var(--svbg)); color: var(--ink); font-family: var(--tmono); }
+  position: fixed; inset: 0; z-index: 11; overflow: hidden; background: rgb(var(--svbg)); color: var(--ink); font-family: var(--tmono); }
 .stagev[hidden] { display: none; }
+.stagev.still { cursor: none; }
 .sv-grid { position: absolute; inset: 0; padding: 10px; display: grid; gap: 10px; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
   grid-template-rows: auto minmax(0, 0.75fr) minmax(0, 1.25fr) auto; grid-template-areas: "vis now" "vis lyr" "vis notes" "tonight tonight"; }
 .stagev:not(.lyrics) .sv-grid { grid-template-areas: "vis now" "vis notes" "vis notes" "tonight tonight"; }
-.pane { position: relative; min-width: 0; min-height: 0; overflow: hidden; border: 2px solid var(--pane); background: rgba(var(--svbg), 0.72); transition: border-color .35s, opacity .6s; }
-.pl { display: flex; align-items: center; gap: 1ch; font-size: 14px; color: var(--green); white-space: nowrap; }
+.pane { position: relative; min-width: 0; min-height: 0; overflow: hidden; border: 2px solid var(--pane); background: rgba(var(--svbg), 0.72); transition: border-color .35s; }
+.pl { display: flex; align-items: center; gap: 1ch; font-size: 18px; color: var(--green); white-space: nowrap; }
 .pl .t { color: var(--faint); overflow: hidden; text-overflow: ellipsis; }
 .pl.rule::after { content: ""; flex: 1; min-width: 3ch; border-top: 1px solid currentColor; opacity: .4; }
 .sv-vis { grid-area: vis; container-type: size; background: rgb(var(--svbg)); }
 .sv-vis .pl { position: absolute; left: 0; top: 0; z-index: 4; padding: 6px 14px; background: rgb(var(--svbg)); }
+.sv-vis .pl[hidden] { display: none; }
 .sv-vis .bg, .sv-still { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .sv-vis .bg { opacity: .32; filter: saturate(.8); animation: drift 80s ease-in-out infinite alternate; }
+.sv-vis .bg:not([src]), .sv-still:not([src]) { visibility: hidden; }
 .sv-still { opacity: 0; transition: opacity 2.5s ease-in-out; }
-.sv-still.on { opacity: .42; animation: drift 45s ease-in-out infinite alternate; }
-.sv-vis .wash { position: absolute; inset: 0; background: radial-gradient(ellipse 55% 60% at 50% 50%, rgba(var(--tone), .30), transparent 72%), rgba(var(--svbg), .30); transition: background 3s; }
-.sv-cover { position: absolute; left: 50%; top: 50%; z-index: 2; width: min(70cqh, 70cqw); aspect-ratio: 1 / 1; transform: translate(-50%, -50%); transition: opacity 1.2s; }
-.sv-cover img { display: block; width: 100%; height: 100%; object-fit: cover; outline: 1px solid var(--rule); transition: filter 2s; }
+.sv-still.on { opacity: .9; animation: drift 45s ease-in-out infinite alternate; }
+/* Nothing to show yet (bridge down, nothing playing, a song with no cover): a quiet mark instead of a blank pane. */
+.sv-empty { position: absolute; inset: 0; display: none; place-items: center; font-size: 34cqh; line-height: 1; color: rgba(var(--tone), .28); }
+.stagev.nopic .sv-empty { display: grid; }
+/* The hero picture in depth parallax (WebGL, the Astro-Arc shader). It fades in over the plain stills, which
+   stay underneath as the fallback; once it's up, the stills and the era backdrop stop animating. */
+.sv-gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity 1.2s ease-in-out; }
+.sv-gl.on { opacity: 1; }
+.stagev.glon .sv-vis .bg, .stagev.glon .sv-still { visibility: hidden; animation: none; }
+.sv-vis .wash { position: absolute; inset: 0; pointer-events: none; transition: background 3s;
+  background: radial-gradient(ellipse 42% 46% at 0% 100%, rgba(var(--tone), .34), transparent 70%),
+    radial-gradient(ellipse 85% 80% at 50% 45%, transparent 55%, rgba(var(--svbg), .62) 100%),
+    linear-gradient(0deg, rgba(var(--svbg), .55), transparent 30%); }
+.sv-cover { position: absolute; left: 28px; bottom: 28px; z-index: 2; width: min(30cqh, 26cqw); aspect-ratio: 1 / 1; transition: opacity 1.2s; }
+.stagev.bigcover .sv-cover { left: 50%; bottom: 50%; transform: translate(-50%, 50%); width: min(72cqh, 60cqw); }
+.sv-cover img { display: block; width: 100%; height: 100%; object-fit: cover; outline: 1px solid var(--rule); transition: filter 2s; box-shadow: 0 22px 60px rgba(0,0,0,.6), 0 0 40px rgba(var(--tone), .25); }
 .sv-cover img:not([src]) { visibility: hidden; }
-.sv-cover .artist { position: absolute; right: -5%; bottom: -5%; width: 30%; height: 30%; border: 2px solid var(--amber); outline: 0; }
-.sv-cover .artist:not([src]) { display: none; }
-.sv-vid { position: absolute; inset: 0; z-index: 3; overflow: hidden; opacity: 0; transition: opacity 1.8s; pointer-events: none; }
-.sv-vid iframe { position: absolute; left: 50%; top: 50%; width: max(114cqw, 203cqh); height: max(114cqh, 64cqw); transform: translate(-50%, -50%); border: 0; }
-.stagev.cinema .sv-vid { opacity: 1; }
+.stagev.heropic:not(.cinema) #svNote.pic { grid-template-columns: minmax(0, 1fr); }
+.stagev.heropic:not(.cinema) #svNote.pic img { display: none; }
+/* Video comes only from the bridge's disk cache (GET /v/<id>.mp4), muted, steered to cliamp's clock. */
+.sv-vid { position: absolute; inset: 0; z-index: 3; overflow: hidden; opacity: 0; visibility: hidden; transition: opacity 1.8s, visibility 0s 1.8s; pointer-events: none; }
+.sv-vid video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.stagev.cinema .sv-vid { opacity: 1; visibility: visible; transition: opacity 1.8s; }
 .stagev.cinema .sv-cover { opacity: 0; }
-.stagev.paused .sv-vis img, .stagev.paused .sv-vid { filter: grayscale(.5) brightness(.65); }
+.stagev.paused .sv-vis img, .stagev.paused .sv-vis canvas, .stagev.paused .sv-vid { filter: grayscale(.5) brightness(.65); }
 .sv-now { grid-area: now; padding: 22px 30px 24px; display: flex; flex-direction: column; gap: 10px; }
-.sv-stamp { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 14px; color: var(--faint); }
+.sv-stamp { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 18px; color: var(--faint); }
 .sv-stamp b { font-weight: 400; color: var(--ink); }
 .sv-stamp .yy b { color: var(--yellow); }
 .sv-stamp .kept b { color: var(--green); }
 .sv-title { margin: 0; font-size: min(6.4vh, 3.6vw); font-weight: 700; line-height: 1.02; letter-spacing: -.02em; text-wrap: balance; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.sv-by { font-size: min(2.5vh, 1.5vw); color: var(--green); }
-.sv-by::before { content: "♪ "; }
-.sv-era { font-size: 14px; color: var(--faint); }
+.sv-by { font-size: max(18px, min(2.5vh, 1.5vw)); color: var(--green); }
+.sv-by:not(:empty)::before { content: "♪\00a0"; }
+.sv-era { font-size: 18px; color: var(--faint); }
 .sv-era .jump { color: var(--mid); }
+.sv-exit { flex: none; margin-left: auto; padding: 0 10px; border: 1px solid var(--pane); background: rgb(var(--svbg)); color: var(--faint); font: 18px var(--tmono); cursor: pointer; }
+.sv-exit:hover, .sv-exit:focus-visible { color: var(--ink); border-color: var(--amber); }
+.sv-exit[hidden] { display: none; }
 .sv-lyr { grid-area: lyr; padding: 22px 30px; display: flex; flex-direction: column; gap: 1.4vh; }
 .sv-lyr .lines { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 1vh; }
 .stagev:not(.lyrics) .sv-lyr { display: none; }
-.sv-lyr .now { font-size: min(4.2vh, 2.4vw); font-weight: 500; line-height: 1.2; min-height: 1.2em; text-wrap: balance; opacity: .35; transition: opacity .2s;
-  background: linear-gradient(90deg, var(--ink) var(--k, 0%), color-mix(in srgb, var(--ink) 55%, transparent) calc(var(--k, 0%) + 6%)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.sv-lyr .now::before { content: "▶ "; -webkit-text-fill-color: var(--green); }
-.stagev.singing .sv-lyr .now { opacity: 1; }
-.sv-lyr .now.pop { animation: lyin .22s ease-out both; }
-@keyframes lyin { from { opacity: .35; transform: translateY(5px); } to { opacity: 1; transform: none; } }
-.sv-lyr .nx { font-size: min(2.5vh, 1.5vw); color: var(--faint); min-height: 1.3em; padding-left: 2ch; }
+.sv-lyr .now { font-size: min(4.2vh, 2.4vw); font-weight: 500; line-height: 1.2; min-height: 1.2em; text-wrap: balance; color: var(--mid);
+  background: linear-gradient(90deg, var(--ink) var(--k, 0%), var(--mid) calc(var(--k, 0%) + 6%)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.stagev:not(.singing) .sv-lyr .now { background: none; -webkit-text-fill-color: var(--mid); }
+.sv-lyr .now:not(:empty)::before { content: "▶ "; -webkit-text-fill-color: var(--green); }
+.sv-lyr .nx { font-size: max(18px, min(2.5vh, 1.5vw)); color: var(--faint); min-height: 1.3em; padding-left: 2ch; }
 .sv-notes { grid-area: notes; padding: 22px 30px; display: flex; flex-direction: column; gap: 2vh; }
 .stagev.singing .sv-lyr, .stagev:not(.singing) .sv-notes { border-color: var(--amber); }
-.stagev.lyrics.singing .sv-notes { opacity: .62; }
 #svNote { min-height: 0; }
-#svNote p { margin: 0; font-family: var(--body); font-size: min(3.1vh, 1.75vw); line-height: 1.42; color: var(--ink); text-wrap: pretty; }
-#svNote p.q { font-family: var(--display); font-style: italic; font-weight: 300; font-size: min(3.6vh, 2.05vw); line-height: 1.3; }
-#svNote b { display: block; margin-bottom: .8vh; font-family: var(--display); font-weight: 400; font-size: min(3.5vh, 2vw); line-height: 1.15; }
+#svNote p { margin: 0; font-family: var(--body); font-size: max(18px, min(3.1vh, 1.75vw)); line-height: 1.42; color: var(--ink); text-wrap: pretty; transition: color .6s; }
+.stagev.lyrics.singing #svNote p { color: var(--mid); }
+#svNote p.q { font-family: var(--display); font-style: italic; font-weight: 300; font-size: max(20px, min(3.6vh, 2.05vw)); line-height: 1.3; }
+#svNote b { display: block; margin-bottom: .8vh; font-family: var(--display); font-weight: 400; font-size: max(20px, min(3.5vh, 2vw)); line-height: 1.15; }
 #svNote.pic { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 26px; align-items: start; }
 #svNote.pic img { display: block; max-width: min(13vw, 260px); max-height: 30vh; object-fit: contain; outline: 1px solid var(--rule); }
-.fresh { animation: rise 1s cubic-bezier(.2,.7,.2,1) both; }
-.sv-tonight { grid-area: tonight; padding: 12px 26px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 6px 26px; align-items: center; font-size: 15px; }
+.sv-tonight { grid-area: tonight; padding: 12px 26px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 6px 26px; align-items: center; font-size: 18px; }
 .sv-tonight .logo { color: var(--green); font-weight: 700; letter-spacing: .45em; }
 .sv-track { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .sv-bar { position: relative; height: 3px; background: color-mix(in srgb, var(--amber) 35%, transparent); }
-.sv-bar i { display: block; height: 3px; width: 0; background: var(--yellow); }
+.sv-bar i { display: block; height: 3px; width: 100%; background: var(--yellow); transform-origin: 0 50%; transform: scaleX(0); will-change: transform; }
 .sv-bar b { position: absolute; top: -4px; width: 1px; height: 11px; background: color-mix(in srgb, var(--ink) 30%, transparent); }
 .sv-bar b.done { background: var(--yellow); }
-.sv-trail { display: block; width: 100%; height: 44px; overflow: visible; }
+.sv-trail { display: block; width: 100%; height: 60px; overflow: visible; }
 .sv-trail .era { stroke: var(--rule); }
-.sv-trail .lbl { fill: var(--faint); font: 11px var(--tmono); }
-.sv-trail circle.off { fill: color-mix(in srgb, var(--ink) 22%, transparent); }
+.sv-trail .lbl { fill: var(--faint); font: 18px var(--tmono); }
+.sv-trail circle.off { fill: color-mix(in srgb, var(--ink) 30%, transparent); }
 .sv-trail circle.on { fill: var(--green); }
 .sv-trail circle.here { fill: none; stroke: var(--yellow); stroke-width: 2; animation: breathe 2.4s ease-in-out infinite; }
 .sv-trail .route { fill: none; stroke: var(--green); stroke-width: 1.2; opacity: .45; }
 .sv-stat { display: flex; gap: 18px; align-items: baseline; white-space: nowrap; color: var(--faint); }
-.sv-stat #svPos { color: var(--ink); }
+.sv-stat #svPos { color: var(--ink); font-size: 24px; font-variant-numeric: tabular-nums; }
 .sv-stat #svLive { color: var(--green); }
-.sv-stat #svClock { color: var(--ink); font-size: 18px; }
+.sv-stat #svLive.off { color: var(--faint); }
+.sv-stat #svClock { color: var(--ink); font-size: 24px; font-variant-numeric: tabular-nums; }
 #svToast { color: var(--yellow); }
-.sv-keys { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--faint); transition: opacity 1.5s, max-height 1.5s; max-height: 30px; overflow: hidden; }
+.sv-keys { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 18px; color: var(--faint); transition: opacity 1.5s; max-height: 40px; overflow: hidden; }
+/* Only the opacity fades: a transition on max-height kept Chromium laying out the page about five times a second. */
 .sv-keys kbd { font: inherit; padding: 0 6px; margin-right: 6px; background: color-mix(in srgb, var(--ink) 20%, transparent); color: var(--ink); }
 .sv-keys.hide { opacity: 0; max-height: 0; }
-.stagev.offlist .sv-lyr, .stagev.offlist .sv-notes { visibility: hidden; }
 @media (max-width: 900px) {
   .stagev { overflow-y: auto; }
-  .sv-grid { position: relative; min-height: 100%; grid-template-columns: 1fr; grid-template-rows: none; grid-auto-rows: auto; grid-template-areas: "vis" "now" "lyr" "notes"; }
-  .stagev:not(.lyrics) .sv-grid { grid-template-areas: "vis" "now" "notes"; }
-  .sv-vis { aspect-ratio: 1 / 1; }
-  .sv-title { font-size: 40px; } .sv-by { font-size: 18px; }
-  .sv-lyr .now { font-size: 22px; } .sv-lyr .nx { font-size: 16px; }
+  .sv-grid { position: relative; min-height: 100%; grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-auto-rows: auto; grid-template-areas: "vis" "tonight" "now" "lyr" "notes"; }
+  .stagev:not(.lyrics) .sv-grid { grid-template-areas: "vis" "tonight" "now" "notes"; }
+  .sv-vis { aspect-ratio: 16 / 9; }
+  .sv-title { font-size: 34px; } .sv-by { font-size: 20px; }
+  .sv-lyr .now { font-size: 24px; } .sv-lyr .nx { font-size: 18px; }
   #svNote p { font-size: 18px; } #svNote p.q { font-size: 20px; } #svNote b { font-size: 20px; }
-  #svNote.pic { grid-template-columns: 1fr; } #svNote.pic img { max-width: 60%; }
-  .sv-tonight { display: none; }
+  #svNote.pic { grid-template-columns: minmax(0, 1fr); } #svNote.pic img { max-width: 60%; }
+  .sv-tonight { grid-template-columns: minmax(0, 1fr); padding: 10px 16px; }
+  .sv-tonight > .pl, .sv-trail, .sv-keys, #svTrailNote, #svClock { display: none; }
+  .sv-stat { flex-wrap: wrap; white-space: normal; gap: 4px 14px; }
+  .sv-now .pl { flex-wrap: wrap; white-space: normal; }
+  .sv-exit .k { display: none; }
 }
 
 @media (max-width: 900px) {
@@ -334,6 +363,15 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
 }
 /* Hidden tooltips near the right edge of the chart used to widen the page on phones. clip (not hidden) keeps sticky positioning working. */
 html, body { overflow-x: clip; }
+/* The opening has to fit a 1366x768 laptop without scrolling to the title. */
+@media (max-height: 820px) {
+  .opening .inner { gap: 16px; padding-block: 24px; }
+  .opening h1 { font-size: clamp(48px, 13vh, 110px); }
+  .opening .lede { font-size: 18px; }
+  .coastline { height: 60px; }
+  .panel-intro { padding-top: 12px; }
+  .judge p { display: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .coastline path { stroke-dashoffset: 0; } .coastline circle { opacity: 1; }
@@ -372,7 +410,7 @@ html, body { overflow-x: clip; }
 
   <footer class="walk"><div class="wrap">
     <button class="step prev" id="prev" type="button"><span class="l">← West</span><span class="s"></span></button>
-    <div class="keys mono">← → walk · space play · K keep · A again · M map · T threads · S stage</div>
+    <div class="keys mono" id="pageKeys"></div>
     <button class="step next" id="next" type="button"><span class="l">East →</span><span class="s"></span></button>
   </div></footer>
 </div>
@@ -418,18 +456,20 @@ html, body { overflow-x: clip; }
   <div class="inner" id="endBody"></div>
 </section>
 
-<section class="stagev" id="stagev" hidden aria-label="Now playing in cliamp. Click or press Esc for the full page.">
+<section class="stagev" id="stagev" hidden aria-label="Now playing in cliamp. Press Esc for the full page.">
   <div class="sv-grid" id="svIn">
     <div class="pane sv-vis">
       <img class="bg" id="svBg" alt="">
       <img class="sv-still" id="svStillA" alt=""><img class="sv-still" id="svStillB" alt="">
+      <canvas class="sv-gl" id="svGl" aria-hidden="true"></canvas>
+      <div class="sv-empty" aria-hidden="true">♪</div>
       <div class="wash"></div>
-      <div class="sv-cover"><img id="svCover" alt=""><img class="artist" id="svArtist" alt=""></div>
-      <div class="sv-vid" aria-hidden="true"><div id="svVideo"></div></div>
-      <div class="pl" id="svVisLabel">•— cover</div>
+      <div class="sv-cover"><img id="svCover" alt=""></div>
+      <div class="sv-vid" aria-hidden="true"></div>
+      <div class="pl" id="svVisLabel">•— cliamp</div>
     </div>
     <div class="pane sv-now">
-      <div class="pl">•— now <span class="t sv-stamp" id="svStamp"></span></div>
+      <div class="pl">•— now <span class="t sv-stamp" id="svStamp"></span><button class="sv-exit" id="svExit" type="button" title="The full page for this journey (Esc)">full page<span class="k"> · Esc</span></button></div>
       <h2 class="sv-title" id="svTitle"></h2>
       <div class="sv-by" id="svBy"></div>
       <div class="sv-era" id="svEra"></div>
@@ -445,8 +485,8 @@ html, body { overflow-x: clip; }
     <div class="pane sv-tonight">
       <div class="pl">•— <span class="logo" id="svBrand"></span></div>
       <div class="sv-track"><div class="sv-bar" id="svBar"><i id="svFill"></i></div><svg class="sv-trail" id="svTrail" aria-hidden="true"></svg></div>
-      <div class="sv-stat"><span id="svToast"></span><span id="svPos"></span><span id="svLeft"></span><span id="svTrailNote"></span><span id="svLive"></span><span id="svClock"></span></div>
-      <div class="sv-keys" id="svKeys"><span><kbd>Esc</kbd>full page</span><span><kbd>K</kbd>keep</span><span><kbd>L</kbd>lyrics</span><span><kbd>[ ]</kbd>lyric timing</span><span><kbd>S</kbd>stage</span></div>
+      <div class="sv-stat"><span id="svToast"></span><span id="svPos"></span><span id="svTrailNote"></span><span id="svLive"></span><span id="svClock"></span></div>
+      <div class="sv-keys" id="svKeys"></div>
     </div>
   </div>
 </section>
@@ -457,7 +497,12 @@ html, body { overflow-x: clip; }
 <script>window.JOURNEY = /*__DATA__*/null;</script>
 <script>
 (() => {
-  const D = window.JOURNEY;
+  /* The data blob comes from liner_notes/build.py. A page built with no journey (/p/live.html) gets an empty one
+     and is only the live stage: whatever cliamp plays, with lyrics, a cover when the cache has one, and the trail. */
+  const RAW = window.JOURNEY || {};
+  const D = { slug: 'live', title: 'Liner Notes', titleA: 'Liner', titleB: 'Notes', kicker: '', lede: '', judges: {}, express: { note: '', n: [] }, eras: [], stops: [], ...RAW };
+  D.copy = { start: 'Start listening', express: 'Express route', companion: '', panelNote: '', resume: 'Back to', endKept: '', endEmpty: '', credits: '', ...(RAW.copy || {}) };
+  const LIVE = !!D.live || !D.stops.length;
   const $ = (s, r = document) => r.querySelector(s);
   const el = (tag, attrs = {}, ...kids) => {
     const n = document.createElement(tag);
@@ -470,22 +515,58 @@ html, body { overflow-x: clip; }
   };
   const stops = D.stops, eras = D.eras, judges = D.judges;
   const byN = new Map(stops.map(s => [s.n, s]));
-  const eraOf = s => eras.find(e => e.n === s.era);
+  const byId = new Map(stops.filter(s => s.id).map(s => [s.id, s]));
+  const byYt = new Map(stops.filter(s => s.yt).map(s => [s.yt, s]));
+  const eraOf = s => eras.find(e => e.n === s.era) || { n: 0, name: '', years: '', essay: '', image: '', scene: { cities: [], labels: [], gear: [], artifact: '' } };
   const pad = n => String(n).padStart(2, '0');
   const live = $('#live');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const sleep = ms => new Promise(res => setTimeout(res, ms));
+  const setText = (node, t) => { if (node.textContent !== t) node.textContent = t; };
+  const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} } };
+  // Restart a CSS animation without reading layout (the old `void el.offsetWidth` trick forced a reflow each time).
+  const replay = (node, cls) => { node.classList.remove(cls); requestAnimationFrame(() => node.classList.add(cls)); };
 
-  /* ---------- state in the URL hash, so a shared file carries the listener's place and keeps ---------- */
-  const state = { i: 0, keep: new Set(), lens: 'all', companion: false, drift: false, threads: false, seen: new Set(), erasShown: new Set(), started: false };
+  /* ---------- the bridge (liner-notes serve). A page it serves talks to its own origin and carries its token;
+     a shared copy opened from disk looks for one on this machine and can only read. ---------- */
+  const SERVED = /^https?:$/.test(location.protocol) && (/^(127\.0\.0\.1|localhost)$/.test(location.hostname) || location.pathname.startsWith('/p/'));
+  const BRIDGE = SERVED ? location.origin : 'http://127.0.0.1:47391';
+  const TOKEN = ($('meta[name="liner-token"]') || {}).content || '';
+  const fetchT = (url, ms = 4000, opt = {}) => { const c = new AbortController(), t = setTimeout(() => c.abort(), ms); return fetch(url, { cache: 'no-store', ...opt, signal: c.signal }).finally(() => clearTimeout(t)); };
+  async function bridgePost(path, body) {
+    try {
+      const r = await fetchT(BRIDGE + path, 4000, { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Liner-Token': TOKEN }, body: JSON.stringify(body) }), j = await r.json();
+      if (r.status === 403 && j && j.reason === 'token') staleToken();
+      return j;
+    } catch { return { ok: false }; }
+  }
+  /* A token the bridge no longer takes means this page came from an older bridge: load it again for the current
+     token, at most once a minute so a bridge that keeps refusing can't put the page in a loop. */
+  function staleToken() {
+    if (!SERVED) return;
+    let last = 0; try { last = +sessionStorage.getItem('liner-token-reload') || 0; } catch {}
+    if (Date.now() - last < 60000) return;
+    try { sessionStorage.setItem('liner-token-reload', String(Date.now())); } catch {}
+    location.reload();
+  }
+  /* Web fonts only in a shared copy. Served by the bridge, the page uses the desktop's fonts; its CSP allows no others. */
+  (() => { const f = ($('meta[name="liner-fonts"]') || {}).content || ''; if (!SERVED && /^https:\/\//.test(f)) document.head.append(el('link', { rel: 'stylesheet', href: f })); })();
+
+  /* ---------- state: the place and lens in the URL hash; keeps in the hash (so a copied link carries them) and in
+     localStorage per journey (so they survive the window closing) ---------- */
+  const state = { i: 0, keep: new Set(), lens: 'all', companion: LIVE, drift: false, threads: false, seen: new Set(), erasShown: new Set(), started: false };
+  const KEEP_KEY = 'liner-keeps-' + D.slug;
   const readHash = () => {
     const h = new URLSearchParams(location.hash.slice(1));
     const s = parseInt(h.get('s') || '', 10); if (s && byN.has(s)) state.i = stops.indexOf(byN.get(s));
     (h.get('k') || '').split(',').map(Number).filter(n => byN.has(n)).forEach(n => state.keep.add(n));
+    try { (JSON.parse(store.get(KEEP_KEY) || '[]') || []).forEach(id => { const x = byId.get(id); if (x) state.keep.add(x.n); }); } catch {}
     const l = h.get('l'); if (l && (l === 'express' || judges[l])) state.lens = l;
     if (h.has('companion')) state.companion = true;
     return h.has('s');
   };
   const writeHash = () => {
+    if (LIVE) return;
     const h = new URLSearchParams();
     h.set('s', stops[state.i].n);
     if (state.keep.size) h.set('k', [...state.keep].sort((a, b) => a - b).join(','));
@@ -493,19 +574,23 @@ html, body { overflow-x: clip; }
     if (state.companion) h.set('companion', '');
     history.replaceState(null, '', '#' + h.toString().replace(/=(&|$)/g, '$1'));
   };
-  const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} } };
+  const saveKeeps = () => store.set(KEEP_KEY, JSON.stringify([...state.keep].map(n => byN.get(n)).filter(s => s && s.id).map(s => s.id)));
 
   /* ---------- theme ---------- */
   const themeBtn = $('#themeBtn');
   const isDark = () => document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
   const syncThemeBtn = () => { themeBtn.textContent = isDark() ? 'Light' : 'Dark'; };
   const savedTheme = store.get('journey-theme'); if (savedTheme) document.documentElement.dataset.theme = savedTheme;
-  themeBtn.onclick = () => { const t = isDark() ? 'light' : 'dark'; document.documentElement.dataset.theme = t; store.set('journey-theme', t); syncThemeBtn(); };
+  // Canvas colours, read once per theme change rather than every frame.
+  const colors = { sea: '#74b8c4', amber: '#e0a35f' };
+  const readColors = () => { const css = getComputedStyle(document.documentElement); colors.sea = css.getPropertyValue('--sea').trim() || colors.sea; colors.amber = css.getPropertyValue('--amber').trim() || colors.amber; };
+  themeBtn.onclick = () => { const t = isDark() ? 'light' : 'dark'; document.documentElement.dataset.theme = t; store.set('journey-theme', t); syncThemeBtn(); readColors(); };
   syncThemeBtn();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', readColors);
 
   /* ---------- static text ---------- */
   document.title = D.title;
-  $('#brandTitle').innerHTML = ''; $('#brandTitle').append(D.titleA + ' ', el('i', { text: D.titleB }));
+  $('#brandTitle').append(D.titleA + ' ', el('i', { text: D.titleB }));
   $('#brandSub').textContent = D.kicker;
   $('#openKicker').textContent = D.kicker;
   $('#openTitle').append(D.titleA, el('br'), el('i', { text: D.titleB }));
@@ -514,14 +599,15 @@ html, body { overflow-x: clip; }
   $('#express').textContent = D.copy.express;
   $('#companionNote').textContent = D.copy.companion;
   $('#panelNote').textContent = D.copy.panelNote;
-  $('#openImg').src = eras[0].image;
-  for (const [id, j] of Object.entries(judges)) $('#panelIntro').append(el('div', { class: 'judge' }, el('b', { text: j.name }), el('span', { text: j.title }), el('p', { text: j.lens })));
+  if (eras[0] && eras[0].image) $('#openImg').src = eras[0].image;
+  for (const j of Object.values(judges)) $('#panelIntro').append(el('div', { class: 'judge' }, el('b', { text: j.name }), el('span', { text: j.title }), el('p', { text: j.lens })));
+  if (!D.express.n || !D.express.n.length) $('#express').hidden = true;
 
+  const yMin = stops.length ? Math.min(...stops.map(s => s.year)) : 0, yMax = stops.length ? Math.max(...stops.map(s => s.year)) : 0, span = yMax - yMin + 1;
   /* the opening coastline: one point per stop, years along x */
-  const yMin = Math.min(...stops.map(s => s.year)), yMax = Math.max(...stops.map(s => s.year)), span = yMax - yMin + 1;
-  (() => {
+  if (!LIVE) (() => {
     const svg = $('#openCoast'); const ns = 'http://www.w3.org/2000/svg';
-    const counts = {}; const pts = stops.map(s => { counts[s.year] = (counts[s.year] || 0) + 1; return [ (s.year - yMin + 0.5) / span * 1000, 18 + counts[s.year] * 11 ]; });
+    const counts = {}; const pts = stops.map(s => { counts[s.year] = (counts[s.year] || 0) + 1; return [(s.year - yMin + 0.5) / span * 1000, 18 + counts[s.year] * 11]; });
     const P = [[0, 18]]; for (let y = yMin; y <= yMax; y++) P.push([(y - yMin + 0.5) / span * 1000, 18 + (counts[y] || 0) * 11]); P.push([1000, 18]);
     let d = `M${P[0][0]} ${P[0][1]}`; for (let k = 0; k < P.length - 1; k++) { const [a, b] = [P[k], P[k + 1]]; const mx = (a[0] + b[0]) / 2; d += ` C${mx.toFixed(1)} ${a[1]} ${mx.toFixed(1)} ${b[1]} ${b[0].toFixed(1)} ${b[1]}`; }
     const p = document.createElementNS(ns, 'path'); p.setAttribute('d', d); svg.append(p);
@@ -534,7 +620,7 @@ html, body { overflow-x: clip; }
   eraRow.style.gridTemplateColumns = cols; years.style.gridTemplateColumns = cols;
   eras.forEach(e => eraRow.append(el('button', { type: 'button', style: `grid-column: ${e.from - yMin + 1} / span ${e.to - e.from + 1}`, 'data-era': e.n, title: e.name, onclick: () => showEra(e.n, true) }, e.name)));
   const dots = new Map();
-  for (let y = yMin; y <= yMax; y++) {
+  if (!LIVE) for (let y = yMin; y <= yMax; y++) {
     const e = eras.find(x => y >= x.from && y <= x.to);
     const here = stops.filter(s => s.year === y);
     const col = el('div', { class: 'yr' + (here.length ? '' : ' empty'), 'data-year': y, style: `background: var(${e && e.n === eras.length ? '--band-warm' : (e && e.n % 2 ? '--band-a' : '--band-b')})` }, el('div', { class: 'y', text: "'" + String(y).slice(2) }));
@@ -548,7 +634,7 @@ html, body { overflow-x: clip; }
   /* ---------- lenses ---------- */
   const lensSet = () => state.lens === 'all' ? null : new Set(state.lens === 'express' ? D.express.n : stops.filter(s => s.judge === state.lens).map(s => s.n));
   const lensBox = $('#lenses');
-  const lensBtns = [['all', 'All 49'.replace('49', stops.length)], ['express', 'Express'], ...Object.entries(judges).map(([k, j]) => [k, j.name.split(' ')[0]])];
+  const lensBtns = [['all', `All ${stops.length}`], ...(D.express.n && D.express.n.length ? [['express', 'Express']] : []), ...Object.entries(judges).map(([k, j]) => [k, j.name.split(' ')[0]])];
   lensBtns.forEach(([k, label], idx) => lensBox.append(el('button', { class: 'chip', type: 'button', 'data-lens': k, 'aria-pressed': 'false', title: k === 'all' ? 'Every stop (0)' : k === 'express' ? D.express.note : `${judges[k].name}, ${judges[k].title}. Walk only the stops where they speak (${idx - 1})`, onclick: () => setLens(k) }, label)));
   function setLens(k) {
     state.lens = k;
@@ -557,7 +643,7 @@ html, body { overflow-x: clip; }
     dots.forEach((b, n) => b.classList.toggle('dim', !!set && !set.has(n)));
     if (set && !set.has(stops[state.i].n)) { const nx = stops.findIndex(s => set.has(s.n)); if (nx >= 0) return go(nx); }
     updateWalk(); writeHash();
-    live.textContent = k === 'all' ? 'Walking every stop.' : k === 'express' ? 'Express route: five stops.' : `Walking ${judges[k].name}'s stops.`;
+    live.textContent = k === 'all' ? 'Walking every stop.' : k === 'express' ? 'Express route.' : `Walking ${judges[k].name}'s stops.`;
   }
 
   /* ---------- audio: one element, Web Audio for fades and the analyser ---------- */
@@ -581,7 +667,7 @@ html, body { overflow-x: clip; }
     if (audio.dataset.n !== String(s.n)) { audio.src = s.preview; audio.dataset.n = s.n; }
     if (fromStart) audio.currentTime = 0;
     fadingOut = false; if (gain) gain.gain.value = 0; ramp(1, reduced ? 0.05 : 1.2);
-    try { await audio.play(); setPaused(false); setStatus(''); } catch (e) { setPaused(true); setStatus('Press play to hear a taste.'); }
+    try { await audio.play(); setPaused(false); setStatus(''); kickDraw(); } catch (e) { setPaused(true); setStatus('Press play to hear a taste.'); }
   };
   const stopAudio = (secs = 0.5) => new Promise(res => { if (audio.paused) return res(); ramp(0, secs); setTimeout(() => { audio.pause(); res(); }, secs * 1000); });
   audio.addEventListener('timeupdate', () => {
@@ -589,13 +675,13 @@ html, body { overflow-x: clip; }
     if (!fadingOut && d - t < 2.6 && d > 5) { fadingOut = true; ramp(0, Math.max(0.3, d - t - 0.1)); }
   });
   audio.addEventListener('ended', () => { setPaused(true); markSeen(); if (state.drift) setTimeout(() => step(1, true), 900); });
-  const setPaused = p => { const st = $('#stop'); st && st.classList.toggle('paused', p); const b = $('#playBtn'); if (b) { b.setAttribute('aria-label', p ? 'Play the preview' : 'Pause the preview'); b.querySelector('svg').innerHTML = p ? '<path d="M7 4l14 8-14 8z"/>' : '<path d="M6 4h4v16H6zM14 4h4v16h-4z"/>'; } };
+  const setPaused = p => { const st = $('#stop'); st && st.classList.toggle('paused', p); const b = $('#playBtn'); if (b) { b.setAttribute('aria-label', p ? 'Play' : 'Pause'); b.querySelector('svg').innerHTML = p ? '<path d="M7 4l14 8-14 8z"/>' : '<path d="M6 4h4v16H6zM14 4h4v16h-4z"/>'; } };
   const setStatus = t => { const s = $('#pstatus'); if (s) s.textContent = t; };
   const togglePlay = () => { if (sync.on) return syncPlay(); if (audio.paused || audio.dataset.n !== String(stops[state.i].n)) playPreview(audio.dataset.n !== String(stops[state.i].n)); else stopAudio(0.4).then(() => setPaused(true)); };
 
-  /* ---------- the sounding rings around the cover, and the tide line under the chart ---------- */
-  const tide = $('#tide'); let t0 = performance.now();
-  const rings = (cv, t, playing, bass, sea, amber) => {
+  /* ---------- the sounding rings around the cover, and the tide line under the chart (full page only) ---------- */
+  const tide = $('#tide'); const t0 = performance.now();
+  const rings = (cv, t, playing, bass) => {
     if (!cv || !cv.clientWidth) return;
     const w = cv.clientWidth, h = cv.clientHeight, dpr = devicePixelRatio || 1;
     if (cv.width !== w * dpr) { cv.width = w * dpr; cv.height = h * dpr; }
@@ -605,19 +691,23 @@ html, body { overflow-x: clip; }
       const phase = ((t * (playing ? 0.35 : 0.12)) + r / 4) % 1;
       const rad = base * (1.0 + phase * 0.34 + (playing ? bass * 0.08 : 0));
       g.beginPath(); g.arc(cx, cy, rad, 0, Math.PI * 2);
-      g.strokeStyle = r % 2 ? sea : amber; g.globalAlpha = (1 - phase) * (playing ? 0.35 + bass * 0.6 : 0.18); g.lineWidth = 1 + (playing ? bass * 3 : 0); g.stroke();
+      g.strokeStyle = r % 2 ? colors.sea : colors.amber; g.globalAlpha = (1 - phase) * (playing ? 0.35 + bass * 0.6 : 0.18); g.lineWidth = 1 + (playing ? bass * 3 : 0); g.stroke();
     }
     g.globalAlpha = 1;
   };
-  const draw = () => {
-    const now = performance.now(), t = (now - t0) / 1000;
-    const clPlaying = !!(sync.on && sync.now && sync.now.state === 'playing' && sync.bands && stops[state.i].yt === sync.now.yt);
-    let bass = 0, mids = 0, playing = (!audio.paused && audioOk) || clPlaying;
-    if (clPlaying) { const b = sync.bands; bass = Math.min(1, (b[0] + b[1] + b[2]) / 3); mids = Math.min(1, (b[3] + b[4] + b[5]) / 3); sync.hist.push(bass); if (sync.hist.length > 400) sync.hist.shift(); }
-    else if (playing) { analyser.getByteFrequencyData(freq); for (let k = 1; k < 8; k++) bass += freq[k]; bass /= 7 * 255; for (let k = 8; k < 60; k++) mids += freq[k]; mids /= 52 * 255; }
-    const css = getComputedStyle(document.documentElement); const sea = css.getPropertyValue('--sea').trim(), amber = css.getPropertyValue('--amber').trim();
-    if (stg.on) tickStage(now, t, sea, amber);
-    else rings($('#rings'), t, playing, bass, sea, amber);
+  /* Runs at display rate only while something sounds; otherwise at 10 frames a second, and not at all under the
+     stage, in a hidden tab, or (when still) with reduced motion. */
+  let drawRaf = 0, drawT = 0;
+  const kickDraw = () => { if (drawRaf || drawT || !state.started || stg.on || document.hidden || LIVE) return; drawRaf = requestAnimationFrame(draw); };
+  function draw() {
+    drawRaf = 0;
+    if (!state.started || stg.on || document.hidden) return;
+    const now = performance.now(), t = (now - t0) / 1000, cur = stops[state.i];
+    const clPlaying = !!(sync.on && sync.now && sync.now.state === 'playing' && sync.bands && stopFor(sync.now) === cur);
+    let bass = 0, playing = (!audio.paused && audioOk) || clPlaying;
+    if (clPlaying) { const b = sync.bands; bass = Math.min(1, (b[0] + b[1] + b[2]) / 3); sync.hist.push(bass); if (sync.hist.length > 400) sync.hist.shift(); }
+    else if (playing) { analyser.getByteFrequencyData(freq); for (let k = 1; k < 8; k++) bass += freq[k]; bass /= 7 * 255; }
+    rings($('#rings'), t, playing, bass);
     const tw = tide.clientWidth, th = tide.clientHeight, dpr = devicePixelRatio || 1;
     if (tide.width !== tw * dpr) { tide.width = tw * dpr; tide.height = th * dpr; }
     const g2 = tide.getContext('2d'); g2.setTransform(dpr, 0, 0, dpr, 0, 0); g2.clearRect(0, 0, tw, th);
@@ -625,15 +715,17 @@ html, body { overflow-x: clip; }
     if (clPlaying) { const H = sync.hist; for (let x = 0; x < tw; x++) { const v = H[Math.max(0, H.length - 1 - Math.floor((tw - x) / tw * H.length))] || 0; const y = th / 2 + Math.sin(x / 9 + t * 6) * v * th * 0.42; x ? g2.lineTo(x, y) : g2.moveTo(x, y); } }
     else if (playing) { analyser.getByteTimeDomainData(wave); const stepN = Math.max(1, Math.floor(wave.length / tw)); for (let x = 0; x < tw; x++) { const v = (wave[Math.min(wave.length - 1, x * stepN)] - 128) / 128; const y = th / 2 + v * th * 0.45; x ? g2.lineTo(x, y) : g2.moveTo(x, y); } }
     else { for (let x = 0; x <= tw; x += 4) { const y = th / 2 + Math.sin(x / 38 + t * 0.8) * 2.2 + Math.sin(x / 91 - t * 0.5) * 1.6; x ? g2.lineTo(x, y) : g2.moveTo(x, y); } }
-    g2.strokeStyle = playing ? amber : sea; g2.globalAlpha = playing ? 0.8 : 0.45; g2.lineWidth = 1.2; g2.stroke(); g2.globalAlpha = 1;
-    if (sync.on && sync.now && stops[state.i].yt === sync.now.yt) { const pb = $('#pbar'); const pos = sync.now.position + (sync.now.state === 'playing' ? (now - sync.at) / 1000 : 0); if (pb && sync.now.duration) pb.style.width = Math.min(100, pos / sync.now.duration * 100) + '%'; }
-    if (!reduced || playing || sync.on) requestAnimationFrame(draw);
-  };
+    g2.strokeStyle = playing ? colors.amber : colors.sea; g2.globalAlpha = playing ? 0.8 : 0.45; g2.lineWidth = 1.2; g2.stroke(); g2.globalAlpha = 1;
+    if (sync.on && sync.now && stopFor(sync.now) === cur) { const pb = $('#pbar'); if (pb && sync.now.duration) pb.style.width = Math.min(100, posNow(now) / sync.now.duration * 100) + '%'; }
+    if (playing) drawRaf = requestAnimationFrame(draw);
+    else if (!reduced || sync.on) drawT = setTimeout(() => { drawT = 0; kickDraw(); }, 100);
+  }
 
   /* ---------- threads drawn across the chart ---------- */
   const threadSvg = $('#threadSvg');
   const drawThreads = (hotTo) => {
-    threadSvg.innerHTML = '';
+    threadSvg.replaceChildren();
+    if (LIVE || stg.on) return;
     const s = stops[state.i]; if (!s.threads.length || (!state.threads && hotTo == null)) return;
     const box = $('#coast').getBoundingClientRect(); threadSvg.setAttribute('viewBox', `0 0 ${box.width} ${box.height}`); threadSvg.setAttribute('width', box.width); threadSvg.setAttribute('height', box.height);
     const c = n => { const r = dots.get(n).getBoundingClientRect(); return [r.left - box.left + r.width / 2, r.top - box.top + r.height / 2]; };
@@ -650,30 +742,32 @@ html, body { overflow-x: clip; }
 
   /* ---------- scene photograph crossfade ---------- */
   let sceneFlip = false, sceneEra = 0;
-  const setScene = n => { if (n === sceneEra) return; sceneEra = n; const a = $('#sceneA'), b = $('#sceneB'); const [on, off] = sceneFlip ? [a, b] : [b, a]; sceneFlip = !sceneFlip; on.src = eraOf(stops[state.i]).image; on.classList.add('on'); off.classList.remove('on'); };
+  const setScene = n => { if (n === sceneEra) return; sceneEra = n; const a = $('#sceneA'), b = $('#sceneB'); const [on, off] = sceneFlip ? [a, b] : [b, a]; sceneFlip = !sceneFlip; const img = eraOf(stops[state.i]).image; if (img) on.src = img; on.classList.add('on'); off.classList.remove('on'); };
 
   /* ---------- render one stop ---------- */
   const svgPlay = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l14 8-14 8z"/></svg>';
   function render() {
+    if (LIVE) return;
     const s = stops[state.i], e = eraOf(s), j = judges[s.judge] || null;
-    const root = $('#stop'); root.innerHTML = ''; root.className = 'stop paused';
+    const root = $('#stop'); root.replaceChildren(); root.className = 'stop paused';
+    const playBtn = el('button', { class: 'play', id: 'playBtn', type: 'button', 'aria-label': 'Play', onclick: togglePlay }, el('span'));
+    playBtn.firstChild.innerHTML = svgPlay;
     const left = el('div', { class: 'left' },
-      el('div', { class: 'cover' }, el('canvas', { id: 'rings', 'aria-hidden': 'true' }), el('img', { src: s.cover, alt: `Cover of ${s.album || s.title}` }),
-        el('button', { class: 'play', id: 'playBtn', type: 'button', 'aria-label': 'Play the preview', onclick: togglePlay }, (() => { const sp = el('span'); sp.innerHTML = svgPlay; return sp; })())),
+      el('div', { class: 'cover' }, el('canvas', { id: 'rings', 'aria-hidden': 'true' }), el('img', { src: s.cover, alt: `Cover of ${s.album || s.title}` }), playBtn),
       el('div', { class: 'bar' }, el('i', { id: 'pbar' })),
       el('div', { class: 'acts' },
         el('button', { class: 'act', type: 'button', 'aria-pressed': String(state.keep.has(s.n)), id: 'keepBtn', onclick: toggleKeep }, state.keep.has(s.n) ? 'Kept' : 'Keep'),
         sync.on ? null : el('button', { class: 'act', type: 'button', onclick: () => playPreview(true) }, 'Again'),
-        el('a', { class: 'act', href: s.youtube, target: '_blank', rel: 'noopener' }, 'Full track ↗'),
+        s.youtube ? el('a', { class: 'act', href: s.youtube, target: '_blank', rel: 'noopener' }, 'Full track ↗') : null,
         s.apple ? el('a', { class: 'act', href: s.apple, target: '_blank', rel: 'noopener' }, 'Apple Music ↗') : null,
         s.preview && s.apple ? el('span', { class: 'act mono', style: 'border:0', text: 'Preview provided courtesy of iTunes' }) : null),
-      el('div', { class: 'status mono', id: 'pstatus' }, sync.on ? syncStatus(s) : s.preview ? (state.companion ? 'Companion mode: previews stay quiet until you press play.' : '') : 'No preview here. The full track link plays it.'));
+      el('div', { class: 'status mono', id: 'pstatus' }, sync.on ? syncStatus(s) : s.preview ? '' : 'No preview here. The full track link plays it.'));
     const right = el('div', { class: 'right reveal' },
-      el('div', { class: 'stamp mono' }, el('span', { text: `Stop ${pad(s.n)} of ${stops.length}` }), el('span', { class: 'era', text: e.name }), el('span', { class: 'yy', text: String(s.year) }), s.album ? el('span', { text: s.album }) : null, s.dissent ? el('span', { class: 'badge', text: 'Close call' }) : null, s.draft ? el('span', { class: 'badge', title: 'Written and sourced, not yet checked by a person', text: 'Draft notes' }) : null),
+      el('div', { class: 'stamp mono' }, el('span', { text: `Stop ${pad(s.n)} of ${stops.length}` }), e.name ? el('span', { class: 'era', text: e.name }) : null, el('span', { class: 'yy', text: String(s.year) }), s.album ? el('span', { text: s.album }) : null, s.dissent ? el('span', { class: 'badge', text: 'Close call' }) : null, s.draft ? el('span', { class: 'badge', title: 'Written and sourced, not yet checked by a person', text: 'Draft notes' }) : null),
       el('div', {}, el('h1', { class: 'title', text: s.title }), el('div', { class: 'by', text: s.artist })),
       s.quote && j ? el('figure', { class: 'quote' }, el('blockquote', { text: `“${s.quote}”` }),
         el('figcaption', { class: 'mono' }, el('button', { type: 'button', title: `Walk ${j.name}'s stops`, onclick: () => setLens(s.judge) }, `${j.name}, ${j.title}`), s.dissent ? el('span', { text: '· voted it a close call' }) : null)) : null,
-      s.listen.length ? el('section', { class: 'sec' }, el('h2', { text: 'Listen for' }), el('ul', { class: 'listen' }, s.listen.map(l => el('li', {}, el('div', {}, el('span', { class: 'w', text: l.where }), l.note))))) : null,
+      s.listen && s.listen.length ? el('section', { class: 'sec' }, el('h2', { text: 'Listen for' }), el('ul', { class: 'listen' }, s.listen.map(l => el('li', {}, el('div', {}, el('span', { class: 'w', text: l.where }), l.note))))) : null,
       s.made ? el('section', { class: 'sec' }, el('h2', { text: 'How it was made' }), el('p', { text: s.made })) : null,
       s.context ? el('section', { class: 'sec' }, el('h2', { text: 'What was going on' }), el('p', { text: s.context })) : null,
       s.leads ? el('section', { class: 'sec' }, el('h2', { text: 'Where it leads' }), el('div', { class: 'leads' },
@@ -682,17 +776,19 @@ html, body { overflow-x: clip; }
         el('a', { href: 'https://www.youtube.com/results?search_query=' + encodeURIComponent(`${s.leads.artist} ${s.leads.title}`), target: '_blank', rel: 'noopener', class: 'mono' }, 'Find it ↗'))) : null,
       s.threads.length ? el('section', { class: 'sec' }, el('h2', { text: 'Threads' }), el('div', { class: 'threadlist' }, s.threads.filter(t => byN.has(t.to)).map(t => { const o = byN.get(t.to); return el('button', { class: 'thread', type: 'button', onmouseenter: () => drawThreads(t.to), onfocus: () => drawThreads(t.to), onmouseleave: () => drawThreads(), onblur: () => drawThreads(), onclick: () => go(stops.indexOf(o)) }, el('span', { class: 'k', text: t.kind }), el('span', { class: 'to' }, o.title, el('small', { text: `${o.artist} · ${o.year}` })), el('span', { class: 'n', text: t.note })); }))) : null,
       el('section', { class: 'sec' }, s.yearNote ? el('p', { class: 'yearnote', text: s.yearNote }) : null,
-        s.sources.length ? el('details', { class: 'src' }, el('summary', { text: `Sources (${s.sources.length})` }), el('ol', {}, s.sources.map(u => el('li', {}, el('a', { href: u, target: '_blank', rel: 'noopener', text: u.replace(/^https?:\/\/(www\.)?/, '') }))))) : null));
+        s.sources && s.sources.length ? el('details', { class: 'src' }, el('summary', { text: `Sources (${s.sources.length})` }), el('ol', {}, s.sources.map(u => el('li', {}, el('a', { href: u, target: '_blank', rel: 'noopener', text: u.replace(/^https?:\/\/(www\.)?/, '') }))))) : null));
     root.append(left, right);
     dots.forEach((b, n) => { b.classList.toggle('here', n === s.n); b.classList.toggle('kept', state.keep.has(n)); b.classList.toggle('seen', state.seen.has(n) && n !== s.n); });
-    document.querySelectorAll('.yr').forEach(c => c.classList.toggle('here', +c.dataset.year === s.year));
+    years.querySelectorAll('.yr').forEach(c => c.classList.toggle('here', +c.dataset.year === s.year));
     eraRow.querySelectorAll('button').forEach(b => b.classList.toggle('here', +b.dataset.era === s.era));
-    const d = dots.get(s.n); const sc = $('#chartScroll'); const dr = d.getBoundingClientRect(), sr = sc.getBoundingClientRect();
-    if (dr.left < sr.left + 40 || dr.right > sr.right - 40) sc.scrollTo({ left: sc.scrollLeft + dr.left - sr.left - sr.width / 2, behavior: reduced ? 'auto' : 'smooth' });
-    setScene(s.era); updateWalk(); drawThreads(); writeHash();
-    if (sync.on) setPaused(!(sync.now && sync.now.yt === s.yt && sync.now.state === 'playing'));
-    live.textContent = `Stop ${s.n} of ${stops.length}. ${s.title}, ${s.artist}, ${s.year}. ${j ? `${j.name}: ${s.quote}` : ''}`;
-    document.title = `${s.title} · ${D.title}`;
+    if (!stg.on) {
+      const d = dots.get(s.n); const sc = $('#chartScroll'); const dr = d.getBoundingClientRect(), sr = sc.getBoundingClientRect();
+      if (dr.left < sr.left + 40 || dr.right > sr.right - 40) sc.scrollTo({ left: sc.scrollLeft + dr.left - sr.left - sr.width / 2, behavior: reduced ? 'auto' : 'smooth' });
+    }
+    setScene(s.era); updateWalk(); drawThreads(); writeHash(); paintPageKeys();
+    if (sync.on) setPaused(!(sync.now && stopFor(sync.now) === s && sync.now.state === 'playing'));
+    live.textContent = `Stop ${s.n} of ${stops.length}. ${s.title}, ${s.artist}, ${s.year}.${j && s.quote ? ` ${j.name}: ${s.quote}` : ''}`;
+    if (!stg.on) document.title = `${s.title} · ${D.title}`;
   }
 
   /* ---------- walking ---------- */
@@ -705,37 +801,39 @@ html, body { overflow-x: clip; }
     if (nx != null) { N.querySelector('.s').textContent = stops[nx].title; N.querySelector('.l').textContent = `East · ${stops[nx].year} →`; }
     else { N.querySelector('.s').textContent = 'Your flight'; N.querySelector('.l').textContent = 'The end →'; }
   }
-  const markSeen = () => { state.seen.add(stops[state.i].n); };
+  const markSeen = () => { if (!LIVE) state.seen.add(stops[state.i].n); };
   async function go(k, auto = false) {
-    if (k == null || k < 0 || k >= stops.length) return;
+    if (LIVE || k == null || k < 0 || k >= stops.length) return;
     if (auto !== 'follow' && sync.on && sync.follow && k !== state.i) setFollow(false);
     markSeen();
     const prevEra = stops[state.i].era; state.i = k; const s = stops[k];
     await stopAudio(reduced ? 0.05 : 0.6);
-    render(); window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+    render(); if (!stg.on) window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
     if (s.era !== prevEra && !state.erasShown.has(s.era) && state.started && !stg.on) return showEra(s.era, false, auto === 'follow');
-    if (sync.on) setPaused(!(sync.now && sync.now.yt === s.yt && sync.now.state === 'playing'));
+    if (sync.on) setPaused(!(sync.now && stopFor(sync.now) === s && sync.now.state === 'playing'));
     else if (!state.companion || auto === true) playPreview(true);
   }
   function step(dir, auto = false) { const k = neighbor(dir); if (k == null) { if (dir > 0) showEnding(); return; } go(k, auto); }
   $('#prev').onclick = () => step(-1); $('#next').onclick = () => step(1);
 
   /* ---------- keeping ---------- */
-  function toggleKeep() {
-    const n = stops[state.i].n; state.keep.has(n) ? state.keep.delete(n) : state.keep.add(n);
-    const b = $('#keepBtn'); b.setAttribute('aria-pressed', String(state.keep.has(n))); b.textContent = state.keep.has(n) ? 'Kept' : 'Keep';
-    dots.get(n).classList.toggle('kept', state.keep.has(n)); writeHash();
+  function toggleKeep(n = stops[state.i].n) {
+    state.keep.has(n) ? state.keep.delete(n) : state.keep.add(n);
+    const b = $('#keepBtn'); if (b && stops[state.i].n === n) { b.setAttribute('aria-pressed', String(state.keep.has(n))); b.textContent = state.keep.has(n) ? 'Kept' : 'Keep'; }
+    const d = dots.get(n); if (d) d.classList.toggle('kept', state.keep.has(n));
+    saveKeeps(); writeHash();
     live.textContent = state.keep.has(n) ? 'Kept. It travels with the link.' : 'Removed from your keeps.';
   }
 
   /* ---------- era card ---------- */
   function showEra(n, manual = false, autoClose = false) {
-    const e = eras.find(x => x.n === n); state.erasShown.add(n);
-    $('#eraImg').src = e.image; $('#eraNum').textContent = `Era ${n} of ${eras.length} · ${e.years}`; $('#eraTitle').textContent = e.name; $('#eraEssay').textContent = e.essay;
-    const f = $('#eraFacts'); f.innerHTML = '';
+    const e = eras.find(x => x.n === n); if (!e) return; state.erasShown.add(n);
+    if (e.image) $('#eraImg').src = e.image; $('#eraNum').textContent = `Era ${n} of ${eras.length} · ${e.years}`; $('#eraTitle').textContent = e.name; $('#eraEssay').textContent = e.essay;
+    const f = $('#eraFacts'); f.replaceChildren();
     const fact = (h, t) => t && f.append(el('div', {}, el('h3', { text: h }), el('p', { text: t })));
-    fact('Where', e.scene.cities.join(', ')); fact('Labels', e.scene.labels.join(', ')); fact('Gear', e.scene.gear.join(', ')); fact('The artifact', e.scene.artifact);
-    const sg = $('#eraSongs'); sg.innerHTML = ''; stops.filter(s => s.era === n).forEach(s => sg.append(el('span', { text: `${s.title}` })));
+    const sc = e.scene || {};
+    fact('Where', (sc.cities || []).join(', ')); fact('Labels', (sc.labels || []).join(', ')); fact('Gear', (sc.gear || []).join(', ')); fact('The artifact', sc.artifact);
+    const sg = $('#eraSongs'); sg.replaceChildren(); stops.filter(s => s.era === n).forEach(s => sg.append(el('span', { text: `${s.title}` })));
     stopAudio(0.4).then(() => setPaused(true));
     open('#eracard');
     if (autoClose) setTimeout(() => { if (!$('#eracard').hidden && $('#eraTitle').textContent === e.name) $('#eraGo').click(); }, 7000);
@@ -744,7 +842,7 @@ html, body { overflow-x: clip; }
 
   /* ---------- map ---------- */
   function showMap() {
-    const body = $('#mapBody'); body.innerHTML = '';
+    const body = $('#mapBody'); body.replaceChildren();
     eras.forEach(e => body.append(el('div', { class: 'era' }, el('h3', { text: `${e.name} · ${e.years}` }), el('ol', {}, stops.filter(s => s.era === e.n).map(s => el('li', { class: state.keep.has(s.n) ? 'kept' : '' }, el('button', { type: 'button', onclick: () => { close('#map'); go(stops.indexOf(s)); } }, el('img', { src: s.cover, alt: '' }), el('div', {}, el('div', { class: 't', text: `${pad(s.n)}  ${s.title}` }), el('div', { class: 'a', text: `${s.artist} · ${s.year}${s.dissent ? ' · close call' : ''}` })))))))));
     open('#map');
   }
@@ -753,14 +851,14 @@ html, body { overflow-x: clip; }
   /* ---------- ending ---------- */
   function showEnding() {
     markSeen(); stopAudio(1.5).then(() => setPaused(true));
-    const body = $('#endBody'); body.innerHTML = '';
+    const body = $('#endBody'); body.replaceChildren();
     const kept = [...state.keep].sort((a, b) => a - b).map(n => byN.get(n));
     const link = location.href.split('#')[0] + '#' + new URLSearchParams({ s: stops[0].n, k: kept.map(s => s.n).join(',') }).toString();
     body.append(
       el('div', { class: 'mono', style: 'color: var(--sea)', text: `${D.title} · ${state.seen.size} of ${stops.length} stops heard` }),
       el('h2', { text: kept.length ? 'Your flight' : 'The tide goes out' }),
       el('p', { class: 'lede', style: 'max-width: 60ch; color: var(--mid); margin: 0', text: kept.length ? D.copy.endKept : D.copy.endEmpty }),
-      kept.length ? el('ol', { class: 'kept-list' }, kept.map(s => el('li', {}, el('img', { src: s.cover, alt: '' }), el('div', {}, el('div', { style: 'font-family: var(--display); font-size: 20px', text: s.title }), el('div', { class: 'mono', style: 'color: var(--faint)', text: `${s.artist} · ${s.year}` })), el('a', { class: 'act', href: s.youtube, target: '_blank', rel: 'noopener' }, 'Play ↗')))) : null,
+      kept.length ? el('ol', { class: 'kept-list' }, kept.map(s => el('li', {}, el('img', { src: s.cover, alt: '' }), el('div', {}, el('div', { style: 'font-family: var(--display); font-size: 20px', text: s.title }), el('div', { class: 'mono', style: 'color: var(--faint)', text: `${s.artist} · ${s.year}` })), s.youtube ? el('a', { class: 'act', href: s.youtube, target: '_blank', rel: 'noopener' }, 'Play ↗') : el('span')))) : null,
       el('div', { class: 'go' },
         kept.length ? el('button', { class: 'big', type: 'button', onclick: async (ev) => { try { await navigator.clipboard.writeText(link); ev.target.textContent = 'Link copied'; } catch { prompt('Copy this link', link); } } }, 'Copy the link with your keeps') : null,
         el('button', { class: 'ghost', type: 'button', onclick: () => { close('#ending'); go(0); } }, 'Start again'),
@@ -779,111 +877,178 @@ html, body { overflow-x: clip; }
   const drift = $('#drift'); drift.onclick = () => { state.drift = !state.drift; drift.setAttribute('aria-pressed', String(state.drift)); live.textContent = state.drift ? 'Drift on: each preview plays and moves on.' : 'Drift off.'; if (state.drift && audio.paused) playPreview(true); };
   const thBtn = $('#threadsBtn'); thBtn.onclick = () => { state.threads = !state.threads; thBtn.setAttribute('aria-pressed', String(state.threads)); drawThreads(); };
 
-  /* ---------- keyboard ---------- */
+  /* ---------- keys. One map per screen, and each screen's hint row lists exactly what works there.
+     Stage: Space play/pause, ← → previous/next song in cliamp, K keep, L lyrics (this sitting only), [ ] and { } lyric
+     timing, N or Enter for this song's full notes, Esc for the full page. Full page: ← → walk the stops. ---------- */
+  const kb = (keys, what) => el('span', {}, ...keys.map(k => el('kbd', { text: k })), what);
+  function paintPageKeys() {
+    const ks = [['← →', 'walk'], ['Space', sync.on ? 'play this in cliamp' : 'play'], ['K', 'keep']];
+    if (!sync.on) ks.push(['A', 'again'], ['D', 'drift']);
+    ks.push(['M', 'map'], ['T', 'threads'], ['E', 'era']);
+    if (sync.on) ks.push(['S', 'stage'], ['F', 'follow']);
+    $('#pageKeys').textContent = ks.map(([k, w]) => `${k} ${w}`).join(' · ');
+  }
+  let stageKeysSig = '';
+  function paintStageKeys() {
+    const ks = [];
+    if (sync.on) ks.push([['Space'], 'play/pause'], [['←', '→'], 'song']);
+    if (stg.s) ks.push([['K'], 'keep']);
+    ks.push([['L'], 'lyrics']);
+    if (stg.lines) ks.push([['[', ']'], 'lyric timing'], [['{', '}'], 'every song']);
+    if (stg.s) ks.push([['N'], 'this song’s notes']);
+    if (!LIVE) ks.push([['Esc'], 'full page']);
+    const sig = JSON.stringify(ks); if (sig === stageKeysSig) return; stageKeysSig = sig;
+    $('#svKeys').replaceChildren(...ks.map(([k, w]) => kb(k, w)));
+  }
   addEventListener('keydown', ev => {
     if (ev.target.closest && ev.target.closest('input, textarea')) return;
     if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
-    if (stg.on) {
-      const k = ev.key.toLowerCase(); showKeys();
-      if (k === 'escape' || k === 's') exitStage();
-      else if (k === '[' || k === ']') nudgeLyrics(k === ']' ? 0.5 : -0.5);
-      else if (k === 'l') toggleLyrics();
-      else if (k === 'k' && stg.s && stops[state.i] === stg.s) { toggleKeep(); paintStamp(); }
-      else if (k === ' ' && sync.on) syncPlay();
-      else return;
-      ev.preventDefault(); return;
-    }
+    if (stg.on) return stageKey(ev);
     const o = anyOpen();
     if (ev.key === 'Escape') { if (o === '#eracard') $('#eraGo').click(); else if (o && o !== '#opening') close(o); return; }
     if (o === '#eracard' && (ev.key === 'Enter' || ev.key === 'ArrowRight')) { ev.preventDefault(); $('#eraGo').click(); return; }
-    if (o) return;
+    if (o || LIVE) return;
     const k = ev.key.toLowerCase();
-    if (k === 'arrowright' || k === 'l') { ev.preventDefault(); step(1); }
-    else if (k === 'arrowleft' || k === 'h') { ev.preventDefault(); step(-1); }
+    if (k === 'arrowright') { ev.preventDefault(); step(1); }
+    else if (k === 'arrowleft') { ev.preventDefault(); step(-1); }
     else if (k === ' ') { if (ev.target.closest('button, a')) return; ev.preventDefault(); togglePlay(); }
     else if (k === 'k') toggleKeep();
-    else if (k === 'a') playPreview(true);
+    else if (k === 'a' && !sync.on) playPreview(true);
+    else if (k === 'd' && !sync.on) drift.click();
     else if (k === 'm') showMap();
     else if (k === 't') thBtn.click();
-    else if (k === 'd') drift.click();
     else if (k === 'e') showEra(stops[state.i].era);
     else if (k === 's' && sync.on) enterStage();
     else if (k === 'f' && sync.on) setFollow(!sync.follow);
-    else if (/^[0-6]$/.test(k)) { const keys = ['all', 'express', ...Object.keys(judges)]; const tgt = k === '0' ? 'all' : keys[+k]; if (tgt) setLens(tgt); }
+    else if (/^[0-6]$/.test(k)) { const keys = ['all', 'express', ...Object.keys(judges)]; const tgt = k === '0' ? 'all' : keys[+k]; if (tgt && (tgt === 'all' || tgt === 'express' ? true : judges[tgt])) setLens(tgt); }
   });
+  function stageKey(ev) {
+    const k = ev.key, lk = k.toLowerCase(); showKeys();
+    if (k === 'Escape') { if (LIVE) return; exitStage(); }
+    else if (lk === 'n' || k === 'Enter') { if (!stg.s) return; exitStage(); if (stops[state.i] !== stg.s) go(stops.indexOf(stg.s), 'follow'); }
+    else if (k === ' ') cmd('toggle');
+    else if (k === 'ArrowRight') cmd('next');
+    else if (k === 'ArrowLeft') cmd('prev');
+    else if (lk === 'k' && stg.s) { toggleKeep(stg.s.n); paintStamp(); toast(state.keep.has(stg.s.n) ? '♥ Kept' : 'No longer kept'); }
+    else if (lk === 'l') toggleLyrics();
+    else if (k === '[' || k === ']') nudgeLyrics(k === ']' ? 0.5 : -0.5);
+    else if (k === '{' || k === '}') nudgeLead(k === '{' ? 0.05 : -0.05);
+    else return;
+    ev.preventDefault();
+  }
 
-  /* ---------- follow cliamp through the local bridge (engine/bridge.py) ---------- */
-  const BRIDGE = /^https?:$/.test(location.protocol) && (/^(127\.0\.0\.1|localhost)$/.test(location.hostname) || location.pathname.startsWith('/p/')) ? location.origin : 'http://127.0.0.1:47391';
-  const sync = { on: false, follow: true, now: null, at: 0, bands: null, hist: [], es: null, timer: 0 };
-  const byYt = new Map(stops.filter(s => s.yt).map(s => [s.yt, s]));
-  const byId = new Map(stops.map(s => [s.id, s]));
-  /* The bridge names the song it matched (any provider, any upload); the page keys stops on their YouTube id. */
-  const norm = j => { if (j && !('rawYt' in j)) j.rawYt = j.yt; if (j && j.song && byId.has(j.song)) j.yt = byId.get(j.song).yt || 'song:' + j.song; return j; };
+  /* ---------- follow cliamp through the bridge ---------- */
+  const sync = { on: false, down: false, reason: '', follow: true, now: null, at: 0, bands: null, hist: [], es: null, esWait: 2000, esT: 0, timer: 0, busy: false, fails: 0 };
+  // The bridge names the song it matched (by id, any upload); stops are found by that id first, then by YouTube id.
+  const stopFor = n => !n ? null : (n.song && byId.get(n.song)) || (n.yt && byYt.get(n.yt)) || null;
+  // cliamp's position now: the last answer plus the time since, unless it's paused or still buffering a new song.
+  const flowing = n => !!(n && n.state === 'playing' && n.moving !== false);
+  const posNow = now => { const n = sync.now; if (!n) return 0; const p = (n.position || 0) + (flowing(n) ? (now - sync.at) / 1000 : 0); return n.duration ? Math.min(p, n.duration) : p; };
   const followBtn = $('#followBtn');
-  const syncStatus = s => !sync.now ? 'Connected to cliamp.' : sync.now.yt === s.yt ? (sync.now.state === 'playing' ? 'Playing in cliamp now.' : 'Paused in cliamp.') : 'Press play to hear this one in cliamp.';
+  const syncStatus = s => !sync.now ? 'Connected to cliamp.' : stopFor(sync.now) === s ? (sync.now.state === 'playing' ? 'Playing in cliamp now.' : 'Paused in cliamp.') : 'Space plays this in cliamp.';
   function setFollow(on) {
     sync.follow = on; followBtn.setAttribute('aria-pressed', String(on));
     paintFollow();
-    if (on && sync.now) { const s = byYt.get(sync.now.yt); if (s && stops[state.i] !== s) go(stops.indexOf(s), 'follow'); }
+    if (on && sync.now) { const s = stopFor(sync.now); if (s && stops[state.i] !== s) go(stops.indexOf(s), 'follow'); }
     live.textContent = on ? 'Following cliamp.' : 'Stopped following cliamp. Press F to follow again.';
   }
   function paintFollow() {
-    const lbl = followBtn.querySelector('.lbl'), n = sync.now, s = n && byYt.get(n.yt);
-    lbl.textContent = !n ? 'cliamp' : !s ? `cliamp: ${n.title} (not on this list)` : sync.follow ? `Following cliamp · ${s.title}` : `Back to cliamp · ${s.title}`;
+    const lbl = followBtn.querySelector('.lbl'), n = sync.now, s = stopFor(n);
+    setText(lbl, !n ? 'cliamp' : !s ? `cliamp: ${n.title} (not on this list)` : sync.follow ? `Following cliamp · ${s.title}` : `Back to cliamp · ${s.title}`);
   }
-  let evs = null;
-  function openEvents() { if (evs || !window.EventSource) return; try { evs = new EventSource(BRIDGE + '/events'); evs.onmessage = () => poll(); evs.onerror = () => { evs.close(); evs = null; }; } catch {} }
-  /* A screen on a stand shouldn't sleep mid-song. The browser drops the lock whenever the tab is hidden, so take it again on return.
-     Wake Lock needs a secure context: localhost or HTTPS (liner-notes serve --tailscale), not plain http on a LAN address. */
-  let wake = null;
-  async function keepAwake() { try { if (sync.on && navigator.wakeLock && document.visibilityState === 'visible' && !wake) { wake = await navigator.wakeLock.request('screen'); wake.addEventListener('release', () => { wake = null; }); } } catch {} }
-  document.addEventListener('visibilitychange', keepAwake);
-  function openBands() {
-    openEvents(); keepAwake();
-    if (sync.es || !window.EventSource) return;
-    try { sync.es = new EventSource(BRIDGE + '/bands'); sync.es.onmessage = ev => { try { const j = JSON.parse(ev.data); if (j.bands) sync.bands = j.bands; } catch {} }; sync.es.onerror = () => { sync.es.close(); sync.es = null; sync.bands = null; }; } catch {}
+  /* The bands drive the rings on the full page, so the stream is open only while that page shows. A dropped stream
+     comes back by itself, waiting longer after each failure. */
+  const wantBands = () => sync.on && state.started && !stg.on && !document.hidden && !LIVE && !!window.EventSource;
+  function syncBands() {
+    if (!wantBands()) { clearTimeout(sync.esT); sync.esT = 0; if (sync.es) { sync.es.close(); sync.es = null; } sync.bands = null; return; }
+    if (sync.es || sync.esT) return;
+    try {
+      const es = sync.es = new EventSource(BRIDGE + '/bands');
+      es.onmessage = ev => { sync.esWait = 2000; try { const j = JSON.parse(ev.data); if (j.bands) sync.bands = j.bands; } catch {} };
+      es.onerror = () => { es.close(); if (sync.es === es) sync.es = null; sync.bands = null; sync.esT = setTimeout(() => { sync.esT = 0; syncBands(); }, sync.esWait); sync.esWait = Math.min(30000, sync.esWait * 2); };
+    } catch {}
   }
+  /* /now is asked one request at a time: twice a second while the stage is up, every 1.5 s on the full page, every
+     5 s in a hidden tab, and a little slower each time while the bridge doesn't answer. */
+  const pollDelay = () => document.hidden ? 5000 : sync.down ? Math.min(2000, 1000 + sync.fails * 250) : stg.on ? 500 : 1500;
   async function poll() {
-    let j = null;
-    try { const r = await fetch(BRIDGE + '/now', { cache: 'no-store' }); j = norm(await r.json()); } catch {}
-    const was = sync.on;
-    sync.on = !!(j && j.ok);
-    if (sync.on !== was) {
-      followBtn.hidden = !sync.on; $('#stageBtn').hidden = !sync.on;
-      if (sync.on) { state.companion = true; stopAudio(0.3).then(() => setPaused(true)); openBands(); }
-      else if (sync.es) { sync.es.close(); sync.es = null; sync.bands = null; }
-      if (state.started) render();
-    }
-    if (sync.on) {
-      const prev = sync.now; sync.now = j; sync.at = performance.now(); paintFollow();
-      const s = byYt.get(j.yt);
-      if (state.started && sync.follow && s && stops[state.i] !== s) go(stops.indexOf(s), 'follow');
-      else if (state.started && (!prev || prev.state !== j.state || prev.yt !== j.yt)) { const st = $('#pstatus'); if (st) st.textContent = syncStatus(stops[state.i]); setPaused(!(s && stops[state.i] === s && j.state === 'playing')); }
-    }
-    if (sync.on && (!sync.themeAt || performance.now() - sync.themeAt > 4000)) { sync.themeAt = performance.now(); syncTheme(); }
-    clearTimeout(sync.timer); sync.timer = setTimeout(poll, document.hidden ? 5000 : 1500);
-    return sync.on;
+    clearTimeout(sync.timer); sync.timer = 0;
+    if (sync.busy) return;
+    sync.busy = true;
+    let j = null, down = false;
+    try { const r = await fetchT(BRIDGE + '/now', 3000); j = await r.json(); } catch { down = true; }
+    sync.busy = false;
+    applyNow(j, down);
+    clearTimeout(sync.timer); sync.timer = setTimeout(poll, pollDelay());
   }
-  async function bridgePost(path, body) { try { const r = await fetch(BRIDGE + path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }); return await r.json(); } catch { return { ok: false }; } }
+  function applyNow(j, down) {
+    const was = sync.on, wasDown = sync.down;
+    sync.down = down; sync.fails = down ? sync.fails + 1 : 0;
+    sync.on = !!(j && j.ok);
+    sync.reason = j && !j.ok ? j.reason || '' : '';
+    if (sync.on !== was) {
+      followBtn.hidden = !sync.on; $('#stageBtn').hidden = !sync.on || LIVE;
+      if (sync.on) { state.companion = true; stopAudio(0.3).then(() => setPaused(true)); }
+      if (state.started && !stg.on) render();
+    }
+    if (sync.on !== was || down !== wasDown) { syncBands(); paintPageKeys(); }
+    if (wasDown && !down) syncTheme();
+    if (!sync.on) { sync.now = null; paintOpening(); return; }
+    const prev = sync.now; sync.now = j; sync.at = performance.now(); paintFollow();
+    if (maybeSwitchJourney(j)) return;
+    const s = stopFor(j);
+    if (state.started && sync.follow && s && stops[state.i] !== s) go(stops.indexOf(s), 'follow');
+    else if (state.started && (!prev || prev.state !== j.state || prev.yt !== j.yt || prev.song !== j.song)) { setStatus(syncStatus(stops[state.i] || {})); if (!LIVE) setPaused(!(s && stops[state.i] === s && j.state === 'playing')); }
+    paintOpening();
+  }
   async function syncPlay() {
     const s = stops[state.i];
-    if (sync.now && sync.now.yt === s.yt) await bridgePost('/cmd', { op: 'toggle' });
-    else { const r = await bridgePost('/play', { yt: s.yt, song: s.id }); if (!r.ok) { const st = $('#pstatus'); if (st) st.textContent = r.error === 'not in the loaded playlist' ? 'cliamp has a different playlist loaded.' : 'cliamp did not answer.'; return; } sync.follow = true; followBtn.setAttribute('aria-pressed', 'true'); }
+    if (sync.now && stopFor(sync.now) === s) await bridgePost('/cmd', { op: 'toggle' });
+    else { const r = await bridgePost('/play', { yt: s.yt, song: s.id }); if (!r.ok) { setStatus(r.error === 'not in the loaded playlist' ? 'cliamp has a different playlist loaded.' : 'cliamp did not answer.'); return; } sync.follow = true; followBtn.setAttribute('aria-pressed', 'true'); }
     setTimeout(poll, 400);
   }
+  async function cmd(op) {
+    if (!sync.on) { toast(sync.down ? 'The bridge isn’t running' : 'cliamp isn’t playing'); return; }
+    toast(op === 'toggle' ? (sync.now && sync.now.state === 'playing' ? '⏸ pause' : '▶ play') : op === 'next' ? '⏭ next song' : '⏮ previous song');
+    const r = await bridgePost('/cmd', { op });
+    if (!r.ok) toast(TOKEN ? 'cliamp didn’t answer' : 'This copy can’t control cliamp');
+    setTimeout(poll, 250);
+  }
   followBtn.onclick = () => setFollow(!sync.follow);
+  /* Another journey's song: in companion mode the window moves to that journey's page (same window, same place).
+     A song no journey has stays here on the live stage. */
+  const switching = { to: null, missing: new Map() };
+  function maybeSwitchJourney(j) {
+    const to = j.journey;
+    if (!state.companion || !SERVED || !to || to === D.slug || !/^[a-z0-9-]+$/.test(to) || (!stg.on && !sync.follow)) return false;
+    if (switching.to === to) return true;
+    if (performance.now() - (switching.missing.get(to) ?? -1e9) < 60000) return false;
+    switching.to = to;
+    const url = `/p/${to}.html`;
+    fetchT(url, 3000, { method: 'HEAD' }).then(r => r.ok || r.status === 405 || r.status === 501, () => false).then(ok => {
+      if (ok) location.replace(url + '#companion'); else { switching.missing.set(to, performance.now()); switching.to = null; }
+    });
+    return true;
+  }
+  /* A screen on a stand shouldn't sleep mid-song. The browser drops the lock whenever the tab is hidden, so take it again on return. */
+  let wake = null;
+  async function keepAwake() { try { if (stg.on && navigator.wakeLock && document.visibilityState === 'visible' && !wake) { wake = await navigator.wakeLock.request('screen'); wake.addEventListener('release', () => { wake = null; }); } } catch {} }
 
   /* ---------- theme: match the Omarchy desktop when the bridge is there ---------- */
   const themeCss = el('style'); document.head.append(themeCss);
-  let themeKey = '';
+  let themeKey = '', themeT = 0;
   const rgbOf = h => { const m = /^#?([0-9a-f]{6})$/i.exec(h || ''); return m ? [0, 2, 4].map(i => parseInt(m[1].slice(i, i + 2), 16)) : null; };
   const lum = c => { const [r, g, b] = c.map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
   const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
   const mixc = (a, b, t) => a.map((v, i) => Math.round(v * (1 - t) + b[i] * t));
   const hex = c => '#' + c.map(v => v.toString(16).padStart(2, '0')).join('');
+  // A shade between ink and background that still reads: start at `t` and come back toward ink until it reaches `min`.
+  const shade = (ink, bg, t, min) => { for (; t > 0; t -= 0.02) { const c = mixc(ink, bg, t); if (contrast(c, bg) >= min) return c; } return ink; };
+  const readable = (c, ink, bg, min = 4.5) => { for (let t = 0; t <= 1; t += 0.05) { const x = mixc(c, ink, t); if (contrast(x, bg) >= min) return x; } return ink; };
   async function syncTheme() {
-    let t; try { t = await (await fetch(BRIDGE + '/theme', { cache: 'no-store' })).json(); } catch { return; }
-    if (!t.ok) return;
+    if (!SERVED && !sync.on) return;
+    let t; try { t = await (await fetchT(BRIDGE + '/theme', 3000)).json(); } catch { return; }
+    if (!t || !t.ok || !t.colors) return;
     const key = JSON.stringify(t); if (key === themeKey) return; themeKey = key;
     const c = t.colors, light = t.mode === 'light', bg = rgbOf(c.background); if (!bg) return;
     const fgs = ['foreground', 'bright_foreground', 'light_foreground'].map(k => rgbOf(c[k])).filter(Boolean);
@@ -891,47 +1056,57 @@ html, body { overflow-x: clip; }
     const accent = rgbOf(c.accent) || rgbOf(c.blue) || ink;
     const second = [c.cyan, c.blue, c.magenta, c.green].map(rgbOf).filter(Boolean).find(x => contrast(x, accent) > 1.4 && contrast(x, bg) > 4.5) || accent;
     const solid = rgbOf(light ? c.dark_background : c.lighter_background) || bg;
-    const v = { bg: hex(bg), panel: `rgba(${bg},0.8)`, 'panel-solid': hex(solid), ink: hex(ink), mid: hex(mixc(ink, bg, 0.22)), faint: hex(mixc(ink, bg, 0.42)),
+    const mid = shade(ink, bg, 0.22, 5.5), faint = shade(ink, bg, 0.42, 4.6);
+    const v = { bg: hex(bg), panel: `rgba(${bg},0.8)`, 'panel-solid': hex(solid), ink: hex(ink), mid: hex(mid), faint: hex(faint),
       sea: hex(second), amber: hex(accent), 'amber-ink': hex(bg), rule: `rgba(${ink},0.15)`, card: `rgba(${ink},0.06)`,
       'band-a': `rgba(${second},0.11)`, 'band-b': `rgba(${second},0.04)`, 'band-warm': `rgba(${accent},0.13)`,
       'veil-top': `rgba(${bg},${light ? 0.8 : 0.62})`, 'veil-bottom': `rgba(${bg},${light ? 0.94 : 0.92})` };
     const vars = Object.entries(v).map(([k, x]) => `--${k}: ${x};`).join(' ');
-    const ansi = k => hex(rgbOf(c[k]) || rgbOf(c['bright_' + k]) || accent), font = t.font ? `"${t.font.replace(/"/g, '')}", ` : '';
+    // Font names come from the desktop; keep them to characters a font family can have.
+    const fname = String(t.font || '').replace(/[^\w .+-]/g, '').trim(), font = fname ? `"${fname}", ` : '';
+    const ansi = k => hex(readable(rgbOf(c[k]) || rgbOf(c['bright_' + k]) || accent, ink, bg));
     themeCss.textContent = `:root[data-omarchy][data-theme] { ${vars} --mono: ${font}"Chivo Mono", ui-monospace, monospace; color-scheme: ${light ? 'light' : 'dark'}; }
       .stagev { --pane: ${hex(rgbOf(c.muted) || mixc(ink, bg, 0.6))}; --tmono: ${font}"JetBrainsMono Nerd Font", ui-monospace, monospace; --green: ${ansi('green')}; --yellow: ${ansi('yellow')}; --red: ${ansi('red')}; --svbg: ${bg}; --ink: ${v.ink}; --mid: ${v.mid}; --faint: ${v.faint}; --sea: ${v.sea}; --amber: ${v.amber}; --rule: ${v.rule}; }`;
-    document.documentElement.dataset.theme = light ? 'light' : 'dark'; document.documentElement.dataset.omarchy = t.name;
-    themeBtn.hidden = true;
+    document.documentElement.dataset.theme = light ? 'light' : 'dark'; document.documentElement.dataset.omarchy = String(t.name || 'omarchy');
+    themeBtn.hidden = true; readColors();
   }
+  // Every 5 s while the page shows (a theme switch lands within a few seconds); never in a hidden tab.
+  const themeLoop = () => { clearTimeout(themeT); if (!document.hidden && !sync.down) syncTheme(); themeT = setTimeout(themeLoop, document.hidden ? 30000 : 5000); };
 
   /* ---------- stage: the lean-back view for a second screen ----------
      It shows what cliamp is playing. Each note gets a slot in the song sized to its reading time, so the
-     liner notes step through the track by themselves; lyrics come from cliamp, and the trail along the
+     liner notes step through the track by themselves; lyrics come from the bridge, and the trail along the
      bottom is tonight's route through the years, from cliamp's own history. */
   const SV = $('#stagev');
-  const stg = { on: false, yt: undefined, dur: 0, s: null, prev: null, beats: [], beat: -1, lines: null, line: -2, offset: 0, plays: [], tones: new Map(), sm: [], idle: 0, minute: -1, toast: 0, lyricsOn: store.get('journey-lyrics') !== 'off' };
+  // lyricsOn: L hides lyrics for this sitting only; a remembered 'off' hid lyrics with no sign why.
+  const stg = { on: false, mode: undefined, key: null, dur: 0, s: null, n: null, prev: null, beats: [], beat: -1, lines: null, shown: false, line: -2, offset: 0, firstVocal: null,
+    plays: [], tones: new Map(), idle: 0, minute: -1, toast: 0, lyricsOn: true, eraText: '', loop: 0, raf: 0, posText: '', cover: null, hero: null, keys: 0, still: 0 };
   const fmt = x => { x = Math.max(0, Math.floor(x || 0)); return `${Math.floor(x / 60)}:${pad(x % 60)}`; };
   const sentences = t => (t || '').split(/(?<=[.!?])\s+(?=[A-Z0-9“"‘'(])/).filter(Boolean);
   const chunks = (t, max = 210) => sentences(t).reduce((a, x) => { const l = a[a.length - 1]; if (l && l.length + x.length < max) a[a.length - 1] = l + ' ' + x; else a.push(x); return a; }, []);
   const readSecs = t => Math.max(9, Math.min(26, t.length / 11 + 3));
-  const LYRIC_LEAD = 0.35;  // lines land a beat early, so they're readable as the singer starts
+  // Lines land a beat early, so they're readable as the singer starts. { and } tune it for every song (the pilot's key, so saved values carry over).
+  let lyricLead = parseFloat(store.get('journey-lyric-lead')); if (!isFinite(lyricLead)) lyricLead = 0.3;
 
   /* The order follows the record: intro notes while the intro plays, the panel's verdict early, the
-     story in the middle, and where it leads at the end. Long notes on short songs drop from the back. */
-  function beatsFor(s, dur, prev) {
-    const B = [], add = (p, label, text, q, img, head) => B.push({ p, label, text, q, img, head });
+     story in the middle, and where it leads at the end. Long notes on short songs drop from the back.
+     When the singing starts early, the intro note goes before the era essay, so it's up before the first line. */
+  function beatsFor(s, dur, prev, firstVocal) {
+    const B = [], add = (p, label, text, q, img, head, kind) => B.push({ p, label, text, q, img, head, kind });
     const kinds = { film: 'In cinemas', tv: 'On TV', tech: 'New in your pocket', game: 'Everyone was playing', news: 'In the news', fashion: 'What people wore', music: 'Also on the radio', sport: 'Sport', internet: 'Online',
-      video: 'The video', screen: 'On screen', chart: 'In the charts', live: 'Live', sample: 'The sample' };
-    const pic = it => it.img ? BRIDGE + '/m/' + D.slug + '/' + it.img : null;
-    const songC = (SD && SD.songs[s.title]) || [], vidC = songC.filter(i => i.kind === 'video'), restC = songC.filter(i => i.kind !== 'video');
-    const yearAll = (SD && SD.years[s.year]) || [], k0 = stops.filter(x => x.year === s.year && x.n < s.n).length;
+      video: 'The video', screen: 'On screen', chart: 'In the charts', live: 'Live', sample: 'The sample', cover: 'Covered' };
+    const pic = it => it.img && SERVED && /^[\w./-]+$/.test(it.img) && !it.img.includes('..') ? BRIDGE + '/m/' + D.slug + '/' + it.img : null;
+    const songC = (SD && SD.songs && SD.songs[s.title]) || [], vidC = songC.filter(i => i.kind === 'video'), restC = songC.filter(i => i.kind !== 'video');
+    const yearAll = (SD && SD.years && SD.years[s.year]) || [], k0 = stops.filter(x => x.year === s.year && x.n < s.n).length;
     const yearC = [...new Set([0, 1].map(i => yearAll[(k0 * 2 + i) % (yearAll.length || 1)]).filter(Boolean))];
+    // Culture clips stay off until they can come from disk: the note keeps its picture.
     const culture = (p, it, year) => add(p, year ? `Meanwhile · ${s.year} · ${kinds[it.kind] || it.kind}` : kinds[it.kind] || it.kind, it.line, false, pic(it), it.title);
-    const e = eraOf(s), j = judges[s.judge] || null;
-    const intro = s.listen.filter(l => /open|first|intro|start|from the/i.test(l.where));
-    const late = s.listen.filter(l => !intro.includes(l) && /end|toward|goes on|outro|last/i.test(l.where));
-    const mid = s.listen.filter(l => !intro.includes(l) && !late.includes(l));
-    if (!prev || prev.era !== s.era) add(1, `${prev ? 'Into' : 'Tonight starts in'} era ${e.n} · ${e.name} · ${e.years}`, sentences(e.essay).slice(0, 2).join(' '));
-    intro.forEach(l => add(1, `Listen for · ${l.where}`, l.note));
+    const e = eraOf(s), j = judges[s.judge] || null, listen = s.listen || [];
+    const intro = listen.filter(l => /open|first|intro|start|from the/i.test(l.where));
+    const late = listen.filter(l => !intro.includes(l) && /end|toward|goes on|outro|last/i.test(l.where));
+    const mid = listen.filter(l => !intro.includes(l) && !late.includes(l));
+    if (e.n && (!prev || prev.era !== s.era)) add(1, `${prev ? 'Into' : 'Tonight starts in'} era ${e.n} · ${e.name} · ${e.years}`, sentences(e.essay).slice(0, 2).join(' '), false, null, null, 'essay');
+    intro.forEach(l => add(1, `Listen for · ${l.where}`, l.note, false, null, null, 'intro'));
     vidC.slice(0, 1).forEach(it => culture(1, it));
     if (j && s.quote) add(1, `${j.name} · ${j.title}${s.dissent ? ' · voted it a close call' : ''}`, `“${s.quote}”`, true);
     chunks(s.made).forEach((c, k) => add(k ? 3 : 2, 'How it was made', c));
@@ -941,7 +1116,7 @@ html, body { overflow-x: clip; }
     yearC.slice(0, 1).forEach(it => culture(2, it, true));
     restC.slice(1, 3).forEach(it => culture(3, it));
     yearC.slice(1).forEach(it => culture(3, it, true));
-    s.threads.filter(t => byN.has(t.to)).slice(0, 2).forEach((t, k) => { const o = byN.get(t.to); add(3 + k, `Thread · ${t.kind} · stop ${o.n}`, `${o.title}, ${o.artist}, ${o.year}. ${t.note}`); });
+    (s.threads || []).filter(t => byN.has(t.to)).slice(0, 2).forEach((t, k) => { const o = byN.get(t.to); add(3 + k, `Thread · ${t.kind} · stop ${o.n}`, `${o.title}, ${o.artist}, ${o.year}. ${t.note}`); });
     late.forEach(l => add(2, `Listen for · ${l.where}`, l.note));
     if (s.leads) add(2, 'Where it leads', `${s.leads.artist}, “${s.leads.title}”${s.leads.year ? ` (${s.leads.year})` : ''}. ${s.leads.why}`);
     const from = 4, room = Math.max(60, (dur || 240) - from - 3);
@@ -949,12 +1124,17 @@ html, body { overflow-x: clip; }
     const sum = () => B.reduce((a, b) => a + b.secs, 0);
     while (sum() > room) { const worst = Math.max(...B.map(b => b.p)); if (worst <= 1) break; B.splice(B.map(b => b.p).lastIndexOf(worst), 1); }
     const stretch = Math.min(2.4, Math.max(1, room / sum()));
-    let at = from; B.forEach(b => { b.at = at; at += b.secs * stretch; });
+    const time = () => { let at = from; B.forEach(b => { b.at = at; at += b.secs * stretch; }); };
+    time();
+    const essay = B.findIndex(b => b.kind === 'essay'), intros = B.filter(b => b.kind === 'intro');
+    if (firstVocal != null && essay === 0 && intros.length && intros[0].at > firstVocal - 2) {
+      const [es] = B.splice(0, 1); B.splice(B.lastIndexOf(intros[intros.length - 1]) + 1, 0, es); time();
+    }
     return B;
   }
 
-  let SD = null;
-  const loadStageData = async () => { if (SD) return; try { const r = await fetch(BRIDGE + '/p/' + D.slug + '.stage.json', { cache: 'no-store' }); if (r.ok) { SD = await r.json(); stg.yt = undefined; } } catch {} };
+  let SD = null, sdTried = false;
+  const loadStageData = async () => { if (SD || sdTried || !SERVED || LIVE) return; sdTried = true; try { const r = await fetchT(BRIDGE + '/p/' + D.slug + '.stage.json', 5000); if (r.ok) { SD = await r.json(); stg.mode = undefined; } } catch {} };
   let stillFlip = false, stillSrc = null;
   function setStill(src) {
     if (src === stillSrc) return; stillSrc = src;
@@ -963,45 +1143,236 @@ html, body { overflow-x: clip; }
     on.onload = () => { if (stillSrc === src) on.classList.add('on'); }; on.src = src;
   }
 
-  /* The music video, muted, from the same YouTube upload cliamp is playing, so the timestamps match.
-     It nudges itself back whenever it drifts more than half a second from cliamp. */
-  const vid = { ready: false, loading: false, player: null, id: null, live: false, failed: new Set(), check: 0 };
-  function loadYT() {
-    if (vid.loading) return; vid.loading = true;
-    window.onYouTubeIframeAPIReady = () => { vid.ready = true; };
-    document.head.append(el('script', { src: 'https://www.youtube.com/iframe_api' }));
+  /* The hero picture. With no video playing, the big pane shows a photograph: the pop-culture picture while its
+     note is up, otherwise the artist, otherwise the era. Album covers are flat graphics that depth only bends,
+     so the cover stays a small card in the corner and the photographs take the pane. A song with no journey
+     shows its cover hung whole, when the cache has one.
+     Each picture moves in depth parallax, ported from the Astro-Arc moving background (shaders/parallax.frag):
+     a camera drifting on a slow Lissajous path, every pixel shifted by that drift times its depth (backward
+     warp, three fixed-point steps on a blurred depth map), plus a slow depth dolly so near things breathe toward
+     you. 24 px of reach per 1080 px of pane height on a 15 s period. It draws 15 frames a second, at most
+     CSS-pixel resolution, only while the stage is up, no video covers it and the tab is visible; it eases to a
+     stop when cliamp pauses and eases in on every new picture. Without WebGL2, with reduced motion, or with no
+     depth map, the picture stands still. */
+  const depthOf = src => src && src.startsWith(BRIDGE + '/m/') ? src.replace('/m/', '/d/') : null;
+  const heroFor = b => {
+    const s = stg.s;
+    if (!s) return null;  // a song with no journey: its cover, if any, sits big in the middle (.bigcover)
+    if (b && b.img) return { key: b.img, src: b.img, depth: depthOf(b.img), kind: 'culture', label: `${b.head || b.label}` };
+    if (stg.artistImg) return { key: stg.artistImg, src: stg.artistImg, depth: depthOf(stg.artistImg), kind: 'photo', label: `photo · ${stg.artistName || s.artist}` };
+    const e = eraOf(s); if (!e.image) return null;
+    return { key: 'era' + e.n, src: e.image, depth: SD ? BRIDGE + '/d/' + D.slug + '/eras/era' + e.n + '.webp' : null, kind: 'era', label: `era ${e.n} · ${e.name}` };
+  };
+  function showHero(b) {
+    const h = heroFor(b); stg.hero = h;
+    SV.classList.toggle('heropic', !!(h && h.kind === 'culture'));
+    setStill(h ? h.src : null); hero.show(h);
   }
-  function syncVideo(now, pos, playing) {
-    /* The muted video is a local, personal-use opt-in (liner-notes build --video): never in a shareable file, and only
-       when cliamp is playing that exact YouTube upload, never laid over audio from another source. */
-    const s = stg.s, want = s && D.video && sync.now && sync.now.rawYt === s.yt && SD && SD.tracks[s.yt] && SD.tracks[s.yt].motion && !vid.failed.has(s.yt) && /^https?:$/.test(location.protocol) ? s.yt : null;
-    SV.classList.toggle('cinema', !!want && vid.live);
-    const vl = !stg.s ? '•— cliamp' : want && vid.live ? '•— video · muted · synced to cliamp' : `•— cover · ${stg.s.album || stg.s.title}`;
-    if ($('#svVisLabel').textContent !== vl) $('#svVisLabel').textContent = vl;
-    if (now - vid.check < 500) return; vid.check = now;
-    if (!want) { if (vid.player && vid.id && vid.player.pauseVideo) { vid.player.pauseVideo(); vid.id = null; vid.live = false; } return; }
-    if (!vid.ready) return loadYT();
-    if (!vid.player) {
-      vid.id = want;
-      vid.player = new YT.Player('svVideo', { videoId: want, playerVars: { autoplay: 1, mute: 1, controls: 0, disablekb: 1, fs: 0, rel: 0, playsinline: 1, iv_load_policy: 3, start: Math.floor(pos), origin: location.origin },
-        events: { onReady: e => e.target.mute(), onStateChange: e => { if (e.data === 1) vid.live = true; }, onError: () => { vid.failed.add(vid.id); vid.live = false; } } });
-      return;
+  const hero = (() => {
+    const cv = $('#svGl'), FPS = 15, PX = 24 / 1080, PERIOD = 15, DOLLY = 0.018, RAMP = 3000, FADE = 1600;
+    let gl = null;
+    if (!reduced) try { gl = cv.getContext('webgl2', { alpha: false, antialias: false, depth: false, stencil: false, premultipliedAlpha: false, powerPreference: 'low-power' }); } catch {}
+    const api = { show() {}, set() {}, ok: false, stats: () => ({ on: false, gl: false }) };
+    if (!gl) return api;
+    const VS = `#version 300 es
+      in vec2 a; out vec2 vUv;
+      void main() { vUv = vec2(a.x * 0.5 + 0.5, 0.5 - a.y * 0.5); gl_Position = vec4(a, 0.0, 1.0); }`;
+    const FS = `#version 300 es
+      precision highp float;
+      in vec2 vUv; out vec4 o;
+      uniform sampler2D uImg0, uDep0, uImg1, uDep1;
+      uniform vec4 uGeo0, uGeo1;   // image aspect, contain (0 or 1), focus y, strength
+      uniform float uPane, uTime, uMix, uPx, uPeriod, uDolly, uLeft;  // uLeft: where the cover card ends, in pane heights
+      const float TAU = 6.2831853;
+      vec3 layer(sampler2D img, sampler2D dep, vec4 g) {
+        float ia = g.x, k = g.w;
+        vec2 crop = uPane > ia ? vec2(1.0, ia / uPane) : vec2(uPane / ia, 1.0);
+        vec2 cam = vec2(sin(TAU * uTime / uPeriod), sin(TAU * uTime / (uPeriod * 1.37) + 1.3)) * vec2(1.0, 0.6) * uPx * k;
+        float dolly = uDolly * k * (0.5 - 0.5 * cos(TAU * uTime / 41.0));
+        vec2 base, upu;
+        if (g.y < 0.5) {
+          // Fill the pane (crop), zoomed just enough that the largest shift never shows an edge.
+          upu = vec2(crop.x / uPane, crop.y);
+          float over = max(uPx * k / uPane, 0.6 * uPx * k) + 0.5 * uDolly * k + 0.002;
+          vec2 c = vec2(0.5, clamp(g.z, crop.y * 0.5, 1.0 - crop.y * 0.5));
+          base = c + (vUv - 0.5) * crop * (1.0 - 2.0 * over);
+        } else {
+          // A print on the wall: the whole picture, over a blurred, darkened copy of itself.
+          // Hung to the right of the cover card, so the two never overlap.
+          float room = uPane - uLeft - 0.04, rh = min(0.84, room / ia), rw = rh * ia;
+          vec2 ctr = vec2(uLeft + room * 0.5, 0.47);
+          vec2 q = (vec2(vUv.x * uPane, vUv.y) - ctr) / vec2(rw, rh) + 0.5;
+          vec2 bc = 0.5 + (vUv - 0.5) * crop * 0.9;
+          vec3 back = (textureLod(img, bc + vec2(0.012, 0.0), 6.0).rgb + textureLod(img, bc - vec2(0.012, 0.0), 6.0).rgb
+                     + textureLod(img, bc + vec2(0.0, 0.016), 6.0).rgb + textureLod(img, bc - vec2(0.0, 0.016), 6.0).rgb) * 0.25 * 0.38;
+          float dist = length(max(abs(q - 0.5) - 0.5, 0.0) * vec2(rw, rh));
+          if (dist > 0.0) return back * mix(0.35, 1.0, smoothstep(0.0, 0.07, dist));
+          upu = vec2(1.0 / rw, 1.0 / rh);
+          float over = max(uPx * k * upu.x, 0.6 * uPx * k * upu.y) + 0.5 * uDolly * k + 0.002;
+          base = 0.5 + (q - 0.5) * (1.0 - 2.0 * over);
+        }
+        // Backward warp: find the source point whose shifted position lands here.
+        vec2 camUv = cam * upu, p = base;
+        for (int i = 0; i < 3; i++) { float d = texture(dep, p).r; p = base - (camUv + (base - 0.5) * dolly) * d; }
+        return texture(img, p).rgb;
+      }
+      void main() {
+        vec3 a = vec3(0.0), b = vec3(0.0);
+        if (uMix < 1.0) a = layer(uImg0, uDep0, uGeo0);
+        if (uMix > 0.0) b = layer(uImg1, uDep1, uGeo1);
+        o = vec4(mix(a, b, uMix), 1.0);
+      }`;
+    const sh = (type, src) => { const x = gl.createShader(type); gl.shaderSource(x, src); gl.compileShader(x); if (!gl.getShaderParameter(x, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(x)); return x; };
+    let prog;
+    try {
+      prog = gl.createProgram(); gl.attachShader(prog, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(prog);
+      if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog));
+    } catch (e) { console.warn('stage parallax off:', e.message); return api; }
+    gl.useProgram(prog);
+    const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(prog, 'a'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    const U = {}; ['uImg0', 'uDep0', 'uImg1', 'uDep1', 'uGeo0', 'uGeo1', 'uPane', 'uTime', 'uMix', 'uPx', 'uPeriod', 'uDolly', 'uLeft'].forEach(n => U[n] = gl.getUniformLocation(prog, n));
+    [['uImg0', 0], ['uDep0', 1], ['uImg1', 2], ['uDep1', 3]].forEach(([n, u]) => gl.uniform1i(U[n], u));
+    const tex = (src, mips) => {
+      const t = gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D, t);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, mips ? gl.LINEAR_MIPMAP_LINEAR : gl.LINEAR);
+      if (src) gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, src);
+      else gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([0, 0, 0, 255]));
+      if (mips) gl.generateMipmap(gl.TEXTURE_2D);
+      return t;
+    };
+    const flat = tex(null, false);  // no depth map: depth 0 everywhere, so nothing moves
+    const loadImg = src => new Promise((res, rej) => { const im = new Image(); im.onload = () => im.decode().then(() => res(im), () => res(im)); im.onerror = rej; im.src = src; });
+    const cache = new Map(), slots = [null, null];
+    let want = null, mix = 0, fade = null, clock = 0, pace = 1, playing = true, active = false, last = 0, raf = 0, on = false, glonT = 0, frames = 0;
+    async function load(h) {
+      const im = await loadImg(h.src);
+      let dm = null; if (h.depth) try { dm = await loadImg(h.depth); } catch {}
+      // Big pictures come down to 1600 px on the long side before upload; the pane is about 1150 wide.
+      let src = im; const big = Math.max(im.naturalWidth, im.naturalHeight);
+      if (big > 1600) { const c = document.createElement('canvas'), f = 1600 / big; c.width = Math.round(im.naturalWidth * f); c.height = Math.round(im.naturalHeight * f); c.getContext('2d').drawImage(im, 0, 0, c.width, c.height); src = c; }
+      return { img: tex(src, true), dep: dm ? tex(dm, false) : flat, aspect: im.naturalWidth / Math.max(1, im.naturalHeight), kind: h.kind, depthOk: !!dm };
     }
-    const P = vid.player; if (!P.getPlayerState) return;
-    if (vid.id !== want) { vid.id = want; vid.live = false; P.loadVideoById({ videoId: want, startSeconds: pos }); P.mute(); return; }
-    if (!P.isMuted()) P.mute();
-    const st = P.getPlayerState();
-    if (playing && st !== 1 && st !== 3) P.playVideo();
-    if (!playing && st === 1) P.pauseVideo();
-    if (playing && st === 1 && Math.abs(P.getCurrentTime() - pos) > 0.5) P.seekTo(pos + 0.2, true);
+    function evict() {
+      for (const [k, t] of cache) { if (cache.size <= 6) break; if (slots.includes(t)) continue; gl.deleteTexture(t.img); if (t.dep !== flat) gl.deleteTexture(t.dep); cache.delete(k); }
+    }
+    const setOn = v => {
+      if (on === v) return; on = v; cv.classList.toggle('on', v); clearTimeout(glonT);
+      if (v) glonT = setTimeout(() => SV.classList.add('glon'), 1400); else SV.classList.remove('glon');
+    };
+    async function show(h) {
+      const key = h ? h.key : null; if (key === want) return; want = key;
+      if (!h) { setOn(false); return; }
+      let t = cache.get(key);
+      if (!t) { try { t = await load(h); } catch { t = null; } if (want !== key) { if (t && !cache.has(key)) { cache.set(key, t); evict(); } return; } if (t) { cache.set(key, t); evict(); } }
+      if (want !== key) return;
+      if (!t) { setOn(false); return; }
+      const now = performance.now();
+      if (!on) { slots[0] = t; slots[1] = null; mix = 0; fade = null; }
+      else { const to = mix >= 0.5 ? 0 : 1; slots[to] = t; fade = { from: mix, to, at: now }; }
+      t.born = now; setOn(true); kick();
+    }
+    const ease = x => 0.5 - 0.5 * Math.cos(Math.PI * Math.min(1, Math.max(0, x)));
+    const running = () => active && on && !document.hidden;
+    function geo(slot, which, now) {
+      const t = slots[slot]; if (!t) return;
+      const pane = cv.width / Math.max(1, cv.height), r = t.aspect / pane, hidden = 1 - Math.min(r, 1 / r);
+      const contain = t.kind === 'cover' || (t.kind === 'culture' ? hidden > 0.15 : hidden > 0.42);
+      gl.uniform4f(which, t.aspect, contain ? 1 : 0, t.aspect < 1 ? 0.36 : 0.5, ease((now - t.born) / RAMP));
+    }
+    function frame(now) {
+      raf = 0; if (!running()) return;
+      raf = requestAnimationFrame(frame);
+      if (last && now - last < 1000 / FPS - 4) return;
+      const dt = last ? Math.min(0.25, (now - last) / 1000) : 0; last = now; frames++;
+      pace += ((playing ? 1 : 0) - pace) * Math.min(1, dt / 0.7); clock += dt * pace;
+      const w = Math.max(1, Math.round(cv.clientWidth * Math.min(1, devicePixelRatio || 1))), hgt = Math.max(1, Math.round(cv.clientHeight * Math.min(1, devicePixelRatio || 1)));
+      if (cv.width !== w || cv.height !== hgt) { cv.width = w; cv.height = hgt; }
+      if (fade) { const f = ease((now - fade.at) / FADE); mix = fade.from + (fade.to - fade.from) * f; if (f >= 1) { mix = fade.to; slots[1 - fade.to] = null; fade = null; } }
+      gl.viewport(0, 0, w, hgt);
+      [0, 1].forEach(i => { const t = slots[i] || slots[1 - i]; gl.activeTexture(gl.TEXTURE0 + i * 2); gl.bindTexture(gl.TEXTURE_2D, t.img); gl.activeTexture(gl.TEXTURE1 + i * 2); gl.bindTexture(gl.TEXTURE_2D, t.dep); });
+      geo(0, U.uGeo0, now); geo(1, U.uGeo1, now);
+      if (!slots[0]) gl.uniform4fv(U.uGeo0, [1, 0, 0.5, 0]); if (!slots[1]) gl.uniform4fv(U.uGeo1, [1, 0, 0.5, 0]);
+      gl.uniform1f(U.uPane, w / hgt); gl.uniform1f(U.uTime, clock); gl.uniform1f(U.uMix, mix);
+      gl.uniform1f(U.uLeft, (28 + Math.min(0.30 * hgt, 0.26 * w) + 26) / hgt);  // .sv-cover: left 28px, min(30cqh, 26cqw)
+      gl.uniform1f(U.uPx, PX); gl.uniform1f(U.uPeriod, PERIOD); gl.uniform1f(U.uDolly, DOLLY);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+      // Paused and settled: keep the last frame on screen and stop drawing until something changes.
+      if (!playing && pace < 0.01 && !fade && slots.every(t => !t || now - t.born > RAMP)) { cancelAnimationFrame(raf); raf = 0; }
+    }
+    function kick() { if (!raf && running()) { last = 0; raf = requestAnimationFrame(frame); } }
+    document.addEventListener('visibilitychange', kick);
+    addEventListener('resize', kick);
+    cv.addEventListener('webglcontextlost', e => { e.preventDefault(); active = false; setOn(false); });
+    api.ok = true; api.show = show;
+    api.set = (act, play) => { if (act === active && play === playing) return; active = act; playing = play; kick(); };
+    api.stats = () => ({ gl: true, on, mix, clock, pace, frames, running: !!raf, size: [cv.width, cv.height], slots: slots.map(t => t && { aspect: t.aspect, kind: t.kind, depth: t.depthOk }) });
+    return api;
+  })();
+
+  /* Video comes first, and only from the bridge's disk cache (GET /v/ lists what's there). The music video of the
+     very upload cliamp is playing, muted; or, when cliamp plays an audio upload, a stand-in: stage.json
+     tracks[yt].standin names an official video of the same recording, standin_offset (seconds) lines it up and
+     standin_rate covers a transfer that runs fast or slow. The bridge's position is what the speakers play
+     (latency already taken off). A new epoch means cliamp jumped (seek, pause, new song), so the video snaps to it;
+     otherwise the playback rate is steered up to 5% either way, so drift closes over a second or two without a
+     visible skip. The stills stay up until this song's sound has reached the speakers. A video that errors is
+     dropped for the night. */
+  const lv = { el: null, id: null, live: false, ids: new Set(), failed: new Set(), listed: -Infinity, epoch: null, started: false };
+  function localIds(now) {
+    if (!SERVED || now - lv.listed < 60000) return; lv.listed = now;
+    fetchT(BRIDGE + '/v/', 4000).then(r => r.json()).then(j => { lv.ids = new Set(Array.isArray(j.ids) ? j.ids : []); }).catch(() => {});
   }
-  const toneOf = s => new Promise(res => {
-    if (stg.tones.has(s.n)) return res(stg.tones.get(s.n));
+  function syncLocal(want, pos, playing, early) {
+    if (!lv.el) {
+      lv.el = el('video', { preload: 'auto', playsinline: true });
+      lv.el.muted = true;
+      lv.el.addEventListener('error', () => { console.info('[stage] video', lv.id, 'error', lv.el.error && lv.el.error.code); lv.failed.add(lv.id); lv.live = false; });
+      $('.sv-vid').append(lv.el);
+    }
+    const V = lv.el;
+    if (lv.id !== want) { lv.id = want; lv.live = false; lv.started = false; V.src = BRIDGE + '/v/' + want + '.mp4'; V.currentTime = Math.max(0, pos); }
+    if (playing && pos > 0.05) lv.started = true;
+    if (early) { if (!V.paused) V.pause(); if (V.currentTime > 0.5) V.currentTime = 0; lv.live = false; return; }
+    if (V.readyState < 2) return;
+    lv.live = lv.started && pos < V.duration - 0.5;
+    const drift = V.currentTime - pos, jumped = sync.now && sync.now.epoch !== lv.epoch;
+    if (sync.now) lv.epoch = sync.now.epoch;
+    if (!playing || !lv.live) { if (!V.paused) V.pause(); if (lv.live && Math.abs(drift) > 0.04) V.currentTime = pos; V.playbackRate = 1; return; }
+    if (jumped || Math.abs(drift) > 0.35) { V.currentTime = pos + 0.04; V.playbackRate = 1; }
+    else V.playbackRate = Math.abs(drift) < 0.02 ? 1 : Math.min(1.05, Math.max(0.95, 1 - drift * 0.8));
+    if (V.paused) V.play().catch(() => {});
+  }
+  function stopLocal() { if (lv.el && lv.id) { lv.el.pause(); lv.el.removeAttribute('src'); lv.el.load(); lv.id = null; lv.live = false; } }
+  function syncVideo(now, pos, playing) {
+    const n = sync.now, raw = n && n.yt;
+    const T = raw && SD && SD.tracks ? SD.tracks[raw] : null;
+    const usable = id => lv.ids.has(id) && !lv.failed.has(id);
+    localIds(now);
+    let want = null;
+    if (raw && usable(raw) && (!T || T.motion !== false)) want = raw;
+    else if (T && /^[\w-]{11}$/.test(T.standin || '') && usable(T.standin)) { want = T.standin; pos = pos * (+T.standin_rate || 1) + (+T.standin_offset || 0); }
+    const early = !!want && pos < 0;  // a stand-in that starts later than the song: the still holds until its first frame
+    SV.classList.toggle('cinema', !!want && !early && lv.live && lv.id === want);
+    if (!want) return stopLocal();
+    syncLocal(want, pos, playing, early);
+  }
+  function paintVis(playing) {
+    const cinema = SV.classList.contains('cinema'), h = stg.hero;
+    hero.set(stg.on && !cinema, playing);
+    const big = !stg.s && !!stg.cover;
+    SV.classList.toggle('nopic', !h && !cinema && !big);
+    const vl = cinema ? '' : h ? `•— ${h.label}` : stg.s ? `•— cover · ${stg.s.album || stg.s.title}` : big ? `•— cover · ${stg.n.album || stg.n.title}` : '•— cliamp';
+    const L = $('#svVisLabel'); setText(L, vl); if (L.hidden !== !vl) L.hidden = !vl;
+  }
+  const toneOf = (key, src) => new Promise(res => {
+    if (stg.tones.has(key)) return res(stg.tones.get(key));
     const im = new Image();
     im.onload = () => {
       let best = '116,184,196';
       try {
-        const c = document.createElement('canvas'); c.width = c.height = 16; const g = c.getContext('2d'); g.drawImage(im, 0, 0, 16, 16);
+        const c = document.createElement('canvas'); c.width = c.height = 16; const g = c.getContext('2d', { willReadFrequently: true }); g.drawImage(im, 0, 0, 16, 16);
         const d = g.getImageData(0, 0, 16, 16).data; let score = -1;
         for (let k = 0; k < d.length; k += 4) {
           const r = d[k], gr = d[k + 1], b = d[k + 2], mx = Math.max(r, gr, b), mn = Math.min(r, gr, b), l = (mx + mn) / 510;
@@ -1009,173 +1380,287 @@ html, body { overflow-x: clip; }
           if (sc > score) { score = sc; best = `${r},${gr},${b}`; }
         }
       } catch {}
-      stg.tones.set(s.n, best); res(best);
+      if (stg.tones.size > 200) stg.tones.clear();
+      stg.tones.set(key, best); res(best);
     };
-    im.onerror = () => res('116,184,196'); im.src = s.cover;
+    im.onerror = () => res('116,184,196'); im.src = src;
   });
 
+  // The era line is rebuilt whole each time, so pressing K (or anything else) can't stack the jump phrase twice.
   function paintStamp() {
-    const s = stg.s, box = $('#svStamp'); box.innerHTML = ''; if (!s) return;
+    const s = stg.s, box = $('#svStamp'); box.replaceChildren(); if (!s) return;
     const tag = (t, cls) => el('span', { class: cls }, '[', el('b', { text: t }), ']');
     box.append(...[tag(`${pad(s.n)}/${stops.length}`), tag(String(s.year), 'yy'), s.album ? tag(s.album) : null,
       s.dissent ? tag('Close call') : null, state.keep.has(s.n) ? tag('♥ Kept', 'kept') : null].filter(Boolean));
-    const p = stg.prev; if (p && p !== s) { const dy = s.year - p.year; $('#svEra').append(' · ', el('span', { class: 'jump', text: dy > 0 ? `${dy} year${dy > 1 ? 's' : ''} after ${p.title}` : dy < 0 ? `${-dy} year${dy < -1 ? 's' : ''} before ${p.title}` : `the same year as ${p.title}` })); }
+    const era = $('#svEra'); era.replaceChildren(stg.eraText);
+    const p = stg.prev; if (p && p !== s) { const dy = s.year - p.year; era.append(' · ', el('span', { class: 'jump', text: dy > 0 ? `${dy} year${dy > 1 ? 's' : ''} after ${p.title}` : dy < 0 ? `${-dy} year${dy < -1 ? 's' : ''} before ${p.title}` : `the same year as ${p.title}` })); }
   }
   function paintNote(b) {
-    const box = $('#svNote'); box.innerHTML = ''; box.classList.remove('pic');
-    $('#svNoteLabel').textContent = b ? `${b.label} · ${stg.beat + 1}/${stg.beats.length}` : stg.s ? 'notes' : '';
+    const box = $('#svNote'); box.replaceChildren(); box.classList.remove('pic');
+    $('#svNoteLabel').textContent = b ? `${b.label} · ${stg.beat + 1}/${stg.beats.length}` : 'notes';
     $('#svBar').querySelectorAll('b').forEach(t => t.classList.toggle('done', +t.dataset.k <= stg.beat));
-    if (!b) return setStill(stg.artistImg);
+    if (!b) { paintNoNote(); return showHero(b); }
     box.classList.toggle('pic', !!b.img);
     box.append(...[b.img ? el('img', { src: b.img, alt: b.head || '' }) : null, el('div', {}, b.head ? el('b', { text: b.head }) : null, el('p', { class: b.q ? 'q' : null, text: b.text }))].filter(Boolean));
-    setStill(stg.artistImg);
-    box.classList.remove('fresh'); void box.offsetWidth; box.classList.add('fresh');
+    showHero(b);
+    replay(box, 'fresh');
+  }
+  // The notes pane always says something: before the first note, for a song with no notes, with nothing playing.
+  function paintNoNote() {
+    const box = $('#svNote'), n = stg.n, s = stg.s, msg = (head, text) => box.replaceChildren(el('div', {}, el('b', { text: head }), el('p', { text })));
+    if (s) return msg(s.title, `The notes start ${stg.beats.length ? 'a few seconds in' : 'when there are some'}. ${s.artist}, ${s.year}.`);
+    if (sync.down) return msg('To bring it back', 'Run liner-notes\u00a0serve, or systemctl\u00a0--user\u00a0restart\u00a0liner-notes if the service is installed. This screen picks up again by itself.');
+    if (!n) return msg(sync.reason === 'no-player' ? 'cliamp isn’t running' : 'Nothing playing', 'Start a playlist in cliamp and the liner notes follow along, timed to the song.');
+    const pl = n.playlist && n.playlist !== D.title ? n.playlist : '';
+    if (pl) return msg(`${pl} has no liner notes yet`, 'Lyrics and tonight’s trail still follow along. The notes come when this playlist gets its own journey.');
+    return msg(LIVE ? 'No liner notes for this song yet' : `Not on ${D.title}`, 'Lyrics and tonight’s trail still follow along.');
   }
   function paintTicks() { const bar = $('#svBar'); bar.querySelectorAll('b').forEach(b => b.remove()); if (stg.dur) stg.beats.forEach((b, k) => bar.append(el('b', { style: `left: ${b.at / stg.dur * 100}%`, 'data-k': k }))); }
   function paintTrail() {
-    const svg = $('#svTrail'), ns = 'http://www.w3.org/2000/svg', w = svg.clientWidth || 1000, h = svg.clientHeight || 80; svg.innerHTML = ''; svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+    const svg = $('#svTrail'), ns = 'http://www.w3.org/2000/svg', w = svg.clientWidth || 1000, h = svg.clientHeight || 60; svg.replaceChildren(); svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
     const add = (tag, a) => { const n = document.createElementNS(ns, tag); for (const k in a) n.setAttribute(k, a[k]); svg.append(n); return n; };
+    const P = stg.plays;
+    if (LIVE) {
+      // No years to place songs on: tonight's plays in order, the one playing last.
+      const N = Math.max(P.length, 1), x = k => 12 + (w - 24) * (N > 1 ? k / (N - 1) : 1);
+      if (P.length > 1) add('path', { class: 'route', d: P.map((p, k) => `${k ? 'L' : 'M'}${x(k).toFixed(1)} ${h - 12}`).join(' ') });
+      P.forEach((p, k) => add('circle', { cx: x(k), cy: h - 12, r: 3.6, class: 'on' }));
+      if (P.length) add('circle', { cx: x(P.length - 1), cy: h - 12, r: 7.5, class: 'here' });
+      setText($('#svTrailNote'), P.length ? `${P.length} tonight` : '');
+      return;
+    }
     const cnt = {}; stops.forEach(s => cnt[s.year] = (cnt[s.year] || 0) + 1);
-    const gap = Math.min(11, (h - 22) / Math.max(...Object.values(cnt))), seen = {}, pos = new Map();
+    const gap = Math.min(11, (h - 26) / Math.max(...Object.values(cnt))), seen = {}, pos = new Map();
     stops.forEach(s => { const k = seen[s.year] = (seen[s.year] || 0) + 1; pos.set(s.n, [(s.year - yMin + 0.5) / span * w, h - 5 - (k - 1) * gap]); });
-    eras.forEach(e => { const x = (e.from - yMin) / span * w; add('line', { x1: x, x2: x, y1: 0, y2: h, class: 'era' }); add('text', { x: x + 6, y: 11, class: 'lbl' }).textContent = String(e.from); });
-    const played = new Set(stg.plays.map(s => s.n));
-    if (stg.plays.length > 1) add('path', { class: 'route', d: stg.plays.map((s, k) => { const [x, y] = pos.get(s.n); if (!k) return `M${x} ${y}`; const [px, py] = pos.get(stg.plays[k - 1].n); return `Q${((px + x) / 2).toFixed(1)} ${(Math.min(py, y) - 14 - Math.abs(x - px) * 0.05).toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)}`; }).join(' ') });
+    eras.forEach(e => { const x = (e.from - yMin) / span * w; add('line', { x1: x, x2: x, y1: 0, y2: h, class: 'era' }); add('text', { x: x + 6, y: 16, class: 'lbl' }).textContent = String(e.from); });
+    const mine = P.filter(p => p.stop), played = new Set(mine.map(p => p.stop.n));
+    if (mine.length > 1) add('path', { class: 'route', d: mine.map((p, k) => { const [x, y] = pos.get(p.stop.n); if (!k) return `M${x} ${y}`; const [px, py] = pos.get(mine[k - 1].stop.n); return `Q${((px + x) / 2).toFixed(1)} ${(Math.min(py, y) - 14 - Math.abs(x - px) * 0.05).toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)}`; }).join(' ') });
     stops.forEach(s => { const [x, y] = pos.get(s.n); add('circle', { cx: x, cy: y, r: played.has(s.n) ? 3.6 : 2.2, class: played.has(s.n) ? 'on' : 'off' }); });
     const cur = stg.s && pos.get(stg.s.n); if (cur) add('circle', { cx: cur[0], cy: cur[1], r: 7.5, class: 'here' });
-    const P = stg.plays, ys = P.map(s => s.year), es = new Set(P.map(s => s.era));
-    $('#svTrailNote').textContent = P.length ? `${P.length} tonight · ${es.size}/${eras.length} eras` : '';
+    const es = new Set(mine.map(p => p.stop.era));
+    setText($('#svTrailNote'), P.length ? `${P.length} tonight · ${es.size}/${eras.length} eras` : '');
   }
-  async function fetchLyrics(yt) {
-    /* The first ask can land while cliamp is still switching songs (a Stream Deck key loads, then jumps), so keep asking for this song for a while.
-       The bridge answers only for the song asked about, never for whatever happens to be playing at that instant. */
-    const s = byYt.get(yt), q = yt && yt.startsWith('song:') ? 'song=' + encodeURIComponent(yt.slice(5)) : 'yt=' + encodeURIComponent(yt) + (s && s.id ? '&song=' + encodeURIComponent(s.id) : '');
-    for (const wait of [0, 2, 5, 10, 20]) {
-      if (wait) await new Promise(res => setTimeout(res, wait * 1000));
-      if (!stg.lyricsOn || stg.yt !== yt || stg.lines) return;
-      try { const r = norm(await (await fetch(BRIDGE + '/lyrics?' + q, { cache: 'no-store' })).json()); if (r.ok && r.yt === yt && stg.yt === yt) { stg.lines = r.lines; stg.line = -2; return; } } catch {}
+  /* Lyrics for the song asked about (the bridge never answers with another song's). The first ask can land while
+     cliamp is still switching songs, so keep asking for a while, but not from a hidden tab. */
+  const lyricQuery = n => { const q = new URLSearchParams(); if (n.yt) q.set('yt', n.yt); if (n.song) q.set('song', n.song); return q.toString(); };
+  async function fetchLyrics(key, n) {
+    const q = lyricQuery(n); if (!q) return;
+    for (const wait of [0, 2, 5, 10, 20, 40, 60]) {
+      if (wait) await sleep(wait * 1000);
+      while (document.hidden && stg.key === key) await sleep(5000);
+      if (!stg.lyricsOn || stg.key !== key || stg.lines) return;
+      try {
+        const r = await (await fetchT(BRIDGE + '/lyrics?' + q, 6000)).json();
+        if (stg.key !== key) return;
+        if (r && r.ok && Array.isArray(r.lines) && (!r.yt || !n.yt || r.yt === n.yt)) { setLines(r.lines); return; }
+      } catch {}
     }
+  }
+  function setLines(raw) {
+    const lines = raw.map(l => ({ start: +(l.t ?? l.start) || 0, text: String(l.text || '') })).sort((a, b) => a.start - b.start);
+    if (!lines.some(l => l.text)) return;
+    stg.lines = lines; stg.line = -2;
+    const first = lines.find(l => l.text); stg.firstVocal = first.start + stg.offset - lyricLead;
+    // Before the first note (or just after the song came up) they show at once, and the intro note can move ahead
+    // of the era essay; later they wait for the next note, so the right column doesn't reflow in the middle of one.
+    if (stg.beat < 0) { stg.shown = true; if (stg.s) { stg.beats = beatsFor(stg.s, stg.dur, stg.prev, stg.firstVocal); paintTicks(); } }
+    else if (performance.now() - stg.freshAt < 3000) stg.shown = true;
+    paintStageKeys();
   }
   /* A play counts if the next one started at least 30 seconds later; a gap of 20 minutes past the end of a song ends the night. */
   async function fetchPlays() {
-    let r; try { r = await (await fetch(BRIDGE + '/history', { cache: 'no-store' })).json(); } catch { return; }
-    const P = (r.plays || []).map(p => ({ ...norm(p), t: Date.parse(p.at) })).filter(p => p.t), run = [];
+    let r; try { r = await (await fetchT(BRIDGE + '/history', 5000)).json(); } catch { return; }
+    const P = (r.plays || []).map(p => ({ ...p, t: Date.parse(p.at) })).filter(p => p.t), run = [];
     for (let k = 0; k < P.length; k++) {
       if (k && P[k].t + ((P[k].secs || 300) * 1000) + 20 * 60e3 < P[k - 1].t) break;
       if (!k || P[k - 1].t - P[k].t >= 30e3) run.push(P[k]);
     }
-    stg.plays = run.reverse().map(p => byYt.get(p.yt)).filter(Boolean);
-    const T = stg.plays;
-    if (!stg.prev && stg.s && T.length > 1 && T[T.length - 1] === stg.s) { stg.prev = T[T.length - 2]; stg.beats = beatsFor(stg.s, stg.dur, stg.prev); stg.beat = -1; paintTicks(); paintStamp(); }
+    stg.plays = run.reverse().map(p => ({ yt: p.yt, song: p.song, stop: stopFor(p) }));
+    const T = stg.plays.filter(p => p.stop);
+    if (!stg.prev && stg.s && T.length > 1 && T[T.length - 1].stop === stg.s) { stg.prev = T[T.length - 2].stop; if (stg.beat < 0) { stg.beats = beatsFor(stg.s, stg.dur, stg.prev, stg.firstVocal); paintTicks(); } paintStamp(); }
     paintTrail();
   }
+  /* A cover for a song this journey doesn't have, from the bridge's cache, when there is one. */
+  function findCover(n, key) {
+    stg.cover = null;
+    const ids = [n.song, n.yt].filter(x => x && /^[\w-]+$/.test(x));
+    if (!SERVED || !ids.length) return;
+    const tryNext = k => { if (k >= ids.length || stg.key !== key) return; const src = `${BRIDGE}/m/${D.slug}/covers/${ids[k]}.webp`, im = new Image();
+      im.onload = () => { if (stg.key !== key) return; stg.cover = src; $('#svCover').src = src; SV.classList.add('bigcover'); toneOf(src, src).then(t => { if (stg.key === key) SV.style.setProperty('--tone', t); }); };
+      im.onerror = () => tryNext(k + 1); im.src = src; };
+    tryNext(0);
+  }
+  const trackKey = n => n ? n.yt || (n.song ? 'song:' + n.song : `${n.artist || ''}|${n.title || ''}`) : null;
   function renderStage() {
-    const n = sync.on ? sync.now : null, s = n && byYt.get(n.yt);
+    const n = sync.on ? sync.now : null, s = stopFor(n), key = trackKey(n);
     if (s && stg.s && stg.s !== s) stg.prev = stg.s;
-    const fresh = !n || n.yt !== stg.yt;
-    stg.yt = n ? n.yt : null; stg.dur = n ? n.duration : 0; stg.s = s || null;
+    const fresh = key !== stg.key;
+    stg.key = key; stg.n = n; stg.dur = n ? n.duration || 0 : 0; stg.s = s;
     SV.classList.toggle('offlist', !s);
-    $('#svBrand').textContent = D.title.toUpperCase();
+    setText($('#svBrand'), D.title.toUpperCase());
+    if (fresh) {
+      stg.lines = null; stg.shown = false; stg.line = -2; stg.firstVocal = null; stg.cover = null; stg.artistImg = null; stg.freshAt = performance.now();
+      stg.offset = parseFloat(store.get('journey-lyric-offset-' + ((n && n.yt) || (s && s.yt) || (n && n.song) || ''))) || 0;
+      $('#svLyric .now').textContent = ''; $('#svLyric .nx').textContent = ''; SV.classList.remove('lyrics', 'singing');
+      $('#svCover').removeAttribute('src'); SV.classList.remove('bigcover');
+      replay($('#svTitle'), 'fresh');
+      if (n) { fetchLyrics(key, n); fetchPlays(); }
+    }
+    stg.beats = []; stg.beat = -1;
     if (!s) {
-      $('#svEra').textContent = ''; $('#svCover').removeAttribute('src'); $('#svStamp').textContent = n ? `Not on ${D.title}` : 'Waiting for cliamp';
-      $('#svTitle').textContent = n ? n.title || '' : 'Nothing playing'; $('#svBy').textContent = n ? n.artist || '' : 'Start the playlist and this screen follows along.';
-      stg.artistImg = null; stg.beats = []; stg.beat = -1; paintTicks(); paintNote(null); SV.classList.remove('lyrics'); return;
+      stg.eraText = ''; $('#svEra').replaceChildren(); $('#svStamp').replaceChildren();
+      $('#svBg').removeAttribute('src');
+      if (sync.down) { setText($('#svStamp'), 'bridge'); setText($('#svTitle'), 'The bridge isn’t running'); setText($('#svBy'), ''); setText($('#svEra'), 'Nothing can follow cliamp until it’s back.'); }
+      else if (!n) { setText($('#svTitle'), sync.reason === 'no-player' ? 'cliamp isn’t running' : 'Nothing playing'); setText($('#svBy'), ''); setText($('#svEra'), 'Waiting for cliamp'); }
+      else {
+        const pl = n.playlist && n.playlist !== D.title ? n.playlist : '';
+        $('#svStamp').append(...[pl ? el('span', {}, '[', el('b', { text: pl }), ']') : null, LIVE ? null : el('span', { text: `not on ${D.title}` })].filter(Boolean));
+        setText($('#svTitle'), n.title || ''); setText($('#svBy'), n.artist || ''); setText($('#svEra'), n.album || '');
+        if (fresh) findCover(n, key);
+      }
+      paintTicks(); paintNote(null); paintTrail(); paintStageKeys(); return;
     }
     const e = eraOf(s);
-    if ($('#svBg').getAttribute('src') !== e.image) $('#svBg').src = e.image;
-    const an = SD && Object.keys(SD.artists).filter(a => s.artist === a || s.artist.includes(a)).sort((a, b) => b.length - a.length)[0];
-    stg.artistImg = an ? BRIDGE + '/m/' + D.slug + '/' + SD.artists[an] : null;
-    if (stg.artistImg) $('#svArtist').src = stg.artistImg; else $('#svArtist').removeAttribute('src');
-    $('#svCover').src = s.cover; toneOf(s).then(t => { if (stg.s === s) SV.style.setProperty('--tone', t); });
-    $('#svEra').textContent = `era ${e.n}/${eras.length} · ${e.name} · ${e.years}${s.draft ? ' · draft notes, AI-written' : ''}`;
-    $('#svTitle').textContent = s.title; $('#svBy').textContent = s.artist; paintStamp();
-    stg.beats = beatsFor(s, stg.dur, stg.prev); stg.beat = -1; paintTicks(); paintNote(null);
-    if (fresh) {
-      stg.lines = null; stg.line = -2; stg.offset = parseFloat(store.get('journey-lyric-offset-' + s.yt)) || 0;
-      $('#svLyric .now').textContent = ''; $('#svLyric .nx').textContent = ''; SV.classList.remove('lyrics', 'singing');
-      $('#svTitle').classList.remove('fresh'); void SV.offsetWidth; $('#svTitle').classList.add('fresh');
-      fetchLyrics(n.yt); fetchPlays();
-    }
+    if (e.image && $('#svBg').getAttribute('src') !== e.image) $('#svBg').src = e.image;
+    const an = SD && SD.artists && Object.keys(SD.artists).filter(a => s.artist === a || s.artist.includes(a)).sort((a, b) => b.length - a.length)[0];
+    stg.artistImg = an && SERVED && /^[\w./-]+$/.test(SD.artists[an]) ? BRIDGE + '/m/' + D.slug + '/' + SD.artists[an] : null; stg.artistName = an || '';
+    $('#svCover').src = s.cover; toneOf('n' + s.n, s.cover).then(t => { if (stg.s === s) SV.style.setProperty('--tone', t); });
+    stg.eraText = e.n ? `era ${e.n}/${eras.length} · ${e.name} · ${e.years}${s.draft ? ' · draft notes, AI-written' : ''}` : (s.draft ? 'draft notes, AI-written' : '');
+    setText($('#svTitle'), s.title); setText($('#svBy'), s.artist); paintStamp();
+    stg.beats = beatsFor(s, stg.dur, stg.prev, stg.firstVocal); stg.beat = -1; paintTicks(); paintNote(null); paintTrail(); paintStageKeys();
   }
   const showKeys = () => { $('#svKeys').classList.remove('hide'); clearTimeout(stg.keys); stg.keys = setTimeout(() => $('#svKeys').classList.add('hide'), 20000); };
   const toast = msg => { $('#svToast').textContent = msg; clearTimeout(stg.toast); stg.toast = setTimeout(() => { $('#svToast').textContent = ''; }, 2600); };
-  function nudgeLyrics(d) { if (!stg.s) return; stg.offset = Math.round((stg.offset + d) * 10) / 10; store.set('journey-lyric-offset-' + stg.s.yt, String(stg.offset)); stg.line = -2; toast(`Lyrics ${stg.offset > 0 ? '+' : ''}${stg.offset}s`); }
-  function toggleLyrics() { stg.lyricsOn = !stg.lyricsOn; store.set('journey-lyrics', stg.lyricsOn ? 'on' : 'off'); toast(stg.lyricsOn ? 'Lyrics on' : 'Lyrics off'); if (stg.lyricsOn && stg.yt) fetchLyrics(stg.yt); else { stg.lines = null; SV.classList.remove('lyrics', 'singing'); } }
+  const offsetKey = () => 'journey-lyric-offset-' + ((stg.n && stg.n.yt) || (stg.s && stg.s.yt) || (stg.n && stg.n.song) || '');
+  function nudgeLyrics(d) { if (!stg.n || !stg.lines) return; stg.offset = Math.round((stg.offset + d) * 10) / 10; store.set(offsetKey(), String(stg.offset)); stg.line = -2; toast(`Lyrics ${stg.offset > 0 ? '+' : ''}${stg.offset}s`); }
+  function nudgeLead(d) { lyricLead = Math.round((lyricLead + d) * 100) / 100; store.set('journey-lyric-lead', String(lyricLead)); stg.line = -2; toast(`Lyrics ${lyricLead}s early, every song`); }
+  function toggleLyrics() {
+    stg.lyricsOn = !stg.lyricsOn; toast(stg.lyricsOn ? 'Lyrics on' : 'Lyrics off for now');
+    if (stg.lyricsOn) { if (stg.lines) stg.shown = true; else if (stg.n) fetchLyrics(stg.key, stg.n); }
+    else SV.classList.remove('lyrics', 'singing');
+  }
 
-  function tickStage(now, t, sea, amber) {
-    const n = sync.on ? sync.now : null;
-    if ((n ? n.yt : null) !== stg.yt || (n && n.duration && n.duration !== stg.dur)) renderStage();
+  /* The stage runs on two clocks: the words, the notes and the video four times a second, and only the lyric sweep
+     and the progress bar every frame. Both stop in a hidden tab. */
+  function modeOf() { const n = sync.on ? sync.now : null; return sync.down ? 'down' : !n ? 'none:' + sync.reason : 'song:' + trackKey(n); }
+  function tickStage() {
+    const now = performance.now(), n = sync.on ? sync.now : null;
+    const mode = modeOf();
+    if (mode !== stg.mode) { stg.mode = mode; renderStage(); }
+    else if (n && n.duration && n.duration !== stg.dur && stg.s) { stg.dur = n.duration; stg.beats = beatsFor(stg.s, stg.dur, stg.prev, stg.firstVocal); stg.beat = -1; paintTicks(); }
     const playing = !!(n && n.state === 'playing');
     SV.classList.toggle('paused', !playing);
     const d = new Date();
     if (d.getMinutes() !== stg.minute) {
-      stg.minute = d.getMinutes(); $('#svClock').textContent = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      stg.minute = d.getMinutes(); setText($('#svClock'), d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
       if (!reduced) $('#svIn').style.transform = `translate(${(Math.random() * 16 - 8).toFixed(1)}px, ${(Math.random() * 12 - 6).toFixed(1)}px)`;
     }
-    if (!n) { syncVideo(now, 0, false); $('#svPos').textContent = ''; $('#svLeft').textContent = ''; $('#svFill').style.width = '0'; return; }
-    const pos = n.position + (playing ? (now - sync.at) / 1000 : 0), dur = n.duration || 0;
-    $('#svFill').style.width = dur ? Math.min(100, pos / dur * 100) + '%' : '0';
-    $('#svPos').textContent = `${playing ? '▶' : '⏸'} ${fmt(pos)} / ${fmt(dur)}`; $('#svLeft').textContent = '';
-    $('#svLive').textContent = playing ? '● cliamp' : '○ paused';
-    syncVideo(now, pos, playing);
+    const liveEl = $('#svLive'), liveTxt = sync.down ? '○ bridge down' : !n ? (sync.reason === 'no-player' ? '○ no cliamp' : '○ stopped') : playing ? '● ' + (n.source || 'cliamp') : '○ paused';
+    setText(liveEl, liveTxt); liveEl.classList.toggle('off', !playing);
+    if (!n) { syncVideo(now, 0, false); paintVis(false); setText($('#svPos'), ''); $('#svFill').style.transform = 'scaleX(0)'; return; }
+    const pos = posNow(now), dur = n.duration || 0, flow = flowing(n);
+    setText($('#svPos'), `${playing ? '▶' : '⏸'} ${fmt(pos)} / ${fmt(dur)}`);
+    syncVideo(now, pos, flow);
     let k = -1; for (let i = 0; i < stg.beats.length; i++) if (stg.beats[i].at <= pos) k = i;
-    if (k !== stg.beat) { stg.beat = k; paintNote(stg.beats[k]); }
-    const L = stg.lyricsOn && stg.lines && stg.lines.some(l => l.text) ? stg.lines : null;
+    if (k !== stg.beat) { stg.beat = k; if (stg.lines && !stg.shown) stg.shown = true; paintNote(stg.beats[k]); }
+    if (!stg.s && stg.lines && !stg.shown) stg.shown = true;
+    paintVis(playing);
+    const L = stg.lyricsOn && stg.shown && stg.lines ? stg.lines : null;
     SV.classList.toggle('lyrics', !!L);
     if (L) {
-      const p = pos - stg.offset + LYRIC_LEAD; let li = -1; for (let i = 0; i < L.length; i++) if (L[i].start <= p) li = i;
+      const p = pos - stg.offset + lyricLead; let li = -1; for (let i = 0; i < L.length; i++) if (L[i].start <= p) li = i;
       const cur = L[li], nx = L[li + 1];
-      if (cur) $('#svLyric .now').style.setProperty('--k', Math.min(100, Math.max(0, (p - cur.start) / Math.max(0.8, ((nx ? nx.start : cur.start + 4) - cur.start) * 0.85) * 100)).toFixed(1) + '%');
       const singing = !!(playing && cur && cur.text && (p - cur.start < 7 || (nx && nx.start - p < 5)));
       SV.classList.toggle('singing', singing);
-      const ls = !playing ? '· paused' : singing ? '· singing' : nx ? `· instrumental · next line in ${fmt(nx.start - p)}` : '· instrumental';
-      if ($('#svLyrState').textContent !== ls) $('#svLyrState').textContent = ls;
+      setText($('#svLyrState'), !playing ? '· paused' : singing ? '· singing' : nx ? `· instrumental · next line in ${fmt(nx.start - p)}` : '· instrumental');
       if (li !== stg.line) {
         stg.line = li; const nxt = L.slice(li + 1).find(x => x.text);
-        $('#svLyric .now').textContent = cur && cur.text ? cur.text : ''; $('#svLyric .nx').textContent = nxt ? nxt.text : '';
-        const ly = $('#svLyric .now'); ly.classList.remove('pop'); void ly.offsetWidth; ly.classList.add('pop');
+        setText($('#svLyric .now'), cur && cur.text ? cur.text : ''); setText($('#svLyric .nx'), nxt ? nxt.text : '');
+        if (!reduced) $('#svLyric .now').animate([{ transform: 'translateY(5px)' }, { transform: 'none' }], { duration: 220, easing: 'ease-out' });
       }
-    }
+    } else SV.classList.remove('singing');
+    kickSweep();
+  }
+  function stageLoop() { stg.loop = 0; if (!stg.on || document.hidden) return; tickStage(); stg.loop = setTimeout(stageLoop, 250); }
+  const kickSweep = () => { if (!stg.raf && stg.on && !document.hidden) stg.raf = requestAnimationFrame(sweep); };
+  function sweep() {
+    stg.raf = 0;
+    const n = sync.on ? sync.now : null; if (!stg.on || document.hidden || !n) return;
+    const now = performance.now(), pos = posNow(now), dur = n.duration || 0;
+    $('#svFill').style.transform = `scaleX(${dur ? Math.min(1, pos / dur).toFixed(4) : 0})`;
+    const L = SV.classList.contains('lyrics') && stg.lines, cur = L && L[stg.line], nx = L && L[stg.line + 1];
+    if (cur) { const p = pos - stg.offset + lyricLead; $('#svLyric .now').style.setProperty('--k', Math.min(100, Math.max(0, (p - cur.start) / Math.max(0.8, ((nx ? nx.start : cur.start + 4) - cur.start) * 0.85) * 100)).toFixed(1) + '%'); }
+    if (flowing(n)) stg.raf = requestAnimationFrame(sweep);
   }
 
   function enterStage() {
     if (stg.on) return;
     if (sync.on && !sync.follow) setFollow(true);
-    stg.on = true; stg.yt = undefined; stg.minute = -1; SV.hidden = false; document.documentElement.style.overflow = 'hidden'; $('#stageBtn').setAttribute('aria-pressed', 'true');
-    clearTimeout(stg.idle); requestAnimationFrame(paintTrail); loadStageData(); showKeys();
+    stg.on = true; stg.mode = undefined; stg.minute = -1; SV.hidden = false; document.documentElement.classList.add('stage-on'); document.documentElement.style.overflow = 'hidden'; $('#stageBtn').setAttribute('aria-pressed', 'true');
+    $('#svExit').hidden = LIVE;
+    clearTimeout(stg.idle); requestAnimationFrame(paintTrail); loadStageData(); showKeys(); syncBands(); keepAwake();
+    if (!stg.loop) stageLoop(); poll();
   }
-  function exitStage() { stg.on = false; SV.hidden = true; document.documentElement.style.overflow = ''; $('#stageBtn').setAttribute('aria-pressed', 'false'); render(); poke(); }
+  function exitStage() {
+    if (LIVE) return;
+    hero.set(false, false); if (lv.el) lv.el.pause();
+    stg.on = false; SV.hidden = true; document.documentElement.classList.remove('stage-on'); document.documentElement.style.overflow = ''; $('#stageBtn').setAttribute('aria-pressed', 'false');
+    if (wake) { wake.release().catch(() => {}); wake = null; }
+    render(); poke(); syncBands(); kickDraw();
+  }
   /* In companion mode the page goes back to the stage after a minute and a half without input. */
-  const poke = () => { clearTimeout(stg.idle); if (state.companion && state.started) stg.idle = setTimeout(() => { if (!stg.on && !anyOpen() && sync.on) enterStage(); }, 90000); };
-  ['keydown', 'pointerdown', 'wheel', 'pointermove'].forEach(ty => addEventListener(ty, () => { if (!stg.on) poke(); }, { passive: true }));
-  SV.addEventListener('click', exitStage);
+  const poke = () => { clearTimeout(stg.idle); if (state.companion && state.started && !LIVE) stg.idle = setTimeout(() => { if (!stg.on && !anyOpen() && sync.on) enterStage(); }, 90000); };
+  ['keydown', 'pointerdown', 'wheel'].forEach(ty => addEventListener(ty, () => { if (!stg.on) poke(); }, { passive: true }));
+  /* A click on the stage stays on the stage; the corner button (or Esc) leads to the full page. The pointer shows
+     while it moves and hides after 3 seconds still. */
+  $('#svExit').onclick = ev => { ev.stopPropagation(); exitStage(); };
+  SV.addEventListener('pointermove', () => { SV.classList.remove('still'); clearTimeout(stg.still); stg.still = setTimeout(() => SV.classList.add('still'), 3000); }, { passive: true });
   $('#stageBtn').onclick = () => stg.on ? exitStage() : enterStage();
   addEventListener('resize', () => { if (stg.on) paintTrail(); });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { if (lv.el) lv.el.pause(); syncBands(); return; }
+    poll(); themeLoop(); syncBands(); keepAwake(); kickDraw();
+    if (stg.on && !stg.loop) stageLoop();
+  });
 
   /* ---------- start ---------- */
   const resumed = readHash();
   const begin = (mode) => {
     if (mode === 'companion') state.companion = true;
     if (mode === 'express') state.lens = 'express';
-    state.started = true; $('#opening').hidden = true; $('#app').hidden = false;
+    state.started = true; $('#opening').hidden = true;
+    if (LIVE) return;
+    $('#app').hidden = false;
     setLens(state.lens);
     const s = stops[state.i]; state.erasShown.add(s.era);
-    render();
-    if (sync.on) { setStatus(syncStatus(s)); setPaused(!(sync.now && sync.now.yt === s.yt && sync.now.state === 'playing')); }
-    else if (mode !== 'companion' && !state.companion) playPreview(true); else setStatus('Companion mode: previews stay quiet until you press play.');
-    requestAnimationFrame(draw);
+    render(); readColors();
+    if (sync.on) { setStatus(syncStatus(s)); setPaused(!(sync.now && stopFor(sync.now) === s && sync.now.state === 'playing')); }
+    else if (mode !== 'companion' && !state.companion) playPreview(true);
+    syncBands(); kickDraw();
   };
+  // The opening's companion button names the playing song as soon as any answer from the bridge names one.
+  function paintOpening() {
+    if (state.started || LIVE) return;
+    const s = sync.on && stopFor(sync.now), b = $('#companion');
+    if (s) { b.textContent = `Follow cliamp · ${s.title}`; b.classList.replace('ghost', 'big'); $('#start').classList.replace('big', 'ghost'); }
+    else if (b.classList.contains('big')) { b.textContent = 'Companion mode'; b.classList.replace('big', 'ghost'); $('#start').classList.replace('ghost', 'big'); }
+  }
   $('#start').onclick = () => { ensureAudio(); if (sync.on) setFollow(false); begin('play'); };
-  $('#express').onclick = () => { ensureAudio(); state.i = stops.findIndex(s => D.express.n.includes(s.n)); begin('express'); };
-  $('#companion').onclick = () => { ensureAudio(); begin('companion'); };
-  if (resumed) $('#start').textContent = `${D.copy.resume} ${stops[state.i].title}`;
-  poll().then(on => {
-    const s = on && sync.now && byYt.get(sync.now.yt); if (!s) return;
-    const b = $('#companion'); b.textContent = `Follow cliamp · ${s.title}`; b.classList.replace('ghost', 'big'); $('#start').classList.replace('big', 'ghost');
-    b.onclick = () => { state.i = stops.indexOf(s); begin('companion'); enterStage(); };
-    if (state.companion) b.click();
+  $('#express').onclick = () => { ensureAudio(); state.i = Math.max(0, stops.findIndex(s => D.express.n.includes(s.n))); begin('express'); };
+  $('#companion').onclick = () => { ensureAudio(); const s = sync.on && stopFor(sync.now); if (s) state.i = stops.indexOf(s); begin('companion'); enterStage(); };
+  if (resumed && !LIVE) $('#start').textContent = `${D.copy.resume} ${stops[state.i].title}`;
+  // Companion mode (and the live page) goes straight to the stage, which has something to say in every state:
+  // bridge down, no cliamp, nothing playing, a song with no notes. It never waits on a first answer.
+  if (state.companion) { begin('companion'); enterStage(); }
+  else { paintPageKeys(); $('#start').focus({ preventScroll: true }); poll(); }
+  themeLoop();
+
+  // A read-only window for the headless checks in tools/scenarios.js.
+  window.LinerNotes = Object.freeze({
+    stage: () => ({ on: stg.on, mode: stg.mode, key: stg.key, beat: stg.beat, beats: stg.beats.map(b => ({ at: b.at, label: b.label, kind: b.kind || '' })), lines: !!stg.lines, shown: stg.shown, live: LIVE, hero: stg.hero && stg.hero.kind, video: lv.id, videoLive: lv.live }),
+    hero: () => hero.stats(),
+    keeps: () => [...state.keep],
   });
-  if (state.companion) $('#companion').focus(); else $('#start').focus();
 })();
 </script>
 </body>
