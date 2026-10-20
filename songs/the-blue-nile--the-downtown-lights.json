@@ -1,0 +1,83 @@
+{
+ "id": "the-blue-nile--the-downtown-lights",
+ "title": "The Downtown Lights",
+ "artist": "The Blue Nile",
+ "year": 1989,
+ "year_note": "",
+ "album": "Hats",
+ "aliases": {
+  "youtube": [
+   "tNgSwtRqLmg"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/83/6b/dc/836bdc62-baac-0ed6-f3ec-35e064badbf0/mzaf_4839048764515392820.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/the-downtown-lights/1617325766?i=1617325768&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Paul Buchanan wrote it and the band produced, with Calum Malcolm engineering at Castlesound in Pencaitland, East Lothian. Hats took five years: Linn sent the band to a house in Gullane in 1985, Virgin, who licensed their records, took legal action over the missing album, and after nearly three unproductive years they had to leave the studio. Back in Glasgow Buchanan got past his writer's block while Robert Bell and Paul Joseph Moore built ideas on a portastudio, and when they returned to Castlesound in 1988 half the album took about a week.",
+  "context": "The band met at the University of Glasgow and once lived in a flat there with no hot water. Released on 11 September 1989 as Hats' lead single, it reached only 67 in the UK but 10 on the US Modern Rock chart, their only US chart single, and Hats went to 12. Annie Lennox and Rod Stewart both covered it in 1995, and Taylor Swift name-checked it in 2024, when streams jumped by 1,400%.",
+  "listen_for": [
+   {
+    "where": "from the start",
+    "note": "The Pittsburgh Press heard it moving 'at a stately, machine-driven uptempo', building with layers of synthesizers and drum programs. "
+   },
+   {
+    "where": "the verses",
+    "note": "Buchanan's images are small and specific: cigarettes, magazine stands, people in stairwells."
+   },
+   {
+    "where": "the build",
+    "note": "It keeps adding layers rather than changing, which is why the 6:26 album version feels shorter than it is."
+   }
+  ],
+  "leads_to": {
+   "artist": "Rickie Lee Jones",
+   "title": "Flying Cowboys",
+   "year": 1989,
+   "why": "Jones befriended the band, took them on her 1990 US tour, and they covered this title track. Walter Becker of Steely Dan produced the album."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Downtown_Lights",
+   "https://en.wikipedia.org/wiki/Hats_(album)",
+   "https://en.wikipedia.org/wiki/The_Blue_Nile_(band)",
+   "https://en.wikipedia.org/wiki/Flying_Cowboys",
+   "https://www.keymag.co.uk/reviews/the-blue-nile-hats"
+  ],
+  "unverified": "I couldn't find a Buchanan quote about this song specifically. The note about the build is my reading of the Pittsburgh Press review, not a production fact."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "67 at home, 10 in America",
+   "line": "Released on 11 September 1989, it reached 67 in the UK but 10 on the US Modern Rock chart, The Blue Nile's only US chart single.",
+   "wiki": "Hats_(album)",
+   "source": "https://en.wikipedia.org/wiki/Hats_(album)"
+  },
+  {
+   "kind": "cover",
+   "title": "Annie Lennox and Rod Stewart",
+   "line": "Both covered it in 1995, Lennox on Medusa and Stewart on A Spanner in the Works with Trevor Horn producing. Horn said Buchanan told him he liked it.",
+   "wiki": "Medusa_(Annie_Lennox_album)",
+   "source": "https://en.wikipedia.org/wiki/The_Downtown_Lights"
+  },
+  {
+   "kind": "cover",
+   "title": "Taylor Swift name-check",
+   "line": "Taylor Swift's 2024 song 'Guilty as Sin?' mentions it in its opening lines, and the song's streams rose about 1,400%.",
+   "wiki": "The_Tortured_Poets_Department",
+   "source": "https://en.wikipedia.org/wiki/The_Downtown_Lights"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

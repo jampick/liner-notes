@@ -1,0 +1,47 @@
+{
+ "year": 1979,
+ "items": [
+  {
+   "kind": "tech",
+   "title": "Sony Walkman",
+   "line": "The TPS-L2 went on sale in Japan on 1 July 1979 for about ¥33,000 ($150). Sony expected 5,000 a month and sold more than 30,000 in two months; the US got it in June 1980.",
+   "wiki": "Walkman",
+   "source": "https://en.wikipedia.org/wiki/Walkman"
+  },
+  {
+   "kind": "film",
+   "title": "Alien",
+   "line": "Ridley Scott's Alien opened in the US on 25 May 1979 under the tagline \"In space no one can hear you scream\" and took $78.9 million at home on its first run.",
+   "wiki": "Alien_(film)",
+   "source": "https://en.wikipedia.org/wiki/Alien_(film)"
+  },
+  {
+   "kind": "news",
+   "title": "Three Mile Island",
+   "line": "On 28 March 1979 a reactor near Harrisburg, Pennsylvania partly melted down, twelve days after The China Syndrome opened in cinemas. Within days 140,000 people had left the area.",
+   "wiki": "Three_Mile_Island_accident",
+   "source": "https://en.wikipedia.org/wiki/Three_Mile_Island_accident"
+  },
+  {
+   "kind": "sport",
+   "title": "Disco Demolition Night",
+   "line": "On 12 July 1979 the White Sox let fans in for 98 cents with a disco record, Steve Dahl blew the pile up between games at Comiskey Park, and the crowd rushed the field. The Sox forfeited game two to Detroit.",
+   "wiki": "Disco_Demolition_Night",
+   "source": "https://en.wikipedia.org/wiki/Disco_Demolition_Night"
+  },
+  {
+   "kind": "music",
+   "title": "Rapper's Delight",
+   "line": "The Sugarhill Gang's single came out on Sugar Hill on 16 September 1979, built on the bassline from Chic's Good Times, and reached 36 on the Hot 100 in January 1980. The long version runs 14:37.",
+   "wiki": "Rapper's_Delight",
+   "source": "https://en.wikipedia.org/wiki/Rapper%27s_Delight"
+  },
+  {
+   "kind": "tv",
+   "title": "The Dukes of Hazzard",
+   "line": "CBS premiered it on 26 January 1979 and ran 147 episodes over seven seasons. The General Lee was a 1969 Dodge Charger, and the show got through an estimated 250 to 355 cars.",
+   "wiki": "The_Dukes_of_Hazzard",
+   "source": "https://en.wikipedia.org/wiki/The_Dukes_of_Hazzard"
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "id": "aztec-camera--somewhere-in-my-heart",
+ "title": "Somewhere in My Heart",
+ "artist": "Aztec Camera",
+ "year": 1987,
+ "year_note": "On Love, released 9 November 1987. The single followed on 11 April 1988.",
+ "album": "Love",
+ "aliases": {
+  "youtube": [
+   "2w1Q8ZkXZ1Q"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2e/ae/69/2eae698a-1f1a-745b-ed85-301e836a007e/mzaf_5767895202263407739.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/somewhere-in-my-heart/516651997?i=516652008&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Roddy Frame made Love between April and August 1987 with American producers, after time in New York listening to WBLS. This one was made with the Jonzun Crew in Boston: Michael Jonzun produced it, played drums, programmed keyboards and sang backing vocals. Frame said he wanted to make 'a Jimmy Jam and Terry Lewis kinda record', marrying New York R&B electro to his own British songwriting.",
+  "context": "Frame called the album his Young Americans. He thought this song was the runt of the litter and almost left it off, saying it would be best as a B-side. Love entered at 49 and only climbed to 10 after this single went to 3 in the UK in spring 1988; by then he was living in a wooden shack in Marple Bridge.",
+  "listen_for": [
+   {
+    "where": "the drums and keyboards",
+    "note": "Michael Jonzun's drums and programmed keyboards, made with his Jonzun Crew in Boston, under a Scottish songwriter's guitar pop."
+   },
+   {
+    "where": "the backing vocals in the chorus",
+    "note": "Jonzun again. The whole production is one Boston producer around Frame's voice."
+   }
+  ],
+  "leads_to": {
+   "artist": "Janet Jackson",
+   "title": "What Have You Done for Me Lately",
+   "year": 1986,
+   "why": "The Jimmy Jam and Terry Lewis sound Frame was aiming at, recorded at Flyte Tyme in Minneapolis in September 1985."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Somewhere_in_My_Heart",
+   "https://en.wikipedia.org/wiki/Love_(Aztec_Camera_album)",
+   "https://en.wikipedia.org/wiki/What_Have_You_Done_for_Me_Lately"
+  ],
+  "unverified": "Desmond's 'Roddy Frame's biggest hit, UK #3' matches the chart; I didn't check every other Aztec Camera single to confirm 'biggest'."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "The runt goes top 3",
+   "line": "Released on 11 April 1988, the song Roddy Frame nearly left off Love reached 3 in the UK and pulled the album up from 49 to 10.",
+   "wiki": "Love_(Aztec_Camera_album)",
+   "source": "https://en.wikipedia.org/wiki/Love_(Aztec_Camera_album)"
+  },
+  {
+   "kind": "video",
+   "title": "Radar Films video",
+   "line": "John Scarlett-Davis directed the video, produced by Nick Verden for Radar Films.",
+   "wiki": "Aztec_Camera",
+   "source": "https://en.wikipedia.org/wiki/Somewhere_in_My_Heart"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

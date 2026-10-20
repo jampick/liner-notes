@@ -1,0 +1,80 @@
+{
+ "id": "haircut-100--love-plus-one",
+ "title": "Love Plus One",
+ "artist": "Haircut 100",
+ "year": 1982,
+ "year_note": "",
+ "album": "Pelican West",
+ "aliases": {
+  "youtube": [
+   "5_msHpEa3_Y"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/21/04/1a/21041ab0-b454-e66f-9d0b-a860774bd072/mzaf_14556283316526741048.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/love-plus-one/288989497?i=288989515&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Bob Sargeant produced Pelican West, with Mark Dearnley engineering, and Nick Heyward said the band thought of Sargeant as their George Martin. Sargeant came up with the marimbas. Phil Smith played the soprano sax and arranged the brass, Marc Fox played congas and percussion, Les Nemes bass and Blair Cunningham drums, with Herschel Holder and Dave Lord on trumpet and Vince Sullivan on trombone.",
+  "context": "Haircut One Hundred formed in Beckenham in 1980. 'Love Plus One' came out in January 1982, reached number 3, sold over 400,000 for a gold disc and was the UK's 14th best seller of the year; in the US it got to 37, their only hit there. In the NME Danny Baker compared Pelican West to Steely Dan's Countdown to Ecstasy. A year later Heyward had left the band.",
+  "listen_for": [
+   {
+    "where": "the opening section",
+    "note": "Marimbas first, Sargeant's idea, then Phil Smith's soprano sax takes the tune; later the two play it together."
+   },
+   {
+    "where": "in the gaps around the vocal",
+    "note": "Flourishes of steel drum and bongos. Heyward said everything on the record can be heard but it still punches, which is Sargeant's mix."
+   }
+  ],
+  "leads_to": {
+   "artist": "Steely Dan",
+   "title": "Countdown to Ecstasy",
+   "year": 1973,
+   "why": "Danny Baker's NME review called Pelican West the most summery, stylish music since this album, and the Steely Dan thread runs right through this list."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Love_Plus_One",
+   "https://en.wikipedia.org/wiki/Pelican_West",
+   "https://en.wikipedia.org/wiki/Haircut_One_Hundred",
+   "https://dev-www.songfacts.com/facts/haircut-100/love-plus-one",
+   "https://en.wikipedia.org/wiki/Countdown_to_Ecstasy",
+   "https://en.wikipedia.org/wiki/No_Sense_of_Sin"
+  ],
+  "unverified": "Folake's quote is fair (congas, percussion and a three-piece brass section are on the album credits), though the marimba is the real Latin touch. Wikipedia's main name for the band is Haircut One Hundred. The recording studio isn't confirmed by a source I could read."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK number 3",
+   "line": "Released in January 1982, it climbed from 36 to 3, went gold for 400,000 sales and was the UK's 14th best seller of the year. It made 37 in the US.",
+   "wiki": "Love_Plus_One",
+   "source": "https://en.wikipedia.org/wiki/Love_Plus_One"
+  },
+  {
+   "kind": "screen",
+   "title": "Smash Hits Single of the Week",
+   "line": "Ian Birch called it 'a nifty mover with plenty of interesting details' and predicted it would outdo 'Favourite Shirts'.",
+   "wiki": "Smash_Hits",
+   "source": "https://en.wikipedia.org/wiki/Love_Plus_One"
+  },
+  {
+   "kind": "live",
+   "title": "Bands Reunited",
+   "line": "In 2004 the original line-up, Heyward included, got back together for VH1's Bands Reunited and played it again.",
+   "wiki": "Haircut_One_Hundred",
+   "source": "https://en.wikipedia.org/wiki/Haircut_One_Hundred"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-1)",
+  "written_on": "2026-10-19"
+ }
+}

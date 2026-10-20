@@ -1,0 +1,87 @@
+{
+ "id": "george-benson--turn-your-love-around",
+ "title": "Turn Your Love Around",
+ "artist": "George Benson",
+ "year": 1981,
+ "year_note": "Written for The George Benson Collection (1981); the single peaked in early 1982.",
+ "album": "The George Benson Collection",
+ "aliases": {
+  "youtube": [
+   "gA_kOJP94Hc"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7f/87/73/7f8773a4-4594-07dc-170e-dafee8a56ede/mzaf_13798976839402023305.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/turn-your-love-around/321976365?i=321976381&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Jay Graydon had four days to come up with a new song for Benson's greatest-hits set and got the chorus melody in the bathroom, then ran to a cassette deck. He wrote it with Steve Lukather and Bill Champlin. Jeff Porcaro programmed the drums on a Linn LM-1, one of the first pop hits to use one, and David Paich plays synth bass, David Foster synth, Jai Winding Rhodes and piano, and Jerry Hey the horn chart. The LM-1 had no cymbal sounds, and Mike Baird is credited for cymbals.",
+  "context": "It was one of two new songs added to pad out a double-LP hits package, and it became the hit: number one on the soul chart and 5 on the Hot 100 in early 1982. It won Best R&B Song at the 1983 Grammys for Champlin, Graydon and Lukather. It was sampled on Lil' Kim's Not Tonight and in Japan on East End X Yuri's Da.Yo.Ne.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "The machine beat is Jeff Porcaro programming the LM-1, Toto's drummer choosing a box over his own kit."
+   },
+   {
+    "where": "on top of the beat",
+    "note": "Real cymbals, credited to Mike Baird. The LM-1's twelve samples didn't include any."
+   },
+   {
+    "where": "the low end",
+    "note": "David Paich on synth bass, so three Toto members plus Foster and Graydon are behind Benson."
+   }
+  ],
+  "leads_to": {
+   "artist": "Airplay",
+   "title": "Should We Carry On",
+   "year": 1980,
+   "why": "Graydon and Foster's own band, with Porcaro on drums and Graydon singing this one; the demo is what got them signed to RCA."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Turn_Your_Love_Around",
+   "https://sessiondays.com/?p=7879",
+   "https://en.wikipedia.org/wiki/The_George_Benson_Collection",
+   "https://en.wikipedia.org/wiki/Linn_LM-1",
+   "https://en.wikipedia.org/wiki/Airplay_(album)"
+  ],
+  "unverified": "That Baird's cymbals were added because the LM-1 had none is my inference from the two facts; neither source says it outright, so the text only puts them side by side."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Chart peaks",
+   "line": "It went to number one on the soul chart and 5 on the Hot 100 in early 1982, and was the 27th biggest hit of that year.",
+   "source": "https://en.wikipedia.org/wiki/Turn_Your_Love_Around"
+  },
+  {
+   "kind": "award",
+   "title": "Best R&B Song",
+   "line": "Champlin, Graydon and Lukather won Best R&B Song at the 25th Grammys in 1983.",
+   "source": "https://en.wikipedia.org/wiki/Turn_Your_Love_Around"
+  },
+  {
+   "kind": "sample",
+   "title": "Lil' Kim and East End X Yuri",
+   "line": "It's sampled on the album version of Lil' Kim's Not Tonight and on East End X Yuri's 1994 Japanese hit Da.Yo.Ne.",
+   "source": "https://en.wikipedia.org/wiki/Turn_Your_Love_Around"
+  },
+  {
+   "kind": "cover",
+   "title": "Tony Di Bart",
+   "line": "Tony Di Bart made a Eurodance version on Falling for You in 1995.",
+   "wiki": "Tony_Di_Bart",
+   "source": "https://en.wikipedia.org/wiki/Turn_Your_Love_Around"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

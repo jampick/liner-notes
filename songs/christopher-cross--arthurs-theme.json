@@ -1,0 +1,87 @@
+{
+ "id": "christopher-cross--arthurs-theme",
+ "title": "Arthur's Theme (Best That You Can Do)",
+ "artist": "Christopher Cross",
+ "year": 1981,
+ "year_note": "",
+ "album": "Arthur (original soundtrack)",
+ "aliases": {
+  "youtube": [
+   "wJ6zs2WSCjk"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d5/e1/1e/d5e11e45-d4bf-295d-5099-65bf87856597/mzaf_13491233740045178766.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/arthurs-theme-best-that-you-can-do/273426168?i=273426183&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Cross wrote it with Burt Bacharach, Carole Bayer Sager and Peter Allen. The 'between the moon and New York City' line came from an unreleased Allen and Bayer Sager song; Allen thought of it in a plane circling JFK at night. Michael Omartian plays keyboards and wrote the strings, with Steve Lukather and Marty Walsh on guitar, David Hungate on bass, Jeff Porcaro on drums and Ernie Watts on sax.",
+  "context": "Arthur opened on 17 July 1981 with Dudley Moore in the title role. It cost $7 million and took $95.5 million in the US. The song topped the Hot 100 for three weeks that October, Cross's second and last US number one, and won the Oscar and the Golden Globe. Eight months earlier Cross had become the first act to sweep all four general Grammys.",
+  "listen_for": [
+   {
+    "where": "the chorus",
+    "note": "The moon and New York City line, borrowed from a song Allen and Bayer Sager never released."
+   },
+   {
+    "where": "the rhythm section",
+    "note": "Porcaro, Hungate and Lukather, three members of Toto under a Bacharach tune."
+   },
+   {
+    "where": "the sax",
+    "note": "Ernie Watts, also on Biggest Part of Me."
+   }
+  ],
+  "leads_to": {
+   "artist": "Dionne Warwick & Friends",
+   "title": "That's What Friends Are For",
+   "year": 1985,
+   "why": "Another Bacharach and Bayer Sager song first written for a film, which spent four weeks at number one and raised over $3 million for AIDS research."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Arthur%27s_Theme_(Best_That_You_Can_Do)",
+   "https://en.wikipedia.org/wiki/Arthur_(1981_film)",
+   "https://en.wikipedia.org/wiki/Christopher_Cross",
+   "https://en.wikipedia.org/wiki/That%27s_What_Friends_Are_For"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Arthur",
+   "line": "Steve Gordon's comedy with Dudley Moore, Liza Minnelli and John Gielgud opened on 17 July 1981, cost $7 million and made $95.5 million in the US.",
+   "wiki": "Arthur_(1981_film)",
+   "source": "https://en.wikipedia.org/wiki/Arthur_(1981_film)"
+  },
+  {
+   "kind": "chart",
+   "title": "Three weeks at number one",
+   "line": "It topped the Hot 100 and adult contemporary in October 1981, three weeks at the top of the Hot 100, and was number one in Norway.",
+   "source": "https://en.wikipedia.org/wiki/Arthur%27s_Theme_(Best_That_You_Can_Do)"
+  },
+  {
+   "kind": "award",
+   "title": "Oscar and Golden Globe",
+   "line": "It won Best Original Song at the 54th Academy Awards and the 39th Golden Globes, and the AFI ranked it 79 of 100 film songs in 2004.",
+   "wiki": "54th_Academy_Awards",
+   "source": "https://en.wikipedia.org/wiki/Arthur%27s_Theme_(Best_That_You_Can_Do)"
+  },
+  {
+   "kind": "video",
+   "title": "Two-part video",
+   "line": "The video cuts between Cross recording with his band in a studio and a story that acts out the lyric.",
+   "source": "https://en.wikipedia.org/wiki/Arthur%27s_Theme_(Best_That_You_Can_Do)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

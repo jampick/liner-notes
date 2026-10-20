@@ -1,0 +1,79 @@
+{
+ "id": "the-style-council--long-hot-summer",
+ "title": "Long Hot Summer",
+ "artist": "The Style Council",
+ "year": 1983,
+ "year_note": "",
+ "album": "single (À Paris EP); also on Introducing The Style Council",
+ "aliases": {
+  "youtube": [
+   "1CAzwewVjZ0"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c8/f0/7f/c8f07fae-6c06-5ed1-f7eb-50f0e51535fa/mzaf_17196117431097239195.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/long-hot-summer-single-edit/1444176473?i=1444178015&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Paul Weller wrote it and recorded it in June 1983 at Grande Armée studios in Paris, producing with Peter Wilson. The credits are Weller on vocals and guitar, Mick Talbot on keyboards and Steve White on drums. The band themselves filed it as a synth-ballad, a long way from the Jam's guitars a year earlier.",
+  "context": "Weller had ended the Jam in late 1982 and started the Style Council with Talbot in Woking, wanting soul, jazz and pop without what he called the rock myth. Released on 8 August 1983 at the end of the hottest July Britain had recorded up to then, it entered at 8 and rose to 3, the band's biggest hit. In the UK it led the À Paris EP. The video, with Weller and Talbot on the River Cam in Cambridge, raised eyebrows; Weller told Neil Tennant, then at Smash Hits, that people should be able to think or do what they want as long as it harms nobody.",
+  "listen_for": [
+   {
+    "where": "from the first bars",
+    "note": "A languid synthesiser bed in place of a band riff. A year after the Jam, Weller lets the keyboards carry the song."
+   },
+   {
+    "where": "the 12-inch extended version",
+    "note": "The long mix runs past seven minutes and is the one to hear for the mood: the song barely changes, which is the point."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Style Council",
+   "title": "The Paris Match",
+   "year": 1983,
+   "why": "The B-side cut in the same Paris session, which Weller remade on Café Bleu in 1984 with Tracey Thorn singing and Ben Watt on guitar."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Long_Hot_Summer_(The_Style_Council_song)",
+   "https://www.udiscovermusic.com/stories/style-council-long-hot-summer/",
+   "https://en.wikipedia.org/wiki/The_Style_Council",
+   "https://en.wikipedia.org/wiki/Introducing_The_Style_Council",
+   "https://en.wikipedia.org/wiki/Caf%C3%A9_Bleu"
+  ],
+  "unverified": "I couldn't find a source on what keyboards or drum sounds are on the track, so the listen-for notes stay general. The 7:04 running time quoted for the extended mix comes from a search summary, not a page I read directly."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK number 3",
+   "line": "It entered at 8 on 13 August 1983 and spent two weeks at 3, the Style Council's biggest hit, after the hottest July Britain had then recorded.",
+   "wiki": "Long_Hot_Summer_(The_Style_Council_song)",
+   "source": "https://www.udiscovermusic.com/stories/style-council-long-hot-summer/"
+  },
+  {
+   "kind": "video",
+   "title": "On the River Cam",
+   "line": "Weller and Talbot were filmed on the River Cam in Cambridge. The video's homoerotic undertone raised eyebrows, and Weller said the fan letters backed him.",
+   "wiki": "River_Cam",
+   "source": "https://en.wikipedia.org/wiki/Long_Hot_Summer_(The_Style_Council_song)"
+  },
+  {
+   "kind": "live",
+   "title": "Still in the set",
+   "line": "It remains a staple of Paul Weller's solo concerts, and in 2020 it gave its name to the Style Council anthology Long Hot Summers.",
+   "wiki": "Paul_Weller",
+   "source": "https://en.wikipedia.org/wiki/Long_Hot_Summer_(The_Style_Council_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-1)",
+  "written_on": "2026-10-19"
+ }
+}

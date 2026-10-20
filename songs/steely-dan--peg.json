@@ -1,0 +1,80 @@
+{
+ "id": "steely-dan--peg",
+ "title": "Peg",
+ "artist": "Steely Dan",
+ "year": 1977,
+ "year_note": "",
+ "album": "Aja",
+ "aliases": {
+  "youtube": [
+   "u_pt3khMRFs"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6e/6a/fe/6e6afe03-4de1-e257-291e-d7737f283aa9/mzaf_16291204637208970374.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/peg/1706428459?i=1706428468&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Peg was the last song cut for Aja and the only one recorded in New York, with Elliot Scheiner back as engineer after the falling-out during The Royal Scam. Rick Marotta played drums, Chuck Rainey bass, Paul Griffin Rhodes and Don Grolnick clavinet, with Tom Scott on Lyricon; Walter Becker isn't on it at all. Seven session guitarists, Larry Carlton and Robben Ford among them, tried the solo before Jay Graydon's version stuck, after about six hours, and Graydon says nobody told him it was the keeper until he heard it on the radio.",
+  "context": "Aja came out on ABC on 23 September 1977. Irving Azoff had just taken the band on, stores sold the LP at a discount, and it was top five within three weeks, peaking at No. 3. Peg reached 11 on the Hot 100 in 1978 and ran 19 weeks, tied for the band's longest chart run. Fagen said in 2020 there was no hidden meaning in the name: they needed a dotted half note there and 'Peg' was short enough to fit.",
+  "listen_for": [
+   {
+    "where": "the guitar solo",
+    "note": "Jay Graydon's keeper. Fagen pushed him away from his jazz-pop licks toward the blues, and Graydon, who felt he couldn't play blues over the C major 7, saved the bluesy bends for when the chord moves to G over B."
+   },
+   {
+    "where": "the choruses",
+    "note": "That stack of high harmonies is Michael McDonald, multi-tracked, a year before What a Fool Believes made his voice the sound of the genre."
+   },
+   {
+    "where": "the last chorus and the fade",
+    "note": "Keyboardist Paul Griffin is in there talking and ad-libbing background vocals, the only loose moment on a famously tight record."
+   }
+  ],
+  "leads_to": {
+   "artist": "De La Soul",
+   "title": "Eye Know",
+   "year": 1989,
+   "why": "Prince Paul built it from Peg's guitar, keys, bass and vocals plus the whistle from Otis Redding's '(Sittin' On) The Dock of the Bay', so the dock made it into hip-hop too."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Peg_(song)",
+   "https://en.wikipedia.org/wiki/Aja_(album)",
+   "https://en.wikipedia.org/wiki/Eye_Know"
+  ],
+  "unverified": "Wikipedia's chart table also gives a Billboard Adult Contemporary peak of 30, which I left out of the text."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "No. 11, 19 weeks",
+   "line": "Peg reached 11 on the Hot 100 and 8 on Cash Box in 1978. Its 19-week run ties it with 'Rikki Don't Lose That Number' and 'Hey Nineteen' as Steely Dan's longest.",
+   "source": "https://en.wikipedia.org/wiki/Peg_(song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Entertainment Tonight",
+   "line": "From 1981 to 1985 Entertainment Tonight used it as the theme for its celebrity paparazzi segment.",
+   "wiki": "Entertainment_Tonight",
+   "source": "https://en.wikipedia.org/wiki/Peg_(song)"
+  },
+  {
+   "kind": "sample",
+   "title": "De La Soul, 'Eye Know'",
+   "line": "De La Soul's 'Eye Know' (25 September 1989) samples Peg's guitar, keys, bass and vocals, and went to 14 in the UK.",
+   "wiki": "Eye_Know",
+   "source": "https://en.wikipedia.org/wiki/Eye_Know"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

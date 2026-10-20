@@ -1,0 +1,78 @@
+{
+ "id": "sade--your-love-is-king",
+ "title": "Your Love Is King",
+ "artist": "Sade",
+ "year": 1984,
+ "year_note": "The band's first single. Mojo and the song's Wikipedia infobox say January 1984; the Diamond Life article says 25 February. It peaked in March.",
+ "album": "Diamond Life",
+ "aliases": {
+  "youtube": [
+   "k1ljpLQ1V6Y"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/84/c6/c3/84c6c34d-d7b7-47e9-1afc-949c0c96efca/mzaf_9571344939216529811.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/your-love-is-king/211429791?i=211430408&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Adu wrote it with Stuart Matthewman, who plays the tenor sax. Pride's manager, Lee Barrett, took this demo and 'Hang On to Your Love' to Robin Millar, who said 'They were good'; Millar described Adu's vocals on those early tapes as riffing with no real structure. It was one of the first two things recorded at Power Plant, before the album sessions proper, and is written in 12/8 at about 90 beats a minute. Andrew Hale later said the band 'weren't virtuosos' and played to their limitations.",
+  "context": "It reached 6 in the UK, the band's first hit, and 2 in New Zealand. The band played Heaven on 27 February 1984 and went on Top of the Pops with it; Robert Elms remembered the toilet in the flat he shared with Adu, a disused fire station, freezing that day. In the US it came out in June 1985 as the third single and stopped at 54. Sade played it at Live Aid at Wembley on 13 July 1985.",
+  "listen_for": [
+   {
+    "where": "the whole groove",
+    "note": "It's in 12/8, three pulses to every beat, which is why it sways like a slow dance rather than marching in fours like most 1984 pop."
+   },
+   {
+    "where": "the saxophone solo",
+    "note": "Matthewman's tenor solo, the feature AllMusic and Wikipedia both single out. RCA's reaction to the demos, as Millar told it, was 'Why has it got sax on it?'"
+   }
+  ],
+  "leads_to": {
+   "artist": "Will Young",
+   "title": "Your Love Is King",
+   "year": 2004,
+   "why": "A pop-idol winner covering it for the Bridget Jones: The Edge of Reason soundtrack, twenty years on, shows how far the song had travelled from a squat in a fire station."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Your_Love_Is_King",
+   "https://en.wikipedia.org/wiki/Diamond_Life",
+   "https://www.mojo4music.com/articles/stories/the-making-of-sades-diamond-life/",
+   "https://en.wikipedia.org/wiki/Live_Aid"
+  ],
+  "unverified": "Panel quote: I couldn't confirm that the sax states the melody before Adu sings, so it isn't in the listen notes."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Sade's first hit",
+   "line": "The debut single reached 6 in the UK in March 1984 and 2 in New Zealand, but only 54 in the US when it came out there in June 1985.",
+   "wiki": "Your_Love_Is_King",
+   "source": "https://en.wikipedia.org/wiki/Your_Love_Is_King"
+  },
+  {
+   "kind": "live",
+   "title": "Live Aid",
+   "line": "Sade played Wembley at 14:53 on 13 July 1985: 'Why Can't We Live Together', 'Your Love Is King' and 'Is It a Crime'.",
+   "wiki": "Live_Aid",
+   "source": "https://en.wikipedia.org/wiki/Live_Aid"
+  },
+  {
+   "kind": "cover",
+   "title": "Will Young's version",
+   "line": "Will Young covered it for the soundtrack of Bridget Jones: The Edge of Reason in 2004.",
+   "wiki": "Bridget_Jones:_The_Edge_of_Reason",
+   "source": "https://en.wikipedia.org/wiki/Your_Love_Is_King"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

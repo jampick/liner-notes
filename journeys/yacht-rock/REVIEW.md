@@ -1,0 +1,115 @@
+# Review: Yacht Rock
+
+Every song here starts as a draft. A draft shows as "draft notes" on the stage. Tick a song once
+you've checked its facts against the sources, then set `review.state` to `reviewed` in its file
+(`liner-notes review <song id>` does both).
+
+- [ ] `seals-crofts--summer-breeze` Summer Breeze, Seals & Crofts (1972)
+    - writer couldn't confirm: No source says where in the song the toy piano plays, so I described the sound rather than placing it. The per-song personnel comes from Wikipedia's song page; the album lists four drummers and five pianists without per-track credits.
+- [ ] `looking-glass--brandy` Brandy (You're a Fine Girl), Looking Glass (1972)
+    - writer couldn't confirm: The single page credits Mike Gershman as a producer; the album page lists him only as executive producer, so I left him out. Lurie has denied the story that Brandy was based on a real New Brunswick woman, Mary Ellis.
+- [ ] `ace--how-long` How Long, Ace (1974)
+    - writer couldn't confirm: I couldn't confirm an exact UK release date, and I couldn't confirm which keyboard plays which part. 
+- [ ] `daryl-hall-john-oates--sara-smile` Sara Smile, Daryl Hall & John Oates (1975)
+    - writer couldn't confirm: Sessiondays tags Ed Greene and Scott Edwards on the track, but without instruments; the album lists two drummers and two bassists. Vinyl Dialogues places Hall in New York while writing the album; I couldn't confirm which studio the track was cut in. The panel line implies P objects to a drum machine here, but this 1975 record has live drums.
+- [ ] `boz-scaggs--lowdown` Lowdown, Boz Scaggs (1976)
+    - writer couldn't confirm: The album credits Shelton on guitar for tracks 4 and 5 and Paich's Minimoog on 5, 6, 8 and 9, while the song page puts Shelton on 'Lowdown'; I followed the song page and the Guitar Player interview. Wikipedia lists its certification both as Gold and as 2x Platinum, so I left it out.
+- [ ] `the-doobie-brothers--takin-it-to-the-streets` Takin' It to the Streets, The Doobie Brothers (1976)
+    - writer couldn't confirm: The song page credits the Memphis Horns on saxophones; the album page lists their full five-piece lineup with trumpet and trombone too, so I didn't name the instruments.
+- [ ] `steely-dan--kid-charlemagne` Kid Charlemagne, Steely Dan (1976)
+    - writer couldn't confirm: Wikipedia also mentions a 2026 Rolling Stone update ranking the solo 8th; I couldn't open that list, so I kept to 2008. I couldn't confirm that the Rhodes and clavinet were played live on the one-take backing track rather than overdubbed.
+- [ ] `firefall--you-are-the-woman` You Are the Woman, Firefall (1976)
+    - writer couldn't confirm: Wikipedia gives the album two release dates (8 April 1976 on the album page, August 1976 on the song page); both are 1976. The song page credits vocals to Chuck Kirkpatrick without saying lead or backing, so I didn't name a lead singer.
+- [ ] `orleans--still-the-one` Still the One, Orleans (1976)
+    - writer couldn't confirm: One account says the lyric was on a napkin, not an envelope; I went with Hall's own liner-notes version as quoted by Songfacts.
+- [ ] `stephen-bishop--on-and-on` On and On, Stephen Bishop (1976)
+    - writer couldn't confirm: The Sinatra line the panel mentions is in the lyric but I couldn't find a source describing it, so it's out of the text. The Garfunkel track is listed as both 'Lookin'' and 'Looking for the Right One'.
+- [ ] `seals-crofts--get-closer` Get Closer, Seals & Crofts (1976)
+    - writer couldn't confirm: I couldn't find studio, personnel or a description of which lines Willis sings, so there's one listen note.
+- [ ] `the-doobie-brothers--it-keeps-you-runnin` It Keeps You Runnin', The Doobie Brothers (1976)
+    - writer couldn't confirm: The panel calls it a Rhodes groove. The credits only say 'keyboards' for McDonald, so I couldn't confirm the instrument.
+- [ ] `michael-franks--popsicle-toes` Popsicle Toes, Michael Franks (1976)
+    - writer couldn't confirm: The track personnel comes from Classic Song of the Day; the album also credits Steve Gadd on drums, David Sanborn and Michael Brecker on saxophones and Nick DeCaro on strings without track numbers. I couldn't confirm a bass solo or which instruments solo on this track.
+- [ ] `steely-dan--peg` Peg, Steely Dan (1977)
+    - writer couldn't confirm: Wikipedia's chart table also gives a Billboard Adult Contemporary peak of 30, which I left out of the text.
+- [ ] `steely-dan--deacon-blues` Deacon Blues, Steely Dan (1977)
+- [ ] `player--baby-come-back` Baby Come Back, Player (1977)
+    - writer couldn't confirm: Ocean Alley's triple j Hottest 100 placing is tagged citation needed on Wikipedia, so I left it out.
+- [ ] `paul-davis--i-go-crazy` I Go Crazy, Paul Davis (1977)
+    - writer couldn't confirm: The studio in Atlanta isn't named in my sources.
+- [ ] `the-doobie-brothers--what-a-fool-believes` What a Fool Believes, The Doobie Brothers (1978)
+- [ ] `bobby-caldwell--what-you-wont-do-for-love` What You Won't Do for Love, Bobby Caldwell (1978)
+    - writer couldn't confirm: The album credits don't say which of the three drummers is on this track. The panel line (sampled on 2Pac's 'Do for Love') checks out.
+- [ ] `the-doobie-brothers--minute-by-minute` Minute by Minute, The Doobie Brothers (1978)
+    - writer couldn't confirm: Wikipedia's song and album pages differ on whether the Grammy for Best Pop Vocal Performance by a Duo, Group or Chorus was credited to the song or the album, so I left the Grammy out of this stop.
+- [ ] `pablo-cruise--love-will-find-a-way` Love Will Find a Way, Pablo Cruise (1978)
+    - writer couldn't confirm: The Mike Porcaro bass credit for this exact track comes from Sessiondays' tag; Wikipedia credits him on the album. Which album tracks Steve Porcaro and James Newton Howard play on isn't stated.
+- [ ] `carly-simon--you-belong-to-me` You Belong to Me, Carly Simon (1978)
+- [ ] `gino-vannelli--i-just-wanna-stop` I Just Wanna Stop, Gino Vannelli (1978)
+    - writer couldn't confirm: The per-track personnel comes from Sessiondays; Wikipedia gives album-wide credits.
+- [ ] `little-river-band--reminiscing` Reminiscing, Little River Band (1978)
+    - writer couldn't confirm: The flugelhorn credit rests on Songfacts and a MusicBrainz credit listing, not the original liner notes. A Songfacts reader questions the May Pang story because the song came out after Lennon had gone back to Yoko Ono; I kept it attributed to Pang.
+- [ ] `ambrosia--how-much-i-feel` How Much I Feel, Ambrosia (1978)
+- [ ] `kenny-loggins--whenever-i-call-you-friend` Whenever I Call You "Friend", Kenny Loggins (1978)
+- [ ] `toto--georgy-porgy` Georgy Porgy, Toto (1978)
+    - writer couldn't confirm: Panel line says 'barely charted'; it did reach 48 pop and 18 R&B.
+- [ ] `nicolette-larson--lotta-love` Lotta Love, Nicolette Larson (1978)
+    - writer couldn't confirm: The album credits don't say who plays the flute solo or the horns on this track, so I didn't name them.
+- [ ] `walter-egan--magnet-and-steel` Magnet and Steel, Walter Egan (1978)
+    - writer couldn't confirm: Wikipedia's page for the album Not Shy wasn't found, so the album name rests on the song page.
+- [ ] `gerry-rafferty--baker-street` Baker Street, Gerry Rafferty (1978)
+    - writer couldn't confirm: Panel line says Rafferty 'comes from Glasgow'; he was born in Paisley, near Glasgow, and the record was made in Oxfordshire. The Slash and TV-ads claims are from the Wikipedia article's legacy section.
+- [ ] `christopher-cross--sailing` Sailing, Christopher Cross (1979)
+    - writer couldn't confirm: Wikipedia says Cross called the orchestral opening an accident (a wrong button, with the acoustic part catching up), but I couldn't find the interview, so it's left out. Guitar credits conflict: the song page says 12-string electric, the album page says acoustic, so the text just says guitar. The panel line is right that it won Record and Song of the Year.
+- [ ] `kenny-loggins--this-is-it` This Is It, Kenny Loggins (1979)
+    - writer couldn't confirm: Songfacts says Nas sampled it on 'We Will Survive' (1999); the Nas credits don't list Loggins or McDonald, so I dropped it. Keep the Fire lists three studios (Filmways/Wally Heider in Hollywood, Santa Barbara Sound, Criteria in Miami) without saying which track was cut where.
+- [ ] `christopher-cross--ride-like-the-wind` Ride Like the Wind, Christopher Cross (1979)
+- [ ] `earth-wind-fire--after-the-love-has-gone` After the Love Has Gone, Earth, Wind & Fire (1979)
+    - writer couldn't confirm: No studio is given per track, only for the album. Panel line (Foster, Graydon and Champlin wrote it) is correct.
+- [ ] `little-river-band--cool-change` Cool Change, Little River Band (1979)
+    - writer couldn't confirm: The panel line mentions an albatross in the lyric; I couldn't confirm the wording from a source I could read, so it's not in the text. Studio and recording city for First Under the Wire aren't in any source I found.
+- [ ] `eagles--i-cant-tell-you-why` I Can't Tell You Why, Eagles (1979)
+    - writer couldn't confirm: Who played the guitar solo on record is disputed in fan comments (Felder played it live); both Wikipedia and Songfacts credit Frey on the record, so I went with that.
+- [ ] `rickie-lee-jones--chuck-e-s-in-love` Chuck E.'s in Love, Rickie Lee Jones (1979)
+    - writer couldn't confirm: Wikipedia gives the single release as 28 April 1979, after the SNL spot; Mix says it peaked in May. I left the single date out. The album credits also list Jeff Porcaro and Michael McDonald, but not on this track, so no thread to them.
+- [ ] `rupert-holmes--escape` Escape (The Piña Colada Song), Rupert Holmes (1979)
+    - writer couldn't confirm: Accounts differ on why the Bogart line went (one says it was too noir for the couple, Songfacts says too many film references); I used Songfacts. No studio location found. No threads to other stops: different label, different coast, no shared players I could confirm.
+- [ ] `robbie-dupree--steal-away` Steal Away, Robbie Dupree (1980)
+    - writer couldn't confirm: No per-track credits for Steal Away itself; the players named are the album's core band per The Second Disc. The legal-threat detail comes from the Washington Post as summarised on Wikipedia; I didn't read the Post piece.
+- [ ] `ambrosia--biggest-part-of-me` Biggest Part of Me, Ambrosia (1980)
+    - writer couldn't confirm: The panel line mentions 'the gospel lift at the end'; I found no source describing the ending, so it's left out.
+- [ ] `steely-dan--hey-nineteen` Hey Nineteen, Steely Dan (1980)
+    - writer couldn't confirm: The narrator's '1967' college days are from the Wikipedia lyric summary; I left the exact lyric out. No source for who plays the synth parts beyond Fagen's credit.
+- [ ] `george-benson--give-me-the-night` Give Me the Night, George Benson (1980)
+- [ ] `grover-washington-jr-bill-withers--just-the-two-of-us` Just the Two of Us, Grover Washington Jr. & Bill Withers (1980)
+- [ ] `boz-scaggs--jojo` JoJo, Boz Scaggs (1980)
+    - writer couldn't confirm: Bass: the Session Days listing and a Songfacts commenter citing Bill Schnee name John Pierce, while Songfacts' main text says David Hungate; I left bass out. The single and album list the title as 'Jojo'.
+- [ ] `larsen-feiten-band--wholl-be-the-fool-tonight` Who'll Be the Fool Tonight, Larsen-Feiten Band (1980)
+    - writer couldn't confirm: Personnel is album-level; there are no per-track credits I could find. One search summary credited the song to both Larsen and Feiten, but Wikipedia credits Feiten alone, so I used that. The horn intro is from a review summary I couldn't load in full.
+- [ ] `steve-winwood--while-you-see-a-chance` While You See a Chance, Steve Winwood (1980)
+    - writer couldn't confirm: Arc of a Diver credits a Linn LM-1 for the album, but I couldn't confirm it's on this track, so the thread doesn't claim that.
+- [ ] `al-jarreau--were-in-this-love-together` We're in This Love Together, Al Jarreau (1981)
+    - writer couldn't confirm: Which of the four studios this song was cut in isn't stated. The album release date is given as 3 August 1981 by Wikipedia and 30 June 1981 by Session Days.
+- [ ] `george-benson--turn-your-love-around` Turn Your Love Around, George Benson (1981)
+    - writer couldn't confirm: That Baird's cymbals were added because the LM-1 had none is my inference from the two facts; neither source says it outright, so the text only puts them side by side.
+- [ ] `patti-austin-james-ingram--baby-come-to-me` Baby, Come to Me, Patti Austin & James Ingram (1981)
+- [ ] `christopher-cross--arthurs-theme` Arthur's Theme (Best That You Can Do), Christopher Cross (1981)
+- [ ] `daryl-hall-john-oates--i-cant-go-for-that` I Can't Go for That (No Can Do), Daryl Hall & John Oates (1981)
+    - writer couldn't confirm: Wikipedia's personnel credits a Roland CR-78 while Mix just says CompuRhythm; Wikipedia also hedges with an Ace Tone Rhythm Ace. Mix calls DeChant's instrument a 'saxilo', which I couldn't check, so I just said sax. Private Eyes Wikipedia gives the single's release as 14 December 1981, which conflicts with its Hot 100 debut on 14 November.
+- [ ] `toto--rosanna` Rosanna, Toto (1982)
+    - writer couldn't confirm: Sources disagree on the Toto IV release date (29 March or 8 April 1982). I couldn't confirm which keyboard plays which line in the solo section.
+- [ ] `michael-mcdonald--i-keep-forgettin` I Keep Forgettin' (Every Time You're Near), Michael McDonald (1982)
+    - writer couldn't confirm: I couldn't find a first-hand account of the session, so nothing on how Johnson played the bass part (finger or thumb) or which studio this track was cut in.
+- [ ] `michael-jackson--human-nature` Human Nature, Michael Jackson (1982)
+    - writer couldn't confirm: The panel line says Steve Porcaro wrote it. He wrote the music and the chorus; John Bettis wrote the verse lyrics and shares the credit. Wikipedia also says the song reached 6 in the UK in May 2026 after the biopic Michael; I left that out because I couldn't check it against the Official Charts site.
+- [ ] `kenny-loggins--heart-to-heart` Heart to Heart, Kenny Loggins (1982)
+    - writer couldn't confirm: Sources disagree on High Adventure's release date (20 August or 5 September 1982). I couldn't confirm where in the song each string arranger's part sits, or the studio.
+- [ ] `donald-fagen--i-g-y` I.G.Y. (What a Beautiful World), Donald Fagen (1982)
+    - writer couldn't confirm: I couldn't confirm which parts of the track use the Wendel machine and which are Gadson or Porcaro.
+- [ ] `chicago--hard-to-say-im-sorry` Hard to Say I'm Sorry, Chicago (1982)
+    - writer couldn't confirm: The song's Wikipedia page dates 'No Tell Lover' to both 1978 and early 1979. I couldn't confirm that Champlin sings on this track; he is credited as the new member on the single, not on a specific part.
+- [ ] `toto--i-wont-hold-you-back` I Won't Hold You Back, Toto (1982)
+- [ ] `toto--africa` Africa, Toto (1982)
+    - writer couldn't confirm: I couldn't confirm the exact week it reached number 1 or how long it stayed there.
+- [ ] `james-ingram-michael-mcdonald--yah-mo-b-there` Yah Mo B There, James Ingram & Michael McDonald (1983)
+    - writer couldn't confirm: Release dates disagree: Wikipedia gives the single as 9 December 1983 and the album as 24 October 1983, while Session Days gives the album as 27 July 1983. A Temperton biography reportedly has McDonald saying Temperton wrote the bridge in a day; I only saw that in a search summary, not the book, so it's out.

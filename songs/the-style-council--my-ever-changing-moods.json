@@ -1,0 +1,84 @@
+{
+ "id": "the-style-council--my-ever-changing-moods",
+ "title": "My Ever Changing Moods",
+ "artist": "The Style Council",
+ "year": 1984,
+ "year_note": "",
+ "album": "Café Bleu (US: My Ever Changing Moods)",
+ "aliases": {
+  "youtube": [
+   "rmVkOlZFF3Y"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/50/ce/09/50ce09cc-bf2e-ad5d-719c-3eae86de0ed3/mzaf_10102465183966562072.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/my-ever-changing-moods-single-edit/1444176473?i=1444178093&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Paul Weller wrote it and produced it with Peter Wilson, who had produced The Jam's last album, at Solid Bond, Weller's own London studio. On the single Mick Talbot plays electric piano and organ, Steve White drums, Wilson plays bass synthesizer, Hilary Seabrook saxophone and Barbara Snow trumpet. The album has a different recording, just Weller's voice and an acoustic piano, 3:37 long.",
+  "context": "Released on Polydor on 10 February 1984, it reached 5 in the UK, the band's third top ten, and Café Bleu entered the album chart at 2 a month later. In America Geffen renamed the whole album after it, and it got to 29 on the Hot 100 in June 1984, still Weller's biggest US hit with any band. Tim Pope's video has Weller and Talbot cycling down an avenue of trees at Kentwell Hall in Suffolk. Writing in the Los Angeles Review of Books, Thomas McLean read a line about the hush after the blast as nuclear fear in the Thatcher and Reagan years.",
+  "listen_for": [
+   {
+    "where": "the opening chords",
+    "note": "McLean points out they're borrowed from Classics IV's 'Stormy' (1968), a nod to the American soul-pop Weller wanted the band to sound like."
+   },
+   {
+    "where": "when the horns come in",
+    "note": "Seabrook and Snow's horns plus Latin percussion: McLean says Santana's 'The Game of Love' later borrowed this arrangement."
+   },
+   {
+    "where": "the coda",
+    "note": "Horns, harmonies and Weller's wah-wah guitar pile up, the nearest the Style Council got to The Jam's rush, then it stops short of it."
+   }
+  ],
+  "leads_to": {
+   "artist": "Classics IV",
+   "title": "Stormy",
+   "year": 1968,
+   "why": "The source of the opening chords, a 1968 American pop hit Weller turned into a Soho one."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/My_Ever_Changing_Moods",
+   "https://en.wikipedia.org/wiki/Caf%C3%A9_Bleu",
+   "https://en.wikipedia.org/wiki/The_Style_Council",
+   "https://lareviewofbooks.org/short-takes/evil-turns-statues-paul-wellers-style-council-years",
+   "https://medialoper.com/certain-songs-2531-the-style-council-my-ever-changing-moods/",
+   "https://en.wikipedia.org/wiki/Peter_Wilson_(music_producer)"
+  ],
+  "unverified": "Which version the playlist plays matters: the full-band single (4:02, or 5:44 on the 12-inch and US album) or the piano-only Café Bleu track. The notes describe the band version. I couldn't confirm who plays piano on the album version."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Cycling at Kentwell Hall",
+   "line": "Tim Pope filmed Weller and Mick Talbot cycling down an avenue of trees at Kentwell Hall, Long Melford, Suffolk.",
+   "wiki": "Kentwell_Hall",
+   "source": "https://en.wikipedia.org/wiki/My_Ever_Changing_Moods"
+  },
+  {
+   "kind": "chart",
+   "title": "Weller's biggest US hit",
+   "line": "Number 5 in the UK in February 1984 and 29 on the Hot 100 that June. Geffen renamed Café Bleu after it for America.",
+   "wiki": "Café_Bleu",
+   "source": "https://en.wikipedia.org/wiki/My_Ever_Changing_Moods"
+  },
+  {
+   "kind": "sample",
+   "title": "Borrowed by Santana",
+   "line": "Thomas McLean argues that Santana's 'The Game of Love' (2002) took this song's tempo and arrangement, Latin percussion and bright horns included.",
+   "wiki": "The_Game_of_Love_(Santana_song)",
+   "source": "https://lareviewofbooks.org/short-takes/evil-turns-statues-paul-wellers-style-council-years"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "id": "paul-davis--i-go-crazy",
+ "title": "I Go Crazy",
+ "artist": "Paul Davis",
+ "year": 1977,
+ "year_note": "Released June 1977; the long chart run carried it into 1978.",
+ "album": "Singer of Songs: Teller of Tales",
+ "aliases": {
+  "youtube": [
+   "nhu3orNqZu4"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/52/48/f4/5248f43a-d2ff-d08b-3957-055a5b8a7ebe/mzaf_14898918029174372420.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/i-go-crazy/828338155?i=828338270&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Davis wrote it, produced it and played the Fender Rhodes and a Crumar Univox Stringman on it himself. Per the credits Mix published, Alan Feingold added grand piano and ARP Odyssey, Kenny Mims guitar, Ed Seay bass, James Stroud drums, and Michael Zager wrote the strings. Davis made his records in Atlanta, where Bang Records was based, so this one is about as far from a Los Angeles session as the list gets.",
+  "context": "Davis was from Meridian, Mississippi. The song is about running into an old girlfriend and finding out you never got over her, sung without any fuss. It peaked at only No. 7 but spent 40 weeks on the Hot 100, which set the record at the time for the longest run on that chart, and it ended up 12th on Billboard's 1978 year-end list.",
+  "listen_for": [
+   {
+    "where": "the intro and verses",
+    "note": "Davis on his own Rhodes, with the Stringman's string-machine pad underneath, a one-man yacht band before the real strings arrive."
+   },
+   {
+    "where": "the string parts",
+    "note": "Michael Zager's arrangement, written for a record cut in Atlanta, not Hollywood."
+   }
+  ],
+  "leads_to": {
+   "artist": "Will Downing",
+   "title": "I Go Crazy",
+   "year": 1991,
+   "why": "A quiet-storm cover from A Dream Fulfilled that reached 37 on the R&B chart and shows how much soul was in the song."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/I_Go_Crazy_(Paul_Davis_song)",
+   "https://en.wikipedia.org/wiki/Paul_Davis_(singer)"
+  ],
+  "unverified": "The studio in Atlanta isn't named in my sources."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "40 weeks on the Hot 100",
+   "line": "It peaked at only 7 but stayed on the Hot 100 for 40 weeks, then a record, and finished 12th for 1978.",
+   "source": "https://en.wikipedia.org/wiki/I_Go_Crazy_(Paul_Davis_song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Will Downing",
+   "line": "Will Downing's 1991 version on A Dream Fulfilled reached 37 on the R&B chart.",
+   "wiki": "Will_Downing",
+   "source": "https://en.wikipedia.org/wiki/I_Go_Crazy_(Paul_Davis_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

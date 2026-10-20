@@ -1,0 +1,73 @@
+{
+ "id": "basia--time-and-tide",
+ "title": "Time and Tide",
+ "artist": "Basia",
+ "year": 1987,
+ "year_note": "On the album Time and Tide (Europe 3 April 1987, US 21 August 1987). The single's US Hot 100 peak came in 1988.",
+ "album": "Time and Tide",
+ "aliases": {
+  "youtube": [
+   "FtWgL0YBeaQ"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/ad/ab/42adab03-04ae-362a-5882-2a0d32263a9a/mzaf_17029777699266754050.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/time-and-tide/424139256?i=424139274&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Basia Trzetrzelewska and Danny White wrote and produced it. They had both left Matt Bianco in 1985; she had moved from Poland to London in 1981 and answered a Melody Maker ad that led to White. Engineer Phil Harding summed up the sound as Moog bass, Linn drum machine and DX7 with brass, and White said they programmed most of the drums themselves because it was easier, though a real drummer played on this title track. It was recorded at RG Jones, Power Plant and Utopia in London and mixed at PWL.",
+  "context": "CBS hoped for 10,000 copies and Basia promised a party if they got there. American radio's new adult contemporary format (NAC, which became smooth jazz) picked it up, the single reached 26 on the Hot 100, and the album went Platinum in the US while it only reached 61 in the UK. Basia wrote the lyric about an unfulfilled love between her and White while both were with other partners.",
+  "listen_for": [
+   {
+    "where": "the drums",
+    "note": "A real drummer, on an album where Danny White programmed most of the beats himself."
+   },
+   {
+    "where": "the low end and the stabs",
+    "note": "Moog bass and DX7 with a brass section, Phil Harding's own list of what the record is made of."
+   }
+  ],
+  "leads_to": {
+   "artist": "Astrud Gilberto",
+   "title": "Água de Beber",
+   "year": 1965,
+   "why": "Basia named Astrud Gilberto as her idol and wrote a song called 'Astrud' for this album; this Jobim tune from The Astrud Gilberto Album is the voice she was chasing."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Time_and_Tide_(Basia_song)",
+   "https://en.wikipedia.org/wiki/Time_and_Tide_(Basia_album)",
+   "https://en.wikipedia.org/wiki/Basia",
+   "https://superdeluxeedition.com/feature/from-matt-bianco-to-basia-the-story-of-time-and-tide/",
+   "https://en.wikipedia.org/wiki/Get_Out_of_Your_Lazy_Bed",
+   "https://en.wikipedia.org/wiki/%C3%81gua_de_Beber"
+  ],
+  "unverified": "White didn't name the drummer on the title track. Wikipedia says the song was the sixth single from the album but doesn't date the US single. The lyric explanation (unfulfilled love) comes from the song's Wikipedia page as summarised in search results, not a direct Basia quote."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Smooth jazz hit",
+   "line": "The single reached 26 on the Hot 100 in 1988 and the album went Platinum in the US, while in the UK the single stopped at 61.",
+   "wiki": "Time_and_Tide_(Basia_album)",
+   "source": "https://en.wikipedia.org/wiki/Time_and_Tide_(Basia_song)"
+  },
+  {
+   "kind": "video",
+   "title": "Empty nightclub",
+   "line": "Nick Morris's video has Basia and her band rehearsing in an empty nightclub that fills with an audience by the end.",
+   "wiki": "Basia",
+   "source": "https://en.wikipedia.org/wiki/Time_and_Tide_(Basia_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

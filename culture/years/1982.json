@@ -1,0 +1,82 @@
+{
+ "year": 1982,
+ "items": [
+  {
+   "kind": "news",
+   "title": "The Falklands War",
+   "line": "Argentina invaded the Falklands on 2 April 1982 and surrendered on 14 June after 74 days. 255 British servicemen died, and the win carried Thatcher to a bigger majority the next year.",
+   "wiki": "Falklands_War",
+   "source": "https://en.wikipedia.org/wiki/Falklands_War"
+  },
+  {
+   "kind": "tech",
+   "title": "ZX Spectrum",
+   "line": "Sinclair's rubber-keyed home computer went on sale on 23 April 1982, built in Dundee by Timex and loading games off cassette. It sold over five million.",
+   "wiki": "ZX_Spectrum",
+   "source": "https://en.wikipedia.org/wiki/ZX_Spectrum"
+  },
+  {
+   "kind": "film",
+   "title": "Blade Runner",
+   "line": "Ridley Scott's film opened in 1,290 US cinemas on 25 June 1982 and underperformed, with a Vangelis synth score nominated for a BAFTA. Scott shot Roxy Music's 'Avalon' video the same year.",
+   "wiki": "Blade_Runner",
+   "source": "https://en.wikipedia.org/wiki/Blade_Runner"
+  },
+  {
+   "kind": "news",
+   "title": "Mary Rose raised",
+   "line": "Henry VIII's warship, which saw her last action in 1545, was raised on 11 October 1982 by the Mary Rose Trust while Prince Charles watched from a boat.",
+   "wiki": "Mary_Rose",
+   "source": "https://en.wikipedia.org/wiki/Mary_Rose"
+  },
+  {
+   "kind": "tech",
+   "title": "Compact disc",
+   "line": "The compact disc, co-developed by Philips and Sony and sized to hold 74 minutes of stereo audio, first went on sale in Japan in October 1982.",
+   "wiki": "Compact_disc",
+   "source": "https://en.wikipedia.org/wiki/Compact_disc"
+  },
+  {
+   "kind": "tv",
+   "title": "Channel 4 launches",
+   "line": "Britain's fourth channel began on 2 November 1982 from Scala House in London, joining BBC1, BBC2 and ITV. It was paid for by advertising, not the licence fee.",
+   "wiki": "Channel_4",
+   "source": "https://en.wikipedia.org/wiki/Channel_4"
+  },
+  {
+   "kind": "tv",
+   "title": "The Tube",
+   "line": "Channel 4's live music show started on 5 November 1982, made by Tyne Tees in Newcastle and hosted by Jools Holland and Paula Yates. It ran to 121 episodes by 1987.",
+   "wiki": "The_Tube_(1982_TV_series)",
+   "source": "https://en.wikipedia.org/wiki/The_Tube_(1982_TV_series)"
+  },
+  {
+   "kind": "film",
+   "title": "E.T. the Extra-Terrestrial",
+   "line": "Spielberg's E.T. opened in the US on 11 June 1982 on a $10.5 million budget. In 1983 it passed Star Wars as the highest-grossing film ever and held the record until Jurassic Park in 1993.",
+   "wiki": "E.T._the_Extra-Terrestrial",
+   "source": "https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial"
+  },
+  {
+   "kind": "tech",
+   "title": "Commodore 64",
+   "line": "Commodore showed the C64 at CES in Las Vegas in January 1982 and started selling it in August at $595. Guinness lists it as the best-selling desktop computer model of all time.",
+   "wiki": "Commodore_64",
+   "source": "https://en.wikipedia.org/wiki/Commodore_64"
+  },
+  {
+   "kind": "tv",
+   "title": "Cheers",
+   "line": "Cheers premiered on NBC on 30 September 1982 and ranked 74th in its first season. It survived to run 275 episodes and win 28 Primetime Emmys.",
+   "wiki": "Cheers",
+   "source": "https://en.wikipedia.org/wiki/Cheers"
+  },
+  {
+   "kind": "sport",
+   "title": "Italy win the World Cup",
+   "line": "Italy beat West Germany 3-1 at the Santiago Bernabéu in Madrid on 11 July 1982, with goals from Paolo Rossi, Marco Tardelli and Alessandro Altobelli in front of 90,089.",
+   "wiki": "1982_FIFA_World_Cup_final",
+   "source": "https://en.wikipedia.org/wiki/1982_FIFA_World_Cup_final"
+  }
+ ]
+}

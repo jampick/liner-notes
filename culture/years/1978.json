@@ -1,0 +1,40 @@
+{
+ "year": 1978,
+ "items": [
+  {
+   "kind": "film",
+   "title": "Grease",
+   "line": "Grease opened on 16 June 1978. Made for $6 million, it was the highest-grossing film of the year, with $132.5 million on its first US run.",
+   "wiki": "Grease_(film)",
+   "source": "https://en.wikipedia.org/wiki/Grease_(film)"
+  },
+  {
+   "kind": "game",
+   "title": "Space Invaders",
+   "line": "Taito put Tomohiro Nishikado's Space Invaders into Japanese arcades in July 1978. Over 100,000 machines were installed in Japan by the end of the year.",
+   "wiki": "Space_Invaders",
+   "source": "https://en.wikipedia.org/wiki/Space_Invaders"
+  },
+  {
+   "kind": "news",
+   "title": "Louise Brown",
+   "line": "Louise Brown, the first baby born through IVF, arrived at Oldham General Hospital on 25 July 1978. Robert Edwards got the Nobel Prize for the work in 2010.",
+   "wiki": "Louise_Brown",
+   "source": "https://en.wikipedia.org/wiki/Louise_Brown"
+  },
+  {
+   "kind": "film",
+   "title": "Animal House",
+   "line": "National Lampoon's Animal House opened on 28 July 1978. It cost $3 million and grossed $120.1 million in the US and Canada on its first release.",
+   "wiki": "National_Lampoon's_Animal_House",
+   "source": "https://en.wikipedia.org/wiki/National_Lampoon%27s_Animal_House"
+  },
+  {
+   "kind": "news",
+   "title": "Camp David Accords",
+   "line": "Carter hosted Sadat and Begin at Camp David from 5 to 17 September 1978. The two leaders shared that year's Nobel Peace Prize.",
+   "wiki": "Camp_David_Accords",
+   "source": "https://en.wikipedia.org/wiki/Camp_David_Accords"
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "id": "eagles--i-cant-tell-you-why",
+ "title": "I Can't Tell You Why",
+ "artist": "Eagles",
+ "year": 1979,
+ "year_note": "On The Long Run, released 24 September 1979; the single followed on 8 February 1980.",
+ "album": "The Long Run",
+ "aliases": {
+  "youtube": [
+   "Odcn6qk94bs"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f6/00/4b/f6004bbe-7cec-ed41-90a6-ff39df2e2974/mzaf_4011144474575449071.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/i-cant-tell-you-why/635788137?i=635788975&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Timothy B. Schmit brought it in unfinished, as the new guy, and Don Henley and Glenn Frey finished it with him. Frey, a Detroit R&B fan, told Schmit he could sing it like Smokey Robinson, and Henley later called the result straight Al Green. It was the first song completed for The Long Run, in March 1978, with Schmit on bass and lead vocal, Henley on drums, Don Felder on rhythm guitar, Frey on the guitar solos and Fender Rhodes, Joe Walsh on Hammond organ and Joe Vitale on ARP string synthesizer. Bill Szymczyk produced.",
+  "context": "Schmit had replaced Randy Meisner after Meisner quit following a backstage argument on the 1977 Hotel California tour. The rest of the album took another eighteen months across studios in Miami and Los Angeles; it went to number one for nine weeks and the band broke up in 1980. The single reached 8 on the Hot 100 and 3 on adult contemporary, the Eagles' last top-10 pop hit.",
+  "listen_for": [
+   {
+    "where": "the verses",
+    "note": "Schmit's bass riff (reportedly Frey's idea) with Frey's Rhodes and Walsh's Hammond underneath, the most soul-band sound the Eagles ever made."
+   },
+   {
+    "where": "the choruses",
+    "note": "Schmit's near-falsetto lead (Cash Box called it aching) against a counter-line from Frey and Henley that Frey wrote."
+   },
+   {
+    "where": "the guitar solos",
+    "note": "Frey played them, not Felder or Walsh, which was rare for this band."
+   }
+  ],
+  "leads_to": {
+   "artist": "Al Green",
+   "title": "Let's Stay Together",
+   "year": 1971,
+   "why": "Henley's own description of what they were reaching for: Willie Mitchell's Memphis soul, played by a rock band from LA."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/I_Can%27t_Tell_You_Why",
+   "https://en.wikipedia.org/wiki/The_Long_Run_(album)",
+   "https://www.songfacts.com/facts/eagles/i-cant-tell-you-why",
+   "https://en.wikipedia.org/wiki/Let%27s_Stay_Together_(Al_Green_song)",
+   "https://en.wikipedia.org/wiki/Christopher_Cross_(album)"
+  ],
+  "unverified": "Who played the guitar solo on record is disputed in fan comments (Felder played it live); both Wikipedia and Songfacts credit Frey on the record, so I went with that."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "The last top 10",
+   "line": "Released on 8 February 1980, it reached 8 on the Hot 100 and 3 on adult contemporary, the Eagles' last top-10 pop hit.",
+   "source": "https://en.wikipedia.org/wiki/I_Can%27t_Tell_You_Why"
+  },
+  {
+   "kind": "video",
+   "title": "1980 video",
+   "line": "The 1980 video has Schmit on bass and Frey at the electric piano, though Frey also played the guitar solos on the record.",
+   "source": "https://en.wikipedia.org/wiki/I_Can%27t_Tell_You_Why"
+  },
+  {
+   "kind": "cover",
+   "title": "Brownstone",
+   "line": "The R&B trio Brownstone took it to 22 on the R&B chart and 54 on the Hot 100 in 1995.",
+   "wiki": "Brownstone_(group)",
+   "source": "https://en.wikipedia.org/wiki/I_Can%27t_Tell_You_Why"
+  },
+  {
+   "kind": "cover",
+   "title": "Vince Gill",
+   "line": "Vince Gill sang it on the 1993 tribute album Common Thread: The Songs of the Eagles, with Schmit on backing vocals.",
+   "wiki": "Common_Thread:_The_Songs_of_the_Eagles",
+   "source": "https://en.wikipedia.org/wiki/I_Can%27t_Tell_You_Why"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

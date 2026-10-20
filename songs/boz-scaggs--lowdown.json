@@ -1,0 +1,82 @@
+{
+ "id": "boz-scaggs--lowdown",
+ "title": "Lowdown",
+ "artist": "Boz Scaggs",
+ "year": 1976,
+ "year_note": "",
+ "album": "Silk Degrees",
+ "aliases": {
+  "youtube": [
+   "I-hKBmTAADo"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e5/9a/ba/e59aba0f-7ee1-cff1-852d-aed6e04f6f13/mzaf_9286469237984302087.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/lowdown-2023-remaster/1696326925?i=1696327405&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Scaggs wrote it with David Paich, who plays the Minimoog and ARP synthesizers on it, and Joe Wissert produced Silk Degrees at Davlen Sound and Hollywood Sound Recorders in LA. Jeff Porcaro plays drums, David Hungate bass and Louie Shelton guitar. Shelton has said the solo was improvised on the first take: a Telecaster through a '69 Fender Princeton Reverb, with a cheap Boss distortion pedal switched on just for the solo. Carolyn Willis, Jim Gilstrap, Augie Johnson and Marty McCall sing backup.",
+  "context": "Silk Degrees came out in February 1976 and its first single, 'It's Over', stalled at 38. Then an R&B DJ in Cleveland started playing 'Lowdown' off the album, Columbia sent it to other R&B stations, and it went to 3 on the Hot 100 and 5 on the R&B chart. Scaggs, a former Steve Miller Band guitarist, called the hit 'an accident'. It won the Grammy for Best R&B Song, and the album spent 115 weeks on the chart. Touring it convinced Paich, Porcaro and Hungate to start Toto.",
+  "listen_for": [
+   {
+    "where": "the guitar solo",
+    "note": "Shelton's first take, clean Telecaster tone all through the track until he kicks on a $30 Boss distortion pedal for the solo."
+   },
+   {
+    "where": "the backing vocals",
+    "note": "Willis, Gilstrap, Johnson and McCall. In 2020 Disclosure built 'Expressing What Matters' on these voices, chopped and skewed."
+   },
+   {
+    "where": "the groove under the verses",
+    "note": "Porcaro and Hungate locked together with Paich's synths on top: three future members of Toto, two years before Toto existed."
+   }
+  ],
+  "leads_to": {
+   "artist": "Disclosure",
+   "title": "Expressing What Matters",
+   "year": 2020,
+   "why": "A UK house single built on the backing vocals of this song, cleared by Scaggs's publisher."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lowdown_(Boz_Scaggs_song)",
+   "https://en.wikipedia.org/wiki/Silk_Degrees",
+   "https://en.wikipedia.org/wiki/Boz_Scaggs",
+   "https://sessiondays.com/?p=8412",
+   "https://www.rollingstone.com/music/music-news/disclosure-boz-scaggs-expressing-what-matters-958649/"
+  ],
+  "unverified": "The album credits Shelton on guitar for tracks 4 and 5 and Paich's Minimoog on 5, 6, 8 and 9, while the song page puts Shelton on 'Lowdown'; I followed the song page and the Guitar Player interview. Wikipedia lists its certification both as Gold and as 2x Platinum, so I left it out."
+ },
+ "culture": [
+  {
+   "kind": "award",
+   "title": "Best R&B Song",
+   "line": "Won the Grammy for Best R&B Song at the 19th awards in 1977, credited to Scaggs and David Paich.",
+   "wiki": "Grammy_Award_for_Best_R&B_Song",
+   "source": "https://en.wikipedia.org/wiki/Lowdown_(Boz_Scaggs_song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Number 3",
+   "line": "Reached 3 on the Hot 100, 5 on the R&B chart and number 1 on Cash Box in 1976.",
+   "source": "https://en.wikipedia.org/wiki/Lowdown_(Boz_Scaggs_song)"
+  },
+  {
+   "kind": "sample",
+   "title": "Disclosure",
+   "line": "Disclosure chopped its backing vocals into 'Expressing What Matters' in February 2020.",
+   "wiki": "Disclosure_(band)",
+   "source": "https://www.rollingstone.com/music/music-news/disclosure-boz-scaggs-expressing-what-matters-958649/"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

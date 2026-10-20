@@ -1,0 +1,87 @@
+{
+ "id": "the-doobie-brothers--what-a-fool-believes",
+ "title": "What a Fool Believes",
+ "artist": "The Doobie Brothers",
+ "year": 1978,
+ "year_note": "Kenny Loggins released it first, on Nightwatch (12 July 1978). The Doobies' version is on Minute by Minute (1 December 1978) and came out as a single in January 1979.",
+ "album": "Minute by Minute",
+ "aliases": {
+  "youtube": [
+   "exnHAdopRxA"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f0/54/e1/f054e109-be6b-bbc0-3073-d836becfd284/mzaf_13331870109542542770.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/what-a-fool-believes-2016-remastered/1110557228?i=1110557400&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Cut in August 1978 at Warner Bros. Recording Studios in North Hollywood. The band spent five or six days on rhythm-track takes without getting one they liked, so Ted Templeman played drums alongside Keith Knudsen for a looser feel and then, to the band's horror, cut the master tape into sections and spliced a take together. McDonald built the rest on top: piano, vocals, strings and Oberheim Polyphonic Eight Voice synths, with Bill Payne on the Oberheim too. Templeman still wanted to drop it, and Warner executives talked him out of it.",
+  "context": "Loggins came to McDonald's house in LA, heard him playing a piano part, and offered a hook he already had; they finished it the next day, with the Four Seasons' 'Sherry' and 'Walk Like a Man' in mind. It debuted at 73 on 20 January 1979 and reached No. 1 on 14 April for one week, then won Record and Song of the Year at the 1980 Grammys. In 2005 the Yacht Rock web series used the writing of this song as the plot of its first episode.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "McDonald's bouncing piano figure, the part Loggins heard when he walked in, and the thing every McDonald soundalike copied for the next five years."
+   },
+   {
+    "where": "the drums all the way through",
+    "note": "That slightly loose feel is Templeman and Knudsen playing at the same time, edited together from several takes."
+   },
+   {
+    "where": "the sustained chords behind the vocal",
+    "note": "Oberheim Polyphonic Eight Voice synths from McDonald and Bill Payne, standing in for the horn section an older Doobies record would have used."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Four Seasons",
+   "title": "Walk Like a Man",
+   "year": 1963,
+   "why": "McDonald and Loggins named it and 'Sherry' as models, which is where that falsetto-pushing chorus comes from."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/What_a_Fool_Believes",
+   "https://en.wikipedia.org/wiki/Minute_by_Minute",
+   "https://en.wikipedia.org/wiki/Nightwatch_(Kenny_Loggins_album)",
+   "https://en.wikipedia.org/wiki/Yacht_Rock_(web_series)",
+   "https://en.wikipedia.org/wiki/Walk_Like_a_Man_(The_Four_Seasons_song)"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "No. 1, April 1979",
+   "line": "It debuted at 73 on 20 January 1979 and hit No. 1 on 14 April for a week.",
+   "source": "https://en.wikipedia.org/wiki/What_a_Fool_Believes"
+  },
+  {
+   "kind": "award",
+   "title": "Record and Song of the Year",
+   "line": "It won Record and Song of the Year at the 1980 Grammys and went into the Grammy Hall of Fame in 2024.",
+   "source": "https://en.wikipedia.org/wiki/What_a_Fool_Believes"
+  },
+  {
+   "kind": "cover",
+   "title": "Aretha Franklin",
+   "line": "Aretha Franklin cut it on her 1980 album Aretha; it reached 17 on the R&B chart.",
+   "source": "https://en.wikipedia.org/wiki/What_a_Fool_Believes"
+  },
+  {
+   "kind": "screen",
+   "title": "Grand Theft Auto V",
+   "line": "In GTA V (2013) it plays on the in-game station Los Santos Rock Radio.",
+   "wiki": "Grand_Theft_Auto_V",
+   "source": "https://en.wikipedia.org/wiki/What_a_Fool_Believes"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

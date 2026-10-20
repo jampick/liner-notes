@@ -1,0 +1,85 @@
+{
+ "id": "james-ingram-michael-mcdonald--yah-mo-b-there",
+ "title": "Yah Mo B There",
+ "artist": "James Ingram & Michael McDonald",
+ "year": 1983,
+ "year_note": "On Ingram's It's Your Night (1983); the single came out in late 1983 and peaked in 1984.",
+ "album": "It's Your Night",
+ "aliases": {
+  "youtube": [
+   "HQ1nvhLf1EU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ab/d7/42/abd742a7-495b-248c-b4c8-0b030cd08509/mzaf_7423818395930831852.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/yah-mo-b-there/1444223464?i=1444223467&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Ingram, McDonald, Rod Temperton and producer Quincy Jones wrote it, and it was recorded for Ingram's debut album on Jones's Qwest label, at Westlake and Ocean Way in Los Angeles. The keyboards are all synthesizers, played by Ingram, McDonald, Temperton and Michael Boddicker, and John 'J.R.' Robinson plays a LinnDrum instead of a kit, with Paulinho da Costa on percussion.",
+  "context": "It reached 19 on the Hot 100 and 5 on the Black Singles chart, and a John 'Jellybean' Benitez remix got to 12 in the UK in 1985. It won the 1985 Grammy for Best R&B Performance by a Duo or Group with Vocals. The Yacht Rock web series later turned the title into a running joke, and in The 40-Year-Old Virgin (2005) Paul Rudd's character threatens to burn the store down if he hears it again.",
+  "listen_for": [
+   {
+    "where": "the drums from the first bar",
+    "note": "A LinnDrum programmed by J.R. Robinson, one of LA's busiest session drummers, playing a machine. The Porcaro shuffle of the era's opening stop is gone."
+   },
+   {
+    "where": "the verses",
+    "note": "Ingram and McDonald trading lines as equals, two voices this list already put together on 'Baby, Come to Me', where McDonald sang backup."
+   },
+   {
+    "where": "under the vocals",
+    "note": "Four people on synthesizers and no Rhodes anywhere. This is what the Rhodes-and-shuffle sound turned into by 1983."
+   }
+  ],
+  "leads_to": {
+   "artist": "Thundercat featuring Michael McDonald & Kenny Loggins",
+   "title": "Show You the Way",
+   "year": 2017,
+   "why": "A bass player raised on these records got McDonald and Loggins back together on Brainfeeder, 34 years after this one."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Yah_Mo_B_There",
+   "https://en.wikipedia.org/wiki/It%27s_Your_Night",
+   "https://sessiondays.com/?p=22953",
+   "https://en.wikipedia.org/wiki/Baby,_Come_to_Me_(Patti_Austin_and_James_Ingram_song)",
+   "https://en.wikipedia.org/wiki/Give_Me_the_Night_(song)",
+   "https://cpr.org/2017/03/20/thundercat-show-you-the-way",
+   "https://bigdada.com/release/thundercat/drunk"
+  ],
+  "unverified": "Release dates disagree: Wikipedia gives the single as 9 December 1983 and the album as 24 October 1983, while Session Days gives the album as 27 July 1983. A Temperton biography reportedly has McDonald saying Temperton wrote the bridge in a day; I only saw that in a search summary, not the book, so it's out."
+ },
+ "culture": [
+  {
+   "kind": "award",
+   "title": "Grammy, 1985",
+   "line": "It won Best R&B Performance by a Duo or Group with Vocals at the 27th Grammys, and lost Best R&B Song to Chaka Khan's 'I Feel for You'.",
+   "wiki": "27th_Annual_Grammy_Awards",
+   "source": "https://en.wikipedia.org/wiki/Yah_Mo_B_There"
+  },
+  {
+   "kind": "chart",
+   "title": "The Jellybean remix",
+   "line": "The single made 19 on the Hot 100 and 5 on the Black Singles chart. In the UK it stalled at 44 until John 'Jellybean' Benitez's 1985 remix took it to 12.",
+   "wiki": "Yah_Mo_B_There",
+   "source": "https://en.wikipedia.org/wiki/Yah_Mo_B_There"
+  },
+  {
+   "kind": "screen",
+   "title": "The 40-Year-Old Virgin",
+   "line": "In the 2005 comedy Paul Rudd's character says he will 'yah mo burn this place to the ground' if he hears the song once more.",
+   "wiki": "The_40-Year-Old_Virgin",
+   "source": "https://en.wikipedia.org/wiki/Yah_Mo_B_There"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

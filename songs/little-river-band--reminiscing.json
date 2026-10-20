@@ -1,0 +1,79 @@
+{
+ "id": "little-river-band--reminiscing",
+ "title": "Reminiscing",
+ "artist": "Little River Band",
+ "year": 1978,
+ "year_note": "",
+ "album": "Sleeper Catcher",
+ "aliases": {
+  "youtube": [
+   "9QYk1E8zdxU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a0/4b/1b/a04b1b64-2c24-007b-ac96-0edef95d063b/mzaf_10352558366193994324.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/reminiscing-remastered-2010/1648433058?i=1648433263&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Graeham Goble wrote it, he said, in about half an hour. It was cut at Armstrong Studios in South Melbourne with John Boylan and the band producing, and early attempts went nowhere until keyboardist Peter Jones played on the final take. Glenn Shorrock sings lead with Goble and Beeb Birtles on the harmonies, Ric Formosa did the album's orchestral arrangements, and the horn near the end is a flugelhorn played by Bob Venier.",
+  "context": "Capitol told the band there were no singles on the album, then put this one out in June 1978; it reached 3 in the US, their biggest hit, and later won a BMI award for five million US radio plays. The lyric name-checks a Glenn Miller band and Cole Porter's 'Night and Day', which puts the memory in the 1940s. May Pang said it was the song she and John Lennon called theirs.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Peter Jones's keyboard part, the thing Goble said finally made the take work."
+   },
+   {
+    "where": "the choruses",
+    "note": "Shorrock, Goble and Birtles in three-part harmony; Shorrock called Goble the harmony master."
+   },
+   {
+    "where": "near the end",
+    "note": "Bob Venier's flugelhorn, the big-band touch that matches a lyric about Glenn Miller."
+   }
+  ],
+  "leads_to": {
+   "artist": "Madison Avenue",
+   "title": "Reminiscing",
+   "year": 2001,
+   "why": "Covered 23 years later as a dance record, it reached 9 in Australia and went gold."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Reminiscing",
+   "https://en.wikipedia.org/wiki/Sleeper_Catcher",
+   "https://www.songfacts.com/facts/little-river-band/reminiscing"
+  ],
+  "unverified": "The flugelhorn credit rests on Songfacts and a MusicBrainz credit listing, not the original liner notes. A Songfacts reader questions the May Pang story because the song came out after Lennon had gone back to Yoko Ono; I kept it attributed to Pang."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "No. 3, five million plays",
+   "line": "It reached 3 on the Hot 100 in 1978, and later won a BMI award for five million US radio plays.",
+   "source": "https://en.wikipedia.org/wiki/Reminiscing"
+  },
+  {
+   "kind": "screen",
+   "title": "Knocked Up",
+   "line": "It's heard in a Las Vegas hotel scene in Knocked Up (2007) and in a Freaks and Geeks episode.",
+   "source": "https://en.wikipedia.org/wiki/Reminiscing"
+  },
+  {
+   "kind": "cover",
+   "title": "Madison Avenue",
+   "line": "Madison Avenue's version, out 5 March 2001, reached 9 in Australia and went gold.",
+   "wiki": "Madison_Avenue_(band)",
+   "source": "https://en.wikipedia.org/wiki/Reminiscing"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

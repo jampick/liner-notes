@@ -1,0 +1,80 @@
+{
+ "id": "rupert-holmes--escape",
+ "title": "Escape (The Piña Colada Song)",
+ "artist": "Rupert Holmes",
+ "year": 1979,
+ "year_note": "",
+ "album": "Partners in Crime",
+ "aliases": {
+  "youtube": [
+   "FXG_I_tf_i4"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/47/63/e5/4763e510-a446-d285-2e90-b743ceae62b2/mzaf_4218584407198042659.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/escape-the-pina-colada-song/1443846037?i=1443846163&uo=4"
+  }
+ },
+ "notes": {
+  "made": "The tune began years earlier as a throwaway called People Need Other People. Holmes wrote the story the night before the last scheduled session, after spotting a personal ad in the Village Voice, and swapped out a Humphrey Bogart line for the cocktail because he'd used too many film references already. The take had two drummers (Leo Adamian, who suggested it, and Steve Jordan) and was too loose to use, so they found 16 bars that held together and copied them onto another master over and over, about sixty edits for a five-minute reel. Holmes sang it once as a guide for guitarist Dean Bailin, couldn't beat it the next day, and co-producer Jim Boyer agreed to keep the scratch take.",
+  "context": "Infinity Records put it out on 17 September 1979. Holmes, born in Northwich, Cheshire and already a writer for Barbra Streisand, wanted Him as the single; then Washington radio listeners kept asking for the piña colada song and the label added that to the title. It hit number one at the end of December, the last number one of the 1970s, lost a week to KC and the Sunshine Band and went back to the top in January 1980.",
+  "listen_for": [
+   {
+    "where": "the whole rhythm track",
+    "note": "One 16-bar stretch of two drummers, copied end to end by tape edit. That's why the groove never moves."
+   },
+   {
+    "where": "the lead vocal",
+    "note": "A first-pass guide vocal for the guitarist that became the master."
+   },
+   {
+    "where": "the choruses",
+    "note": "The harmony is an ad-lib Holmes added on that same scratch pass."
+   }
+  ],
+  "leads_to": {
+   "artist": "Rupert Holmes",
+   "title": "Him",
+   "year": 1980,
+   "why": "The song Holmes wanted out first, from the same album; it went to 6 on the Hot 100."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Escape_(The_Pi%C3%B1a_Colada_Song)",
+   "https://www.songfacts.com/facts/rupert-holmes/escape-the-pina-colada-song",
+   "https://en.wikipedia.org/wiki/Rupert_Holmes"
+  ],
+  "unverified": "Accounts differ on why the Bogart line went (one says it was too noir for the couple, Songfacts says too many film references); I used Songfacts. No studio location found. No threads to other stops: different label, different coast, no shared players I could confirm."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number one in two decades",
+   "line": "It was the last number one of the 1970s, lost a week to KC and the Sunshine Band's Please Don't Go, and returned to the top in January 1980. It finished 1980 at 11 on the year-end Hot 100.",
+   "source": "https://en.wikipedia.org/wiki/Escape_(The_Pi%C3%B1a_Colada_Song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Better Call Saul",
+   "line": "In a 2016 episode Jimmy McGill sings part of it in one of his own ads.",
+   "wiki": "Better_Call_Saul",
+   "source": "https://en.wikipedia.org/wiki/Escape_(The_Pi%C3%B1a_Colada_Song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Jack Johnson",
+   "line": "Jack Johnson recorded it for the 2013 film The Secret Life of Walter Mitty.",
+   "wiki": "The_Secret_Life_of_Walter_Mitty_(2013_film)",
+   "source": "https://en.wikipedia.org/wiki/Escape_(The_Pi%C3%B1a_Colada_Song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

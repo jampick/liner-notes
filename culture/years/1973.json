@@ -1,0 +1,40 @@
+{
+ "year": 1973,
+ "items": [
+  {
+   "kind": "film",
+   "title": "American Graffiti",
+   "line": "George Lucas's film opened in the US on 11 August 1973. It cost $777,000, took about $140 million, and is set in Modesto on one night in 1962.",
+   "wiki": "American_Graffiti",
+   "source": "https://en.wikipedia.org/wiki/American_Graffiti"
+  },
+  {
+   "kind": "news",
+   "title": "The oil embargo",
+   "line": "The Arab oil embargo began in October 1973 and ran until March 1974. US petrol went from 38.5 cents a gallon in May 1973 to 55.1 cents in June 1974.",
+   "wiki": "1973_oil_crisis",
+   "source": "https://en.wikipedia.org/wiki/1973_oil_crisis"
+  },
+  {
+   "kind": "sport",
+   "title": "Secretariat",
+   "line": "Won the Belmont Stakes on 9 June 1973 by 31 lengths in 2:24 flat, the first Triple Crown in 25 years.",
+   "wiki": "Secretariat_(horse)",
+   "source": "https://en.wikipedia.org/wiki/Secretariat_(horse)"
+  },
+  {
+   "kind": "sport",
+   "title": "The Battle of the Sexes",
+   "line": "Billie Jean King beat Bobby Riggs 6–4, 6–3, 6–3 at the Houston Astrodome on 20 September 1973, for a $100,000 winner-take-all prize, in front of 30,472 people.",
+   "wiki": "Battle_of_the_Sexes_(tennis)",
+   "source": "https://en.wikipedia.org/wiki/Battle_of_the_Sexes_(tennis)"
+  },
+  {
+   "kind": "music",
+   "title": "The Dark Side of the Moon",
+   "line": "Released in the US on 1 March 1973. It spent 736 weeks on the Billboard chart in its original run and sold about 45 million copies.",
+   "wiki": "The_Dark_Side_of_the_Moon",
+   "source": "https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon"
+  }
+ ]
+}

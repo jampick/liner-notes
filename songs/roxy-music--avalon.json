@@ -1,0 +1,82 @@
+{
+ "id": "roxy-music--avalon",
+ "title": "Avalon",
+ "artist": "Roxy Music",
+ "year": 1982,
+ "year_note": "",
+ "album": "Avalon",
+ "aliases": {
+  "youtube": [
+   "bpA_5a0miWk"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9e/05/d7/9e05d7e5-9522-c7e1-ee70-f7a3e76ca6ed/mzaf_14604191863641121859.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/avalon/723875837?i=723876321&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Roxy Music started Avalon at Phil Manzanera's Gallery Studios in Chertsey, building backing tracks to a Linn LM-1, then spent a month refining them at Compass Point in Nassau before moving to the Power Station in New York for drum overdubs and mixing with Bob Clearmountain. Rhett Davies produced with the band. The title track was nearly shelved until Ferry and Davies, on a coffee break, heard Haitian singer Yanick Étienne in the studio next door and asked her to sing on it. Alan Spenner played bass, Andy Newmark drums, Andy Mackay sax.",
+  "context": "Ferry started writing the album at Crumlin Lodge on the west coast of Ireland with Lucy Helmore, who is on the cover and became his wife in 1983. Avalon was released on 28 May 1982 and spent three weeks at number one in the UK; the title track, the second single, reached 13. In the US the album stalled at 53 but kept selling until it went platinum, Roxy's only million-seller there. Manzanera put the title track's lilt down to the 1970s, when Roxy often worked in the same London studio as Bob Marley: it \"just had to rub off somewhere.\"",
+  "listen_for": [
+   {
+    "where": "the choruses, on the word \"Avalon\"",
+    "note": "That high, rounded backing voice is Yanick Étienne, who spoke no English and was brought in from the next room. Davies said Ferry went straight back and re-sang his own lead because her part lifted him."
+   },
+   {
+    "where": "the last minute",
+    "note": "Étienne's wordless improvising over the fade. Davies asked her to sing anything she liked; she sang nothing on the first pass and what you hear on the record on the second."
+   },
+   {
+    "where": "under the verses",
+    "note": "The pulse is a Linn LM-1 programmed in Chertsey, with Andy Newmark's real drums added later in New York. That mix of machine and player is the template a lot of this list follows."
+   }
+  ],
+  "leads_to": {
+   "artist": "Al Green",
+   "title": "Call Me (Come Back Home)",
+   "year": 1973,
+   "why": "The Spin Alternative Record Guide called Avalon a synthesized version of Al Green's Call Me (alongside Moondance and João Gilberto's Amoroso); go back to the Memphis original, made with Willie Mitchell at Royal Studios."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Avalon_(Roxy_Music_album)",
+   "https://en.wikipedia.org/wiki/Avalon_(Roxy_Music_song)",
+   "https://en.wikipedia.org/wiki/Call_Me_(Al_Green_album)",
+   "https://en.wikipedia.org/wiki/Before_and_After_Science"
+  ],
+  "unverified": "Imogen's quote credits Rhett Davies with the production; that holds (Davies and Roxy Music are the credited producers, with Clearmountain mixing)."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK number 13",
+   "line": "The second single from the album, backed with 'Always Unknowing', reached 13 in the UK in 1982 while Avalon spent three weeks at number one.",
+   "wiki": "Avalon_(Roxy_Music_song)",
+   "source": "https://en.wikipedia.org/wiki/Avalon_(Roxy_Music_song)"
+  },
+  {
+   "kind": "video",
+   "title": "Ridley Scott at Mentmore",
+   "line": "Ridley Scott directed the video at Mentmore Towers, the Rothschild house in Buckinghamshire, with Sophie Ward (Simon Ward's daughter) and a falcon.",
+   "wiki": "Mentmore_Towers",
+   "source": "https://en.wikipedia.org/wiki/Avalon_(Roxy_Music_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Grammy nods for the remix",
+   "line": "Bob Clearmountain's 2024 Dolby Atmos remix of the album was nominated for Best Immersive Audio Album, as his 2003 surround mix had been.",
+   "wiki": "Avalon_(Roxy_Music_album)",
+   "source": "https://en.wikipedia.org/wiki/Avalon_(Roxy_Music_album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-1)",
+  "written_on": "2026-10-19"
+ }
+}

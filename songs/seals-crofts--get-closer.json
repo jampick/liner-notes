@@ -1,0 +1,66 @@
+{
+ "id": "seals-crofts--get-closer",
+ "title": "Get Closer",
+ "artist": "Seals & Crofts",
+ "year": 1976,
+ "year_note": "",
+ "album": "Get Closer",
+ "aliases": {
+  "youtube": [
+   "rBUHdy8g8S4"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/bb/66/56/bb6656a4-2338-f534-f6f6-e3afd2f6d5fc/mzaf_4082500664906705798.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/get-closer/59412681?i=59412634&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Seals and Crofts wrote it and Louie Shelton produced it, as he had 'Summer Breeze'. The single is credited to Seals and Crofts featuring Carolyn Willis, formerly of the soul trio Honey Cone, whose 'Want Ads' was a number 1 in 1971. She toured with the duo that year as well, which gave them the live album Sudan Village.",
+  "context": "Warner Bros. released it in April 1976 and it peaked at 6 in July, the duo's third single to stop at exactly 6 after 'Summer Breeze' and 'Diamond Girl'. It went to 2 on Easy Listening and finished 16th for the year on the Hot 100. That same season Jim's younger brother Dan, of England Dan & John Ford Coley, had a top ten of his own with 'Nights Are Forever Without You'. In 2004 the duo remade it with their daughters, Juliet Seals Crossley and Lua Crofts, singing.",
+  "listen_for": [
+   {
+    "where": "the second voice",
+    "note": "Carolyn Willis. A singer from an R&B girl group is what the panel's Crate-Digger hears moving this from folk-pop to yacht."
+   }
+  ],
+  "leads_to": {
+   "artist": "Honey Cone",
+   "title": "Want Ads",
+   "year": 1971,
+   "why": "Willis's old group on Hot Wax, Holland-Dozier-Holland's label after Motown: a number 1 on the Hot 100 and the R&B chart."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Get_Closer_(song)",
+   "https://en.wikipedia.org/wiki/Seals_%26_Crofts",
+   "https://www.songfacts.com/facts/seals-crofts/get-closer",
+   "https://en.wikipedia.org/wiki/Want_Ads",
+   "https://en.wikipedia.org/wiki/Honey_Cone"
+  ],
+  "unverified": "I couldn't find studio, personnel or a description of which lines Willis sings, so there's one listen note."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number 6 again",
+   "line": "Peaked at 6 on the Hot 100 in July 1976, the same peak as 'Summer Breeze' and 'Diamond Girl', and 2 on Easy Listening.",
+   "source": "https://en.wikipedia.org/wiki/Get_Closer_(song)"
+  },
+  {
+   "kind": "cover",
+   "title": "The daughters' version",
+   "line": "In 2004 the duo remade it for Traces with their daughters, Juliet Seals Crossley and Lua Crofts, singing.",
+   "source": "https://en.wikipedia.org/wiki/Get_Closer_(song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

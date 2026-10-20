@@ -1,0 +1,83 @@
+{
+ "id": "steely-dan--kid-charlemagne",
+ "title": "Kid Charlemagne",
+ "artist": "Steely Dan",
+ "year": 1976,
+ "year_note": "",
+ "album": "The Royal Scam",
+ "aliases": {
+  "youtube": [
+   "b00h8iKaklQ"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/45/b9/49/45b94975-2293-c324-0194-3a74448d6223/mzaf_16786717975585277180.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/kid-charlemagne-2025-remaster/1814734764?i=1814734765&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Becker and Fagen started The Royal Scam at Davlen in North Hollywood, got nothing they liked from two weeks of different session lineups, and moved to A&R in New York, where the backing track for this song went down in one take. Bernard Purdie plays drums, Chuck Rainey bass, Don Grolnick Fender Rhodes and Paul Griffin clavinet. Larry Carlton's solo was stitched together from two takes after nearly two hours of trying. Michael McDonald sings backup with Venetta Fields, Clydie King and Sherlie Matthews.",
+  "context": "Becker and Fagen said the lyric is loosely based on the rise and fall of Owsley Stanley, the LSD chemist, which makes it a 1976 hangover song about the Sixties. Becker and Fagen played hardly anything on the album; Carlton wrote charts and ran the session players for them. It opens the record, and the edited single reached only 82, while the album got to 15 and went Platinum. Rolling Stone ranked Carlton's solo 80th in 2008.",
+  "listen_for": [
+   {
+    "where": "the guitar solo",
+    "note": "Larry Carlton, a composite of two takes. The panel's Session Player calls it the best solo on this list."
+   },
+   {
+    "where": "the groove from the top",
+    "note": "Purdie and Rainey cut it live in one take in New York, with Grolnick's Rhodes and Griffin's clavinet trading the funk between them."
+   },
+   {
+    "where": "the chorus backing vocals",
+    "note": "Michael McDonald is in there, a year after he left the Steely Dan touring band for the Doobies."
+   }
+  ],
+  "leads_to": {
+   "artist": "Kanye West",
+   "title": "Champion",
+   "year": 2007,
+   "why": "Built on a looped vocal from this song; Becker and Fagen refused at first and cleared it after West wrote them a letter about his father."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kid_Charlemagne",
+   "https://en.wikipedia.org/wiki/The_Royal_Scam",
+   "https://en.wikipedia.org/wiki/Michael_McDonald_(musician)",
+   "https://en.wikipedia.org/wiki/Champion_(Kanye_West_song)",
+   "https://ultimateclassicrock.com/kanye-west-steely-dan-sample/"
+  ],
+  "unverified": "Wikipedia also mentions a 2026 Rolling Stone update ranking the solo 8th; I couldn't open that list, so I kept to 2008. I couldn't confirm that the Rhodes and clavinet were played live on the one-take backing track rather than overdubbed."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number 82",
+   "line": "The edited single spent three weeks on the Hot 100 in July 1976 and peaked at 82.",
+   "wiki": "The_Royal_Scam",
+   "source": "https://en.wikipedia.org/wiki/The_Royal_Scam"
+  },
+  {
+   "kind": "sample",
+   "title": "Champion",
+   "line": "Kanye West looped it for 'Champion' on Graduation (2007). Becker and Fagen said no at first and cleared it after a letter from West.",
+   "wiki": "Champion_(Kanye_West_song)",
+   "source": "https://en.wikipedia.org/wiki/Kid_Charlemagne"
+  },
+  {
+   "kind": "award",
+   "title": "Carlton's solo",
+   "line": "Rolling Stone ranked Larry Carlton's solo 80th in 2008.",
+   "wiki": "Larry_Carlton",
+   "source": "https://en.wikipedia.org/wiki/Kid_Charlemagne"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,83 @@
+{
+ "id": "bryan-ferry--slave-to-love",
+ "title": "Slave to Love",
+ "artist": "Bryan Ferry",
+ "year": 1985,
+ "year_note": "",
+ "album": "Boys and Girls",
+ "aliases": {
+  "youtube": [
+   "UH1CMCtV4to"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/77/6b/46776b9a-3d2d-58ef-4ea7-80052d071b99/mzaf_13767681106599341789.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/slave-to-love/724305502?i=724306487&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Ferry started Boys and Girls in July 1983 at his Sussex home, two months after Roxy Music split, building sketches on an eight-track with Rhett Davies, who had produced Avalon. Most of it was then built up at The White House, a demo studio on the King's Road, with players flown in over a year across seven studios. On this one the album credits give Omar Hakim on drums, Tony Levin on bass, Guy Fletcher of Dire Straits on keyboards, and Neil Hubbard and Keith Scott on lead guitar. Bob Clearmountain mixed it.",
+  "context": "It came out on 3 May 1985, Ferry's first solo single in years, and reached number 10 in the UK; Boys and Girls became his only solo number 1 album. He played it at Live Aid ten weeks later with David Gilmour on guitar. Its second life was on screen: it's on the soundtrack of 9½ Weeks (1986) and Polanski's Bitter Moon (1992).",
+  "listen_for": [
+   {
+    "where": "the verses",
+    "note": "The Guardian's Jeremy Allen pointed out you can play it back to back with Roxy's 'Dance Away' (1979) and hear the same ballad; the verse chords are close cousins."
+   },
+   {
+    "where": "the drums and bass under the first verse",
+    "note": "Omar Hakim on drums and Tony Levin on bass, the only track on the album with that pairing; Andy Newmark drums on the rest."
+   },
+   {
+    "where": "the end",
+    "note": "There's no bridge. The verse chords come round again and again with chanted backing vocals on top."
+   }
+  ],
+  "leads_to": {
+   "artist": "Roxy Music",
+   "title": "Dance Away",
+   "year": 1979,
+   "why": "The Manifesto single Jeremy Allen hears underneath this one; play them back to back."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Slave_to_Love",
+   "https://en.wikipedia.org/wiki/Boys_and_Girls_(album)",
+   "https://movingtheriver.com/tag/rhettdavies/",
+   "https://en.wikipedia.org/wiki/Avalon_(Roxy_Music_album)",
+   "https://en.wikipedia.org/wiki/Live_Aid"
+  ],
+  "unverified": "The song's Wikipedia page lists David Gilmour among the lead guitarists, but the album personnel credits Gilmour only on 'Windswept' and 'Stone Woman' and gives the lead on this track to Neil Hubbard and Keith Scott. I went with the album credits."
+ },
+ "culture": [
+  {
+   "kind": "live",
+   "title": "Live Aid with David Gilmour",
+   "line": "Ferry played it at Wembley on 13 July 1985 in a four-song set with Gilmour on guitar, the only Pink Floyd presence at the show.",
+   "wiki": "Live_Aid",
+   "source": "https://en.wikipedia.org/wiki/Live_Aid"
+  },
+  {
+   "kind": "screen",
+   "title": "9½ Weeks",
+   "line": "It's on the soundtrack of 9½ Weeks (1986), and turned up again in Polanski's Bitter Moon (1992).",
+   "wiki": "9½_Weeks",
+   "source": "https://en.wikipedia.org/wiki/Slave_to_Love"
+  },
+  {
+   "kind": "chart",
+   "title": "UK number 10",
+   "line": "Released 3 May 1985, it spent nine weeks on the UK chart and peaked at 10. Boys and Girls became Ferry's only solo number 1 album.",
+   "wiki": "Boys_and_Girls_(album)",
+   "source": "https://en.wikipedia.org/wiki/Boys_and_Girls_(album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "id": "danny-wilson--marys-prayer",
+ "title": "Mary's Prayer",
+ "artist": "Danny Wilson",
+ "year": 1987,
+ "year_note": "First released February 1987 (UK 86). Reissued August 1987 after US airplay (UK 42) and again in March 1988, when it reached 3.",
+ "album": "Meet Danny Wilson",
+ "aliases": {
+  "youtube": [
+   "7hqgC3W9GUI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/74/02/31/74023135-a117-6ba1-6c0f-fc499e10ddb6/mzaf_5580631765970567622.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/marys-prayer/723497055?i=723497116&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Gary Clark wrote it in a London squat years before it came out: a friend lent him a Roland Juno-60, he played the first preset, and the verse chords came straight away, all white notes. The chorus took another year. The album was started at Puk in Denmark, but this track was recorded in London, mainly with Dave Bascombe, after an attempt with pedal steel had Clark, in his words, impersonating George Jones and Virgin asking what they'd done to the single. Clark sings and plays guitar, Ged Grimes plays bass, and Kit Clark plays guitar and sings backing.",
+  "context": "The band came from Dundee, started out as Spencer Tracy until the actor's estate objected, and took their new name from a 1952 Sinatra film their father loved. The single made 23 in the US first; when it won Radio 1's end-of-1987 listener poll Virgin put it out a third time, and it went to 3. Clark called the religious imagery a device and the song a simple love song.",
+  "listen_for": [
+   {
+    "where": "the verse chords",
+    "note": "Straight off a Juno-60 preset, all on the white keys. Clark lists Becker and Fagen, Bacharach and David and Jimmy Webb as influences, but the chords themselves came from the factory sound."
+   },
+   {
+    "where": "the chorus",
+    "note": "The part that took Clark another year to find after the verse came in one sitting."
+   }
+  ],
+  "leads_to": {
+   "artist": "Lester Bowie's Brass Fantasy",
+   "title": "I Only Have Eyes for You",
+   "year": 1985,
+   "why": "Bowie's brass band guest on Meet Danny Wilson, and this ECM album, recorded in Brooklyn in February 1985, is what they sounded like on their own."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mary%27s_Prayer",
+   "https://en.wikipedia.org/wiki/Danny_Wilson_(band)",
+   "https://theseconddisc.com/2025/05/07/gary-clark-complete-danny-wilson-interview/",
+   "https://movingtheriver.com/tag/sinatra/",
+   "https://en.wikipedia.org/wiki/I_Only_Have_Eyes_for_You_(Lester_Bowie_album)"
+  ],
+  "unverified": "Wikipedia contradicts itself on the first UK release (86, and also 'failed to chart'). I couldn't confirm whether Lester Bowie's Brass Fantasy play on this track or only elsewhere on the album. Rafe's Aja comparison is taste, not fact; Clark's own account is that the verse chords came from a Juno preset."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Third time",
+   "line": "It made 86 in February 1987 and 42 that August. After winning Radio 1's end-of-year listener poll it was reissued in March 1988 and reached 3; it got to 23 in the US.",
+   "wiki": "Mary's_Prayer",
+   "source": "https://en.wikipedia.org/wiki/Mary%27s_Prayer"
+  },
+  {
+   "kind": "screen",
+   "title": "There's Something About Mary",
+   "line": "It was used in There's Something About Mary (1998), and it turned up again in Blinded by the Light (2019).",
+   "wiki": "There's_Something_About_Mary",
+   "source": "https://en.wikipedia.org/wiki/Mary%27s_Prayer"
+  },
+  {
+   "kind": "cover",
+   "title": "From BBMak to Sing Street",
+   "line": "DC Project, BBMak and Jason Donovan all covered it. Gary Clark later wrote the songs and score for the 2016 film Sing Street.",
+   "wiki": "Sing_Street",
+   "source": "https://en.wikipedia.org/wiki/Danny_Wilson_(band)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "id": "george-benson--give-me-the-night",
+ "title": "Give Me the Night",
+ "artist": "George Benson",
+ "year": 1980,
+ "year_note": "",
+ "album": "Give Me the Night",
+ "aliases": {
+  "youtube": [
+   "Omnpu8mzX4c"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/35/54/ab/3554ab34-cf55-6b9f-5a86-dde12c2bf753/mzaf_8529875484408625468.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/give-me-the-night/309576571?i=309576575&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Rod Temperton, Heatwave's keyboard player, wrote it, and Quincy Jones produced it in one day at the end of a month of sessions, after talking Benson out of packing his bags. Jones heard Benson's guitar part in the middle and spread it across the whole track. Herbie Hancock plays electric piano, Richard Tee synth bass, Lee Ritenour second guitar, John Robinson drums, and Patti Austin sings the backing and scat lines. Jerry Hey wrote the horns and strings and Bruce Swedien engineered.",
+  "context": "Jones was building Qwest, his new label with Warner Bros., and Benson only signed on after hearing Off the Wall. Temperton came over from the same album. Released in June 1980, it was Benson's first number one on the soul chart (three weeks), reached 4 on the Hot 100 and 7 in the UK, and pushed the album to Platinum within two months. Benson insisted on filming the video on roller skates on the Venice Beach boardwalk, playing guitar.",
+  "listen_for": [
+   {
+    "where": "behind the verses",
+    "note": "Patti Austin's backing and scat vocals. A year later she was singing lead with James Ingram on Baby, Come to Me, same producer, same writer."
+   },
+   {
+    "where": "the bass line",
+    "note": "That's Richard Tee on synth bass, not a bass guitar."
+   },
+   {
+    "where": "the guitar break and after",
+    "note": "Benson's fills keep coming back through the song because Jones lifted his solo idea and placed it all over the track."
+   }
+  ],
+  "leads_to": {
+   "artist": "Heatwave",
+   "title": "Boogie Nights",
+   "year": 1977,
+   "why": "Rod Temperton's own band, with a song he wrote that reached 2 in the UK and the US, three years before Give Me the Night."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Give_Me_the_Night_(song)",
+   "https://en.wikipedia.org/wiki/Give_Me_the_Night_(album)",
+   "https://en.wikipedia.org/wiki/Qwest_Records",
+   "https://en.wikipedia.org/wiki/Boogie_Nights_(song)"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Roller skates on Venice Beach",
+   "line": "Benson made the 1980 video on roller skates on the Venice Beach boardwalk, playing guitar, over his manager's worries. 'Nobody here can beat me skating,' he told Spin in 2024.",
+   "source": "https://en.wikipedia.org/wiki/Give_Me_the_Night_(song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Chart peaks",
+   "line": "Three weeks at number one on the soul chart, 4 on the Hot 100 (his best pop placing) and 7 in the UK in 1980.",
+   "source": "https://en.wikipedia.org/wiki/Give_Me_the_Night_(song)"
+  },
+  {
+   "kind": "award",
+   "title": "Three Grammys",
+   "line": "The album won Benson three Grammys at the 1981 ceremony, including Best Male R&B Vocal Performance, and went Platinum two months after release.",
+   "wiki": "Give_Me_the_Night_(album)",
+   "source": "https://en.wikipedia.org/wiki/Give_Me_the_Night_(album)"
+  },
+  {
+   "kind": "cover",
+   "title": "Randy Crawford's house version",
+   "line": "Randy Crawford recut it as a deep house track on Naked and True in 1995, without the bridge.",
+   "wiki": "Randy_Crawford",
+   "source": "https://en.wikipedia.org/wiki/Give_Me_the_Night_(song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

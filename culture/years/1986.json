@@ -1,0 +1,47 @@
+{
+ "year": 1986,
+ "items": [
+  {
+   "kind": "news",
+   "title": "The Wapping dispute",
+   "line": "On 24 January 1986 print workers struck as Rupert Murdoch moved The Times, The Sun and two Sunday papers to Wapping. About 6,000 were sacked, and the strike collapsed on 5 February 1987.",
+   "wiki": "Wapping_dispute",
+   "source": "https://en.wikipedia.org/wiki/Wapping_dispute"
+  },
+  {
+   "kind": "news",
+   "title": "Chernobyl",
+   "line": "Reactor 4 at the Chernobyl plant near Pripyat in Soviet Ukraine exploded at 01:23 Moscow time on 26 April 1986.",
+   "wiki": "Chernobyl_disaster",
+   "source": "https://en.wikipedia.org/wiki/Chernobyl_disaster"
+  },
+  {
+   "kind": "film",
+   "title": "Top Gun",
+   "line": "Top Gun opened in the US on 16 May 1986. It cost about $15 million, took $360.6 million worldwide, and Berlin's 'Take My Breath Away' won the Oscar.",
+   "wiki": "Top_Gun",
+   "source": "https://en.wikipedia.org/wiki/Top_Gun"
+  },
+  {
+   "kind": "sport",
+   "title": "The Hand of God",
+   "line": "Argentina beat England 2-1 at the Azteca on 22 June 1986 in front of 114,580. Maradona's handball came in the 51st minute and his solo goal four minutes later.",
+   "wiki": "Argentina_v_England_(1986_FIFA_World_Cup)",
+   "source": "https://en.wikipedia.org/wiki/Argentina_v_England_(1986_FIFA_World_Cup)"
+  },
+  {
+   "kind": "news",
+   "title": "Big Bang",
+   "line": "On 27 October 1986 the London Stock Exchange ended fixed commissions, merged jobbers and brokers, and moved from open outcry to screen trading.",
+   "wiki": "Big_Bang_(financial_markets)",
+   "source": "https://en.wikipedia.org/wiki/Big_Bang_(financial_markets)"
+  },
+  {
+   "kind": "tv",
+   "title": "EastEnders at Christmas",
+   "line": "Den handed Angie her divorce papers on Christmas Day 1986, and more than 30 million watched on BBC One.",
+   "wiki": "EastEnders",
+   "source": "https://en.wikipedia.org/wiki/EastEnders"
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "id": "daryl-hall-john-oates--sara-smile",
+ "title": "Sara Smile",
+ "artist": "Daryl Hall & John Oates",
+ "year": 1975,
+ "year_note": "On the album Daryl Hall & John Oates (RCA, 18 August 1975). The single entered the Hot 100 on 31 January 1976 and peaked at 4 that June. The panel review has 1976.",
+ "album": "Daryl Hall & John Oates",
+ "aliases": {
+  "youtube": [
+   "dYEpFJhuu1E"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/94/35/78/94357852-4b28-781f-ccac-d5870ca25a73/mzaf_7724143585946195023.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/sara-smile/334186530?i=334186573&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Hall and Oates produced the album with Christopher Bond, and it was mixed at Sound Labs in Hollywood. Engineer Barry Rudolph told Vinyl Dialogues the track went down in about half an hour, and Hall's lead is a live take with one word punched in. Bond said the idea was an old Al Green record from Memphis, and Hall wanted the backing vocals to sound like the Dells. Clarence McDonald is credited with the piano.",
+  "context": "Hall wrote it for Sara Allen, a flight attendant who was his partner for almost 30 years, and he calls it 'a postcard'. Oates helped with the words but says it was always Hall's song. It was their first top 40 and first top ten: 4 on the Hot 100, 23 on the soul chart, gold, and Billboard's 11th best-selling single of 1976. It dragged the album up to 17 and got Atlantic to reissue 'She's Gone', which went to 7 second time round. The silver cover, with both men in makeup, was by Pierre LaRoche, who did Bowie's Ziggy Stardust look.",
+  "listen_for": [
+   {
+    "where": "the lead vocal",
+    "note": "One live take with a single word fixed afterwards, which is why it breathes with the band instead of sitting on top of it."
+   },
+   {
+    "where": "the backing vocals",
+    "note": "Hall wanted the Dells, the doo-wop and soul group, and the stacked harmonies are pitched at that old vocal-group sound."
+   },
+   {
+    "where": "the piano",
+    "note": "Clarence McDonald, the only session player the album credits to this track by number."
+   }
+  ],
+  "leads_to": {
+   "artist": "Al Green",
+   "title": "Let's Stay Together",
+   "year": 1971,
+   "why": "Bond's model was an old Al Green record from Memphis; this Willie Mitchell production for Hi went to number 1 on the Hot 100 and the soul chart."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sara_Smile",
+   "https://en.wikipedia.org/wiki/Daryl_Hall_%26_John_Oates_(album)",
+   "https://vinyldialogues.com/VinylDialoguesBlog/?p=886",
+   "https://sessiondays.com/2022/07/20/1976-hall-oates-sara-smile-us4/",
+   "https://classicsongoftheday.com/lets-stay-together-al-green/"
+  ],
+  "unverified": "Sessiondays tags Ed Greene and Scott Edwards on the track, but without instruments; the album lists two drummers and two bassists. Vinyl Dialogues places Hall in New York while writing the album; I couldn't confirm which studio the track was cut in. The panel line implies P objects to a drum machine here, but this 1975 record has live drums."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "The first top ten",
+   "line": "Entered the Hot 100 at 91 on 31 January 1976 and peaked at 4 in June. Billboard ranked it the 11th best-selling song of 1976.",
+   "source": "https://en.wikipedia.org/wiki/Sara_Smile"
+  },
+  {
+   "kind": "sample",
+   "title": "Ghetto Smile",
+   "line": "In 1996 Northern California rapper B-Legit reworked the chorus as 'Ghetto Smile', with Hall singing new vocals; it was in the 1997 film Dangerous Ground.",
+   "source": "https://en.wikipedia.org/wiki/Sara_Smile"
+  },
+  {
+   "kind": "cover",
+   "title": "Jimmy Wayne",
+   "line": "Jimmy Wayne's 2009 country version, with Hall & Oates on backing vocals, reached 31 on Hot Country Songs, their first country chart entry.",
+   "source": "https://en.wikipedia.org/wiki/Sara_Smile"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

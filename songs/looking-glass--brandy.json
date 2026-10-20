@@ -1,0 +1,76 @@
+{
+ "id": "looking-glass--brandy",
+ "title": "Brandy (You're a Fine Girl)",
+ "artist": "Looking Glass",
+ "year": 1972,
+ "year_note": "",
+ "album": "Looking Glass",
+ "aliases": {
+  "youtube": [
+   "DVx8L7a3MuE"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6a/83/fa/6a83fac3-b026-7d8f-ea28-dd9fc3a97924/mzaf_13802065516100949048.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/brandy-youre-a-fine-girl/388158145?i=388158216&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Elliot Lurie, the band's lead guitarist, wrote it. Looking Glass formed at Rutgers in New Brunswick, New Jersey, and after two false starts (one with Steve Cropper in Memphis) recorded the album in 1971 at Regent Sound in New York, co-producing with Bob Liftin. Lurie sings and plays guitar, Larry Gonsky plays keys, Pieter Sweval plays bass and cowbell, Jeff Grob drums, and Larry Fallon arranged the horns.",
+  "context": "Epic first issued it as the B-side of 'Don't It Make You Feel Good'. Robert Mandel, Epic's promotion man in Washington, took the test pressing to WPGC, where program director Harv Moore put it on hourly rotation for two days and said the switchboard 'lit up like a Christmas tree'. It was number 1 in DC before a copy was in the shops, then number 1 on the Hot 100 and a million seller. Brandy went from the 353rd most popular girl's name in the US in 1971 to 82nd in 1973.",
+  "listen_for": [
+   {
+    "where": "the horn parts",
+    "note": "Larry Fallon's arrangement. A bit of brass is what moves a New Jersey college band toward Top 40 soul; Record World called it 'a tuneful, soulful effort'."
+   },
+   {
+    "where": "the sailor's reply",
+    "note": "His life, his love and his lady is the sea. Forty-five years later Guardians of the Galaxy Vol. 2 used that line as a father explaining himself to his son, and Lurie said he loved it."
+   }
+  ],
+  "leads_to": {
+   "artist": "Barry Manilow",
+   "title": "Mandy",
+   "year": 1974,
+   "why": "It started life as Scott English's 'Brandy', and Manilow renamed it so nobody would confuse it with this record."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Brandy_(You%27re_a_Fine_Girl)",
+   "https://en.wikipedia.org/wiki/Looking_Glass_(Looking_Glass_album)",
+   "https://en.wikipedia.org/wiki/Looking_Glass_(band)"
+  ],
+  "unverified": "The single page credits Mike Gershman as a producer; the album page lists him only as executive producer, so I left him out. Lurie has denied the story that Brandy was based on a real New Brunswick woman, Mary Ellis."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number 1 from a B-side",
+   "line": "It topped the Hot 100 for one week in 1972 and went gold on 9 August that year, the band's only million seller.",
+   "wiki": "Looking_Glass_(band)",
+   "source": "https://en.wikipedia.org/wiki/Looking_Glass_(band)"
+  },
+  {
+   "kind": "screen",
+   "title": "Guardians of the Galaxy Vol. 2",
+   "line": "In the 2017 film, the villain, the hero's father, calls it 'possibly Earth's greatest composition' and uses its lyric to explain leaving his son.",
+   "wiki": "Guardians_of_the_Galaxy_Vol._2",
+   "source": "https://en.wikipedia.org/wiki/Brandy_(You%27re_a_Fine_Girl)"
+  },
+  {
+   "kind": "cover",
+   "title": "Mandy",
+   "line": "Scott English's song 'Brandy' became Barry Manilow's 'Mandy' in 1974, retitled so nobody would mix it up with this one.",
+   "source": "https://en.wikipedia.org/wiki/Brandy_(You%27re_a_Fine_Girl)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

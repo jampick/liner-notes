@@ -1,0 +1,47 @@
+{
+ "year": 1977,
+ "items": [
+  {
+   "kind": "tv",
+   "title": "Roots",
+   "line": "ABC ran Roots over eight straight nights, 23 to 30 January 1977. The finale drew a 71 share and about 100 million viewers, and the series won nine Emmys.",
+   "wiki": "Roots_(1977_miniseries)",
+   "source": "https://en.wikipedia.org/wiki/Roots_(1977_miniseries)"
+  },
+  {
+   "kind": "film",
+   "title": "Star Wars",
+   "line": "Star Wars opened on 25 May 1977 in a small number of theaters. It cost $11 million, took about $410 million on its first run and won six Oscars.",
+   "wiki": "Star_Wars_(film)",
+   "source": "https://en.wikipedia.org/wiki/Star_Wars_(film)"
+  },
+  {
+   "kind": "news",
+   "title": "Elvis dies",
+   "line": "Elvis Presley died at Graceland in Memphis on 16 August 1977, aged 42.",
+   "wiki": "Death_of_Elvis_Presley",
+   "source": "https://en.wikipedia.org/wiki/Death_of_Elvis_Presley"
+  },
+  {
+   "kind": "game",
+   "title": "Atari VCS",
+   "line": "Atari's Video Computer System reached US shops around September 1977 for about $199, with nine cartridges at launch and Combat in the box. It was renamed the 2600 in 1982 and sold about 30 million.",
+   "wiki": "Atari_2600",
+   "source": "https://en.wikipedia.org/wiki/Atari_2600"
+  },
+  {
+   "kind": "tv",
+   "title": "The Love Boat",
+   "line": "The Love Boat set sail as a weekly ABC series on 24 September 1977 aboard the real Pacific Princess, with Jack Jones singing the theme. It ran 250 episodes, to May 1986.",
+   "wiki": "The_Love_Boat",
+   "source": "https://en.wikipedia.org/wiki/The_Love_Boat"
+  },
+  {
+   "kind": "music",
+   "title": "Saturday Night Fever soundtrack",
+   "line": "The soundtrack came out on 15 November 1977, a month before the film. It spent 24 straight weeks at No. 1 and sold over 40 million copies.",
+   "wiki": "Saturday_Night_Fever",
+   "source": "https://en.wikipedia.org/wiki/Saturday_Night_Fever"
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "id": "simply-red--holding-back-the-years",
+ "title": "Holding Back the Years",
+ "artist": "Simply Red",
+ "year": 1985,
+ "year_note": "Mick Hucknall's earlier band the Frantic Elevators released the song as an indie single in 1982, without the 'I'll keep holding on' chorus. The Simply Red recording came out in 1985 (UK number 51) and was reissued in 1986, when it reached 2 in the UK and 1 in the US.",
+ "album": "Picture Book",
+ "aliases": {
+  "youtube": [
+   "yG07WSu7Q9w"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/51/f1/01/51f101d8-97e3-0ea0-6e95-08911640edf6/mzaf_14290735495429348907.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/holding-back-the-years/274034202?i=274034224&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Hucknall wrote it at 17 in his father's house; the song comes out of his mother leaving when he was three. Elektra paired the band with Stewart Levine, a former jazz saxophonist, who produced Picture Book at Soundpush in Blaricum in the Netherlands and at RAK in London. Tim Kellett, the band's keyboard player and trumpeter, improvised the trumpet solo with a harmon mute, thinking of Kind of Blue.",
+  "context": "Hucknall had been a soul and reggae club DJ in Manchester before he fronted a band, and Simply Red were a Manchester soul band. The first release stalled at 51. The reissue went to number 2 in Britain, and in July 1986 it spent a week at number 1 on the Hot 100. It got a Grammy nomination for Best Pop Performance by a Duo or Group.",
+  "listen_for": [
+   {
+    "where": "the trumpet solo",
+    "note": "Kellett's harmon mute is straight out of late-50s Miles Davis. He played something spontaneous and it stayed; Levine was surprised, because trumpet was rare in pop then."
+   },
+   {
+    "where": "the second verse",
+    "note": "'Strangled by the wishes of pater' is Hucknall's arguments with his father, the barber who raised him."
+   },
+   {
+    "where": "the choruses",
+    "note": "'I'll keep holding on' wasn't in the Frantic Elevators version. Hucknall added it years later, after he'd formed Simply Red."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Frantic Elevators",
+   "title": "Holding Back the Years",
+   "year": 1982,
+   "why": "The original, a Manchester indie single by Hucknall's post-punk band, before the chorus and the gloss were added."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Holding_Back_the_Years",
+   "https://en.wikipedia.org/wiki/Picture_Book_(Simply_Red_album)",
+   "https://www.songfacts.com/facts/simply-red/holding-back-the-years",
+   "https://www.stereogum.com/2110865/the-number-ones-simply-reds-holding-back-the-years/columns/the-number-ones/"
+  ],
+  "unverified": "Which of the two studios this track was cut in isn't documented. Desmond's quote calls Hucknall 'a jazz-club singer'; the sources describe him as a soul and reggae club DJ before Simply Red, not a jazz-club singer."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Second time lucky",
+   "line": "The 1985 release stalled at 51 in the UK. Reissued in 1986, it went to 2 at home and number 1 on the US Hot 100 in July.",
+   "wiki": "Holding_Back_the_Years",
+   "source": "https://en.wikipedia.org/wiki/Holding_Back_the_Years"
+  },
+  {
+   "kind": "video",
+   "title": "Whitby and the moors",
+   "line": "Hucknall walks with his luggage past Whitby Abbey and the 199 steps, the rest of the band play local cricketers, and it ends on a train around Goathland on the North Yorkshire Moors Railway.",
+   "wiki": "Whitby_Abbey",
+   "source": "https://en.wikipedia.org/wiki/Holding_Back_the_Years"
+  },
+  {
+   "kind": "cover",
+   "title": "Another Level, 1999",
+   "line": "The R&B boy band put out their version as a double A-side with a remix of 'Be Alone No More' and reached 11 in the UK.",
+   "wiki": "Another_Level_(group)",
+   "source": "https://en.wikipedia.org/wiki/Holding_Back_the_Years"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

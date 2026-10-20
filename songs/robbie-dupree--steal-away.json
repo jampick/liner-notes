@@ -1,0 +1,77 @@
+{
+ "id": "robbie-dupree--steal-away",
+ "title": "Steal Away",
+ "artist": "Robbie Dupree",
+ "year": 1980,
+ "year_note": "",
+ "album": "Robbie Dupree",
+ "aliases": {
+  "youtube": [
+   "jYHeDNc237M"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/c9/46/ec/c946ec77-c0d8-3103-942e-a2adf7620a55/mzaf_218979511311369195.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/steal-away-remastered/1461600658?i=1461600854&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Dupree wrote it with Rick Chudacoff at Chudacoff's house in West Hollywood: Chudacoff played an idea, Dupree sang a melody over it and the words came slowly after. Dupree called it 'a very simple rhyme song'. Chudacoff and Peter Bunetta, both from the band Crackin', produced the album for Elektra, with Chudacoff on bass, Bunetta on drums and Bill Elliott playing most of the keyboards. The song first sat on a five-song demo that nobody signed, while Dupree loaded carpet onto trucks for money.",
+  "context": "Dupree was born Robert Dupuis in Brooklyn and had sung on street corners there before any of this. It was the first single, a summer 1980 hit that reached 6 on the Hot 100. The resemblance to What a Fool Believes was obvious enough that the Los Angeles Times later called it a rip-off, and the Washington Post reported that McDonald's publishers looked at legal action, though McDonald never accused him of anything. It got him a Best New Artist nomination, which he lost to Christopher Cross.",
+  "listen_for": [
+   {
+    "where": "the verses",
+    "note": "The electric piano bounce under the vocal. The Washington Post pointed at the backing keyboards and the vocal style as the two things that sound like What a Fool Believes, so play the two back to back."
+   },
+   {
+    "where": "the whole track",
+    "note": "The rhythm section is the producers themselves, Chudacoff on bass and Bunetta on drums, a small studio band rather than the Toto crowd."
+   }
+  ],
+  "leads_to": {
+   "artist": "Bill LaBounty",
+   "title": "This Night Won't Last Forever",
+   "year": 1978,
+   "why": "LaBounty played keyboards on Dupree's album and co-wrote one of its songs. His own 1978 single only got to 65, then Michael Johnson took it to 19 a year later."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Steal_Away_(Robbie_Dupree_song)",
+   "https://www.songfacts.com/facts/robbie-dupree/steal-away",
+   "https://theseconddisc.com/2018/05/08/why-dont-we-steal-away-new-blixa-sounds-label-expands-albums-by-robbie-dupree-stephen-bishop/",
+   "https://en.wikipedia.org/wiki/Robbie_Dupree",
+   "https://en.wikipedia.org/wiki/This_Night_Won%27t_Last_Forever"
+  ],
+  "unverified": "No per-track credits for Steal Away itself; the players named are the album's core band per The Second Disc. The legal-threat detail comes from the Washington Post as summarised on Wikipedia; I didn't read the Post piece."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Chart peaks",
+   "line": "It reached 6 on the Hot 100 and 5 on adult contemporary in summer 1980, and spent three weeks at 2 on Canada's adult contemporary chart. VH1 still called him a one-hit wonder in 2009, though Hot Rod Hearts got to 15.",
+   "source": "https://en.wikipedia.org/wiki/Steal_Away_(Robbie_Dupree_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Red Oaks and Better Call Saul",
+   "line": "It plays in the 2014 pilot of Red Oaks and in 'Lantern', the season 3 finale of Better Call Saul in 2017.",
+   "wiki": "Better_Call_Saul",
+   "source": "https://en.wikipedia.org/wiki/Steal_Away_(Robbie_Dupree_song)"
+  },
+  {
+   "kind": "video",
+   "title": "The lip-sync clip",
+   "line": "Dupree made a video for it and later said lip-syncing felt 'ridiculous'. It was 'uncharted territory' and he never cared for it.",
+   "source": "https://www.songfacts.com/facts/robbie-dupree/steal-away"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "id": "nicolette-larson--lotta-love",
+ "title": "Lotta Love",
+ "artist": "Nicolette Larson",
+ "year": 1978,
+ "year_note": "Single held until 31 October 1978; it peaked in early 1979.",
+ "album": "Nicolette",
+ "aliases": {
+  "youtube": [
+   "vpFfjWdhROU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/bf/22/ecbf22bc-f1b2-ea2c-ddf4-63a1215c69a8/mzaf_16927202110156239476.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/lotta-love/285631343?i=285631357&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Neil Young wrote it and cut his own sparse version with Crazy Horse in January 1976. Larson said she found it on a tape lying on the floor of Young's car and he told her to take it; Linda Ronstadt says she suggested it. Ted Templeman produced Larson's version at Warner Bros. Recording Studios, with a Jimmie Haskell string arrangement, a horn riff and a flute solo, and the album's credits include Michael McDonald, Bill Payne and Patrick Simmons.",
+  "context": "Nicolette and Young's Comes a Time both came out in October 1978, and Larson's single waited until 31 October because Young wasn't putting his out as an A-side. It reached 8 on the Hot 100 and No. 1 on the easy listening chart. In September 1979 she sang it at the No Nukes concerts at Madison Square Garden with the Doobie Brothers backing her.",
+  "listen_for": [
+   {
+    "where": "the strings",
+    "note": "Jimmie Haskell, the same arranger on How Much I Feel, turning a Neil Young demo into an AM record."
+   },
+   {
+    "where": "the horn riff",
+    "note": "The part Record World heard as a 'touch of disco', and the most Doobies-like thing on it."
+   },
+   {
+    "where": "the instrumental break",
+    "note": "A flute solo, which is about as far from Crazy Horse as the song could travel."
+   }
+  ],
+  "leads_to": {
+   "artist": "Neil Young",
+   "title": "Lotta Love",
+   "year": 1978,
+   "why": "His own version on Comes a Time, released the same month, slow and sad where Larson's is bright."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lotta_Love",
+   "https://en.wikipedia.org/wiki/Nicolette_(album)",
+   "https://en.wikipedia.org/wiki/Minute_by_Minute"
+  ],
+  "unverified": "The album credits don't say who plays the flute solo or the horns on this track, so I didn't name them."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "No. 8 pop, No. 1 easy listening",
+   "line": "It reached 8 on the Hot 100 and No. 1 on the easy listening chart in 1979.",
+   "source": "https://en.wikipedia.org/wiki/Lotta_Love"
+  },
+  {
+   "kind": "screen",
+   "title": "No Nukes",
+   "line": "Larson sang it at the No Nukes shows at Madison Square Garden in September 1979, backed by the Doobies; it's on the album but not in the film.",
+   "source": "https://en.wikipedia.org/wiki/Lotta_Love"
+  },
+  {
+   "kind": "cover",
+   "title": "Neil Young",
+   "line": "Young's own sparse version, cut with Crazy Horse in 1976, came out on Comes a Time the same month as Larson's.",
+   "wiki": "Comes_a_Time",
+   "source": "https://en.wikipedia.org/wiki/Lotta_Love"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

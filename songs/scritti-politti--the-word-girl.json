@@ -1,0 +1,70 @@
+{
+ "id": "scritti-politti--the-word-girl",
+ "title": "The Word Girl",
+ "artist": "Scritti Politti",
+ "year": 1985,
+ "year_note": "",
+ "album": "Cupid & Psyche 85",
+ "aliases": {
+  "youtube": [
+   "MC51g1vOIHo"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a4/3c/5b/a43c5bc2-affa-c993-1f04-b8cb48482ae6/mzaf_4508438702532263946.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/the-word-girl/1139092963?i=1139092968&uo=4"
+  }
+ },
+ "notes": {
+  "made": "The band produced it as a trio, Gartside, Gamson and Fred Maher, with Gartside playing the bass himself, Nick Moroch on guitar and B.J. Nelson on backing vocals. Howard Gray recorded and mixed it. The B-side, 'Flesh and Blood', used the same backing with new words sung by the south London lovers rock and roots MC Ranking Ann.",
+  "context": "Virgin put it out on 29 April 1985, six weeks before the album, and it reached number 6, still Scritti's biggest UK hit. Gartside had noticed every lyric on the new album had a 'girl' in it and wrote a song taking the word apart, then had Ranking Ann answer it on the flip. The sleeve laid Aretha's 'Chain of Fools' label and a page of Lacan over Shirley MacLaine dressed as a bride.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "The reggae skank goes straight back to their 1981 single 'The \"Sweetest Girl\"', recut with New York machines."
+   },
+   {
+    "where": "the bass line",
+    "note": "That's Green playing, not a session player or a Minimoog."
+   }
+  ],
+  "leads_to": {
+   "artist": "Scritti Politti",
+   "title": "The \"Sweetest Girl\"",
+   "year": 1981,
+   "why": "The Rough Trade-era reggae single this one answers, from before the move to New York and the major-label money."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Word_Girl",
+   "https://en.wikipedia.org/wiki/Cupid_%26_Psyche_85",
+   "https://sessiondays.com/?p=17812"
+  ],
+  "unverified": "Folake's quote calls it 'a lovers-rock bounce'. Wikipedia describes it as reggae style; the lovers rock connection is Ranking Ann on the B-side. The UK number 6 in her quote is correct."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK number 6",
+   "line": "Released on 29 April 1985, it's still Scritti Politti's highest UK chart placing.",
+   "wiki": "The_Word_Girl",
+   "source": "https://en.wikipedia.org/wiki/The_Word_Girl"
+  },
+  {
+   "kind": "cover",
+   "title": "Ranking Ann answers back",
+   "line": "The B-side 'Flesh and Blood' put the lovers rock MC Ranking Ann over the same backing with her own words, a woman's reply to the song.",
+   "wiki": "Cupid_&_Psyche_85",
+   "source": "https://en.wikipedia.org/wiki/Cupid_%26_Psyche_85"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

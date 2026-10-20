@@ -1,0 +1,76 @@
+{
+ "id": "the-doobie-brothers--it-keeps-you-runnin",
+ "title": "It Keeps You Runnin'",
+ "artist": "The Doobie Brothers",
+ "year": 1976,
+ "year_note": "On Takin' It to the Streets (19 March 1976). The Doobies' single came out on 5 October 1976 and charted in 1977. Carly Simon's version, with the Doobies as her band, was out as a single first, in May 1976.",
+ "album": "Takin' It to the Streets",
+ "aliases": {
+  "youtube": [
+   "BSG64FsSxG4"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c3/83/b2/c383b24b-1dca-3139-a1ba-f83dd45ac954/mzaf_16833025956870963769.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/it-keeps-you-runnin-2016-remastered/1111372373?i=1111372791&uo=4"
+  }
+ },
+ "notes": {
+  "made": "McDonald wrote it and sings lead, and Ted Templeman produced it at Warner Bros. Studios in North Hollywood in 1975, playing percussion on it himself. Both drummers, John Hartman and Keith Knudsen, are on it, with Bobby LaKind on congas, Jeff Baxter and Patrick Simmons on guitars and Tiran Porter on bass.",
+  "context": "Carly Simon got there first. She cut it with the Doobies backing her (McDonald on keyboards, Baxter on slide) and released it in May 1976 as the lead single from Another Passenger; it reached 46. The band's own single followed in October and stopped at 37. It turned up in the 1978 film FM, and in 1994 the multi-platinum Forrest Gump soundtrack gave it a much bigger audience than the chart ever did.",
+  "listen_for": [
+   {
+    "where": "the groove under the verses",
+    "note": "Two drummers plus LaKind's congas, played quiet and tight rather than loud. McDonald's keyboards sit in the middle of it."
+   },
+   {
+    "where": "the lead vocal",
+    "note": "McDonald, a few months into the job, singing his own song."
+   }
+  ],
+  "leads_to": {
+   "artist": "Carly Simon",
+   "title": "It Keeps You Runnin'",
+   "year": 1976,
+   "why": "The first version out as a single, with the same band behind her; Simon and McDonald went on to write 'You Belong to Me' together."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/It_Keeps_You_Runnin%27",
+   "https://en.wikipedia.org/wiki/Takin%27_It_to_the_Streets_(The_Doobie_Brothers_album)",
+   "https://en.wikipedia.org/wiki/Michael_McDonald_(musician)"
+  ],
+  "unverified": "The panel calls it a Rhodes groove. The credits only say 'keyboards' for McDonald, so I couldn't confirm the instrument."
+ },
+ "culture": [
+  {
+   "kind": "cover",
+   "title": "Carly Simon first",
+   "line": "Simon's version, backed by the Doobies, came out in May 1976 and reached 46, five months before the band's own single.",
+   "wiki": "Another_Passenger",
+   "source": "https://en.wikipedia.org/wiki/It_Keeps_You_Runnin%27"
+  },
+  {
+   "kind": "screen",
+   "title": "Forrest Gump",
+   "line": "It's on the soundtrack of Forrest Gump (1994), which went multi-platinum, and in the 1978 film FM.",
+   "wiki": "Forrest_Gump:_The_Soundtrack",
+   "source": "https://en.wikipedia.org/wiki/It_Keeps_You_Runnin%27"
+  },
+  {
+   "kind": "chart",
+   "title": "Number 37",
+   "line": "The Doobies' single came out on 5 October 1976 and reached 37 on the Hot 100 in 1977.",
+   "source": "https://en.wikipedia.org/wiki/It_Keeps_You_Runnin%27"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

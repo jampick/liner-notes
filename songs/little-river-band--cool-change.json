@@ -1,0 +1,70 @@
+{
+ "id": "little-river-band--cool-change",
+ "title": "Cool Change",
+ "artist": "Little River Band",
+ "year": 1979,
+ "year_note": "",
+ "album": "First Under the Wire",
+ "aliases": {
+  "youtube": [
+   "maeFN1oyF0k"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f9/54/d7/f954d79d-c217-9816-b250-916bd70b53c0/mzaf_13137350732275113959.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/cool-change-remastered-2022/1647730866?i=1647731267&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Glenn Shorrock wrote it and sang it. John Boylan co-produced with the band for Capitol, with Beeb Birtles and Graeham Goble on guitars and vocals, Derek Pellicci on drums, Mike Clarke on bass, Peter Jones on piano and Bill Harrower on saxophone. The album version runs 5:14; the single was cut to 3:56.",
+  "context": "A cool change is the Australian name for the front that breaks a southern summer heatwave, and the song is a daydream about getting out on the water, written while the band was at war with itself: Shorrock told Songfacts he and Goble were like chalk and cheese, and later called the song a cry for help. He wasn't much of a sailor yet, and took it up afterwards. Capitol released it in August 1979 in North America only, and it reached 10 on the Hot 100 in the week of 19 January 1980. At home it was never a single, but in 2001 APRA named it one of the 30 best Australian songs ever written.",
+  "listen_for": [
+   {
+    "where": "the verses",
+    "note": "Shorrock's lead over Peter Jones's piano, a slower and more open sound than the band's harmony-stack hits."
+   },
+   {
+    "where": "between the vocal sections",
+    "note": "Bill Harrower's saxophone, the one guest horn in the lineup."
+   }
+  ],
+  "leads_to": {
+   "artist": "Little River Band",
+   "title": "Lonesome Loser",
+   "year": 1979,
+   "why": "The other top-10 single from First Under the Wire, released a month earlier, and the band's upbeat side."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Cool_Change_(song)",
+   "https://en.wikipedia.org/wiki/First_Under_the_Wire",
+   "https://www.songfacts.com/facts/little-river-band/cool-change",
+   "https://www.songfacts.com/blog/interviews/little-river-band-founder-glenn-shorrock"
+  ],
+  "unverified": "The panel line mentions an albatross in the lyric; I couldn't confirm the wording from a source I could read, so it's not in the text. Studio and recording city for First Under the Wire aren't in any source I found."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Top 10 in America only",
+   "line": "Released in August 1979 in North America only, it reached 10 on the Hot 100 in the week of 19 January 1980. It was never a single in Australia.",
+   "source": "https://en.wikipedia.org/wiki/Cool_Change_(song)"
+  },
+  {
+   "kind": "award",
+   "title": "APRA Top 30",
+   "line": "In May 2001 APRA picked it as one of the 30 best Australian songs of all time, and BMI cited it for more than two million US radio plays.",
+   "wiki": "APRA_Awards",
+   "source": "https://en.wikipedia.org/wiki/Cool_Change_(song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

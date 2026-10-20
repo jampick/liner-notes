@@ -1,0 +1,77 @@
+{
+ "id": "steely-dan--deacon-blues",
+ "title": "Deacon Blues",
+ "artist": "Steely Dan",
+ "year": 1977,
+ "year_note": "On Aja (September 1977). The single edit charted in June 1978.",
+ "album": "Aja",
+ "aliases": {
+  "youtube": [
+   "ICK6e9WK2A8"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7d/8b/cb/7d8bcb40-06ac-011d-04ca-a410eb75e625/mzaf_3669432319389931140.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/deacon-blues/1706428459?i=1706428464&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Recorded at Village Recorders in West Los Angeles. Larry Carlton turned Fagen's demo into a rhythm-section chart and plays the opening guitar, Bernard Purdie is on drums, Victor Feldman on electric piano, and Becker plays bass, the only song on Aja where he does. Tom Scott wrote the horns. Becker and Fagen had heard a tenor player in the Tonight Show band and didn't know his name, so Gary Katz brought in saxophonists one after another until Pete Christlieb turned up; he came over after a Carson taping and by his own account was done in half an hour.",
+  "context": "Fagen wrote most of it at his house in Malibu. The idea was that if a college team could call itself the Crimson Tide, the losers deserved a grand name too, and the 'Deacon' came from the football player Deacon Jones. The narrator is the suburban kid who thinks learning bebop will set him free, which Fagen has said was close to their own story. At seven and a half minutes it was too long for a single; Becker, Fagen and Katz refused to cut it, ABC put out a six-and-a-half-minute edit anyway, and it peaked at 19 in June 1978.",
+  "listen_for": [
+   {
+    "where": "the opening bars",
+    "note": "Larry Carlton's guitar sets the chords he transcribed from Fagen's demo, before the band comes in."
+   },
+   {
+    "where": "the two sax solos",
+    "note": "Pete Christlieb, a jazz tenor man from the Tonight Show band, playing what he felt in two takes. The single edit cut the first ten measures of the first solo, so the album version is the one to hear."
+   },
+   {
+    "where": "under the verses",
+    "note": "The bass is Walter Becker himself, his only bass part on the album."
+   }
+  ],
+  "leads_to": {
+   "artist": "Bill Callahan and Will Oldham",
+   "title": "Deacon Blues",
+   "year": 2020,
+   "why": "Two indie songwriters take the most literate lyric on this list at face value; it landed on their 2021 album Blind Date Party."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Deacon_Blues",
+   "https://en.wikipedia.org/wiki/Aja_(album)"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "No. 19, June 1978",
+   "line": "ABC's six-and-a-half-minute edit, made over the band's objections, peaked at 19 on the Hot 100 in the weeks of 10 and 17 June 1978.",
+   "source": "https://en.wikipedia.org/wiki/Deacon_Blues"
+  },
+  {
+   "kind": "award",
+   "title": "Rolling Stone 500",
+   "line": "Rolling Stone ranked it 214 on its 2021 list of the 500 greatest songs.",
+   "source": "https://en.wikipedia.org/wiki/Deacon_Blues"
+  },
+  {
+   "kind": "cover",
+   "title": "Callahan and Oldham",
+   "line": "Bill Callahan and Will Oldham released a cover in 2020, later on their 2021 album Blind Date Party.",
+   "source": "https://en.wikipedia.org/wiki/Deacon_Blues"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "id": "seals-crofts--summer-breeze",
+ "title": "Summer Breeze",
+ "artist": "Seals & Crofts",
+ "year": 1972,
+ "year_note": "",
+ "album": "Summer Breeze",
+ "aliases": {
+  "youtube": [
+   "mzzapnadq9Y"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7e/cc/64/7ecc6485-d01b-32b5-cdfe-92ea7bcfcc93/mzaf_484416485332291447.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/summer-breeze/303229963?i=303230013&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Louie Shelton produced it at the Sound Factory in Hollywood, with Dave Hassinger engineering and Val Garay as second engineer. By Dash Crofts's account Jim Seals wrote it, though they share the credit. The song's credits list Larry Knechtel on piano, Harvey Brooks on bass and Jim Gordon on drums, with Crofts on electric guitar, toy piano and a piano with tape on its strings, and Seals singing lead.",
+  "context": "Both men were Texans who had come to Los Angeles with Dean Beard's band to join the Champs after 'Tequila' went to number 1 in 1958, and both were Baháʼís who often stayed on stage after a show to talk about the faith. Warner Bros. put the single out in August 1972, nine days before the album. It reached 6 on the Hot 100 and 4 on the Adult Contemporary chart, and the album got to 7, their best. Two years later they played the California Jam, straight after the Eagles.",
+  "listen_for": [
+   {
+    "where": "the high, chiming keyboard part",
+    "note": "That's Crofts on toy piano and on a piano with tape on its strings, a cheap trick that takes the ring out of a studio grand and makes it sound like a music box."
+   },
+   {
+    "where": "the rhythm section",
+    "note": "Jim Gordon and Harvey Brooks, kept deliberately light so the two-part vocal carries the tune. Gordon was also on Hall & Oates's Silver Album three years later."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Isley Brothers",
+   "title": "Summer Breeze",
+   "year": 1973,
+   "why": "From their album 3 + 3: the same song played as hard rock-soul, which as a 1974 single reached 10 on the R&B chart and 16 in the UK."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Summer_Breeze_(song)",
+   "https://en.wikipedia.org/wiki/Summer_Breeze_(Seals_%26_Crofts_album)",
+   "https://sessiondays.com/2019/02/08/1972-seals-crofts-summer-breeze/",
+   "https://en.wikipedia.org/wiki/Seals_%26_Crofts",
+   "https://en.wikipedia.org/wiki/California_Jam",
+   "https://en.wikipedia.org/wiki/Daryl_Hall_%26_John_Oates_(album)"
+  ],
+  "unverified": "No source says where in the song the toy piano plays, so I described the sound rather than placing it. The per-song personnel comes from Wikipedia's song page; the album lists four drummers and five pianists without per-track credits."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number 6",
+   "line": "Released August 1972, nine days before the album. It reached 6 on the Hot 100 and 4 on Adult Contemporary, and the album went to 7.",
+   "source": "https://en.wikipedia.org/wiki/Summer_Breeze_(song)"
+  },
+  {
+   "kind": "cover",
+   "title": "The Isley Brothers",
+   "line": "The Isleys played it as rock-soul on 3 + 3 (1973). As a 1974 single it reached 10 on the R&B chart and 16 in the UK.",
+   "wiki": "The_Isley_Brothers",
+   "source": "https://en.wikipedia.org/wiki/Summer_Breeze_(song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Dazed and Confused",
+   "line": "It's in Dazed and Confused and Freaks and Geeks, and a 2004 remix was used in a Gap advert.",
+   "wiki": "Dazed_and_Confused_(film)",
+   "source": "https://en.wikipedia.org/wiki/Summer_Breeze_(song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

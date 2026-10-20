@@ -1,0 +1,82 @@
+{
+ "id": "bobby-caldwell--what-you-wont-do-for-love",
+ "title": "What You Won't Do for Love",
+ "artist": "Bobby Caldwell",
+ "year": 1978,
+ "year_note": "",
+ "album": "Bobby Caldwell",
+ "aliases": {
+  "youtube": [
+   "n9DmdAwUbxc"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/17/bf/3b/17bf3ba4-217f-44bc-1135-3be983200eac/mzaf_14332659604263859771.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/what-you-wont-do-for-love/1606064414?i=1606064876&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Caldwell wrote it with guitarist Alfons Kettner, and Ann Holloway produced it at TK's studio in Hialeah, Florida. Henry Stone, TK's president, had signed Caldwell that year, liked the first version of the album but heard no hit on it, and had it redone. Miami arranger Mike Lewis wrote the horn and string parts; the album credits list Ed Green, Joe Galdo and Harold Seay on drums and Benny Latimore on keys.",
+  "context": "Caldwell wanted 'My Flame' to be the single; TK backed this one, released it in September 1978, and when they sent it to R&B radio they did their best to hide that Caldwell was white. The plan held until he played live. It reached 9 on the Hot 100 and 6 on the soul chart, and for Valentine's Day 1979 TK pressed about 50,000 heart-shaped copies at $7.98, which American Top 40 called the most expensive single of its time.",
+  "listen_for": [
+   {
+    "where": "the horn lines between the vocal phrases",
+    "note": "Mike Lewis's Miami horn chart, which is what put this on soul radio before anyone saw the singer."
+   },
+   {
+    "where": "the last minute of the album version",
+    "note": "The album cut runs 4:45 against 3:30 for the single, and the extra time is groove, the part DJs and samplers later went back for."
+   }
+  ],
+  "leads_to": {
+   "artist": "2Pac",
+   "title": "Do for Love",
+   "year": 1998,
+   "why": "Soulshock & Karlin built the posthumous single on Caldwell's hook, and it went to 21 on the Hot 100 and 12 in the UK."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/What_You_Won%27t_Do_for_Love_(song)",
+   "https://en.wikipedia.org/wiki/Bobby_Caldwell_(album)",
+   "https://en.wikipedia.org/wiki/Do_for_Love"
+  ],
+  "unverified": "The album credits don't say which of the three drummers is on this track. The panel line (sampled on 2Pac's 'Do for Love') checks out."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "No. 9 pop, No. 6 R&B",
+   "line": "It reached 9 on the Hot 100 and 6 on the soul chart. TK pressed about 50,000 heart-shaped copies at $7.98 for Valentine's Day 1979.",
+   "source": "https://en.wikipedia.org/wiki/What_You_Won%27t_Do_for_Love_(song)"
+  },
+  {
+   "kind": "sample",
+   "title": "2Pac, 'Do for Love'",
+   "line": "2Pac's posthumous 1998 single 'Do for Love' is built on it and reached 21 on the Hot 100 and 12 in the UK.",
+   "wiki": "Do_for_Love",
+   "source": "https://en.wikipedia.org/wiki/Do_for_Love"
+  },
+  {
+   "kind": "screen",
+   "title": "black-ish",
+   "line": "It plays over the end of the black-ish episode 'Love, Boat', after Dre remembers comforting his mother when she found out Caldwell was white.",
+   "wiki": "Black-ish",
+   "source": "https://en.wikipedia.org/wiki/What_You_Won%27t_Do_for_Love_(song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Go West",
+   "line": "Go West's 1993 cover reached 15 in the UK and 3 on the US adult contemporary chart.",
+   "source": "https://en.wikipedia.org/wiki/What_You_Won%27t_Do_for_Love_(song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

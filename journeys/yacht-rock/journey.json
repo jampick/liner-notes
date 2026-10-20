@@ -1,0 +1,1816 @@
+{
+ "slug": "yacht-rock",
+ "title": "Yacht Rock",
+ "titleA": "Yacht",
+ "titleB": "Rock",
+ "kicker": "60 crossings in smooth water · 1972 to 1983, mostly out of LA",
+ "description": "A walk through 60 smooth, session-player soft rock songs from 1972 to 1983, with a taste of each, what to listen for, and how the same few musicians tie them together.",
+ "lede": "For about seven years the same few dozen Los Angeles session players turned up on half the soft-rock radio: a Porcaro on drums, a Rhodes under the verse, Michael McDonald somewhere in the backing vocals. Nobody called it yacht rock until a web series did in 2005. This is that run, one song at a time, in the order the records came out, with a few that came before and one that came after.",
+ "fonts": "https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Chivo+Mono:wght@400;500&display=swap",
+ "copy": {
+  "start": "Cast off",
+  "resume": "Pick up at",
+  "express": "Express: five stops",
+  "companion": "Already playing the full playlist in cliamp? Companion mode keeps the previews quiet until you ask for one.",
+  "panelNote": "The panel is fictional: five invented judges who argued the list into shape. The facts under each song are real and sourced; open Sources on any stop.",
+  "endKept": "These are the ones you kept. The link below carries them, so whoever opens it gets the same crossing.",
+  "endEmpty": "You didn't keep anything this time. Press K on a stop to keep it, and the link remembers your picks.",
+  "credits": "Picked by P, C, M, S and B, a fictional panel. Researched from the sources listed on each stop. Previews courtesy of Apple Music, covers from Apple Music, era photographs generated for this page."
+ },
+ "panel": {
+  "judges": {
+   "p": {
+    "name": "P",
+    "title": "the Purist",
+    "lens": "Scores against the genre as the Yacht Rock web series and its podcast spin-off drew it: era, personnel and sound. Can veto a song as not yacht at all."
+   },
+   "c": {
+    "name": "C",
+    "title": "the Chart Historian",
+    "lens": "Billboard peak, and whether radio still plays it 40 years on."
+   },
+   "m": {
+    "name": "M",
+    "title": "the Session Player",
+    "lens": "Groove, chord changes, the solo, the production."
+   },
+   "s": {
+    "name": "S",
+    "title": "the Soul Crate-Digger",
+    "lens": "R&B and jazz roots, the sampling afterlife, and due credit for the Black artists these lists usually leave off."
+   },
+   "b": {
+    "name": "B",
+    "title": "the Dock Party Host",
+    "lens": "Would a room of normal people in 2026 sing along?"
+   }
+  },
+  "express": {
+   "note": "P's one-per-era picks, for when you have ten minutes.",
+   "songs": [
+    "the-doobie-brothers--takin-it-to-the-streets",
+    "the-doobie-brothers--what-a-fool-believes",
+    "christopher-cross--ride-like-the-wind",
+    "robbie-dupree--steal-away",
+    "michael-mcdonald--i-keep-forgettin"
+   ]
+  },
+  "quotes": {
+   "the-doobie-brothers--what-a-fool-believes": {
+    "j": "p",
+    "q": "McDonald and Loggins wrote it, and it won Record of the Year. Every other song here gets measured against it."
+   },
+   "christopher-cross--sailing": {
+    "j": "c",
+    "q": "It's about a boat, and it won Record and Song of the Year"
+   },
+   "steely-dan--peg": {
+    "j": "p",
+    "q": "Jay Graydon's solo, with McDonald stacking the backing vocals"
+   },
+   "kenny-loggins--this-is-it": {
+    "j": "p",
+    "q": "McDonald co-wrote it and sings on it"
+   },
+   "christopher-cross--ride-like-the-wind": {
+    "j": "p",
+    "q": "Ends on McDonald's \"such a long way to go\""
+   },
+   "toto--rosanna": {
+    "j": "m",
+    "q": "The Porcaro half-time shuffle drummers still study"
+   },
+   "boz-scaggs--lowdown": {
+    "j": "m",
+    "q": "Co-written with Paich and played by Porcaro, so it's Toto before Toto"
+   },
+   "robbie-dupree--steal-away": {
+    "j": "p",
+    "q": "Sounds almost exactly like #1, which is the point"
+   },
+   "michael-mcdonald--i-keep-forgettin": {
+    "j": "s",
+    "q": "Later the backbone of \"Regulate\", which won S over"
+   },
+   "steely-dan--deacon-blues": {
+    "j": "p",
+    "q": "The most literate song in the genre"
+   },
+   "bobby-caldwell--what-you-wont-do-for-love": {
+    "j": "s",
+    "q": "A soul cornerstone, later sampled on 2Pac's \"Do for Love\""
+   },
+   "michael-jackson--human-nature": {
+    "j": "m",
+    "q": "Steve Porcaro wrote it, with Toto on the track"
+   },
+   "ambrosia--biggest-part-of-me": {
+    "j": "s",
+    "q": "David Pack's vocal and the gospel lift at the end"
+   },
+   "the-doobie-brothers--minute-by-minute": {
+    "j": "p",
+    "q": "Title track of the album where the Doobies went fully McDonald"
+   },
+   "player--baby-come-back": {
+    "j": "c",
+    "q": "A #1 hit that never left grocery store radio"
+   },
+   "the-doobie-brothers--takin-it-to-the-streets": {
+    "j": "p",
+    "q": "McDonald's first Doobies lead, and arguably where the genre starts"
+   },
+   "steely-dan--hey-nineteen": {
+    "j": "c",
+    "q": "Gaucho's hit, all dry irony"
+   },
+   "george-benson--give-me-the-night": {
+    "j": "s",
+    "q": "Produced by Quincy Jones, written by Rod Temperton"
+   },
+   "earth-wind-fire--after-the-love-has-gone": {
+    "j": "s",
+    "q": "Written by Foster, Graydon and Champlin, so it's yacht songwriting in EWF's hands"
+   },
+   "grover-washington-jr-bill-withers--just-the-two-of-us": {
+    "j": "b",
+    "q": "Smooth jazz meets soul, and B's room knows every word"
+   },
+   "pablo-cruise--love-will-find-a-way": {
+    "j": "b",
+    "q": "A California sunset in song form"
+   },
+   "little-river-band--cool-change": {
+    "j": "p",
+    "q": "Open sea and an albatross, so the lyric qualifies on its own"
+   },
+   "carly-simon--you-belong-to-me": {
+    "j": "p",
+    "q": "Co-written with McDonald, and the Doobies cut it first"
+   },
+   "kenny-loggins--heart-to-heart": {
+    "j": "p",
+    "q": "Loggins, Foster and McDonald wrote it. Only reached #15."
+   },
+   "donald-fagen--i-g-y": {
+    "j": "m",
+    "q": "Peak studio perfectionism, too wry for a party"
+   },
+   "gino-vannelli--i-just-wanna-stop": {
+    "j": "m",
+    "q": "The most dramatic vocal on the list"
+   },
+   "little-river-band--reminiscing": {
+    "j": "c",
+    "q": "A big-band nostalgia arrangement on an AM hit"
+   },
+   "ambrosia--how-much-i-feel": {
+    "j": "b",
+    "q": "The ballad side of the genre"
+   },
+   "al-jarreau--were-in-this-love-together": {
+    "j": "s",
+    "q": "Jay Graydon produced it, and it's yacht soul at its smoothest"
+   },
+   "george-benson--turn-your-love-around": {
+    "j": "m",
+    "q": "Written by Graydon, Lukather and Champlin"
+   },
+   "patti-austin-james-ingram--baby-come-to-me": {
+    "j": "c",
+    "q": "A Quincy-era #1 that took off after *General Hospital* used it"
+   },
+   "chicago--hard-to-say-im-sorry": {
+    "j": "m",
+    "q": "David Foster rebuilt Chicago into a yacht band"
+   },
+   "eagles--i-cant-tell-you-why": {
+    "j": "m",
+    "q": "Schmit's lead and the cleanest groove the Eagles cut"
+   },
+   "christopher-cross--arthurs-theme": {
+    "j": "c",
+    "q": "Won an Oscar, and \"between the moon and New York City\""
+   },
+   "daryl-hall-john-oates--i-cant-go-for-that": {
+    "j": "s",
+    "q": "P objects to the drum machine and the Philly origins and gets outvoted"
+   },
+   "daryl-hall-john-oates--sara-smile": {
+    "j": "s",
+    "q": "Same objection from P, same result"
+   },
+   "james-ingram-michael-mcdonald--yah-mo-b-there": {
+    "j": "s",
+    "q": "Two of the genre's great voices plus Quincy"
+   },
+   "kenny-loggins--whenever-i-call-you-friend": {
+    "j": "c",
+    "q": "A duet with Stevie Nicks"
+   },
+   "steely-dan--kid-charlemagne": {
+    "j": "m",
+    "q": "M calls Larry Carlton's solo the best on the list"
+   },
+   "toto--georgy-porgy": {
+    "j": "s",
+    "q": "Barely charted, but Cheryl Lynn's vocal and a long sampling life carried it"
+   },
+   "nicolette-larson--lotta-love": {
+    "j": "c",
+    "q": "A Neil Young song given the marina treatment"
+   },
+   "firefall--you-are-the-woman": {
+    "j": "p",
+    "q": "The flute is pure 1976"
+   },
+   "orleans--still-the-one": {
+    "j": "c",
+    "q": "Endless TV-promo afterlife"
+   },
+   "stephen-bishop--on-and-on": {
+    "j": "b",
+    "q": "Jamaica, Sinatra and a breakup, sung softly"
+   },
+   "paul-davis--i-go-crazy": {
+    "j": "c",
+    "q": "Stayed on the charts for about 40 weeks"
+   },
+   "seals-crofts--get-closer": {
+    "j": "s",
+    "q": "Carolyn Willis' vocal moves it from folk to yacht"
+   },
+   "rickie-lee-jones--chuck-e-s-in-love": {
+    "j": "b",
+    "q": "P calls it too beatnik and gets outvoted"
+   },
+   "the-doobie-brothers--it-keeps-you-runnin": {
+    "j": "m",
+    "q": "The Rhodes groove the whole genre runs on"
+   },
+   "toto--i-wont-hold-you-back": {
+    "j": "c",
+    "q": "Toto's ballad mode, with a #1 on the adult contemporary chart"
+   },
+   "walter-egan--magnet-and-steel": {
+    "j": "c",
+    "q": "Buckingham and Nicks sing backup"
+   },
+   "toto--africa": {
+    "j": "p",
+    "q": "Huge hit with great players, but P and S hear synth adult pop",
+    "dissent": true
+   },
+   "rupert-holmes--escape": {
+    "j": "p",
+    "q": "C and B love it. P calls it a novelty lyric with no groove, so it's nyacht.",
+    "dissent": true
+   },
+   "gerry-rafferty--baker-street": {
+    "j": "p",
+    "q": "P: comes from Glasgow, not LA, and the sax belongs more in a pub than a marina",
+    "dissent": true
+   },
+   "boz-scaggs--jojo": {
+    "j": "c",
+    "q": "P's favorite deep cut, but C and B shrug",
+    "dissent": true
+   },
+   "larsen-feiten-band--wholl-be-the-fool-tonight": {
+    "j": "c",
+    "q": "Musically perfect yacht, recognition near zero",
+    "dissent": true
+   },
+   "seals-crofts--summer-breeze": {
+    "j": "p",
+    "q": "P vetoes it as four years too early, proto-yacht",
+    "dissent": true
+   },
+   "looking-glass--brandy": {
+    "j": "p",
+    "q": "It's nautical, but too early and too pop for P",
+    "dissent": true
+   },
+   "ace--how-long": {
+    "j": "p",
+    "q": "Too early and British for P",
+    "dissent": true
+   },
+   "steve-winwood--while-you-see-a-chance": {
+    "j": "s",
+    "q": "Synth-forward and British, so P and S say no",
+    "dissent": true
+   },
+   "michael-franks--popsicle-toes": {
+    "j": "b",
+    "q": "Jazz insiders love it and nobody else knows it",
+    "dissent": true
+   }
+  }
+ },
+ "eras": [
+  {
+   "n": 1,
+   "name": "Canyon Morning",
+   "years": "1972–76",
+   "from": 1972,
+   "to": 1976,
+   "essay": "In 1972 this music had no name and no home town. Seals & Crofts cut 'Summer Breeze' at the Sound Factory in Hollywood. Looking Glass made 'Brandy' at Regent Sound in New York after a false start with Steve Cropper in Memphis, and a Washington DJ turned the B-side into a number one. Ace were English and recorded 'How Long' at Rockfield in Wales. Meanwhile the country had a rough few years. The oil embargo of October 1973 took a barrel from about $3 to nearly $12, Nixon resigned on 9 August 1974, and Saigon fell in April 1975. By 1976 the money and the players had settled in Los Angeles. Boz Scaggs hired David Paich, Jeff Porcaro and David Hungate for Silk Degrees, which spent 115 weeks on the Billboard 200 and sent all three off to form Toto. Steely Dan had stopped touring, so their touring keyboard player Michael McDonald was free when Tom Johnston's ulcers took him off the road, and the Doobie Brothers cut Takin' It to the Streets at Warner Bros. in North Hollywood. Steely Dan started The Royal Scam at Davlen in North Hollywood, decamped to New York, and finished at ABC in LA. The name came 29 years later, from a 2005 online comedy series called Yacht Rock.",
+   "scene": {
+    "cities": [
+     "Los Angeles",
+     "Hollywood",
+     "North Hollywood",
+     "New York",
+     "Miami",
+     "Monmouth, Wales",
+     "Boulder",
+     "Woodstock, New York"
+    ],
+    "labels": [
+     "Warner Bros.",
+     "Columbia",
+     "ABC Records",
+     "Asylum",
+     "Atlantic",
+     "Epic",
+     "RCA",
+     "Anchor",
+     "Reprise"
+    ],
+    "gear": [
+     "Fender Telecaster through a '69 Princeton Reverb and a cheap Boss distortion pedal (the 'Lowdown' solo)",
+     "Minimoog and ARP synthesizers (David Paich on Silk Degrees)",
+     "toy piano and a piano with tape on its strings ('Summer Breeze')",
+     "two 16-track machines linked into 32 tracks, the 'Eicosystem' that wrecked The Royal Scam's editing"
+    ],
+    "artifact": "The California Jam, 6 April 1974 at Ontario Motor Speedway: Seals & Crofts played fourth, right after Earth, Wind & Fire and the Eagles, tickets were $10 in advance, and ABC put it on TV in its In Concert series."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Summer_Breeze_(Seals_%26_Crofts_album)",
+    "https://en.wikipedia.org/wiki/Looking_Glass_(Looking_Glass_album)",
+    "https://en.wikipedia.org/wiki/Five-A-Side",
+    "https://en.wikipedia.org/wiki/1973_oil_crisis",
+    "https://en.wikipedia.org/wiki/Watergate_scandal",
+    "https://en.wikipedia.org/wiki/Fall_of_Saigon",
+    "https://en.wikipedia.org/wiki/Silk_Degrees",
+    "https://en.wikipedia.org/wiki/Boz_Scaggs",
+    "https://en.wikipedia.org/wiki/Michael_McDonald_(musician)",
+    "https://en.wikipedia.org/wiki/Takin%27_It_to_the_Streets_(The_Doobie_Brothers_album)",
+    "https://en.wikipedia.org/wiki/The_Royal_Scam",
+    "https://en.wikipedia.org/wiki/Yacht_rock",
+    "https://en.wikipedia.org/wiki/California_Jam",
+    "https://www.guitarplayer.com/guitarists/the-accidental-1976-smash-hit-created-by-a-virtuoso-rock-group-and-the-most-recorded-guitarist-in-history"
+   ],
+   "image": "media/eras/era1.webp"
+  },
+  {
+   "n": 2,
+   "name": "Rhodes After Dark",
+   "years": "1977–78",
+   "from": 1977,
+   "to": 1978,
+   "essay": "Disco owned the album chart for most of this stretch. The Saturday Night Fever soundtrack sat at No. 1 for 24 straight weeks from January 1978, and the record that finally knocked it off, on 8 July, was Gerry Rafferty's City to City, cut in a studio in Chipping Norton, Oxfordshire. ABC had launched The Love Boat the previous September, so soft rock had its ship before it had its name. The LA rooms were busy. The Doobies made Minute by Minute at Warner Bros. Studios in North Hollywood, Toto spent nine months between Studio 55, Davlen and Sunset Sound, and Ambrosia worked at Mama Jo's. A lot of this era was made somewhere else, though. Peg was the one Aja track recorded in New York, and Carly Simon's Boys in the Trees and Kenny Loggins's Nightwatch were New York records too. Bobby Caldwell cut his debut at TK in Hialeah, Florida, Paul Davis worked in Atlanta for Bang, and Little River Band were at Armstrong Studios in South Melbourne. By now the sound travelled: a Rhodes, a session drummer who played behind the beat, and a singer who sounded hurt but well rested. Aja was one of the first albums to go Platinum, a certification the RIAA had only just started handing out.",
+   "scene": {
+    "cities": [
+     "Los Angeles",
+     "North Hollywood",
+     "New York",
+     "Hialeah",
+     "Atlanta",
+     "Sausalito",
+     "South Melbourne",
+     "Chipping Norton"
+    ],
+    "labels": [
+     "ABC Records",
+     "Warner Bros.",
+     "RSO",
+     "Bang",
+     "Clouds / TK",
+     "A&M",
+     "Elektra",
+     "Capitol",
+     "Columbia",
+     "United Artists"
+    ],
+    "gear": [
+     "Fender Rhodes",
+     "Lyricon (Tom Scott on Peg)",
+     "Oberheim Polyphonic Eight Voice",
+     "Crumar Univox Stringman",
+     "ARP Odyssey"
+    ],
+    "artifact": "The Love Boat: ABC put the series on air on 24 September 1977, set it on Princess Cruises' real Pacific Princess, had Jack Jones sing the theme, and kept it sailing for 250 episodes until 1986."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Saturday_Night_Fever",
+    "https://en.wikipedia.org/wiki/City_to_City",
+    "https://en.wikipedia.org/wiki/The_Love_Boat",
+    "https://en.wikipedia.org/wiki/Minute_by_Minute",
+    "https://en.wikipedia.org/wiki/Toto_(album)",
+    "https://en.wikipedia.org/wiki/Life_Beyond_L.A.",
+    "https://en.wikipedia.org/wiki/Aja_(album)",
+    "https://en.wikipedia.org/wiki/Boys_in_the_Trees",
+    "https://en.wikipedia.org/wiki/Nightwatch_(Kenny_Loggins_album)",
+    "https://en.wikipedia.org/wiki/Bobby_Caldwell_(album)",
+    "https://en.wikipedia.org/wiki/Paul_Davis_(singer)",
+    "https://en.wikipedia.org/wiki/Sleeper_Catcher"
+   ],
+   "image": "media/eras/era2.webp"
+  },
+  {
+   "n": 3,
+   "name": "Record of the Year",
+   "years": "1979",
+   "from": 1979,
+   "to": 1979,
+   "essay": "1979 was a rough year to sell records and a good one to sell this kind. Disco blew up in public on 12 July, when a Chicago shock jock detonated a crate of disco LPs between games of a White Sox doubleheader at Comiskey Park and the crowd tore up the field. The gas lines were back, crude went from $15.85 a barrel in April to $39.50 a year later, and on 15 July Jimmy Carter went on television to talk about a crisis of confidence. Soft rock with a soul engine under it filled the gap. What a Fool Believes, written by Michael McDonald and Kenny Loggins, topped the Hot 100 on 14 April and took Record of the Year the next February, and McDonald turns up twice more in this era, as Loggins's harmony and as the answering voice on Ride Like the Wind. Warner Bros. signed Christopher Cross out of Austin early in the year, and Michael Omartian cut his debut on 3M's digital recorder, one of the first pop albums made that way. David Foster and Jay Graydon handed a ballad to Earth, Wind & Fire. The Eagles took eighteen months over The Long Run and split the year after. Rupert Holmes closed the decade at number one with a song about a personals ad.",
+   "scene": {
+    "cities": [
+     "Los Angeles",
+     "North Hollywood",
+     "Austin",
+     "Miami",
+     "New York"
+    ],
+    "labels": [
+     "Warner Bros.",
+     "ARC / Columbia",
+     "Capitol",
+     "Asylum",
+     "Infinity"
+    ],
+    "gear": [
+     "3M Digital Recording System",
+     "Fender Rhodes",
+     "3M 79 24-track with a custom API console at Amigo Studios",
+     "Harrison 48-channel console and Ampex 1200 24-track machines",
+     "Oberheim polyphonic synthesizer"
+    ],
+    "artifact": "The 22nd Grammy Awards at the Shrine Auditorium on 27 February 1980: What a Fool Believes won Record and Song of the Year over After the Love Has Gone, and Rickie Lee Jones beat the Knack, Dire Straits, the Blues Brothers and Robin Williams to Best New Artist."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Disco_Demolition_Night",
+    "https://en.wikipedia.org/wiki/1979_oil_crisis",
+    "https://en.wikipedia.org/wiki/What_a_Fool_Believes",
+    "https://en.wikipedia.org/wiki/22nd_Annual_Grammy_Awards",
+    "https://en.wikipedia.org/wiki/Christopher_Cross",
+    "https://en.wikipedia.org/wiki/Christopher_Cross_(album)",
+    "https://en.wikipedia.org/wiki/After_the_Love_Has_Gone",
+    "https://en.wikipedia.org/wiki/The_Long_Run_(album)",
+    "https://en.wikipedia.org/wiki/Escape_(The_Pi%C3%B1a_Colada_Song)",
+    "https://www.mixonline.com/?p=101399"
+   ],
+   "image": "media/eras/era3.webp"
+  },
+  {
+   "n": 4,
+   "name": "Satin Wake",
+   "years": "1980–81",
+   "from": 1980,
+   "to": 1981,
+   "essay": "Gaucho cost a dollar more than other records. In late 1980 MCA made it a test case for 'superstar pricing' at $9.98, and Steely Dan worried their fans would blame them. Becker and Fagen had used at least 42 session players over more than a year, and handed engineer Roger Nichols $150,000 of the budget to build Wendel, a drum machine that played the beat they wanted. Quincy Jones started Qwest Records with Warner Bros. in 1980, opened it with George Benson's Give Me the Night and signed his goddaughter Patti Austin. Jay Graydon spent 1981 producing Al Jarreau and writing a Benson single with Steve Lukather and Bill Champlin. At the February 1981 Grammys Robbie Dupree, whose hit sounded a lot like the Doobies, lost Best New Artist to Christopher Cross, who won all four general awards that night. By October Cross was at number one again with the theme to Arthur, a $7 million Dudley Moore comedy that made $95.5 million. The machines came in on both coasts. The Linn LM-1 went on sale in 1980 at $5,500, with no cymbal sounds, and Jeff Porcaro programmed one for Benson. In New York, Daryl Hall built a number one on a Roland preset called Rock 1. MTV switched on at 12:01 a.m. on 1 August 1981.",
+   "scene": {
+    "cities": [
+     "Los Angeles",
+     "Hollywood",
+     "Studio City",
+     "New York",
+     "Gloucestershire"
+    ],
+    "labels": [
+     "MCA",
+     "Qwest",
+     "Warner Bros.",
+     "Elektra",
+     "Columbia",
+     "Island",
+     "RCA"
+    ],
+    "gear": [
+     "Fender Rhodes",
+     "Linn LM-1 drum machine",
+     "Roland CompuRhythm",
+     "Wendel, Roger Nichols' custom drum machine",
+     "Minimoog",
+     "Prophet-5"
+    ],
+    "artifact": "Wendel, the drum machine Roger Nichols built for Steely Dan with $150,000 of the Gaucho budget, which got its own RIAA platinum record when the album sold a million."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gaucho_(album)",
+    "https://en.wikipedia.org/wiki/Qwest_Records",
+    "https://en.wikipedia.org/wiki/Turn_Your_Love_Around",
+    "https://en.wikipedia.org/wiki/Robbie_Dupree",
+    "https://en.wikipedia.org/wiki/Christopher_Cross",
+    "https://en.wikipedia.org/wiki/Arthur_(1981_film)",
+    "https://en.wikipedia.org/wiki/Linn_LM-1",
+    "https://www.mixonline.com/recording/classic-tracks/classic-tracks-hall-oates-i-cant-go-no-can-do-365614",
+    "https://en.wikipedia.org/wiki/MTV"
+   ],
+   "image": "media/eras/era4.webp"
+  },
+  {
+   "n": 5,
+   "name": "Last Light on the Water",
+   "years": "1982–83",
+   "from": 1982,
+   "to": 1983,
+   "essay": "By 1982 the session players who had spent six years making other people's records sound expensive were cashing in under their own names. Toto made Toto IV at Sunset Sound and Record One between June 1981 and January 1982, and on 23 February 1983, at the Shrine Auditorium, the band went home with six Grammys, Record and Album of the Year among them. The same people were across town at Westlake, where Quincy Jones spent April to November 1982 making Thriller on a $750,000 budget. Chicago left Columbia for Warner and handed David Foster the controls. The money was moving to pictures. MTV went on air at 12:01 a.m. on 1 August 1981, and Steve Barron shot the videos for 'Rosanna', 'Africa' and 'Billie Jean'. MTV only put 'Billie Jean' into rotation on 10 March 1983, after CBS Records boss Walter Yetnikoff threatened to pull every CBS video off the channel. The sound was moving as well. Donald Fagen cut The Nightfly on 3M digital recorders, the first CDs went on sale in Japan on 1 October 1982, and in 1983 Yamaha's $1,995 DX7 arrived with an electric piano preset that led some players to drop the Rhodes for it. By 'Yah Mo B There' the drums are a LinnDrum and the keyboards are a stack of synthesizers.",
+   "scene": {
+    "cities": [
+     "Los Angeles",
+     "New York",
+     "London"
+    ],
+    "labels": [
+     "Columbia",
+     "Warner Bros.",
+     "Epic",
+     "Full Moon",
+     "Qwest"
+    ],
+    "gear": [
+     "Yamaha CS-80",
+     "Yamaha GS-1",
+     "Fender Rhodes",
+     "Hohner Clavinet",
+     "3M digital multitrack",
+     "LinnDrum",
+     "Yamaha DX7"
+    ],
+    "artifact": "Steve Barron's video for 'Rosanna': a West Side Story street set, Cynthia Rhodes in a red dress, an uncredited Patrick Swayze among the dancers, and Mike Porcaro miming bass parts David Hungate had played, the session band's look as MTV wanted it."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Toto_IV",
+    "https://en.wikipedia.org/wiki/25th_Annual_Grammy_Awards",
+    "https://en.wikipedia.org/wiki/Thriller_(album)",
+    "https://en.wikipedia.org/wiki/Chicago_16",
+    "https://en.wikipedia.org/wiki/MTV",
+    "https://en.wikipedia.org/wiki/Billie_Jean",
+    "https://en.wikipedia.org/wiki/Rosanna_(song)",
+    "https://en.wikipedia.org/wiki/Africa_(Toto_song)",
+    "https://en.wikipedia.org/wiki/The_Nightfly",
+    "https://en.wikipedia.org/wiki/Compact_disc",
+    "https://en.wikipedia.org/wiki/Yamaha_DX7",
+    "https://en.wikipedia.org/wiki/LinnDrum",
+    "https://en.wikipedia.org/wiki/Yah_Mo_B_There"
+   ],
+   "image": "media/eras/era5.webp"
+  }
+ ],
+ "songs": [
+  "seals-crofts--summer-breeze",
+  "looking-glass--brandy",
+  "ace--how-long",
+  "daryl-hall-john-oates--sara-smile",
+  "boz-scaggs--lowdown",
+  "the-doobie-brothers--takin-it-to-the-streets",
+  "steely-dan--kid-charlemagne",
+  "firefall--you-are-the-woman",
+  "orleans--still-the-one",
+  "stephen-bishop--on-and-on",
+  "seals-crofts--get-closer",
+  "the-doobie-brothers--it-keeps-you-runnin",
+  "michael-franks--popsicle-toes",
+  "steely-dan--peg",
+  "steely-dan--deacon-blues",
+  "player--baby-come-back",
+  "paul-davis--i-go-crazy",
+  "the-doobie-brothers--what-a-fool-believes",
+  "bobby-caldwell--what-you-wont-do-for-love",
+  "the-doobie-brothers--minute-by-minute",
+  "pablo-cruise--love-will-find-a-way",
+  "carly-simon--you-belong-to-me",
+  "gino-vannelli--i-just-wanna-stop",
+  "little-river-band--reminiscing",
+  "ambrosia--how-much-i-feel",
+  "kenny-loggins--whenever-i-call-you-friend",
+  "toto--georgy-porgy",
+  "nicolette-larson--lotta-love",
+  "walter-egan--magnet-and-steel",
+  "gerry-rafferty--baker-street",
+  "christopher-cross--sailing",
+  "kenny-loggins--this-is-it",
+  "christopher-cross--ride-like-the-wind",
+  "earth-wind-fire--after-the-love-has-gone",
+  "little-river-band--cool-change",
+  "eagles--i-cant-tell-you-why",
+  "rickie-lee-jones--chuck-e-s-in-love",
+  "rupert-holmes--escape",
+  "robbie-dupree--steal-away",
+  "ambrosia--biggest-part-of-me",
+  "steely-dan--hey-nineteen",
+  "george-benson--give-me-the-night",
+  "grover-washington-jr-bill-withers--just-the-two-of-us",
+  "boz-scaggs--jojo",
+  "larsen-feiten-band--wholl-be-the-fool-tonight",
+  "steve-winwood--while-you-see-a-chance",
+  "al-jarreau--were-in-this-love-together",
+  "george-benson--turn-your-love-around",
+  "patti-austin-james-ingram--baby-come-to-me",
+  "christopher-cross--arthurs-theme",
+  "daryl-hall-john-oates--i-cant-go-for-that",
+  "toto--rosanna",
+  "michael-mcdonald--i-keep-forgettin",
+  "michael-jackson--human-nature",
+  "kenny-loggins--heart-to-heart",
+  "donald-fagen--i-g-y",
+  "chicago--hard-to-say-im-sorry",
+  "toto--i-wont-hold-you-back",
+  "toto--africa",
+  "james-ingram-michael-mcdonald--yah-mo-b-there"
+ ],
+ "pins": {
+  "the-doobie-brothers--what-a-fool-believes": {
+   "youtube": "exnHAdopRxA"
+  },
+  "christopher-cross--sailing": {
+   "youtube": "9PnXcP8ZI7M"
+  },
+  "steely-dan--peg": {
+   "youtube": "u_pt3khMRFs"
+  },
+  "kenny-loggins--this-is-it": {
+   "youtube": "VS52sEUqxMo"
+  },
+  "christopher-cross--ride-like-the-wind": {
+   "youtube": "kA9uaBqvRtA"
+  },
+  "toto--rosanna": {
+   "youtube": "qmOLtTGvsbM"
+  },
+  "boz-scaggs--lowdown": {
+   "youtube": "I-hKBmTAADo"
+  },
+  "robbie-dupree--steal-away": {
+   "youtube": "jYHeDNc237M"
+  },
+  "michael-mcdonald--i-keep-forgettin": {
+   "youtube": "9cw5Wueu2yM"
+  },
+  "steely-dan--deacon-blues": {
+   "youtube": "ICK6e9WK2A8"
+  },
+  "bobby-caldwell--what-you-wont-do-for-love": {
+   "youtube": "n9DmdAwUbxc"
+  },
+  "michael-jackson--human-nature": {
+   "youtube": "ElN_4vUvTPs"
+  },
+  "ambrosia--biggest-part-of-me": {
+   "youtube": "RuMnXi7L7wE"
+  },
+  "the-doobie-brothers--minute-by-minute": {
+   "youtube": "Rq-7NgH-hcs"
+  },
+  "player--baby-come-back": {
+   "youtube": "BVXmy22EoLA"
+  },
+  "the-doobie-brothers--takin-it-to-the-streets": {
+   "youtube": "ov77YDm9FrI"
+  },
+  "steely-dan--hey-nineteen": {
+   "youtube": "oJ11Vq6N7rk"
+  },
+  "george-benson--give-me-the-night": {
+   "youtube": "Omnpu8mzX4c"
+  },
+  "earth-wind-fire--after-the-love-has-gone": {
+   "youtube": "CUCLNPOjPZw"
+  },
+  "grover-washington-jr-bill-withers--just-the-two-of-us": {
+   "youtube": "v8oqbWrP1QY"
+  },
+  "pablo-cruise--love-will-find-a-way": {
+   "youtube": "Kj4-_-iq1A8"
+  },
+  "little-river-band--cool-change": {
+   "youtube": "maeFN1oyF0k"
+  },
+  "carly-simon--you-belong-to-me": {
+   "youtube": "S6BalhjGfjM"
+  },
+  "kenny-loggins--heart-to-heart": {
+   "youtube": "_MLxCgyo0uA"
+  },
+  "donald-fagen--i-g-y": {
+   "youtube": "Ueivjr3f8xg"
+  },
+  "gino-vannelli--i-just-wanna-stop": {
+   "youtube": "rpVDgaMj4hU"
+  },
+  "little-river-band--reminiscing": {
+   "youtube": "9QYk1E8zdxU"
+  },
+  "ambrosia--how-much-i-feel": {
+   "youtube": "Ewg1LTLBGkE"
+  },
+  "al-jarreau--were-in-this-love-together": {
+   "youtube": "qFnSA-V4iZc"
+  },
+  "george-benson--turn-your-love-around": {
+   "youtube": "gA_kOJP94Hc"
+  },
+  "patti-austin-james-ingram--baby-come-to-me": {
+   "youtube": "fbPb9_KkI9I"
+  },
+  "chicago--hard-to-say-im-sorry": {
+   "youtube": "EORSLz0_BRU"
+  },
+  "eagles--i-cant-tell-you-why": {
+   "youtube": "Odcn6qk94bs"
+  },
+  "christopher-cross--arthurs-theme": {
+   "youtube": "wJ6zs2WSCjk"
+  },
+  "daryl-hall-john-oates--i-cant-go-for-that": {
+   "youtube": "ccenFp_3kq8"
+  },
+  "daryl-hall-john-oates--sara-smile": {
+   "youtube": "dYEpFJhuu1E"
+  },
+  "james-ingram-michael-mcdonald--yah-mo-b-there": {
+   "youtube": "HQ1nvhLf1EU"
+  },
+  "kenny-loggins--whenever-i-call-you-friend": {
+   "youtube": "cmR6xV-OJBI"
+  },
+  "steely-dan--kid-charlemagne": {
+   "youtube": "b00h8iKaklQ"
+  },
+  "toto--georgy-porgy": {
+   "youtube": "EWIgEtkE3GA"
+  },
+  "nicolette-larson--lotta-love": {
+   "youtube": "vpFfjWdhROU"
+  },
+  "firefall--you-are-the-woman": {
+   "youtube": "VdUBIatWH1c"
+  },
+  "orleans--still-the-one": {
+   "youtube": "pvUjhYnCiIk"
+  },
+  "stephen-bishop--on-and-on": {
+   "youtube": "oRrlRbGT-LU"
+  },
+  "paul-davis--i-go-crazy": {
+   "youtube": "nhu3orNqZu4"
+  },
+  "seals-crofts--get-closer": {
+   "youtube": "rBUHdy8g8S4"
+  },
+  "rickie-lee-jones--chuck-e-s-in-love": {
+   "youtube": "OeWKfVkNla4"
+  },
+  "the-doobie-brothers--it-keeps-you-runnin": {
+   "youtube": "BSG64FsSxG4"
+  },
+  "toto--i-wont-hold-you-back": {
+   "youtube": "gJLja0qL2hE"
+  },
+  "walter-egan--magnet-and-steel": {
+   "youtube": "IKPz7_3SyiA"
+  },
+  "toto--africa": {
+   "youtube": "FTQbiNvZqaY"
+  },
+  "rupert-holmes--escape": {
+   "youtube": "FXG_I_tf_i4"
+  },
+  "gerry-rafferty--baker-street": {
+   "youtube": "Fo6aKnRnBxM"
+  },
+  "boz-scaggs--jojo": {
+   "youtube": "xi-GDD8yFyo"
+  },
+  "larsen-feiten-band--wholl-be-the-fool-tonight": {
+   "youtube": "OHJ63LUqk50"
+  },
+  "seals-crofts--summer-breeze": {
+   "youtube": "mzzapnadq9Y"
+  },
+  "looking-glass--brandy": {
+   "youtube": "DVx8L7a3MuE"
+  },
+  "ace--how-long": {
+   "youtube": "gBMnGYCTBxE"
+  },
+  "steve-winwood--while-you-see-a-chance": {
+   "youtube": "0j6g_uUhH2c"
+  },
+  "michael-franks--popsicle-toes": {
+   "youtube": "982_dWnwsIg"
+  }
+ },
+ "threads": [
+  {
+   "from": "seals-crofts--summer-breeze",
+   "to": "seals-crofts--get-closer",
+   "kind": "producer",
+   "note": "Same duo, same producer, Louie Shelton, four years on."
+  },
+  {
+   "from": "seals-crofts--summer-breeze",
+   "to": "boz-scaggs--lowdown",
+   "kind": "session",
+   "note": "Louie Shelton produced this and played the guitar solo on 'Lowdown'."
+  },
+  {
+   "from": "seals-crofts--summer-breeze",
+   "to": "orleans--still-the-one",
+   "kind": "city",
+   "note": "Both cut at the Sound Factory in Hollywood."
+  },
+  {
+   "from": "daryl-hall-john-oates--sara-smile",
+   "to": "daryl-hall-john-oates--i-cant-go-for-that",
+   "kind": "singer",
+   "note": "Same duo six years on, when their soul grew a drum machine."
+  },
+  {
+   "from": "boz-scaggs--lowdown",
+   "to": "boz-scaggs--jojo",
+   "kind": "singer",
+   "note": "Boz Scaggs again, four years later."
+  },
+  {
+   "from": "boz-scaggs--lowdown",
+   "to": "toto--georgy-porgy",
+   "kind": "session",
+   "note": "Paich, Porcaro and Hungate, now as Toto."
+  },
+  {
+   "from": "boz-scaggs--lowdown",
+   "to": "toto--rosanna",
+   "kind": "session",
+   "note": "Paich and Porcaro, Toto at full size."
+  },
+  {
+   "from": "boz-scaggs--lowdown",
+   "to": "seals-crofts--get-closer",
+   "kind": "singer",
+   "note": "Carolyn Willis sings backup here and the featured part on 'Get Closer', the same year."
+  },
+  {
+   "from": "boz-scaggs--lowdown",
+   "to": "seals-crofts--summer-breeze",
+   "kind": "session",
+   "note": "Louie Shelton, who plays the solo here, produced 'Summer Breeze'."
+  },
+  {
+   "from": "the-doobie-brothers--takin-it-to-the-streets",
+   "to": "the-doobie-brothers--it-keeps-you-runnin",
+   "kind": "singer",
+   "note": "Same album, McDonald's song and voice again."
+  },
+  {
+   "from": "the-doobie-brothers--takin-it-to-the-streets",
+   "to": "steely-dan--kid-charlemagne",
+   "kind": "singer",
+   "note": "McDonald sings backup on 'Kid Charlemagne' the same year."
+  },
+  {
+   "from": "the-doobie-brothers--takin-it-to-the-streets",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "singer",
+   "note": "McDonald and the Doobies two years on, at the top."
+  },
+  {
+   "from": "the-doobie-brothers--takin-it-to-the-streets",
+   "to": "michael-mcdonald--i-keep-forgettin",
+   "kind": "singer",
+   "note": "McDonald solo."
+  },
+  {
+   "from": "steely-dan--kid-charlemagne",
+   "to": "the-doobie-brothers--takin-it-to-the-streets",
+   "kind": "singer",
+   "note": "McDonald, backup here and lead there, in the same year."
+  },
+  {
+   "from": "steely-dan--kid-charlemagne",
+   "to": "michael-franks--popsicle-toes",
+   "kind": "session",
+   "note": "Larry Carlton plays guitar on The Art of Tea."
+  },
+  {
+   "from": "steely-dan--kid-charlemagne",
+   "to": "steely-dan--peg",
+   "kind": "producer",
+   "note": "Steely Dan and Gary Katz, a year later on Aja."
+  },
+  {
+   "from": "steely-dan--kid-charlemagne",
+   "to": "stephen-bishop--on-and-on",
+   "kind": "label",
+   "note": "Both on ABC Records in 1976."
+  },
+  {
+   "from": "orleans--still-the-one",
+   "to": "seals-crofts--summer-breeze",
+   "kind": "city",
+   "note": "Both cut at the Sound Factory in Hollywood."
+  },
+  {
+   "from": "stephen-bishop--on-and-on",
+   "to": "steely-dan--kid-charlemagne",
+   "kind": "label",
+   "note": "Both on ABC Records in 1976."
+  },
+  {
+   "from": "seals-crofts--get-closer",
+   "to": "seals-crofts--summer-breeze",
+   "kind": "producer",
+   "note": "Same duo, same producer, Louie Shelton."
+  },
+  {
+   "from": "seals-crofts--get-closer",
+   "to": "boz-scaggs--lowdown",
+   "kind": "singer",
+   "note": "Carolyn Willis also sings backup on 'Lowdown'."
+  },
+  {
+   "from": "the-doobie-brothers--it-keeps-you-runnin",
+   "to": "the-doobie-brothers--takin-it-to-the-streets",
+   "kind": "singer",
+   "note": "Same album, McDonald writing and singing."
+  },
+  {
+   "from": "the-doobie-brothers--it-keeps-you-runnin",
+   "to": "carly-simon--you-belong-to-me",
+   "kind": "songwriter",
+   "note": "Carly Simon, who covered this, co-wrote 'You Belong to Me' with McDonald."
+  },
+  {
+   "from": "the-doobie-brothers--it-keeps-you-runnin",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "singer",
+   "note": "McDonald and the Doobies at their peak."
+  },
+  {
+   "from": "michael-franks--popsicle-toes",
+   "to": "steely-dan--kid-charlemagne",
+   "kind": "session",
+   "note": "Larry Carlton on guitar here, and on the solo in 'Kid Charlemagne'."
+  },
+  {
+   "from": "steely-dan--peg",
+   "to": "steely-dan--deacon-blues",
+   "kind": "producer",
+   "note": "Same album, both produced by Gary Katz."
+  },
+  {
+   "from": "steely-dan--peg",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "singer",
+   "note": "McDonald's backing stack here, his own lead there."
+  },
+  {
+   "from": "steely-dan--peg",
+   "to": "earth-wind-fire--after-the-love-has-gone",
+   "kind": "session",
+   "note": "Jay Graydon plays the Peg solo and co-wrote After the Love Has Gone."
+  },
+  {
+   "from": "steely-dan--peg",
+   "to": "al-jarreau--were-in-this-love-together",
+   "kind": "producer",
+   "note": "Graydon went on to produce Al Jarreau's We're in This Love Together."
+  },
+  {
+   "from": "steely-dan--peg",
+   "to": "gino-vannelli--i-just-wanna-stop",
+   "kind": "session",
+   "note": "Victor Feldman plays percussion on Peg and vibes on Vannelli's Brother to Brother."
+  },
+  {
+   "from": "steely-dan--peg",
+   "to": "steely-dan--hey-nineteen",
+   "kind": "songwriter",
+   "note": "Becker and Fagen again, three years later, on Gaucho."
+  },
+  {
+   "from": "steely-dan--deacon-blues",
+   "to": "steely-dan--peg",
+   "kind": "producer",
+   "note": "Same album, same producer, Gary Katz."
+  },
+  {
+   "from": "steely-dan--deacon-blues",
+   "to": "steely-dan--kid-charlemagne",
+   "kind": "session",
+   "note": "Larry Carlton, who played the Kid Charlemagne solo, opens this one."
+  },
+  {
+   "from": "steely-dan--deacon-blues",
+   "to": "gino-vannelli--i-just-wanna-stop",
+   "kind": "session",
+   "note": "Victor Feldman on electric piano here and vibes on Brother to Brother."
+  },
+  {
+   "from": "steely-dan--deacon-blues",
+   "to": "donald-fagen--i-g-y",
+   "kind": "songwriter",
+   "note": "Fagen's suburban jazz dreamer grows into The Nightfly."
+  },
+  {
+   "from": "player--baby-come-back",
+   "to": "gino-vannelli--i-just-wanna-stop",
+   "kind": "influence",
+   "note": "Player opened for Gino Vannelli on their first tour, autumn 1977."
+  },
+  {
+   "from": "player--baby-come-back",
+   "to": "boz-scaggs--lowdown",
+   "kind": "influence",
+   "note": "Then they opened for Boz Scaggs."
+  },
+  {
+   "from": "player--baby-come-back",
+   "to": "kenny-loggins--whenever-i-call-you-friend",
+   "kind": "influence",
+   "note": "In 1978 they opened for Kenny Loggins."
+  },
+  {
+   "from": "the-doobie-brothers--what-a-fool-believes",
+   "to": "kenny-loggins--whenever-i-call-you-friend",
+   "kind": "songwriter",
+   "note": "Loggins co-wrote it and released it first on Nightwatch, the album with Whenever I Call You \"Friend\"."
+  },
+  {
+   "from": "the-doobie-brothers--what-a-fool-believes",
+   "to": "the-doobie-brothers--minute-by-minute",
+   "kind": "producer",
+   "note": "Same album, same Templeman sessions in North Hollywood."
+  },
+  {
+   "from": "the-doobie-brothers--what-a-fool-believes",
+   "to": "nicolette-larson--lotta-love",
+   "kind": "producer",
+   "note": "Templeman produced Nicolette Larson's Lotta Love the same year, also at Warner Bros. studios."
+  },
+  {
+   "from": "the-doobie-brothers--what-a-fool-believes",
+   "to": "kenny-loggins--this-is-it",
+   "kind": "songwriter",
+   "note": "McDonald and Loggins wrote together again on This Is It."
+  },
+  {
+   "from": "the-doobie-brothers--what-a-fool-believes",
+   "to": "the-doobie-brothers--takin-it-to-the-streets",
+   "kind": "singer",
+   "note": "McDonald's first Doobies lead came two years earlier."
+  },
+  {
+   "from": "the-doobie-brothers--what-a-fool-believes",
+   "to": "carly-simon--you-belong-to-me",
+   "kind": "songwriter",
+   "note": "McDonald wrote the music for You Belong to Me."
+  },
+  {
+   "from": "the-doobie-brothers--minute-by-minute",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "producer",
+   "note": "Same album, same Templeman sessions."
+  },
+  {
+   "from": "the-doobie-brothers--minute-by-minute",
+   "to": "nicolette-larson--lotta-love",
+   "kind": "singer",
+   "note": "Nicolette Larson sings on the B-side, 'Sweet Feelin''."
+  },
+  {
+   "from": "the-doobie-brothers--minute-by-minute",
+   "to": "the-doobie-brothers--it-keeps-you-runnin",
+   "kind": "singer",
+   "note": "McDonald's Rhodes-and-shuffle Doobies, two years on."
+  },
+  {
+   "from": "the-doobie-brothers--minute-by-minute",
+   "to": "steely-dan--deacon-blues",
+   "kind": "session",
+   "note": "Larry Carlton later covered it."
+  },
+  {
+   "from": "pablo-cruise--love-will-find-a-way",
+   "to": "toto--georgy-porgy",
+   "kind": "session",
+   "note": "Steve Porcaro plays synths on Worlds Away and Toto's debut; Mike Porcaro joined Toto in 1982."
+  },
+  {
+   "from": "pablo-cruise--love-will-find-a-way",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "songwriter",
+   "note": "McDonald co-wrote a track on Worlds Away."
+  },
+  {
+   "from": "carly-simon--you-belong-to-me",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "songwriter",
+   "note": "McDonald wrote the music."
+  },
+  {
+   "from": "carly-simon--you-belong-to-me",
+   "to": "steely-dan--peg",
+   "kind": "city",
+   "note": "Another New York record in an LA genre, like Peg."
+  },
+  {
+   "from": "carly-simon--you-belong-to-me",
+   "to": "toto--georgy-porgy",
+   "kind": "session",
+   "note": "David Paich arranged the strings on the Doobies' first version."
+  },
+  {
+   "from": "gino-vannelli--i-just-wanna-stop",
+   "to": "player--baby-come-back",
+   "kind": "influence",
+   "note": "Player opened for Vannelli in autumn 1977."
+  },
+  {
+   "from": "gino-vannelli--i-just-wanna-stop",
+   "to": "steely-dan--deacon-blues",
+   "kind": "session",
+   "note": "Victor Feldman plays vibes on Brother to Brother and electric piano on Deacon Blues."
+  },
+  {
+   "from": "little-river-band--reminiscing",
+   "to": "little-river-band--cool-change",
+   "kind": "label",
+   "note": "Same band a year later, Cool Change on Capitol in the US."
+  },
+  {
+   "from": "ambrosia--how-much-i-feel",
+   "to": "ambrosia--biggest-part-of-me",
+   "kind": "singer",
+   "note": "Pack sings lead again on Biggest Part of Me."
+  },
+  {
+   "from": "ambrosia--how-much-i-feel",
+   "to": "nicolette-larson--lotta-love",
+   "kind": "session",
+   "note": "Jimmie Haskell wrote strings for both."
+  },
+  {
+   "from": "kenny-loggins--whenever-i-call-you-friend",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "songwriter",
+   "note": "Same album carries Loggins's version of What a Fool Believes."
+  },
+  {
+   "from": "kenny-loggins--whenever-i-call-you-friend",
+   "to": "walter-egan--magnet-and-steel",
+   "kind": "singer",
+   "note": "Stevie Nicks sings here and on Magnet and Steel."
+  },
+  {
+   "from": "kenny-loggins--whenever-i-call-you-friend",
+   "to": "kenny-loggins--this-is-it",
+   "kind": "singer",
+   "note": "Loggins and McDonald again on This Is It."
+  },
+  {
+   "from": "toto--georgy-porgy",
+   "to": "boz-scaggs--lowdown",
+   "kind": "session",
+   "note": "Paich and Jeff Porcaro played on Lowdown."
+  },
+  {
+   "from": "toto--georgy-porgy",
+   "to": "toto--rosanna",
+   "kind": "session",
+   "note": "Same band, four years on."
+  },
+  {
+   "from": "toto--georgy-porgy",
+   "to": "pablo-cruise--love-will-find-a-way",
+   "kind": "session",
+   "note": "Steve and Mike Porcaro on Pablo Cruise's Worlds Away the same year."
+  },
+  {
+   "from": "toto--georgy-porgy",
+   "to": "nicolette-larson--lotta-love",
+   "kind": "session",
+   "note": "Jim Horn and Chuck Findley also on Nicolette Larson's album."
+  },
+  {
+   "from": "toto--georgy-porgy",
+   "to": "michael-jackson--human-nature",
+   "kind": "songwriter",
+   "note": "Steve Porcaro later wrote Human Nature."
+  },
+  {
+   "from": "nicolette-larson--lotta-love",
+   "to": "the-doobie-brothers--minute-by-minute",
+   "kind": "singer",
+   "note": "Larson duets with the Doobies on 'Sweet Feelin'', the B-side of Minute by Minute."
+  },
+  {
+   "from": "nicolette-larson--lotta-love",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "producer",
+   "note": "Ted Templeman produced both, at Warner Bros. studios."
+  },
+  {
+   "from": "nicolette-larson--lotta-love",
+   "to": "ambrosia--how-much-i-feel",
+   "kind": "session",
+   "note": "Jimmie Haskell's strings on both."
+  },
+  {
+   "from": "walter-egan--magnet-and-steel",
+   "to": "kenny-loggins--whenever-i-call-you-friend",
+   "kind": "singer",
+   "note": "Stevie Nicks sings on both."
+  },
+  {
+   "from": "walter-egan--magnet-and-steel",
+   "to": "pablo-cruise--love-will-find-a-way",
+   "kind": "city",
+   "note": "Dreams was written in Sausalito, where Pablo Cruise cut part of Worlds Away."
+  },
+  {
+   "from": "christopher-cross--sailing",
+   "to": "christopher-cross--ride-like-the-wind",
+   "kind": "producer",
+   "note": "Same album, same producer (Michael Omartian), same band of Austin friends."
+  },
+  {
+   "from": "christopher-cross--sailing",
+   "to": "christopher-cross--arthurs-theme",
+   "kind": "singer",
+   "note": "Cross again, two years later, with an Oscar to go with the Grammys."
+  },
+  {
+   "from": "christopher-cross--sailing",
+   "to": "rickie-lee-jones--chuck-e-s-in-love",
+   "kind": "session",
+   "note": "Victor Feldman plays percussion here and vibes on Chuck E.'s in Love."
+  },
+  {
+   "from": "kenny-loggins--this-is-it",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "songwriter",
+   "note": "Loggins and McDonald wrote both."
+  },
+  {
+   "from": "kenny-loggins--this-is-it",
+   "to": "kenny-loggins--heart-to-heart",
+   "kind": "songwriter",
+   "note": "Loggins and McDonald again in 1982, with David Foster."
+  },
+  {
+   "from": "kenny-loggins--this-is-it",
+   "to": "kenny-loggins--whenever-i-call-you-friend",
+   "kind": "singer",
+   "note": "Loggins's previous hit, the duet with Stevie Nicks."
+  },
+  {
+   "from": "kenny-loggins--this-is-it",
+   "to": "christopher-cross--ride-like-the-wind",
+   "kind": "singer",
+   "note": "McDonald's other guest vocal in this era."
+  },
+  {
+   "from": "christopher-cross--ride-like-the-wind",
+   "to": "christopher-cross--sailing",
+   "kind": "producer",
+   "note": "Same album, same producer, same Austin rhythm section."
+  },
+  {
+   "from": "christopher-cross--ride-like-the-wind",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "singer",
+   "note": "McDonald, the year his Doobie Brothers record won Record of the Year."
+  },
+  {
+   "from": "christopher-cross--ride-like-the-wind",
+   "to": "michael-mcdonald--i-keep-forgettin",
+   "kind": "singer",
+   "note": "McDonald's own solo hit three years later."
+  },
+  {
+   "from": "christopher-cross--ride-like-the-wind",
+   "to": "rickie-lee-jones--chuck-e-s-in-love",
+   "kind": "session",
+   "note": "Trumpeter Chuck Findley plays in the horn sections on both."
+  },
+  {
+   "from": "earth-wind-fire--after-the-love-has-gone",
+   "to": "steely-dan--peg",
+   "kind": "songwriter",
+   "note": "Jay Graydon co-wrote this; two years earlier he played the guitar solo on Peg."
+  },
+  {
+   "from": "earth-wind-fire--after-the-love-has-gone",
+   "to": "chicago--hard-to-say-im-sorry",
+   "kind": "songwriter",
+   "note": "Champlin joined Chicago, and Foster produced and co-wrote Hard to Say I'm Sorry, Champlin's first single with the band."
+  },
+  {
+   "from": "earth-wind-fire--after-the-love-has-gone",
+   "to": "toto--rosanna",
+   "kind": "session",
+   "note": "Steve Lukather plays guitar on the I Am album."
+  },
+  {
+   "from": "earth-wind-fire--after-the-love-has-gone",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "influence",
+   "note": "The record that beat it for Record and Song of the Year."
+  },
+  {
+   "from": "little-river-band--cool-change",
+   "to": "little-river-band--reminiscing",
+   "kind": "songwriter",
+   "note": "Same band; Graeham Goble wrote Reminiscing, and APRA honoured both songs in 2001."
+  },
+  {
+   "from": "eagles--i-cant-tell-you-why",
+   "to": "christopher-cross--sailing",
+   "kind": "session",
+   "note": "Don Henley sang backing vocals on Christopher Cross's debut, the album Sailing is from."
+  },
+  {
+   "from": "rickie-lee-jones--chuck-e-s-in-love",
+   "to": "larsen-feiten-band--wholl-be-the-fool-tonight",
+   "kind": "session",
+   "note": "Neil Larsen and Buzzy Feiten, the Larsen-Feiten Band, are the keyboard and guitar on this track."
+  },
+  {
+   "from": "rickie-lee-jones--chuck-e-s-in-love",
+   "to": "christopher-cross--ride-like-the-wind",
+   "kind": "session",
+   "note": "Chuck Findley's trumpet is on both."
+  },
+  {
+   "from": "rickie-lee-jones--chuck-e-s-in-love",
+   "to": "christopher-cross--sailing",
+   "kind": "session",
+   "note": "Victor Feldman, here on vibes, is the percussionist on Sailing."
+  },
+  {
+   "from": "robbie-dupree--steal-away",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "influence",
+   "note": "The song everyone says it sounds like, and Dupree admitted the Doobies' sound influenced him."
+  },
+  {
+   "from": "ambrosia--biggest-part-of-me",
+   "to": "ambrosia--how-much-i-feel",
+   "kind": "singer",
+   "note": "Same band, same Pack lead, two years earlier."
+  },
+  {
+   "from": "ambrosia--biggest-part-of-me",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "influence",
+   "note": "Pack phoned McDonald for a second opinion on the lyric."
+  },
+  {
+   "from": "ambrosia--biggest-part-of-me",
+   "to": "christopher-cross--arthurs-theme",
+   "kind": "session",
+   "note": "Ernie Watts plays sax on both."
+  },
+  {
+   "from": "steely-dan--hey-nineteen",
+   "to": "steely-dan--peg",
+   "kind": "producer",
+   "note": "Gary Katz produced both, and they share the band's longest Hot 100 run, 19 weeks."
+  },
+  {
+   "from": "steely-dan--hey-nineteen",
+   "to": "donald-fagen--i-g-y",
+   "kind": "singer",
+   "note": "Fagen's next record after the split was The Nightfly."
+  },
+  {
+   "from": "steely-dan--hey-nineteen",
+   "to": "grover-washington-jr-bill-withers--just-the-two-of-us",
+   "kind": "session",
+   "note": "Steve Gadd plays percussion here and drums on Just the Two of Us."
+  },
+  {
+   "from": "george-benson--give-me-the-night",
+   "to": "patti-austin-james-ingram--baby-come-to-me",
+   "kind": "songwriter",
+   "note": "Temperton wrote both, Quincy Jones produced both, and Patti Austin sings on both."
+  },
+  {
+   "from": "george-benson--give-me-the-night",
+   "to": "george-benson--turn-your-love-around",
+   "kind": "singer",
+   "note": "Benson again, a year later, with the Toto crowd instead of Quincy's."
+  },
+  {
+   "from": "george-benson--give-me-the-night",
+   "to": "michael-jackson--human-nature",
+   "kind": "producer",
+   "note": "Quincy Jones produced both, two years apart."
+  },
+  {
+   "from": "george-benson--give-me-the-night",
+   "to": "grover-washington-jr-bill-withers--just-the-two-of-us",
+   "kind": "session",
+   "note": "Richard Tee plays on both."
+  },
+  {
+   "from": "grover-washington-jr-bill-withers--just-the-two-of-us",
+   "to": "steely-dan--hey-nineteen",
+   "kind": "session",
+   "note": "Steve Gadd plays on both."
+  },
+  {
+   "from": "grover-washington-jr-bill-withers--just-the-two-of-us",
+   "to": "george-benson--give-me-the-night",
+   "kind": "session",
+   "note": "Richard Tee, on Rhodes here and synth bass on Give Me the Night."
+  },
+  {
+   "from": "grover-washington-jr-bill-withers--just-the-two-of-us",
+   "to": "patti-austin-james-ingram--baby-come-to-me",
+   "kind": "session",
+   "note": "Tee again, on the Rhodes for Baby, Come to Me."
+  },
+  {
+   "from": "boz-scaggs--jojo",
+   "to": "boz-scaggs--lowdown",
+   "kind": "singer",
+   "note": "Scaggs four years after Lowdown, with many of the same players."
+  },
+  {
+   "from": "boz-scaggs--jojo",
+   "to": "toto--rosanna",
+   "kind": "session",
+   "note": "Porcaro and Lukather, two years before Rosanna."
+  },
+  {
+   "from": "boz-scaggs--jojo",
+   "to": "chicago--hard-to-say-im-sorry",
+   "kind": "producer",
+   "note": "Foster's keyboards and strings, before he rebuilt Chicago."
+  },
+  {
+   "from": "larsen-feiten-band--wholl-be-the-fool-tonight",
+   "to": "al-jarreau--were-in-this-love-together",
+   "kind": "songwriter",
+   "note": "Keith Stegall says We're in This Love Together was meant for this album and got handed to Jarreau by mistake."
+  },
+  {
+   "from": "larsen-feiten-band--wholl-be-the-fool-tonight",
+   "to": "george-benson--give-me-the-night",
+   "kind": "session",
+   "note": "Kim Hutchcroft and Larry Williams play saxes on both."
+  },
+  {
+   "from": "larsen-feiten-band--wholl-be-the-fool-tonight",
+   "to": "george-benson--turn-your-love-around",
+   "kind": "session",
+   "note": "Chuck Findley and Bill Reichenbach play horns on both."
+  },
+  {
+   "from": "steve-winwood--while-you-see-a-chance",
+   "to": "george-benson--turn-your-love-around",
+   "kind": "influence",
+   "note": "Arc of a Diver lists a Linn LM-1, the same new drum machine Porcaro programmed for Turn Your Love Around."
+  },
+  {
+   "from": "al-jarreau--were-in-this-love-together",
+   "to": "george-benson--turn-your-love-around",
+   "kind": "producer",
+   "note": "Graydon produced both; Lukather plays on this and co-wrote that."
+  },
+  {
+   "from": "al-jarreau--were-in-this-love-together",
+   "to": "larsen-feiten-band--wholl-be-the-fool-tonight",
+   "kind": "songwriter",
+   "note": "The song was first meant for Larsen-Feiten."
+  },
+  {
+   "from": "al-jarreau--were-in-this-love-together",
+   "to": "christopher-cross--arthurs-theme",
+   "kind": "session",
+   "note": "Michael Omartian on keys for both."
+  },
+  {
+   "from": "al-jarreau--were-in-this-love-together",
+   "to": "steely-dan--hey-nineteen",
+   "kind": "session",
+   "note": "Steve Gadd on both."
+  },
+  {
+   "from": "george-benson--turn-your-love-around",
+   "to": "george-benson--give-me-the-night",
+   "kind": "singer",
+   "note": "Benson a year earlier with Quincy Jones."
+  },
+  {
+   "from": "george-benson--turn-your-love-around",
+   "to": "al-jarreau--were-in-this-love-together",
+   "kind": "producer",
+   "note": "Graydon produced both."
+  },
+  {
+   "from": "george-benson--turn-your-love-around",
+   "to": "toto--rosanna",
+   "kind": "session",
+   "note": "Porcaro, Paich and Lukather, a few months before Toto IV."
+  },
+  {
+   "from": "george-benson--turn-your-love-around",
+   "to": "chicago--hard-to-say-im-sorry",
+   "kind": "songwriter",
+   "note": "Bill Champlin of Chicago co-wrote this and sings backup on it."
+  },
+  {
+   "from": "patti-austin-james-ingram--baby-come-to-me",
+   "to": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "kind": "singer",
+   "note": "Ingram and McDonald together again, with Quincy producing."
+  },
+  {
+   "from": "patti-austin-james-ingram--baby-come-to-me",
+   "to": "george-benson--give-me-the-night",
+   "kind": "songwriter",
+   "note": "Temperton song, Quincy production, Austin vocals."
+  },
+  {
+   "from": "patti-austin-james-ingram--baby-come-to-me",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "singer",
+   "note": "McDonald on backing vocals."
+  },
+  {
+   "from": "christopher-cross--arthurs-theme",
+   "to": "christopher-cross--sailing",
+   "kind": "singer",
+   "note": "Cross's first number one, two years earlier."
+  },
+  {
+   "from": "christopher-cross--arthurs-theme",
+   "to": "toto--rosanna",
+   "kind": "session",
+   "note": "Porcaro, Lukather and Hungate of Toto."
+  },
+  {
+   "from": "christopher-cross--arthurs-theme",
+   "to": "al-jarreau--were-in-this-love-together",
+   "kind": "session",
+   "note": "Michael Omartian on keys for both."
+  },
+  {
+   "from": "christopher-cross--arthurs-theme",
+   "to": "ambrosia--biggest-part-of-me",
+   "kind": "session",
+   "note": "Ernie Watts on sax."
+  },
+  {
+   "from": "daryl-hall-john-oates--i-cant-go-for-that",
+   "to": "daryl-hall-john-oates--sara-smile",
+   "kind": "singer",
+   "note": "Hall & Oates six years earlier, the other song the Purist objected to."
+  },
+  {
+   "from": "daryl-hall-john-oates--i-cant-go-for-that",
+   "to": "michael-jackson--human-nature",
+   "kind": "influence",
+   "note": "Jackson told Hall he took the Billie Jean bass line from them, and Billie Jean is on Thriller with Human Nature."
+  },
+  {
+   "from": "toto--rosanna",
+   "to": "boz-scaggs--lowdown",
+   "kind": "session",
+   "note": "Paich and Jeff Porcaro again, six years after 'Lowdown'."
+  },
+  {
+   "from": "toto--rosanna",
+   "to": "toto--georgy-porgy",
+   "kind": "session",
+   "note": "Same band, four years after 'Georgy Porgy'."
+  },
+  {
+   "from": "toto--rosanna",
+   "to": "chicago--hard-to-say-im-sorry",
+   "kind": "session",
+   "note": "Chicago's trombonist Jimmy Pankow plays in the horn section here; three of Toto play on 'Hard to Say I'm Sorry'."
+  },
+  {
+   "from": "toto--rosanna",
+   "to": "toto--africa",
+   "kind": "producer",
+   "note": "Same album, and Steve Barron directed both videos."
+  },
+  {
+   "from": "toto--rosanna",
+   "to": "toto--i-wont-hold-you-back",
+   "kind": "producer",
+   "note": "Same album, Toto IV."
+  },
+  {
+   "from": "michael-mcdonald--i-keep-forgettin",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "singer",
+   "note": "McDonald's first solo single after 'What a Fool Believes' and the Doobies."
+  },
+  {
+   "from": "michael-mcdonald--i-keep-forgettin",
+   "to": "toto--rosanna",
+   "kind": "session",
+   "note": "Lukather and Jeff Porcaro play on both."
+  },
+  {
+   "from": "michael-mcdonald--i-keep-forgettin",
+   "to": "donald-fagen--i-g-y",
+   "kind": "session",
+   "note": "Greg Phillinganes plays on both."
+  },
+  {
+   "from": "michael-mcdonald--i-keep-forgettin",
+   "to": "kenny-loggins--heart-to-heart",
+   "kind": "singer",
+   "note": "McDonald again, three months later, on Kenny Loggins's record."
+  },
+  {
+   "from": "michael-mcdonald--i-keep-forgettin",
+   "to": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "kind": "singer",
+   "note": "McDonald again, duetting with James Ingram."
+  },
+  {
+   "from": "michael-jackson--human-nature",
+   "to": "toto--rosanna",
+   "kind": "session",
+   "note": "Toto as Jackson's backing band: both Porcaros, Paich and Lukather."
+  },
+  {
+   "from": "michael-jackson--human-nature",
+   "to": "toto--africa",
+   "kind": "session",
+   "note": "Porcaro made the demo while 'Africa' was being mixed."
+  },
+  {
+   "from": "michael-jackson--human-nature",
+   "to": "george-benson--give-me-the-night",
+   "kind": "producer",
+   "note": "Quincy Jones produced both."
+  },
+  {
+   "from": "michael-jackson--human-nature",
+   "to": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "kind": "producer",
+   "note": "Quincy Jones again, a year on."
+  },
+  {
+   "from": "kenny-loggins--heart-to-heart",
+   "to": "kenny-loggins--this-is-it",
+   "kind": "songwriter",
+   "note": "Loggins and McDonald writing together again, after 'This Is It'."
+  },
+  {
+   "from": "kenny-loggins--heart-to-heart",
+   "to": "kenny-loggins--whenever-i-call-you-friend",
+   "kind": "singer",
+   "note": "Loggins, four years after 'Whenever I Call You Friend'."
+  },
+  {
+   "from": "kenny-loggins--heart-to-heart",
+   "to": "chicago--hard-to-say-im-sorry",
+   "kind": "producer",
+   "note": "David Foster co-wrote and played on both."
+  },
+  {
+   "from": "kenny-loggins--heart-to-heart",
+   "to": "michael-mcdonald--i-keep-forgettin",
+   "kind": "singer",
+   "note": "McDonald, the same autumn as his own first solo single."
+  },
+  {
+   "from": "kenny-loggins--heart-to-heart",
+   "to": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "kind": "singer",
+   "note": "McDonald again."
+  },
+  {
+   "from": "donald-fagen--i-g-y",
+   "to": "steely-dan--hey-nineteen",
+   "kind": "producer",
+   "note": "Gary Katz producing and Roger Nichols's Wendel drum machine again, as on 'Hey Nineteen'."
+  },
+  {
+   "from": "donald-fagen--i-g-y",
+   "to": "steely-dan--deacon-blues",
+   "kind": "songwriter",
+   "note": "Fagen's Steely Dan, five years after 'Deacon Blues'."
+  },
+  {
+   "from": "donald-fagen--i-g-y",
+   "to": "toto--rosanna",
+   "kind": "session",
+   "note": "Jeff Porcaro adds drums here."
+  },
+  {
+   "from": "donald-fagen--i-g-y",
+   "to": "michael-mcdonald--i-keep-forgettin",
+   "kind": "session",
+   "note": "Greg Phillinganes plays on both."
+  },
+  {
+   "from": "chicago--hard-to-say-im-sorry",
+   "to": "kenny-loggins--heart-to-heart",
+   "kind": "producer",
+   "note": "David Foster co-wrote and played on both."
+  },
+  {
+   "from": "chicago--hard-to-say-im-sorry",
+   "to": "toto--rosanna",
+   "kind": "session",
+   "note": "Lukather, Paich and Steve Porcaro from Toto play on it."
+  },
+  {
+   "from": "chicago--hard-to-say-im-sorry",
+   "to": "earth-wind-fire--after-the-love-has-gone",
+   "kind": "songwriter",
+   "note": "New member Bill Champlin wrote the lyric for 'After the Love Has Gone' with Foster and Jay Graydon."
+  },
+  {
+   "from": "toto--i-wont-hold-you-back",
+   "to": "eagles--i-cant-tell-you-why",
+   "kind": "singer",
+   "note": "Timothy B. Schmit, who wrote and sang 'I Can't Tell You Why' with the Eagles."
+  },
+  {
+   "from": "toto--i-wont-hold-you-back",
+   "to": "toto--africa",
+   "kind": "singer",
+   "note": "Schmit is on 'Africa' too, same album."
+  },
+  {
+   "from": "toto--i-wont-hold-you-back",
+   "to": "toto--rosanna",
+   "kind": "producer",
+   "note": "Same album, Toto IV."
+  },
+  {
+   "from": "toto--africa",
+   "to": "toto--rosanna",
+   "kind": "producer",
+   "note": "Same album, same video director, Steve Barron."
+  },
+  {
+   "from": "toto--africa",
+   "to": "toto--i-wont-hold-you-back",
+   "kind": "singer",
+   "note": "Timothy B. Schmit on both."
+  },
+  {
+   "from": "toto--africa",
+   "to": "michael-jackson--human-nature",
+   "kind": "session",
+   "note": "Steve Porcaro demoed 'Human Nature' while this was being mixed."
+  },
+  {
+   "from": "toto--africa",
+   "to": "eagles--i-cant-tell-you-why",
+   "kind": "singer",
+   "note": "Schmit again, from the Eagles."
+  },
+  {
+   "from": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "to": "patti-austin-james-ingram--baby-come-to-me",
+   "kind": "singer",
+   "note": "Ingram and Temperton, with McDonald on backing vocals and Quincy Jones producing: the 'Baby, Come to Me' team again."
+  },
+  {
+   "from": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "to": "george-benson--give-me-the-night",
+   "kind": "songwriter",
+   "note": "Rod Temperton, who wrote 'Give Me the Night' for Quincy Jones's Benson sessions."
+  },
+  {
+   "from": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "to": "michael-jackson--human-nature",
+   "kind": "producer",
+   "note": "Quincy Jones, a year after Thriller."
+  },
+  {
+   "from": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "to": "michael-mcdonald--i-keep-forgettin",
+   "kind": "singer",
+   "note": "McDonald."
+  },
+  {
+   "from": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "to": "the-doobie-brothers--what-a-fool-believes",
+   "kind": "singer",
+   "note": "McDonald, where the list's center of gravity started."
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ }
+}

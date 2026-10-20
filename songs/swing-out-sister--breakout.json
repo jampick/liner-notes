@@ -1,0 +1,78 @@
+{
+ "id": "swing-out-sister--breakout",
+ "title": "Breakout",
+ "artist": "Swing Out Sister",
+ "year": 1986,
+ "year_note": "",
+ "album": "It's Better to Travel",
+ "aliases": {
+  "youtube": [
+   "IIOJdMdS56k"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/24/ad/7024ad09-9dee-9b57-1de3-447b94d7b03a/mzaf_3270083055604081946.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/breakout/1488634409?i=1488634410&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Andy Connell (keyboards, ex-A Certain Ratio) and Martin Jackson (drums, ex-Magazine) had been making electro tracks in Manchester before Corinne Drewery, a fashion designer and model, joined them on vocals. Paul Staveley O'Duffy produced it for Mercury, and the album mixes real horns with synths arranged to sound like strings, scored by Richard Niles. Drewery wrote the song while recovering from a fractured skull after a riding accident, with Mercury demanding the second demo by Monday morning or the band would be dropped.",
+  "context": "The first single, 'Blue Mood', had missed the chart, so this one was the band's last chance. Released on 29 September 1986, it reached 4 in the UK and topped UK airplay; in the US it reached 6 on the Hot 100 in 1987 and 1 on the Adult Contemporary chart, and earned a Grammy nomination. The lyric is Drewery's own story of giving up the safe fashion career to sing, and Nick Willing's video has her design and make a dress and walk it down a runway.",
+  "listen_for": [
+   {
+    "where": "the bass line from the first bars",
+    "note": "There was a dispute over where it came from: someone claimed it was lifted from an unreleased track, and the band said they wrote it after listening to the BBC's 1986 World Cup theme."
+   },
+   {
+    "where": "the choruses",
+    "note": "Real horns over keyboards voiced as strings. Music Week heard 'rousing horns and sweeping strings'; on this album the strings are synths arranged to sound like them."
+   }
+  ],
+  "leads_to": {
+   "artist": "Young-Holt Unlimited",
+   "title": "Soulful Strut",
+   "year": 1968,
+   "why": "Carl Davis took Barbara Acklin's vocal off 'Am I the Same Girl' and released the backing as this instrumental, a US number 3. Swing Out Sister covered the vocal version in 1992 and went to number 1 on the US AC chart: the late-Sixties Chicago soul they were heading towards."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Breakout_(Swing_Out_Sister_song)",
+   "https://en.wikipedia.org/wiki/Swing_Out_Sister",
+   "https://en.wikipedia.org/wiki/It%27s_Better_to_Travel",
+   "https://en.wikipedia.org/wiki/Am_I_the_Same_Girl"
+  ],
+  "unverified": "Imogen's quote calls it the genre's best-known Top of the Pops moment; I found nothing on its Top of the Pops appearances either way. Her 'big-band brass' is a description, not a credit: I couldn't find who played the horns on this track. The Swing Out Sister Wikipedia article is flagged as needing citations."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK 4, US 6",
+   "line": "Out on 29 September 1986, it reached 4 in the UK and topped UK airplay. In 1987 it hit 6 on the Hot 100 and 1 on the US Adult Contemporary chart.",
+   "wiki": "It's_Better_to_Travel",
+   "source": "https://en.wikipedia.org/wiki/Breakout_(Swing_Out_Sister_song)"
+  },
+  {
+   "kind": "video",
+   "title": "The dress",
+   "line": "Nick Willing's video has Corinne Drewery design and make a dress and debut it on a runway while her bandmates open the champagne. There's a monochrome and a colour cut.",
+   "wiki": "Swing_Out_Sister",
+   "source": "https://en.wikipedia.org/wiki/Breakout_(Swing_Out_Sister_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Two Grammy nominations",
+   "line": "At the 30th Grammys in 1988 the song was up for Best Pop Vocal Performance by a Duo or Group, and the band for Best New Artist.",
+   "wiki": "30th_Annual_Grammy_Awards",
+   "source": "https://en.wikipedia.org/wiki/Swing_Out_Sister"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

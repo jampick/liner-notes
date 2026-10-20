@@ -1,0 +1,47 @@
+{
+ "year": 1975,
+ "items": [
+  {
+   "kind": "film",
+   "title": "Jaws",
+   "line": "Opened on 20 June 1975 on 464 screens, made a record $7 million on its first weekend, and was the highest-grossing film ever until Star Wars.",
+   "wiki": "Jaws_(film)",
+   "source": "https://en.wikipedia.org/wiki/Jaws_(film)"
+  },
+  {
+   "kind": "tech",
+   "title": "Altair 8800",
+   "line": "The January 1975 Popular Electronics cover sold a $439 computer kit from MITS in Albuquerque. Bill Gates and Paul Allen wrote its BASIC and started Microsoft on it.",
+   "wiki": "Altair_8800",
+   "source": "https://en.wikipedia.org/wiki/Altair_8800"
+  },
+  {
+   "kind": "news",
+   "title": "The fall of Saigon",
+   "line": "Saigon fell on 30 April 1975, and helicopters lifted about 7,000 people out of the city in the last two days.",
+   "wiki": "Fall_of_Saigon",
+   "source": "https://en.wikipedia.org/wiki/Fall_of_Saigon"
+  },
+  {
+   "kind": "tv",
+   "title": "Saturday Night Live",
+   "line": "NBC's Saturday Night went out for the first time on 11 October 1975, with George Carlin hosting and Billy Preston and Janis Ian playing.",
+   "wiki": "Saturday_Night_Live_season_1",
+   "source": "https://en.wikipedia.org/wiki/Saturday_Night_Live_season_1"
+  },
+  {
+   "kind": "tech",
+   "title": "Betamax",
+   "line": "Sony launched Betamax in Japan on 10 May 1975; the first US model, built into a 19-inch Trinitron, reached shops that November.",
+   "wiki": "Betamax",
+   "source": "https://en.wikipedia.org/wiki/Betamax"
+  },
+  {
+   "kind": "music",
+   "title": "Fleetwood Mac",
+   "line": "The first album with Lindsey Buckingham and Stevie Nicks came out on 11 July 1975, recorded at Sound City in Van Nuys, and took over a year to reach number 1.",
+   "wiki": "Fleetwood_Mac_(1975_album)",
+   "source": "https://en.wikipedia.org/wiki/Fleetwood_Mac_(1975_album)"
+  }
+ ]
+}

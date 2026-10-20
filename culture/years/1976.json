@@ -1,0 +1,47 @@
+{
+ "year": 1976,
+ "items": [
+  {
+   "kind": "music",
+   "title": "Frampton Comes Alive!",
+   "line": "Released 15 January 1976, it spent 10 weeks at number 1 and was the best-selling album of the year.",
+   "wiki": "Frampton_Comes_Alive!",
+   "source": "https://en.wikipedia.org/wiki/Frampton_Comes_Alive!"
+  },
+  {
+   "kind": "tech",
+   "title": "Apple I",
+   "line": "Apple was founded on 1 April 1976 and the Apple I went on sale that July for $666.66. The Byte Shop ordered 50, fully assembled.",
+   "wiki": "Apple_I",
+   "source": "https://en.wikipedia.org/wiki/Apple_I"
+  },
+  {
+   "kind": "tech",
+   "title": "Concorde",
+   "line": "Scheduled Concorde flights began on 21 January 1976, and service to Washington Dulles started on 24 May at about Mach 2.",
+   "wiki": "Concorde",
+   "source": "https://en.wikipedia.org/wiki/Concorde"
+  },
+  {
+   "kind": "sport",
+   "title": "Nadia Comăneci",
+   "line": "On 18 July 1976 in Montreal, the 14-year-old scored the first perfect 10 in Olympic gymnastics. The scoreboard couldn't show it and read 1.00.",
+   "wiki": "Nadia_Comăneci",
+   "source": "https://en.wikipedia.org/wiki/Nadia_Com%C4%83neci"
+  },
+  {
+   "kind": "news",
+   "title": "The Bicentennial",
+   "line": "On 4 July 1976 tall ships sailed into New York Harbor for Operation Sail and President Ford reviewed the fleet from the USS Wainwright.",
+   "wiki": "United_States_Bicentennial",
+   "source": "https://en.wikipedia.org/wiki/United_States_Bicentennial"
+  },
+  {
+   "kind": "film",
+   "title": "Rocky",
+   "line": "Opened on 3 December 1976. Stallone wrote it in about three and a half days, it cost around $1 million, and it won Best Picture.",
+   "wiki": "Rocky",
+   "source": "https://en.wikipedia.org/wiki/Rocky"
+  }
+ ]
+}

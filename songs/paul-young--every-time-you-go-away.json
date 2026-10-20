@@ -1,0 +1,81 @@
+{
+ "id": "paul-young--every-time-you-go-away",
+ "title": "Every Time You Go Away",
+ "artist": "Paul Young",
+ "year": 1985,
+ "year_note": "",
+ "album": "The Secret of Association",
+ "aliases": {
+  "youtube": [
+   "nfk6sCzRTbM"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2a/8e/55/2a8e5503-1ee1-022c-1792-64120a231b99/mzaf_17809822087122695170.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/every-time-you-go-away/408372934?i=408372938&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Daryl Hall wrote it and Hall & Oates recorded it in 1980 for Voices as a churchy, organ-led soul song. Laurie Latham produced Young's version and rebuilt it around echoed piano, the Yamaha DX7 harp preset, Pino Palladino's fretless bass, and John Turnbull on Coral electric sitar and Spanish guitar. Ian Kewley played piano and synths, Mark Pinder drums.",
+  "context": "It reached 4 in Britain in March 1985 and The Secret of Association went to number 1. Young sang it at Live Aid on 13 July and it was number 1 on the Hot 100 two weeks later, and won British Video of the Year at the 1986 Brits. Hall said he'd only thought of it as a gospel and soul song until Young's version, which kept the elements but made it sound like a pop record.",
+  "listen_for": [
+   {
+    "where": "the first notes",
+    "note": "The plucked shimmer is the DX7's harp preset, sitting on top of the echoed piano."
+   },
+   {
+    "where": "the bass line in every verse",
+    "note": "Pino Palladino's fretless, sliding into notes and answering Young's lines."
+   },
+   {
+    "where": "the guitar fills",
+    "note": "John Turnbull's Coral electric sitar, with his Ovation Spanish guitar alongside."
+   }
+  ],
+  "leads_to": {
+   "artist": "Daryl Hall & John Oates",
+   "title": "Everytime You Go Away",
+   "year": 1980,
+   "why": "Hall's original on Voices: organ, an old-timey guitar figure and Charlie DeChant on sax, never a single."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Everytime_You_Go_Away",
+   "https://en.wikipedia.org/wiki/The_Secret_of_Association",
+   "https://en.wikipedia.org/wiki/Live_Aid"
+  ],
+  "unverified": "Desmond's quote (US number 1, fretless bass, a Hall & Oates song) checks out. The Hall & Oates original is titled 'Everytime You Go Away'; Young's is 'Every Time You Go Away'."
+ },
+ "culture": [
+  {
+   "kind": "live",
+   "title": "Live Aid",
+   "line": "Young sang it at Wembley on 13 July 1985; two weeks later it was number 1 on the Hot 100.",
+   "wiki": "Live_Aid",
+   "source": "https://en.wikipedia.org/wiki/Everytime_You_Go_Away"
+  },
+  {
+   "kind": "video",
+   "title": "Brit Award",
+   "line": "The video won British Video of the Year at the 1986 Brit Awards.",
+   "wiki": "Brit_Awards_1986",
+   "source": "https://en.wikipedia.org/wiki/Everytime_You_Go_Away"
+  },
+  {
+   "kind": "cover",
+   "title": "Planes, Trains and Automobiles",
+   "line": "Blue Room's version is on the soundtrack of the 1987 film, and George Benson and Al Jarreau covered it in 2006.",
+   "wiki": "Planes,_Trains_and_Automobiles",
+   "source": "https://en.wikipedia.org/wiki/Everytime_You_Go_Away"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "id": "the-lotus-eaters--the-first-picture-of-you",
+ "title": "The First Picture of You",
+ "artist": "The Lotus Eaters",
+ "year": 1983,
+ "year_note": "",
+ "album": "No Sense of Sin",
+ "aliases": {
+  "youtube": [
+   "Qm_SRdQpxKI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7c/42/22/7c42227e-e658-67ef-431b-288f66e2d0fc/mzaf_17156175828948485900.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/the-first-picture-of-you/396460899?i=396460977&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Jem Kelly and Ged Quinn demoed the music on a TASCAM four-track Portastudio, and Peter Coyle wrote the words at what was half writing session, half audition in Liverpool. Nigel Gray, who had produced the Police and Siouxsie and the Banshees, recorded it at Surrey Sound in Leatherhead; Kelly said all Gray did was record the band, and that was all they needed. The bass is Alan Spenner, the session player from Avalon, before Michael Dempsey (ex-Cure) joined.",
+  "context": "The song was first heard on a John Peel session in October 1982, which started a bidding war among major labels; Arista won. Released in June 1983, it reached 15 in August, a hit before the band had played a single gig. The follow-ups didn't land in Britain, the album crawled to 96 in 1984, and the band were done by 1986, though the single had also been a hit in France, Italy, Belgium and Spain.",
+  "listen_for": [
+   {
+    "where": "the bass under the verses",
+    "note": "Alan Spenner, who also plays on 'Avalon' and 'More Than This'. A Liverpool jangle band sitting on a Roxy Music rhythm player is half of why this belongs here."
+   },
+   {
+    "where": "the guitar and keyboard figure",
+    "note": "Kelly admitted it may resemble a Wild Swans song (the band he co-founded), though they hadn't noticed at the time."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Streets",
+   "title": "It's Too Late",
+   "year": 2002,
+   "why": "Mike Skinner built this Original Pirate Material track on a sample of the song, carrying it from 1983 Liverpool to a Brixton bedroom."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_First_Picture_of_You",
+   "https://en.wikipedia.org/wiki/The_Lotus_Eaters_(band)",
+   "https://en.wikipedia.org/wiki/No_Sense_of_Sin",
+   "https://pennyblackmusic.co.uk/Home/Details?id=18324",
+   "https://en.wikipedia.org/wiki/Original_Pirate_Material"
+  ],
+  "unverified": "Imogen's UK number 15 is right. The Penny Black interview quotes come from a search summary (the page refused a direct fetch), so I paraphrased rather than quoted. Wikipedia gives the band's formation as both 1981 and September 1982; I left the date out."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK number 15",
+   "line": "Released in June 1983, it peaked at 15 that August, before the Lotus Eaters had played a live gig.",
+   "wiki": "The_First_Picture_of_You",
+   "source": "https://en.wikipedia.org/wiki/The_First_Picture_of_You"
+  },
+  {
+   "kind": "video",
+   "title": "Walberswick",
+   "line": "The video was shot mostly at a house on Ferry Road in Walberswick, Suffolk, with scenes on the beach there.",
+   "wiki": "Walberswick",
+   "source": "https://en.wikipedia.org/wiki/The_First_Picture_of_You"
+  },
+  {
+   "kind": "sample",
+   "title": "The Streets",
+   "line": "Mike Skinner built 'It's Too Late', on the 2002 album Original Pirate Material, on a sample of it.",
+   "wiki": "Original_Pirate_Material",
+   "source": "https://en.wikipedia.org/wiki/The_First_Picture_of_You"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-1)",
+  "written_on": "2026-10-19"
+ }
+}

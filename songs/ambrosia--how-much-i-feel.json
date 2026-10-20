@@ -1,0 +1,68 @@
+{
+ "id": "ambrosia--how-much-i-feel",
+ "title": "How Much I Feel",
+ "artist": "Ambrosia",
+ "year": 1978,
+ "year_note": "",
+ "album": "Life Beyond L.A.",
+ "aliases": {
+  "youtube": [
+   "Ewg1LTLBGkE"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f7/49/bb/f749bb2f-6f2a-2fb7-e285-bba19561c1aa/mzaf_16476425678575352396.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/how-much-i-feel/300954187?i=300954263&uo=4"
+  }
+ },
+ "notes": {
+  "made": "David Pack wrote it, sang it, and played guitars, acoustic piano and synths; he also arranged the strings with Jimmie Haskell. Joe Puerta played bass and Burleigh Drummond drums, with Freddie Piro producing at Mama Jo's in North Hollywood. Keyboardist Christopher North left partway through the sessions, and Joe Sample is among the extra players on the album.",
+  "context": "Life Beyond L.A. came out on 26 July 1978, Ambrosia's first album for Warner Bros., and it moved them away from prog rock toward jazzy soft rock. The single followed in August and reached 3 on the Hot 100 and 2 on Cash Box for three weeks, and went gold. In 2015 Big Sean and Kanye West sampled it on 'All Your Fault'.",
+  "listen_for": [
+   {
+    "where": "the strings as the song builds",
+    "note": "Pack and Jimmie Haskell's arrangement; Haskell also did the strings on Lotta Love the same year."
+   },
+   {
+    "where": "the piano under Pack's vocal",
+    "note": "Pack playing his own acoustic piano, which is part of why this is a ballad first and a band record second."
+   }
+  ],
+  "leads_to": {
+   "artist": "Big Sean featuring Kanye West",
+   "title": "All Your Fault",
+   "year": 2015,
+   "why": "The sampling afterlife, on Dark Sky Paradise."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/How_Much_I_Feel",
+   "https://en.wikipedia.org/wiki/Life_Beyond_L.A."
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "No. 3, gold",
+   "line": "Released in August 1978, it reached 3 on the Hot 100, 2 on Cash Box for three weeks, and went gold.",
+   "source": "https://en.wikipedia.org/wiki/How_Much_I_Feel"
+  },
+  {
+   "kind": "sample",
+   "title": "Big Sean, 'All Your Fault'",
+   "line": "Big Sean and Kanye West sampled it on 'All Your Fault', from Dark Sky Paradise (2015).",
+   "wiki": "Big_Sean",
+   "source": "https://en.wikipedia.org/wiki/How_Much_I_Feel"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

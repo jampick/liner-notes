@@ -1,0 +1,78 @@
+{
+ "id": "kenny-loggins--whenever-i-call-you-friend",
+ "title": "Whenever I Call You \"Friend\"",
+ "artist": "Kenny Loggins",
+ "year": 1978,
+ "year_note": "",
+ "album": "Nightwatch",
+ "aliases": {
+  "youtube": [
+   "cmR6xV-OJBI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9e/8f/07/9e8f0729-ebf0-8f05-03e6-153861fa240c/mzaf_7495901109399848384.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/whenever-i-call-you-friend/192660327?i=192660875&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Loggins wrote it with Melissa Manchester. Bob James produced Nightwatch at SoundMixers in New York and arranged the strings. Brian Mann plays the acoustic piano intro and electric piano, George Hawkins bass, Tris Imboden drums, and Stevie Nicks sings lead and harmony with Loggins. Nicks later said she called him 'Slave Driver Loggins'.",
+  "context": "Columbia released it in July 1978 and it reached 5 that autumn. Nicks wasn't credited on the single, so on paper it was Loggins's first big solo hit, and Nightwatch reached 7, his best album placing up to then. The same album has the first released version of What a Fool Believes, five months ahead of the Doobies.",
+  "listen_for": [
+   {
+    "where": "the intro",
+    "note": "Brian Mann's acoustic piano, before the electric piano takes over."
+   },
+   {
+    "where": "the second voice",
+    "note": "Stevie Nicks, a year after Rumours, singing co-lead rather than backup."
+   },
+   {
+    "where": "the strings",
+    "note": "Bob James's arrangement; the jazz keyboardist produced the whole album in New York."
+   }
+  ],
+  "leads_to": {
+   "artist": "Melissa Manchester",
+   "title": "Whenever I Call You \"Friend\"",
+   "year": 1979,
+   "why": "The co-writer's own duet version, with Arnold McCuller, on her self-titled album."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Whenever_I_Call_You_%22Friend%22",
+   "https://en.wikipedia.org/wiki/Nightwatch_(Kenny_Loggins_album)"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "No. 5, autumn 1978",
+   "line": "It reached 5 on the Hot 100 in autumn 1978. Nicks wasn't credited on the single.",
+   "source": "https://en.wikipedia.org/wiki/Whenever_I_Call_You_%22Friend%22"
+  },
+  {
+   "kind": "cover",
+   "title": "Melissa Manchester",
+   "line": "Co-writer Melissa Manchester recorded her own duet with Arnold McCuller in 1979, and in 2023 she and Loggins put out a new version with Dave Koz.",
+   "wiki": "Melissa_Manchester",
+   "source": "https://en.wikipedia.org/wiki/Whenever_I_Call_You_%22Friend%22"
+  },
+  {
+   "kind": "screen",
+   "title": "TopPop",
+   "line": "Nicks didn't come to Dutch TV's TopPop, so singer Kimm Hekker stood in as Loggins's duet partner.",
+   "source": "https://en.wikipedia.org/wiki/Whenever_I_Call_You_%22Friend%22"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

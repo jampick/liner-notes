@@ -1,0 +1,83 @@
+{
+ "id": "tears-for-fears--woman-in-chains",
+ "title": "Woman in Chains",
+ "artist": "Tears for Fears",
+ "year": 1989,
+ "year_note": "On The Seeds of Love (25 September 1989); released as a single on 6 November 1989.",
+ "album": "The Seeds of Love",
+ "aliases": {
+  "youtube": [
+   "QzkK3ZtI9SU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/55/29/085529c3-ebe7-9090-1fa7-dd3d12ef4163/mzaf_17867040194221463802.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/woman-in-chains-feat-oleta-adams/1527554451?i=1527554456&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Roland Orzabal wrote it, and Tears for Fears produced with Dave Bascombe. Orzabal and Curt Smith had seen Oleta Adams singing and playing piano in a Kansas City hotel lounge on their 1985 US tour, and flew back in 1987 to find her. She sings the duet with Orzabal and plays keyboards, Pino Palladino plays bass, Neil Taylor the guitar arpeggio, Manu Katché the drums for the first part, and Phil Collins from 3:32 on. The demos were cut at the Townhouse in London on 8 and 9 February 1988 with endless takes and no overdubs.",
+  "context": "The Seeds of Love reportedly cost £1 million, against about £70,000 for Songs from the Big Chair, and took from late 1986 to July 1989. It went to number 1 in the UK. Orzabal said in 2021 the song was really about his mother and his father's abuse of her. Andy Morahan's black-and-white video shows an abusive relationship between a boxer and a pole dancer, and the single reached 26 in the UK and 36 in the US.",
+  "listen_for": [
+   {
+    "where": "the first half",
+    "note": "Manu Katché on drums, with Neil Taylor's guitar arpeggio and Pino Palladino's bass."
+   },
+   {
+    "where": "when the drums get big, a little after three and a half minutes",
+    "note": "Phil Collins takes over. He remembered the band asking him to come in 'in a big way'."
+   },
+   {
+    "where": "the duet",
+    "note": "Oleta Adams answering Orzabal, the singer they found in a Kansas City hotel bar."
+   }
+  ],
+  "leads_to": {
+   "artist": "Oleta Adams",
+   "title": "Get Here",
+   "year": 1990,
+   "why": "Orzabal and Dave Bascombe produced her album Circle of One, and this Brenda Russell song went to 4 in the UK and 5 in the US."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Woman_in_Chains",
+   "https://en.wikipedia.org/wiki/The_Seeds_of_Love",
+   "https://en.wikipedia.org/wiki/Every_Time_You_Go_Away",
+   "https://en.wikipedia.org/wiki/Circle_of_One",
+   "https://en.wikipedia.org/wiki/Get_Here"
+  ],
+  "unverified": "Folake's 'Oleta Adams sings it' overstates it a little: Orzabal sings lead and Adams sings the duet part. Sources disagree on whether 'Get Here' reached 5 or 20 in the US; I gave 5 from the Wikipedia summary, which the director may want to check."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Second single",
+   "line": "Released on 6 November 1989, it reached 26 in the UK, 36 in the US and 11 in Canada. A 1992 reissue credited Oleta Adams and made 57.",
+   "wiki": "The_Seeds_of_Love",
+   "source": "https://en.wikipedia.org/wiki/Woman_in_Chains"
+  },
+  {
+   "kind": "video",
+   "title": "Andy Morahan's video",
+   "line": "Shot in black and white, it shows an abusive relationship between a boxer and a pole dancer, played by Angela Alvarado, cut with the band and Adams performing.",
+   "wiki": "Woman_in_Chains",
+   "source": "https://en.wikipedia.org/wiki/Woman_in_Chains"
+  },
+  {
+   "kind": "live",
+   "title": "The Townhouse jam",
+   "line": "The 8–9 February 1988 Townhouse demo with Adams, Manu Katché and Pino Palladino stayed on Orzabal's DAT tapes until the 2020 Seeds of Love reissue.",
+   "wiki": "Townhouse_Studios",
+   "source": "https://en.wikipedia.org/wiki/Woman_in_Chains"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

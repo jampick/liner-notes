@@ -1,0 +1,91 @@
+{
+ "id": "the-blue-nile--tinseltown-in-the-rain",
+ "title": "Tinseltown in the Rain",
+ "artist": "The Blue Nile",
+ "year": 1984,
+ "year_note": "Single released 20 August 1984; the album A Walk Across the Rooftops came out in spring 1984 (Wikipedia gives both 30 April and May).",
+ "album": "A Walk Across the Rooftops",
+ "aliases": {
+  "youtube": [
+   "2q5CGLHJ-54"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/40/a4/2a40a487-004d-21ab-1f56-75f876498b72/mzaf_1399348928423900256.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/tinseltown-in-the-rain/1617799716?i=1617799719&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Paul Buchanan and Robert Bell wrote and produced it, with Paul Joseph Moore on keyboards and Nigel Thomas drumming on the album, which took five months in 1983 at Castlesound, Calum Malcolm's studio in a Victorian schoolhouse in Pencaitland, East Lothian. Samplers were still a luxury, so odd sounds were played, recorded and edited on tape, and Malcolm says each drum part had to be synced by hand, hitting a button on Paul's box in time. Buchanan said they rehearsed the whole album through one Marshall cabinet and a borrowed amp.",
+  "context": "This was the demo that got them a deal. Linn Products had kitted out Castlesound, and when Linn people visited to test speakers Malcolm played them this song; Linn offered to start a label for them, and the band took nine months to say yes. Buchanan said Linn put up between £10,000 and £20,000. It reached 87 in the UK and 28 in the Netherlands, where it still turns up on Radio 2's Top 2000. Buchanan told Dutch TV in 2013 that Tinseltown is 'whatever your dream is, whatever your Tinseltown was, whatever you lost.'",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Bell's bass and the keyboards start it alone before the rest comes in. Reviewers describe the bass as yearning licks that build the tension."
+   },
+   {
+    "where": "when the strings come in",
+    "note": "The string section enters and Buchanan starts to open his voice up; until then he's holding back."
+   },
+   {
+    "where": "the guitars",
+    "note": "Buchanan said they made the band think of traffic, which is how a Glasgow song about rain ends up sounding like a city at night."
+   },
+   {
+    "where": "the outro",
+    "note": "The rhythm drops away into a melodic outro and Buchanan sings it with more bravado than anywhere else on the record."
+   }
+  ],
+  "leads_to": {
+   "artist": "Scott Walker",
+   "title": "It's Raining Today",
+   "year": 1969,
+   "why": "The opener of Scott 3: another melancholy baritone in the rain, with Angela Morley (credited as Wally Stott) arranging and conducting, and the kind of record Buchanan's voice keeps getting set beside."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Tinseltown_in_the_Rain",
+   "https://en.wikipedia.org/wiki/A_Walk_Across_the_Rooftops",
+   "https://en.wikipedia.org/wiki/The_Blue_Nile_(band)",
+   "https://www.classicpopmag.com/2021/11/making-the-blue-nile-a-walk-across-the-rooftops/",
+   "https://www.popmatters.com/166769-at-the-source-of-the-blue-nile-an-interview-with-paul-buchanan-2495788345.html",
+   "https://postpunkmonk.com/2012/02/17/record-review-the-blue-nile-tinseltown-in-the-rain/",
+   "https://dereksmusicblog.com/2011/05/04/the-blue-nile-a-walk-across-the-rooftops/",
+   "https://www.muzines.co.uk/articles/king-of-the-castle/2374",
+   "https://en.wikipedia.org/wiki/Scott_3"
+  ],
+  "unverified": "Panel quote (Imogen) says it 'never charted'. It did: 87 in the UK and 28 on the Dutch Top 40 (Wikipedia). I couldn't name the string players or arranger. The Scott Walker comparison is a common critics' one; I didn't find Buchanan naming Walker himself."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "A Dutch hit",
+   "line": "It peaked at 87 in the UK but 28 on the Dutch Top 40, and keeps coming back on NPO Radio 2's Top 2000, as high as 445 in 2003.",
+   "wiki": "Top_2000",
+   "source": "https://en.wikipedia.org/wiki/Tinseltown_in_the_Rain"
+  },
+  {
+   "kind": "screen",
+   "title": "Theme for Tinsel Town",
+   "line": "A remix opened the Glasgow-set BBC drama Tinsel Town, first on BBC Choice in 2000 and repeated on BBC2 in 2001.",
+   "wiki": "Tinsel_Town_(TV_series)",
+   "source": "https://en.wikipedia.org/wiki/Tinseltown_in_the_Rain"
+  },
+  {
+   "kind": "cover",
+   "title": "Andrea Corr's single",
+   "line": "Andrea Corr made it the first single from her 2011 covers album Lifelines, produced by John Reynolds and Brian Eno.",
+   "wiki": "Lifelines_(Andrea_Corr_album)",
+   "source": "https://en.wikipedia.org/wiki/Lifelines_(Andrea_Corr_album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

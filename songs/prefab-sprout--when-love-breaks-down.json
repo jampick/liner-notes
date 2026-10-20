@@ -1,0 +1,75 @@
+{
+ "id": "prefab-sprout--when-love-breaks-down",
+ "title": "When Love Breaks Down",
+ "artist": "Prefab Sprout",
+ "year": 1984,
+ "year_note": "First issued by Kitchenware in October 1984 (UK 88 on the Official Chart, which Wikipedia's song page rounds to 'did not chart'). It was reissued in March 1985 (88 again) and in October 1985, when it reached 25. The hit is a different recording from the 1984 single.",
+ "album": "single (later on Steve McQueen, 1985)",
+ "aliases": {
+  "youtube": [
+   "QeZkLV3ZjeI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f7/8b/cf/f78bcfe7-a865-6adf-f100-95dc72f9c1ef/mzaf_13177683876792141863.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/when-love-breaks-down/268543953?i=268544017&uo=4"
+  }
+ },
+ "notes": {
+  "made": "The first version was produced by Phil Thornalley, who had produced The Cure's Pornography, at RAK in St John's Wood, and Hi-Fi News says the band were not entirely happy with it. Thomas Dolby then produced Steve McQueen at Marcus Studios in Bayswater, and per Hi-Fi News his remake of this song became the UK album track and the hit single, while Thornalley's original stayed on the US album, Two Wheels Good. McAloon said Dolby had a Fairlight and a PPG Wave and used them sparingly, and 'had no time for the Yamaha DX7'. The band were Paddy McAloon, his brother Martin on bass, Wendy Smith on keyboards and vocals, and Neil Conti on drums.",
+  "context": "Prefab Sprout came from Witton Gilbert in County Durham. Keith Armstrong signed them to Kitchenware in March 1983 after hearing them played in the Newcastle HMV he managed, and their debut, Swoon, made in Edinburgh on £5,000, came out in March 1984 and reached 22. Elvis Costello took them on tour in December 1983. It took three goes to make this song a hit, and it was also their first US chart entry, 42 on Billboard's Top Rock Tracks in October 1985.",
+  "listen_for": [
+   {
+    "where": "the backing vocals",
+    "note": "Wendy Smith's voice behind McAloon's. On the Steve McQueen sessions Dolby sampled her voice into the Fairlight to stack it up into layers."
+   },
+   {
+    "where": "the keyboards across the track",
+    "note": "Listen for what isn't there: McAloon said Dolby avoided the DX7 sounds every other 1985 record used, and the space is part of the song."
+   }
+  ],
+  "leads_to": {
+   "artist": "Glen Campbell",
+   "title": "Wichita Lineman",
+   "year": 1968,
+   "why": "McAloon told Rolling Stone it was the first record that made him love music; Jimmy Webb's craft is the yardstick he has measured himself against ever since."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/When_Love_Breaks_Down",
+   "https://en.wikipedia.org/wiki/Steve_McQueen_(album)",
+   "https://www.hifinews.com/content/prefab-sprout-steve-mcqueen-production-notes",
+   "https://en.wikipedia.org/wiki/Prefab_Sprout",
+   "https://en.wikipedia.org/wiki/Swoon_(Prefab_Sprout_album)",
+   "https://en.wikipedia.org/wiki/Phil_Thornalley",
+   "https://www.officialcharts.com/artist/21343/prefab-sprout/",
+   "https://www.rollingstone.com/music/features/the-last-pop-genius-19910307"
+  ],
+  "unverified": "Panel quote (Imogen) credits Thomas Dolby's production. That's right for the 1985 hit, but the 1984 single was Phil Thornalley's, and Wikipedia's album credits still list Thornalley as producer of track 4 (with 'vocal tape loops'), which contradicts Hi-Fi News. Which recording the playlist uses matters here. The Fairlight vocal stacking is documented for the Steve McQueen sessions in general, not this track by name. The Rolling Stone 1991 profile was paywalled; the Wichita Lineman claim comes from search excerpts of it plus Hot Press naming Webb as a primary influence."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Third time lucky",
+   "line": "Released in October 1984 and again in March 1985, it reached 88 both times. A third issue in October 1985 got to 25.",
+   "wiki": "Steve_McQueen_(album)",
+   "source": "https://en.wikipedia.org/wiki/Steve_McQueen_(album)"
+  },
+  {
+   "kind": "cover",
+   "title": "Acoustic remake, 2007",
+   "line": "Paddy McAloon recorded a new acoustic version in 2006, released in March 2007 alongside the Legacy Edition of Steve McQueen.",
+   "wiki": "Prefab_Sprout",
+   "source": "https://en.wikipedia.org/wiki/When_Love_Breaks_Down"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

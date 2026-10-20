@@ -1,0 +1,78 @@
+{
+ "id": "johnny-hates-jazz--shattered-dreams",
+ "title": "Shattered Dreams",
+ "artist": "Johnny Hates Jazz",
+ "year": 1987,
+ "year_note": "UK release 9 March 1987; the US release followed in 1988.",
+ "album": "Turn Back the Clock",
+ "aliases": {
+  "youtube": [
+   "ctwqa3QCwMw"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/63/26/1d/63261d1a-0263-08fb-2e13-7598ffcde91e/mzaf_799413594460707107.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/shattered-dreams/714893506?i=714893510&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Clark Datchler wrote it quickly in a small studio in the front room of his parents' house, on an upright piano with a 4-track portastudio, a drum machine and a keyboard; the middle section with the bongo solo took longer. Calvin Hayes and Mike Nocito produced it at RAK Studios in London. Hayes was the son of Mickie Most, who founded RAK, and Nocito had engineered there for The Police and Duran Duran.",
+  "context": "The band were formed in 1986 by three sons of musical families: Datchler's father Fred sang in the Stargazers. The name came from a party where someone broke a Dave Brubeck record. It went to 5 in the UK, then 2 on the Hot 100 and 1 on Adult Contemporary in 1988, and Turn Back the Clock went to number 1 in Britain. Datchler said he had divorce in mind when he wrote it.",
+  "listen_for": [
+   {
+    "where": "the middle section",
+    "note": "The bongo solo, the part Datchler said took longest to write."
+   },
+   {
+    "where": "the verse",
+    "note": "Written at an upright piano at home, and it still sits on piano chords under the gloss RAK added."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Stargazers",
+   "title": "Broken Wings",
+   "year": 1953,
+   "why": "Datchler's father Fred was a founding Stargazer, and this was the first record by a British act to reach number 1 in the UK."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Shattered_Dreams",
+   "https://en.wikipedia.org/wiki/Johnny_Hates_Jazz",
+   "https://en.wikipedia.org/wiki/Broken_Wings_(1953_song)",
+   "https://en.wikipedia.org/wiki/The_Stargazers_(vocal_ensemble)"
+  ],
+  "unverified": "I couldn't find who directed the UK video, only that David Fincher shot the black-and-white US one. Desmond's 'US #2, UK #5' is right."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK 5, US 2",
+   "line": "Released on 9 March 1987, it reached 5 in the UK. In 1988 it went to 2 on the Hot 100 and 1 on Adult Contemporary.",
+   "wiki": "Turn_Back_the_Clock_(album)",
+   "source": "https://en.wikipedia.org/wiki/Shattered_Dreams"
+  },
+  {
+   "kind": "video",
+   "title": "David Fincher's version",
+   "line": "For the US, David Fincher shot an alternative video entirely in black and white, and Clark Datchler preferred it.",
+   "wiki": "David_Fincher",
+   "source": "https://en.wikipedia.org/wiki/Shattered_Dreams"
+  },
+  {
+   "kind": "cover",
+   "title": "Starset, 2025",
+   "line": "The American rock band Starset released a cover on 29 August 2025 as a single from their album Silos.",
+   "wiki": "Starset",
+   "source": "https://en.wikipedia.org/wiki/Shattered_Dreams"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

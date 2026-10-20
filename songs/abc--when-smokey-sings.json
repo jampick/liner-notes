@@ -1,0 +1,74 @@
+{
+ "id": "abc--when-smokey-sings",
+ "title": "When Smokey Sings",
+ "artist": "ABC",
+ "year": 1987,
+ "year_note": "",
+ "album": "Alphabet City",
+ "aliases": {
+  "youtube": [
+   "BTV5FvNCbhk"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4a/ec/43/4aec43ca-1dcb-bef6-14bb-7b9d919e0b74/mzaf_6258094386153780664.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/when-smokey-sings/1444014829?i=1444014836&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Martin Fry and Mark White wrote it and produced it with Bernard Edwards, at Marcus Recording Studios in London, where the album took about nine months. Richard Niles arranged the strings. The single edit swaps the album version's roll call of Luther, Sly, James and Marvin for other lines and adds a short sax solo.",
+  "context": "It was ABC's first record after a break while Fry was treated for Hodgkin's disease. Released on 25 May 1987, it reached 11 in the UK and 5 in the US, and topped the US dance club chart. In the week ending 3 October 1987 it sat in the Hot 100 top ten alongside Robinson's own 'One Heartbeat'. Robinson said it was flattering and that he appreciated it.",
+  "listen_for": [
+   {
+    "where": "the bass line",
+    "note": "An homage to the Miracles' 'The Tears of a Clown', the 1970 number one. Hum one over the other."
+   },
+   {
+    "where": "the strings",
+    "note": "Richard Niles's arrangement, the same arranger who scored Swing Out Sister's It's Better to Travel."
+   },
+   {
+    "where": "after the second chorus on the single edit",
+    "note": "A short sax solo that isn't on the album version."
+   }
+  ],
+  "leads_to": {
+   "artist": "Smokey Robinson & the Miracles",
+   "title": "The Tears of a Clown",
+   "year": 1970,
+   "why": "Where the bass line comes from: written with Stevie Wonder and Hank Cosby, released as a UK single in July 1970, number 1 in both countries, with a bassoon and a circus calliope."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/When_Smokey_Sings",
+   "https://en.wikipedia.org/wiki/Alphabet_City_(album)",
+   "https://en.wikipedia.org/wiki/The_Tears_of_a_Clown"
+  ],
+  "unverified": "I couldn't map the album's players (Brad Lang on bass, Howie Casey on saxes, Graham Broad on drums) to this track. I placed the single's sax solo loosely; the source only says it was added."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Next to Smokey",
+   "line": "It reached 5 in the US and 11 in the UK. In the week ending 3 October 1987 it shared the Hot 100 top ten with Smokey Robinson's own 'One Heartbeat'.",
+   "wiki": "Smokey_Robinson",
+   "source": "https://en.wikipedia.org/wiki/When_Smokey_Sings"
+  },
+  {
+   "kind": "chart",
+   "title": "Alphabet City",
+   "line": "Recorded at Marcus Studios in London over about nine months after Martin Fry's treatment for Hodgkin's disease, Alphabet City reached 7 in the UK.",
+   "wiki": "Alphabet_City_(album)",
+   "source": "https://en.wikipedia.org/wiki/Alphabet_City_(album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "id": "kenny-loggins--heart-to-heart",
+ "title": "Heart to Heart",
+ "artist": "Kenny Loggins",
+ "year": 1982,
+ "year_note": "On High Adventure (1982); released as a single in November 1982 and charted into 1983.",
+ "album": "High Adventure",
+ "aliases": {
+  "youtube": [
+   "_MLxCgyo0uA"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/b4/d3/e9b4d38d-5068-4bb0-0b67-554d4f83dd8d/mzaf_14714185636831292633.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/heart-to-heart/185797482?i=185798016&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Loggins wrote it with Michael McDonald and David Foster, and produced it with Bruce Botnick. McDonald plays Rhodes and sings backup, Foster plays grand piano, and David Sanborn takes the saxophone solo, over Tris Imboden on drums and Paulinho da Costa and Lenny Castro on percussion. Foster, Neil Larsen and Marty Paich are all credited on the strings, and Richard Page and Steve George, two years from Mr. Mister, sing backing vocals.",
+  "context": "Columbia released it as the second single from High Adventure, the record where Loggins also cut 'Don't Fight It' with Steve Perry. It got to 15 on the Hot 100 and stayed there five weeks in early 1983, made 3 on the US Adult Contemporary chart and number 1 on Canada's. The panel's purist liked it for the writing credits; the chart historian voted no because it never got higher.",
+  "listen_for": [
+   {
+    "where": "the instrumental break",
+    "note": "David Sanborn's saxophone solo, a jazz-funk player with his own records out, taking a break on a Loggins ballad."
+   },
+   {
+    "where": "under the verses",
+    "note": "McDonald on Rhodes while Foster plays acoustic grand: two of the three writers on keyboards together."
+   },
+   {
+    "where": "the choruses",
+    "note": "McDonald's backing vocal, the sound that makes this a 'This Is It' sequel."
+   }
+  ],
+  "leads_to": {
+   "artist": "Mr. Mister",
+   "title": "Broken Wings",
+   "year": 1985,
+   "why": "Richard Page and Steve George sing backup here; three years later their own band had a two-week Hot 100 number 1."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Heart_to_Heart_(Kenny_Loggins_song)",
+   "https://sessiondays.com/2018/07/1982-kenny-loggins-heart-to-heart-us15/",
+   "https://en.wikipedia.org/wiki/Broken_Wings_(Mr._Mister_song)",
+   "https://en.wikipedia.org/wiki/This_Is_It_(Kenny_Loggins_song)"
+  ],
+  "unverified": "Sources disagree on High Adventure's release date (20 August or 5 September 1982). I couldn't confirm where in the song each string arranger's part sits, or the studio."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Stuck at 15",
+   "line": "Released in November 1982, it sat at 15 on the Hot 100 for five weeks from late January 1983, and got to 3 on US Adult Contemporary and 1 in Canada.",
+   "wiki": "Heart_to_Heart_(Kenny_Loggins_song)",
+   "source": "https://en.wikipedia.org/wiki/Heart_to_Heart_(Kenny_Loggins_song)"
+  },
+  {
+   "kind": "chart",
+   "title": "High Adventure",
+   "line": "The album reached 13 on the Billboard 200 and went platinum, with 'Don't Fight It', Loggins's duet with Steve Perry, reaching 17.",
+   "wiki": "High_Adventure",
+   "source": "https://en.wikipedia.org/wiki/Kenny_Loggins_discography"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "id": "bryan-ferry--windswept",
+ "title": "Windswept",
+ "artist": "Bryan Ferry",
+ "year": 1985,
+ "year_note": "",
+ "album": "Boys and Girls",
+ "aliases": {
+  "youtube": [
+   "T-oYkpsnvIc"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/d3/90/6fd39079-61e3-9c82-945f-efba1fcd7f72/mzaf_856424046179033436.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/windswept/724305502?i=724307138&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Ferry wrote it alone and produced it with Rhett Davies. The album credits put David Gilmour on lead guitar and David Sanborn on saxophone, with Andy Newmark on drums. It closes side one of Boys and Girls.",
+  "context": "Ferry was finishing the album while grieving his father. The song turned up on the season 2 premiere of Miami Vice, 'The Prodigal Son', on 27 September 1985, two months before E.G. put it out as the third single on 29 November. It stalled at 46 in the UK. Derek Jarman directed the video, again with Laurence Treil. Ferry named it in 2003 as one of his six favourite songs of his own.",
+  "listen_for": [
+   {
+    "where": "the lead guitar",
+    "note": "David Gilmour, in the same year he stood behind Ferry at Live Aid."
+   },
+   {
+    "where": "the saxophone",
+    "note": "David Sanborn again, the same player as on 'Don't Stop the Dance'."
+   }
+  ],
+  "leads_to": {
+   "artist": "Roxy Music",
+   "title": "Always Unknowing",
+   "year": 1982,
+   "why": "The B-side of the 'Avalon' single. Matt P at Moving the River hears 'Windswept' as its descendant, and you can hear the same drifting mood."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Windswept_(song)",
+   "https://en.wikipedia.org/wiki/Boys_and_Girls_(album)",
+   "https://movingtheriver.com/tag/rhettdavies/",
+   "https://en.wikipedia.org/wiki/Miami_Vice_season_2",
+   "https://www.zeroto180.org/always-unknowing-roxy-music-ever-uncertain/"
+  ],
+  "unverified": "The Miami Vice placement comes from the 'Windswept' Wikipedia article; the season 2 page confirms the episode and date but doesn't list its music. Tomasz's quote calls it a deep cut, fair for a number 46."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Miami Vice",
+   "line": "It played in 'The Prodigal Son', the two-hour season 2 premiere that sent Crockett and Tubbs to New York, aired 27 September 1985.",
+   "wiki": "Miami_Vice",
+   "source": "https://en.wikipedia.org/wiki/Windswept_(song)"
+  },
+  {
+   "kind": "video",
+   "title": "Derek Jarman's video",
+   "line": "Jarman directed the clip, with Laurence Treil again. The single came out on 29 November 1985 and peaked at 46 in the UK and 29 in Ireland.",
+   "wiki": "Windswept_(song)",
+   "source": "https://en.wikipedia.org/wiki/Windswept_(song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

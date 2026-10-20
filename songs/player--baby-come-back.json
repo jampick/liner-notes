@@ -1,0 +1,75 @@
+{
+ "id": "player--baby-come-back",
+ "title": "Baby Come Back",
+ "artist": "Player",
+ "year": 1977,
+ "year_note": "Single out September 1977; it hit No. 1 in January 1978.",
+ "album": "Player",
+ "aliases": {
+  "youtube": [
+   "BVXmy22EoLA"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/65/df/ec/65dfec64-6997-c518-6700-461bf49b41e0/mzaf_15777928770580253326.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/baby-come-back/1458825368?i=1458825378&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Peter Beckett and J. C. Crowley wrote it; according to American Top 40 in November 1977, it came after two of the band had broken up with their girlfriends. Dennis Lambert and Brian Potter produced. Beckett sang lead and played electric guitar, Crowley played acoustic and electric piano, Ronn Moss bass and John Friesen drums, with Wayne Cook adding synths, clavinet and more electric piano.",
+  "context": "Beckett was a Liverpudlian who stayed in LA after his band Skyband split, and met Crowley, a Texan, at a party. Lambert and Potter moved them to RSO in 1976, and their first tour that autumn had them opening for Gino Vannelli and then Boz Scaggs. The single held No. 1 on the Hot 100 for the weeks of 14, 21 and 28 January 1978 and got to 10 on the soul chart. Moss later spent 25 years as Ridge Forrester on The Bold and the Beautiful.",
+  "listen_for": [
+   {
+    "where": "the chorus",
+    "note": "Beckett's lead with Crowley and Moss on the backing vocals, the blue-eyed soul blend that took a white rock band to No. 10 on the soul chart."
+   },
+   {
+    "where": "under the verses",
+    "note": "Two keyboard players, Crowley on acoustic and electric piano and session man Wayne Cook on clavinet and synths, filling the space a second guitarist would usually take."
+   }
+  ],
+  "leads_to": {
+   "artist": "Ocean Alley",
+   "title": "Baby Come Back",
+   "year": 2018,
+   "why": "Recorded for triple j's Like a Version 40 years on, and certified gold in Australia."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Baby_Come_Back_(Player_song)",
+   "https://en.wikipedia.org/wiki/Player_(band)"
+  ],
+  "unverified": "Ocean Alley's triple j Hottest 100 placing is tagged citation needed on Wikipedia, so I left it out."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Three weeks at No. 1",
+   "line": "It topped the Hot 100 for the weeks of 14, 21 and 28 January 1978 and was the seventh-biggest single of the year.",
+   "source": "https://en.wikipedia.org/wiki/Baby_Come_Back_(Player_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "The Simpsons",
+   "line": "It turns up as part of a joke in 'Homer Alone', a 1992 episode of The Simpsons.",
+   "wiki": "Homer_Alone",
+   "source": "https://en.wikipedia.org/wiki/Baby_Come_Back_(Player_song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Ocean Alley",
+   "line": "Ocean Alley recorded it for triple j's Like a Version in 2018, and their version went gold in Australia.",
+   "wiki": "Ocean_Alley",
+   "source": "https://en.wikipedia.org/wiki/Baby_Come_Back_(Player_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

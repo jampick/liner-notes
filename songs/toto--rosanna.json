@@ -1,0 +1,90 @@
+{
+ "id": "toto--rosanna",
+ "title": "Rosanna",
+ "artist": "Toto",
+ "year": 1982,
+ "year_note": "",
+ "album": "Toto IV",
+ "aliases": {
+  "youtube": [
+   "qmOLtTGvsbM"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/bb/d6/8dbbd6f5-6888-7bed-7074-0dd0a8f874cd/mzaf_7520844852973795770.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/rosanna/185716551?i=185716601&uo=4"
+  }
+ },
+ "notes": {
+  "made": "David Paich wrote it, and Jeff Porcaro built the drum part out of Bernard Purdie's half-time shuffle, John Bonham's shuffle on 'Fool in the Rain' and the Bo Diddley beat; he cited Steely Dan's 'Home at Last' as an influence. The basic track was done in a day and Steve Lukather's guitar solo in one take. Paich and Steve Porcaro stacked the middle keyboard solos on a Minimoog, Yamaha CS-80s, Prophets, a Hammond and a Yamaha GS1, with Jerry Hey's horn chart played by Hey, Gary Grant, Tom Scott, Jim Horn and Chicago's Jimmy Pankow.",
+  "context": "Columbia put the single out in the US on 31 March 1982 and it sat at number 2 on the Hot 100 for five straight weeks, stuck behind the Human League's 'Don't You Want Me' and Survivor's 'Eye of the Tiger'. It won Record of the Year at the 1983 Grammys. Steve Porcaro was dating Rosanna Arquette at the time, but Paich has said the song is about three girls he knew rolled into one, and he took her name because it fitted after 'meet you all the way'. US baby girls named Rosanna went from 194 in 1981 to 492 in 1982.",
+  "listen_for": [
+   {
+    "where": "the opening bars of the album version",
+    "note": "Drums alone first. This is the 'Rosanna shuffle', half-time with ghost notes on the snare, and drummers still learn it as a set piece."
+   },
+   {
+    "where": "the verses",
+    "note": "The key drops from G major to F major halfway through, and the lead vocal passes from Lukather to Bobby Kimball at the same moment. The two of them worked out the handover together."
+   },
+   {
+    "where": "the last minute",
+    "note": "The song was meant to end after the choruses. Jeff Porcaro kept playing, Paich started a honky-tonk piano part, and the band followed. The single edit fades before any of it."
+   }
+  ],
+  "leads_to": {
+   "artist": "Steely Dan",
+   "title": "Home at Last",
+   "year": 1977,
+   "why": "Bernard Purdie's half-time shuffle on Aja, the groove Jeff Porcaro named as an influence on his part here."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rosanna_(song)",
+   "https://en.wikipedia.org/wiki/Toto_IV",
+   "https://sessiondays.com/?p=7942",
+   "https://en.wikipedia.org/wiki/25th_Annual_Grammy_Awards",
+   "https://www.nancy.cc/2023/10/17/baby-name-rosanna/"
+  ],
+  "unverified": "Sources disagree on the Toto IV release date (29 March or 8 April 1982). I couldn't confirm which keyboard plays which line in the solo section."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "West Side Story on a soundstage",
+   "line": "Steve Barron directed it with Cynthia Rhodes as Rosanna in a red dress, which led to her casting in Staying Alive the next year. Patrick Swayze dances in it, uncredited.",
+   "wiki": "Cynthia_Rhodes",
+   "source": "https://en.wikipedia.org/wiki/Rosanna_(song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Five weeks at number 2",
+   "line": "Released in the US on 31 March 1982, it spent five weeks at 2 behind 'Don't You Want Me' and 'Eye of the Tiger', and got to 12 in the UK.",
+   "wiki": "Toto_IV",
+   "source": "https://en.wikipedia.org/wiki/Rosanna_(song)"
+  },
+  {
+   "kind": "award",
+   "title": "Record of the Year",
+   "line": "At the Shrine Auditorium on 23 February 1983 it won Record of the Year plus both arrangement Grammys, part of Toto's six-award night with John Denver hosting.",
+   "wiki": "25th_Annual_Grammy_Awards",
+   "source": "https://en.wikipedia.org/wiki/25th_Annual_Grammy_Awards"
+  },
+  {
+   "kind": "cover",
+   "title": "Weezer's decoy",
+   "line": "In May 2018 Weezer covered 'Rosanna' as a stunt for fans who had asked for 'Africa', then released 'Africa' days later. Toto replied with a cover of 'Hash Pipe' that August.",
+   "wiki": "Weezer",
+   "source": "https://en.wikipedia.org/wiki/Rosanna_(song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

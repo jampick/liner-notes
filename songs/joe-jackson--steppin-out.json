@@ -1,0 +1,72 @@
+{
+ "id": "joe-jackson--steppin-out",
+ "title": "Steppin' Out",
+ "artist": "Joe Jackson",
+ "year": 1982,
+ "year_note": "",
+ "album": "Night and Day",
+ "aliases": {
+  "youtube": [
+   "PJwt2dxx9yg"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4f/b1/7e/4fb17ea9-c28a-7769-e429-c259bfed47a7/mzaf_12897739305815742603.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/steppin-out/1440641327?i=1440641332&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Jackson recorded Night and Day at Blue Rock in SoHo, New York, producing with David Kershenbaum. On his 2019 tour he said he played everything on this track himself (piano, Hammond, Minimoog, vibraphone) except for Larry Tolfree, who added a real snare and cymbal hits. The rest of the beat is a 1979 Korg KR-55 drum machine, the same unit he took on tour four decades later.",
+  "context": "Jackson was living in New York from late 1981, and Night and Day is his tribute to Cole Porter and to the city; elsewhere on it, 'Real Men' looks at New York's early-80s gay scene. Released in the US in early August 1982, it sat at 6 on the Hot 100 for four weeks over Christmas into 1983 and also hit 6 in the UK, and it got Grammy nominations for Record of the Year and Best Male Pop Vocal. Jackson made the Steve Barron video against his own wishes; he told Time Out that videos and MTV were turning rock into a circus.",
+  "listen_for": [
+   {
+    "where": "the opening bars",
+    "note": "The ticking pulse is a cheap Korg KR-55 from 1979, with Tolfree's live snare and cymbals laid on top. It is a home-demo rhythm dressed in a nightclub suit."
+   },
+   {
+    "where": "the instrumental breaks",
+    "note": "Listen for the vibraphone and Minimoog against the piano, all Jackson, which is how a one-man overdub sounds like a small city band."
+   }
+  ],
+  "leads_to": {
+   "artist": "Fred Astaire with Leo Reisman and His Orchestra",
+   "title": "Night and Day",
+   "year": 1933,
+   "why": "The Cole Porter song the album is named after, recorded in Manhattan a week before Gay Divorce opened in November 1932 and released by Victor in January 1933."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Steppin%27_Out_(Joe_Jackson_song)",
+   "https://en.wikipedia.org/wiki/Night_and_Day_(Joe_Jackson_album)",
+   "https://en.wikipedia.org/wiki/Joe_Jackson_(musician)",
+   "https://en.wikipedia.org/wiki/Night_and_Day_(song)",
+   "https://en.wikipedia.org/wiki/The_Lexicon_of_Love"
+  ],
+  "unverified": "Recording dates for this track conflict (Wikipedia says January 1982 at Blue Rock, MusicBrainz says March to June), so I left the month out. Tomasz's quote calls the piano jazz piano; no source I read describes it that way."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number 6, twice",
+   "line": "It sat at 6 on the Billboard Hot 100 for four weeks from 11 December 1982 and reached 6 in the UK the same month, his biggest US hit.",
+   "wiki": "Steppin'_Out_(Joe_Jackson_song)",
+   "source": "https://en.wikipedia.org/wiki/Steppin%27_Out_(Joe_Jackson_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Two Grammy nominations",
+   "line": "It was up for Record of the Year and Best Male Pop Vocal in 1983, losing to Toto's 'Rosanna' and Lionel Richie's 'Truly'.",
+   "wiki": "Night_and_Day_(Joe_Jackson_album)",
+   "source": "https://en.wikipedia.org/wiki/Steppin%27_Out_(Joe_Jackson_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-1)",
+  "written_on": "2026-10-19"
+ }
+}

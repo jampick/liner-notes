@@ -1,0 +1,89 @@
+{
+ "id": "toto--africa",
+ "title": "Africa",
+ "artist": "Toto",
+ "year": 1982,
+ "year_note": "On Toto IV (1982). Single released 25 June 1982 in the UK and 7 October 1982 in the US; it reached number 1 on the Hot 100 in February 1983.",
+ "album": "Toto IV",
+ "aliases": {
+  "youtube": [
+   "FTQbiNvZqaY"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bb/3d/07/bb3d07a3-b3af-2c99-5c9f-eb72796268c2/mzaf_11871467005041854011.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/africa/185716551?i=185717604&uo=4"
+  }
+ },
+ "notes": {
+  "made": "David Paich and Jeff Porcaro wrote it and Paich wrote the words, from a late-night TV documentary, the missionary teachers at his Catholic school and a National Geographic article; he had never been to Africa. Paich found the opening brass sound on a Yamaha CS-80, and Steve Porcaro programmed the kalimba part on a Yamaha GS-1 and layered it six times with different rhythms. Jeff played without a click track, and he and his father Joe Porcaro made percussion loops from bottle caps and bass marimba, remembering the drummers at the African pavilion of the 1964 New York World's Fair. Lenny Castro plays congas, Jim Horn recorders, and Timothy B. Schmit sings and plays 12-string. Al Schmitt recorded it at Sunset Sound.",
+  "context": "It was Toto's only Hot 100 number 1, and it reached 3 in the UK. Steve Barron, who had shot 'Rosanna', directed the video, which passed a billion YouTube views on 4 June 2024. It is a close call on this list because the panel's purist and crate-digger hear synth adult pop, not yacht. The internet sided with the song anyway: a teenage fan account talked Weezer into covering it in 2018, and in 2019 a solar-powered installation in the Namib desert started playing it on a loop.",
+  "listen_for": [
+   {
+    "where": "the opening bars",
+    "note": "The kalimba-like riff is a Yamaha GS-1 digital piano, played six times over in different rhythms and stacked, with Paich's brassy CS-80 chords underneath."
+   },
+   {
+    "where": "under everything",
+    "note": "Joe and Jeff Porcaro's percussion loops and Lenny Castro's congas, played live with no click."
+   },
+   {
+    "where": "the vocals",
+    "note": "Paich sings the verses and Bobby Kimball takes the chorus, with Schmit in the backing stack."
+   }
+  ],
+  "leads_to": {
+   "artist": "Weezer",
+   "title": "Africa",
+   "year": 2018,
+   "why": "The fan-campaign cover that went to number 1 on Billboard's Alternative Songs chart, after Weezer first put out a cover of 'Rosanna' as a stunt."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Africa_(Toto_song)",
+   "https://en.wikipedia.org/wiki/Toto_IV",
+   "https://en.wikipedia.org/wiki/Rosanna_(song)",
+   "https://en.wikipedia.org/wiki/Human_Nature_(Michael_Jackson_song)"
+  ],
+  "unverified": "I couldn't confirm the exact week it reached number 1 or how long it stayed there."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Toto's only number 1",
+   "line": "Released in the US on 7 October 1982, it reached number 1 on the Hot 100 in February 1983 and 3 in the UK.",
+   "wiki": "Toto_IV",
+   "source": "https://en.wikipedia.org/wiki/Africa_(Toto_song)"
+  },
+  {
+   "kind": "video",
+   "title": "A billion views",
+   "line": "Steve Barron directed the video, with Mike Porcaro miming Hungate's bass. It passed one billion YouTube views on 4 June 2024.",
+   "wiki": "Steve_Barron",
+   "source": "https://en.wikipedia.org/wiki/Africa_(Toto_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Stranger Things to Vice City",
+   "line": "It has turned up in Stranger Things, Family Guy, South Park and Top Gear, and on the radio in Grand Theft Auto: Vice City (2002).",
+   "wiki": "Grand_Theft_Auto:_Vice_City",
+   "source": "https://en.wikipedia.org/wiki/Africa_(Toto_song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Weezer, by request",
+   "line": "A fan account run by 14-year-old Mary Klym started asking in December 2017. Weezer's cover came out on 29 May 2018, made 51 on the Hot 100 and topped Alternative Songs that August.",
+   "wiki": "Weezer",
+   "source": "https://en.wikipedia.org/wiki/Africa_(Toto_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

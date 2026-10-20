@@ -1,0 +1,84 @@
+{
+ "id": "abc--the-look-of-love",
+ "title": "The Look of Love",
+ "artist": "ABC",
+ "year": 1982,
+ "year_note": "",
+ "album": "The Lexicon of Love",
+ "aliases": {
+  "youtube": [
+   "cNEdxZURTaI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/9d/71/4e9d7174-51aa-9327-d0ef-96315b4e996e/mzaf_17965108291491512399.plus.aac.p.m4a",
+   "url": "https://music.apple.com/gb/album/the-look-of-love-pt-1/1440920887?i=1440921183&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Trevor Horn produced it with engineer Gary Langan. Tracking was at Good Earth in Soho and the mix at Sarm East near Brick Lane on one of the first SSL 4000E desks in Britain; it was the first track Horn mixed with computer automation. David Palmer programmed the beat before the band got to the studio, Mark White's Minimoog bass was already in place, and Horn told them it needed a string section, which Anne Dudley arranged. Horn had just bought a Fairlight CMI for about £18,000, with J.J. Jeczalik programming.",
+  "context": "ABC came out of Sheffield's electronic scene (Vice Versa, their own Neutron label) and Fry wanted songs about loving or hating someone, the way Cole Porter wrote them, over Chic strings and Earth, Wind & Fire. It reached 4 in the UK, ABC's biggest hit there, went to 1 in Canada and on the US dance chart, and 18 on the Hot 100. The Lexicon of Love entered the UK album chart at number one. A year later Horn, Langan, Dudley and Jeczalik were the Art of Noise and the core of ZTT.",
+  "listen_for": [
+   {
+    "where": "the second verse",
+    "note": "The spoken \"goodbye\" after the line about being left out on the pavement is Fry's actual ex-girlfriend. Horn insisted on a real woman's voice so it would feel real."
+   },
+   {
+    "where": "when the strings come in",
+    "note": "Anne Dudley's orchestration, the first strings on the record, put there at Horn's insistence. It is the sound that made new pop look like an MGM musical."
+   },
+   {
+    "where": "the sax lines",
+    "note": "Stephen Singleton's saxophone runs through an AMS digital delay and a Lexicon 224 reverb, which is why it sounds wider than the room it was played in."
+   }
+  ],
+  "leads_to": {
+   "artist": "Chic",
+   "title": "I Want Your Love",
+   "year": 1978,
+   "why": "Fry said he loved the strings on Chic records; this C'est Chic track is built on the horn-and-strings riff ABC were trying to marry to Joy Division."
+  },
+  "sources": [
+   "https://www.soundonsound.com/techniques/classic-tracks-abc-look-love",
+   "https://en.wikipedia.org/wiki/The_Look_of_Love_(ABC_song)",
+   "https://en.wikipedia.org/wiki/The_Lexicon_of_Love",
+   "https://en.wikipedia.org/wiki/ABC_(band)",
+   "https://en.wikipedia.org/wiki/I_Want_Your_Love_(Chic_song)",
+   "https://www.irishexaminer.com/lifestyle/artsfilmtv/abcs-martin-fry-regrets-not-capitalising-on-early-success-235195.html"
+  ],
+  "unverified": "Imogen calls them 'the Trevor Horn strings'. Horn pushed for strings and produced, but Anne Dudley wrote the arrangement. Wikipedia credits Palmer with a Linn LM-1; Sound on Sound says he bought a LinnDrum. I left out the model and the claim that Fry wore the gold suit on Top of the Pops, which I couldn't confirm."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK number 4",
+   "line": "Two weeks at 4 in June 1982, ABC's highest UK placing and the 29th best seller of the year; number 1 in Canada and on the US dance chart, 18 on the Hot 100.",
+   "wiki": "The_Look_of_Love_(ABC_song)",
+   "source": "https://en.wikipedia.org/wiki/The_Look_of_Love_(ABC_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Radio 1 sign-off",
+   "line": "Through the 1980s Gary Davies closed his Radio 1 lunchtime show, The Bit in the Middle, on the last crescendo of 'Part Four' of the 12-inch.",
+   "wiki": "BBC_Radio_1",
+   "source": "https://en.wikipedia.org/wiki/The_Look_of_Love_(ABC_song)"
+  },
+  {
+   "kind": "live",
+   "title": "Royal Albert Hall, 2009",
+   "line": "Fry played the whole of The Lexicon of Love at the Royal Albert Hall with the BBC Concert Orchestra, conducted by Anne Dudley, with Trevor Horn joining them.",
+   "wiki": "Royal_Albert_Hall",
+   "source": "https://en.wikipedia.org/wiki/The_Lexicon_of_Love"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-1)",
+  "written_on": "2026-10-19"
+ }
+}

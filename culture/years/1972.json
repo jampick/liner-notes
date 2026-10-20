@@ -1,0 +1,47 @@
+{
+ "year": 1972,
+ "items": [
+  {
+   "kind": "film",
+   "title": "The Godfather",
+   "line": "Opened in the US on 24 March 1972 after a New York premiere on the 14th. It cost $6 to 7 million and won three Oscars, including Best Picture.",
+   "wiki": "The_Godfather",
+   "source": "https://en.wikipedia.org/wiki/The_Godfather"
+  },
+  {
+   "kind": "news",
+   "title": "The Watergate break-in",
+   "line": "Burglars were caught in the Democratic National Committee offices at the Watergate on 17 June 1972. Sixty-nine people were eventually charged.",
+   "wiki": "Watergate_scandal",
+   "source": "https://en.wikipedia.org/wiki/Watergate_scandal"
+  },
+  {
+   "kind": "sport",
+   "title": "Fischer v Spassky",
+   "line": "Bobby Fischer beat Boris Spassky 12½ to 8½ in Reykjavík between July and September 1972, after forfeiting game 2 in a row over the cameras.",
+   "wiki": "World_Chess_Championship_1972",
+   "source": "https://en.wikipedia.org/wiki/World_Chess_Championship_1972"
+  },
+  {
+   "kind": "sport",
+   "title": "Mark Spitz in Munich",
+   "line": "Spitz won seven golds at the 1972 Munich Olympics and set a world record in every one of the seven events.",
+   "wiki": "Mark_Spitz",
+   "source": "https://en.wikipedia.org/wiki/Mark_Spitz"
+  },
+  {
+   "kind": "game",
+   "title": "Pong",
+   "line": "Atari's prototype went into Andy Capp's Tavern in August 1972 and the arcade game was announced on 29 November. By the end of 1974 Atari had sold more than 8,000.",
+   "wiki": "Pong",
+   "source": "https://en.wikipedia.org/wiki/Pong"
+  },
+  {
+   "kind": "tv",
+   "title": "M*A*S*H",
+   "line": "Premiered on CBS on 17 September 1972 and ran 11 seasons and 256 episodes, finishing in February 1983.",
+   "wiki": "M*A*S*H_(TV_series)",
+   "source": "https://en.wikipedia.org/wiki/M*A*S*H_(TV_series)"
+  }
+ ]
+}

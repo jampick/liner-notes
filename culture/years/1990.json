@@ -1,0 +1,40 @@
+{
+ "year": 1990,
+ "items": [
+  {
+   "kind": "news",
+   "title": "Poll tax riot",
+   "line": "A march against the poll tax turned into a riot around Trafalgar Square on 31 March 1990. Police made 339 arrests and 113 people were injured.",
+   "wiki": "Poll_tax_riots",
+   "source": "https://en.wikipedia.org/wiki/Poll_tax_riots"
+  },
+  {
+   "kind": "tv",
+   "title": "Twin Peaks",
+   "line": "David Lynch and Mark Frost's Twin Peaks premiered on ABC on 8 April 1990. Angelo Badalamenti scored it with Lynch, and the theme is an instrumental of Julee Cruise's 'Falling'.",
+   "wiki": "Twin_Peaks",
+   "source": "https://en.wikipedia.org/wiki/Twin_Peaks"
+  },
+  {
+   "kind": "music",
+   "title": "Spike Island",
+   "line": "The Stone Roses played Spike Island in Widnes on 27 May 1990 to about 30,000, some 2,000 of them gatecrashers.",
+   "wiki": "Spike_Island_(concert)",
+   "source": "https://en.wikipedia.org/wiki/Spike_Island_(concert)"
+  },
+  {
+   "kind": "game",
+   "title": "Super Famicom",
+   "line": "The Super Famicom went on sale in Japan on 21 November 1990 at ¥25,000 with Super Mario World and F-Zero. The first 300,000 sold out in hours.",
+   "wiki": "Super_Nintendo_Entertainment_System",
+   "source": "https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System"
+  },
+  {
+   "kind": "news",
+   "title": "Thatcher resigns",
+   "line": "After Michael Heseltine's leadership challenge, Margaret Thatcher announced her resignation on 22 November 1990 and left Downing Street on 28 November after 11 years.",
+   "wiki": "Resignation_of_Margaret_Thatcher",
+   "source": "https://en.wikipedia.org/wiki/Resignation_of_Margaret_Thatcher"
+  }
+ ]
+}

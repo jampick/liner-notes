@@ -1,0 +1,76 @@
+{
+ "id": "the-style-council--youre-the-best-thing",
+ "title": "You're the Best Thing",
+ "artist": "The Style Council",
+ "year": 1984,
+ "year_note": "",
+ "album": "Café Bleu",
+ "aliases": {
+  "youtube": [
+   "0HMAVU1k7kg"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ad/98/03/ad980327-a51e-9dd1-7353-ec15ad1343f0/mzaf_2573284458448776819.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/youre-the-best-thing/1440911737?i=1440912115&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Weller wrote it and produced it with Peter Wilson at Solid Bond. Weller sings and plays guitar and synthesizer, Mick Talbot plays synth bass and keyboards, and Steve White plays drums. The album version runs 5:45; the 4:18 single adds Wilson's drum programming and string arrangement and a saxophone solo by Billy Chapman that isn't on the album. The strings for Café Bleu were recorded at CBS in London.",
+  "context": "Released on 18 May 1984 as a double A-side with 'The Big Boss Groove' (officially the Groovin' EP in the UK), it reached 5 and was certified Silver. In the US it managed 76. Café Bleu came out in the middle of the 'Council Meetings' tour, with Billy Bragg supporting, and that December Weller made 'Soul Deep' as the Council Collective for striking miners' families.",
+  "listen_for": [
+   {
+    "where": "under the vocal",
+    "note": "Mick Talbot's synth bass, not a bass guitar. It keeps the bottom soft, closer to a 1970s soul ballad than a guitar band."
+   },
+   {
+    "where": "the saxophone solo (single version)",
+    "note": "Billy Chapman's solo exists only on the 7-inch, so the album version has none. If you hear sax, you have the single."
+   },
+   {
+    "where": "the strings (single version)",
+    "note": "Peter Wilson arranged them and programmed the drums for the single, which is why it sounds plusher than the album take."
+   }
+  ],
+  "leads_to": {
+   "artist": "Dee C. Lee",
+   "title": "See the Day",
+   "year": 1985,
+   "why": "Lee sang with the Style Council from 1984 and later married Weller; her own ballad got to 3, a year after this, with the band's 'The Paris Match' on the B-side."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/You%27re_the_Best_Thing",
+   "https://en.wikipedia.org/wiki/Caf%C3%A9_Bleu",
+   "https://en.wikipedia.org/wiki/The_Style_Council",
+   "https://en.wikipedia.org/wiki/See_the_Day",
+   "https://en.wikipedia.org/wiki/Dee_C._Lee"
+  ],
+  "unverified": "I found no source tying this song to a specific Curtis Mayfield record (the panel's 'Curtis Mayfield tradition'); writers do link Mayfield to the B-side 'The Big Boss Groove' and to Weller's listening in general."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "The Groovin' EP",
+   "line": "Released 18 May 1984 as a double A-side with 'The Big Boss Groove', officially the Groovin' EP in the UK, it reached 5 there and 76 in the US.",
+   "wiki": "Café_Bleu",
+   "source": "https://en.wikipedia.org/wiki/You%27re_the_Best_Thing"
+  },
+  {
+   "kind": "video",
+   "title": "Tim Pope again",
+   "line": "Tim Pope directed the video, as he did for 'My Ever Changing Moods'. The 12-inch added a dub, 'You're the Dub Thing'.",
+   "wiki": "The_Style_Council",
+   "source": "https://en.wikipedia.org/wiki/You%27re_the_Best_Thing"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

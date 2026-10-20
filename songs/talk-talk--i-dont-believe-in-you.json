@@ -1,0 +1,74 @@
+{
+ "id": "talk-talk--i-dont-believe-in-you",
+ "title": "I Don't Believe in You",
+ "artist": "Talk Talk",
+ "year": 1986,
+ "year_note": "On The Colour of Spring (17 February 1986). Released as the album's fourth and last single on 10 November 1986.",
+ "album": "The Colour of Spring",
+ "aliases": {
+  "youtube": [
+   "o8canrG0YfY"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b8/20/37/b8203787-3513-b236-3bb1-f2121ea25776/mzaf_4302072342275715501.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/i-dont-believe-in-you-1997-remaster/696811651?i=696811876&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Mark Hollis and Tim Friese-Greene wrote it and Friese-Greene produced, at Battery Studios and Videosonics in London in 1985. Paul Webb plays bass and Lee Harris drums, with Robbie McIntosh on guitar, Steve Winwood on organ, Gaynor Sadler on harp, Morris Pert on percussion and David Roach on soprano saxophone. Hollis said they only used synthesisers for economic reasons and would be delighted if they didn't exist.",
+  "context": "The Colour of Spring reached 8 in the UK and 1 in the Netherlands and became the band's best-selling studio album. This single, though, stalled at 96, and no video was made. Within months Hollis and Friese-Greene were at Wessex Studios starting Spirit of Eden, and Talk Talk never toured again after it.",
+  "listen_for": [
+   {
+    "where": "the organ under the verses",
+    "note": "Steve Winwood plays organ on three tracks of the album, this one among them, alongside Hollis's own piano."
+   },
+   {
+    "where": "the guitar solo",
+    "note": "Record Mirror reckoned it a cut below the one on 'Life's What You Make It'. Robbie McIntosh is the guitarist credited on the track."
+   },
+   {
+    "where": "Hollis's vocal",
+    "note": "Music & Media called the single 'bluesy'. He sings it slow and close, and the band leaves a lot of room around him."
+   }
+  ],
+  "leads_to": {
+   "artist": "Talk Talk",
+   "title": "Spirit of Eden",
+   "year": 1988,
+   "why": "Recorded at Wessex Studios from May 1987 to March 1988 with no tour and one single; where the restraint on this track was heading."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/I_Don%27t_Believe_in_You",
+   "https://en.wikipedia.org/wiki/The_Colour_of_Spring",
+   "https://en.wikipedia.org/wiki/Spirit_of_Eden"
+  ],
+  "unverified": "Tomasz's quote calls it 'a small hit'. It peaked at 96 in the UK, which is barely a chart entry. I couldn't confirm where in the track the harp and soprano sax come in, so they're not in the listen notes."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number 96",
+   "line": "Parlophone released it on 10 November 1986 as the fourth single from The Colour of Spring. It reached 96, and no video was made.",
+   "wiki": "The_Colour_of_Spring",
+   "source": "https://en.wikipedia.org/wiki/I_Don%27t_Believe_in_You"
+  },
+  {
+   "kind": "live",
+   "title": "Montreux B-side",
+   "line": "The B-side is an eight-minute live 'Does Caroline Know', recorded at the Montreux Jazz Festival in summer 1986.",
+   "wiki": "Montreux_Jazz_Festival",
+   "source": "https://en.wikipedia.org/wiki/I_Don%27t_Believe_in_You"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "id": "everything-but-the-girl--driving",
+ "title": "Driving",
+ "artist": "Everything But the Girl",
+ "year": 1990,
+ "year_note": "Lead single from The Language of Life (5 February 1990).",
+ "album": "The Language of Life",
+ "aliases": {
+  "youtube": [
+   "qsRnVtIeLyg"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c4/38/1b/c4381b21-24c5-b035-5c98-305fb7503a56/mzaf_2659544218457377043.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/driving/1629189408?i=1629189409&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Ben Watt wrote it. Tommy LiPuma, who produced George Benson's Breezin', produced the album in Los Angeles at Bill Schnee Studios, Sunset Sound and Ocean Way, with Al Schmitt engineering. On this track Tracey Thorn sings over John Patitucci on bass, Omar Hakim on drums, Larry Williams on keyboards, Lenny Castro on percussion and Michael Brecker on tenor saxophone.",
+  "context": "It was the band's first US chart record: 23 on Adult Contemporary and 26 on Alternative Airplay, though only 54 in the UK. The album split their British fans and went to 10. Thorn later called it 'a slightly slick, kind of semi-jazzy, sophisticated record'. A Todd Terry mix took the song to 36 in the UK in 1996, after his remix of 'Missing' had changed the band's direction.",
+  "listen_for": [
+   {
+    "where": "the saxophone",
+    "note": "Michael Brecker on tenor, the only player Wikipedia credits to this track by name."
+   },
+   {
+    "where": "the rhythm section",
+    "note": "John Patitucci and Omar Hakim, LA and New York jazz-fusion players, playing it as quietly as they can."
+   }
+  ],
+  "leads_to": {
+   "artist": "George Benson",
+   "title": "Breezin'",
+   "year": 1976,
+   "why": "Tommy LiPuma produced it: number 1 on the Billboard pop, jazz and R&B album charts and three times Platinum, the polished LA jazz-pop that EBTG went to him for."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Language_of_Life",
+   "https://sessiondays.com/?p=58523",
+   "https://en.wikipedia.org/wiki/Everything_but_the_Girl_discography",
+   "https://en.wikipedia.org/wiki/Breezin%27",
+   "https://americansongwriter.com/how-todd-terrys-remix-of-missing-changed-the-course-of-everything-but-the-girls-career/?nb=1"
+  ],
+  "unverified": "Full track personnel comes from sessiondays.com; Wikipedia credits only Brecker to this track by name. I couldn't find a single release date or a video director."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "First US chart entry",
+   "line": "It reached 54 in the UK in 1990 but gave Everything But the Girl their first US chart placings: 23 on Adult Contemporary and 26 on Alternative Airplay.",
+   "wiki": "The_Language_of_Life",
+   "source": "https://en.wikipedia.org/wiki/Everything_but_the_Girl_discography"
+  },
+  {
+   "kind": "sample",
+   "title": "Todd Terry mix",
+   "line": "A Todd Terry mix of 'Driving' reached 36 in the UK in 1996. His remix of 'Missing' had already reached 2 on the Hot 100 and pushed the band toward dance records.",
+   "wiki": "Todd_Terry",
+   "source": "https://en.wikipedia.org/wiki/Everything_but_the_Girl_discography"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

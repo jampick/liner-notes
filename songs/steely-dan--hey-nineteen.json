@@ -1,0 +1,73 @@
+{
+ "id": "steely-dan--hey-nineteen",
+ "title": "Hey Nineteen",
+ "artist": "Steely Dan",
+ "year": 1980,
+ "year_note": "",
+ "album": "Gaucho",
+ "aliases": {
+  "youtube": [
+   "oJ11Vq6N7rk"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b0/50/6d/b0506d2c-724d-175c-edb9-a4bae5f98a23/mzaf_13675372604825523868.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/hey-nineteen/1715946508?i=1715946512&uo=4"
+  }
+ },
+ "notes": {
+  "made": "The basic beat is Wendel, the drum machine engineer Roger Nichols built after Becker and Fagen said they wanted a machine with full-frequency drum sounds; it cost $150,000 of the recording budget. Engineer Elliot Scheiner said in 2021 that Wendel played the basic beats on Hey Nineteen, Glamour Profession and My Rival, and the credited drummer played the fills live. Here that is Rick Marotta. Fagen sings and plays electric piano and synth, Becker plays bass and guitar, Hugh McCracken adds guitar, and Victor Feldman and Steve Gadd play percussion. Gary Katz produced.",
+  "context": "Gaucho came out on 21 November 1980 after sessions that started in New York in 1978, Becker being hit by a car on the Upper West Side, and a three-way legal fight between MCA, Warner Bros. and the band. The narrator is a man past his college days who can't get a nineteen-year-old to recognise 'Retha Franklin, and the last lines leave it open whether the Cuervo Gold and fine Colombian are for two or for one. It reached 10 on the Hot 100 in early 1981 and stayed 19 weeks, tied with Peg as the band's longest chart run. Becker and Fagen split in 1981 and didn't play it live until 1993.",
+  "listen_for": [
+   {
+    "where": "the groove under the first verse",
+    "note": "That dead-steady pulse is Wendel, and the fills that break it up are Rick Marotta playing over the machine. Listen to how the fills sound looser than the beat around them."
+   },
+   {
+    "where": "the choruses",
+    "note": "Frank Floyd and Zack Sanders on backing vocals, singing the title back at Fagen."
+   },
+   {
+    "where": "the last lines",
+    "note": "'The Cuervo Gold, the fine Colombian, make tonight a wonderful thing.' The ambiguity is deliberate, per AllMusic's Stewart Mason."
+   }
+  ],
+  "leads_to": {
+   "artist": "Aretha Franklin",
+   "title": "Respect",
+   "year": 1967,
+   "why": "The record the girl in the song has never heard of, from the same year the narrator was the big man on campus."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hey_Nineteen",
+   "https://en.wikipedia.org/wiki/Gaucho_(album)",
+   "https://en.wikipedia.org/wiki/Respect_(song)"
+  ],
+  "unverified": "The narrator's '1967' college days are from the Wikipedia lyric summary; I left the exact lyric out. No source for who plays the synth parts beyond Fagen's credit."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Chart peaks",
+   "line": "It reached 10 on the Hot 100 in early 1981 and charted for 19 weeks, tied with Peg and Rikki Don't Lose That Number as Steely Dan's longest run.",
+   "source": "https://en.wikipedia.org/wiki/Hey_Nineteen"
+  },
+  {
+   "kind": "award",
+   "title": "Gaucho's Grammy",
+   "line": "Gaucho won Best Engineered Recording at the 24th Grammys in 1982 and was nominated for Album of the Year.",
+   "wiki": "Gaucho_(album)",
+   "source": "https://en.wikipedia.org/wiki/Gaucho_(album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

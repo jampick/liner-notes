@@ -1,0 +1,79 @@
+{
+ "id": "gino-vannelli--i-just-wanna-stop",
+ "title": "I Just Wanna Stop",
+ "artist": "Gino Vannelli",
+ "year": 1978,
+ "year_note": "",
+ "album": "Brother to Brother",
+ "aliases": {
+  "youtube": [
+   "rpVDgaMj4hU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9e/c9/7c/9ec97c4b-af64-3295-2829-496e953b2cd3/mzaf_5857702341752284791.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/i-just-wanna-stop/1443919162?i=1443919221&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Ross Vannelli wrote it, and Gino, Joe and Ross produced it together at Davlen Sound in North Hollywood and Group IV in Hollywood. There's no bass guitar: Leon Gaer plays synthesized bass. Mark Craney is on drums, Carlos Rios guitar, Joe Vannelli electric piano and synths, Ernie Watts tenor sax and Manolo Badrena percussion, with Stephanie Spruill, Julia Tillman Waters and Maxine Willard Waters on backing vocals.",
+  "context": "A&M released the single in August 1978 and the album on 9 September. It went to No. 1 in Canada, Vannelli's home country, and 4 on the Hot 100, still his biggest hit, and it earned a Grammy nomination for Best Male Pop Vocal Performance. Player had opened for Vannelli on their first tour the autumn before.",
+  "listen_for": [
+   {
+    "where": "the low end from the first verse",
+    "note": "That bass is Leon Gaer on a synthesizer, not a bass guitar, which gives the track its smooth, rubbery floor."
+   },
+   {
+    "where": "the sax",
+    "note": "Ernie Watts on tenor, an LA studio veteran."
+   },
+   {
+    "where": "the backing vocals",
+    "note": "Julia Tillman Waters, Maxine Willard Waters and Stephanie Spruill, LA session singers, with Ross Vannelli in the stack too."
+   }
+  ],
+  "leads_to": {
+   "artist": "Angela Bofill",
+   "title": "I Just Wanna Stop",
+   "year": 1988,
+   "why": "Her version on Intuition took the song to 11 on the Black singles chart."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/I_Just_Wanna_Stop",
+   "https://en.wikipedia.org/wiki/Brother_to_Brother_(Gino_Vannelli_album)",
+   "https://sessiondays.com/?p=71741"
+  ],
+  "unverified": "The per-track personnel comes from Sessiondays; Wikipedia gives album-wide credits."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "No. 1 in Canada",
+   "line": "Released in August 1978, it reached No. 1 in Canada and 4 on the Hot 100, still Vannelli's biggest hit.",
+   "source": "https://en.wikipedia.org/wiki/I_Just_Wanna_Stop"
+  },
+  {
+   "kind": "award",
+   "title": "Grammy nomination",
+   "line": "It was nominated for Best Male Pop Vocal Performance.",
+   "source": "https://en.wikipedia.org/wiki/I_Just_Wanna_Stop"
+  },
+  {
+   "kind": "cover",
+   "title": "Angela Bofill",
+   "line": "Angela Bofill's 1988 version on Intuition reached 11 on the Black singles chart.",
+   "wiki": "Angela_Bofill",
+   "source": "https://en.wikipedia.org/wiki/I_Just_Wanna_Stop"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

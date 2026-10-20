@@ -1,0 +1,1164 @@
+{
+ "slug": "sophisti-pop",
+ "title": "Sophisti-Pop",
+ "titleA": "Sophisti",
+ "titleB": "Pop",
+ "kicker": "42 records in good suits · Avalon 1982 to Driving 1990",
+ "description": "A walk through 42 songs of 1980s sophisti-pop, from Roxy Music's Avalon to Everything But the Girl's Driving, with a taste of each, what to listen for, and how they connect.",
+ "lede": "Punk's kids bought suits. Between Roxy Music's Avalon in 1982 and Everything But the Girl's Driving in 1990, a run of young British bands went looking for jazz chords, soul singers and bossa nova guitar, and for a while the charts let them in. This is that run, one song at a time, in the order the records came out.",
+ "fonts": "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&family=DM+Mono:wght@400;500&display=swap",
+ "copy": {
+  "start": "Put the record on",
+  "resume": "Pick up at",
+  "express": "Express: four stops",
+  "companion": "Already playing the full playlist in cliamp? Companion mode keeps the previews quiet until you ask for one.",
+  "panelNote": "The panel is fictional: five invented judges who argued the list into shape. The facts under each song are real and sourced; open Sources on any stop.",
+  "endKept": "These are the ones you kept. The link below carries them, so whoever opens it gets your side of the tape.",
+  "endEmpty": "You didn't keep anything this time. Press K on a stop to keep it, and the link remembers your picks.",
+  "credits": "Picked by Imogen, Desmond, Rafe, Folake and Tomasz, a fictional panel. Researched from the sources listed on each stop. Previews and covers courtesy of Apple Music, era photographs generated for this page."
+ },
+ "panel": {
+  "judges": {
+   "imogen": {
+    "name": "Imogen Strachan",
+    "title": "the Purist",
+    "lens": "Style Council, Prefab Sprout, The Blue Nile, Sade. Can veto anything that is really synth-pop or new wave."
+   },
+   "desmond": {
+    "name": "Desmond Okafor-Reid",
+    "title": "the Chart Historian",
+    "lens": "UK and US chart peaks, and whether radio still plays it."
+   },
+   "rafe": {
+    "name": "Rafe Lindqvist",
+    "title": "the Producer",
+    "lens": "Arrangement, chord voicings and the sound itself: fretless bass, real horns or DX7 gloss."
+   },
+   "folake": {
+    "name": "Folake Bassey-Mensah",
+    "title": "the Jazz-Soul Ear",
+    "lens": "Does it really draw on jazz, soul or bossa nova, or is it just shiny?"
+   },
+   "tomasz": {
+    "name": "Tomasz Wierzbicki",
+    "title": "the Night Driver",
+    "lens": "Melancholy, nocturnal and adult. The owner's own taste, in judge form."
+   }
+  },
+  "express": {
+   "note": "Imogen's one-per-era picks: the canon in four records, for when you have ten minutes.",
+   "songs": [
+    "roxy-music--avalon",
+    "the-style-council--my-ever-changing-moods",
+    "prefab-sprout--appetite",
+    "the-blue-nile--the-downtown-lights"
+   ]
+  },
+  "quotes": {
+   "sade--smooth-operator": {
+    "j": "folake",
+    "q": "Stuart Matthewman's sax and that walking bass are a jazz club band hiding inside a pop single."
+   },
+   "sade--the-sweetest-taboo": {
+    "j": "desmond",
+    "q": "A US top 5 that still gets played every week. No other song here carries that much weight."
+   },
+   "sade--your-love-is-king": {
+    "j": "rafe",
+    "q": "The sax states the melody before she does, and the whole song is built around leaving her room."
+   },
+   "prefab-sprout--when-love-breaks-down": {
+    "j": "imogen",
+    "q": "Thomas Dolby's production is what turned Paddy McAloon's songwriting into a sound. This is the record that did it."
+   },
+   "the-style-council--my-ever-changing-moods": {
+    "j": "imogen",
+    "q": "Weller left The Jam to make exactly this kind of record. It's the manifesto."
+   },
+   "the-style-council--long-hot-summer": {
+    "j": "tomasz",
+    "q": "Slow, humid, nobody in a hurry. Every other song on my list is trying to feel like this one."
+   },
+   "the-style-council--youre-the-best-thing": {
+    "j": "folake",
+    "q": "It's a soul ballad in the Curtis Mayfield tradition, played by a man who used to wear a Rickenbacker."
+   },
+   "roxy-music--avalon": {
+    "j": "imogen",
+    "q": "Ferry's suit and Rhett Davies' production are where the whole genre gets its look and its sound."
+   },
+   "roxy-music--more-than-this": {
+    "j": "desmond",
+    "q": "Bill Murray's karaoke scene in Lost in Translation gave it a second life. Younger listeners know it too."
+   },
+   "bryan-ferry--slave-to-love": {
+    "j": "rafe",
+    "q": "The Avalon sound carried on without the band. The guitar barely touches the track and still holds it up."
+   },
+   "spandau-ballet--true": {
+    "j": "folake",
+    "q": "The lyric name-checks Marvin Gaye, and the whole song leans on that slow soul feel."
+   },
+   "simply-red--holding-back-the-years": {
+    "j": "desmond",
+    "q": "A US #1 for a Manchester band with a jazz-club singer. That doesn't happen without this genre."
+   },
+   "danny-wilson--marys-prayer": {
+    "j": "rafe",
+    "q": "Gary Clark wears the Steely Dan influence openly, and he earned it: the chords move like Aja."
+   },
+   "black--wonderful-life": {
+    "j": "tomasz",
+    "q": "The saddest song ever called 'Wonderful Life'. Colin Vearncombe sings it like he's watching the sea in winter."
+   },
+   "joe-jackson--steppin-out": {
+    "j": "tomasz",
+    "q": "A night out in Manhattan over a drum machine and jazz piano. It's the template for the drive home."
+   },
+   "the-blue-nile--tinseltown-in-the-rain": {
+    "j": "imogen",
+    "q": "It never charted, and it's still the record every critic reaches for when they explain this music."
+   },
+   "the-blue-nile--the-downtown-lights": {
+    "j": "tomasz",
+    "q": "Paul Buchanan sings about streetlights as if they were the only thing keeping him awake. It's the center of my list."
+   },
+   "prefab-sprout--appetite": {
+    "j": "rafe",
+    "q": "The harmony stacks on Steve McQueen are the most careful pop arranging of the decade, and this is the best of them."
+   },
+   "everything-but-the-girl--each-and-every-one": {
+    "j": "folake",
+    "q": "Ben Watt's guitar is straight out of Astrud Gilberto records. It's bossa nova by two students from Hull."
+   },
+   "everything-but-the-girl--driving": {
+    "j": "tomasz",
+    "q": "Tracey Thorn's voice and an empty road. Same mood as the Blue Nile tracks, sung warmer."
+   },
+   "swing-out-sister--breakout": {
+    "j": "imogen",
+    "q": "Corinne Drewery's bob and the big-band brass made it the genre's best-known moment on Top of the Pops. Too sunny for Tomasz, and that doesn't matter."
+   },
+   "matt-bianco--get-out-of-your-lazy-bed": {
+    "j": "folake",
+    "q": "Latin percussion and a scat break on a UK top 20 single. That's the jazz side of the argument, winning."
+   },
+   "basia--time-and-tide": {
+    "j": "rafe",
+    "q": "Danny White's chord changes do more work than the vocal, and the vocal is excellent."
+   },
+   "scritti-politti--perfect-way": {
+    "j": "rafe",
+    "q": "Green and Arif Mardin made a record so clean it sounds impossible. Miles Davis covered it the next year."
+   },
+   "scritti-politti--the-word-girl": {
+    "j": "folake",
+    "q": "A lovers-rock bounce under a pop song about linguistics, and it went to UK #6 anyway."
+   },
+   "abc--the-look-of-love": {
+    "j": "imogen",
+    "q": "The gold lamé suit and the Trevor Horn strings: this is where the dressing-up begins."
+   },
+   "abc--when-smokey-sings": {
+    "j": "folake",
+    "q": "A straight love letter to Motown, and the band finally sound like what they were imitating."
+   },
+   "china-crisis--wishful-thinking": {
+    "j": "tomasz",
+    "q": "Gary Daly sings like he's halfway into a daydream. It's a UK #9 that sounds like it's under its breath."
+   },
+   "china-crisis--black-man-ray": {
+    "j": "rafe",
+    "q": "Walter Becker produced Flaunt the Imperfection. You can hear him tightening every bar."
+   },
+   "aztec-camera--somewhere-in-my-heart": {
+    "j": "desmond",
+    "q": "Roddy Frame's biggest hit, UK #3, and it still turns up on every 80s station in Britain."
+   },
+   "johnny-hates-jazz--shattered-dreams": {
+    "j": "desmond",
+    "q": "US #2, UK #5. A British band with this kind of polish crossing over that well is rare."
+   },
+   "talk-talk--lifes-what-you-make-it": {
+    "j": "rafe",
+    "q": "Tim Friese-Greene's piano riff and Mark Hollis holding back. It's the last moment they were a pop band."
+   },
+   "talk-talk--i-dont-believe-in-you": {
+    "j": "tomasz",
+    "q": "A small hit, but Hollis sounds like the last man awake in the building. I'd fight for this one."
+   },
+   "tears-for-fears--head-over-heels": {
+    "j": "rafe",
+    "q": "The most sophisticated single on Songs from the Big Chair. The piano intro alone gets it in."
+   },
+   "tears-for-fears--woman-in-chains": {
+    "j": "folake",
+    "q": "Oleta Adams sings it, and that turns a Tears for Fears song into a gospel-soul record."
+   },
+   "bryan-ferry--dont-stop-the-dance": {
+    "j": "imogen",
+    "q": "Boys and Girls in a tuxedo. Ferry's whole solo late period is in its slow pulse."
+   },
+   "bryan-ferry--windswept": {
+    "j": "tomasz",
+    "q": "A deep cut that Imogen and I agree on, and we don't agree on much."
+   },
+   "paul-young--every-time-you-go-away": {
+    "j": "desmond",
+    "q": "A US #1, and the fretless bass is the genre's sound even if Imogen calls it a plain Hall & Oates cover."
+   },
+   "level-42--something-about-you": {
+    "j": "folake",
+    "q": "Mark King's slap bass shows off, and the song still has a real soul ballad under it."
+   },
+   "curiosity-killed-the-cat--down-to-earth": {
+    "j": "desmond",
+    "q": "UK #3, all hats and jazz-funk. In Britain this was the sound of 1987."
+   },
+   "the-lotus-eaters--the-first-picture-of-you": {
+    "j": "imogen",
+    "q": "It's jangly, but the yearning and the polish are this genre's, and UK #15 proves people heard it."
+   },
+   "haircut-100--love-plus-one": {
+    "j": "folake",
+    "q": "Latin percussion and a horn section on a teen-pop single. The jazz instinct was there before the suits."
+   }
+  }
+ },
+ "eras": [
+  {
+   "n": 1,
+   "name": "Gold Lamé",
+   "years": "1982–83",
+   "from": 1982,
+   "to": 1983,
+   "essay": "On 26 January 1982 British unemployment passed three million for the first time since the 1930s, and the pop that came out of that winter set out to look expensive anyway. Bryan Ferry had been at it for a decade. For Avalon, Roxy Music built backing tracks to a Linn LM-1 at Phil Manzanera's studio in Chertsey, worked them up at Compass Point in Nassau and mixed with Bob Clearmountain at the Power Station in New York. Spandau Ballet, the band of the Blitz club crowd, went to Compass Point too, because of the soul records made there, and came back with True. ABC came down from Sheffield, Trevor Horn bought an £18,000 Fairlight, Anne Dudley wrote the strings, and Martin Fry wore a gold lamé suit his label couldn't understand. Joe Jackson moved to Manhattan and made a Cole Porter record over a Korg drum machine. Paul Weller broke up the Jam and took a keyboard player to Paris. Liverpool sent China Crisis and the Lotus Eaters down through John Peel sessions. Channel 4 and The Tube started in November 1982, but the money still came from the singles chart, and when Top of the Pops reached its thousandth episode in 1983, Spandau Ballet closed it at number one.",
+   "scene": {
+    "cities": [
+     "London",
+     "Sheffield",
+     "Liverpool",
+     "Nassau",
+     "New York",
+     "Paris"
+    ],
+    "labels": [
+     "E.G. / Polydor",
+     "A&M",
+     "Neutron",
+     "Arista",
+     "Polydor",
+     "Chrysalis",
+     "Virgin"
+    ],
+    "gear": [
+     "Linn LM-1 drum machine",
+     "Fairlight CMI",
+     "Korg KR-55 drum machine",
+     "Rhodes Chroma",
+     "E-mu Emulator",
+     "Solid State Logic 4000E console at Sarm East"
+    ],
+    "artifact": "The Face, Nick Logan's style magazine, launched in 1980; Gary Kemp named it as part of the glossy soul-boy world that 'True' was written to side with, against the inky rock papers."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Avalon_(Roxy_Music_album)",
+    "https://en.wikipedia.org/wiki/True_(Spandau_Ballet_song)",
+    "https://www.soundonsound.com/techniques/classic-tracks-abc-look-love",
+    "https://www.irishexaminer.com/lifestyle/artsfilmtv/abcs-martin-fry-regrets-not-capitalising-on-early-success-235195.html",
+    "https://en.wikipedia.org/wiki/Joe_Jackson_(musician)",
+    "https://en.wikipedia.org/wiki/Steppin%27_Out_(Joe_Jackson_song)",
+    "https://en.wikipedia.org/wiki/The_Style_Council",
+    "https://en.wikipedia.org/wiki/Long_Hot_Summer_(The_Style_Council_song)",
+    "https://en.wikipedia.org/wiki/China_Crisis",
+    "https://en.wikipedia.org/wiki/The_Lotus_Eaters_(band)",
+    "https://en.wikipedia.org/wiki/Channel_4",
+    "https://en.wikipedia.org/wiki/The_Tube_(1982_TV_series)",
+    "https://en.wikipedia.org/wiki/Top_of_the_Pops",
+    "https://en.wikipedia.org/wiki/ABC_(band)",
+    "https://en.wikipedia.org/wiki/1982_in_the_United_Kingdom",
+    "https://csmonitor.com/1982/0127/012720.html",
+    "https://en.wikipedia.org/wiki/The_Face_(magazine)"
+   ],
+   "image": "media/eras/era1.webp"
+  },
+  {
+   "n": 2,
+   "name": "Soho Espresso",
+   "years": "1984",
+   "from": 1984,
+   "to": 1984,
+   "essay": "1984 was the year the suits turned into a sound, and most of it was cut in rooms with no money. Robin Millar, a blind producer from London, made Sade's Diamond Life and Everything But the Girl's Eden at the same time, at Power Plant in Willesden, syncing a real piano to a Fender Rhodes by hand. Sade's crew would finish a session and take a cab into Soho for The Wag on Wardour Street, and by April Sade Adu was on the cover of The Face. Paul Weller had his own studio, Solid Bond, and filled Café Bleu with guests, Tracey Thorn and Ben Watt among them. Outside London the money was smaller still. Prefab Sprout made Swoon in Edinburgh for £5,000 after a Newcastle HMV manager signed them to his label, Kitchenware. The Blue Nile were signed by a hi-fi company, Linn, after their demo was played to staff testing speakers at a schoolhouse studio in East Lothian. All this went on while the miners' strike started on 6 March and ran all year, and in December Weller's Council Collective released 'Soul Deep' for the strikers' families. Diamond Life went to number 2 and won the Brit for Best British Album.",
+   "scene": {
+    "cities": [
+     "London",
+     "Willesden",
+     "Soho",
+     "Glasgow",
+     "Pencaitland",
+     "Newcastle upon Tyne",
+     "Witton Gilbert",
+     "Hull",
+     "Woking"
+    ],
+    "labels": [
+     "Epic",
+     "Portrait",
+     "Polydor",
+     "Geffen",
+     "Kitchenware",
+     "CBS",
+     "Linn Records",
+     "A&M",
+     "Blanco y Negro",
+     "WEA"
+    ],
+    "gear": [
+     "a real piano and a Fender Rhodes synced by hand (Diamond Life)",
+     "Hammond organ",
+     "bass synthesizer and programmed drums (Peter Wilson at Solid Bond)",
+     "Fairlight and PPG Wave (Thomas Dolby's remake of 'When Love Breaks Down')",
+     "one Marshall cabinet and a borrowed amp (The Blue Nile's rehearsals)"
+    ],
+    "artifact": "The Wag Club on Wardour Street in Soho, where Sade's band went straight after their Diamond Life sessions in Willesden: the post-punk and New Romantic club that soul-and-jazz London grew out of."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Diamond_Life",
+    "https://www.mojo4music.com/articles/stories/the-making-of-sades-diamond-life/",
+    "https://en.wikipedia.org/wiki/Robin_Millar_(producer)",
+    "https://en.wikipedia.org/wiki/Eden_(Everything_but_the_Girl_album)",
+    "https://en.wikipedia.org/wiki/Caf%C3%A9_Bleu",
+    "https://en.wikipedia.org/wiki/Prefab_Sprout",
+    "https://en.wikipedia.org/wiki/The_Blue_Nile_(band)",
+    "https://en.wikipedia.org/wiki/The_Style_Council",
+    "https://en.wikipedia.org/wiki/1984%E2%80%931985_United_Kingdom_miners%27_strike",
+    "https://en.wikipedia.org/wiki/The_Wag_Club",
+    "https://www.hifinews.com/content/prefab-sprout-steve-mcqueen-production-notes",
+    "https://www.popmatters.com/166769-at-the-source-of-the-blue-nile-an-interview-with-paul-buchanan-2495788345.html"
+   ],
+   "image": "media/eras/era2.webp"
+  },
+  {
+   "n": 3,
+   "name": "Fretless Summer",
+   "years": "1985",
+   "from": 1985,
+   "to": 1985,
+   "essay": "The miners went back to work on 3 March 1985, marching behind brass bands after almost a year out. Six weeks earlier EastEnders had started on BBC One. The music on this stretch had other places on its mind. Sade cut Promise at the Power Plant in Willesden and spent two weeks at Studio Miraval in Provence. Bryan Ferry built Boys and Girls on eight-track sketches at The White House on the King's Road, with further sessions at the Power Station in New York and Compass Point in Nassau. Scritti Politti made Cupid & Psyche 85 in New York with a Fairlight, a Linn and four DX7s wired together. Simply Red went to Soundpush in Blaricum, in the Netherlands. Tears for Fears stayed in Bath. The money followed the gloss across the Atlantic. Paul Young's 'Every Time You Go Away' reached number 1 on the Hot 100 two weeks after Live Aid, with Pino Palladino's fretless bass sliding under it, and by the following summer Sade, Simply Red, Level 42 and Scritti Politti all had American top 20 hits. Dire Straits' Brothers in Arms, out in May with Guy Fletcher on synths (he also plays on 'Slave to Love'), became the first album to sell a million copies on CD.",
+   "scene": {
+    "cities": [
+     "London",
+     "Bath",
+     "New York",
+     "Nassau",
+     "Blaricum",
+     "Manchester",
+     "Shepperton",
+     "East Sussex"
+    ],
+    "labels": [
+     "Epic / Portrait",
+     "E.G. Records",
+     "Elektra",
+     "Kitchenware",
+     "Virgin",
+     "Phonogram / Mercury",
+     "Polydor"
+    ],
+    "gear": [
+     "Fretless bass (Pino Palladino)",
+     "Yamaha DX7",
+     "Fairlight CMI",
+     "LinnDrum",
+     "AMS sampling delay",
+     "Roland Jupiter-8",
+     "Harmon-muted trumpet"
+    ],
+    "artifact": "Live Aid at Wembley on 13 July 1985: Sade, Bryan Ferry (with David Gilmour on guitar) and Paul Young all played the same stage that afternoon, in front of 72,000 people and a broadcast audience estimated at 1.9 billion."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/UK_miners%27_strike_(1984%E2%80%931985)",
+    "https://en.wikipedia.org/wiki/EastEnders",
+    "https://en.wikipedia.org/wiki/Promise_(Sade_album)",
+    "https://en.wikipedia.org/wiki/Boys_and_Girls_(album)",
+    "https://movingtheriver.com/tag/rhettdavies/",
+    "https://en.wikipedia.org/wiki/Cupid_%26_Psyche_85",
+    "https://www.muzines.co.uk/articles/heart-to-art/3861",
+    "https://en.wikipedia.org/wiki/Picture_Book_(Simply_Red_album)",
+    "https://en.wikipedia.org/wiki/Songs_from_the_Big_Chair",
+    "https://en.wikipedia.org/wiki/Everytime_You_Go_Away",
+    "https://en.wikipedia.org/wiki/Live_Aid",
+    "https://en.wikipedia.org/wiki/Brothers_in_Arms_(album)"
+   ],
+   "image": "media/eras/era3.webp"
+  },
+  {
+   "n": 4,
+   "name": "Wet Pavement",
+   "years": "1986–90",
+   "from": 1986,
+   "to": 1990,
+   "essay": "On 27 October 1986 the London Stock Exchange scrapped fixed commissions and moved from open outcry to screens, and a new kind of money arrived in the City. Pop got the soundtrack it deserved: a second wave of sharply dressed bands with major-label budgets. Mercury put Curiosity Killed the Cat with Stewart Levine, who had produced Simply Red, and Keep Your Distance went straight in at number 1 in April 1987. Swing Out Sister's debut did the same a month later, and Johnny Hates Jazz, the son of RAK's founder among them, topped the album chart in January 1988. Then the crash. The FTSE fell 23% over two days in October 1987, and the records on this stretch turn inward. Tears for Fears spent a reported £1 million and nearly three years on The Seeds of Love. The Blue Nile, signed to the record label of a Glasgow hi-fi company, were sued by Virgin for taking too long, then made half of Hats in a week. By 1990 Everything But the Girl had flown to Los Angeles to make a record with Tommy LiPuma and Michael Brecker, and the British sophisti-pop story ended in an American studio.",
+   "scene": {
+    "cities": [
+     "London",
+     "Liverpool",
+     "Manchester",
+     "Dundee",
+     "Glasgow",
+     "Pencaitland",
+     "Boston",
+     "Los Angeles"
+    ],
+    "labels": [
+     "Ugly Man",
+     "A&M",
+     "Mercury",
+     "Parlophone",
+     "Virgin",
+     "Portrait / Epic",
+     "Neutron",
+     "WEA / Sire",
+     "Linn Records",
+     "Fontana",
+     "blanco y negro / Atlantic"
+    ],
+    "gear": [
+     "Roland Juno-60",
+     "Linn drum machine, Moog bass and Yamaha DX7",
+     "Fairlight CMI",
+     "Kurzweil and Variophon",
+     "a 4-track portastudio"
+    ],
+    "artifact": "The Linn Sondek LP12, the turntable Ivor Tiefenbrun's Glasgow company launched in 1973. Its makers ran the record label that put out The Blue Nile, after Linn's people heard a demo of 'Tinseltown in the Rain' while testing speakers."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Big_Bang_(financial_markets)",
+    "https://en.wikipedia.org/wiki/Black_Monday_(1987)",
+    "https://en.wikipedia.org/wiki/Keep_Your_Distance",
+    "https://movingtheriver.com/2017/04/15/curiosity-killed-the-cat-keep-your-distance-30-years-on/",
+    "https://en.wikipedia.org/wiki/Swing_Out_Sister",
+    "https://en.wikipedia.org/wiki/Johnny_Hates_Jazz",
+    "https://en.wikipedia.org/wiki/The_Seeds_of_Love",
+    "https://en.wikipedia.org/wiki/Hats_(album)",
+    "https://en.wikipedia.org/wiki/The_Blue_Nile_(band)",
+    "https://en.wikipedia.org/wiki/The_Language_of_Life",
+    "https://en.wikipedia.org/wiki/Linn_Products"
+   ],
+   "image": "media/eras/era4.webp"
+  }
+ ],
+ "songs": [
+  "roxy-music--avalon",
+  "roxy-music--more-than-this",
+  "joe-jackson--steppin-out",
+  "abc--the-look-of-love",
+  "haircut-100--love-plus-one",
+  "the-style-council--long-hot-summer",
+  "spandau-ballet--true",
+  "china-crisis--wishful-thinking",
+  "the-lotus-eaters--the-first-picture-of-you",
+  "sade--smooth-operator",
+  "sade--your-love-is-king",
+  "prefab-sprout--when-love-breaks-down",
+  "the-style-council--my-ever-changing-moods",
+  "the-style-council--youre-the-best-thing",
+  "the-blue-nile--tinseltown-in-the-rain",
+  "everything-but-the-girl--each-and-every-one",
+  "matt-bianco--get-out-of-your-lazy-bed",
+  "sade--the-sweetest-taboo",
+  "bryan-ferry--slave-to-love",
+  "simply-red--holding-back-the-years",
+  "prefab-sprout--appetite",
+  "scritti-politti--perfect-way",
+  "scritti-politti--the-word-girl",
+  "china-crisis--black-man-ray",
+  "talk-talk--lifes-what-you-make-it",
+  "tears-for-fears--head-over-heels",
+  "bryan-ferry--dont-stop-the-dance",
+  "bryan-ferry--windswept",
+  "paul-young--every-time-you-go-away",
+  "level-42--something-about-you",
+  "black--wonderful-life",
+  "swing-out-sister--breakout",
+  "talk-talk--i-dont-believe-in-you",
+  "curiosity-killed-the-cat--down-to-earth",
+  "danny-wilson--marys-prayer",
+  "basia--time-and-tide",
+  "abc--when-smokey-sings",
+  "aztec-camera--somewhere-in-my-heart",
+  "johnny-hates-jazz--shattered-dreams",
+  "the-blue-nile--the-downtown-lights",
+  "tears-for-fears--woman-in-chains",
+  "everything-but-the-girl--driving"
+ ],
+ "pins": {
+  "sade--smooth-operator": {
+   "youtube": "4TYv2PhG89A"
+  },
+  "sade--the-sweetest-taboo": {
+   "youtube": "kcPc18SG6uA"
+  },
+  "sade--your-love-is-king": {
+   "youtube": "k1ljpLQ1V6Y"
+  },
+  "prefab-sprout--when-love-breaks-down": {
+   "youtube": "QeZkLV3ZjeI"
+  },
+  "the-style-council--my-ever-changing-moods": {
+   "youtube": "rmVkOlZFF3Y"
+  },
+  "the-style-council--long-hot-summer": {
+   "youtube": "1CAzwewVjZ0"
+  },
+  "the-style-council--youre-the-best-thing": {
+   "youtube": "0HMAVU1k7kg"
+  },
+  "roxy-music--avalon": {
+   "youtube": "bpA_5a0miWk"
+  },
+  "roxy-music--more-than-this": {
+   "youtube": "kOnde5c7OG8"
+  },
+  "bryan-ferry--slave-to-love": {
+   "youtube": "UH1CMCtV4to"
+  },
+  "spandau-ballet--true": {
+   "youtube": "AR8D2yqgQ1U"
+  },
+  "simply-red--holding-back-the-years": {
+   "youtube": "yG07WSu7Q9w"
+  },
+  "danny-wilson--marys-prayer": {
+   "youtube": "7hqgC3W9GUI"
+  },
+  "black--wonderful-life": {
+   "youtube": "u1ZoHfJZACA"
+  },
+  "joe-jackson--steppin-out": {
+   "youtube": "PJwt2dxx9yg"
+  },
+  "the-blue-nile--tinseltown-in-the-rain": {
+   "youtube": "2q5CGLHJ-54"
+  },
+  "the-blue-nile--the-downtown-lights": {
+   "youtube": "tNgSwtRqLmg"
+  },
+  "prefab-sprout--appetite": {
+   "youtube": "NS0hpiN_z3g"
+  },
+  "everything-but-the-girl--each-and-every-one": {
+   "youtube": "z8C4tQvMUkI"
+  },
+  "everything-but-the-girl--driving": {
+   "youtube": "qsRnVtIeLyg"
+  },
+  "swing-out-sister--breakout": {
+   "youtube": "IIOJdMdS56k"
+  },
+  "matt-bianco--get-out-of-your-lazy-bed": {
+   "youtube": "BWSG3rrqJH0"
+  },
+  "basia--time-and-tide": {
+   "youtube": "FtWgL0YBeaQ"
+  },
+  "scritti-politti--perfect-way": {
+   "youtube": "cLxIB_lrwk0"
+  },
+  "scritti-politti--the-word-girl": {
+   "youtube": "MC51g1vOIHo"
+  },
+  "abc--the-look-of-love": {
+   "youtube": "cNEdxZURTaI"
+  },
+  "abc--when-smokey-sings": {
+   "youtube": "BTV5FvNCbhk"
+  },
+  "china-crisis--wishful-thinking": {
+   "youtube": "TWE3PGnAdFM"
+  },
+  "china-crisis--black-man-ray": {
+   "youtube": "2ANTP9lFyXk"
+  },
+  "aztec-camera--somewhere-in-my-heart": {
+   "youtube": "2w1Q8ZkXZ1Q"
+  },
+  "johnny-hates-jazz--shattered-dreams": {
+   "youtube": "ctwqa3QCwMw"
+  },
+  "talk-talk--lifes-what-you-make-it": {
+   "youtube": "l3VqAsMXE7o"
+  },
+  "talk-talk--i-dont-believe-in-you": {
+   "youtube": "o8canrG0YfY"
+  },
+  "tears-for-fears--head-over-heels": {
+   "youtube": "CsHiG-43Fzg"
+  },
+  "tears-for-fears--woman-in-chains": {
+   "youtube": "QzkK3ZtI9SU"
+  },
+  "bryan-ferry--dont-stop-the-dance": {
+   "youtube": "XjhTHQhJLxs"
+  },
+  "bryan-ferry--windswept": {
+   "youtube": "T-oYkpsnvIc"
+  },
+  "paul-young--every-time-you-go-away": {
+   "youtube": "nfk6sCzRTbM"
+  },
+  "level-42--something-about-you": {
+   "youtube": "zpdQQoc-gkk"
+  },
+  "curiosity-killed-the-cat--down-to-earth": {
+   "youtube": "9cZQcQw4mDE"
+  },
+  "the-lotus-eaters--the-first-picture-of-you": {
+   "youtube": "Qm_SRdQpxKI"
+  },
+  "haircut-100--love-plus-one": {
+   "youtube": "5_msHpEa3_Y"
+  }
+ },
+ "threads": [
+  {
+   "from": "roxy-music--avalon",
+   "to": "roxy-music--more-than-this",
+   "kind": "producer",
+   "note": "Same album, same Rhett Davies sessions, same rhythm section."
+  },
+  {
+   "from": "roxy-music--avalon",
+   "to": "spandau-ballet--true",
+   "kind": "city",
+   "note": "Both were made at Compass Point Studios in Nassau."
+  },
+  {
+   "from": "roxy-music--avalon",
+   "to": "the-lotus-eaters--the-first-picture-of-you",
+   "kind": "player",
+   "note": "Alan Spenner plays bass on both."
+  },
+  {
+   "from": "roxy-music--avalon",
+   "to": "china-crisis--wishful-thinking",
+   "kind": "influence",
+   "note": "Rhett Davies co-produced Eno's Before and After Science, whose 'Here He Comes' inspired 'Wishful Thinking'."
+  },
+  {
+   "from": "roxy-music--avalon",
+   "to": "bryan-ferry--slave-to-love",
+   "kind": "singer",
+   "note": "Bryan Ferry carried this sound into his solo Boys and Girls."
+  },
+  {
+   "from": "roxy-music--more-than-this",
+   "to": "roxy-music--avalon",
+   "kind": "producer",
+   "note": "Same album and sessions."
+  },
+  {
+   "from": "roxy-music--more-than-this",
+   "to": "the-lotus-eaters--the-first-picture-of-you",
+   "kind": "player",
+   "note": "Alan Spenner's bass again."
+  },
+  {
+   "from": "roxy-music--more-than-this",
+   "to": "bryan-ferry--slave-to-love",
+   "kind": "singer",
+   "note": "Ferry's next move, solo."
+  },
+  {
+   "from": "joe-jackson--steppin-out",
+   "to": "abc--the-look-of-love",
+   "kind": "influence",
+   "note": "Jackson built a whole album around Cole Porter; Martin Fry said he wanted ABC's lyrics to reach for Rodgers and Hammerstein or Cole Porter."
+  },
+  {
+   "from": "joe-jackson--steppin-out",
+   "to": "roxy-music--avalon",
+   "kind": "city",
+   "note": "Avalon was finished and mixed in New York the same year."
+  },
+  {
+   "from": "abc--the-look-of-love",
+   "to": "joe-jackson--steppin-out",
+   "kind": "influence",
+   "note": "Cole Porter again."
+  },
+  {
+   "from": "abc--the-look-of-love",
+   "to": "abc--when-smokey-sings",
+   "kind": "singer",
+   "note": "Martin Fry and ABC, five years on."
+  },
+  {
+   "from": "haircut-100--love-plus-one",
+   "to": "the-lotus-eaters--the-first-picture-of-you",
+   "kind": "producer",
+   "note": "Bob Sargeant produced Pelican West and most of the Lotus Eaters' No Sense of Sin; both bands were on Arista."
+  },
+  {
+   "from": "the-style-council--long-hot-summer",
+   "to": "the-style-council--my-ever-changing-moods",
+   "kind": "singer",
+   "note": "Same band, the next year."
+  },
+  {
+   "from": "the-style-council--long-hot-summer",
+   "to": "the-style-council--youre-the-best-thing",
+   "kind": "singer",
+   "note": "Same band, Café Bleu."
+  },
+  {
+   "from": "the-style-council--long-hot-summer",
+   "to": "everything-but-the-girl--each-and-every-one",
+   "kind": "singer",
+   "note": "Tracey Thorn sings the Café Bleu remake of this single's B-side, 'The Paris Match'."
+  },
+  {
+   "from": "spandau-ballet--true",
+   "to": "roxy-music--avalon",
+   "kind": "city",
+   "note": "Both were cut at Compass Point in Nassau."
+  },
+  {
+   "from": "spandau-ballet--true",
+   "to": "sade--smooth-operator",
+   "kind": "influence",
+   "note": "Soho soul-boy taste, sax-led and slow, a year before Sade."
+  },
+  {
+   "from": "china-crisis--wishful-thinking",
+   "to": "china-crisis--black-man-ray",
+   "kind": "singer",
+   "note": "Same band; an outtake from these sessions, 'It's Never Too Late', was dropped for sounding too much like this one and ended up on a 12-inch of 'Black Man Ray'."
+  },
+  {
+   "from": "china-crisis--wishful-thinking",
+   "to": "the-lotus-eaters--the-first-picture-of-you",
+   "kind": "city",
+   "note": "Both bands came out of Liverpool and through John Peel sessions."
+  },
+  {
+   "from": "china-crisis--wishful-thinking",
+   "to": "roxy-music--avalon",
+   "kind": "producer",
+   "note": "Rhett Davies links Eno's 'Here He Comes' to Avalon."
+  },
+  {
+   "from": "the-lotus-eaters--the-first-picture-of-you",
+   "to": "roxy-music--avalon",
+   "kind": "player",
+   "note": "Alan Spenner on bass."
+  },
+  {
+   "from": "the-lotus-eaters--the-first-picture-of-you",
+   "to": "roxy-music--more-than-this",
+   "kind": "player",
+   "note": "Alan Spenner on bass."
+  },
+  {
+   "from": "the-lotus-eaters--the-first-picture-of-you",
+   "to": "haircut-100--love-plus-one",
+   "kind": "label",
+   "note": "Arista, and Bob Sargeant later produced most of No Sense of Sin."
+  },
+  {
+   "from": "the-lotus-eaters--the-first-picture-of-you",
+   "to": "china-crisis--wishful-thinking",
+   "kind": "city",
+   "note": "Liverpool, via John Peel."
+  },
+  {
+   "from": "sade--smooth-operator",
+   "to": "sade--your-love-is-king",
+   "kind": "producer",
+   "note": "Same album, same producer (Robin Millar), same studio."
+  },
+  {
+   "from": "sade--smooth-operator",
+   "to": "everything-but-the-girl--each-and-every-one",
+   "kind": "producer",
+   "note": "Robin Millar was making Everything But the Girl's Eden at Power Plant at the same time, with the same engineer, Mike Pela."
+  },
+  {
+   "from": "sade--smooth-operator",
+   "to": "sade--the-sweetest-taboo",
+   "kind": "singer",
+   "note": "Same band a year later, on Promise."
+  },
+  {
+   "from": "sade--your-love-is-king",
+   "to": "sade--smooth-operator",
+   "kind": "producer",
+   "note": "Same album, same producer, same studio; the two were the first things Sade recorded."
+  },
+  {
+   "from": "sade--your-love-is-king",
+   "to": "everything-but-the-girl--each-and-every-one",
+   "kind": "producer",
+   "note": "Robin Millar again, on Eden, the same year at the same studio."
+  },
+  {
+   "from": "sade--your-love-is-king",
+   "to": "sade--the-sweetest-taboo",
+   "kind": "singer",
+   "note": "Same band on Promise (1985)."
+  },
+  {
+   "from": "prefab-sprout--when-love-breaks-down",
+   "to": "prefab-sprout--appetite",
+   "kind": "producer",
+   "note": "'Appetite' is on the same album, Steve McQueen, produced by Thomas Dolby."
+  },
+  {
+   "from": "prefab-sprout--when-love-breaks-down",
+   "to": "johnny-hates-jazz--shattered-dreams",
+   "kind": "player",
+   "note": "Phil Thornalley, who produced the 1984 single, joined Johnny Hates Jazz in 1988."
+  },
+  {
+   "from": "the-style-council--my-ever-changing-moods",
+   "to": "the-style-council--youre-the-best-thing",
+   "kind": "producer",
+   "note": "Same album, same producers, same studio."
+  },
+  {
+   "from": "the-style-council--my-ever-changing-moods",
+   "to": "the-style-council--long-hot-summer",
+   "kind": "singer",
+   "note": "Same band a year earlier."
+  },
+  {
+   "from": "the-style-council--my-ever-changing-moods",
+   "to": "everything-but-the-girl--each-and-every-one",
+   "kind": "singer",
+   "note": "Tracey Thorn and Ben Watt guest on Café Bleu, on 'The Paris Match'."
+  },
+  {
+   "from": "the-style-council--youre-the-best-thing",
+   "to": "the-style-council--my-ever-changing-moods",
+   "kind": "producer",
+   "note": "Same album, same producers."
+  },
+  {
+   "from": "the-style-council--youre-the-best-thing",
+   "to": "the-style-council--long-hot-summer",
+   "kind": "singer",
+   "note": "Same band, 1983."
+  },
+  {
+   "from": "the-style-council--youre-the-best-thing",
+   "to": "everything-but-the-girl--each-and-every-one",
+   "kind": "singer",
+   "note": "Thorn and Watt play on Café Bleu."
+  },
+  {
+   "from": "the-blue-nile--tinseltown-in-the-rain",
+   "to": "the-blue-nile--the-downtown-lights",
+   "kind": "producer",
+   "note": "Same band, same studio and engineer (Castlesound, Calum Malcolm), five years later on Hats."
+  },
+  {
+   "from": "the-blue-nile--tinseltown-in-the-rain",
+   "to": "prefab-sprout--when-love-breaks-down",
+   "kind": "label",
+   "note": "Both bands were on small northern labels (Linn, Kitchenware) licensed to majors."
+  },
+  {
+   "from": "everything-but-the-girl--each-and-every-one",
+   "to": "sade--smooth-operator",
+   "kind": "producer",
+   "note": "Robin Millar produced Eden and Diamond Life side by side at Power Plant."
+  },
+  {
+   "from": "everything-but-the-girl--each-and-every-one",
+   "to": "the-style-council--my-ever-changing-moods",
+   "kind": "singer",
+   "note": "Thorn and Watt guest on the Style Council's Café Bleu."
+  },
+  {
+   "from": "everything-but-the-girl--each-and-every-one",
+   "to": "everything-but-the-girl--driving",
+   "kind": "singer",
+   "note": "Same duo six years later."
+  },
+  {
+   "from": "matt-bianco--get-out-of-your-lazy-bed",
+   "to": "basia--time-and-tide",
+   "kind": "singer",
+   "note": "Basia and Danny White left Matt Bianco in 1985; they wrote and produced 'Time and Tide' together."
+  },
+  {
+   "from": "sade--the-sweetest-taboo",
+   "to": "sade--smooth-operator",
+   "kind": "producer",
+   "note": "Same band, same Robin Millar and Mike Pela production team as Diamond Life."
+  },
+  {
+   "from": "sade--the-sweetest-taboo",
+   "to": "sade--your-love-is-king",
+   "kind": "producer",
+   "note": "Same band and producers; Sade played 'Your Love Is King' at Live Aid three months before this came out."
+  },
+  {
+   "from": "sade--the-sweetest-taboo",
+   "to": "talk-talk--lifes-what-you-make-it",
+   "kind": "player",
+   "note": "Martin Ditcham, who started this song, plays percussion on 'Life's What You Make It' too."
+  },
+  {
+   "from": "bryan-ferry--slave-to-love",
+   "to": "roxy-music--avalon",
+   "kind": "producer",
+   "note": "Rhett Davies produced Avalon and co-produced this; Bob Clearmountain mixed both."
+  },
+  {
+   "from": "bryan-ferry--slave-to-love",
+   "to": "roxy-music--more-than-this",
+   "kind": "player",
+   "note": "Neil Hubbard played guitar on Avalon and plays lead here."
+  },
+  {
+   "from": "bryan-ferry--slave-to-love",
+   "to": "bryan-ferry--dont-stop-the-dance",
+   "kind": "producer",
+   "note": "Same album, same Ferry and Rhett Davies production."
+  },
+  {
+   "from": "bryan-ferry--slave-to-love",
+   "to": "bryan-ferry--windswept",
+   "kind": "producer",
+   "note": "Same album; 'Windswept' was the third single."
+  },
+  {
+   "from": "prefab-sprout--appetite",
+   "to": "prefab-sprout--when-love-breaks-down",
+   "kind": "producer",
+   "note": "Same album, same Thomas Dolby production."
+  },
+  {
+   "from": "scritti-politti--perfect-way",
+   "to": "scritti-politti--the-word-girl",
+   "kind": "producer",
+   "note": "Same album, same self-produced trio."
+  },
+  {
+   "from": "scritti-politti--perfect-way",
+   "to": "bryan-ferry--dont-stop-the-dance",
+   "kind": "player",
+   "note": "Marcus Miller, who made Miles Davis's version of this, plays bass on 'Don't Stop the Dance'."
+  },
+  {
+   "from": "scritti-politti--the-word-girl",
+   "to": "scritti-politti--perfect-way",
+   "kind": "producer",
+   "note": "Same album and producers; this opens side one, 'Perfect Way' opens side two."
+  },
+  {
+   "from": "china-crisis--black-man-ray",
+   "to": "china-crisis--wishful-thinking",
+   "kind": "influence",
+   "note": "Same band two years earlier; that song was inspired by Eno's 'Here He Comes'."
+  },
+  {
+   "from": "talk-talk--lifes-what-you-make-it",
+   "to": "talk-talk--i-dont-believe-in-you",
+   "kind": "producer",
+   "note": "Same album, same Friese-Greene production."
+  },
+  {
+   "from": "talk-talk--lifes-what-you-make-it",
+   "to": "sade--the-sweetest-taboo",
+   "kind": "player",
+   "note": "Martin Ditcham plays percussion here and wrote the backing track that became 'The Sweetest Taboo'."
+  },
+  {
+   "from": "tears-for-fears--head-over-heels",
+   "to": "tears-for-fears--woman-in-chains",
+   "kind": "singer",
+   "note": "Same band four years on, with Roland Orzabal singing."
+  },
+  {
+   "from": "bryan-ferry--dont-stop-the-dance",
+   "to": "bryan-ferry--slave-to-love",
+   "kind": "producer",
+   "note": "Same album and producers."
+  },
+  {
+   "from": "bryan-ferry--dont-stop-the-dance",
+   "to": "bryan-ferry--windswept",
+   "kind": "player",
+   "note": "David Sanborn plays sax on both."
+  },
+  {
+   "from": "bryan-ferry--dont-stop-the-dance",
+   "to": "scritti-politti--perfect-way",
+   "kind": "player",
+   "note": "Marcus Miller plays bass here and produced Miles Davis's cover of 'Perfect Way'."
+  },
+  {
+   "from": "bryan-ferry--dont-stop-the-dance",
+   "to": "roxy-music--avalon",
+   "kind": "player",
+   "note": "Andy Newmark drummed on Avalon too."
+  },
+  {
+   "from": "bryan-ferry--windswept",
+   "to": "bryan-ferry--slave-to-love",
+   "kind": "producer",
+   "note": "Same album and producers."
+  },
+  {
+   "from": "bryan-ferry--windswept",
+   "to": "bryan-ferry--dont-stop-the-dance",
+   "kind": "player",
+   "note": "David Sanborn on sax on both."
+  },
+  {
+   "from": "bryan-ferry--windswept",
+   "to": "roxy-music--avalon",
+   "kind": "influence",
+   "note": "Its nearest relative is the B-side of the 'Avalon' single."
+  },
+  {
+   "from": "black--wonderful-life",
+   "to": "bryan-ferry--slave-to-love",
+   "kind": "influence",
+   "note": "AllMusic placed Black's dramatic jazz-pop 'somewhere between Bryan Ferry and Morrissey'."
+  },
+  {
+   "from": "black--wonderful-life",
+   "to": "sade--smooth-operator",
+   "kind": "influence",
+   "note": "The Daily Telegraph quoted a critic calling his records 'a male version of Sade'."
+  },
+  {
+   "from": "swing-out-sister--breakout",
+   "to": "abc--when-smokey-sings",
+   "kind": "player",
+   "note": "Richard Niles scored It's Better to Travel and arranged the strings on 'When Smokey Sings'."
+  },
+  {
+   "from": "swing-out-sister--breakout",
+   "to": "curiosity-killed-the-cat--down-to-earth",
+   "kind": "producer",
+   "note": "Paul Staveley O'Duffy produced this and one track on Curiosity Killed the Cat's Keep Your Distance; both bands were on Mercury."
+  },
+  {
+   "from": "swing-out-sister--breakout",
+   "to": "danny-wilson--marys-prayer",
+   "kind": "producer",
+   "note": "The 1988 reissue of 'Mary's Prayer' was labelled a Paul Staveley O'Duffy remix."
+  },
+  {
+   "from": "talk-talk--i-dont-believe-in-you",
+   "to": "talk-talk--lifes-what-you-make-it",
+   "kind": "producer",
+   "note": "Same album, same producer, same session players."
+  },
+  {
+   "from": "curiosity-killed-the-cat--down-to-earth",
+   "to": "simply-red--holding-back-the-years",
+   "kind": "producer",
+   "note": "Stewart Levine produced Simply Red's Picture Book, home of 'Holding Back the Years'."
+  },
+  {
+   "from": "curiosity-killed-the-cat--down-to-earth",
+   "to": "swing-out-sister--breakout",
+   "kind": "label",
+   "note": "Both on Mercury, and Paul Staveley O'Duffy worked on both debuts."
+  },
+  {
+   "from": "danny-wilson--marys-prayer",
+   "to": "tears-for-fears--woman-in-chains",
+   "kind": "producer",
+   "note": "Dave Bascombe recorded this and co-produced The Seeds of Love."
+  },
+  {
+   "from": "danny-wilson--marys-prayer",
+   "to": "johnny-hates-jazz--shattered-dreams",
+   "kind": "label",
+   "note": "Both on Virgin in 1987."
+  },
+  {
+   "from": "danny-wilson--marys-prayer",
+   "to": "swing-out-sister--breakout",
+   "kind": "producer",
+   "note": "The 1988 single carried a Paul Staveley O'Duffy remix credit, though Clark said it was essentially the same record."
+  },
+  {
+   "from": "basia--time-and-tide",
+   "to": "matt-bianco--get-out-of-your-lazy-bed",
+   "kind": "singer",
+   "note": "Basia sang in Matt Bianco, and Danny White co-wrote 'Get Out of Your Lazy Bed' before they both left in 1985."
+  },
+  {
+   "from": "abc--when-smokey-sings",
+   "to": "abc--the-look-of-love",
+   "kind": "producer",
+   "note": "Same band, five years after The Lexicon of Love."
+  },
+  {
+   "from": "abc--when-smokey-sings",
+   "to": "swing-out-sister--breakout",
+   "kind": "player",
+   "note": "Richard Niles arranged both."
+  },
+  {
+   "from": "aztec-camera--somewhere-in-my-heart",
+   "to": "everything-but-the-girl--driving",
+   "kind": "producer",
+   "note": "Tommy LiPuma produced two tracks on Love and all of The Language of Life."
+  },
+  {
+   "from": "johnny-hates-jazz--shattered-dreams",
+   "to": "danny-wilson--marys-prayer",
+   "kind": "label",
+   "note": "Both Virgin singles in 1987, and both reached the US top 25."
+  },
+  {
+   "from": "the-blue-nile--the-downtown-lights",
+   "to": "the-blue-nile--tinseltown-in-the-rain",
+   "kind": "label",
+   "note": "Same band, five years after 'Tinseltown in the Rain', still on Linn."
+  },
+  {
+   "from": "tears-for-fears--woman-in-chains",
+   "to": "tears-for-fears--head-over-heels",
+   "kind": "producer",
+   "note": "Same band, four years after Songs from the Big Chair, which reportedly cost about £70,000 to The Seeds of Love's £1 million."
+  },
+  {
+   "from": "tears-for-fears--woman-in-chains",
+   "to": "paul-young--every-time-you-go-away",
+   "kind": "player",
+   "note": "Pino Palladino, whose fretless bass is all over Paul Young's 'Every Time You Go Away'."
+  },
+  {
+   "from": "tears-for-fears--woman-in-chains",
+   "to": "danny-wilson--marys-prayer",
+   "kind": "producer",
+   "note": "Dave Bascombe recorded 'Mary's Prayer' too."
+  },
+  {
+   "from": "everything-but-the-girl--driving",
+   "to": "everything-but-the-girl--each-and-every-one",
+   "kind": "singer",
+   "note": "Same duo, six years after 'Each and Every One'."
+  },
+  {
+   "from": "everything-but-the-girl--driving",
+   "to": "aztec-camera--somewhere-in-my-heart",
+   "kind": "producer",
+   "note": "Tommy LiPuma also produced two tracks on Aztec Camera's Love."
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ }
+}

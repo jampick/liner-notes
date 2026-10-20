@@ -1,0 +1,84 @@
+{
+ "id": "donald-fagen--i-g-y",
+ "title": "I.G.Y. (What a Beautiful World)",
+ "artist": "Donald Fagen",
+ "year": 1982,
+ "year_note": "",
+ "album": "The Nightfly",
+ "aliases": {
+  "youtube": [
+   "Ueivjr3f8xg"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2b/40/c0/2b40c0c2-1f84-6686-c298-f7e9393b51be/mzaf_657647059062855488.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/i-g-y/617827654?i=617827657&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Fagen's first record after he and Walter Becker split in 1981, produced by Gary Katz over about eight months in New York and Los Angeles, with Roger Nichols engineering on 3M digital recorders. James Gadson plays drums with Jeff Porcaro on additional drums and Nichols programming his own Wendel drum machine; Anthony Jackson plays bass, Greg Phillinganes electric piano, Hugh McCracken guitar, and Rob Mounsey wrote the horn chart for the Brecker brothers, Ronnie Cuber, Dave Tofani and Dave Bargeron. Fagen plays synth-harmonica, and Valerie Simpson leads the backing singers.",
+  "context": "The International Geophysical Year ran from July 1957 to December 1958, and Fagen's lyric sings its promises back straight-faced: solar-powered cities, a train under the Atlantic, spandex jackets, a free country in '76. Warner put out The Nightfly on 1 October 1982, the same day the first CDs went on sale in Japan. 'I.G.Y.' peaked at 26 on the Hot 100 on 27 November, his only solo top 40 hit, and was up for Song of the Year, losing to 'Always on My Mind'.",
+  "listen_for": [
+   {
+    "where": "the groove from the start",
+    "note": "Gadson's kit with Nichols's Wendel machine and Jeff Porcaro's extra drums, under Anthony Jackson's bass and Phillinganes's electric piano, all on a 3M digital recorder at a time when almost nobody made records that way."
+   },
+   {
+    "where": "the instrumental break",
+    "note": "Fagen's synth-harmonica, a synthesizer voiced to sound like a harmonica, which is as wry as the lyric."
+   },
+   {
+    "where": "the choruses",
+    "note": "Valerie Simpson of Ashford & Simpson with three other singers behind Fagen, answering him like a gospel choir that hasn't noticed the joke."
+   }
+  ],
+  "leads_to": {
+   "artist": "Take 6",
+   "title": "I.G.Y.",
+   "year": 2002,
+   "why": "The gospel a cappella group made it the title track of Beautiful World and rewrote the lyric with a straight face."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/I.G.Y._(What_a_Beautiful_World)",
+   "https://en.wikipedia.org/wiki/The_Nightfly",
+   "https://en.wikipedia.org/wiki/25th_Annual_Grammy_Awards",
+   "https://en.wikipedia.org/wiki/Compact_disc",
+   "https://en.wikipedia.org/wiki/Gaucho_(album)",
+   "https://en.wikipedia.org/wiki/Hey_Nineteen"
+  ],
+  "unverified": "I couldn't confirm which parts of the track use the Wendel machine and which are Gadson or Porcaro."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Fagen's only solo top 40",
+   "line": "It entered the Hot 100 at 56 on 9 October 1982 and peaked at 26 on 27 November, also making 8 on Adult Contemporary and 17 on Mainstream Rock.",
+   "wiki": "I.G.Y._(What_a_Beautiful_World)",
+   "source": "https://en.wikipedia.org/wiki/I.G.Y._(What_a_Beautiful_World)"
+  },
+  {
+   "kind": "award",
+   "title": "Song of the Year nominee",
+   "line": "It was up for Song of the Year in February 1983 and lost to 'Always on My Mind'. The Nightfly had seven nominations that night, Album of the Year among them.",
+   "wiki": "The_Nightfly",
+   "source": "https://en.wikipedia.org/wiki/The_Nightfly"
+  },
+  {
+   "kind": "cover",
+   "title": "Howard Jones and Take 6",
+   "line": "Howard Jones put a cover on his 1993 best-of and had a minor UK hit with it, and Take 6 made it the title track of Beautiful World in 2002.",
+   "wiki": "Take_6",
+   "source": "https://en.wikipedia.org/wiki/I.G.Y._(What_a_Beautiful_World)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

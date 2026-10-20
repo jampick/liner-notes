@@ -1,0 +1,90 @@
+# Review: Sophisti-Pop
+
+Every song here starts as a draft. A draft shows as "draft notes" on the stage. Tick a song once
+you've checked its facts against the sources, then set `review.state` to `reviewed` in its file
+(`liner-notes review <song id>` does both).
+
+- [ ] `roxy-music--avalon` Avalon, Roxy Music (1982)
+    - writer couldn't confirm: Imogen's quote credits Rhett Davies with the production; that holds (Davies and Roxy Music are the credited producers, with Clearmountain mixing).
+- [ ] `roxy-music--more-than-this` More Than This, Roxy Music (1982)
+    - writer couldn't confirm: Desmond's Lost in Translation claim checks out. I left out any US Hot 100 position: the album article gives 103, and the song article only gives 58 on the rock chart.
+- [ ] `joe-jackson--steppin-out` Steppin' Out, Joe Jackson (1982)
+    - writer couldn't confirm: Recording dates for this track conflict (Wikipedia says January 1982 at Blue Rock, MusicBrainz says March to June), so I left the month out. Tomasz's quote calls the piano jazz piano; no source I read describes it that way.
+- [ ] `abc--the-look-of-love` The Look of Love, ABC (1982)
+    - writer couldn't confirm: Imogen calls them 'the Trevor Horn strings'. Horn pushed for strings and produced, but Anne Dudley wrote the arrangement. Wikipedia credits Palmer with a Linn LM-1; Sound on Sound says he bought a LinnDrum. I left out the model and the claim that Fry wore the gold suit on Top of the Pops, which I couldn't confirm.
+- [ ] `haircut-100--love-plus-one` Love Plus One, Haircut 100 (1982)
+    - writer couldn't confirm: Folake's quote is fair (congas, percussion and a three-piece brass section are on the album credits), though the marimba is the real Latin touch. Wikipedia's main name for the band is Haircut One Hundred. The recording studio isn't confirmed by a source I could read.
+- [ ] `the-style-council--long-hot-summer` Long Hot Summer, The Style Council (1983)
+    - writer couldn't confirm: I couldn't find a source on what keyboards or drum sounds are on the track, so the listen-for notes stay general. The 7:04 running time quoted for the extended mix comes from a search summary, not a page I read directly.
+- [ ] `spandau-ballet--true` True, Spandau Ballet (1983)
+    - writer couldn't confirm: Folake's Marvin Gaye quote is right ("listening to Marvin all night long"). The Sade thread is my inference about taste, not a documented link; drop it if the director wants only documented threads.
+- [ ] `china-crisis--wishful-thinking` Wishful Thinking, China Crisis (1983)
+    - writer couldn't confirm: Tomasz's quote is wrong on the singer: Eddie Lundon sings lead on this one, not Gary Daly (Wikipedia and electricityclub.co.uk). His UK number 9 is right. Gary Johnson plays fretless bass on the album, but I couldn't confirm it on this track.
+- [ ] `the-lotus-eaters--the-first-picture-of-you` The First Picture of You, The Lotus Eaters (1983)
+    - writer couldn't confirm: Imogen's UK number 15 is right. The Penny Black interview quotes come from a search summary (the page refused a direct fetch), so I paraphrased rather than quoted. Wikipedia gives the band's formation as both 1981 and September 1982; I left the date out.
+- [ ] `sade--smooth-operator` Smooth Operator, Sade (1984)
+    - writer couldn't confirm: The panel calls it a 'walking bass'; the source I found says 'winding', and I couldn't confirm a walking (jazz quarter-note) line, so the note uses Guan's word. Wikipedia doesn't name the drummer on this track; the album lists Dave Early and Paul Cooke.
+- [ ] `sade--your-love-is-king` Your Love Is King, Sade (1984)
+    - writer couldn't confirm: Panel quote: I couldn't confirm that the sax states the melody before Adu sings, so it isn't in the listen notes.
+- [ ] `prefab-sprout--when-love-breaks-down` When Love Breaks Down, Prefab Sprout (1984)
+    - writer couldn't confirm: Panel quote (Imogen) credits Thomas Dolby's production. That's right for the 1985 hit, but the 1984 single was Phil Thornalley's, and Wikipedia's album credits still list Thornalley as producer of track 4 (with 'vocal tape loops'), which contradicts Hi-Fi News. Which recording the playlist uses matters here. The Fairlight vocal stacking is documented for the Steve McQueen sessions in general, not this track by name. The Rolling Stone 1991 profile was paywalled; the Wichita Lineman claim comes from search excerpts of it plus Hot Press naming Webb as a primary influence.
+- [ ] `the-style-council--my-ever-changing-moods` My Ever Changing Moods, The Style Council (1984)
+    - writer couldn't confirm: Which version the playlist plays matters: the full-band single (4:02, or 5:44 on the 12-inch and US album) or the piano-only Café Bleu track. The notes describe the band version. I couldn't confirm who plays piano on the album version.
+- [ ] `the-style-council--youre-the-best-thing` You're the Best Thing, The Style Council (1984)
+    - writer couldn't confirm: I found no source tying this song to a specific Curtis Mayfield record (the panel's 'Curtis Mayfield tradition'); writers do link Mayfield to the B-side 'The Big Boss Groove' and to Weller's listening in general.
+- [ ] `the-blue-nile--tinseltown-in-the-rain` Tinseltown in the Rain, The Blue Nile (1984)
+    - writer couldn't confirm: Panel quote (Imogen) says it 'never charted'. It did: 87 in the UK and 28 on the Dutch Top 40 (Wikipedia). I couldn't name the string players or arranger. The Scott Walker comparison is a common critics' one; I didn't find Buchanan naming Walker himself.
+- [ ] `everything-but-the-girl--each-and-every-one` Each and Every One, Everything but the Girl (1984)
+    - writer couldn't confirm: I couldn't confirm where the horns first enter or exactly what Watt's guitar part is, so the panel's 'straight out of Astrud Gilberto records' stays as their opinion. Eden's recording date is inconsistent on Wikipedia (autumn 1983 in the text, January 1984 in the infobox).
+- [ ] `matt-bianco--get-out-of-your-lazy-bed` Get Out of Your Lazy Bed, Matt Bianco (1984)
+    - writer couldn't confirm: Producer is unclear: the song's Wikipedia page credits Peter Collins, but the album's credits give Collins only the B-side 'Big Rosie' and list Reilly and White as producers, so I left the producer out of 'made'. Panel quote (Folake): the album's Latin percussionist, Robin Jones, is credited on every track except this one (Peter Ross plays drums and percussion here), and I couldn't confirm a scat break. The UK top 20 claim is right (15).
+- [ ] `sade--the-sweetest-taboo` The Sweetest Taboo, Sade (1985)
+    - writer couldn't confirm: Release date given as October 1985 by Wikipedia and 30 September 1985 by Vintage Digital; left as autumn. Desmond's 'still gets played every week' is opinion and wasn't checked.
+- [ ] `bryan-ferry--slave-to-love` Slave to Love, Bryan Ferry (1985)
+    - writer couldn't confirm: The song's Wikipedia page lists David Gilmour among the lead guitarists, but the album personnel credits Gilmour only on 'Windswept' and 'Stone Woman' and gives the lead on this track to Neil Hubbard and Keith Scott. I went with the album credits.
+- [ ] `simply-red--holding-back-the-years` Holding Back the Years, Simply Red (1985)
+    - writer couldn't confirm: Which of the two studios this track was cut in isn't documented. Desmond's quote calls Hucknall 'a jazz-club singer'; the sources describe him as a soul and reggae club DJ before Simply Red, not a jazz-club singer.
+- [ ] `prefab-sprout--appetite` Appetite, Prefab Sprout (1985)
+    - writer couldn't confirm: Rafe's quote about the harmony stacks being 'the most careful pop arranging of the decade' is opinion. Thomas Dolby himself felt he didn't do the song justice, per Wikipedia.
+- [ ] `scritti-politti--perfect-way` Perfect Way, Scritti Politti (1985)
+    - writer couldn't confirm: Rafe's quote says 'Green and Arif Mardin made' this record. The album credits list Arif Mardin as producer only on 'Absolute', 'Don't Work That Hard' and 'Wood Beez'; 'Perfect Way' is credited to Scritti Politti (Gartside, Gamson, Maher) as producers (Wikipedia Cupid & Psyche 85 personnel, sessiondays.com). The Miles Davis cover part of his quote is correct (Tutu, 1986). Which of the three New York studios this track was cut in isn't documented.
+- [ ] `scritti-politti--the-word-girl` The Word Girl, Scritti Politti (1985)
+    - writer couldn't confirm: Folake's quote calls it 'a lovers-rock bounce'. Wikipedia describes it as reggae style; the lovers rock connection is Ranking Ann on the B-side. The UK number 6 in her quote is correct.
+- [ ] `china-crisis--black-man-ray` Black Man Ray, China Crisis (1985)
+    - writer couldn't confirm: Rafe's quote (Becker produced it) is correct. Album personnel credit Tim Renwick with 'all guitar solos' on the album but I couldn't tie a solo to this track.
+- [ ] `talk-talk--lifes-what-you-make-it` Life's What You Make It, Talk Talk (1985)
+    - writer couldn't confirm: Rafe's quote credits 'Tim Friese-Greene's piano riff'. The album credits list Mark Hollis on piano for this track and Friese-Greene on organ and Mellotron; Friese-Greene brought the drum pattern.
+- [ ] `tears-for-fears--head-over-heels` Head Over Heels, Tears for Fears (1985)
+    - writer couldn't confirm: Wikipedia styles the title 'Head over Heels'; I kept the list's capitalisation. The Japanese Breakfast cover year (2019) is from the song's Wikipedia covers list only. Rafe's quote about the piano intro is consistent with the credits (Andy Davis, grand piano).
+- [ ] `bryan-ferry--dont-stop-the-dance` Don't Stop the Dance, Bryan Ferry (1985)
+    - writer couldn't confirm: Imogen's quote calls it 'Boys and Girls in a tuxedo', which is opinion. I didn't find an interview about the session. John Scarlett-Davis directed this video and the one for 'The Word Girl' (stop 23), a link with no thread kind to fit it.
+- [ ] `bryan-ferry--windswept` Windswept, Bryan Ferry (1985)
+    - writer couldn't confirm: The Miami Vice placement comes from the 'Windswept' Wikipedia article; the season 2 page confirms the episode and date but doesn't list its music. Tomasz's quote calls it a deep cut, fair for a number 46.
+- [ ] `paul-young--every-time-you-go-away` Every Time You Go Away, Paul Young (1985)
+    - writer couldn't confirm: Desmond's quote (US number 1, fretless bass, a Hall & Oates song) checks out. The Hall & Oates original is titled 'Everytime You Go Away'; Young's is 'Every Time You Go Away'.
+- [ ] `level-42--something-about-you` Something About You, Level 42 (1985)
+    - writer couldn't confirm: No session-level source for who played the slap bass parts beyond King being the band's bassist. Echoes is dated 1984 on Wikipedia but other sources say 1983 or 1985.
+- [ ] `black--wonderful-life` Wonderful Life, Black (1986)
+    - writer couldn't confirm: The personnel list on Wikipedia comes from the single's liner notes and AllMusic; I couldn't confirm whether the 1987 A&M reissue is the same recording as the 1986 Ugly Man single, so I didn't say either way. The video's 1988 New York Film Festival award isn't named anywhere I could find.
+- [ ] `swing-out-sister--breakout` Breakout, Swing Out Sister (1986)
+    - writer couldn't confirm: Imogen's quote calls it the genre's best-known Top of the Pops moment; I found nothing on its Top of the Pops appearances either way. Her 'big-band brass' is a description, not a credit: I couldn't find who played the horns on this track. The Swing Out Sister Wikipedia article is flagged as needing citations.
+- [ ] `talk-talk--i-dont-believe-in-you` I Don't Believe in You, Talk Talk (1986)
+    - writer couldn't confirm: Tomasz's quote calls it 'a small hit'. It peaked at 96 in the UK, which is barely a chart entry. I couldn't confirm where in the track the harp and soprano sax come in, so they're not in the listen notes.
+- [ ] `curiosity-killed-the-cat--down-to-earth` Down to Earth, Curiosity Killed the Cat (1986)
+    - writer couldn't confirm: I couldn't find session players, horn credits or any description of this track's arrangement, so there is only one listen note, and it describes the band generally. Desmond's 'UK #3' is right.
+- [ ] `danny-wilson--marys-prayer` Mary's Prayer, Danny Wilson (1987)
+    - writer couldn't confirm: Wikipedia contradicts itself on the first UK release (86, and also 'failed to chart'). I couldn't confirm whether Lester Bowie's Brass Fantasy play on this track or only elsewhere on the album. Rafe's Aja comparison is taste, not fact; Clark's own account is that the verse chords came from a Juno preset.
+- [ ] `basia--time-and-tide` Time and Tide, Basia (1987)
+    - writer couldn't confirm: White didn't name the drummer on the title track. Wikipedia says the song was the sixth single from the album but doesn't date the US single. The lyric explanation (unfulfilled love) comes from the song's Wikipedia page as summarised in search results, not a direct Basia quote.
+- [ ] `abc--when-smokey-sings` When Smokey Sings, ABC (1987)
+    - writer couldn't confirm: I couldn't map the album's players (Brad Lang on bass, Howie Casey on saxes, Graham Broad on drums) to this track. I placed the single's sax solo loosely; the source only says it was added.
+- [ ] `aztec-camera--somewhere-in-my-heart` Somewhere in My Heart, Aztec Camera (1987)
+    - writer couldn't confirm: Desmond's 'Roddy Frame's biggest hit, UK #3' matches the chart; I didn't check every other Aztec Camera single to confirm 'biggest'.
+- [ ] `johnny-hates-jazz--shattered-dreams` Shattered Dreams, Johnny Hates Jazz (1987)
+    - writer couldn't confirm: I couldn't find who directed the UK video, only that David Fincher shot the black-and-white US one. Desmond's 'US #2, UK #5' is right.
+- [ ] `the-blue-nile--the-downtown-lights` The Downtown Lights, The Blue Nile (1989)
+    - writer couldn't confirm: I couldn't find a Buchanan quote about this song specifically. The note about the build is my reading of the Pittsburgh Press review, not a production fact.
+- [ ] `tears-for-fears--woman-in-chains` Woman in Chains, Tears for Fears (1989)
+    - writer couldn't confirm: Folake's 'Oleta Adams sings it' overstates it a little: Orzabal sings lead and Adams sings the duet part. Sources disagree on whether 'Get Here' reached 5 or 20 in the US; I gave 5 from the Wikipedia summary, which the director may want to check.
+- [ ] `everything-but-the-girl--driving` Driving, Everything But the Girl (1990)
+    - writer couldn't confirm: Full track personnel comes from sessiondays.com; Wikipedia credits only Brecker to this track by name. I couldn't find a single release date or a video director.

@@ -1,0 +1,76 @@
+{
+ "id": "everything-but-the-girl--each-and-every-one",
+ "title": "Each and Every One",
+ "artist": "Everything but the Girl",
+ "year": 1984,
+ "year_note": "",
+ "album": "Eden",
+ "aliases": {
+  "youtube": [
+   "z8C4tQvMUkI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/3e/b4/e1/3eb4e191-4fe4-4e23-7d71-9ca8e9221e12/mzaf_16491182865184590006.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/each-and-every-one/1629189419?i=1629189420&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Ben Watt and Tracey Thorn wrote it, and Robin Millar produced it at Power Plant while he was also making Diamond Life, with Mike Pela engineering. Watt plays guitar and piano and arranged the horns. The band around them: Chucho Merchán on bass, Charles Hayward (drummer of the experimental band This Heat) on drums, Bosco De Oliveira on percussion, Dick Pearce on flugelhorn, Nigel Nash on tenor and Pete King on alto.",
+  "context": "Thorn and Watt were both students at Hull University and both on Cherry Red as solo acts; their 1982 debut was a samba take on Cole Porter's 'Night and Day', and they followed Mike Alway to Blanco y Negro. Released 23 April 1984, it reached 28 in the UK and 9 in the Netherlands, and Eden reached 14. It is not a love song: the lyric answers the patronising way male critics wrote about Thorn's earlier band, Marine Girls. On BBC2's 8 Days a Week George Michael praised Thorn's voice, Morrissey didn't like it, and Tony Blackburn called the bossa nova beat 'an old sound come back again'.",
+  "listen_for": [
+   {
+    "where": "the rhythm from the start",
+    "note": "Bosco De Oliveira's percussion and Merchán's bass carry the bossa nova lilt Tony Blackburn heard, under Watt's guitar."
+   },
+   {
+    "where": "the horns",
+    "note": "Watt's own horn arrangement with Dick Pearce's flugelhorn: soft brass, not a pop horn section."
+   },
+   {
+    "where": "the length",
+    "note": "It's 2:45. The whole thing is over before most 1984 singles reach their second chorus."
+   }
+  ],
+  "leads_to": {
+   "artist": "Marine Girls",
+   "title": "Lazy Ways",
+   "year": 1983,
+   "why": "Thorn's previous band's second album, on Cherry Red and produced by Stuart Moxham of Young Marble Giants: the group whose reviews this song is answering."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Each_and_Every_One",
+   "https://en.wikipedia.org/wiki/Eden_(Everything_but_the_Girl_album)",
+   "https://en.wikipedia.org/wiki/Everything_but_the_Girl",
+   "https://en.wikipedia.org/wiki/Charles_Hayward_(drummer)",
+   "https://en.wikipedia.org/wiki/Lazy_Ways"
+  ],
+  "unverified": "I couldn't confirm where the horns first enter or exactly what Watt's guitar part is, so the panel's 'straight out of Astrud Gilberto records' stays as their opinion. Eden's recording date is inconsistent on Wikipedia (autumn 1983 in the text, January 1984 in the infobox)."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Top ten in the Netherlands",
+   "line": "Released 23 April 1984, it reached 28 in the UK in May and 9 on the Dutch Top 40. Eden went gold in both countries.",
+   "wiki": "Eden_(Everything_but_the_Girl_album)",
+   "source": "https://en.wikipedia.org/wiki/Each_and_Every_One"
+  },
+  {
+   "kind": "screen",
+   "title": "8 Days a Week on BBC2",
+   "line": "In May 1984 George Michael praised Thorn's voice on BBC2's review show 8 Days a Week, Morrissey disliked the single, and Tony Blackburn liked the bossa nova beat.",
+   "wiki": "BBC_Two",
+   "source": "https://en.wikipedia.org/wiki/Each_and_Every_One"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "year": 1980,
+ "items": [
+  {
+   "kind": "sport",
+   "title": "Miracle on Ice",
+   "line": "On 22 February 1980 at Lake Placid the US college team beat the Soviet Union 4–3, and Al Michaels asked 'Do you believe in miracles?' They still had to beat Finland two days later for the gold.",
+   "wiki": "Miracle_on_Ice",
+   "source": "https://en.wikipedia.org/wiki/Miracle_on_Ice"
+  },
+  {
+   "kind": "tv",
+   "title": "Who shot J.R.?",
+   "line": "Dallas left J.R. Ewing shot on 21 March 1980 and made America wait until 21 November for the answer. About 83 million people watched, a 76 percent share.",
+   "wiki": "Who_shot_J.R.?",
+   "source": "https://en.wikipedia.org/wiki/Who_shot_J.R.%3F"
+  },
+  {
+   "kind": "news",
+   "title": "Mount St. Helens",
+   "line": "The volcano in Washington State blew at 8:32 a.m. on 18 May 1980, killed about 57 people and lost 1,314 feet off the top.",
+   "wiki": "1980_eruption_of_Mount_St._Helens",
+   "source": "https://en.wikipedia.org/wiki/1980_eruption_of_Mount_St._Helens"
+  },
+  {
+   "kind": "film",
+   "title": "The Empire Strikes Back",
+   "line": "Irvin Kershner's sequel opened on 21 May 1980, cost $30.5 million and took about $401.5 million worldwide on its first run.",
+   "wiki": "The_Empire_Strikes_Back",
+   "source": "https://en.wikipedia.org/wiki/The_Empire_Strikes_Back"
+  },
+  {
+   "kind": "game",
+   "title": "Pac-Man",
+   "line": "Namco released it in Japan on 22 May 1980 and Midway brought it to America that October. Within a year more than 100,000 cabinets had taken over $1 billion in quarters.",
+   "wiki": "Pac-Man",
+   "source": "https://en.wikipedia.org/wiki/Pac-Man"
+  },
+  {
+   "kind": "tv",
+   "title": "CNN",
+   "line": "Ted Turner and Reese Schonfeld switched on the first 24-hour news channel from Atlanta at 6 p.m. Eastern on 1 June 1980.",
+   "wiki": "CNN",
+   "source": "https://en.wikipedia.org/wiki/CNN"
+  }
+ ]
+}

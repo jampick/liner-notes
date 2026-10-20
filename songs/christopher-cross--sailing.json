@@ -1,0 +1,89 @@
+{
+ "id": "christopher-cross--sailing",
+ "title": "Sailing",
+ "artist": "Christopher Cross",
+ "year": 1979,
+ "year_note": "The album Christopher Cross came out on 27 December 1979; Sailing was released as its second single in May 1980, which is why the panel review dates it 1980.",
+ "album": "Christopher Cross",
+ "aliases": {
+  "youtube": [
+   "9PnXcP8ZI7M"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/06/45/a0/0645a0fd-bc44-9469-4a7c-664356f08b8d/mzaf_15362022269254360671.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/sailing/1862733668?i=1862733680&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Cross wrote it about teenage summers sailing in Texas with an older friend, and told Songfacts the bridge, the part that shifts keys so the song lifts out of its modal drone, took him about two years to find. Michael Omartian produced the album in 1979 at Warner Bros. Recording Studios in North Hollywood and Pecan Street Studios in Austin, on the 3M Digital Recording System, which made it one of the first digitally recorded pop albums. Omartian is on acoustic piano, Rob Meurer on electric piano, Abraham Laboriel on bass, Tommy Taylor on drums and Victor Feldman on percussion, with strings under concertmaster Assa Drori.",
+  "context": "Cross thought it was too introspective to be a hit, and it went to number one on the Hot 100 on 30 August 1980 anyway, for a week. At the Grammys at Radio City Music Hall on 25 February 1981 it won Record of the Year, Song of the Year and the arrangement award, and Cross also took Album and Best New Artist, the first artist to win all four big categories in one night. It is also one of the few songs in the genre about an actual boat, and after the Yacht Rock web series featured it, it became the style's archetype.",
+  "listen_for": [
+   {
+    "where": "the bridge",
+    "note": "The key changes Cross spent two years on. After verses that stay in one modal groove, this is where the song lifts."
+   },
+   {
+    "where": "under the verses",
+    "note": "Two keyboards stacked: Omartian's acoustic piano and Rob Meurer's electric piano, with Cross's guitar figure running through them. The Grammy for the arrangement went to Cross and Omartian together."
+   },
+   {
+    "where": "the quiet stretches",
+    "note": "No tape under any of it. The album went down on 3M's digital multitrack in 1979, years before digital was normal in pop."
+   }
+  ],
+  "leads_to": {
+   "artist": "The 1975",
+   "title": "Bagsy Not in Net",
+   "year": 2020,
+   "why": "An uncredited sample of Sailing sits inside this track from Notes on a Conditional Form, forty years on."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sailing_(Christopher_Cross_song)",
+   "https://en.wikipedia.org/wiki/Christopher_Cross_(album)",
+   "https://en.wikipedia.org/wiki/23rd_Annual_Grammy_Awards",
+   "https://www.songfacts.com/facts/christopher-cross/sailing",
+   "https://en.wikipedia.org/wiki/Notes_on_a_Conditional_Form"
+  ],
+  "unverified": "Wikipedia says Cross called the orchestral opening an accident (a wrong button, with the acoustic part catching up), but I couldn't find the interview, so it's left out. Guitar credits conflict: the song page says 12-string electric, the album page says acoustic, so the text just says guitar. The panel line is right that it won Record and Song of the Year."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number one, August 1980",
+   "line": "Released as the second single in May 1980, it reached number one on the Hot 100 on 30 August 1980 and stayed a week.",
+   "source": "https://en.wikipedia.org/wiki/Sailing_(Christopher_Cross_song)"
+  },
+  {
+   "kind": "award",
+   "title": "The 1981 Grammy sweep",
+   "line": "At Radio City Music Hall on 25 February 1981 it won Record of the Year, Song of the Year and the arrangement award, and Cross took Album of the Year and Best New Artist on the same night.",
+   "wiki": "23rd_Annual_Grammy_Awards",
+   "source": "https://en.wikipedia.org/wiki/23rd_Annual_Grammy_Awards"
+  },
+  {
+   "kind": "cover",
+   "title": "NSYNC",
+   "line": "NSYNC covered it on their 1997 debut album and sang it with Cross at the 1999 Blockbuster Entertainment Awards.",
+   "wiki": "NSYNC_(album)",
+   "source": "https://en.wikipedia.org/wiki/Sailing_(Christopher_Cross_song)"
+  },
+  {
+   "kind": "sample",
+   "title": "The 1975, Bagsy Not in Net",
+   "line": "An uncredited sample of Sailing turns up in this track from Notes on a Conditional Form, released 22 May 2020.",
+   "wiki": "Notes_on_a_Conditional_Form",
+   "source": "https://en.wikipedia.org/wiki/Notes_on_a_Conditional_Form"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

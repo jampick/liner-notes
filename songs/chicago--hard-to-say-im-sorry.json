@@ -1,0 +1,90 @@
+{
+ "id": "chicago--hard-to-say-im-sorry",
+ "title": "Hard to Say I'm Sorry",
+ "artist": "Chicago",
+ "year": 1982,
+ "year_note": "",
+ "album": "Chicago 16",
+ "aliases": {
+  "youtube": [
+   "EORSLz0_BRU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/7d/f5/d97df522-34bb-6aaf-aeb8-9824c30a7a3c/mzaf_3521962466763157040.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/hard-to-say-im-sorry/1013382792?i=1013383867&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Peter Cetera wrote it with producer David Foster and sang lead. Foster plays piano, Steve Lukather plays the distorted electric guitar, and David Paich and Steve Porcaro add synthesizers; from Chicago only Cetera (who also plays acoustic guitar) and drummer Danny Seraphine are on it. Chicago 16 was recorded from January to April 1982 at Bill Schnee Studios, the Record Plant, Davlen, Skyline and Studio 55. On the album the ballad runs into 'Get Away', a horn-driven second part co-written by Robert Lamm.",
+  "context": "Chicago had spent their whole career on Columbia and hadn't had a top 40 hit since 'No Tell Lover'. Moving to Full Moon and Warner Bros. and hiring Foster changed that: released on 17 May 1982, this was the first single with new member Bill Champlin and it reached number 1 on 11 September, for two weeks, their second chart-topper. It was the end theme of Randal Kleiser's Summer Lovers, shot on Santorini and released that July.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Foster's piano and layered synths where the Chicago horns used to be. Billboard called it a 'stately pop ballad'."
+   },
+   {
+    "where": "when the electric guitar comes in",
+    "note": "Lukather's distorted guitar under Cetera's high tenor, the power-ballad sound that ran through the rest of the decade."
+   },
+   {
+    "where": "the album version's final section",
+    "note": "'Get Away' kicks in with the Chicago horns at last. The single leaves it off."
+   }
+  ],
+  "leads_to": {
+   "artist": "Az Yet featuring Peter Cetera",
+   "title": "Hard to Say I'm Sorry",
+   "year": 1997,
+   "why": "The R&B group's cover, remixed by David Foster with Cetera back on vocals, reached 8 on the Hot 100 fifteen years later."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hard_to_Say_I%27m_Sorry",
+   "https://en.wikipedia.org/wiki/Chicago_16",
+   "https://en.wikipedia.org/wiki/Summer_Lovers",
+   "https://en.wikipedia.org/wiki/Az_Yet",
+   "https://en.wikipedia.org/wiki/After_the_Love_Has_Gone"
+  ],
+  "unverified": "The song's Wikipedia page dates 'No Tell Lover' to both 1978 and early 1979. I couldn't confirm that Champlin sings on this track; he is credited as the new member on the single, not on a specific part."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number 1 in September",
+   "line": "Released 17 May 1982, it hit number 1 on 11 September for two weeks and spent twelve weeks in the top 5, Chicago's second chart-topper and their first top 40 hit in years.",
+   "wiki": "Chicago_16",
+   "source": "https://en.wikipedia.org/wiki/Hard_to_Say_I%27m_Sorry"
+  },
+  {
+   "kind": "screen",
+   "title": "Summer Lovers",
+   "line": "It closes Randal Kleiser's Summer Lovers, out on 16 July 1982, with Peter Gallagher and Daryl Hannah on Santorini; the soundtrack has the longer version with 'Get Away'.",
+   "wiki": "Summer_Lovers",
+   "source": "https://en.wikipedia.org/wiki/Summer_Lovers"
+  },
+  {
+   "kind": "video",
+   "title": "Black room, diamonds",
+   "line": "Cetera said the band shot this video and the one for 'Love Me Tomorrow' on the same day, in a black room with diamonds on the walls.",
+   "wiki": "Peter_Cetera",
+   "source": "https://en.wikipedia.org/wiki/Hard_to_Say_I%27m_Sorry"
+  },
+  {
+   "kind": "cover",
+   "title": "Az Yet with Cetera",
+   "line": "Az Yet's cover, with a David Foster remix bringing Cetera back in, came out on 3 February 1997 and reached 8 on the Hot 100 and 7 in the UK.",
+   "wiki": "Az_Yet",
+   "source": "https://en.wikipedia.org/wiki/Hard_to_Say_I%27m_Sorry"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

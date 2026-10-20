@@ -1,0 +1,81 @@
+{
+ "id": "michael-mcdonald--i-keep-forgettin",
+ "title": "I Keep Forgettin' (Every Time You're Near)",
+ "artist": "Michael McDonald",
+ "year": 1982,
+ "year_note": "",
+ "album": "If That's What It Takes",
+ "aliases": {
+  "youtube": [
+   "9cw5Wueu2yM"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/95/8c/9e/958c9e77-51a1-1432-9968-bb879c92a594/mzaf_13926590489789414672.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/i-keep-forgettin-every-time-youre-near/358567891?i=358568310&uo=4"
+  }
+ },
+ "notes": {
+  "made": "McDonald wrote it with Ed Sanford and recorded it for his first album away from the Doobie Brothers, produced by Ted Templeman and Lenny Waronker at Warner Bros. Recording Studio in North Hollywood and Sunset Sound. McDonald plays electric piano, Greg Phillinganes clavinet, Steve Lukather guitar and Jeff Porcaro drums, and Louis Johnson of the Brothers Johnson plays the bass line. His sister Maureen McDonald sings backup. It sounded close enough to Chuck Jackson's 1962 'I Keep Forgettin'' that Leiber and Stoller, who wrote that one, got a credit too.",
+  "context": "Released in August 1982, it reached 4 on the Hot 100, 7 on the R&B chart and 8 on Adult Contemporary, and the album went to 6. Billboard heard 'Minute by Minute' in it. Twelve years later Warren G built 'Regulate' with Nate Dogg on a four-bar sample of its rhythm; that single reached 2 on the Hot 100 and went double platinum.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "Louis Johnson's bass line. It is the part Warren G looped for 'Regulate', and it carries the whole song on its own."
+   },
+   {
+    "where": "under the verses",
+    "note": "Greg Phillinganes on clavinet against McDonald's electric piano, two keyboard players working the same small figure."
+   },
+   {
+    "where": "the choruses",
+    "note": "Maureen McDonald singing backup behind her brother, the only other voice on the record."
+   }
+  ],
+  "leads_to": {
+   "artist": "Warren G featuring Nate Dogg",
+   "title": "Regulate",
+   "year": 1994,
+   "why": "The Above the Rim single built on four bars of this song's rhythm, and the reason the panel's crate-digger voted yes."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/I_Keep_Forgettin%27_(Every_Time_You%27re_Near)",
+   "https://en.wikipedia.org/wiki/If_That%27s_What_It_Takes_(album)",
+   "https://en.wikipedia.org/wiki/Regulate_(song)"
+  ],
+  "unverified": "I couldn't find a first-hand account of the session, so nothing on how Johnson played the bass part (finger or thumb) or which studio this track was cut in."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number 4 in 1982",
+   "line": "Released in August 1982, it reached 4 on the Hot 100, 7 R&B and 8 Adult Contemporary, and took McDonald's first solo album to 6 on the Billboard 200.",
+   "wiki": "If_That's_What_It_Takes_(album)",
+   "source": "https://en.wikipedia.org/wiki/If_That%27s_What_It_Takes_(album)"
+  },
+  {
+   "kind": "sample",
+   "title": "Regulate",
+   "line": "Warren G and Nate Dogg's 'Regulate' (April 1994), from the Above the Rim soundtrack, runs on a four-bar sample of its rhythm. It reached 2 on the Hot 100 and went double platinum.",
+   "wiki": "Regulate_(song)",
+   "source": "https://en.wikipedia.org/wiki/Regulate_(song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Covers and a duet",
+   "line": "Dave Hollister slowed it right down on Ghetto Hymns, Patti LaBelle covered it in 2005, and Julia Fordham sang it as a duet with McDonald himself on China Blue in 2008.",
+   "wiki": "Michael_McDonald_(musician)",
+   "source": "https://en.wikipedia.org/wiki/I_Keep_Forgettin%27_(Every_Time_You%27re_Near)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

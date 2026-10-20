@@ -1,0 +1,74 @@
+{
+ "id": "steve-winwood--while-you-see-a-chance",
+ "title": "While You See a Chance",
+ "artist": "Steve Winwood",
+ "year": 1980,
+ "year_note": "",
+ "album": "Arc of a Diver",
+ "aliases": {
+  "youtube": [
+   "0j6g_uUhH2c"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6c/30/71/6c307108-e951-0328-08fe-8d934e010cb2/mzaf_283499075387197973.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/while-you-see-a-chance/1480068101?i=1480068102&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Winwood played everything himself at Netherturkdonic, the studio he built on his farm in Gloucestershire, and Will Jennings wrote the words. During mixing, engineer Nobby Clark hit record by accident and wiped the drum tracks. After two weeks of patching, Winwood took a Minimoog solo he'd played at the end of the song and moved it to the front as the intro.",
+  "context": "Island put it out in December 1980 and in the UK it only reached 45, though it was the label's first cassette single. American radio was the opposite: by mid-February 1981 62 percent of reporting stations had it, and it peaked at 7 on the Hot 100 that April. Arc of a Diver went to 3 in the US and went platinum.",
+  "listen_for": [
+   {
+    "where": "the intro",
+    "note": "That Minimoog line was the song's closing solo until the drums got erased. The accident is the hook."
+   },
+   {
+    "where": "when the beat kicks in",
+    "note": "Every instrument is Winwood, overdubbed alone at the farm, and it has the tidy, slightly stiff feel of one man stacking parts."
+   }
+  ],
+  "leads_to": {
+   "artist": "Steve Winwood",
+   "title": "Higher Love",
+   "year": 1986,
+   "why": "Same Winwood and Jennings partnership five years on, with Chaka Khan singing backup, and his first Hot 100 number one."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/While_You_See_a_Chance",
+   "https://en.wikipedia.org/wiki/Arc_of_a_Diver",
+   "https://en.wikipedia.org/wiki/Higher_Love"
+  ],
+  "unverified": "Arc of a Diver credits a Linn LM-1 for the album, but I couldn't confirm it's on this track, so the thread doesn't claim that."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Chart peaks",
+   "line": "It reached 7 on the Hot 100 in April 1981 and 3 in Canada, but only 45 in the UK, where it was Island's first cassette single.",
+   "source": "https://en.wikipedia.org/wiki/While_You_See_a_Chance"
+  },
+  {
+   "kind": "award",
+   "title": "Million Play award",
+   "line": "By 1988 it had enough US airplay to earn Winwood a Million Play award.",
+   "source": "https://en.wikipedia.org/wiki/While_You_See_a_Chance"
+  },
+  {
+   "kind": "video",
+   "title": "Single-version video",
+   "line": "Winwood made a music video for the shorter single edit, which still circulates on YouTube.",
+   "source": "https://en.wikipedia.org/wiki/While_You_See_a_Chance"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

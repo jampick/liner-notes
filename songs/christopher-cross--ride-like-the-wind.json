@@ -1,0 +1,84 @@
+{
+ "id": "christopher-cross--ride-like-the-wind",
+ "title": "Ride Like the Wind",
+ "artist": "Christopher Cross",
+ "year": 1979,
+ "year_note": "The album came out on 27 December 1979; the single followed in January 1980.",
+ "album": "Christopher Cross",
+ "aliases": {
+  "youtube": [
+   "kA9uaBqvRtA"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/11/0c/de/110cde6b-64bc-30a6-b1c6-77e59561f090/mzaf_13941082826395658342.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/ride-like-the-wind-2019-remaster/1862954377?i=1862954384&uo=4"
+  }
+ },
+ "notes": {
+  "made": "It was the first thing cut for the album, with Cross's Austin band (Tommy Taylor on drums, Andy Salmon on bass, Rob Meurer on synthesizers). The band was nervous in a big studio, someone suggested Taylor play four on the floor, and Omartian said that kick pattern made the song hop. Cross wanted a session ace for the solo; Omartian made him play it himself. Cross had sung the answer lines on the demo, Omartian wanted a different voice and got Michael McDonald, then added his own piano and Rhodes, Lenny Castro's congas, a horn section and 28 strings, all on a Harrison 48-channel board.",
+  "context": "Cross wrote the words, about an outlaw running for the Mexican border ahead of a hanging, on acid in a car between Houston and Austin, and dedicated it on the inner sleeve to Lowell George of Little Feat, who died in 1979. It was his debut single and sat at number 2 for four weeks behind Blondie's Call Me. In 1981 SCTV ran a sketch with Rick Moranis as McDonald racing across town to sing his part, and in 1999 The Onion reported that Cross had finally reached the Mexican border.",
+  "listen_for": [
+   {
+    "where": "the first few seconds",
+    "note": "Wind sound effects. Cross and engineer Chet Himes kept them low so the gimmick wouldn't swamp the band."
+   },
+   {
+    "where": "from the first bar",
+    "note": "Tommy Taylor's kick on every beat, the four-on-the-floor idea that got a nervous band moving."
+   },
+   {
+    "where": "the choruses",
+    "note": "McDonald answering Cross's lines, the bit SCTV built a whole sketch around."
+   },
+   {
+    "where": "the guitar solo",
+    "note": "Cross himself, because Omartian wouldn't let him hire someone."
+   }
+  ],
+  "leads_to": {
+   "artist": "Little Feat",
+   "title": "Dixie Chicken",
+   "year": 1973,
+   "why": "Cross dedicated this song to Lowell George, who co-wrote Dixie Chicken and cut that album partly at the same Warner Bros. studio in North Hollywood."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ride_Like_the_Wind",
+   "https://en.wikipedia.org/wiki/Christopher_Cross_(album)",
+   "https://en.wikipedia.org/wiki/Dixie_Chicken"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Four weeks at number 2",
+   "line": "Cross's debut single, out in January 1980, spent four straight weeks at number 2 on the Hot 100 behind Blondie's Call Me.",
+   "source": "https://en.wikipedia.org/wiki/Ride_Like_the_Wind"
+  },
+  {
+   "kind": "screen",
+   "title": "SCTV's McDonald sketch",
+   "line": "In 1981 SCTV had Rick Moranis play Michael McDonald racing to the studio to sing his part. McDonald says he saw it and thought for a minute he was hallucinating.",
+   "wiki": "SCTV",
+   "source": "https://en.wikipedia.org/wiki/Ride_Like_the_Wind"
+  },
+  {
+   "kind": "cover",
+   "title": "East Side Beat",
+   "line": "The Italian dance act East Side Beat covered it in 1991 and put out five mixes; the Factory Edit landed on an FFRR compilation in 1992.",
+   "wiki": "East_Side_Beat",
+   "source": "https://en.wikipedia.org/wiki/Ride_Like_the_Wind"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

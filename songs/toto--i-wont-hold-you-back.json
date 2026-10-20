@@ -1,0 +1,75 @@
+{
+ "id": "toto--i-wont-hold-you-back",
+ "title": "I Won't Hold You Back",
+ "artist": "Toto",
+ "year": 1982,
+ "year_note": "On Toto IV (1982). First released as a single in the Netherlands in October 1982; the US single followed in March 1983. The panel review has 1983.",
+ "album": "Toto IV",
+ "aliases": {
+  "youtube": [
+   "gJLja0qL2hE"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/38/91/82/389182ae-85b5-d98b-3684-6df7e3ab26da/mzaf_11693325491812928018.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/i-wont-hold-you-back/185716551?i=185716734&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Steve Lukather wrote it on piano and sings lead, though David Paich plays the piano on the record. The strings are the Martyn Ford Orchestra, recorded by John Kurlander at Abbey Road, with James Newton Howard arranging and conducting and Marty Paich adding orchestral arrangements. Lukather has said he improvised the guitar solo in one take while recording with the orchestra. Timothy B. Schmit of the Eagles sings on the choruses.",
+  "context": "It peaked at 10 on the Hot 100 on 7 May 1983, Toto's fourth and last US top ten, and spent three weeks at number 1 on the Adult Contemporary chart, which is what the panel's chart historian was voting for. In the UK it only scraped in at 37. In 2001 Roger Sanchez sampled its chorus for 'Another Chance', which went to number 1 in the UK.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Paich's piano playing a part Lukather wrote, the guitarist's song handed to the keyboard player."
+   },
+   {
+    "where": "the guitar solo",
+    "note": "Improvised in one take with the orchestra. Lukather plays it as a melody over strings recorded in London."
+   },
+   {
+    "where": "the choruses",
+    "note": "Timothy B. Schmit's high harmony above Lukather, an Eagle on a Toto record."
+   }
+  ],
+  "leads_to": {
+   "artist": "Roger Sanchez",
+   "title": "Another Chance",
+   "year": 2001,
+   "why": "A Defected house single built on this song's chorus vocal, and a UK number 1."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/I_Won%27t_Hold_You_Back",
+   "https://en.wikipedia.org/wiki/Toto_IV",
+   "https://en.wikipedia.org/wiki/Another_Chance_(Roger_Sanchez_song)",
+   "https://en.wikipedia.org/wiki/I_Can%27t_Tell_You_Why"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Toto's last top ten",
+   "line": "It peaked at 10 on the Hot 100 on 7 May 1983, their fourth and last US top ten, and spent three weeks at 1 on Adult Contemporary. The UK gave it 37.",
+   "wiki": "Toto_IV",
+   "source": "https://en.wikipedia.org/wiki/I_Won%27t_Hold_You_Back"
+  },
+  {
+   "kind": "sample",
+   "title": "Another Chance",
+   "line": "Roger Sanchez sampled its chorus for 'Another Chance', released on Defected on 2 July 2001, and it went to number 1 in the UK.",
+   "wiki": "Another_Chance_(Roger_Sanchez_song)",
+   "source": "https://en.wikipedia.org/wiki/Another_Chance_(Roger_Sanchez_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

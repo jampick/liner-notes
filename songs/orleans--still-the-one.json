@@ -1,0 +1,81 @@
+{
+ "id": "orleans--still-the-one",
+ "title": "Still the One",
+ "artist": "Orleans",
+ "year": 1976,
+ "year_note": "",
+ "album": "Waking and Dreaming",
+ "aliases": {
+  "youtube": [
+   "pvUjhYnCiIk"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/c7/b0/15c7b071-512b-5686-e722-749674e440ec/mzaf_18233648546237931140.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/still-the-one/204670508?i=204670566&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Johanna Hall wrote the lyric after a friend going through a divorce asked for a song about a couple who stay together, and handed it to her husband John on an envelope; he says the music took ten minutes. Chuck Plotkin produced it at the Sound Factory in Hollywood in 1975. Larry Hoppen sings lead and plays electric piano, John Hall plays electric guitar, Lance Hoppen bass, and Jerry Marotta, who joined during the sessions, plays drums so Wells Kelly could sing more.",
+  "context": "Orleans formed in Woodstock, New York, in 1972, signed to Asylum after showcases at Max's Kansas City, and had already reached 6 with 'Dance with Me' in 1975. 'Still the One' went to 5 in October 1976. In January 1977 ABC made it the network's theme, with studio singers cutting new versions for the 1977–78 and 1979–80 seasons. In 2004 Hall made George W. Bush's campaign stop playing it, and two years later he won a seat in Congress as a Democrat.",
+  "listen_for": [
+   {
+    "where": "the lead vocal",
+    "note": "Larry Hoppen, not John Hall. The man who wrote the music is the one on guitar."
+   },
+   {
+    "where": "the guitar fills",
+    "note": "John Hall's electric guitar, which keeps it closer to rock radio than most of this era."
+   },
+   {
+    "where": "the backing vocals",
+    "note": "Wells Kelly among them, freed from the drum stool when Marotta came in."
+   }
+  ],
+  "leads_to": {
+   "artist": "Orleans",
+   "title": "Dance with Me",
+   "year": 1975,
+   "why": "Their first hit, also by the Halls and produced by Plotkin, with a melodica solo from Larry Hoppen."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Still_the_One",
+   "https://en.wikipedia.org/wiki/Orleans_(band)",
+   "https://www.songfacts.com/facts/orleans/still-the-one",
+   "https://en.wikipedia.org/wiki/Dance_with_Me_(Orleans_song)"
+  ],
+  "unverified": "One account says the lyric was on a napkin, not an envelope; I went with Hall's own liner-notes version as quoted by Songfacts."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "ABC's theme",
+   "line": "ABC used it as its network jingle for the 1977–78 and 1979–80 seasons and again in 1995 and 2002.",
+   "wiki": "American_Broadcasting_Company",
+   "source": "https://en.wikipedia.org/wiki/Still_the_One"
+  },
+  {
+   "kind": "chart",
+   "title": "Number 5",
+   "line": "Released in August 1976, it reached 5 on the Hot 100 that October.",
+   "source": "https://en.wikipedia.org/wiki/Still_the_One"
+  },
+  {
+   "kind": "cover",
+   "title": "Bill Anderson",
+   "line": "Bill Anderson recorded it in Nashville on 13 December 1976 and took it to 11 on Hot Country Songs.",
+   "wiki": "Bill_Anderson",
+   "source": "https://en.wikipedia.org/wiki/Still_the_One"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

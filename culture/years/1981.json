@@ -1,0 +1,47 @@
+{
+ "year": 1981,
+ "items": [
+  {
+   "kind": "news",
+   "title": "Columbia's first flight",
+   "line": "STS-1 launched on 12 April 1981 with John Young and Robert Crippen and landed at Edwards Air Force Base two days and six hours later, the first Space Shuttle mission.",
+   "wiki": "STS-1",
+   "source": "https://en.wikipedia.org/wiki/STS-1"
+  },
+  {
+   "kind": "film",
+   "title": "Raiders of the Lost Ark",
+   "line": "Spielberg's $20 million adventure with Harrison Ford as Indiana Jones opened on 12 June 1981.",
+   "wiki": "Raiders_of_the_Lost_Ark",
+   "source": "https://en.wikipedia.org/wiki/Raiders_of_the_Lost_Ark"
+  },
+  {
+   "kind": "game",
+   "title": "Donkey Kong",
+   "line": "Nintendo put Shigeru Miyamoto's game out in Japan on 9 July 1981 and North America that October, with a carpenter called Jumpman who later became Mario.",
+   "wiki": "Donkey_Kong_(1981_video_game)",
+   "source": "https://en.wikipedia.org/wiki/Donkey_Kong_(1981_video_game)"
+  },
+  {
+   "kind": "news",
+   "title": "The royal wedding",
+   "line": "Prince Charles married Lady Diana Spencer at St Paul's Cathedral on 29 July 1981, in front of an estimated TV audience of 750 million.",
+   "wiki": "Wedding_of_Prince_Charles_and_Lady_Diana_Spencer",
+   "source": "https://en.wikipedia.org/wiki/Wedding_of_Prince_Charles_and_Lady_Diana_Spencer"
+  },
+  {
+   "kind": "music",
+   "title": "MTV",
+   "line": "MTV went on air at 12:01 a.m. on 1 August 1981 and played the Buggles' 'Video Killed the Radio Star' first.",
+   "wiki": "MTV",
+   "source": "https://en.wikipedia.org/wiki/MTV"
+  },
+  {
+   "kind": "tech",
+   "title": "IBM PC",
+   "line": "IBM launched its Personal Computer on 12 August 1981 from $1,565, with a 4.77 MHz Intel 8088 and 16 KB of memory.",
+   "wiki": "IBM_Personal_Computer",
+   "source": "https://en.wikipedia.org/wiki/IBM_Personal_Computer"
+  }
+ ]
+}

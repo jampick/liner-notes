@@ -1,0 +1,81 @@
+{
+ "id": "daryl-hall-john-oates--i-cant-go-for-that",
+ "title": "I Can't Go for That (No Can Do)",
+ "artist": "Daryl Hall & John Oates",
+ "year": 1981,
+ "year_note": "",
+ "album": "Private Eyes",
+ "aliases": {
+  "youtube": [
+   "ccenFp_3kq8"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/0d/0a/1b0d0ab3-2d2e-3d3b-3429-f6e4c2986b79/mzaf_4377936110611495094.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/i-cant-go-for-that-no-can-do/217749693?i=217749916&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Late one night at Electric Lady Studios in New York, after a Private Eyes session, Hall switched on a Roland CompuRhythm's Rock 1 preset and played a bass line on a Korg organ, and engineer Neil Kernon started the tape. Oates found the muted guitar part on the spot, on his 1958 Strat plugged straight into the console. Hall, Oates and Sara Allen finished the words the next day, and Charlie DeChant played the sax solo.",
+  "context": "Oates says the song is about the music business, being pushed around by labels, managers and agents, written so it could pass for a love song. It debuted at 59 on the Hot 100 in November 1981 and reached number one on 30 January 1982, ending the ten-week run of Physical. It also went to number one on the R&B chart, the only record to top both that year, and Hall wrote in his diary that he was 'the head soul brother in the U.S.'",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "The beat is a stock Roland preset, Rock 1, left running. Reverb rebuilt it on a CR-78 and it matched almost exactly."
+   },
+   {
+    "where": "the guitar",
+    "note": "Oates's muted Strat figure, played direct into the desk with no amp."
+   },
+   {
+    "where": "the bass line",
+    "note": "Hall on a Korg organ. Michael Jackson later told Hall he'd lifted the Billie Jean bass line from Hall & Oates."
+   }
+  ],
+  "leads_to": {
+   "artist": "De La Soul",
+   "title": "Say No Go",
+   "year": 1989,
+   "why": "From 3 Feet High and Rising, built on this song, and the start of its long life as a sample."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/I_Can%27t_Go_for_That_(No_Can_Do)",
+   "https://www.mixonline.com/recording/classic-tracks/classic-tracks-hall-oates-i-cant-go-no-can-do-365614",
+   "https://en.wikipedia.org/wiki/Private_Eyes_(Hall_%26_Oates_album)",
+   "https://reverb.com/news/the-synth-sounds-of-hall-and-oates-i-cant-go-for-that-no-can-do",
+   "https://en.wikipedia.org/wiki/Say_No_Go"
+  ],
+  "unverified": "Wikipedia's personnel credits a Roland CR-78 while Mix just says CompuRhythm; Wikipedia also hedges with an Ace Tone Rhythm Ace. Mix calls DeChant's instrument a 'saxilo', which I couldn't check, so I just said sax. Private Eyes Wikipedia gives the single's release as 14 December 1981, which conflicts with its Hot 100 debut on 14 November."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number one twice over",
+   "line": "It reached number one on 30 January 1982, ending Physical's ten weeks at the top, and also topped the R&B and dance charts. It was certified Gold on 7 January 1982.",
+   "source": "https://en.wikipedia.org/wiki/I_Can%27t_Go_for_That_(No_Can_Do)"
+  },
+  {
+   "kind": "sample",
+   "title": "De La Soul and after",
+   "line": "De La Soul built Say No Go on it in 1989, and it turns up in MF Doom's King Geedorah tracks, Simply Red's Sunrise and the xx's On Hold.",
+   "wiki": "Say_No_Go",
+   "source": "https://en.wikipedia.org/wiki/Say_No_Go"
+  },
+  {
+   "kind": "award",
+   "title": "VH1's top ten",
+   "line": "VH1 voted it number 6 on its list of the 100 greatest songs of the 1980s.",
+   "source": "https://en.wikipedia.org/wiki/I_Can%27t_Go_for_That_(No_Can_Do)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

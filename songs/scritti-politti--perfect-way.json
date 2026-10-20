@@ -1,0 +1,80 @@
+{
+ "id": "scritti-politti--perfect-way",
+ "title": "Perfect Way",
+ "artist": "Scritti Politti",
+ "year": 1985,
+ "year_note": "",
+ "album": "Cupid & Psyche 85",
+ "aliases": {
+  "youtube": [
+   "cLxIB_lrwk0"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/53/c0/89/53c08947-0ea5-2c34-9917-411c9f40cac7/mzaf_9402211928152416534.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/perfect-way/1139092963?i=1139092976&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Green Gartside wrote it with David Gamson, the New York keyboardist he met through Rough Trade, and the band produced it themselves: Gartside, Gamson and drummer Fred Maher, with Nick Moroch on guitar and Howard Gray engineering and mixing. The album was made mostly in New York, at Atlantic, Minot Sound and the Power Station, with rhythm tracks built up from a bass drum sound, a lot of Linn, Simmons SDS7 pads and Fairlight samples. Gamson told a magazine in July 1985 the bass was mostly Minimoog.",
+  "context": "Four singles from the album had already been out in Britain, and 'Perfect Way' only made 48 when it followed in August. In America it went to 11 on the Hot 100 in a 25-week run, their only hit there, and got them onto American Bandstand that December, an appearance Gartside later called grotesque. Then Miles Davis recorded it on Tutu, and Gartside wondered how Miles had even heard it.",
+  "listen_for": [
+   {
+    "where": "the drums from the top",
+    "note": "On this album Fred Maher and Gamson built the drums piece by piece: a kick sound first, then Linn snares picked out of five candidate tracks, hi-hats made from Linn and DMX together."
+   },
+   {
+    "where": "the vocal",
+    "note": "Gartside said his voice on the record is barely treated. The thin, high sound is him, not processing."
+   }
+  ],
+  "leads_to": {
+   "artist": "Miles Davis",
+   "title": "Perfect Way",
+   "year": 1986,
+   "why": "Miles took it into Tutu, produced by Marcus Miller and Tommy LiPuma, and kept it in his live set for years."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Perfect_Way",
+   "https://en.wikipedia.org/wiki/Cupid_%26_Psyche_85",
+   "https://sessiondays.com/?p=17812",
+   "https://www.muzines.co.uk/articles/heart-to-art/3861",
+   "https://www.stereogum.com/2156880/scritti-politti-green-gartside-interview/interviews",
+   "https://en.wikipedia.org/wiki/Tutu_(album)"
+  ],
+  "unverified": "Rafe's quote says 'Green and Arif Mardin made' this record. The album credits list Arif Mardin as producer only on 'Absolute', 'Don't Work That Hard' and 'Wood Beez'; 'Perfect Way' is credited to Scritti Politti (Gartside, Gamson, Maher) as producers (Wikipedia Cupid & Psyche 85 personnel, sessiondays.com). The Miles Davis cover part of his quote is correct (Tutu, 1986). Which of the three New York studios this track was cut in isn't documented."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "US number 11",
+   "line": "Only 48 in the UK, but 11 on the Hot 100 in a 25-week run, plus 6 on the US dance chart. It was Scritti Politti's only American hit.",
+   "wiki": "Perfect_Way",
+   "source": "https://en.wikipedia.org/wiki/Perfect_Way"
+  },
+  {
+   "kind": "cover",
+   "title": "Miles Davis, Tutu",
+   "line": "Miles recorded an instrumental version for Tutu (1986) and played it live for years; he then guested on trumpet on Scritti's 'Oh Patti' in 1988.",
+   "wiki": "Tutu_(album)",
+   "source": "https://en.wikipedia.org/wiki/Perfect_Way"
+  },
+  {
+   "kind": "screen",
+   "title": "American Bandstand",
+   "line": "They played it on American Bandstand in December 1985. Gartside later told Stereogum the experience was grotesque.",
+   "wiki": "American_Bandstand",
+   "source": "https://www.stereogum.com/2156880/scritti-politti-green-gartside-interview/interviews"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "id": "boz-scaggs--jojo",
+ "title": "JoJo",
+ "artist": "Boz Scaggs",
+ "year": 1980,
+ "year_note": "",
+ "album": "Middle Man",
+ "aliases": {
+  "youtube": [
+   "xi-GDD8yFyo"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d5/85/e2/d585e2c9-cbb8-5349-6f27-304db69f55df/mzaf_10952827548781156908.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/jojo-2023-remaster/1698413548?i=1698413550&uo=4"
+  }
+ },
+ "notes": {
+  "made": "David Foster brought the music. Scaggs said Foster 'just starts playing it and I start singing along with it and wrote the words', and backing singer David Lasley filled in more lines. Foster plays piano and synths and wrote the string chart, Jeff Porcaro drums, Steve Lukather and Ray Parker Jr. play guitar, and the backing vocals are Lasley, Sharon Redd and Charlotte Crossley. Bill Schnee produced and engineered.",
+  "context": "Middle Man put Scaggs back with the Toto players from Silk Degrees and it reached 8 on the album chart; it was his last record for eight years. JoJo went to 17 as the second single, behind Breakdown Dead Ahead at 15. Songfacts calls it the first hit about a pimp. Smash Hits said the album sounded designed for 'the more sedate kind of nite spot', which isn't far off.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Foster's keyboards set the whole groove before Porcaro comes in. Scaggs says the music arrived that way, with Foster playing and him singing along."
+   },
+   {
+    "where": "the choruses",
+    "note": "Lasley, Redd and Crossley stacked behind Scaggs. Lasley also helped write the words."
+   },
+   {
+    "where": "the strings",
+    "note": "Foster's own string arrangement, the same move he'd make on a lot of records in this era."
+   }
+  ],
+  "leads_to": {
+   "artist": "Boz Scaggs",
+   "title": "Look What You've Done to Me",
+   "year": 1980,
+   "why": "The other Scaggs and Foster song from 1980, a ballad for the Urban Cowboy soundtrack that got to 14 that October."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jojo_(Boz_Scaggs_song)",
+   "https://en.wikipedia.org/wiki/Middle_Man_(album)",
+   "https://sessiondays.com/2014/07/01/1980-boz-scaggs-middle-man/",
+   "https://www.songfacts.com/facts/boz-scaggs/jojo",
+   "https://en.wikipedia.org/wiki/Look_What_You%27ve_Done_to_Me"
+  ],
+  "unverified": "Bass: the Session Days listing and a Songfacts commenter citing Bill Schnee name John Pierce, while Songfacts' main text says David Hungate; I left bass out. The single and album list the title as 'Jojo'."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Chart peak",
+   "line": "The second single from Middle Man reached 17 on the Hot 100 in 1980, two places below Breakdown Dead Ahead. Both did better in Canada.",
+   "source": "https://en.wikipedia.org/wiki/Middle_Man_(album)"
+  },
+  {
+   "kind": "video",
+   "title": "A pre-MTV performance clip",
+   "line": "Arnold Levine shot a plain performance video of Scaggs and the band, unusual before MTV started in 1981.",
+   "source": "https://www.songfacts.com/facts/boz-scaggs/jojo"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

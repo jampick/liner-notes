@@ -1,0 +1,84 @@
+{
+ "id": "china-crisis--wishful-thinking",
+ "title": "Wishful Thinking",
+ "artist": "China Crisis",
+ "year": 1983,
+ "year_note": "The parent album came out on 31 October 1983 and the single in December 1983 (Wikipedia's song page and other sources give early January 1984); it peaked in January 1984. 1983 is the original release year.",
+ "album": "Working with Fire and Steel – Possible Pop Songs Volume Two",
+ "aliases": {
+  "youtube": [
+   "TWE3PGnAdFM"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6d/da/c9/6ddac908-51c5-985d-f6e1-967bab49050b/mzaf_15344952758161236887.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/wishful-thinking/725817841?i=725818332&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Gary Daly and Eddie Lundon wrote it after a weekend away trying to write a country song in the style of Brian Eno's 'Here He Comes'. Mike Howlett produced the album at Amazon Studios in Liverpool and The Manor in Oxfordshire, bringing in an E-mu Emulator next to real horns, woodwind and strings. Lundon, who wrote the words, sings lead, not Daly. Steve Levy plays the oboe.",
+  "context": "China Crisis came from Kirkby on the edge of Liverpool, working-class lads who met at a Catholic boys' school and loved Steely Dan, Bowie and Eno. They premiered the song on a John Peel session in January 1983, when it seemed like an album track. Released as the third single, it went to 9 in early 1984, their only UK top ten, and topped Sweden's Poporama radio chart that March. Walter Becker of Steely Dan produced their next album.",
+  "listen_for": [
+   {
+    "where": "the verses",
+    "note": "That is Eddie Lundon's voice, not the usual Gary Daly, which is part of why it sounds lighter than the rest of their records."
+   },
+   {
+    "where": "the woodwind line",
+    "note": "Steve Levy's oboe (he plays it on tracks 5 to 7 of the album, and this is track 6), the instrument Trouser Press singled out as the band's surprise."
+   },
+   {
+    "where": "the keyboard sounds",
+    "note": "The Emulator sampler Howlett introduced; one review called it an 'Emulator laced' single."
+   }
+  ],
+  "leads_to": {
+   "artist": "Brian Eno",
+   "title": "Here He Comes",
+   "year": 1977,
+   "why": "The song they were trying to imitate, from Before and After Science, which Eno co-produced with Rhett Davies, later the producer of Avalon."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Wishful_Thinking_(China_Crisis_song)",
+   "https://en.wikipedia.org/wiki/Working_with_Fire_and_Steel_%E2%80%93_Possible_Pop_Songs_Volume_Two",
+   "https://en.wikipedia.org/wiki/China_Crisis",
+   "https://www.classicpopmag.com/features/china-crisis-interview/",
+   "https://www.electricityclub.co.uk/occupation-legacy-china-crisis/",
+   "https://en.wikipedia.org/wiki/Before_and_After_Science"
+  ],
+  "unverified": "Tomasz's quote is wrong on the singer: Eddie Lundon sings lead on this one, not Gary Daly (Wikipedia and electricityclub.co.uk). His UK number 9 is right. Gary Johnson plays fretless bass on the album, but I couldn't confirm it on this track."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK number 9",
+   "line": "Their only UK top ten, peaking in January 1984. It was a top 20 hit in several European countries and number one on Sweden's Poporama radio chart on 8 March 1984.",
+   "wiki": "Wishful_Thinking_(China_Crisis_song)",
+   "source": "https://en.wikipedia.org/wiki/Wishful_Thinking_(China_Crisis_song)"
+  },
+  {
+   "kind": "live",
+   "title": "First heard on Peel",
+   "line": "China Crisis premiered it on a BBC John Peel session in January 1983, with the Waterboys' drummer Kevin Wilkinson sitting in.",
+   "wiki": "Working_with_Fire_and_Steel_–_Possible_Pop_Songs_Volume_Two",
+   "source": "https://en.wikipedia.org/wiki/Working_with_Fire_and_Steel_%E2%80%93_Possible_Pop_Songs_Volume_Two"
+  },
+  {
+   "kind": "live",
+   "title": "Fortieth anniversary tour",
+   "line": "In autumn 2023 the band played the whole of Working with Fire and Steel live across the UK.",
+   "wiki": "China_Crisis",
+   "source": "https://en.wikipedia.org/wiki/Working_with_Fire_and_Steel_%E2%80%93_Possible_Pop_Songs_Volume_Two"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-1)",
+  "written_on": "2026-10-19"
+ }
+}

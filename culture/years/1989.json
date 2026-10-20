@@ -1,0 +1,47 @@
+{
+ "year": 1989,
+ "items": [
+  {
+   "kind": "tv",
+   "title": "Sky Television launches",
+   "line": "Sky began broadcasting on 5 February 1989 with four channels on the Astra 1A satellite. It merged with rival BSB on 2 November 1990.",
+   "wiki": "Sky_Television_plc",
+   "source": "https://en.wikipedia.org/wiki/Sky_Television_plc"
+  },
+  {
+   "kind": "internet",
+   "title": "The web proposal",
+   "line": "In March 1989 Tim Berners-Lee handed CERN a proposal for an information system with no name yet. By the end of 1990 the first browser and server were running.",
+   "wiki": "World_Wide_Web",
+   "source": "https://en.wikipedia.org/wiki/World_Wide_Web"
+  },
+  {
+   "kind": "sport",
+   "title": "Hillsborough",
+   "line": "97 Liverpool supporters died after a crush at the FA Cup semi-final against Nottingham Forest at Hillsborough, Sheffield, on 15 April 1989.",
+   "wiki": "Hillsborough_disaster",
+   "source": "https://en.wikipedia.org/wiki/Hillsborough_disaster"
+  },
+  {
+   "kind": "game",
+   "title": "Game Boy",
+   "line": "Nintendo's Game Boy came out in Japan on 21 April 1989 and North America on 31 July, with Tetris in the box outside Japan. Europe waited until September 1990.",
+   "wiki": "Game_Boy",
+   "source": "https://en.wikipedia.org/wiki/Game_Boy"
+  },
+  {
+   "kind": "film",
+   "title": "Batman",
+   "line": "Tim Burton's Batman was shot at Pinewood and opened in the US on 23 June 1989 and the UK on 11 August. It cost $48 million and took $411.6 million.",
+   "wiki": "Batman_(1989_film)",
+   "source": "https://en.wikipedia.org/wiki/Batman_(1989_film)"
+  },
+  {
+   "kind": "news",
+   "title": "The Berlin Wall opens",
+   "line": "At about 18:53 on 9 November 1989 Günter Schabowski told a press conference the new travel rules took effect immediately, and that night Berliners crossed.",
+   "wiki": "Fall_of_the_Berlin_Wall",
+   "source": "https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall"
+  }
+ ]
+}

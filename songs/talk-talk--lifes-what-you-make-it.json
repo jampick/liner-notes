@@ -1,0 +1,81 @@
+{
+ "id": "talk-talk--lifes-what-you-make-it",
+ "title": "Life's What You Make It",
+ "artist": "Talk Talk",
+ "year": 1985,
+ "year_note": "First released in Germany on 18 November 1985; the UK release was 6 January 1986, when it reached 16.",
+ "album": "The Colour of Spring",
+ "aliases": {
+  "youtube": [
+   "l3VqAsMXE7o"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/a4/59/fba459aa-9032-3f55-99e9-bd5efd29a0b6/mzaf_9046061438651787087.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/lifes-what-you-make-it-1997-remaster/696811651?i=696811878&uo=4"
+  }
+ },
+ "notes": {
+  "made": "It was one of the last songs written for The Colour of Spring, after management complained there was no obvious single. Tim Friese-Greene had a drum pattern loosely based on Kate Bush's 'Running Up That Hill' and Mark Hollis played 'Green Onions' organ over it; David Rhodes added the guitar hook. On the record Hollis plays piano, Lee Harris drums, Friese-Greene organ and Mellotron, and Martin Ditcham percussion, with Friese-Greene producing.",
+  "context": "Hollis had said he'd be delighted if synthesizers didn't exist, and The Colour of Spring swapped them for piano, organ and guitar. The single was a hit across Europe and got to 90 in the US for two weeks in February 1986; the album reached 8 in the UK and topped the Dutch chart.",
+  "listen_for": [
+   {
+    "where": "the drums from the start",
+    "note": "Friese-Greene's beat is a slowed, loosened 'Running Up That Hill'. Kate Bush's single had come out in August 1985."
+   },
+   {
+    "where": "the guitar riff",
+    "note": "David Rhodes, Peter Gabriel's guitarist, plays the hook that holds the track together."
+   },
+   {
+    "where": "the piano",
+    "note": "Hollis plays the piano himself, under his own vocal."
+   }
+  ],
+  "leads_to": {
+   "artist": "Booker T. & the M.G.'s",
+   "title": "Green Onions",
+   "year": 1962,
+   "why": "What Hollis was playing over the drum pattern when the song took shape."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Life%27s_What_You_Make_It_(Talk_Talk_song)",
+   "https://en.wikipedia.org/wiki/The_Colour_of_Spring",
+   "https://www.theothersidereviews.com/?p=57350"
+  ],
+  "unverified": "Rafe's quote credits 'Tim Friese-Greene's piano riff'. The album credits list Mark Hollis on piano for this track and Friese-Greene on organ and Mellotron; Friese-Greene brought the drum pattern."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK number 16",
+   "line": "Out in Germany on 18 November 1985 and in the UK on 6 January 1986, where it reached 16. It got to 90 in the US and charted again on a 1990 reissue.",
+   "wiki": "Life's_What_You_Make_It_(Talk_Talk_song)",
+   "source": "https://en.wikipedia.org/wiki/Life%27s_What_You_Make_It_(Talk_Talk_song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Placebo, 2016",
+   "line": "Placebo released it as a double A-side with 'Jesus' Son' and on an EP named after it. The Divine Comedy did a string-quartet version in 1994.",
+   "wiki": "Placebo_(band)",
+   "source": "https://en.wikipedia.org/wiki/Life%27s_What_You_Make_It_(Talk_Talk_song)"
+  },
+  {
+   "kind": "video",
+   "title": "James Marsh's cover art",
+   "line": "The single's sleeve is by James Marsh and the album credits list him for The Colour of Spring's cover illustration too.",
+   "wiki": "The_Colour_of_Spring",
+   "source": "https://en.wikipedia.org/wiki/The_Colour_of_Spring"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

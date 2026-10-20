@@ -1,0 +1,69 @@
+{
+ "id": "tears-for-fears--head-over-heels",
+ "title": "Head Over Heels",
+ "artist": "Tears for Fears",
+ "year": 1985,
+ "year_note": "",
+ "album": "Songs from the Big Chair",
+ "aliases": {
+  "youtube": [
+   "CsHiG-43Fzg"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c4/5e/f3/c45ef383-ea62-18e9-53f2-d20b1d3b189e/mzaf_17682187674438307496.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/head-over-heels/1440825207?i=1440825700&uo=4"
+  }
+ },
+ "notes": {
+  "made": "It took about two years to finish, starting as a link between songs and sharing a piano and synth motif with 'Broken', which is why the two run together on the album. Chris Hughes produced Songs from the Big Chair in Bath, at Ian Stanley's home studio and the band's Wool Hall. Roland Orzabal sings and plays guitar and keys, Curt Smith bass, Manny Elias drums, Ian Stanley keyboards, and Andy Davis plays the grand piano.",
+  "context": "The album came out on 25 February 1985, went to 1 in America and sold about nine million worldwide. This was its fourth UK single, out on 14 June, peaking at 12, but in the US it was the third and reached 3. Nigel Dick's video, shot at the Emmanuel College library in Toronto, has Orzabal chasing a librarian and a chimp in a Red Sox shirt.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Andy Davis's grand piano, the motif shared with 'Broken'. On the album you get the studio 'Broken' first, then this."
+   },
+   {
+    "where": "the last minute of the album version",
+    "note": "The coda is a live recording of 'Broken' from Hammersmith Odeon in December 1983, so the song ends in a different room from where it started."
+   }
+  ],
+  "leads_to": {
+   "artist": "Japanese Breakfast",
+   "title": "Head Over Heels",
+   "year": 2019,
+   "why": "An indie cover from 2019, the same year Magdalena Bay covered it; younger bands keep coming back to this one."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Head_over_Heels_(Tears_for_Fears_song)",
+   "https://en.wikipedia.org/wiki/Songs_from_the_Big_Chair"
+  ],
+  "unverified": "Wikipedia styles the title 'Head over Heels'; I kept the list's capitalisation. The Japanese Breakfast cover year (2019) is from the song's Wikipedia covers list only. Rafe's quote about the piano intro is consistent with the credits (Andy Davis, grand piano)."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "US number 3",
+   "line": "Released 14 June 1985 in the UK, where it reached 12. In the US it came out in September and peaked at 3.",
+   "wiki": "Head_over_Heels_(Tears_for_Fears_song)",
+   "source": "https://en.wikipedia.org/wiki/Head_over_Heels_(Tears_for_Fears_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Donnie Darko",
+   "line": "An edited version plays in Donnie Darko (2001).",
+   "wiki": "Donnie_Darko",
+   "source": "https://en.wikipedia.org/wiki/Head_over_Heels_(Tears_for_Fears_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

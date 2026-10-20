@@ -1,0 +1,70 @@
+{
+ "id": "pablo-cruise--love-will-find-a-way",
+ "title": "Love Will Find a Way",
+ "artist": "Pablo Cruise",
+ "year": 1978,
+ "year_note": "",
+ "album": "Worlds Away",
+ "aliases": {
+  "youtube": [
+   "Kj4-_-iq1A8"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/33/87/a5/3387a5fd-a180-bd0b-8b43-a74a4cabf0ae/mzaf_16903282861912437150.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/love-will-find-a-way/1443417335?i=1443417575&uo=4"
+  }
+ },
+ "notes": {
+  "made": "David Jenkins and Cory Lerios wrote it. Bill Schnee produced, engineered and mixed Worlds Away, recorded in February and March 1978 at the Record Plant in Sausalito and Redwing Sound in Los Angeles. Original bassist Bud Cockrell had left before the sessions; Mike Porcaro, Jeff and Steve's brother, played bass, and Steve Porcaro and James Newton Howard added synths on the album.",
+  "context": "A&M released it in May 1978 and it was all over the radio that summer, reaching 6 on the Hot 100 and 5 in Canada. Worlds Away went to 6 on the album chart, the band's best. Robert Christgau complained that hearing the chorus as often as radio played it would make the pain permanent, which tells you how often radio played it.",
+  "listen_for": [
+   {
+    "where": "the bass under the verses",
+    "note": "Mike Porcaro, four years before he joined his brothers in Toto."
+   },
+   {
+    "where": "the chorus",
+    "note": "The title line, sung over and over: the hook Christgau grumbled about and summer 1978 radio couldn't get enough of."
+   }
+  ],
+  "leads_to": {
+   "artist": "Pablo Cruise",
+   "title": "You're Out to Lose",
+   "year": 1978,
+   "why": "A deeper cut from the same album with Michael McDonald among its writers."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Love_Will_Find_a_Way_(Pablo_Cruise_song)",
+   "https://en.wikipedia.org/wiki/Worlds_Away_(Pablo_Cruise_album)",
+   "https://sessiondays.com/?p=89435",
+   "https://en.wikipedia.org/wiki/Mike_Porcaro"
+  ],
+  "unverified": "The Mike Porcaro bass credit for this exact track comes from Sessiondays' tag; Wikipedia credits him on the album. Which album tracks Steve Porcaro and James Newton Howard play on isn't stated."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "No. 6, summer 1978",
+   "line": "Out in May 1978, it reached 6 on the Hot 100 and 5 in Canada, and played all summer.",
+   "source": "https://en.wikipedia.org/wiki/Love_Will_Find_a_Way_(Pablo_Cruise_song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Worlds Away",
+   "line": "Its album, Worlds Away, reached 6 on the Billboard 200, the band's best.",
+   "wiki": "Worlds_Away_(Pablo_Cruise_album)",
+   "source": "https://en.wikipedia.org/wiki/Worlds_Away_(Pablo_Cruise_album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

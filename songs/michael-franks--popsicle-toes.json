@@ -1,0 +1,75 @@
+{
+ "id": "michael-franks--popsicle-toes",
+ "title": "Popsicle Toes",
+ "artist": "Michael Franks",
+ "year": 1976,
+ "year_note": "Wikipedia's album page dates The Art of Tea to 1975 (it was recorded 22 May to 9 June 1975). MusicBrainz gives February 1976, Franks's own Wikipedia page says 1976, and the single charted in 1976, so 1976 stands.",
+ "album": "The Art of Tea",
+ "aliases": {
+  "youtube": [
+   "982_dWnwsIg"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e2/92/97/e2929721-dfb3-8974-f506-56e58cbf45a7/mzaf_4502668605799255435.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/popsicle-toes/484683051?i=484683061&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Tommy LiPuma produced The Art of Tea at Capitol Studios in Hollywood over three weeks in 1975, with Al Schmitt recording and mixing and Doug Sax mastering. Franks wrote it. The players on this track are Joe Sample on keyboards, Larry Carlton on guitar, Wilton Felder on bass, John Guerin on drums and Larry Bunker on vibraphone.",
+  "context": "Franks grew up in La Jolla, studied comparative literature at UCLA and wrote music for the film Cockfighter before this, his first record for Reprise. 'Popsicle Toes' is his only Hot 100 entry, peaking at 43, with 45 on Easy Listening, and the album reached 131. Singers picked it up straight away: the Manhattan Transfer recorded it the same year on Coming Out, and Diana Krall did it in 1999.",
+  "listen_for": [
+   {
+    "where": "the vibraphone",
+    "note": "Larry Bunker, the cool, glassy sound that sets up the joke in the lyric."
+   },
+   {
+    "where": "the verses",
+    "note": "A birthday song offered instead of a present, comparing a lover to places on a map, sung almost conversationally."
+   },
+   {
+    "where": "the band underneath",
+    "note": "Sample, Carlton, Felder and Guerin, jazz players keeping a pop song loose. Carlton cut the 'Kid Charlemagne' solo the same year."
+   }
+  ],
+  "leads_to": {
+   "artist": "Diana Krall",
+   "title": "Popsicle Toes",
+   "year": 1999,
+   "why": "From When I Look in Your Eyes on Verve, the jazz singer's version that kept the song in circulation."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Art_of_Tea",
+   "https://en.wikipedia.org/wiki/Popsicle_Toes",
+   "https://en.wikipedia.org/wiki/Michael_Franks_(musician)",
+   "https://classicsongoftheday.com/popsicle-toes-michael-franks/",
+   "https://musicbrainz.org/release-group/37ddd4e5-d875-3574-8e1b-1dadfb440e11"
+  ],
+  "unverified": "The track personnel comes from Classic Song of the Day; the album also credits Steve Gadd on drums, David Sanborn and Michael Brecker on saxophones and Nick DeCaro on strings without track numbers. I couldn't confirm a bass solo or which instruments solo on this track."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "His only Hot 100 hit",
+   "line": "Peaked at 43 in 1976, Franks's only Hot 100 entry, and 45 on Easy Listening.",
+   "source": "https://en.wikipedia.org/wiki/Popsicle_Toes"
+  },
+  {
+   "kind": "cover",
+   "title": "Manhattan Transfer and Diana Krall",
+   "line": "The Manhattan Transfer cut it for Coming Out in 1976, and Diana Krall for When I Look in Your Eyes in 1999.",
+   "wiki": "When_I_Look_in_Your_Eyes",
+   "source": "https://en.wikipedia.org/wiki/Popsicle_Toes"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

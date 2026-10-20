@@ -1,0 +1,73 @@
+{
+ "id": "ambrosia--biggest-part-of-me",
+ "title": "Biggest Part of Me",
+ "artist": "Ambrosia",
+ "year": 1980,
+ "year_note": "",
+ "album": "One Eighty",
+ "aliases": {
+  "youtube": [
+   "RuMnXi7L7wE"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ac/e3/26/ace3263c-dcb1-798c-ab51-5ce1512cb202/mzaf_495521525717072715.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/biggest-part-of-me/342382798?i=342382936&uo=4"
+  }
+ },
+ "notes": {
+  "made": "David Pack got the chords, melody and part of the lyric in about ten minutes on 4 July 1979, at the piano in his home studio while his family packed for a trip, and put it on a reel-to-reel before they left. He worried the words were 'Hallmark-card cheesy' and phoned Michael McDonald, who told him that a Holiday Inn band playing it would be a good thing. On the record David C. Lewis plays Fender Rhodes, piano and a Prophet-5, Christopher North plays Hammond, and Ernie Watts plays the sax.",
+  "context": "Ambrosia started as a prog band, and fans read the album title One Eighty as a 180-degree turn. Warner Bros. put the single out in March 1980 and it went to 3 on the Hot 100 and the adult contemporary chart, number one on Radio & Records, and into the top 40 of the soul chart, which few soft rock bands managed.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Lewis on Rhodes with a Prophet-5 alongside it, the polysynth that turns up all over this era."
+   },
+   {
+    "where": "the instrumental break",
+    "note": "Ernie Watts on sax. He also plays on Arthur's Theme a year later, so he bookends this era."
+   },
+   {
+    "where": "the choruses",
+    "note": "Four of the band sing harmony (Puerta, Jones, Drummond behind Pack), which is why it sounds like a group record rather than a singer with hired backups."
+   }
+  ],
+  "leads_to": {
+   "artist": "Ambrosia",
+   "title": "You're the Only Woman (You & I)",
+   "year": 1980,
+   "why": "The follow-up single from One Eighty, also Pack's, which got to 13 in the summer of 1980."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Biggest_Part_of_Me",
+   "https://www.songfacts.com/facts/ambrosia/biggest-part-of-me",
+   "https://sessiondays.com/2019/11/05/1980-ambrosia-one-eighty/",
+   "https://en.wikipedia.org/wiki/You%27re_the_Only_Woman_(You_%26_I)"
+  ],
+  "unverified": "The panel line mentions 'the gospel lift at the end'; I found no source describing the ending, so it's left out."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Chart peaks",
+   "line": "Released 19 March 1980, it reached 3 on the Hot 100 and adult contemporary, 2 on Cash Box, number one on Radio & Records, and the top 40 of the soul chart.",
+   "source": "https://en.wikipedia.org/wiki/Biggest_Part_of_Me"
+  },
+  {
+   "kind": "cover",
+   "title": "Pack's remake",
+   "line": "David Pack recut it for his 2005 solo album The Secret of Movin' On.",
+   "source": "https://en.wikipedia.org/wiki/Biggest_Part_of_Me"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

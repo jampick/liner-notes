@@ -1,0 +1,77 @@
+{
+ "id": "sade--the-sweetest-taboo",
+ "title": "The Sweetest Taboo",
+ "artist": "Sade",
+ "year": 1985,
+ "year_note": "",
+ "album": "Promise",
+ "aliases": {
+  "youtube": [
+   "kcPc18SG6uA"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b2/fd/b5/b2fdb53b-454d-9f31-df03-22e058d17541/mzaf_15811922104231780414.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/the-sweetest-taboo/211677347?i=211677413&uo=4"
+  }
+ },
+ "notes": {
+  "made": "It started as a drum loop and a chord sequence that percussionist Martin Ditcham put together at home on a Yamaha RX11; he gave Sade Adu the cassette and she wrote the melody and lyrics. The band cut it live in Studio One at the Power Plant in Willesden with Robin Millar and Mike Pela producing, Dave Early on drums, Paul Denman's bass recorded in the control room, and a four-bar acoustic guitar sample triggered off the drums through an AMS. Sade's overdubbed vocals went down on a Neumann U87 behind a corrugated metal screen, and the mix in the top-floor Gallery took Pela six or seven days.",
+  "context": "Diamond Life had sold over six million copies and 'Smooth Operator' had broken them in America, so Promise was the band's chance to prove it wasn't a fluke. It entered the UK album chart at number 1 and topped the Billboard 200 as well. This lead single only reached 31 at home, but in the US it climbed to number 5 on the Hot 100 in March 1986 and gave them a second straight number 1 on the Adult Contemporary chart.",
+  "listen_for": [
+   {
+    "where": "the first bars and the fade",
+    "note": "The rain comes off a sound-effects record. The thunder is a Roland amp with its reverb turned up, dropped gently from a couple of inches off the floor."
+   },
+   {
+    "where": "all the way through",
+    "note": "Ditcham's cabasas and a steady shaker part run under the whole song. He played them in a booth walled with corrugated metal screens, and they carry more of the groove than the drum kit does."
+   },
+   {
+    "where": "the middle section",
+    "note": "Stuart Matthewman's tenor sax swells with Terry Bailey on trumpet and Pete Beachill on trombone, while Ditcham taps glasses with a fork and Dave Early blows across a bottle, all recorded live."
+   }
+  ],
+  "leads_to": {
+   "artist": "Airto",
+   "title": "Tombo in 7/4",
+   "year": 1973,
+   "why": "Ditcham says hearing Airto Moreira with Miles Davis is what turned a drummer's son into a percussionist, and this CTI track from Fingers is Airto at his most rhythmically playful."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Sweetest_Taboo",
+   "https://en.wikipedia.org/wiki/Promise_(Sade_album)",
+   "https://www.soundonsound.com/node/4914901",
+   "https://www.theothersidereviews.com/?p=57350",
+   "https://en.wikipedia.org/wiki/Fingers_(album)",
+   "https://en.wikipedia.org/wiki/The_Colour_of_Spring"
+  ],
+  "unverified": "Release date given as October 1985 by Wikipedia and 30 September 1985 by Vintage Digital; left as autumn. Desmond's 'still gets played every week' is opinion and wasn't checked."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "US number 5",
+   "line": "Only 31 in the UK, but it reached 5 on the Billboard Hot 100 in March 1986, spent 13 weeks in the top 40 and topped the Adult Contemporary chart.",
+   "wiki": "The_Sweetest_Taboo",
+   "source": "https://en.wikipedia.org/wiki/The_Sweetest_Taboo"
+  },
+  {
+   "kind": "chart",
+   "title": "Promise goes to number 1",
+   "line": "The album entered the UK chart at number 1 in November 1985 and also topped the Billboard 200, a first for the band on both.",
+   "wiki": "Promise_(Sade_album)",
+   "source": "https://en.wikipedia.org/wiki/Promise_(Sade_album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

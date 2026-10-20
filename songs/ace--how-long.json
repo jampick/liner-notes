@@ -1,0 +1,75 @@
+{
+ "id": "ace--how-long",
+ "title": "How Long",
+ "artist": "Ace",
+ "year": 1974,
+ "year_note": "A UK single on Anchor in 1974 (it was in the UK chart by November that year). The US release came in March 1975, and it peaked at 3 there in 1975.",
+ "album": "Five-A-Side",
+ "aliases": {
+  "youtube": [
+   "gBMnGYCTBxE"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1c/81/66/1c81664c-2da3-c124-c8f5-ed00da3d10d6/mzaf_7293931656939024066.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/how-long/1446617007?i=1446617014&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Paul Carrack wrote it and sings it, and plays the keyboards. Ace first tried to cut it as a Motown-style single for Anchor, gave up, and made it part of their debut album instead, produced by John Anthony at Rockfield in Wales (Trident in London also gets a credit). Phil Harris plays the guitar solo, Alan 'Bam' King rhythm guitar, Terry 'Tex' Comer bass and Fran Byrne drums.",
+  "context": "Most people hear a cheating song. Carrack wrote it after finding out that Comer had been secretly working with the Sutherland Brothers and Quiver, so the betrayal is about a band, not a lover. It reached 20 in the UK and 3 in the US and Canada, and the album went to 11 on the Billboard 200. In March 2020 an Amazon Prime advert put it back at number 1 on Billboard's Rock Digital Song Sales chart, and in 2025 the Horne Section played it for 24 hours straight for charity.",
+  "listen_for": [
+   {
+    "where": "the guitar solo",
+    "note": "Phil Harris, the band's lead guitarist, kept short and melodic so it never pulls focus from Carrack's voice."
+   },
+   {
+    "where": "under the verses",
+    "note": "Carrack's keyboards (he's credited with organ, piano and electric piano) carry the groove with Comer's bass. Lipps Inc. and Aswad with Yazz both turned it into dance records later."
+   }
+  ],
+  "leads_to": {
+   "artist": "Lipps Inc.",
+   "title": "How Long",
+   "year": 1980,
+   "why": "The disco cover, which reached 4 on the US dance chart and sold a million in Mexico."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/How_Long_(Ace_song)",
+   "https://en.wikipedia.org/wiki/Five-A-Side"
+  ],
+  "unverified": "I couldn't confirm an exact UK release date, and I couldn't confirm which keyboard plays which part. "
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Top 3 in America",
+   "line": "Reached 3 in the US and Canada and 20 in the UK. Phil Collins put it in his top 10 in Smash Hits in 1981.",
+   "source": "https://en.wikipedia.org/wiki/How_Long_(Ace_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Amazon Prime advert",
+   "line": "After an Amazon Prime ad in March 2020 it went to number 1 on Billboard's Rock Digital Song Sales, with sales up more than 2,000%.",
+   "wiki": "Amazon_Prime",
+   "source": "https://en.wikipedia.org/wiki/How_Long_(Ace_song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Lipps Inc. and Rod Stewart",
+   "line": "Lipps Inc. took it to 4 on the US dance chart in 1980, and Rod Stewart charted with it in 1981.",
+   "wiki": "Lipps_Inc.",
+   "source": "https://en.wikipedia.org/wiki/How_Long_(Ace_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

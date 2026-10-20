@@ -1,0 +1,75 @@
+{
+ "id": "china-crisis--black-man-ray",
+ "title": "Black Man Ray",
+ "artist": "China Crisis",
+ "year": 1985,
+ "year_note": "",
+ "album": "Flaunt the Imperfection",
+ "aliases": {
+  "youtube": [
+   "2ANTP9lFyXk"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/08/38/27/08382780-4a9f-09cf-a96f-1db71c4475e2/mzaf_10235169283686992915.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/black-man-ray/723332639?i=723332655&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Gary Daly wrote it alone at his mother's house after touring with Simple Minds, on a Roland Jupiter-8 whose arpeggiator he triggered from an 808, with a microphone out the window for street sound and a TASCAM Portastudio. Walter Becker of Steely Dan produced Flaunt the Imperfection, starting at Rock City in Shepperton and finishing at Parkgate in East Sussex, and he kept the band's demo parts. Becker told Daly it reminded him of the Beatles.",
+  "context": "Virgin put out the album on 29 April 1985 and it reached 9, their best. The single peaked at 14 that April. Daly named it after Ray Charles and Man Ray at once, which he called 'a total Eno-ism'; Eno had been his first choice of producer before the label offered Becker, who turned out to be a fan.",
+  "listen_for": [
+   {
+    "where": "the intro",
+    "note": "The arpeggio is Daly's demo idea, a Jupiter-8 clocked from a drum machine, kept because Becker liked what the demos already had."
+   },
+   {
+    "where": "the shape of the whole song",
+    "note": "Daly's own breakdown: intro, verse, chorus, middle eight, verse, double chorus, out. The Beatles pattern Becker heard."
+   },
+   {
+    "where": "the chorus",
+    "note": "'Yes, yes, I could be wrong'. Daly said it came from feeling tired and resentful on his own, and Becker made them sing five or six word-perfect takes of every vocal."
+   }
+  ],
+  "leads_to": {
+   "artist": "Brian Eno",
+   "title": "Here He Comes",
+   "year": 1977,
+   "why": "From Before and After Science; it inspired China Crisis's 'Wishful Thinking', and Eno was who Daly wanted before Becker came along."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Black_Man_Ray",
+   "https://en.wikipedia.org/wiki/Flaunt_the_Imperfection",
+   "https://electronicsound.co.uk/?p=11692",
+   "https://en.wikipedia.org/wiki/Wishful_Thinking_(China_Crisis_song)"
+  ],
+  "unverified": "Rafe's quote (Becker produced it) is correct. Album personnel credit Tim Renwick with 'all guitar solos' on the album but I couldn't tie a solo to this track."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK number 14",
+   "line": "It spent 13 weeks on the UK chart, peaking at 14 in April 1985, and was their biggest hit in Australia at 30. Flaunt the Imperfection reached 9.",
+   "wiki": "Black_Man_Ray",
+   "source": "https://en.wikipedia.org/wiki/Black_Man_Ray"
+  },
+  {
+   "kind": "live",
+   "title": "The singalong",
+   "line": "Gary Daly says audiences always sing the 'Yes, yes, I could be wrong' chorus back at them.",
+   "wiki": "China_Crisis",
+   "source": "https://en.wikipedia.org/wiki/Black_Man_Ray"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-3)",
+  "written_on": "2026-10-18"
+ }
+}

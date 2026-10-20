@@ -1,0 +1,47 @@
+{
+ "year": 1987,
+ "items": [
+  {
+   "kind": "news",
+   "title": "Zeebrugge ferry disaster",
+   "line": "The Herald of Free Enterprise capsized outside Zeebrugge on 6 March 1987 after sailing with its bow doors open. 193 passengers and crew died.",
+   "wiki": "MS_Herald_of_Free_Enterprise",
+   "source": "https://en.wikipedia.org/wiki/MS_Herald_of_Free_Enterprise"
+  },
+  {
+   "kind": "tech",
+   "title": "Acorn Archimedes",
+   "line": "Acorn launched the Archimedes in June 1987, built on Acorn's own 32-bit ARM2 chip. The A305 cost £799 and the A440 £2,299.",
+   "wiki": "Acorn_Archimedes",
+   "source": "https://en.wikipedia.org/wiki/Acorn_Archimedes"
+  },
+  {
+   "kind": "news",
+   "title": "Thatcher's third win",
+   "line": "On 11 June 1987 the Conservatives won 376 of 650 seats and a majority of 102, Margaret Thatcher's third election in a row.",
+   "wiki": "1987_United_Kingdom_general_election",
+   "source": "https://en.wikipedia.org/wiki/1987_United_Kingdom_general_election"
+  },
+  {
+   "kind": "news",
+   "title": "The Great Storm",
+   "line": "Overnight on 15–16 October 1987 a storm felled an estimated 15 million trees across southern England and killed 22 people in England and France, hours after Michael Fish told viewers not to worry.",
+   "wiki": "Great_storm_of_1987",
+   "source": "https://en.wikipedia.org/wiki/Great_storm_of_1987"
+  },
+  {
+   "kind": "news",
+   "title": "Black Monday",
+   "line": "On 19 October 1987 the Dow fell 22.6% in a day. The FTSE 100 lost 23% over two days.",
+   "wiki": "Black_Monday_(1987)",
+   "source": "https://en.wikipedia.org/wiki/Black_Monday_(1987)"
+  },
+  {
+   "kind": "film",
+   "title": "Wall Street",
+   "line": "Oliver Stone's Wall Street opened in the US on 11 December 1987. Michael Douglas won the Best Actor Oscar as Gordon Gekko, whose 'greed is good' speech was partly based on a remark by Ivan Boesky.",
+   "wiki": "Wall_Street_(1987_film)",
+   "source": "https://en.wikipedia.org/wiki/Wall_Street_(1987_film)"
+  }
+ ]
+}

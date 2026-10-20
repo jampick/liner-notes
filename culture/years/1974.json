@@ -1,0 +1,47 @@
+{
+ "year": 1974,
+ "items": [
+  {
+   "kind": "tv",
+   "title": "Happy Days",
+   "line": "Premiered on ABC on 15 January 1974 and ran 255 episodes. Ron Howard got the lead after Lucas cast him in American Graffiti off the 1972 pilot.",
+   "wiki": "Happy_Days",
+   "source": "https://en.wikipedia.org/wiki/Happy_Days"
+  },
+  {
+   "kind": "music",
+   "title": "California Jam",
+   "line": "On 6 April 1974 Ontario Motor Speedway drew a crowd put at 175,000 to 250,000 for the Eagles, Seals & Crofts, Earth, Wind & Fire and Deep Purple. Tickets were $10 in advance.",
+   "wiki": "California_Jam",
+   "source": "https://en.wikipedia.org/wiki/California_Jam"
+  },
+  {
+   "kind": "sport",
+   "title": "Hank Aaron's 715th",
+   "line": "On 8 April 1974 in Atlanta, Aaron hit home run 715 off the Dodgers' Al Downing and passed Babe Ruth's record of 714.",
+   "wiki": "Hank_Aaron",
+   "source": "https://en.wikipedia.org/wiki/Hank_Aaron"
+  },
+  {
+   "kind": "film",
+   "title": "Chinatown",
+   "line": "Roman Polanski's film opened on 20 June 1974, built on the Los Angeles water wars. It had 11 Oscar nominations and Robert Towne won for the screenplay.",
+   "wiki": "Chinatown_(1974_film)",
+   "source": "https://en.wikipedia.org/wiki/Chinatown_(1974_film)"
+  },
+  {
+   "kind": "news",
+   "title": "Nixon resigns",
+   "line": "Richard Nixon resigned on 9 August 1974, two years after the Watergate break-in.",
+   "wiki": "Watergate_scandal",
+   "source": "https://en.wikipedia.org/wiki/Watergate_scandal"
+  },
+  {
+   "kind": "sport",
+   "title": "The Rumble in the Jungle",
+   "line": "Muhammad Ali knocked out George Foreman in the eighth round in Kinshasa on 30 October 1974. Each fighter was paid $5 million.",
+   "wiki": "The_Rumble_in_the_Jungle",
+   "source": "https://en.wikipedia.org/wiki/The_Rumble_in_the_Jungle"
+  }
+ ]
+}

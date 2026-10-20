@@ -1,0 +1,83 @@
+{
+ "id": "sade--smooth-operator",
+ "title": "Smooth Operator",
+ "artist": "Sade",
+ "year": 1984,
+ "year_note": "UK single in 1984 (Wikipedia gives 28 August on the song page and 15 September on the album page); the US single followed in February 1985 and is the one that went top five.",
+ "album": "Diamond Life",
+ "aliases": {
+  "youtube": [
+   "4TYv2PhG89A"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/65/a7/dd/65a7ddeb-7c77-4238-59f1-a99c08406090/mzaf_12043866415592815824.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/smooth-operator/211429791?i=211429895&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Sade Adu wrote it in 1982 with Ray St John, the guitarist in her old band Pride, and her solo spot singing it at Pride gigs is what got labels interested. The band (Adu, Stuart Matthewman on sax and guitar, Paul Denman on bass, Andrew Hale on keyboards) recorded it at Power Plant in Willesden in 1983 with Robin Millar producing and Mike Pela engineering. There was no budget, so the first demos, this and 'Your Love Is King', were cut in the studio's downtime. Millar said they used a real piano and a Fender Rhodes and synced them up by hand.",
+  "context": "Adu signed to CBS/Epic on 18 October 1983 and Diamond Life came out on 16 July 1984, reaching 2 in the UK. The single only got to 19 at home, but in the US, on Portrait, it reached 5 on the Hot 100 in May 1985, topped the Adult Contemporary chart, and was Sade's first American top ten. Julien Temple's video casts Michael Feast as the con man and Amanda Pays as the waitress he cheats with, and Temple later put Sade in Absolute Beginners.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Adu speaks before she sings. Plenty of radio edits cut the recitation, so if you hear it, you have the album version. The sheet music puts the intro in D Dorian before the song settles into D minor."
+   },
+   {
+    "where": "under the verses",
+    "note": "Paul Denman's bass line does most of the moving; the critic Frank Guan singled out its 'winding bass line' alongside the sax."
+   },
+   {
+    "where": "the instrumental break",
+    "note": "Stuart Matthewman's saxophone solo, the bit radio edits also trimmed. He had come out of Pride, a Latin soul band, and plays it like a club solo rather than a pop hook."
+   }
+  ],
+  "leads_to": {
+   "artist": "Timmy Thomas",
+   "title": "Why Can't We Live Together",
+   "year": 1972,
+   "why": "Sade covered it to close Diamond Life and opened their Live Aid set with it: an organ and drum-machine soul record from Miami that shows where their stillness came from."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Smooth_Operator",
+   "https://en.wikipedia.org/wiki/Diamond_Life",
+   "https://en.wikipedia.org/wiki/Sade_(band)",
+   "https://www.mojo4music.com/articles/stories/the-making-of-sades-diamond-life/",
+   "https://en.wikipedia.org/wiki/Live_Aid"
+  ],
+  "unverified": "The panel calls it a 'walking bass'; the source I found says 'winding', and I couldn't confirm a walking (jazz quarter-note) line, so the note uses Guan's word. Wikipedia doesn't name the drummer on this track; the album lists Dave Early and Paul Cooke."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number 5 in America",
+   "line": "It stalled at 19 in the UK in 1984, then reached 5 on the US Hot 100 in May 1985, topped Adult Contemporary and was Sade's first American top ten.",
+   "wiki": "Smooth_Operator",
+   "source": "https://en.wikipedia.org/wiki/Smooth_Operator"
+  },
+  {
+   "kind": "video",
+   "title": "Julien Temple's crime film",
+   "line": "Temple's video stars Michael Feast as the con man and Amanda Pays as the waitress; the long version ends with him shot on the rooftops. Temple later cast Sade in Absolute Beginners.",
+   "wiki": "Absolute_Beginners_(film)",
+   "source": "https://en.wikipedia.org/wiki/Smooth_Operator"
+  },
+  {
+   "kind": "chart",
+   "title": "Diamond Life wins the Brit",
+   "line": "Diamond Life reached 2 in the UK and 5 in the US, sold around 10 million copies and won Best British Album at the 1985 Brits.",
+   "wiki": "Diamond_Life",
+   "source": "https://en.wikipedia.org/wiki/Diamond_Life"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-2)",
+  "written_on": "2026-10-18"
+ }
+}

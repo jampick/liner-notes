@@ -178,7 +178,11 @@ def migrate(folder, root=None, cache=None, log=print):
         eras.append({"n": n, "name": e["name"], "years": e["years"], "from": lo, "to": hi, "essay": e["essay"],
                      "scene": e["scene"], "sources": e.get("sources", []), "image": f"media/eras/era{n}.webp"})
 
-    order = [ids_by_key[key(t["title"])] for t in tracks if key(t["title"]) in ids_by_key]
+    # Release year, then the panel's order within a year: the order the page numbers the stops in, and
+    # the order the cliamp playlist plays them in.
+    year_of = {n_to_id[s["n"]]: int(s["year"]) for _f, s in writer if s["n"] in n_to_id}
+    panel_order = list(dict.fromkeys(ids_by_key[key(t["title"])] for t in tracks if key(t["title"]) in ids_by_key))
+    order = sorted(panel_order, key=lambda sid: (year_of.get(sid, 0), panel_order.index(sid)))
     pins = {}
     for t in tracks:
         sid = ids_by_key.get(key(t["title"]))

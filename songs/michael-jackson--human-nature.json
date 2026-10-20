@@ -1,0 +1,80 @@
+{
+ "id": "michael-jackson--human-nature",
+ "title": "Human Nature",
+ "artist": "Michael Jackson",
+ "year": 1982,
+ "year_note": "On Thriller (released 29 November 1982). Issued as the album's fifth single on 4 July 1983.",
+ "album": "Thriller",
+ "aliases": {
+  "youtube": [
+   "ElN_4vUvTPs"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/4c/2a/ba4c2a0a-18ff-1350-4ec6-c4e75e053600/mzaf_9049310839196982005.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/human-nature/269572838?i=269573405&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Steve Porcaro wrote the music and chorus after his young daughter came home upset because a boy had pushed her off a slide, and he told her it was human nature. He recorded the demo while 'Africa' was being mixed, with David Paich adding synth strings, and Toto passed on it. It reached Quincy Jones by accident: Porcaro put Paich's songs on one side of a cassette, his own demo was on the other, and Jones's auto-reverse deck played it. Jones had John Bettis rewrite the verses, kept the arrangement close to the demo, and the song pushed 'Carousel' off the album. Porcaro, Paich and Michael Boddicker play synths, Steve Lukather guitar and Jeff Porcaro drums, and Jackson sang it at Westlake after midnight in one take.",
+  "context": "Thriller was cut at Westlake between April and November 1982 for $750,000 and spent 37 weeks at number 1. 'Human Nature' was its fifth top-ten single, reaching 7 on the Hot 100 and 2 on Adult Contemporary. On the album it sits between 'Billie Jean' and 'P.Y.T.', and it is the most LA-session record on Thriller, because the LA session band made it.",
+  "listen_for": [
+   {
+    "where": "the 'why, why' hooks",
+    "note": "Bruce Swedien asked Porcaro to copy the accents of the 'why, why' phrasing from his demo, so what you hear is the demo's placeholder melody kept on purpose."
+   },
+   {
+    "where": "the verses",
+    "note": "Bettis's lyric, a walk through New York at night, written in two days. Porcaro has said he didn't change a syllable of it."
+   },
+   {
+    "where": "under the vocal throughout",
+    "note": "Synths from three players and a drum machine with Jeff Porcaro's kit on top. Very little of it is acoustic."
+   }
+  ],
+  "leads_to": {
+   "artist": "Miles Davis",
+   "title": "Human Nature",
+   "year": 1985,
+   "why": "Davis covered it on You're Under Arrest and kept it in his live sets; he thought it could become a jazz standard."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Human_Nature_(Michael_Jackson_song)",
+   "https://en.wikipedia.org/wiki/Thriller_(album)"
+  ],
+  "unverified": "The panel line says Steve Porcaro wrote it. He wrote the music and the chorus; John Bettis wrote the verse lyrics and shares the credit. Wikipedia also says the song reached 6 in the UK in May 2026 after the biopic Michael; I left that out because I couldn't check it against the Official Charts site."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Thriller's fifth top ten",
+   "line": "Released as a single on 4 July 1983, it reached 7 on the Hot 100 and 2 on Adult Contemporary, the fifth Thriller single in a row to make the US top ten.",
+   "wiki": "Thriller_(album)",
+   "source": "https://en.wikipedia.org/wiki/Human_Nature_(Michael_Jackson_song)"
+  },
+  {
+   "kind": "sample",
+   "title": "SWV and Nas",
+   "line": "Teddy Riley's 1993 'Human Nature Remix' of SWV's 'Right Here' spent seven weeks at number 1 R&B, and Nas sampled it for 'It Ain't Hard to Tell' in 1994.",
+   "wiki": "Right_Here_(SWV_song)",
+   "source": "https://en.wikipedia.org/wiki/Human_Nature_(Michael_Jackson_song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Miles Davis",
+   "line": "Miles Davis recorded it for You're Under Arrest in 1985 and suggested it could become a jazz standard.",
+   "wiki": "You're_Under_Arrest",
+   "source": "https://en.wikipedia.org/wiki/Human_Nature_(Michael_Jackson_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-5)",
+  "written_on": "2026-10-18"
+ }
+}

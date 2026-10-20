@@ -1,0 +1,89 @@
+{
+ "id": "spandau-ballet--true",
+ "title": "True",
+ "artist": "Spandau Ballet",
+ "year": 1983,
+ "year_note": "",
+ "album": "True",
+ "aliases": {
+  "youtube": [
+   "AR8D2yqgQ1U"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/26/5c/66/265c66c8-9dc7-d725-a2d0-854d56fbe3d7/mzaf_6152405956080589404.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/true-remastered/693107439?i=693107448&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Gary Kemp wrote it on an Eko acoustic after watching Let It Be on TV, building the melody around one word the way Lennon does in 'Dig a Pony', and reworking the opening of Al Green's 'Let's Stay Together'. The band cut it at Compass Point in the Bahamas with Tony Swain and Steve Jolley producing; Swain played the synth bass instead of Martin Kemp, and Jess Bailey adapted Kemp's chords for a Rhodes Chroma. Tony Hadley's lead was recorded back in London at Red Bus in Paddington.",
+  "context": "Spandau Ballet's first album was made for the Blitz club crowd, and by 1982 Kemp felt that crowd had moved on without them. 'True' was his blue-eyed soul answer, with Marvin Gaye name-checked to side with the soul-boy culture against the rock press. Radio played the album track so hard it was forced out as a single in April 1983; it spent four weeks at number one, sold over 60,000 in one day, and its fourth week meant Spandau closed the thousandth Top of the Pops. In the US it reached 4.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "The record starts on the chorus without the lead vocal. The plan was a string synth intro; Swain didn't like it and used the backing voices instead."
+   },
+   {
+    "where": "the backing vocals throughout",
+    "note": "Recorded through Dolby noise reduction and never decoded, because the band liked the 'airy, breathy fizz on top'."
+   },
+   {
+    "where": "the sax solo",
+    "note": "The song jumps from G to E-flat for Steve Norman's solo, spliced from two takes. Norman said it was a reply to Grover Washington Jr.'s 'Just the Two of Us', which he had on constantly."
+   }
+  ],
+  "leads_to": {
+   "artist": "Grover Washington Jr. featuring Bill Withers",
+   "title": "Just the Two of Us",
+   "year": 1980,
+   "why": "From Winelight (October 1980): the record Steve Norman was answering with his solo, and a better clue to the song's sound than the Marvin Gaye line."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/True_(Spandau_Ballet_song)",
+   "https://en.wikipedia.org/wiki/True_(Spandau_Ballet_album)",
+   "https://en.wikipedia.org/wiki/Winelight",
+   "https://sessiondays.com/?p=111711"
+  ],
+  "unverified": "Folake's Marvin Gaye quote is right (\"listening to Marvin all night long\"). The Sade thread is my inference about taste, not a documented link; drop it if the director wants only documented threads."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Four weeks at number one",
+   "line": "Number one in the UK from late April 1983, over 60,000 copies sold in a day, and number 4 on the US Hot 100 with a week at the top of the Adult Contemporary chart.",
+   "wiki": "True_(Spandau_Ballet_song)",
+   "source": "https://en.wikipedia.org/wiki/True_(Spandau_Ballet_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Sixteen Candles",
+   "line": "John Hughes used it for the school dance in Sixteen Candles, released on 4 May 1984, and that put it in an American teenage scrapbook for good.",
+   "wiki": "Sixteen_Candles",
+   "source": "https://en.wikipedia.org/wiki/True_(Spandau_Ballet_song)"
+  },
+  {
+   "kind": "sample",
+   "title": "Set Adrift on Memory Bliss",
+   "line": "P.M. Dawn looped it for a US number one in November 1991, with Gary Kemp sharing the writing credit and Tony Hadley in the video.",
+   "wiki": "Set_Adrift_on_Memory_Bliss",
+   "source": "https://en.wikipedia.org/wiki/Set_Adrift_on_Memory_Bliss"
+  },
+  {
+   "kind": "live",
+   "title": "Live Aid",
+   "line": "Spandau Ballet played 'True' at Wembley for Live Aid on 13 July 1985, though their manager had them spend part of the slot on a new song.",
+   "wiki": "Live_Aid",
+   "source": "https://en.wikipedia.org/wiki/True_(Spandau_Ballet_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (sophisti-pop, era-1)",
+  "written_on": "2026-10-19"
+ }
+}

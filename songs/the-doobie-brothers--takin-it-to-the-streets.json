@@ -1,0 +1,74 @@
+{
+ "id": "the-doobie-brothers--takin-it-to-the-streets",
+ "title": "Takin' It to the Streets",
+ "artist": "The Doobie Brothers",
+ "year": 1976,
+ "year_note": "",
+ "album": "Takin' It to the Streets",
+ "aliases": {
+  "youtube": [
+   "ov77YDm9FrI"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/89/d7/e3/89d7e3f1-e6a4-a813-f07d-170d8fcc0756/mzaf_3235501944489783021.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/takin-it-to-the-streets-2016-remastered/1111372373?i=1111372586&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Michael McDonald wrote it, sings it and plays the piano. He has said the intro 'just kind of popped in my head' and felt like the opening of a gospel song. Ted Templeman produced it at Warner Bros. Studios in North Hollywood in 1975, with Donn Landee engineering. The Memphis Horns play on it, Jesse Butler adds organ, and both of the band's drummers, John Hartman and Keith Knudsen, are on the track.",
+  "context": "Tom Johnston's stomach ulcers got worse on the Stampede tour and the band thought about splitting. Jeff Baxter suggested McDonald, who was between jobs because Steely Dan had stopped touring. He rehearsed with them for two days in New Orleans in April 1975, came in as a stand-in, and stayed. McDonald said the lyric was about people falling through the cracks, and that 'we've got to do better by each other'. Released 17 March 1976, it was his first single with the band and reached 13 in the US; the album got to 8.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "McDonald's piano intro, the part he says arrived on its own and sounded to him like the start of a gospel tune."
+   },
+   {
+    "where": "the horns",
+    "note": "The Memphis Horns, a soul section on a record by what had been a guitar boogie band a year earlier."
+   },
+   {
+    "where": "the lead vocal",
+    "note": "McDonald's first lead on a Doobies single. Ultimate Classic Rock's Michael Gallucci singled out his 'soulful rasp'."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Doobie Brothers",
+   "title": "Listen to the Music",
+   "year": 1972,
+   "why": "Tom Johnston's song from Toulouse Street, same band and same producer, to hear what McDonald walked into."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Takin%27_It_to_the_Streets_(song)",
+   "https://en.wikipedia.org/wiki/Takin%27_It_to_the_Streets_(The_Doobie_Brothers_album)",
+   "https://en.wikipedia.org/wiki/Michael_McDonald_(musician)",
+   "https://www.wfae.org/2024-05-20/with-age-and-sobriety-michael-mcdonald-is-ready-to-get-personal",
+   "https://en.wikipedia.org/wiki/Listen_to_the_Music"
+  ],
+  "unverified": "The song page credits the Memphis Horns on saxophones; the album page lists their full five-piece lineup with trumpet and trombone too, so I didn't name the instruments."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "McDonald's first single",
+   "line": "Released 17 March 1976, it reached 13 in the US and 7 in Canada, and the album went to 8.",
+   "source": "https://en.wikipedia.org/wiki/Takin%27_It_to_the_Streets_(song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Christine Anu and Deni Hines",
+   "line": "The Australian singers released a version in November 2008, with half the profits going to Salvation Army youth and homelessness funds.",
+   "source": "https://en.wikipedia.org/wiki/Takin%27_It_to_the_Streets_(song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

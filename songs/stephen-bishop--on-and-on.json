@@ -1,0 +1,75 @@
+{
+ "id": "stephen-bishop--on-and-on",
+ "title": "On and On",
+ "artist": "Stephen Bishop",
+ "year": 1976,
+ "year_note": "Careless came out on ABC in October 1976. 'On and On' was released as a single in May 1977 and peaked later that year. The panel review has 1977.",
+ "album": "Careless",
+ "aliases": {
+  "youtube": [
+   "oRrlRbGT-LU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/0b/c8/aa0bc84f-f6af-0b5c-9f73-25e61cd3f42c/mzaf_718041351373855820.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/on-and-on/1444072143?i=1444072386&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Bishop wrote it and co-produced it with Henry Lewy, recording at ABC Recording Studios and A&M in Los Angeles. On this track Victor Feldman plays marimba, vibraphone and percussion, Andrew Gold electric guitar, John Barlow Jarvis electric piano and Michael Staton steel guitar, with Mac Cridlin on bass and Larry Brown on drums. Careless's famous guests, Eric Clapton, Art Garfunkel and Chaka Khan, are on other songs.",
+  "context": "Bishop was a San Diego songwriter who got his break when Leah Kunkel passed a demo to Art Garfunkel, who recorded two of his songs on Breakaway in 1975, and that led to the ABC deal. He wrote 'On and On' from the title while walking to a corner store in Silver Lake, and set it in Jamaica because of his landlady's exotic flowers. It spent 28 weeks on the Hot 100, peaked at 11 and went to 2 on Easy Listening. In 1978 he turned up in Animal House as the 'Charming Guy with Guitar'.",
+  "listen_for": [
+   {
+    "where": "the tuned percussion",
+    "note": "Victor Feldman on marimba and vibraphone, the bit that makes a breakup song sound like a beach in Jamaica."
+   },
+   {
+    "where": "the steel guitar",
+    "note": "Michael Staton, a country instrument slipped into a soft-rock record."
+   },
+   {
+    "where": "the verses",
+    "note": "A cast of losers, Lonesome Sue and poor Jimmy among them, sung almost under the breath."
+   }
+  ],
+  "leads_to": {
+   "artist": "Art Garfunkel",
+   "title": "Lookin' for the Right One",
+   "year": 1975,
+   "why": "One of the two Bishop songs on Breakaway that got him his record deal."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/On_and_On_(Stephen_Bishop_song)",
+   "https://en.wikipedia.org/wiki/Careless_(album)",
+   "https://en.wikipedia.org/wiki/Stephen_Bishop_(singer)",
+   "https://www.songfacts.com/facts/stephen-bishop/on-and-on",
+   "https://sessiondays.com/2017/02/1975-art-garfunkel-breakaway/"
+  ],
+  "unverified": "The Sinatra line the panel mentions is in the lyric but I couldn't find a source describing it, so it's out of the text. The Garfunkel track is listed as both 'Lookin'' and 'Looking for the Right One'."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "28 weeks",
+   "line": "Peaked at 11 on the Hot 100 in 1977 and stayed 28 weeks, with 2 on Easy Listening.",
+   "source": "https://en.wikipedia.org/wiki/On_and_On_(Stephen_Bishop_song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Aswad",
+   "line": "The British reggae band Aswad took it to 25 in the UK in August 1989.",
+   "wiki": "Aswad",
+   "source": "https://en.wikipedia.org/wiki/On_and_On_(Stephen_Bishop_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-1)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "id": "grover-washington-jr-bill-withers--just-the-two-of-us",
+ "title": "Just the Two of Us",
+ "artist": "Grover Washington Jr. & Bill Withers",
+ "year": 1980,
+ "year_note": "Winelight came out on 24 October 1980; the single followed in February 1981.",
+ "album": "Winelight",
+ "aliases": {
+  "youtube": [
+   "v8oqbWrP1QY"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f6/62/02/f66202ab-df6d-c0c2-5bd5-c5bab320dfa7/mzaf_3056183011848236454.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/just-the-two-of-us/321974938?i=321975002&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Ralph MacDonald and William Salter wrote the track and MacDonald asked Bill Withers to write the words; Withers sang it. The band is a New York crew: Richard Tee on Fender Rhodes, Steve Gadd on drums, Marcus Miller on bass, Eric Gale on guitar and MacDonald on percussion, with Bill Eaton on an Oberheim Eight Voice. Washington and MacDonald produced, Richard Alderson engineered, and the album version runs 7:23 to the single's 3:58.",
+  "context": "It's in F minor, and the verse progression is a reordered, double-time take on the opening of 'Sunny', which is why it sounds familiar the first time. The single sat at 2 on the Hot 100 for three weeks in spring 1981, stuck behind Sheena Easton and then Kim Carnes, and was Washington's only top 40 hit. Winelight is credited with starting the 1980s smooth jazz boom, and the song won the Best R&B Song Grammy for its three writers.",
+  "listen_for": [
+   {
+    "where": "the intro",
+    "note": "The chord loop (D♭maj7, C7♭9, Fm7, E♭m7, A♭7). Will Smith built a hit on it in 1997 and the song trended on TikTok in late 2020."
+   },
+   {
+    "where": "the chorus",
+    "note": "An extra Em7 slides the line down by a half step between Fm7 and E♭m7. It's the small chromatic step that makes the chorus lift."
+   },
+   {
+    "where": "after the vocal on the album version",
+    "note": "Washington's sax over Tee and Gadd. The album take runs 7:23 against the single's 3:58, so the full version has much more of him."
+   }
+  ],
+  "leads_to": {
+   "artist": "Will Smith",
+   "title": "Just the Two of Us",
+   "year": 1997,
+   "why": "A father-to-son rewrite on Big Willie Style that uses the original, with Withers, Salter and MacDonald credited as co-writers."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Just_the_Two_of_Us_(Grover_Washington_Jr._song)",
+   "https://en.wikipedia.org/wiki/Winelight"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Three weeks at 2",
+   "line": "It sat at 2 on the Hot 100 for three weeks in spring 1981, behind Sheena Easton's Morning Train and Kim Carnes' Bette Davis Eyes, and was number 18 for the year.",
+   "source": "https://en.wikipedia.org/wiki/Just_the_Two_of_Us_(Grover_Washington_Jr._song)"
+  },
+  {
+   "kind": "award",
+   "title": "Best R&B Song",
+   "line": "Withers, Salter and MacDonald won Best R&B Song at the 24th Grammys, and Winelight won Best Jazz Fusion Performance.",
+   "wiki": "Winelight",
+   "source": "https://en.wikipedia.org/wiki/Winelight"
+  },
+  {
+   "kind": "sample",
+   "title": "Will Smith",
+   "line": "Will Smith rewrote it as a song to his son on Big Willie Style in 1997, with the original's three writers credited.",
+   "wiki": "Big_Willie_Style",
+   "source": "https://en.wikipedia.org/wiki/Just_the_Two_of_Us_(Grover_Washington_Jr._song)"
+  },
+  {
+   "kind": "screen",
+   "title": "French cheese ads",
+   "line": "Since 2009 it has been the music for Caprice des Dieux cheese ads in France, and in late 2020 it trended on TikTok.",
+   "source": "https://en.wikipedia.org/wiki/Just_the_Two_of_Us_(Grover_Washington_Jr._song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

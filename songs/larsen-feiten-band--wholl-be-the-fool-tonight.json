@@ -1,0 +1,71 @@
+{
+ "id": "larsen-feiten-band--wholl-be-the-fool-tonight",
+ "title": "Who'll Be the Fool Tonight",
+ "artist": "Larsen-Feiten Band",
+ "year": 1980,
+ "year_note": "",
+ "album": "Larsen-Feiten Band",
+ "aliases": {
+  "youtube": [
+   "OHJ63LUqk50"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/23/6a/c9/236ac968-92dc-9a72-6207-6c2eb30d9f5c/mzaf_11258484959946297685.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/wholl-be-the-fool-tonight/375620554?i=375620587&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Buzz Feiten wrote it and Tommy LiPuma produced it for Warner Bros., with Al Schmitt mixing. The album band is Neil Larsen on keyboards (he's a Hammond B-3 man), Feiten on guitar, Willie Weeks on bass, Art Rodriguez on drums and Lenny Castro on percussion, with a horn section of Kim Hutchcroft, Larry Williams, Bill Reichenbach and Chuck Findley.",
+  "context": "Larsen and Feiten had been a team since Full Moon in 1972. Feiten had already played Woodstock with Paul Butterfield and sessions for Stevie Wonder, and LiPuma produced Larsen's solo album Jungle Fever in 1978, with Feiten on guitar. Those sessions led to this band. The single peaked at 29 on the Hot 100 and 22 on adult contemporary, and that was it: the duo's only top 40 hit.",
+  "listen_for": [
+   {
+    "where": "the horn parts",
+    "note": "The album's horns are Kim Hutchcroft and Larry Williams, the same sax pair as on Give Me the Night, with Chuck Findley and Bill Reichenbach, who also play on Turn Your Love Around."
+   },
+   {
+    "where": "under the verses",
+    "note": "Larsen's keyboards. He is better known as an organ player, and Leonard Cohen later introduced him on stage as the foremost Hammond B-3 player around."
+   }
+  ],
+  "leads_to": {
+   "artist": "Neil Larsen",
+   "title": "Sudden Samba",
+   "year": 1978,
+   "why": "The opener of Larsen's LiPuma-produced Jungle Fever, with Feiten on guitar, the instrumental record that led to this band."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Larsen-Feiten_Band",
+   "https://en.wikipedia.org/wiki/Who%27ll_Be_the_Fool_Tonight",
+   "https://en.wikipedia.org/wiki/Neil_Larsen",
+   "https://en.wikipedia.org/wiki/Buzz_Feiten",
+   "https://en.wikipedia.org/wiki/We%27re_in_This_Love_Together",
+   "https://americansongwriter.com/3-one-hit-wonders-from-1980-were-sure-youve-never-heard-of/"
+  ],
+  "unverified": "Personnel is album-level; there are no per-track credits I could find. One search summary credited the song to both Larsen and Feiten, but Wikipedia credits Feiten alone, so I used that. The horn intro is from a review summary I couldn't load in full."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Chart peaks",
+   "line": "It got to 29 on the Hot 100, 22 on adult contemporary and 91 in Australia in 1980, the duo's only top 40 hit.",
+   "source": "https://en.wikipedia.org/wiki/Who%27ll_Be_the_Fool_Tonight"
+  },
+  {
+   "kind": "chart",
+   "title": "One-hit wonder",
+   "line": "American Songwriter put it on a list of 1980 one-hit wonders and called it 'a fun, albeit unknown song today'.",
+   "source": "https://americansongwriter.com/3-one-hit-wonders-from-1980-were-sure-youve-never-heard-of/"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "id": "al-jarreau--were-in-this-love-together",
+ "title": "We're in This Love Together",
+ "artist": "Al Jarreau",
+ "year": 1981,
+ "year_note": "",
+ "album": "Breakin' Away",
+ "aliases": {
+  "youtube": [
+   "qFnSA-V4iZc"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/62/3b/50/623b5085-7d67-5ca8-632b-3404cf4b5f7d/mzaf_11149745284130840555.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/were-in-this-love-together/321976070?i=321976237&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Roger Murrah and Keith Stegall wrote it. Jay Graydon produced and was going through a box of songs with Jarreau looking for a hit; this was the last one at the bottom, and Graydon said 'This better be our hit.' Steve Gadd plays drums, Abraham Laboriel bass, Michael Omartian Fender Rhodes, Graydon and Steve Lukather guitars, Tom Canning and Michael Boddicker synths, and Lon Price takes the alto solo. Breakin' Away was cut across Dawnbreaker in San Fernando, Garden Rake in Studio City, Pasha and Sunset Sound in Hollywood.",
+  "context": "Jarreau was a critics' jazz singer without a pop hit, and Graydon thought he needed one. This became his first and biggest: 15 on the Hot 100 over 24 weeks, 6 on adult contemporary and number one on Canada's. Stegall says it was meant for Larsen-Feiten and reached Jarreau by mistake, after Johnny Mathis never answered. Breakin' Away won Jarreau the Best Male Pop Vocal Grammy.",
+  "listen_for": [
+   {
+    "where": "the break after the second chorus",
+    "note": "Lon Price's alto sax solo."
+   },
+   {
+    "where": "the rhythm section throughout",
+    "note": "Gadd and Laboriel, a New York drummer and an LA bassist, under Omartian's Rhodes."
+   },
+   {
+    "where": "the guitar fills",
+    "note": "Two guitarists, Graydon and Lukather, the same pair who co-wrote Turn Your Love Around that year."
+   }
+  ],
+  "leads_to": {
+   "artist": "Al Jarreau",
+   "title": "Spain (I Can Recall)",
+   "year": 1980,
+   "why": "Jarreau's lyric to Chick Corea's Spain on This Time, his first album with Graydon, the jazz singer before the pop hit."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/We%27re_in_This_Love_Together",
+   "https://en.wikipedia.org/wiki/Breakin%27_Away_(album)",
+   "https://sessiondays.com/?p=7654",
+   "https://en.wikipedia.org/wiki/Spain_(instrumental)",
+   "https://jaygraydon.net/producing.htm"
+  ],
+  "unverified": "Which of the four studios this song was cut in isn't stated. The album release date is given as 3 August 1981 by Wikipedia and 30 June 1981 by Session Days."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Chart peaks",
+   "line": "In 1981 it spent 24 weeks on the Hot 100, peaking at 15, reached 6 on adult contemporary and number one on Canada's adult contemporary chart.",
+   "source": "https://en.wikipedia.org/wiki/We%27re_in_This_Love_Together"
+  },
+  {
+   "kind": "award",
+   "title": "Breakin' Away",
+   "line": "The album won Jarreau the Best Male Pop Vocal Performance Grammy at the 24th awards in 1982 and reached 9 on the Billboard 200.",
+   "wiki": "Breakin'_Away_(album)",
+   "source": "https://en.wikipedia.org/wiki/Breakin%27_Away_(album)"
+  },
+  {
+   "kind": "cover",
+   "title": "Johnny Mathis",
+   "line": "Mathis, who was offered the song first and never replied, finally recorded it on A Night to Remember in 2008.",
+   "wiki": "Johnny_Mathis",
+   "source": "https://en.wikipedia.org/wiki/We%27re_in_This_Love_Together"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "journeys pilot era writer (yacht-rock, era-4)",
+  "written_on": "2026-10-18"
+ }
+}
