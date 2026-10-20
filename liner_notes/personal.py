@@ -15,6 +15,11 @@ What moves, and where to:
   dist/<remix slug>.html (the measured tempo shapes)    ~/.cache/liner-notes/profiles/<id>.json
   ~/.cache/journeys/{video,audio,soundcloud}/*          hard links in ~/.cache/liner-notes/{video,audio,soundcloud}/
   ~/.local/state/journeys/{av-latency.json,workspace}   ~/.local/state/liner-notes/
+  ~/.local/state/journeys/chromium (the page's profile)  ~/.local/state/liner-notes/chromium, without caches
+
+The Chromium profile carries the page's localStorage for http://127.0.0.1:47391: per-song lyric
+offsets, the lyric lead and the theme. It's copied only when the new profile doesn't exist yet and
+no Chromium is running on the old one (a live profile can't be copied whole).
 
 Video and audio are hard-linked, never copied (about 3 GB), with a symlink when the two caches sit
 on different filesystems. Nothing in the pilot is changed or deleted. A file that already exists
@@ -174,9 +179,71 @@ def _link(src, dest):
     return "symlink"
 
 
-def run(src, dry_run=False, bank=None, pilot_cache=None, pilot_state=None, log=print):
+CHROMIUM_SKIP = (
+    "Singleton*",
+    "Cache",
+    "Code Cache",
+    "GPUCache",
+    "DawnGraphiteCache",
+    "DawnWebGPUCache",
+    "GraphiteDawnCache",
+    "GrShaderCache",
+    "ShaderCache",
+    "component_crx_cache",
+    "Safe Browsing",
+    "WidevineCdm",
+    "WasmTtsEngine",
+    "Crashpad",
+    "Service Worker",
+    "*.tmp",
+)
+
+
+def _running_on(profile, procs=None):
+    """Pids of processes started with --user-data-dir=<profile>."""
+    flag = f"--user-data-dir={profile}"
+    found = []
+    for pid, argv in procs() if procs else _procs():
+        if flag in argv:
+            found.append(pid)
+    return found
+
+
+def _procs():
+    for p in Path("/proc").iterdir():
+        if p.name.isdigit():
+            try:
+                yield int(p.name), (p / "cmdline").read_bytes().decode(errors="replace").split("\0")
+            except OSError:
+                continue
+
+
+def chromium_step(pilot_state, procs=None):
+    """(src, dest, why not) for the page's Chromium profile; why not is None when it should be copied."""
+    src, dest = Path(pilot_state) / "chromium", paths.state() / "chromium"
+    if not src.is_dir():
+        return src, dest, "no pilot profile"
+    if dest.exists() or dest.is_symlink():
+        return src, dest, "the new profile already exists"
+    if _running_on(src, procs):
+        return src, dest, "Chromium is running on the pilot profile; close the page and run this again"
+    return src, dest, None
+
+
+def copy_profile(src, dest):
+    """Copy a Chromium profile without its caches or locks, all or nothing. Returns the files copied."""
+    tmp = dest.with_name(f".{dest.name}.tmp")
+    if tmp.exists():
+        shutil.rmtree(tmp)
+    shutil.copytree(src, tmp, symlinks=True, ignore=shutil.ignore_patterns(*CHROMIUM_SKIP))
+    os.replace(tmp, dest)
+    return sorted(p for p in dest.rglob("*") if p.is_file() and not p.is_symlink())
+
+
+def run(src, dry_run=False, bank=None, pilot_cache=None, pilot_state=None, log=print, procs=None):
     """Carry out the plan. Returns the manifest (a dict)."""
     steps, unmapped = plan(src, bank, pilot_cache, pilot_state)
+    csrc, cdest, cwhy = chromium_step(pilot_state or Path.home() / ".local/state/journeys", procs)
     mf = paths.state() / "migrate-personal.json"
     old = {e["dest"]: e for e in (read_json(mf).get("files") if mf.is_file() else [])}
     if dry_run:
@@ -184,6 +251,7 @@ def run(src, dry_run=False, bank=None, pilot_cache=None, pilot_state=None, log=p
             log(f"{'link' if s.how == 'link' else 'copy'}  {s.what:18} {s.src} -> {s.dest}")
         for p in unmapped:
             log(f"skip  cover with no song in the bank: {p}")
+        log(f"copy  chromium profile   {csrc} -> {cdest}" if not cwhy else f"skip  chromium profile: {cwhy}")
         log(f"plan: {len(steps)} files, nothing written (dry run)")
         return {"files": [], "dry_run": True, "planned": len(steps)}
     entries, counts = [], {}
@@ -207,6 +275,26 @@ def run(src, dry_run=False, bank=None, pilot_cache=None, pilot_state=None, log=p
         )
     for p in unmapped:
         log(f"skip  cover with no song in the bank: {p}")
+    if cwhy:
+        if cwhy != "no pilot profile":
+            log(f"skip  chromium profile: {cwhy}")
+    else:
+        files = copy_profile(csrc, cdest)
+        counts["profile copy"] = len(files)
+        for f in files:
+            st = f.stat()
+            entries.append(
+                {
+                    "what": "chromium profile",
+                    "src": str(csrc / f.relative_to(cdest)),
+                    "dest": str(f),
+                    "how": "copied",
+                    "size": st.st_size,
+                    "mtime_ns": st.st_mtime_ns,
+                    "sha256": sha256(f),
+                }
+            )
+        log(f"copied the page's Chromium profile ({len(files)} files) to {cdest}")
     manifest = {
         "from": str(Path(src).expanduser()),
         "date": dt.datetime.now().isoformat(timespec="seconds"),

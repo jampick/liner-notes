@@ -114,3 +114,90 @@ def test_link_falls_back_to_symlink(tmp_path, monkeypatch):
 
     monkeypatch.setattr(os, "link", cross)
     assert personal._link(a, b) == "symlink" and b.is_symlink() and b.read_bytes() == b"x"
+
+
+def chromium_profile(ps):
+    c = ps / "chromium"
+    (c / "Default/Local Storage/leveldb").mkdir(parents=True)
+    (c / "Default/Local Storage/leveldb/000003.log").write_bytes(b"journey-lyric-offset-AAAAAAAAAAA=0.4")
+    (c / "Default/Cache/Cache_Data").mkdir(parents=True)
+    (c / "Default/Cache/Cache_Data/f_000001").write_bytes(b"cached page")
+    (c / "Local State").write_text("{}")
+    os.symlink("host-1234", c / "SingletonLock")
+    return c
+
+
+def test_chromium_profile_copied_without_caches(iso, tmp_path):
+    make_bank(iso["home"])
+    src, pc, ps = pilot_tree(tmp_path)
+    chromium_profile(ps)
+    bank = Bank([iso["home"]])
+    log = []
+    personal.run(src, dry_run=True, bank=bank, pilot_cache=pc, pilot_state=ps, log=log.append, procs=lambda: [])
+    assert any(x.startswith("copy  chromium profile") for x in log) and not (iso["state"] / "chromium").exists()
+    m = personal.run(src, bank=bank, pilot_cache=pc, pilot_state=ps, log=lambda *a: None, procs=lambda: [])
+    dest = iso["state"] / "chromium"
+    assert (dest / "Default/Local Storage/leveldb/000003.log").read_bytes().startswith(b"journey-lyric-offset")
+    assert (dest / "Local State").is_file()
+    assert not (dest / "Default/Cache").exists() and not (dest / "SingletonLock").is_symlink()
+    assert not (iso["state"] / ".chromium.tmp").exists()
+    copied = [e for e in m["files"] if e["what"] == "chromium profile"]
+    assert len(copied) == 2 and all(len(e["sha256"]) == 64 for e in copied)
+    # Once the new profile exists it's never touched again.
+    (dest / "Local State").write_text('{"mine": true}')
+    out = []
+    personal.run(src, bank=bank, pilot_cache=pc, pilot_state=ps, log=out.append, procs=lambda: [])
+    assert (dest / "Local State").read_text() == '{"mine": true}' and any("already exists" in x for x in out)
+
+
+def test_chromium_profile_in_use_is_left(iso, tmp_path):
+    make_bank(iso["home"])
+    src, pc, ps = pilot_tree(tmp_path)
+    c = chromium_profile(ps)
+    out = []
+    personal.run(
+        src,
+        bank=Bank([iso["home"]]),
+        pilot_cache=pc,
+        pilot_state=ps,
+        log=out.append,
+        procs=lambda: [(1234, ["chromium", f"--user-data-dir={c}", "--app=x"])],
+    )
+    assert not (iso["state"] / "chromium").exists() and any("Chromium is running" in x for x in out)
+
+
+def test_dangling_and_foreign_destinations_are_kept(iso, tmp_path):
+    make_bank(iso["home"])
+    src, pc, ps = pilot_tree(tmp_path)
+    c = iso["cache"]
+    (c / "video").mkdir()
+    os.symlink(tmp_path / "gone.mp4", c / "video/AAAAAAAAAAA.mp4")  # dangling, from a pilot cache deleted later
+    (c / "audio").mkdir()
+    (c / "audio/AAAAAAAAAAA.webm").write_bytes(b"a different file")  # not a link to the pilot's
+    (iso["data"] / "lyrics").mkdir()
+    os.symlink(tmp_path / "nowhere.json", iso["data"] / "lyrics/AAAAAAAAAAA.json")
+    m = personal.run(src, bank=Bank([iso["home"]]), pilot_cache=pc, pilot_state=ps, log=lambda *a: None, procs=lambda: [])
+    by = {e["dest"]: e for e in m["files"]}
+    for p in (c / "video/AAAAAAAAAAA.mp4", c / "audio/AAAAAAAAAAA.webm", iso["data"] / "lyrics/AAAAAAAAAAA.json"):
+        assert by[str(p)]["how"] == "differs"
+    assert (c / "video/AAAAAAAAAAA.mp4").is_symlink() and by[str(c / "video/AAAAAAAAAAA.mp4")]["sha256"] is None
+    assert (c / "audio/AAAAAAAAAAA.webm").read_bytes() == b"a different file"
+
+
+def test_symlink_fallback_end_to_end(iso, tmp_path, monkeypatch):
+    import errno
+
+    make_bank(iso["home"])
+    src, pc, ps = pilot_tree(tmp_path)
+
+    def cross(*args):
+        raise OSError(errno.EXDEV, "cross-device")
+
+    monkeypatch.setattr(os, "link", cross)
+    bank = Bank([iso["home"]])
+    m = personal.run(src, bank=bank, pilot_cache=pc, pilot_state=ps, log=lambda *a: None, procs=lambda: [])
+    links = [e for e in m["files"] if e["what"] in ("video", "audio", "soundcloud")]
+    assert links and all(e["how"] == "symlink" and len(e["sha256"]) == 64 for e in links)
+    assert (iso["cache"] / "video/AAAAAAAAAAA.mp4").resolve() == (pc / "video/AAAAAAAAAAA.mp4").resolve()
+    again = personal.run(src, bank=bank, pilot_cache=pc, pilot_state=ps, log=lambda *a: None, procs=lambda: [])
+    assert set(again["counts"]) == {"same"}

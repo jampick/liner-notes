@@ -40,9 +40,12 @@ def test_doctor_runs_without_touching_anything(iso, monkeypatch):
     make_bank(iso["home"])
     monkeypatch.setenv("LINER_NOTES_HOME", str(iso["home"]))
     monkeypatch.setattr(doctor, "port_owner", lambda port: None)
+    (iso["cache"] / "video").mkdir()
+    os.symlink(iso["home"] / "gone.mp4", iso["cache"] / "video/AAAAAAAAAAA.mp4")
     out = []
     f = Fake()
     doctor.run(f, songs=True, log=out.append)
+    assert any("point at files that are gone" in x for x in out)
     text = "\n".join(out)
     assert "test-trip" in text and "First Song" in text and "port 47391" in text
     assert all(c[0] in ("cliamp", "systemctl") for c in f.calls) and not f.spawned

@@ -164,6 +164,15 @@ def run(system, songs=False, log=print):
         if len(have) == 3 and model_path().is_file()
         else f"optional: [depth] extra ({', '.join(have) or 'none'} installed), model {model_path()}",
     )
+    dangling = [
+        q
+        for sub in ("video", "audio", "soundcloud")
+        if (paths.cache() / sub).is_dir()
+        for q in (paths.cache() / sub).iterdir()
+        if q.is_symlink() and not q.exists()
+    ]
+    if dangling:
+        line(WARN, "media links", f"{len(dangling)} links in {paths.cache()} point at files that are gone, first {dangling[0].name}")
     pilot_lyrics = len(list((paths.pilot() / "lyrics").glob("*.json"))) if (paths.pilot() / "lyrics").is_dir() else 0
     ours = len(list((paths.user_data() / "lyrics").glob("*.json"))) if (paths.user_data() / "lyrics").is_dir() else 0
     if pilot_lyrics and ours < pilot_lyrics:
