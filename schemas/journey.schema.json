@@ -3,11 +3,11 @@
  "$id": "https://github.com/jampick/liner-notes/schemas/journey.schema.json",
  "title": "A Liner Notes journey",
  "type": "object",
- "required": ["slug", "title", "titleA", "titleB", "kicker", "description", "fonts", "copy", "eras", "songs"],
+ "required": ["slug", "title", "titleA", "titleB", "kicker", "description", "copy", "eras", "songs"],
  "properties": {
   "slug": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
   "title": {"type": "string"},
-  "fonts": {"type": "string", "pattern": "^https://fonts\\.googleapis\\.com/"},
+  "fonts": {"type": "string", "pattern": "^(https://fonts\\.googleapis\\.com/.*)?$"},
   "copy": {"type": "object"},
   "panel": {
    "type": "object",

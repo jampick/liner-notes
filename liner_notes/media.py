@@ -1,18 +1,17 @@
-"""Fetch the pictures a journey shows but we don't own, into the cache, and write its stage data.
+"""Fetch the pictures a journey shows but we don't own, into the cache, then write its stage data.
 
     liner-notes media <slug> [--public]
 
   - Covers from Apple (the song's Apple Music track id), into cache/covers/<song id>.webp.
-  - Which YouTube uploads are real music videos (played muted behind the stage) and which are audio
-    uploads with a still. YouTube's oEmbed answers for embeddable videos; a "- Topic" channel or
-    "Audio" in the title means a still.
   - The lead picture of each Wikipedia article the culture notes name, and of each artist, with its
     licence. Pictures on Wikimedia Commons carry a free licence and an author. Pictures uploaded only
     to English Wikipedia are usually non-free (album covers, film posters, used there as fair use):
     a --public stage leaves those out.
 
-Network answers are cached in cache/http.json, so a second run only fetches what's new. Requests
-are slow on purpose; Wikipedia answers 429 when asked too fast.
+It never asks YouTube anything: whether an upload gets moving pictures on the stage depends only
+on whether its video is in the disk cache (see stage.py). Network answers are cached in
+cache/http.json, so a second run only fetches what's new. Requests are slow on purpose; Wikipedia
+answers 429 when asked too fast.
 """
 import io
 import json
@@ -24,8 +23,7 @@ import urllib.request
 
 from . import USER_AGENT, paths
 from .bank import Bank, read_json, write_json
-
-STILLS = {"sFP7jVIxE2c"}  # Eple: a fan upload of the cover
+from .stage import safe
 
 
 class Fetcher:
@@ -84,10 +82,6 @@ class Fetcher:
         return out
 
 
-def safe(title):
-    return re.sub(r"[^\w.-]", "_", title)[:90]
-
-
 def wiki_picture(f, title, sub):
     """(relative path, credit) for an article's lead image, or (None, None)."""
     out = f.cache / sub / f"{safe(title)}.webp"
@@ -143,56 +137,25 @@ def cover(f, song):
 
 
 def stage(slug, public=False, bank=None, cache=None, log=print):
+    from . import stage as stage_data
+
     bank = bank or Bank()
     f = Fetcher(cache)
     j = bank.journeys[slug]
     songs = [bank.songs[s] for s in j["songs"] if s in bank.songs]
-    lo, hi = min(e["from"] for e in j["eras"]), max(e["to"] for e in j["eras"])
-
     n_cover = sum(1 for s in songs if cover(f, s))
-    vids = {}
     for s in songs:
-        yt = ((j.get("pins") or {}).get(s["id"]) or {}).get("youtube") or ((s.get("aliases") or {}).get("youtube") or [None])[0]
-        if not yt:
-            continue
-        o = f.memo("oembed:" + yt, lambda yt=yt: (lambda d: {"title": d.get("title", ""), "author": d.get("author_name", "")})(
-            json.loads(f.get("https://www.youtube.com/oembed?format=json&url=https://www.youtube.com/watch?v=" + yt))))
-        motion = bool(o) and not o["author"].endswith("- Topic") and not re.search(r"\baudio\b|visuali[sz]er|lyric", o["title"], re.I) and yt not in STILLS
-        vids[yt] = {"embed": bool(o), "motion": motion}
-
-    credits, skipped = {}, 0
-
-    def item(it):
-        nonlocal skipped
-        out = {x: it[x] for x in ("kind", "title", "line", "source") if it.get(x)}
-        if it.get("wiki"):
-            rel, credit = wiki_picture(f, it["wiki"], "culture")
-            if rel and (free(credit) or not public):
-                out["img"] = rel
-                credits[rel] = credit
-            elif rel:
-                skipped += 1
-        return out
-
-    years = {str(y): [item(it) for it in bank.years(y)] for y in range(lo, hi + 1) if bank.years(y)}
-    per_song = {s["title"]: [item(it) for it in s.get("culture") or []] for s in songs if s.get("culture")}
-    artists = {}
-    wanted = bank.artists()
-    for name, title in wanted.items():
-        if not any(name == s["artist"] or name in s["artist"] for s in songs):
-            continue
-        rel, credit = wiki_picture(f, title, "artists")
-        if rel and (free(credit) or not public):
-            artists[name] = rel
-            credits[rel] = credit
-        elif rel:
-            skipped += 1
-
+        for it in s.get("culture") or []:
+            if it.get("wiki"):
+                wiki_picture(f, it["wiki"], "culture")
+    lo, hi = min(e["from"] for e in j["eras"]), max(e["to"] for e in j["eras"])
+    for y in range(lo, hi + 1):
+        for it in bank.years(y):
+            if it.get("wiki"):
+                wiki_picture(f, it["wiki"], "culture")
+    for name, title in bank.artists().items():
+        if any(name == s["artist"] or name in s["artist"] for s in songs):
+            wiki_picture(f, title, "artists")
     f.save()
-    out = f.cache / "stage" / f"{slug}.stage.json"
-    write_json(out, {"tracks": vids, "years": years, "songs": per_song, "artists": artists, "credits": credits, "public": public})
-    n_img = sum(1 for v in list(years.values()) + list(per_song.values()) for i in v if "img" in i)
-    log(f"{out}  {n_cover}/{len(songs)} covers  {sum(v['motion'] for v in vids.values())}/{len(vids)} music videos  "
-        f"{sum(map(len, years.values()))} year notes  {sum(map(len, per_song.values()))} song notes  {n_img} pictures  "
-        f"{len(artists)} artists" + (f"  {skipped} non-free pictures left out" if public else ""))
-    return out
+    log(f"{slug}: {n_cover}/{len(songs)} covers in {f.cache}")
+    return stage_data.write(slug, bank=bank, cache=f.cache, public=public, log=log)
