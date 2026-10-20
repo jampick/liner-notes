@@ -2,30 +2,62 @@ Liner Notes is a second screen for cliamp.
 
 Put it on a monitor, a tablet or a phone next to your player. It shows what's playing at reading distance and plays the liner notes along with the song: what to listen for in the intro while the intro plays, how the record was made, what was going on that year, the lyrics as they're sung, and one record to chase next. It follows the player. Skip, shuffle or jump around the playlist, and the page keeps up.
 
-It started as a page for one playlist, Downtempo Drift (49 songs, Bristol 1991 to Texas 2020), and turned into a small engine for any playlist. That journey ships here as the example.
+It started as a page for one playlist, Downtempo Drift (49 songs, Bristol 1991 to Texas 2020), and turned into a small engine for any playlist. Four journeys ship here: Downtempo Drift, Sophisti-Pop (42 songs, 1982 to 1990), Yacht Rock (60 songs, 1972 to 1984) and Yacht House, 15 house remixes of yacht rock records, each laid against the original it flips.
 
-An AI model wrote every note in the bank, working from the sources listed in each file. As of 0.2.0 all 49 songs are drafts: nobody has checked them against their sources yet, and the page labels them "Draft notes".
+An AI model wrote every note in the bank, working from the sources listed in each file. All 151 songs are still drafts: nobody has checked them against their sources yet, and the page labels them "Draft notes".
 
 ## What you need
 
 - Python 3.11 or newer. The bridge and the page builder use only the standard library.
 - [cliamp](https://github.com/bjarneo/cliamp) 2.0 or newer for the full experience (it speaks the V2 IPC this uses). Any MPRIS player on Linux works too, with less: no lyrics, no history, no jumping to a song.
-- Optional: Pillow (`pip install 'liner-notes[media]'`) to fetch covers and pictures, and the `anthropic` SDK plus an API key (`pip install 'liner-notes[generate]'`) to write notes for your own playlists.
+- Optional: Pillow (`[media]`) to fetch covers and pictures; numpy, Pillow and onnxruntime (`[depth]`) for depth maps that move the stage pictures in parallax; numpy (`[remix]`) to measure remix tempos; the `anthropic` SDK plus an API key (`[generate]`) to write notes for your own playlists.
 
-## Quick start
+## Install
 
 ```sh
-git clone https://github.com/jampick/liner-notes && cd liner-notes
-pip install -e '.[media]'
-liner-notes add downtempo-drift        # puts the playlist into cliamp
-liner-notes media downtempo-drift      # covers and stage pictures into ~/.cache/liner-notes (slow on purpose)
-liner-notes build downtempo-drift
-liner-notes open downtempo-drift       # starts the bridge and opens the page
+pipx install git+https://github.com/jampick/liner-notes
+liner-notes doctor              # finds cliamp and its socket, Chromium, who has port 47391, what each journey can show
+liner-notes service install     # the bridge as a systemd user service, restarted if it dies
 ```
 
-Then play the playlist in cliamp. The page notices and goes to the stage.
+`doctor` only looks. It prints one line per thing it checked and a table per journey: songs with notes, covers in the cache, songs with a video on disk (their own, or a stand-in), and songs with retimed lyrics. From a checkout, `pip install -e '.[dev]'` does the same plus the test tools.
 
-On a tablet or phone on the same network, run `liner-notes serve --lan` and scan the QR code it prints. If you use Tailscale, `liner-notes serve --tailscale` serves HTTPS on your machine's ts.net name instead, which phones need to keep the screen awake.
+## Daily use
+
+```sh
+liner-notes play drift          # or a playlist name: liner-notes play "Downtempo Drift"
+```
+
+This is what my Stream Deck keys run. It loads the playlist into cliamp (or starts cliamp with it), turns shuffle off and plays from the first song, then opens the journey's page in companion mode. On Hyprland the page goes full screen onto the workspace it was on last time (2 the first time) without taking focus, so a game on another workspace keeps it. A cold-started cliamp goes to workspace 3, also without taking focus. Pressing the key of the playlist that's already playing leaves the music alone and only brings the page back. A playlist with no journey gets the live stage: title, artist, the cover if the cache has it, lyrics and the night so far.
+
+If cliamp doesn't have a journey's playlist yet, `liner-notes add downtempo-drift` writes it into cliamp's playlists folder, in the order the page numbers the songs.
+
+To bind a key, point it at `liner-notes play <name>`. The short names live in `~/.config/liner-notes/config.toml`:
+
+```toml
+[keys]
+drift = "Downtempo Drift"
+yacht = "Yacht Rock"
+
+[stage]
+workspace = 2          # where the page opens the first time
+cliamp_workspace = 3   # where a cold-started cliamp goes
+```
+
+Building pages, once per journey and again after you change one:
+
+```sh
+liner-notes media downtempo-drift      # covers and pictures into the cache (slow on purpose)
+liner-notes build --all                # every journey and the live page, into ~/.local/share/liner-notes/dist
+```
+
+A build is written to a temp file and moved into place, so the page on screen is never half a file. A journey with a problem (a song missing from the bank, a stop outside every era) isn't written unless you add `--force`. Yacht House is the exception to "any machine": its stage is built from remix alignments and lyrics that aren't public, so it only builds where those files are.
+
+Without the systemd unit, `liner-notes open` starts the bridge itself. On a tablet or phone on the same network, run `liner-notes serve --lan` and scan the QR code it prints. If you use Tailscale, `liner-notes serve --tailscale` serves HTTPS on your machine's ts.net name instead, which phones need to keep the screen awake.
+
+## Offline mode
+
+When YouTube stops answering (it flagged my IP twice), `liner-notes offline on` makes every key load the playlist's `<Name> (offline)` twin from cliamp's playlists folder when there is one, with the same page. `liner-notes offline off` goes back, and `liner-notes offline` says which it is. The switch is a file, `~/.local/state/liner-notes/offline`.
 
 ## Three layers
 
@@ -64,13 +96,25 @@ The bank grows by pull request. Copy an existing file in `songs/`, keep the shap
 
 The voice: a friend who has the records and has read the interviews. No em dashes, no "iconic", no "timeless". Specific names, studios, samples, chart positions, years. The full rules are in the song brief.
 
-## What's in the repo and what isn't
+## What's public and what stays on your machine
 
-Committed, because we wrote or made them: the code, the song notes and journey text, the year culture notes, and the era photographs (AI-generated, labelled as such).
+Committed, because we wrote or made them: the code, the song notes and journey text, the panels, the year culture notes, and the era pictures (AI-generated, labelled as such).
 
-Fetched into your cache, never committed or shipped in a shareable file: album covers (they belong to the labels), Wikipedia pictures (each with its licence recorded; `media --public` drops the ones that aren't freely licensed), lyrics (cliamp fetches them while you listen) and Apple's 30-second previews (streamed from Apple, with Apple's credit beside them).
+Never committed, and never in a shareable page:
 
-`liner-notes build --public` makes a page you can send to someone: no covers, no video, the same notes. The muted music video on the stage is a personal-use option for local builds only (`--video`). It only plays when cliamp is playing that exact YouTube upload, because YouTube's developer policies don't allow separating a video from its audio.
+| What | Where |
+|---|---|
+| Retimed lyrics and remix alignments | `~/.local/share/liner-notes/lyrics/`, `.../remixes/` |
+| Stand-in videos and culture clip ids | `~/.local/share/liner-notes/standins/`, `.../culture-videos/` |
+| Built pages (they carry covers) | `~/.local/share/liner-notes/dist/` |
+| Album covers, Wikipedia pictures, depth maps, video, audio | `~/.cache/liner-notes/` |
+| The page's Chromium profile, its workspace, A/V latency, the offline switch | `~/.local/state/liner-notes/` |
+
+Covers belong to the labels. Wikipedia pictures each have their licence recorded, and `media --public` drops the ones that aren't freely licensed. Lyrics are licensed text, and retimed ones are derived from it. The disk video is for personal use only: YouTube's developer policies don't allow separating a video from its audio, so the stage plays it muted under cliamp's audio and only on your machine. The pages never talk to YouTube.
+
+`liner-notes build <slug> --public` makes a page you can send to someone: no covers, no video ids, the same notes. `liner-notes check --publish` fails if anything from the table turns up in the tree or in a public build, and CI runs it on every push.
+
+`liner-notes migrate-personal --from ~/Projects/Music/journeys` moved my own pilot's lyrics, pictures and caches into those folders (video and audio as hard links). It's safe to rerun, and `--dry-run` shows the plan.
 
 Every page says in its credits, its `<head>` and its JSON-LD that an AI model wrote the notes, and how many songs a person has reviewed.
 
