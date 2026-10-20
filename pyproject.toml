@@ -13,6 +13,8 @@ dependencies = []
 
 [project.optional-dependencies]
 media = ["Pillow>=10"]
+depth = ["numpy>=1.26", "Pillow>=10", "onnxruntime>=1.17"]
+remix = ["numpy>=1.26"]
 generate = ["anthropic>=1.15"]
 dev = ["pytest>=8", "ruff>=0.6", "Pillow>=10", "anthropic>=1.15"]
 
@@ -23,7 +25,7 @@ liner-notes = "liner_notes.cli:main"
 include = ["liner_notes*"]
 
 [tool.setuptools.package-data]
-liner_notes = ["web/*", "prompts/*"]
+liner_notes = ["web/*", "prompts/*", "data/*"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
