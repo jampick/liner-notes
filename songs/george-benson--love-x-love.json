@@ -1,0 +1,72 @@
+{
+ "id": "george-benson--love-x-love",
+ "title": "Love X Love",
+ "artist": "George Benson",
+ "year": 1980,
+ "year_note": "",
+ "album": "Give Me the Night",
+ "aliases": {
+  "youtube": [
+   "sBrHa_RgvvU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/80/bd/70/80bd7028-b182-81c7-694a-a07107a975e1/mzaf_15992654172999993492.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/love-x-love/309576571?i=309576572&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote it alone and did the rhythm and vocal arrangement; Jerry Hey arranged the horns and strings, with David Foster on extra string charts. Quincy Jones produced it at Kendun in Burbank and Cherokee in Hollywood with Bruce Swedien mixing. Greg Phillinganes plays keys, John Robinson drums, and two bassists are credited, Louis Johnson and Abraham Laboriel. Patti Austin, Jocelyn Brown, Tom Bahler, Jim Gilstrap and Diva Gray sing the backing parts.",
+  "context": "It opened the album and followed Give Me the Night as a single. Britain took to it first: it entered the UK chart on 26 July 1980 and reached 10, while in America it made 9 on the R&B chart and only 61 on the Hot 100. Fourteen years later Naughty by Nature lifted its guitar lick for Zhané's Vibe, and Temperton picked up a co-writing credit on a Motown single.",
+  "listen_for": [
+   {
+    "where": "the backing vocals on the chorus",
+    "note": "A five-voice choir with Patti Austin and Jocelyn Brown in it, arranged by Temperton, with a gospel tinge under Benson's lead."
+   },
+   {
+    "where": "Benson's guitar lines between the vocal phrases",
+    "note": "The jazz guitar lick that Naughty by Nature sampled for Zhané's Vibe in 1994."
+   }
+  ],
+  "leads_to": {
+   "artist": "Zhané",
+   "title": "Vibe",
+   "year": 1994,
+   "why": "Naughty by Nature built it on Benson's guitar lick from this record, and Temperton shares the writing credit."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Love_X_Love",
+   "https://en.wikipedia.org/wiki/Give_Me_the_Night_(album)",
+   "https://en.wikipedia.org/wiki/Vibe_(Zhan%C3%A9_song)",
+   "https://sessiondays.com/2017/05/20/1980-george-benson-give-night/",
+   "https://www.audaud.com/?p=41540"
+  ],
+  "unverified": "Wikipedia gives the US single as September 1980 but the UK chart entry as 26 July 1980; I didn't find the UK release date."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Bigger in Britain",
+   "line": "Number 10 in the UK in summer 1980 and 8 in New Zealand, against 61 on the Hot 100 and 9 R&B.",
+   "wiki": "Love_X_Love",
+   "source": "https://en.wikipedia.org/wiki/Love_X_Love"
+  },
+  {
+   "kind": "sample",
+   "title": "Zhané, Vibe (1994)",
+   "line": "Naughty by Nature produced Vibe on a sample of the record's jazz guitar lick; it reached 33 on the US R&B chart and 11 on the UK dance chart.",
+   "wiki": "Vibe_(Zhané_song)",
+   "source": "https://en.wikipedia.org/wiki/Vibe_(Zhan%C3%A9_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-3)",
+  "written_on": "2026-10-20"
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "id": "heatwave--boogie-nights",
+ "title": "Boogie Nights",
+ "artist": "Heatwave",
+ "year": 1976,
+ "year_note": "The recording first came out on the album Too Hot to Handle, released in the UK by GTO on 15 June 1976. The single entered the UK chart on 22 January 1977 and peaked in the US that November, which is where the 1977 working year comes from.",
+ "album": "Too Hot to Handle",
+ "aliases": {
+  "youtube": [
+   "bJ0Rk3piR44"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f6/62/1f/f6621fce-40d4-6fac-3a78-504a3aaa00dd/mzaf_4610660775627899743.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/boogie-nights/153421868?i=153422013&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote it, words and music, and Songfacts calls it the first song he wrote on his own. Barry Blue produced it for GTO with John Cameron arranging, and the band played it: Keith Wilder on lead vocal, Temperton on keyboards and synthesizer, Mario Mantese on bass, Ernest \"Bilbo\" Berger on drums, Eric Johns on guitar. The harp is Sheila Bromberg, credited as Carla Skanger, and Clarke Peters is among the backing singers.",
+  "context": "It took a while to cross over. The album came out in June 1976, but the single only entered the UK chart in January 1977 and climbed to number two. Epic then took it to number two on the Hot 100 that autumn, where it sat for two weeks behind Debby Boone's \"You Light Up My Life\", in the same weeks the Saturday Night Fever soundtrack arrived and made disco the biggest business in pop. It went platinum in the US, and it is the record that made Quincy Jones notice its writer.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "It starts as a slow swing-jazz vamp with stacked vocals before the band drops into the bass-heavy groove. A Hull DJ who knew the band doubted anyone could dance to that intro."
+   },
+   {
+    "where": "the breakdown",
+    "note": "The groove thins out to the bouncy bass and horn riffs, which is where the band sounds closest to a live funk act."
+   }
+  ],
+  "leads_to": {
+   "artist": "Barry Blue",
+   "title": "Dancin' (On a Saturday Night)",
+   "year": 1973,
+   "why": "The producer's own UK number two, co-written with Lynsey de Paul, three years before he made this record; it tells you what kind of pop craftsman GTO put in the room with a funk band."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Boogie_Nights_(song)",
+   "https://www.songfacts.com/facts/heatwave/boogie-nights",
+   "https://www.officialcharts.com/search/singles/boogie-nights/",
+   "https://thehullstory.com/allarticles/rod-temperton-part-2",
+   "https://classicsongoftheday.com/boogie-nights-heatwave/",
+   "https://grooveoftheday.substack.com/p/heatwave",
+   "https://en.wikipedia.org/wiki/John_Cameron_(musician)",
+   "https://en.wikipedia.org/wiki/Barry_Blue",
+   "https://stereogum.com/2076517/the-number-ones-michael-jacksons-rock-with-you/columns/the-number-ones",
+   "https://en.wikipedia.org/wiki/Saturday_Night_Fever_(soundtrack)"
+  ],
+  "unverified": "I couldn't find a source naming the studio for this track specifically; the album credits give Audio International in London."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Stuck behind Debby Boone",
+   "line": "It spent two weeks at number two on the Hot 100 in late 1977, held off by \"You Light Up My Life\". It was also number two in the UK and number one in New Zealand.",
+   "wiki": "You Light Up My Life (song)",
+   "source": "https://www.songfacts.com/facts/heatwave/boogie-nights"
+  },
+  {
+   "kind": "screen",
+   "title": "Summer of Sam, but not Boogie Nights",
+   "line": "It is in Eyes of Laura Mars (1978) and Spike Lee's Summer of Sam (1999). It is not in the 1997 film named after it, because Johnnie Wilder Jr. refused to let the recording be used.",
+   "wiki": "Summer of Sam",
+   "source": "https://en.wikipedia.org/wiki/Boogie_Nights_(song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Sonia, 1992",
+   "line": "Sonia's cover for Arista reached number 30 in the UK in September 1992. La Fleur had taken a version to 51 in 1983.",
+   "wiki": "Sonia (singer)",
+   "source": "https://www.officialcharts.com/search/singles/boogie-nights/"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-1)",
+  "written_on": "2026-10-20"
+ }
+}

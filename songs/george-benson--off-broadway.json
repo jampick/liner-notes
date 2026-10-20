@@ -1,0 +1,65 @@
+{
+ "id": "george-benson--off-broadway",
+ "title": "Off Broadway",
+ "artist": "George Benson",
+ "year": 1980,
+ "year_note": "",
+ "album": "Give Me the Night",
+ "aliases": {
+  "youtube": [
+   "uwXFE08GV14"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cd/17/28/cd172874-0615-1c71-2560-d1ea3b1b6a13/mzaf_14223376560865130357.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/off-broadway/309576571?i=309576573&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote it and shared the rhythm arrangement with Quincy Jones, and Jerry Hey wrote the horn and string parts. Benson plays it with a second guitarist, Lee Ritenour, over Louis Johnson on bass, John Robinson on drums, Paulinho da Costa on percussion and Greg Phillinganes on keyboards and synthesizers. Sid Sharp led the strings, and it was cut at Kendun and Cherokee with Bruce Swedien mixing.",
+  "context": "Warner brought in Jones to move Benson from jazz guitarist to R&B star, but the album kept one instrumental for the guitarist, and it paid: at the 1981 Grammys it won Best R&B Instrumental Performance, one of three awards for the album, beating a field that included the Brothers Johnson's Smilin' on Ya from Light Up the Night.",
+  "listen_for": [
+   {
+    "where": "the main theme",
+    "note": "The funk groove stays put while the horn accents land on top and the chords take jazz turns underneath."
+   },
+   {
+    "where": "the solo section",
+    "note": "Two guitarists, Benson and Lee Ritenour, and Benson adds some scat to the guitar breaks."
+   }
+  ],
+  "leads_to": {
+   "artist": "Heatwave",
+   "title": "The Star of a Story",
+   "year": 1978,
+   "why": "Temperton's own band cut it first, and Benson recut it as Star of a Story (X) on the same side of the LP as this one."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Give_Me_the_Night_(album)",
+   "https://www.grammy.com/awards/categories/best-rb-instrumental-performance/1981/",
+   "https://sessiondays.com/2017/05/20/1980-george-benson-give-night/",
+   "https://www.audaud.com/?p=41540",
+   "https://daily.redbullmusicacademy.com/2015/01/rod-temperton-guide"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "award",
+   "title": "Grammy, 1981",
+   "line": "Best R&B Instrumental Performance at the 23rd Grammys. The album also won for Moody's Mood and Best Male R&B Vocal.",
+   "wiki": "23rd_Annual_Grammy_Awards",
+   "source": "https://en.wikipedia.org/wiki/Give_Me_the_Night_(album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-3)",
+  "written_on": "2026-10-20"
+ }
+}

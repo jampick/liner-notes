@@ -1,0 +1,11 @@
+# Corrections to carry into every artifact (chat tables, review doc, page)
+- Boogie Nights, Too Hot to Handle, Always and Forever: year 1976, not 1977/1978. All three are on the album Too Hot to Handle, out in the UK on 15 June 1976. Reorders the first stops.
+- The Groove Line: year 1977 (single November 1977, UK chart from 14 January 1978).
+- Too Hot to Handle (Hilary): the UK number 15 was a double A-side with "Slip Your Disc to This". New quote: "Title track and opener of the album that started all this. Paired with 'Slip Your Disc to This', it reached number 15 in the UK in 1977."
+- The Groove Line (Desmond): it wasn't the follow-up to Boogie Nights; in the US "Always and Forever" came between (18, March 1978). New quote: "Number seven pop and number three R&B in the summer of 1978, a bigger pop hit than 'Always and Forever'. Three US hits off two albums said Heatwave weren't a one-song band."
+- Off the Wall (Fenella): the old quote quoted a lyric, which the page can't carry. New quote: "Louis Johnson's bass sits right in the pocket and the tempo never pushes, so the room moves without being told to. Top ten in America and number seven in the UK."
+- The Lady in My Life (Lorenzo): "Hey Lover" came out on 31 October 1995 and sat at number three over the turn into 1996. New quote: "Never released as a single, then LL Cool J and Boyz II Men built 'Hey Lover' on it and took it to number three. Temperton got a writing credit on a Grammy-winning rap record."
+- Baby Be Mine (Renata): it was released, as the B-side of "Human Nature" (1983), and the credits name no synth bass player. New quote: "Temperton arranged it and Jerry Hey's horn fills punch through every gap. Jones called it Coltrane in a pop song, and it only ever got out as a B-side."
+- Mystery (Hilary): the Manhattan Transfer's version is on Bodies and Souls, September 1983, not 1984, and the 102 was the pop chart (80 R&B). New quote: "The Manhattan Transfer cut it first on Bodies and Souls in 1983, and their single stalled at 102 pop. Anita Baker's take on Rapture is the recording that found the song."
+- Razzamatazz: credited as Quincy Jones featuring Patti Austin.
+- Thriller: the album came out on 29 November 1982 (Wikipedia), so the stop is 1982.

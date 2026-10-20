@@ -1,0 +1,73 @@
+{
+ "id": "anita-baker--mystery",
+ "title": "Mystery",
+ "artist": "Anita Baker",
+ "year": 1986,
+ "year_note": "",
+ "album": "Rapture",
+ "aliases": {
+  "youtube": [
+   "byI1q82-MuU"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4e/cb/0d/4ecb0d5f-0e85-c83d-5958-c5837fc37409/mzaf_6386026288819947342.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/mystery/1018520424?i=1018521360&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton is the only writer credited. This is a cover, so what's his here is the song; on the Manhattan Transfer original he had done the vocal and instrumental arrangement too. Baker's old Chapter 8 bandmate Michael J. Powell produced it, with Vernon Fails on keyboards, David B. Washington on bass, Arthur Marbury on drums and Lawrence Fratangelo on percussion. Powell and three others are credited with finger pops, and Natalie Jackson sings backup. Baker was executive producer, and Rapture was cut in Glendale, Hollywood and at United Sound in Detroit.",
+  "context": "Baker had left Beverly Glen for Elektra in 1984, and Beverly Glen sued to stop her recording. She finished the album anyway; the court ruled for her on 19 March 1986 and Rapture came out the next day. It sold about five million in the US, went to number one on the R&B albums chart and won her a Grammy, and it suited the quiet storm slots on Black radio. Mystery was never an A-side; it went out as the B-side of Caught Up in the Rapture that October.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Slightly haunted harmonies come in before the band settles under Baker."
+   },
+   {
+    "where": "the rhythm track",
+    "note": "Finger pops are a credited part, played by four people, Powell among them."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Manhattan Transfer",
+   "title": "Mystery",
+   "year": 1983,
+   "why": "The original, with Temperton's own vocal and instrumental arrangement, Greg Phillinganes on Rhodes and an Ernie Watts alto solo."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rapture_(Anita_Baker_album)",
+   "https://en.wikipedia.org/wiki/Bodies_and_Souls",
+   "https://www.noecho.net/song-of-the-day/the-manhattan-transfer-mystery-from-bodies-and-souls-atlantic-1983",
+   "https://albumism.com/features/anita-baker-rapture-album-anniversary",
+   "https://en.wikipedia.org/wiki/Caught_Up_in_the_Rapture",
+   "https://en.wikipedia.org/wiki/Rod_Temperton"
+  ],
+  "unverified": "Temperton's Wikipedia page dates the Manhattan Transfer Mystery to 1984, which may be the single; I couldn't find the single's release date, so I used the album's September 1983. Sources disagree on whether Powell plays keyboards or guitar, so I left his instrument out."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "B-side to a top ten R&B hit",
+   "line": "Mystery was the flip of Caught Up in the Rapture, which reached 6 on the Black singles chart and 37 on the Hot 100 in late 1986.",
+   "wiki": "Caught_Up_in_the_Rapture",
+   "source": "https://en.wikipedia.org/wiki/Caught_Up_in_the_Rapture"
+  },
+  {
+   "kind": "award",
+   "title": "Rapture's Grammys",
+   "line": "The album won Best Female R&B Vocal Performance at the 1987 Grammys, and Sweet Love won Best R&B Song.",
+   "wiki": "Rapture_(Anita_Baker_album)",
+   "source": "https://en.wikipedia.org/wiki/Rapture_(Anita_Baker_album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-5)",
+  "written_on": "2026-10-20"
+ }
+}

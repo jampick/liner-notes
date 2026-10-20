@@ -1,0 +1,86 @@
+{
+ "id": "michael-jackson--rock-with-you",
+ "title": "Rock with You",
+ "artist": "Michael Jackson",
+ "year": 1979,
+ "year_note": "",
+ "album": "Off the Wall",
+ "aliases": {
+  "youtube": [
+   "5X-Mrc2l1d0"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c2/5c/a0/c25ca077-ba0e-1061-a442-18c55cdba0e6/mzaf_5857933602530736116.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/rock-with-you/655260476?i=655261377&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote words and music and did the rhythm and vocal arrangements; Quincy Jones produced and Bruce Swedien recorded and mixed, starting in December 1978. John Robinson plays drums, Bobby Watson bass, David Williams and Marlo Henderson guitars, Hawk Wolinski Fender Rhodes, and Greg Phillinganes and Michael Boddicker synths, with Jerry Hey's horn chart for the Seawind Horns and strings arranged by Ben Wright. Jackson stacked his own backing vocals, a whole choir of himself.",
+  "context": "Epic released it in October 1979, three months after Disco Demolition Night. It went to number one on the soul chart on 5 January 1980 and on the Hot 100 on 19 January, taking over from KC and the Sunshine Band's \"Please Don't Go\" and staying four weeks, and Billboard ranked it the fourth-biggest single of 1980. It is a four-on-the-floor record that moves like a ballad, which was the kind of dance record radio still wanted once the word disco had turned toxic.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "The drum intro is the first of the hooks Jones layers in; the synth line, handclaps and guitar scratches pile on from there."
+   },
+   {
+    "where": "the verses",
+    "note": "Silky strings and a barely-there twitch of guitar, the restraint Rolling Stone singled out."
+   },
+   {
+    "where": "the bridge",
+    "note": "Jerry Hey's horns come in as short stabs."
+   }
+  ],
+  "leads_to": {
+   "artist": "Quincy Jones featuring Brandy and Heavy D",
+   "title": "Rock with You",
+   "year": 1995,
+   "why": "Jones remade it on Q's Jook Joint with Brandy singing and a new rap from Heavy D, and Temperton was associate producer and played keyboards on the album."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rock_with_You",
+   "https://en.wikipedia.org/wiki/Off_the_Wall_(album)",
+   "https://stereogum.com/2076517/the-number-ones-michael-jacksons-rock-with-you/columns/the-number-ones",
+   "https://www.songfacts.com/facts/michael-jackson/rock-with-you",
+   "https://www.sessiondays.com/2015/10/1979-michael-jackson-off-the-wall/",
+   "https://en.wikipedia.org/wiki/Q%27s_Jook_Joint",
+   "https://en.wikipedia.org/wiki/Disco_Demolition_Night",
+   "https://soultracks.com/?p=80692"
+  ],
+  "unverified": "Wikipedia and Stereogum say Temperton first offered it to Karen Carpenter, and Songfacts gives a different working title; I found no first-hand source for either, so both are left out."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Lasers and sequins on the 800 Stage",
+   "line": "Bruce Gowers, who had shot Queen's \"Bohemian Rhapsody\", filmed it on a small Los Angeles stage on the same day as \"She's Out of My Life\". Gowers later said those videos were made for next to nothing.",
+   "wiki": "Bruce Gowers",
+   "source": "https://www.songfacts.com/facts/michael-jackson/rock-with-you"
+  },
+  {
+   "kind": "chart",
+   "title": "Four weeks at number one",
+   "line": "Number one on the Hot 100 from 19 January to 9 February 1980, five weeks at number one R&B, and number seven in the UK.",
+   "wiki": "Rock with You",
+   "source": "https://en.wikipedia.org/wiki/Rock_with_You"
+  },
+  {
+   "kind": "award",
+   "title": "Rolling Stone's 500",
+   "line": "Rolling Stone put it at number 354 in its 2021 list of the 500 greatest songs of all time.",
+   "wiki": "Rolling Stone's 500 Greatest Songs of All Time",
+   "source": "https://en.wikipedia.org/wiki/Rock_with_You"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-2)",
+  "written_on": "2026-10-20"
+ }
+}

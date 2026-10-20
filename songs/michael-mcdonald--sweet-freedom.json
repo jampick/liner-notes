@@ -1,0 +1,82 @@
+{
+ "id": "michael-mcdonald--sweet-freedom",
+ "title": "Sweet Freedom",
+ "artist": "Michael McDonald",
+ "year": 1986,
+ "year_note": "",
+ "album": "Running Scared (soundtrack)",
+ "aliases": {
+  "youtube": [
+   "yvXFGUWBMHY"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fd/ff/60/fdff60be-97b9-79d2-8ef2-4c1d5e4f61f6/mzaf_8711461176240291377.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/sweet-freedom/1571406315?i=1571406481&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote it, arranged it and produced it with Bruce Swedien and Dick Rudolph at Westlake Audio in Los Angeles, and Swedien recorded and mixed it. Temperton plays keyboards alongside Greg Phillinganes, Danny Sembello, Larry Williams and Anthony Patler, with Wells Christie on Synclavier, Paul Jackson Jr. and Michael Thompson on guitars and seven horn players including Jerry Hey. McDonald sings lead and backing vocals with Siedah Garrett.",
+  "context": "It was one of five Temperton songs he wrote for Running Scared, Peter Hyams's cop comedy with Gregory Hines and Billy Crystal, which opened on 27 June 1986 and grossed $38.5 million in the US. MCA released the single in June. It reached 7 on the Hot 100, McDonald's last top ten there, plus 4 adult contemporary, 8 dance and 12 in the UK. It was later added to the 1986 reissue of McDonald's 1985 album No Lookin' Back.",
+  "listen_for": [
+   {
+    "where": "the horn section",
+    "note": "Seven horn players, Hey, Grant, Findley, Hutchcroft, Reichenbach, Boruff and Williams, on a Temperton arrangement."
+   },
+   {
+    "where": "the backing vocals",
+    "note": "Siedah Garrett sings the backing parts with McDonald, who stacks his own voice too."
+   },
+   {
+    "where": "the second half of the 7:38 soundtrack version",
+    "note": "The extended section that became the B-side, The Freedom Eights, in a reworked form."
+   }
+  ],
+  "leads_to": {
+   "artist": "Klymaxx",
+   "title": "Man Size Love",
+   "year": 1986,
+   "why": "The other Running Scared hit, also written by Temperton and produced by him with Rudolph and Swedien, reaching 15 on the Hot 100."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sweet_Freedom_(Michael_McDonald_song)",
+   "https://en.wikipedia.org/wiki/Running_Scared_(1986_film)",
+   "https://www.sessiondays.com/2018/08/1986-soundtrack-running-scared/",
+   "https://en.wikipedia.org/wiki/Rod_Temperton"
+  ],
+  "unverified": "Wikipedia's five-song count leaves out El Chase, an instrumental Temperton co-wrote for the same album; it holds if you count songs with vocals."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "With Crystal and Hines",
+   "line": "Leslie Libman directed the video, which has McDonald alongside Billy Crystal and Gregory Hines and cuts in footage from the film.",
+   "wiki": "Running_Scared_(1986_film)",
+   "source": "https://en.wikipedia.org/wiki/Sweet_Freedom_(Michael_McDonald_song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Last top ten",
+   "line": "Number 7 on the Hot 100 in 1986, McDonald's last top ten hit there, and 12 in the UK.",
+   "wiki": "Sweet_Freedom_(Michael_McDonald_song)",
+   "source": "https://en.wikipedia.org/wiki/Sweet_Freedom_(Michael_McDonald_song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Safri Duo, 2002",
+   "line": "The Danish percussion duo recut it with McDonald singing, and it reached 2 in Spain and 54 in the UK.",
+   "wiki": "Safri_Duo",
+   "source": "https://en.wikipedia.org/wiki/Sweet_Freedom_(Michael_McDonald_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-5)",
+  "written_on": "2026-10-20"
+ }
+}

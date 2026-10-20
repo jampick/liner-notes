@@ -1,0 +1,62 @@
+{
+ "id": "michael-jackson--baby-be-mine",
+ "title": "Baby Be Mine",
+ "artist": "Michael Jackson",
+ "year": 1982,
+ "year_note": "",
+ "album": "Thriller",
+ "aliases": {
+  "youtube": [
+   "q3HD_2i5ddQ"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b3/9c/8b/b39c8b6b-7a9f-8944-25c2-1348eaadeaac/mzaf_2663676543764471086.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/baby-be-mine/269572838?i=269573042&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote it and did the vocal, rhythm and synthesizer arrangement, and Jerry Hey arranged the horns, which he plays with Gary Grant, Larry Williams and Bill Reichenbach. Ndugu Chancler is on drums, David Williams on guitar, Greg Phillinganes on keys, with Michael Boddicker and David Paich on synths and Steve Porcaro, Brian Banks and Anthony Marinelli programming. Bruce Swedien recorded and mixed at Westlake.",
+  "context": "It sits second on the album, after Wanna Be Startin' Somethin'. Jones later told Vulture it was his best example of feeding the principles of the past into pop, calling it Coltrane done as a pop song. Jackson said in a 1993 deposition he preferred another Temperton song, Hot Street, but Jones picked this one. It was never an A-side, only the B-side of Human Nature in 1983 and of I Just Can't Stop Loving You in 1987.",
+  "listen_for": [
+   {
+    "where": "the gaps between vocal lines",
+    "note": "Jerry Hey's punchy horn fills."
+   },
+   {
+    "where": "over the groove",
+    "note": "The twittering keyboards Billboard picked out, a whole stack of synth players on one track."
+   }
+  ],
+  "leads_to": {
+   "artist": "John Coltrane",
+   "title": "Giant Steps",
+   "year": 1960,
+   "why": "Jones named Coltrane when he talked about this song, and this is the record people mean by Coltrane changes."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Baby_Be_Mine_(Michael_Jackson_song)",
+   "https://www.thriller40.com/music/baby-be-mine/"
+  ],
+  "unverified": "I read the Vulture quote through Wikipedia and a search summary, not the interview itself."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Only a B-side",
+   "line": "One of two Thriller songs never issued as an A-side; it backed Human Nature in 1983 and I Just Can't Stop Loving You in 1987, and Jackson never sang it live.",
+   "wiki": "Baby_Be_Mine_(Michael_Jackson_song)",
+   "source": "https://www.thriller40.com/music/baby-be-mine/"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-4)",
+  "written_on": "2026-10-20"
+ }
+}

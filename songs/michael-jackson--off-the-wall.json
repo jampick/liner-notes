@@ -1,0 +1,80 @@
+{
+ "id": "michael-jackson--off-the-wall",
+ "title": "Off the Wall",
+ "artist": "Michael Jackson",
+ "year": 1979,
+ "year_note": "",
+ "album": "Off the Wall",
+ "aliases": {
+  "youtube": [
+   "_BfcRjZn6y4"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/0d/54/b20d5435-1536-ea69-4e4a-a7485164aa46/mzaf_15141501831603668160.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/off-the-wall/186166282?i=186166433&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote it and arranged the rhythm and vocals, and Getintothis credits him with giving the album its title too. Louis Johnson of the Brothers Johnson plays bass, John Robinson drums, Greg Phillinganes Rhodes and synth, and George Duke synthesizer, programming and sound effects alongside Michael Boddicker, with Paulinho da Costa on percussion and Jerry Hey's arrangement for the Seawind Horns. It was cut in December 1978 across Allen Zentz, Westlake and Cherokee in Los Angeles, with Swedien recording and mixing.",
+  "context": "The song is about leaving the working week behind for a night out, which suited a singer trying to get out from under his family's band. It came out as a single in the UK on 16 November 1979 and reached seven, and in the US on 31 January 1980, where it made ten on the Hot 100 and five R&B. That was the album's third US top ten; \"She's Out of My Life\" made the fourth, and no solo artist had done that before.",
+  "listen_for": [
+   {
+    "where": "the bass, all the way through",
+    "note": "Louis Johnson's line sits deep in the pocket and keeps the Heatwave-style bounce Temperton wrote into his grooves."
+   },
+   {
+    "where": "the synth colors around the vocal",
+    "note": "Those are George Duke's, who is credited with synthesizer and sound effects on this track alone among Temperton's three."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Brothers Johnson",
+   "title": "Strawberry Letter 23",
+   "year": 1977,
+   "why": "Quincy Jones produced the Brothers Johnson's take on Shuggie Otis's song two years before Off the Wall, and it went to number one R&B and five pop; it is the record that put Louis Johnson's band in Jones's orbit."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Off_the_Wall_(Michael_Jackson_song)",
+   "https://en.wikipedia.org/wiki/Off_the_Wall_(album)",
+   "https://www.sessiondays.com/2015/10/1979-michael-jackson-off-the-wall/",
+   "https://www.getintothis.co.uk/2016/10/michael-jackson-rod-temperton-rip",
+   "https://en.wikipedia.org/wiki/Strawberry_Letter_23",
+   "https://en.wikipedia.org/wiki/Heatwave_(band)"
+  ],
+  "unverified": "I couldn't find a source describing the intro or placing George Duke's effects at a particular point in the song, so the second listening note stays general. Wikipedia says this song too was offered to Karen Carpenter first; left out for want of a first-hand source."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Top ten on both sides",
+   "line": "Number seven in the UK and ten on the Hot 100, five on the R&B chart, and platinum in the US.",
+   "wiki": "Off the Wall (Michael Jackson song)",
+   "source": "https://en.wikipedia.org/wiki/Off_the_Wall_(Michael_Jackson_song)"
+  },
+  {
+   "kind": "sample",
+   "title": "Pete Rock, 1998",
+   "line": "Pete Rock sampled it for \"Stay Away\", with De La Soul and Rob-O, in 1998.",
+   "wiki": "Soul Survivor (Pete Rock album)",
+   "source": "https://en.wikipedia.org/wiki/Off_the_Wall_(Michael_Jackson_song)"
+  },
+  {
+   "kind": "sample",
+   "title": "Mariah Carey, 2008",
+   "line": "Mariah Carey interpolated it in \"I'm That Chick\" in 2008.",
+   "wiki": "E=MC²",
+   "source": "https://en.wikipedia.org/wiki/Off_the_Wall_(Michael_Jackson_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-2)",
+  "written_on": "2026-10-20"
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "id": "the-brothers-johnson--stomp",
+ "title": "Stomp!",
+ "artist": "The Brothers Johnson",
+ "year": 1980,
+ "year_note": "",
+ "album": "Light Up the Night",
+ "aliases": {
+  "youtube": [
+   "wmR7JWPMdoQ"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6d/3d/55/6d3d5597-cf57-4813-1ab0-113daf590752/mzaf_10374754365485231563.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/stomp/1434901683?i=1434901768&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote it with Louis Johnson, George Johnson and Valerie Johnson, and plays electric piano on it himself. Quincy Jones produced and Bruce Swedien recorded it at Allen Zentz, A&M and Kendun, with Greg Phillinganes on keys, Steve Porcaro on synths, John Robinson on drums and Jerry Hey's horns. The backing choir includes Michael Jackson, Merry Clayton, Valerie Johnson and Jones himself. Louis Johnson, nicknamed Thunder Thumbs, is credited with a bass solo on the album version, which runs 6:20.",
+  "context": "It came out as a single on 6 February 1980, half a year after Disco Demolition Night, when labels were quietly renaming disco as dance music. It went to number one on the R&B and dance charts, 7 on the Hot 100 and 6 in the UK, and spent six weeks at number one in New Zealand. It was the duo's biggest hit and close to the end of their run with Jones: Light Up the Night was the last album he produced for them, and they split in 1982.",
+  "listen_for": [
+   {
+    "where": "the bass under the verses and the solo spot on the long version",
+    "note": "Louis Johnson's thumb-plucked bass. He's cited with Larry Graham as a pioneer of that technique, and the album credits give him a bass solo here."
+   },
+   {
+    "where": "the stacked chorus vocals",
+    "note": "The crowd of backing singers includes Michael Jackson, between Off the Wall and Thriller, plus Merry Clayton and Quincy Jones."
+   },
+   {
+    "where": "when the horns cut in",
+    "note": "Jerry Hey and Gary Grant on trumpet with Kim Hutchcroft and Larry Williams on saxes and Bill Reichenbach on trombone, layered over strings and guitars."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Brothers Johnson",
+   "title": "Strawberry Letter 23",
+   "year": 1977,
+   "why": "Their earlier Quincy Jones hit, a Shuggie Otis cover that went to number one R&B and 5 pop, three years before Temperton joined the writing."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Stomp!_(Brothers_Johnson_song)",
+   "https://en.wikipedia.org/wiki/Light_Up_the_Night_(The_Brothers_Johnson_album)",
+   "https://en.wikipedia.org/wiki/The_Brothers_Johnson",
+   "https://sessiondays.com/?p=46891",
+   "https://daily.redbullmusicacademy.com/2015/01/rod-temperton-guide",
+   "https://www.vintageguitar.com/21020/renowned-bassist-louis-johnson-passes/",
+   "https://en.wikipedia.org/wiki/Disco_Demolition_Night",
+   "https://en.wikipedia.org/wiki/Strawberry_Letter_23"
+  ],
+  "unverified": "I couldn't find an account of who brought what to the four-way write, so the essay doesn't split it. Sources disagree on the album date (March or 4 April 1980)."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Six weeks at the top in New Zealand",
+   "line": "Number one R&B and dance in the US, 7 on the Hot 100, 6 in the UK, and six weeks at number one in New Zealand, where it was the second-biggest single of 1980.",
+   "wiki": "Stomp!_(Brothers_Johnson_song)",
+   "source": "https://en.wikipedia.org/wiki/Stomp!_(Brothers_Johnson_song)"
+  },
+  {
+   "kind": "cover",
+   "title": "B.G. the Prince of Rap, 1996",
+   "line": "His 1996 dance cover reached 2 in Canada and 15 in Finland.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Stomp!_(Brothers_Johnson_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-3)",
+  "written_on": "2026-10-20"
+ }
+}

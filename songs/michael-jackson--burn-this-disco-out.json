@@ -1,0 +1,65 @@
+{
+ "id": "michael-jackson--burn-this-disco-out",
+ "title": "Burn This Disco Out",
+ "artist": "Michael Jackson",
+ "year": 1979,
+ "year_note": "",
+ "album": "Off the Wall",
+ "aliases": {
+  "youtube": [
+   "_F06umiWDDw"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/00/fa/20/00fa2054-268c-68a8-d2a9-134dccff6164/mzaf_8846135259274120204.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/burn-this-disco-out/186166282?i=186166767&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote it and arranged the rhythm and vocals, the third of the three songs he brought and Jones kept. Louis Johnson plays bass, John Robinson drums, Greg Phillinganes Rhodes, Marlo Henderson and David Williams guitars, Paulinho da Costa percussion, with the Seawind Horns playing Jerry Hey's arrangement; Jackson sings lead and all his own background vocals. He learned the Temperton songs without a lyric sheet and finished the vocals for all three in two sessions.",
+  "context": "It closes side two, and Epic never released it as a single, so of Temperton's three songs it is the one that never charted. Putting the word disco in a title, on an album that came out a month after Disco Demolition Night, was a statement, and Getintothis hears it as Jackson signing off on the genre on his way into the 1980s.",
+  "listen_for": [
+   {
+    "where": "the backing vocals",
+    "note": "Every voice behind the lead is Jackson too; the credits give him background vocals here, which they don't on \"Off the Wall\"."
+   },
+   {
+    "where": "the bass, under the whole track",
+    "note": "Louis Johnson again, the same player as on the title track, so side two opens and closes on his bass."
+   }
+  ],
+  "leads_to": {
+   "artist": "Rufus & Chaka Khan",
+   "title": "Live in Me",
+   "year": 1979,
+   "why": "Jones made Masterjam the same year with Swedien mixing and Jerry Hey's horns, and Temperton wrote this and the title track, so you can hear him writing for another Jones client in the same months."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Off_the_Wall_(album)",
+   "https://www.sessiondays.com/2015/10/1979-michael-jackson-off-the-wall/",
+   "https://www.getintothis.co.uk/2016/10/michael-jackson-rod-temperton-rip",
+   "https://en.wikipedia.org/wiki/Masterjam",
+   "https://en.wikipedia.org/wiki/Disco_Demolition_Night"
+  ],
+  "unverified": "A review says this was the last song Temperton submitted for the album; I saw that only in a search excerpt, so it is left out. I found no live performances or samples to report."
+ },
+ "culture": [
+  {
+   "kind": "award",
+   "title": "The album's Hall of Fame",
+   "line": "Off the Wall, the album this closes, was inducted into the Grammy Hall of Fame in 2008.",
+   "wiki": "Off the Wall (album)",
+   "source": "https://en.wikipedia.org/wiki/Off_the_Wall_(album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-2)",
+  "written_on": "2026-10-20"
+ }
+}
