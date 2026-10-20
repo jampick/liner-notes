@@ -2,7 +2,8 @@
 
     1. Find the playlist: a short name from [keys] in config.toml, or a cliamp playlist name.
        With offline mode on, its "<Name> (offline)" twin when there is one.
-    2. If that playlist is already playing, leave the music alone and only bring the page back.
+    2. If that playlist is already loaded, leave the music alone (a paused one is resumed) and only
+       bring the page back. "Loaded" means cliamp's queue holds exactly this playlist's tracks.
     3. Otherwise load it into the running cliamp, or start cliamp with it, detached, on its own
        workspace without taking focus. Then shuffle off and play from the first song.
     4. Open the journey's page (the live stage when the playlist has no journey) in companion mode
@@ -113,6 +114,20 @@ class Cliamp:
     def load(self, playlist):
         return self.call("load", {"playlist": playlist})
 
+    def queue_paths(self):
+        """The paths in cliamp's live queue (queue.list, read-only), or None when it won't say."""
+        r = self.call("queue.list", {"limit": 10000}, timeout=10)
+        d = r.json() if r.ok else None
+        if not isinstance(d, dict):
+            return None
+        d = d.get("job", d)
+        d = d.get("result", d) if isinstance(d, dict) else None
+        tracks = d.get("tracks") if isinstance(d, dict) else None
+        return [t.get("path") for t in tracks if isinstance(t, dict)] if isinstance(tracks, list) else None
+
+    def resume(self):
+        return self.sys.run(["cliamp", "play"], timeout=5)
+
     def from_the_top(self):
         self.sys.run(["cliamp", "shuffle", "off"], timeout=5)
         if not self.call("queue.play", {"index": 0}).ok:
@@ -120,21 +135,29 @@ class Cliamp:
 
 
 def playlist_paths(f):
+    """Every track path in a playlist file, in order."""
     import tomllib
 
     try:
-        return {t.get("path") for t in tomllib.loads(f.read_text()).get("track") or [] if t.get("path")}
+        return [t.get("path") for t in tomllib.loads(f.read_text()).get("track") or [] if t.get("path")]
     except (OSError, tomllib.TOMLDecodeError):
-        return set()
+        return []
 
 
-def playing_from(status, f):
-    """True when cliamp is playing a track that's in this playlist file. cliamp's status doesn't name the
-    loaded playlist, so the playing track's path is the test."""
-    if not status or status.get("state") != "playing":
-        return False
+def is_loaded(player, status, f):
+    """True when cliamp's queue is this playlist. cliamp's status doesn't name the loaded playlist, so the
+    queue is compared with the file, track for track; if the queue can't be read, the current track decides."""
+    want = playlist_paths(f)
+    have = player.queue_paths()
+    if have is not None:
+        return bool(want) and sorted(have) == sorted(want)
     path = (status.get("track") or {}).get("path")
-    return bool(path) and path in playlist_paths(f)
+    return bool(path) and path in want
+
+
+def remember_playlist(name):
+    """The bridge reads this to know which journey the loaded playlist belongs to (/now.journey)."""
+    paths.atomic_write(paths.state() / "playlist", name + "\n")
 
 
 def terminal_argv(system, playlist):
@@ -183,9 +206,12 @@ def ensure_bridge(system, port, log):
     url = f"http://127.0.0.1:{port}/now"
     if system.http_ok(url):
         return True
+    started = False
     if unit_installed() and system.which("systemctl"):
-        system.run(["systemctl", "--user", "start", "liner-notes.service"], timeout=10)
-    else:
+        started = system.run(["systemctl", "--user", "start", "liner-notes.service"], timeout=10).ok
+        if not started:
+            log("liner-notes: systemctl --user start liner-notes failed; starting the bridge directly")
+    if not started:
         system.spawn([sys.executable, "-m", "liner_notes", "serve", "--port", str(port)])
     end = system.now() + 3
     while system.now() < end:
@@ -294,7 +320,7 @@ def open_page(system, page, cfg, port, log, quiet=True):
 
 
 def play(name, system=None, cfg=None, port=None, log=print, bank=None):
-    """Returns what happened: 'already playing', 'loaded' or 'started'."""
+    """Returns what happened: 'already playing', 'resumed', 'restarted', 'loaded' or 'started'."""
     from .. import config
     from . import System
 
@@ -307,9 +333,19 @@ def play(name, system=None, cfg=None, port=None, log=print, bank=None):
         ensure_live_page(log)
     player = Cliamp(system)
     status = player.status()
-    if status is not None and playing_from(status, f):
+    if status is not None and is_loaded(player, status, f):
+        remember_playlist(playlist)
+        state = status.get("state")
+        if state == "playing":
+            what = "already playing"
+        elif state == "paused":
+            player.resume()
+            what = "resumed"
+        else:
+            player.from_the_top()
+            what = "restarted"
         open_page(system, page, cfg, port, log)
-        return "already playing"
+        return what
     if status is not None:
         if not player.load(playlist).ok:
             raise Problem(f'cliamp wouldn\'t load "{playlist}"')
@@ -317,6 +353,7 @@ def play(name, system=None, cfg=None, port=None, log=print, bank=None):
     else:
         cold_start(system, playlist, cfg, log)
         what = "started"
+    remember_playlist(playlist)
     player.from_the_top()
     open_page(system, page, cfg, port, log)
     return what

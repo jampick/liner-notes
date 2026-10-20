@@ -21,9 +21,12 @@ TOML = '[[track]]\npath = "https://www.youtube.com/watch?v={a}"\ntitle = "One"\n
 class Fake(System):
     """cliamp, hyprctl, systemctl, chromium and the clock, all pretend. Every call is logged."""
 
-    def __init__(self, running=True, playing=None, clients=None, active="0xgame", bridge=True):
+    def __init__(self, running=True, playing=None, clients=None, active="0xgame", bridge=True, queue=None, state=None, systemctl_ok=True):
         self.env = {"HYPRLAND_INSTANCE_SIGNATURE": "sig", "XDG_RUNTIME_DIR": "/run/user/1000", "PATH": "/usr/bin"}
         self.running, self.playing, self.bridge = running, playing, bridge
+        self.queue = queue if queue is not None else ([playing] if playing else [])
+        self.state = state or ("playing" if playing else "stopped")
+        self.systemctl_ok = systemctl_ok
         self.clients_ = list(clients or [])
         self.active_ = active
         self.calls, self.spawned, self.t = [], [], 0.0
@@ -32,6 +35,10 @@ class Fake(System):
 
     def cliamp_log(self):
         return [c[1:] for c in self.calls if c[0] == "cliamp"]
+
+    def ops(self):
+        """What changed playback: every cliamp call except the reads (status, queue.list)."""
+        return [c for c in self.cliamp_log() if c[0] != "status" and c[:3] != ["remote", "call", "queue.list"]]
 
     def dispatches(self):
         return [c[2] for c in self.calls if c[:2] == ["hyprctl", "dispatch"]]
@@ -43,10 +50,14 @@ class Fake(System):
             if not self.running:
                 return Result(1)
             if argv[1] == "status":
-                return Result(
-                    0, json.dumps({"ok": True, "state": "playing" if self.playing else "stopped", "track": {"path": self.playing or ""}})
-                )
+                return Result(0, json.dumps({"ok": True, "state": self.state, "track": {"path": self.playing or ""}}))
+            if argv[1:4] == ["remote", "call", "queue.list"]:
+                if self.queue is False:
+                    return Result(1)
+                return Result(0, json.dumps({"job": {"state": "succeeded", "result": {"tracks": [{"path": q} for q in self.queue]}}}))
             return Result(0, "{}")
+        if argv[0] == "systemctl":
+            return Result(0 if self.systemctl_ok else 1, "")
         if argv[0] == "hyprctl":
             if argv[1] == "clients":
                 return Result(0, json.dumps(self.clients_))
@@ -113,11 +124,12 @@ def test_key_loads_in_order_and_opens_page_silently(iso):
     bank = setup_lists(iso)
     f = Fake(playing="https://www.youtube.com/watch?v=ZZZZZZZZZZZ")
     assert P.play("trip", f, cfg(), 47421, log=lambda *a: None, bank=bank) == "loaded"
-    ops = f.cliamp_log()
-    assert ops[0] == ["status", "--json"]
-    assert ops[1] == ["remote", "call", "load", "--params", json.dumps({"playlist": "Test Trip"}), "--wait"]
-    assert ops[2] == ["shuffle", "off"]
-    assert ops[3] == ["remote", "call", "queue.play", "--params", json.dumps({"index": 0}), "--wait"]
+    assert f.cliamp_log()[0] == ["status", "--json"]
+    ops = f.ops()
+    assert ops[0] == ["remote", "call", "load", "--params", json.dumps({"playlist": "Test Trip"}), "--wait"]
+    assert ops[1] == ["shuffle", "off"]
+    assert ops[2] == ["remote", "call", "queue.play", "--params", json.dumps({"index": 0}), "--wait"]
+    assert (iso["state"] / "playlist").read_text() == "Test Trip\n"
     d = f.dispatches()
     ex = next(x for x in d if x.startswith("hl.dsp.exec_cmd("))
     assert 'workspace = "2 silent", fullscreen = true' in ex
@@ -127,12 +139,40 @@ def test_key_loads_in_order_and_opens_page_silently(iso):
     assert not any(s[0] == "omarchy-launch-tui" for s in f.spawned)
 
 
+TRIP = ["https://www.youtube.com/watch?v=AAAAAAAAAAA", "https://www.youtube.com/watch?v=BBBBBBBBBBB"]
+
+
 def test_same_playlist_playing_leaves_music_alone(iso):
     bank = setup_lists(iso)
-    f = Fake(playing="https://www.youtube.com/watch?v=BBBBBBBBBBB")
+    f = Fake(playing=TRIP[1], queue=list(TRIP))
     assert P.play("trip", f, cfg(), 47421, log=lambda *a: None, bank=bank) == "already playing"
-    assert f.cliamp_log() == [["status", "--json"]]
+    assert f.ops() == []
     assert any(x.startswith("hl.dsp.exec_cmd(") for x in f.dispatches())  # the page comes back
+    assert (iso["state"] / "playlist").read_text() == "Test Trip\n"
+
+
+def test_same_playlist_paused_is_resumed(iso):
+    bank = setup_lists(iso)
+    f = Fake(playing=TRIP[0], queue=list(TRIP), state="paused")
+    assert P.play("trip", f, cfg(), 47421, log=lambda *a: None, bank=bank) == "resumed"
+    assert f.ops() == [["play"]]
+    assert any(x.startswith("hl.dsp.exec_cmd(") for x in f.dispatches())
+
+
+def test_shared_upload_from_another_playlist_still_loads(iso):
+    """The playing track is in this playlist too, but the queue is another playlist: load this one."""
+    bank = setup_lists(iso)
+    f = Fake(playing=TRIP[1], queue=[TRIP[1], "https://www.youtube.com/watch?v=EEEEEEEEEEE"])
+    assert P.play("trip", f, cfg(), 47421, log=lambda *a: None, bank=bank) == "loaded"
+    assert f.ops()[0][2] == "load"
+
+
+def test_queue_unreadable_falls_back_to_the_playing_track(iso):
+    bank = setup_lists(iso)
+    f = Fake(playing=TRIP[1], queue=False)
+    assert P.play("trip", f, cfg(), 47421, log=lambda *a: None, bank=bank) == "already playing"
+    g = Fake(playing="https://www.youtube.com/watch?v=ZZZZZZZZZZZ", queue=False)
+    assert P.play("trip", g, cfg(), 47421, log=lambda *a: None, bank=bank) == "loaded"
 
 
 def test_our_page_already_open_is_left_alone(iso):
@@ -174,7 +214,8 @@ def test_offline_twin(iso):
     assert P.is_offline() and (iso["state"] / "offline").exists()
     f = Fake(playing="https://www.youtube.com/watch?v=ZZZZZZZZZZZ")
     P.play("trip", f, cfg(), 47421, log=lambda *a: None, bank=bank)
-    assert f.cliamp_log()[1][4] == json.dumps({"playlist": "Test Trip (offline)"})
+    assert f.ops()[0][4] == json.dumps({"playlist": "Test Trip (offline)"})
+    assert (iso["state"] / "playlist").read_text() == "Test Trip (offline)\n"
     assert "/p/test-trip.html" in next(x for x in f.dispatches() if x.startswith("hl.dsp.exec_cmd("))
     # A playlist without a twin plays as it is.
     assert P.resolve("none", cfg())[0] == "No Notes"
@@ -234,8 +275,7 @@ def test_cold_start_is_detached_and_fast(iso, tmp_path):
             "Test Trip",
         ]
         assert os.getpgid(f.term) == f.term  # its own session and process group
-        ops = [o for o in f.cliamp_log() if o[0] != "status"]
-        assert ops == [["shuffle", "off"], ["remote", "call", "queue.play", "--params", '{"index": 0}', "--wait"]]
+        assert f.ops() == [["shuffle", "off"], ["remote", "call", "queue.play", "--params", '{"index": 0}', "--wait"]]
         assert f.dispatches()[-1] == 'hl.dsp.focus({ window = "address:0xgame" })'
     finally:
         os.kill(f.term, signal.SIGKILL)
@@ -258,6 +298,10 @@ def test_bridge_started_by_service_or_detached(iso):
     g = Fake(bridge=False)
     P.ensure_bridge(g, 47421, log=lambda *a: None)
     assert ["systemctl", "--user", "start", "liner-notes.service"] in g.calls and not g.spawned
+    h = Fake(bridge=False, systemctl_ok=False)
+    P.ensure_bridge(h, 47421, log=lambda *a: None)
+    assert ["systemctl", "--user", "start", "liner-notes.service"] in h.calls
+    assert h.spawned and h.spawned[0][-4:] == ["liner_notes", "serve", "--port", "47421"]
 
 
 def unlua(s):
@@ -343,3 +387,32 @@ def test_config_keys_and_overrides(iso):
     c = config.load()
     assert c["keys"]["mine"] == "My List" and c["keys"]["drift"] == "Downtempo Drift"
     assert c["stage"]["cliamp_workspace"] == 8 and c["stage"]["workspace"] == 2
+
+
+LUA_CASES = [
+    "plain",
+    'a "quoted" name',
+    "back\\slash",
+    "new\nline",
+    "tab\there\x01",
+    "\x019 digit after",
+    "it's /p/x.html#companion",
+    "]] [[ ]==]",
+    "üñí 日本",
+    "\x7f",
+    "a\rb",
+    "end\\",
+]
+
+
+@pytest.mark.parametrize("lua", ["lua5.4", "lua", "luajit"])
+def test_lua_strings_in_real_lua(lua):
+    """What Hyprland's Lua reads back is exactly the text we meant."""
+    import shutil
+    import subprocess
+
+    if not shutil.which(lua):
+        pytest.skip(f"{lua} isn't installed")
+    for text in LUA_CASES:
+        r = subprocess.run([lua, "-e", f"io.write({lua_str(text)})"], capture_output=True, timeout=5)
+        assert r.returncode == 0 and r.stdout == text.encode(), (lua, text, r.stdout, r.stderr)
