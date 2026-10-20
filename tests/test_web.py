@@ -1,4 +1,5 @@
 """The page templates and the fake bridge the headless checks run against (tools/scenarios.js does the rest)."""
+
 import http.client
 import importlib.util
 import json
@@ -11,7 +12,7 @@ import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
 WEB = ROOT / "liner_notes/web"
-TEMPLATES = [WEB / "template.html", WEB / "remix_template.html"]
+TEMPLATES = [WEB / "template.html", WEB / "remix.html"]
 
 
 def load_fake():
@@ -57,7 +58,7 @@ def test_journey_template_keeps_its_build_placeholders():
 
 
 def test_remix_template_placeholder():
-    assert "/*DATA*/null" in (WEB / "remix_template.html").read_text()
+    assert "/*DATA*/null" in (WEB / "remix.html").read_text()
 
 
 def test_lyrics_off_is_not_remembered():
@@ -74,14 +75,24 @@ def test_reduced_motion_in_both_templates():
 
 def test_note_and_space_in_remix_byline():
     # "\266a " eats the space as part of the escape; the page must show "♪ Party Pupils".
-    css = (WEB / "remix_template.html").read_text()
+    css = (WEB / "remix.html").read_text()
     assert '"\\266a\\00a0"' in css
 
 
-@pytest.mark.parametrize("header,size,want", [
-    (None, 100, None), ("bytes=0-9", 100, (0, 9)), ("bytes=90-", 100, (90, 99)), ("bytes=-10", 100, (90, 99)),
-    ("bytes=0-500", 100, (0, 99)), ("bytes=-", 100, "bad"), ("bytes=100-", 100, "bad"), ("bytes=5-2", 100, "bad"), ("items=0-1", 100, "bad"),
-])
+@pytest.mark.parametrize(
+    "header,size,want",
+    [
+        (None, 100, None),
+        ("bytes=0-9", 100, (0, 9)),
+        ("bytes=90-", 100, (90, 99)),
+        ("bytes=-10", 100, (90, 99)),
+        ("bytes=0-500", 100, (0, 99)),
+        ("bytes=-", 100, "bad"),
+        ("bytes=100-", 100, "bad"),
+        ("bytes=5-2", 100, "bad"),
+        ("items=0-1", 100, "bad"),
+    ],
+)
 def test_range_parsing(header, size, want):
     assert fake.parse_range(header, size) == want
 
@@ -104,8 +115,14 @@ def served(tmp_path):
     (tmp_path / "video").mkdir()
     (tmp_path / "dist/demo.html").write_text('<head><meta name="liner-token" content=""></head>')
     (tmp_path / "video/abcdefghijk.mp4").write_bytes(bytes(range(256)) * 4)
-    (tmp_path / "state.json").write_text(json.dumps({"now": {"ok": True, "state": "playing", "title": "T", "yt": "abcdefghijk", "pos0": 1, "t0": time.time()},
-                                                     "lyrics": {"abcdefghijk": [{"t": 1, "text": "a line"}]}}))
+    (tmp_path / "state.json").write_text(
+        json.dumps(
+            {
+                "now": {"ok": True, "state": "playing", "title": "T", "yt": "abcdefghijk", "pos0": 1, "t0": time.time()},
+                "lyrics": {"abcdefghijk": [{"t": 1, "text": "a line"}]},
+            }
+        )
+    )
     srv, token = fake.make_server(tmp_path, 0, "tok")
     port = srv.server_address[1]
     threading.Thread(target=srv.serve_forever, daemon=True).start()

@@ -13,6 +13,7 @@ Two ways in, in order:
 MusicBrainz asks for at most one request a second and a meaningful User-Agent; we send
 "liner-notes/<version> ( https://github.com/jampick/liner-notes )" and never an email address.
 """
+
 import json
 import time
 import urllib.error

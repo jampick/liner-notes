@@ -20,6 +20,7 @@ carries on: that's how bridge death is played.
 Every request goes to <dir>/requests.log and every POST to <dir>/posts.log, one JSON object a line. The fixtures
 are made up (synthetic lyrics, pictures and video) apart from the journey text that ships in this repo.
 """
+
 import argparse
 import hmac
 import json
@@ -38,8 +39,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 VERSION = "fake"
-CSP = ("default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; "
-       "script-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:; frame-src 'none'; object-src 'none'; base-uri 'none'")
+CSP = (
+    "default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; "
+    "script-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:; frame-src 'none'; object-src 'none'; base-uri 'none'"
+)
 TOKEN_META = '<meta name="liner-token" content="">'
 
 
@@ -76,9 +79,17 @@ def now_payload(st, t=None):
     if n.get("duration"):
         pos = min(pos, float(n["duration"]))
     out = {k: n.get(k) for k in ("title", "artist", "album", "yt", "song", "journey", "playlist", "duration")}
-    out.update(ok=True, version=VERSION, source=n.get("source", "cliamp"), state=n.get("state", "playing"), position=round(pos, 3),
-               epoch=n.get("epoch", 0), moving=bool(playing and moving), latency=n.get("latency", 0.0),
-               can=["bands", "history", "lyrics", "play", "toggle", "next", "prev"])
+    out.update(
+        ok=True,
+        version=VERSION,
+        source=n.get("source", "cliamp"),
+        state=n.get("state", "playing"),
+        position=round(pos, 3),
+        epoch=n.get("epoch", 0),
+        moving=bool(playing and moving),
+        latency=n.get("latency", 0.0),
+        can=["bands", "history", "lyrics", "play", "toggle", "next", "prev"],
+    )
     return out
 
 
@@ -172,8 +183,14 @@ def make_handler(root, state, token, port, log_lock):
                 return self.video(root / "video" / f"{m.group(1)}.mp4")
             m = re.fullmatch(r"/p/([a-z0-9-]+)\.html", path)
             if m and (root / "dist" / f"{m.group(1)}.html").is_file():
-                page = (root / "dist" / f"{m.group(1)}.html").read_text().replace(TOKEN_META, f'<meta name="liner-token" content="{token}">', 1)
-                return self.send_bytes(page.encode(), "text/html; charset=utf-8", {"Content-Security-Policy": CSP, "Referrer-Policy": "no-referrer"})
+                page = (
+                    (root / "dist" / f"{m.group(1)}.html")
+                    .read_text()
+                    .replace(TOKEN_META, f'<meta name="liner-token" content="{token}">', 1)
+                )
+                return self.send_bytes(
+                    page.encode(), "text/html; charset=utf-8", {"Content-Security-Policy": CSP, "Referrer-Policy": "no-referrer"}
+                )
             m = re.fullmatch(r"/p/([a-z0-9-]+)\.stage\.json", path)
             if m and (root / "dist" / f"{m.group(1)}.stage.json").is_file():
                 return self.send_bytes((root / "dist" / f"{m.group(1)}.stage.json").read_bytes(), "application/json")
@@ -190,7 +207,12 @@ def make_handler(root, state, token, port, log_lock):
             if r == "bad":
                 return self.head(416, "video/mp4", {"Content-Range": f"bytes */{size}"}, 0)
             start, end = r or (0, size - 1)
-            self.head(206 if r else 200, "video/mp4", {"Accept-Ranges": "bytes", **({"Content-Range": f"bytes {start}-{end}/{size}"} if r else {})}, end - start + 1)
+            self.head(
+                206 if r else 200,
+                "video/mp4",
+                {"Accept-Ranges": "bytes", **({"Content-Range": f"bytes {start}-{end}/{size}"} if r else {})},
+                end - start + 1,
+            )
             if self.command == "HEAD":
                 return
             with open(f, "rb") as fh:
@@ -265,6 +287,7 @@ def make_server(root, port, token=None):
 
 # ---------- fixtures ----------
 
+
 def png(w, h, pixel):
     """A small PNG from a pixel function (x, y) -> (r, g, b), without any image library."""
     raw = b"".join(b"\x00" + b"".join(bytes(pixel(x, y)) for x in range(w)) for y in range(h))
@@ -272,7 +295,12 @@ def png(w, h, pixel):
     def chunk(kind, data):
         return struct.pack(">I", len(data)) + kind + data + struct.pack(">I", zlib.crc32(kind + data) & 0xFFFFFFFF)
 
-    return b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", w, h, 8, 2, 0, 0, 0)) + chunk(b"IDAT", zlib.compress(raw, 9)) + chunk(b"IEND", b"")
+    return (
+        b"\x89PNG\r\n\x1a\n"
+        + chunk(b"IHDR", struct.pack(">IIBBBBB", w, h, 8, 2, 0, 0, 0))
+        + chunk(b"IDAT", zlib.compress(raw, 9))
+        + chunk(b"IEND", b"")
+    )
 
 
 def picture(hue):
@@ -287,8 +315,30 @@ def video(path, secs):
     """A synthetic test-pattern video, for sync checks. Needs ffmpeg; the video checks are skipped without it."""
     if not shutil.which("ffmpeg"):
         return False
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "lavfi", "-i", f"testsrc=size=256x144:rate=10:duration={secs}",
-                    "-c:v", "libx264", "-preset", "ultrafast", "-pix_fmt", "yuv420p", "-g", "10", "-movflags", "+faststart", str(path)], check=True)
+    subprocess.run(
+        [
+            "ffmpeg",
+            "-loglevel",
+            "error",
+            "-y",
+            "-f",
+            "lavfi",
+            "-i",
+            f"testsrc=size=256x144:rate=10:duration={secs}",
+            "-c:v",
+            "libx264",
+            "-preset",
+            "ultrafast",
+            "-pix_fmt",
+            "yuv420p",
+            "-g",
+            "10",
+            "-movflags",
+            "+faststart",
+            str(path),
+        ],
+        check=True,
+    )
     return True
 
 
@@ -298,19 +348,35 @@ LIVE_DATA = {"slug": "live", "stops": [], "eras": [], "live": True}
 
 def remix_data(ids):
     """Two made-up remixes in the shape engine/remix_build.py writes: one sung in loops, one with a chop."""
+
     def song(i, rid, title, remixer):
         lines = [{"start": 10.0 + 8 * k, "text": f"{title} line {k + 1} goes like this"} for k in range(6)]
-        events = [{"line": 0, "text": lines[0]["text"], "orig": 10.0, "times": [8.0, 12.0, 16.0, 20.0], "end": 24.0, "chop": False},
-                  {"line": 2, "text": "goes like", "orig": 26.0, "times": [40.0, 44.0], "end": 48.0, "chop": True},
-                  {"line": 4, "text": lines[4]["text"], "orig": 42.0, "times": [70.0], "end": 76.0, "chop": False}]
-        return {"id": rid, "match": f"{remixer} - {title} (Remix)", "title": title, "artist": "Test Artist", "year": 1979 + i,
-                "remixer": remixer, "remixYear": 2020 + i, "volume": i + 1, "video": None,
-                "remix": {"length": 180.0, "bpm": 122.0, "energy": [0.3 + 0.4 * ((k * 7) % 5) / 5 for k in range(180)], "cover": None},
-                "original": {"length": 200.0, "bpm": 98.0, "energy": None, "lines": lines, "cover": None},
-                "events": events, "photo": None,
-                "notes": {"orig": [{"h": "How it was made", "p": "A made-up note about the original, long enough to read."}],
-                          "flip": [{"h": "About 98 to 122 BPM", "p": "The remix runs 1.24 times the original's tempo."}],
-                          "panel": [{"h": "The panel", "p": "A made-up verdict."}]}}
+        events = [
+            {"line": 0, "text": lines[0]["text"], "orig": 10.0, "times": [8.0, 12.0, 16.0, 20.0], "end": 24.0, "chop": False},
+            {"line": 2, "text": "goes like", "orig": 26.0, "times": [40.0, 44.0], "end": 48.0, "chop": True},
+            {"line": 4, "text": lines[4]["text"], "orig": 42.0, "times": [70.0], "end": 76.0, "chop": False},
+        ]
+        return {
+            "id": rid,
+            "match": f"{remixer} - {title} (Remix)",
+            "title": title,
+            "artist": "Test Artist",
+            "year": 1979 + i,
+            "remixer": remixer,
+            "remixYear": 2020 + i,
+            "volume": i + 1,
+            "video": None,
+            "remix": {"length": 180.0, "bpm": 122.0, "energy": [0.3 + 0.4 * ((k * 7) % 5) / 5 for k in range(180)], "cover": None},
+            "original": {"length": 200.0, "bpm": 98.0, "energy": None, "lines": lines, "cover": None},
+            "events": events,
+            "photo": None,
+            "notes": {
+                "orig": [{"h": "How it was made", "p": "A made-up note about the original, long enough to read."}],
+                "flip": [{"h": "About 98 to 122 BPM", "p": "The remix runs 1.24 times the original's tempo."}],
+                "panel": [{"h": "The panel", "p": "A made-up verdict."}],
+            },
+        }
+
     return [song(0, ids[0], "First Song", "Party Pupils"), song(1, ids[1], "Second Song", "Somebody Else")]
 
 
@@ -330,14 +396,23 @@ def fixtures(out):
     other = dict(data, slug="drift-b", title="Drift B", titleA="Drift", titleB="B")
     (out / "dist" / "drift-b.html").write_text(build.render(other, dict(meta, title="Drift B")))
     live = dict(LIVE_DATA, provenance=build.provenance([]))
-    (out / "dist" / "live.html").write_text(build.render(live, {"title": "Liner Notes", "description": "What cliamp is playing", "fonts": ""}))
+    (out / "dist" / "live.html").write_text(
+        build.render(live, {"title": "Liner Notes", "description": "What cliamp is playing", "fonts": ""})
+    )
 
     stops = data["stops"]
     intro = next(s for s in stops if any(re.search(r"open|first|intro|start|from the", x["where"], re.I) for x in s["listen"]))
     artist_stop, culture_stop = stops[5], stops[6]
-    stage = {"tracks": {s["yt"]: {"embed": True, "motion": True} for s in stops[:4] if s["yt"]},
-             "years": {}, "songs": {culture_stop["title"]: [{"kind": "film", "title": "A Made-up Film", "line": "Opened that year. This is test text.", "img": "culture/made_up.png"}]},
-             "artists": {artist_stop["artist"]: "artists/test_artist.png"}}
+    stage = {
+        "tracks": {s["yt"]: {"embed": True, "motion": True} for s in stops[:4] if s["yt"]},
+        "years": {},
+        "songs": {
+            culture_stop["title"]: [
+                {"kind": "film", "title": "A Made-up Film", "line": "Opened that year. This is test text.", "img": "culture/made_up.png"}
+            ]
+        },
+        "artists": {artist_stop["artist"]: "artists/test_artist.png"},
+    }
     for s in stops[4:8]:
         stage["tracks"][s["yt"]] = {"embed": True, "motion": False}
     (out / "dist" / f"{slug}.stage.json").write_text(json.dumps(stage))
@@ -355,15 +430,31 @@ def fixtures(out):
             shutil.copy(out / "video" / f"{vids[0]}.mp4", out / "video" / f"{v}.mp4")
 
     remix_ids = ["rmxAAAAAAA1", "rmxBBBBBBB2"]
-    tpl = (ROOT / "liner_notes/web/remix_template.html").read_text()
+    tpl = (ROOT / "liner_notes/web/remix.html").read_text()
     (out / "dist" / "remix-test.html").write_text(tpl.replace("/*DATA*/null", json.dumps(remix_data(remix_ids)).replace("</", "<\\/"), 1))
 
     def pick(s):
         return {k: s[k] for k in ("id", "n", "yt", "title", "artist", "year", "era", "album")}
 
-    manifest = {"slug": slug, "stops": [pick(s) for s in stops], "intro": pick(intro), "artist_stop": pick(artist_stop), "culture_stop": pick(culture_stop),
-                "still_stops": [pick(s) for s in stops[4:8]], "video_stops": [pick(s) for s in stops[:4]], "videos": have_video, "remix": remix_ids,
-                "offsong": {"song": "offsong-1", "yt": "offTrack001", "title": "A Song With No Journey", "artist": "Somebody Else", "album": "Some Album", "playlist": "Soul Rap Covers"}}
+    manifest = {
+        "slug": slug,
+        "stops": [pick(s) for s in stops],
+        "intro": pick(intro),
+        "artist_stop": pick(artist_stop),
+        "culture_stop": pick(culture_stop),
+        "still_stops": [pick(s) for s in stops[4:8]],
+        "video_stops": [pick(s) for s in stops[:4]],
+        "videos": have_video,
+        "remix": remix_ids,
+        "offsong": {
+            "song": "offsong-1",
+            "yt": "offTrack001",
+            "title": "A Song With No Journey",
+            "artist": "Somebody Else",
+            "album": "Some Album",
+            "playlist": "Soul Rap Covers",
+        },
+    }
     (out / "fixtures.json").write_text(json.dumps(manifest, indent=1))
     shutil.rmtree(empty_cache, ignore_errors=True)
     print(f"fixtures in {out}: {len(stops)} stops, video {'yes' if have_video else 'no (no ffmpeg)'}")

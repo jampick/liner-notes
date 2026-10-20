@@ -135,7 +135,25 @@ MEDIA_EXT = {
     ".lrc",
 }
 IMAGE_EXT = {".webp", ".jpg", ".jpeg", ".png", ".gif", ".avif", ".bmp", ".tif", ".tiff", ".heic", ".ico"}
-TEXT_EXT = {".html", ".htm", ".json", ".js", ".mjs", ".md", ".css", ".txt", ".py", ".toml", ".yml", ".yaml", ".csv", ".tsv", ".svg", ".service", ""}
+TEXT_EXT = {
+    ".html",
+    ".htm",
+    ".json",
+    ".js",
+    ".mjs",
+    ".md",
+    ".css",
+    ".txt",
+    ".py",
+    ".toml",
+    ".yml",
+    ".yaml",
+    ".csv",
+    ".tsv",
+    ".svg",
+    ".service",
+    "",
+}
 ERA_IMAGE = re.compile(r"journeys/[a-z0-9-]+/media/eras/era\d+\.webp")
 RASTER_URI = re.compile(r"data:image/(?:jpe?g|png|gif|avif|bmp)\b", re.I)
 WEBP_URI = re.compile(r"data:image/(?:webp)\b", re.I)

@@ -1,4 +1,5 @@
 """The song bank, the year culture bank and the journeys, read from every data root."""
+
 import json
 from pathlib import Path
 
