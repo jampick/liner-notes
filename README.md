@@ -28,11 +28,11 @@ liner-notes service install     # the bridge as a systemd user service, restarte
 liner-notes play drift          # or a playlist name: liner-notes play "Downtempo Drift"
 ```
 
-This is what my Stream Deck keys run. It loads the playlist into cliamp (or starts cliamp with it), turns shuffle off and plays from the first song, then opens the journey's page in companion mode. On Hyprland the page goes full screen onto the workspace it was on last time (2 the first time) without taking focus, so a game on another workspace keeps it. A cold-started cliamp goes to workspace 3, also without taking focus. Pressing the key of the playlist that's already playing leaves the music alone and only brings the page back. A playlist with no journey gets the live stage: title, artist, the cover if the cache has it, lyrics and the night so far.
+This is what my Stream Deck keys run. It loads the playlist into cliamp (or starts cliamp with it), turns shuffle off and plays from the first song, then opens the journey's page in companion mode. On Hyprland the page goes full screen onto the workspace it was on last time (2 the first time) without taking focus, so a game on another workspace keeps it. A cold-started cliamp goes to workspace 3, also without taking focus. Pressing the key of the playlist that's already loaded leaves the music alone (a paused one picks up where it was) and only brings the page back. A playlist with no journey gets the live stage: title, artist, the cover if the cache has it, lyrics and the night so far.
 
 If cliamp doesn't have a journey's playlist yet, `liner-notes add downtempo-drift` writes it into cliamp's playlists folder, in the order the page numbers the songs.
 
-To bind a key, point it at `liner-notes play <name>`. The short names live in `~/.config/liner-notes/config.toml`:
+To bind a key, point it at `liner-notes play <name>`. A full playlist name always works. Short names are yours to set in `~/.config/liner-notes/config.toml` (none ship by default; `liner_notes/data/config.example.toml` has the whole file):
 
 ```toml
 [keys]

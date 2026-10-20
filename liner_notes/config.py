@@ -7,7 +7,8 @@
     workspace = 2            where the page opens the first time (then it remembers where you moved it)
     cliamp_workspace = 3     where a cold-started cliamp goes, silently
 
-Anything missing falls back to the defaults below, so an empty or absent file is fine.
+Anything missing falls back to the defaults below, so an empty or absent file is fine. There are no
+default keys: a playlist's full name always works, and liner_notes/data/config.example.toml shows the rest.
 """
 
 import tomllib
@@ -16,16 +17,9 @@ from . import paths
 
 PORT = 47391  # the bridge, on loopback
 
-KEYS = {
-    "sophisti": "Sophisti-Pop",
-    "soulrap": "Soul Rap Covers",
-    "yacht": "Yacht Rock",
-    "drift": "Downtempo Drift",
-    "temperton": "Rod Temperton",
-    "yachthouse": "Yacht House",
-}
+EXAMPLE = paths.PACKAGE / "data" / "config.example.toml"
 DEFAULTS = {
-    "keys": KEYS,
+    "keys": {},  # your own playlists, in your config.toml; liner_notes/data/config.example.toml shows the shape
     "stage": {"workspace": 2, "cliamp_workspace": 3, "browser": ""},
     "depth": {"model": "~/.local/state/omarchy/astro-arc/motion/depth-anything-v2-small.onnx"},
 }

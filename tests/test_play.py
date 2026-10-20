@@ -382,10 +382,13 @@ def test_shipped_unit_template_if_present():
 
 
 def test_config_keys_and_overrides(iso):
-    assert config.load()["keys"]["yachthouse"] == "Yacht House"
+    import tomllib
+
+    assert config.load()["keys"] == {}  # nobody's playlists ship as defaults
+    assert tomllib.loads(config.EXAMPLE.read_text())["keys"]["drift"] == "Downtempo Drift"
     (iso["home"].parent / "config.toml").write_text('[keys]\nmine = "My List"\n[stage]\ncliamp_workspace = 8\n')
     c = config.load()
-    assert c["keys"]["mine"] == "My List" and c["keys"]["drift"] == "Downtempo Drift"
+    assert c["keys"] == {"mine": "My List"}
     assert c["stage"]["cliamp_workspace"] == 8 and c["stage"]["workspace"] == 2
 
 

@@ -1,0 +1,18 @@
+# ~/.config/liner-notes/config.toml
+# Everything here is optional. Copy what you need.
+
+# Short names for `liner-notes play <name>`, for keys and Stream Deck buttons.
+# A full playlist name works without any of this: liner-notes play "Downtempo Drift"
+[keys]
+drift = "Downtempo Drift"
+sophisti = "Sophisti-Pop"
+yacht = "Yacht Rock"
+
+[stage]
+workspace = 2          # Hyprland: where the page opens the first time; after that, where you last moved it
+cliamp_workspace = 3   # Hyprland: where a cold-started cliamp goes, without taking focus
+browser = ""           # a Chromium-family browser to use; empty means the first one found
+
+[depth]
+# The Depth Anything V2 Small ONNX model, for `liner-notes depth` (the [depth] extra).
+model = "~/.local/state/omarchy/astro-arc/motion/depth-anything-v2-small.onnx"
