@@ -9,6 +9,7 @@ Contract: `media-control stream` prints one JSON object per line, {"type": "data
 title, artist, album, duration, elapsedTime, timestamp (ISO 8601, when elapsedTime was true),
 playing, bundleIdentifier.
 """
+
 import datetime as dt
 import json
 import shutil
@@ -37,10 +38,17 @@ def parse(state, line):
     if not state.get("title"):
         return None
     ids = {"app": state["bundleIdentifier"]} if state.get("bundleIdentifier") else {}
-    return NowPlaying(title=state["title"], artist=state.get("artist") or "", album=state.get("album") or "",
-                      duration=float(state.get("duration") or 0), position=float(state.get("elapsedTime") or 0),
-                      position_at=_ts(state.get("timestamp")), state="playing" if state.get("playing") else "paused",
-                      source="macos", ids=ids)
+    return NowPlaying(
+        title=state["title"],
+        artist=state.get("artist") or "",
+        album=state.get("album") or "",
+        duration=float(state.get("duration") or 0),
+        position=float(state.get("elapsedTime") or 0),
+        position_at=_ts(state.get("timestamp")),
+        state="playing" if state.get("playing") else "paused",
+        source="macos",
+        ids=ids,
+    )
 
 
 class MacAdapter(Adapter):

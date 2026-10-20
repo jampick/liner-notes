@@ -9,7 +9,12 @@ SONGS = {
         {"id": "air--la-femme-dargent", "title": "La Femme d'Argent", "artist": "Air", "aliases": {}},
         {"id": "khruangbin-leon-bridges--texas-sun", "title": "Texas Sun", "artist": "Khruangbin & Leon Bridges", "aliases": {}},
         {"id": "roisin-murphy--x", "title": "Sing It Back", "artist": "Moloko", "aliases": {"spotify": ["4uLU6hMCjMI75M1A2tKUQC"]}},
-        {"id": "the-blue-nile--tinseltown-in-the-rain", "title": "Tinseltown in the Rain", "artist": "The Blue Nile", "aliases": {"local": ["/music/blue nile/02.flac"]}},
+        {
+            "id": "the-blue-nile--tinseltown-in-the-rain",
+            "title": "Tinseltown in the Rain",
+            "artist": "The Blue Nile",
+            "aliases": {"local": ["/music/blue nile/02.flac"]},
+        },
         {"id": "christopher-cross--sailing", "title": "Sailing", "artist": "Christopher Cross", "aliases": {}},
         {"id": "roxy-music--more-than-this", "title": "More Than This", "artist": "Roxy Music", "aliases": {}},
     ]
@@ -42,8 +47,12 @@ def test_clean_title():
 
 
 def test_alias_beats_title():
-    assert M.match({"title": "whatever", "artist": "x", "path": "https://www.youtube.com/watch?v=0Rw-UsRPNqc"}) == "massive-attack--protection"
-    assert M.match({"title": "?", "path": "spotify:track:1", "provider_meta": {"spotify_id": "4uLU6hMCjMI75M1A2tKUQC"}}) == "roisin-murphy--x"
+    assert (
+        M.match({"title": "whatever", "artist": "x", "path": "https://www.youtube.com/watch?v=0Rw-UsRPNqc"}) == "massive-attack--protection"
+    )
+    assert (
+        M.match({"title": "?", "path": "spotify:track:1", "provider_meta": {"spotify_id": "4uLU6hMCjMI75M1A2tKUQC"}}) == "roisin-murphy--x"
+    )
     assert M.match({"title": "02", "path": "/music/blue nile/02.flac"}) == "the-blue-nile--tinseltown-in-the-rain"
 
 

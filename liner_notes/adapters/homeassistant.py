@@ -14,6 +14,7 @@ media_album_name, media_duration, media_position, media_position_updated_at, med
 
 Status: the parser is tested; the small stdlib WebSocket client below hasn't met a live HA yet.
 """
+
 import base64
 import datetime as dt
 import json
@@ -57,9 +58,17 @@ def to_now(st):
     cid = str(a.get("media_content_id") or "")
     if cid.startswith("spotify:track:"):
         ids["spotify_id"] = cid.rsplit(":", 1)[1]
-    return NowPlaying(title=a["media_title"], artist=a.get("media_artist") or "", album=a.get("media_album_name") or "",
-                      duration=float(a.get("media_duration") or 0), position=float(a.get("media_position") or 0), position_at=at,
-                      state={"playing": "playing", "paused": "paused"}.get(st.get("s"), "stopped"), source="homeassistant", ids=ids)
+    return NowPlaying(
+        title=a["media_title"],
+        artist=a.get("media_artist") or "",
+        album=a.get("media_album_name") or "",
+        duration=float(a.get("media_duration") or 0),
+        position=float(a.get("media_position") or 0),
+        position_at=at,
+        state={"playing": "playing", "paused": "paused"}.get(st.get("s"), "stopped"),
+        source="homeassistant",
+        ids=ids,
+    )
 
 
 class _WS:
@@ -71,8 +80,12 @@ class _WS:
         raw = socket.create_connection((u.hostname, port), timeout=timeout)
         self.s = ssl.create_default_context().wrap_socket(raw, server_hostname=u.hostname) if u.scheme in ("https", "wss") else raw
         key = base64.b64encode(os.urandom(16)).decode()
-        self.s.sendall((f"GET /api/websocket HTTP/1.1\r\nHost: {u.hostname}:{port}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\n"
-                        f"Sec-WebSocket-Key: {key}\r\nSec-WebSocket-Version: 13\r\n\r\n").encode())
+        self.s.sendall(
+            (
+                f"GET /api/websocket HTTP/1.1\r\nHost: {u.hostname}:{port}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\n"
+                f"Sec-WebSocket-Key: {key}\r\nSec-WebSocket-Version: 13\r\n\r\n"
+            ).encode()
+        )
         head = b""
         while b"\r\n\r\n" not in head:
             chunk = self.s.recv(1024)
@@ -96,7 +109,13 @@ class _WS:
         data = json.dumps(obj).encode()
         mask = os.urandom(4)
         n = len(data)
-        head = bytes([0x81]) + (bytes([0x80 | n]) if n < 126 else bytes([0x80 | 126]) + struct.pack(">H", n) if n < 65536 else bytes([0x80 | 127]) + struct.pack(">Q", n))
+        head = bytes([0x81]) + (
+            bytes([0x80 | n])
+            if n < 126
+            else bytes([0x80 | 126]) + struct.pack(">H", n)
+            if n < 65536
+            else bytes([0x80 | 127]) + struct.pack(">Q", n)
+        )
         self.s.sendall(head + mask + bytes(b ^ mask[i % 4] for i, b in enumerate(data)))
 
     def recv(self):

@@ -7,6 +7,7 @@ means "read it again".
 Which player: LINER_NOTES_MPRIS (a bus name suffix such as "spotify"), else the one that is
 playing, preferring a dedicated player over a browser.
 """
+
 import os
 import select
 import shutil
@@ -67,13 +68,21 @@ def parse_metadata(meta, status="Playing", position_us=0, bus=""):
     elif url.startswith("https://open.spotify.com/track/"):
         ids["spotify_id"] = url.rsplit("/", 1)[1].split("?")[0]
     if bus:
-        ids["mpris_player"] = bus[len(PREFIX):]
+        ids["mpris_player"] = bus[len(PREFIX) :]
     title = v("xesam:title") or ""
     if not title:
         return None
-    return NowPlaying(title=title, artist=", ".join(artist) if isinstance(artist, list) else str(artist), album=v("xesam:album") or "",
-                      duration=(v("mpris:length") or 0) / 1e6, position=(position_us or 0) / 1e6, position_at=time.time(),
-                      state={"Playing": "playing", "Paused": "paused"}.get(status, "stopped"), source="mpris", ids=ids)
+    return NowPlaying(
+        title=title,
+        artist=", ".join(artist) if isinstance(artist, list) else str(artist),
+        album=v("xesam:album") or "",
+        duration=(v("mpris:length") or 0) / 1e6,
+        position=(position_us or 0) / 1e6,
+        position_at=time.time(),
+        state={"Playing": "playing", "Paused": "paused"}.get(status, "stopped"),
+        source="mpris",
+        ids=ids,
+    )
 
 
 class MprisAdapter(Adapter):
@@ -94,7 +103,7 @@ class MprisAdapter(Adapter):
     def _choose(self):
         names = players()
         if self.want:
-            names = [n for n in names if n[len(PREFIX):].startswith(self.want)]
+            names = [n for n in names if n[len(PREFIX) :].startswith(self.want)]
         if not names:
             return None
         if self.bus in names and len(names) == 1:
@@ -111,14 +120,22 @@ class MprisAdapter(Adapter):
         bus = self._choose()
         if not bus:
             return None
-        return parse_metadata(self._get(bus, "Metadata"), (self._get(bus, "PlaybackStatus") or {}).get("data", "Stopped"),
-                              (self._get(bus, "Position") or {}).get("data", 0), bus)
+        return parse_metadata(
+            self._get(bus, "Metadata"),
+            (self._get(bus, "PlaybackStatus") or {}).get("data", "Stopped"),
+            (self._get(bus, "Position") or {}).get("data", 0),
+            bus,
+        )
 
     def watch(self, interval=5.0):
         """Re-read on any PropertiesChanged or Seeked from an MPRIS object, and every few seconds anyway."""
         try:
-            mon = subprocess.Popen(["busctl", "--user", "--json=short", "monitor", f"--match=type='signal',path='{OBJ}'"],
-                                   stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True)
+            mon = subprocess.Popen(
+                ["busctl", "--user", "--json=short", "monitor", f"--match=type='signal',path='{OBJ}'"],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.DEVNULL,
+                text=True,
+            )
         except OSError:
             yield from super().watch(interval)
             return
