@@ -19,6 +19,7 @@ the bridge is serving is never half a file.
 import base64
 import html as htmllib
 import json
+import re
 from pathlib import Path
 
 from . import paths
@@ -250,24 +251,29 @@ def head_tags(data, meta):
     )
 
 
-def render(data, meta, template=None):
+FONTS_LINK = re.compile(r"<link\b[^>]*__FONTS__[^>]*>[ \t]*\n?")
+
+
+def render(data, meta, template=None, public=False):
+    """The page: placeholders filled in one pass, so text in one can never be read as another.
+
+    Web fonts are linked only in a --public page, which is opened as a file. A page the bridge serves
+    can't load them (its CSP allows fonts from itself only), so it gets no link at all."""
     html = Path(template or TEMPLATE).read_text()
     if DATA_MARK not in html:
         raise Refused(f"{template or TEMPLATE} has no {DATA_MARK} placeholder")
-    html = html.replace("<title>", head_tags(data, meta) + "<title>", 1)
-    title = htmllib.escape(meta["title"] + " · Liner Notes")
-    # Every placeholder is replaced in one pass, so text in the data can never be read as another placeholder.
+    fonts = meta.get("fonts") or ""
+    if not (public and fonts):
+        html = FONTS_LINK.sub("", html)
     parts = {
-        "__TITLE__": title,
+        "__TITLE__": htmllib.escape(meta["title"] + " · Liner Notes"),
         "__DESCRIPTION__": htmllib.escape(meta["description"]),
-        "__FONTS__": htmllib.escape(meta.get("fonts") or ""),
+        "__FONTS__": htmllib.escape(fonts),
         DATA_MARK: script_json(data, separators=(",", ":")),
     }
-    head, sep, tail = html.partition(DATA_MARK)
-    for k, v in parts.items():
-        if k != DATA_MARK:
-            head, tail = head.replace(k, v), tail.replace(k, v)
-    return head + parts[DATA_MARK] + tail
+    html = re.sub("|".join(re.escape(k) for k in parts), lambda m: parts[m.group(0)], html)
+    # The head tags go in last, before the template's own <title> (the first one: titles in the data are escaped).
+    return html.replace("<title>", head_tags(data, meta) + "<title>", 1)
 
 
 def write_page(out, html, problems, force, log):
@@ -292,7 +298,7 @@ def build(slug, out=None, public=False, bank=None, cache=None, video=False, forc
         return remix.build(slug, out=out, public=public, bank=bank, cache=cache, force=force, log=log)
     warnings = []
     data, problems, meta = compose(slug, bank, public, cache, video, warnings)
-    html = render(data, meta, template)
+    html = render(data, meta, template, public=public)
     out = Path(out) if out else paths.dist() / (f"{slug}.public.html" if public else f"{slug}.html")
     write_page(out, html, problems, force, log)
     stops = data["stops"]

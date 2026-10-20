@@ -188,3 +188,26 @@ def test_media_never_asks_youtube(iso, monkeypatch):
     out = media.stage("test-trip", bank=Bank([iso["home"]]), cache=iso["cache"], log=lambda *a: None)
     assert out == iso["cache"] / "stage/test-trip.stage.json" and out.is_file()
     assert asked and not any("youtube" in u or "ytimg" in u or "googlevideo" in u for u in asked)
+
+
+def test_placeholders_in_one_pass(iso, tpl):
+    root = iso["home"]
+    jdir = make_bank(root)
+    j = read_json(jdir / "journey.json")
+    j["title"] = "Mix __DESCRIPTION__ and __FONTS__ and /*__DATA__*/null"
+    write_json(jdir / "journey.json", j)
+    out, _ = B.build("test-trip", bank=Bank([root]), template=tpl, log=lambda *a: None)
+    html = out.read_text()
+    assert "<title>Mix __DESCRIPTION__ and __FONTS__ and /*__DATA__*/null · Liner Notes</title>" in html
+    assert blob(html)["title"] == j["title"]
+
+
+def test_fonts_only_in_public_pages(iso, tpl):
+    make_bank(iso["home"])
+    bank = Bank([iso["home"]])
+    personal, _ = B.build("test-trip", bank=bank, template=tpl, log=lambda *a: None)
+    assert "stylesheet" not in personal.read_text() and "fonts.googleapis" not in personal.read_text()
+    public, _ = B.build("test-trip", public=True, bank=bank, template=tpl, log=lambda *a: None)
+    assert '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral">' in public.read_text()
+    live = B.build_live(template=tpl, log=lambda *a: None).read_text()
+    assert 'href=""' not in live and "stylesheet" not in live
