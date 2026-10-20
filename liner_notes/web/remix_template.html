@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remix stage</title>
+<link rel="icon" href="data:,">
+<!-- The bridge puts its per-start token here when it serves the page; POSTs to the bridge carry it. -->
+<meta name="liner-token" content="">
+<style>
+/* The stage for a playlist of remixes (the remix build). Same tiled-pane language as the journey stage in
+   template.html: mono for what's live, the serif for the writing. It follows cliamp through the bridge and adds
+   the flip map, a lyrics pane that knows about loops and chops, and notes in three voices (the flip, the
+   original, the panel). It's read from across the room: nothing that carries information is under 18px or
+   under 4.5:1 against the background. */
+:root { --svbg: 9,5,3; --ink: #e3c2ad; --mid: #b39a8b; --faint: #968078; --amber: #b16237; --pane: #585b70;
+  --green: #a6e3a1; --yellow: #f9e2af; --red: #f38ba8; --rule: rgba(227,194,173,0.15);
+  --tmono: "JetBrainsMono Nerd Font", "JetBrains Mono", ui-monospace, monospace; --serif: "Spectral", "Noto Serif", "Liberation Serif", Georgia, serif; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: rgb(var(--svbg)); color: var(--ink); font-family: var(--tmono); overflow: hidden; }
+.grid { position: absolute; inset: 0; padding: 10px; display: grid; gap: 10px; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 0.8fr) minmax(0, 1.2fr) auto; grid-template-areas: "vis now" "vis lyr" "vis notes" "bot bot"; }
+.pane { position: relative; min-width: 0; min-height: 0; overflow: hidden; border: 2px solid var(--pane); background: rgba(var(--svbg), .72); transition: border-color .35s; }
+.pl { display: flex; align-items: center; gap: 1ch; font-size: 18px; color: var(--green); white-space: nowrap; }
+.pl .t { color: var(--faint); overflow: hidden; text-overflow: ellipsis; }
+.pl.rule::after { content: ""; flex: 1; min-width: 3ch; border-top: 1px solid currentColor; opacity: .4; }
+
+/* The picture: the original's video, re-timed to the remix, or the artist under the two covers. */
+.vis { grid-area: vis; display: grid; grid-template-rows: minmax(0, 1fr) auto; container-type: size; }
+.pic { position: relative; overflow: hidden; }
+.pic .photo { position: absolute; inset: -4%; width: 108%; height: 108%; object-fit: cover; object-position: 50% 18%; opacity: .42; filter: saturate(.75); animation: drift 60s ease-in-out infinite alternate; }
+.pic .photo:not([src]) { display: none; }
+@keyframes drift { from { transform: translate(-1.5%, -1%) scale(1); } to { transform: translate(1.5%, 1%) scale(1.05); } }
+.pic video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.2s; filter: saturate(.9); }
+.pic video.on { opacity: .9; }
+.pic .wash { position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(0deg, rgb(var(--svbg)) 0%, rgba(var(--svbg), .0) 38%), radial-gradient(ellipse 85% 80% at 50% 45%, transparent 55%, rgba(var(--svbg), .55) 100%); }
+.covers { position: absolute; left: 28px; bottom: 22px; display: flex; align-items: center; gap: 22px; z-index: 2; }
+.covers figure { margin: 0; display: grid; gap: 8px; }
+.covers figure.none { display: none; }
+.covers img { width: min(17cqh, 15cqw); aspect-ratio: 1; object-fit: cover; outline: 1px solid var(--rule); box-shadow: 0 18px 50px rgba(0,0,0,.6); }
+.covers figcaption { font-size: 18px; color: var(--faint); letter-spacing: .04em; }
+.covers figcaption b { color: var(--ink); font-weight: 400; }
+.covers .arrow { font-size: 18px; color: var(--yellow); text-align: center; line-height: 1.5; }
+.covers .arrow b { display: block; font-size: 28px; font-weight: 700; color: var(--yellow); }
+.vjtag { position: absolute; right: 18px; top: 14px; z-index: 2; font-size: 18px; color: var(--faint); background: rgb(var(--svbg)); padding: 3px 8px; }
+.vjtag:empty { display: none; }
+.vjtag.on { color: var(--yellow); }
+
+/* The flip map: the original on top, the remix underneath, a ribbon for every time the remix sings a line. */
+.map { padding: 10px 18px 14px; border-top: 2px solid var(--pane); background: rgb(var(--svbg)); }
+.map svg { display: block; width: 100%; height: auto; overflow: visible; }
+.map .lane { fill: color-mix(in srgb, var(--ink) 22%, transparent); }
+.map .lane.voc { fill: var(--amber); }
+.map .lane.o.used { fill: color-mix(in srgb, var(--green) 70%, transparent); }
+.map .tick { stroke: color-mix(in srgb, var(--ink) 30%, transparent); stroke-width: 1; }
+.map .tick.used { stroke: var(--green); }
+.map .rib { fill: color-mix(in srgb, var(--green) 14%, transparent); transition: fill .25s; }
+.map .rib.done { fill: color-mix(in srgb, var(--green) 26%, transparent); }
+.map .rib.now { fill: color-mix(in srgb, var(--yellow) 55%, transparent); }
+.map .lbl { fill: var(--faint); font: 17px var(--tmono); }
+.map .lbl .hi { fill: var(--ink); }
+.map .head { stroke: var(--yellow); stroke-width: 2; }
+.map .ghost { fill: var(--yellow); transition: opacity .2s; }
+
+.now { grid-area: now; padding: 20px 28px 22px; display: flex; flex-direction: column; gap: 10px; }
+.stamp { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 18px; color: var(--faint); }
+.stamp b { font-weight: 400; color: var(--ink); }
+.stamp .rx b { color: var(--yellow); }
+.stamp span:empty { display: none; }
+h1 { margin: 0; font-size: min(6vh, 3.4vw); font-weight: 700; line-height: 1.02; letter-spacing: -.02em; text-wrap: balance; }
+.by { font-size: max(18px, min(2.4vh, 1.45vw)); color: var(--green); }
+/* \00a0 and not a plain space: a space right after a CSS escape is eaten as part of it ("♪Party Pupils"). */
+.by:not(:empty)::before { content: "\266a\00a0"; }
+.by span { color: var(--mid); }
+
+.lyr { grid-area: lyr; padding: 20px 28px; display: grid; grid-template-rows: auto 1fr auto; gap: 1.2vh; }
+.lyr .body { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px; }
+.line { font-size: min(4.2vh, 2.4vw); font-weight: 500; line-height: 1.2; text-wrap: balance; }
+.line .w { transition: color .15s, opacity .15s; }
+.line .w.off { opacity: .3; }
+.line .w.sung { color: var(--ink); }
+.line .w.todo { color: var(--mid); }
+.line.rest { color: var(--faint); font-weight: 400; font-size: max(18px, min(3.2vh, 1.9vw)); }
+.line .pre { color: var(--green); }
+.count { text-align: right; line-height: 1; font-weight: 700; color: var(--yellow); font-size: min(7vh, 4vw); min-width: 3ch; }
+.count small { display: block; font-size: 18px; font-weight: 400; color: var(--faint); margin-top: 6px; letter-spacing: .04em; }
+.count.pop { animation: pop .35s cubic-bezier(.2,.8,.2,1.4); }
+@keyframes pop { from { transform: scale(1.35); } to { transform: none; } }
+.lyr .meta { display: flex; gap: 18px; font-size: 18px; color: var(--faint); min-height: 1.4em; }
+.lyr .meta b { font-weight: 400; color: var(--mid); }
+.lyr .meta .chop { color: var(--red); }
+
+.notes { grid-area: notes; padding: 20px 28px; display: flex; flex-direction: column; gap: 2vh; }
+.notes .pl.flip { color: var(--yellow); }
+.notes .pl.panel { color: var(--red); }
+#note { min-height: 0; }
+#note b { display: block; margin-bottom: .8vh; font-family: var(--serif); font-weight: 400; font-size: max(20px, min(3.4vh, 1.95vw)); line-height: 1.15; }
+#note p { margin: 0; font-family: var(--serif); font-size: max(18px, min(3vh, 1.7vw)); line-height: 1.42; text-wrap: pretty; transition: color .6s; }
+.fresh { animation: rise 1s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+body.singing .lyr, body:not(.singing) .notes { border-color: var(--amber); }
+body.singing #note p { color: var(--mid); }
+
+.bot { grid-area: bot; padding: 12px 26px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 6px 26px; align-items: center; font-size: 18px; }
+.bot .logo { color: var(--green); font-weight: 700; letter-spacing: .45em; }
+.bar { position: relative; height: 3px; background: color-mix(in srgb, var(--amber) 35%, transparent); }
+.bar i { display: block; height: 3px; width: 100%; background: var(--yellow); transform-origin: 0 50%; transform: scaleX(0); will-change: transform; }
+.bar b { position: absolute; top: -4px; width: 2px; height: 11px; background: color-mix(in srgb, var(--green) 60%, transparent); }
+.stat { display: flex; gap: 18px; align-items: baseline; color: var(--faint); white-space: nowrap; }
+.stat #pos { color: var(--ink); font-size: 24px; font-variant-numeric: tabular-nums; }
+.keys { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 18px; color: var(--faint); }
+.keys kbd { font: inherit; padding: 0 6px; margin-right: 6px; background: color-mix(in srgb, var(--ink) 20%, transparent); color: var(--ink); }
+
+/* Nothing from this playlist playing: a quiet card instead of an empty stage. */
+.idle { position: fixed; inset: 0; z-index: 5; display: none; place-items: center; background: rgb(var(--svbg)); text-align: center; padding: 16px; }
+body.idle-on .idle { display: grid; }
+.idle h2 { margin: 0 0 12px; font-size: 22px; font-weight: 700; color: var(--green); letter-spacing: .3em; }
+.idle p { margin: 0; font-family: var(--serif); font-size: 24px; color: var(--mid); }
+.idle small { display: block; margin-top: 18px; font-size: 18px; color: var(--faint); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body class="idle-on">
+<div class="grid">
+  <section class="pane vis">
+    <div class="pic">
+      <img class="photo" id="photo" alt="">
+      <video id="vid" muted playsinline preload="auto"></video>
+      <div class="wash"></div>
+      <div class="vjtag" id="vjtag"></div>
+      <div class="covers">
+        <figure id="ofig"><img id="ocover" alt=""><figcaption id="ocap"></figcaption></figure>
+        <div class="arrow" id="tempo"></div>
+        <figure id="rfig"><img id="rcover" alt=""><figcaption id="rcap"></figcaption></figure>
+      </div>
+    </div>
+    <div class="map"><svg id="map" viewBox="0 0 1000 250" preserveAspectRatio="none"></svg></div>
+  </section>
+  <section class="pane now">
+    <div class="pl rule">now playing <span class="t" id="nptag">remix</span></div>
+    <div class="stamp"><span class="rx" id="rxstamp"></span><span id="ostamp"></span><span id="bpms"></span></div>
+    <h1 id="title"></h1>
+    <div class="by" id="by"></div>
+  </section>
+  <section class="pane lyr">
+    <div class="pl rule">lyrics <span class="t">timed to the remix</span></div>
+    <div class="body"><div class="line" id="line"></div><div class="count" id="count"></div></div>
+    <div class="meta" id="meta"></div>
+  </section>
+  <section class="pane notes">
+    <div class="pl rule" id="ntag">liner notes</div>
+    <div id="note"></div>
+  </section>
+  <section class="pane bot">
+    <span class="logo">FLIP</span>
+    <div><div class="bar" id="bar"><i></i></div></div>
+    <div class="stat"><span id="pos">0:00</span><span id="len"></span></div>
+    <div class="keys"><span><kbd>Space</kbd>play/pause</span><span><kbd>←</kbd><kbd>→</kbd>song</span><span><kbd>V</kbd>video on/off</span></div>
+  </section>
+</div>
+<div class="idle"><div><h2>FLIP</h2><p id="idlemsg">Waiting for cliamp</p><small id="idlesub"></small></div></div>
+<script>
+const SONGS = /*DATA*/null;
+const SERVED = /^https?:$/.test(location.protocol) && (/^(127\.0\.0\.1|localhost)$/.test(location.hostname) || location.pathname.startsWith('/p/'));
+const BRIDGE = SERVED ? location.origin : 'http://127.0.0.1:47391';
+const TOKEN = (document.querySelector('meta[name="liner-token"]') || {}).content || '';
+const $ = s => document.querySelector(s);
+const vid = $('#vid');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mmss = t => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
+const NS = 'http://www.w3.org/2000/svg';
+const fetchT = (url, ms = 3000, opt = {}) => { const c = new AbortController(), t = setTimeout(() => c.abort(), ms); return fetch(url, { cache: 'no-store', ...opt, signal: c.signal }).finally(() => clearTimeout(t)); };
+// Text only ever goes in as text: h('b', {}, 'x') builds <b>x</b>.
+const h = (tag, attrs = {}, ...kids) => { const n = document.createElement(tag); for (const k in attrs) if (attrs[k] != null) n.setAttribute(k, attrs[k]); n.append(...kids.filter(k => k != null && k !== '')); return n; };
+const setText = (node, t) => { if (node.textContent !== t) node.textContent = t; };
+let S = null, passes = [], vj = true, lastPass = null, noteAt = -1e9, noteIdx = -1, noteList = [], raf = 0, shown = { p: undefined, sweep: -1, next: '' };
+// cliamp's clock, from the bridge: the last /now answer and when it came, so the frames in between can count on.
+const clock = { pos: 0, at: 0, playing: false, moving: false, epoch: -1, key: null };
+
+const ratioOf = s => s.original.bpm ? s.remix.bpm / s.original.bpm : 1;
+
+// Every time round a loop is its own pass, with where it sits in the remix and in the original.
+function buildPasses(s) {
+  const ratio = ratioOf(s), out = [];
+  s.events.forEach((e, ei) => e.times.forEach((t, k) => {
+    const end = k + 1 < e.times.length ? e.times[k + 1] : e.end;
+    out.push({ ev: e, ei, k, n: e.times.length, start: t, end, orig: e.orig, olen: (end - t) * ratio });
+  }));
+  return out.sort((a, b) => a.start - b.start);
+}
+
+function svg(tag, attrs, parent) { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); parent.appendChild(n); return n; }
+
+function drawMap(s) {
+  const map = $('#map'); map.replaceChildren();
+  const W = 1000, oy = 34, oh = 34, ry = 178, rh = 40;
+  const ox = t => (t / s.original.length) * W, rx = t => (t / s.remix.length) * W;
+  const usedOrig = new Set(s.events.map(e => s.original.lines[e.line].start));
+  // Skylines: one bar a second, the remix lit where somebody sings. An original with no audio on disk
+  // (timed from LRCLIB) gets a flat lane.
+  const sing = t => passes.some(p => t >= p.start - .5 && t <= p.end + .5);
+  const oe = s.original.energy || Array.from({ length: Math.ceil(s.original.length) }, () => .35);
+  oe.forEach((v, i) => svg('rect', { class: 'lane o', x: ox(i), y: oy + oh * (1 - v), width: Math.max(.6, W / s.original.length - .4), height: Math.max(1, oh * v) }, map));
+  s.remix.energy.forEach((v, i) => svg('rect', { class: 'lane' + (sing(i) ? ' voc' : ''), x: rx(i), y: ry + rh * (1 - v), width: Math.max(.6, W / s.remix.length - .4), height: Math.max(1, rh * v) }, map));
+  s.original.lines.forEach(l => svg('line', { class: 'tick' + (usedOrig.has(l.start) ? ' used' : ''), x1: ox(l.start), x2: ox(l.start), y1: oy + oh + 2, y2: oy + oh + 9 }, map));
+  passes.forEach(p => {
+    const a1 = ox(p.orig), a2 = ox(Math.min(s.original.length, p.orig + Math.max(p.olen, 1))), b1 = rx(p.start), b2 = rx(Math.max(p.end, p.start + .6));
+    const y1 = oy + oh + 10, y2 = ry - 4, m = (y1 + y2) / 2;
+    p.node = svg('path', { class: 'rib', d: `M${a1},${y1} C${a1},${m} ${b1},${m} ${b1},${y2} L${b2},${y2} C${b2},${m} ${a2},${m} ${a2},${y1} Z` }, map);
+    p.cls = 'rib';
+  });
+  const lbl = (x, y, hi, txt, anchor = 'start') => { const t = svg('text', { class: 'lbl', x, y, 'text-anchor': anchor }, map); if (hi) { svg('tspan', { class: 'hi' }, t).textContent = hi + '  '; } t.append(txt); };
+  const bits = (...xs) => xs.filter(Boolean).join(' · ');
+  lbl(0, 20, 'ORIGINAL', bits(s.artist, s.year, s.original.bpm && `≈${Math.round(s.original.bpm)} BPM`, mmss(s.original.length)));
+  lbl(W, 20, '', `${new Set(s.events.map(e => s.original.lines[e.line].text)).size} of ${new Set(s.original.lines.map(l => l.text)).size} lines used`, 'end');
+  lbl(0, ry + rh + 22, 'REMIX', bits(s.remixer, s.remixYear, `≈${Math.round(s.remix.bpm)} BPM`, mmss(s.remix.length)));
+  lbl(W, ry + rh + 22, '', `${passes.length} sung passes`, 'end');
+  s.head = svg('line', { class: 'head', x1: 0, x2: 0, y1: ry - 6, y2: ry + rh + 2 }, map);
+  s.ghost = svg('circle', { class: 'ghost', cx: 0, cy: oy + oh + 5, r: 5, opacity: 0 }, map);
+  s.ox = ox; s.rx = rx;
+}
+
+function load(s) {
+  S = s; passes = buildPasses(S); lastPass = null; noteIdx = -1; noteAt = -1e9; shown = { p: undefined, sweep: -1, next: '' };
+  // Interleave the voices: what the remix did first, then the original, with the panel's verdict early on.
+  const f = S.notes.flip, o = S.notes.orig, pn = S.notes.panel; noteList = [];
+  for (let k = 0; k < Math.max(f.length, o.length); k++) {
+    if (f[k]) noteList.push({ ...f[k], v: 'flip' });
+    if (k === 0) pn.forEach(x => noteList.push({ ...x, v: 'panel' }));
+    if (o[k]) noteList.push({ ...o[k], v: 'orig' });
+  }
+  $('#title').textContent = S.title;
+  $('#by').replaceChildren(S.remixer + ' ', h('span', {}, 'remix of'), ' ' + S.artist);
+  $('#nptag').textContent = S.volume ? `Yacht House Summer vol ${S.volume}` : 'remix';
+  $('#rxstamp').replaceChildren(...(S.remixYear ? [h('b', {}, String(S.remixYear)), ' remix'] : []));
+  $('#ostamp').replaceChildren(...(S.year ? ['of ', h('b', {}, String(S.year))] : []));
+  $('#bpms').replaceChildren(...(S.original.bpm ? ['≈', h('b', {}, String(Math.round(S.original.bpm))), ' → ', h('b', {}, String(Math.round(S.remix.bpm))), ' BPM'] : ['≈', h('b', {}, String(Math.round(S.remix.bpm))), ' BPM']));
+  $('#tempo').replaceChildren(...(S.original.bpm ? [h('b', {}, `×${ratioOf(S).toFixed(2)}`), 'tempo'] : []));
+  if (S.photo) $('#photo').src = S.photo; else $('#photo').removeAttribute('src');
+  $('#ofig').classList.toggle('none', !S.original.cover); if (S.original.cover) $('#ocover').src = S.original.cover;
+  $('#rfig').classList.toggle('none', !S.remix.cover); if (S.remix.cover) $('#rcover').src = S.remix.cover;
+  $('#ocap').replaceChildren(...(S.year ? [h('b', {}, String(S.year)), ' original'] : ['original']));
+  $('#rcap').replaceChildren(...(S.volume ? [h('b', {}, `vol ${S.volume}`), ' ' + S.remixer] : [S.remixer]));
+  $('#len').textContent = mmss(S.remix.length);
+  const bar = $('#bar'); bar.querySelectorAll('b').forEach(b => b.remove());
+  passes.forEach(p => { const b = document.createElement('b'); b.style.left = (100 * p.start / S.remix.length) + '%'; bar.appendChild(b); });
+  drawMap(S);
+  vid.classList.remove('on'); vid.pause();
+  if (S.video && SERVED && /^[\w-]{11}$/.test(S.video.id)) { vid.src = `${BRIDGE}/v/${S.video.id}.mp4`; vid.playbackRate = ratioOf(S) * S.video.rate; } else vid.removeAttribute('src');
+  $('#vjtag').textContent = !S.video ? '' : S.video.kind === 'tv' ? 'original TV performance, re-timed to the remix' : 'original video, re-timed to the remix';
+  kick();
+}
+
+function words(text) { return text.split(/\s+/).filter(Boolean); }
+const norm = w => w.toLowerCase().replace(/[^a-z0-9']/g, '');
+
+/* The lyric line is rebuilt only when the pass changes; within a pass only the word classes move. */
+function renderLine(p, t) {
+  const line = $('#line'), count = $('#count'), meta = $('#meta');
+  if (!p) {
+    const next = passes.find(q => q.start > t), msg = next ? `♪ no vocal · back in ${Math.ceil(next.start - t)} s` : '♪ no vocal';
+    if (shown.p !== null) {
+      shown.p = null; shown.sweep = -1; line.className = 'line rest'; count.replaceChildren(); count.className = 'count';
+    }
+    setText(line, msg);
+    const nt = next ? (next.ev.chop ? next.ev.text + ' …' : next.ev.text) : '';
+    if (shown.next !== nt) { shown.next = nt; meta.replaceChildren(...(nt ? ['next ', h('b', {}, nt)] : [])); }
+    return;
+  }
+  const fw = words(S.original.lines[p.ev.line].text);
+  if (shown.p !== p) {
+    // A chop lights the words the remix lifted and leaves the rest of the original line in shadow.
+    const lifted = words(p.ev.text).map(norm);
+    let from = 0;
+    if (p.ev.chop) for (let i = 0; i + lifted.length <= fw.length; i++) if (lifted.every((w, k) => norm(fw[i + k]) === w)) { from = i; break; }
+    p.on = p.ev.chop ? [from, from + lifted.length] : [0, fw.length];
+    shown.p = p; shown.sweep = -1; shown.next = '';
+    line.className = 'line';
+    const spans = fw.map((w, i) => h('span', { class: 'w ' + (i < p.on[0] || i >= p.on[1] ? 'off' : 'todo') }, w));
+    line.replaceChildren(h('span', { class: 'pre' }, '▶ '), ...spans.flatMap((s, i) => i ? [' ', s] : [s]));
+    p.spans = spans;
+    if (p.n > 1) {
+      count.replaceChildren(`×${p.k + 1}`, h('small', {}, `of ${p.n}`));
+      if (!reduced) { count.classList.remove('pop'); requestAnimationFrame(() => count.classList.add('pop')); }
+    } else count.replaceChildren();
+    meta.replaceChildren('in the original at ', h('b', {}, mmss(p.orig)), ...(p.ev.chop ? [' ', h('span', { class: 'chop' }, 'chop')] : []));
+  }
+  const frac = Math.min(1, (t - p.start) / Math.max(.8, p.end - p.start));
+  const sweep = p.on[0] + Math.floor(frac * (p.on[1] - p.on[0] + .999));
+  if (sweep !== shown.sweep) {
+    shown.sweep = sweep;
+    p.spans.forEach((s, i) => { const c = 'w ' + (i < p.on[0] || i >= p.on[1] ? 'off' : i < sweep ? 'sung' : 'todo'); if (s.className !== c) s.className = c; });
+  }
+}
+
+function nextNote(t, singing) {
+  // A new note every 14 to 24 seconds by reading length, but only while nobody's singing.
+  const due = noteIdx < 0 || (!singing && t - noteAt > Math.min(24, Math.max(14, (noteList[noteIdx].p || '').length / 11)));
+  if (!due || !noteList.length) return;
+  noteIdx = (noteIdx + 1) % noteList.length; noteAt = t;
+  const n = noteList[noteIdx], box = $('#note'), tag = $('#ntag');
+  tag.className = 'pl rule' + (n.v === 'orig' ? '' : ' ' + n.v);
+  tag.replaceChildren(...(n.v === 'flip' ? ['the flip ', h('span', { class: 't' }, `what ${S.remixer} did`)]
+    : n.v === 'panel' ? ['the panel ', h('span', { class: 't' }, 'why it made the list')]
+    : ['the original ', h('span', { class: 't' }, `${S.artist}${S.year ? ', ' + S.year : ''}`)]));
+  box.replaceChildren(h('b', {}, n.h), h('p', {}, n.p));
+  if (!reduced) { box.classList.remove('fresh'); requestAnimationFrame(() => box.classList.add('fresh')); }
+}
+
+// Forgetting the song (clock.key) is what lets the same song come back after a gap.
+function idle(msg, sub) {
+  document.body.classList.add('idle-on'); setText($('#idlemsg'), msg); setText($('#idlesub'), sub || '');
+  vid.pause(); vid.classList.remove('on'); S = null; clock.key = null;
+}
+
+/* /now one request at a time: four a second while the page shows, every 5 s in a hidden tab. */
+let pollT = 0, polling = false;
+async function poll() {
+  clearTimeout(pollT); pollT = 0;
+  if (polling) return;
+  polling = true;
+  try {
+    const r = await (await fetchT(BRIDGE + '/now', 3000)).json();
+    if (!r.ok) idle(r.reason === 'no-player' ? 'cliamp isn’t running' : 'Waiting for cliamp');
+    else {
+      const key = r.yt || r.title;
+      if (key !== clock.key) {
+        clock.key = key;
+        const s = SONGS.find(x => (r.yt && x.id === r.yt) || x.match === r.title);
+        if (s) { document.body.classList.remove('idle-on'); load(s); }
+        else idle('Not a measured remix', `cliamp is playing ${r.artist || ''}${r.artist ? ' · ' : ''}${r.title || ''}`);
+      }
+      Object.assign(clock, { pos: r.position, at: performance.now(), playing: r.state === 'playing', moving: r.moving !== false, epoch: r.epoch });
+    }
+  } catch { idle('The bridge isn’t running', 'Start it with liner-notes serve. This screen picks up again by itself.'); }
+  polling = false;
+  pollT = setTimeout(poll, document.hidden ? 5000 : 250);
+}
+document.addEventListener('visibilitychange', () => { if (!document.hidden) { poll(); kick(); } });
+poll();
+
+const kick = () => { if (!raf && S && !document.hidden) raf = requestAnimationFrame(tick); };
+function tick() {
+  raf = 0;
+  if (!S || document.hidden) return;
+  raf = requestAnimationFrame(tick);
+  const t = clock.playing && clock.moving ? clock.pos + (performance.now() - clock.at) / 1000 : clock.pos;
+  const p = passes.find(q => t >= q.start - .15 && t < q.end + .25) || null;
+  document.body.classList.toggle('singing', !!p);
+  renderLine(p, t);
+  passes.forEach(q => { const c = 'rib' + (q === p ? ' now' : q.end < t ? ' done' : ''); if (q.cls !== c) { q.cls = c; q.node.setAttribute('class', c); } });
+  const x = S.rx(t).toFixed(1); if (S.head.getAttribute('x1') !== x) { S.head.setAttribute('x1', x); S.head.setAttribute('x2', x); }
+  if (p) { S.ghost.setAttribute('cx', S.ox(p.orig + (t - p.start) * ratioOf(S)).toFixed(1)); S.ghost.setAttribute('opacity', 1); }
+  else if (lastPass) S.ghost.setAttribute('opacity', 0);
+  $('#bar i').style.transform = `scaleX(${Math.min(1, t / S.remix.length).toFixed(4)})`;
+  setText($('#pos'), mmss(t));
+  // While a line is sung, the original's video plays that line at the remix's tempo, so the lips land on
+  // the remix's vocal. In between it runs on from wherever it got to.
+  const going = clock.playing && clock.moving;
+  if (S.video && vj && going && vid.getAttribute('src')) {
+    if (p) {
+      const want = (p.orig + (t - p.start) * ratioOf(S)) * S.video.rate + S.video.off;
+      if (want >= 0 && (lastPass !== p || Math.abs(vid.currentTime - want) > .3)) vid.currentTime = want;
+      vid.classList.add('on');
+    }
+    if (vid.paused && vid.classList.contains('on')) vid.play().catch(() => {});
+    $('#vjtag').classList.toggle('on', !!p);
+  } else { if (!vj) vid.classList.remove('on'); if (!vid.paused) vid.pause(); }
+  nextNote(t, !!p);
+  lastPass = p;
+}
+
+// A refused token means the page came from an older bridge: reload for the current one, at most once a minute.
+function staleToken() {
+  if (!SERVED) return;
+  let last = 0; try { last = +sessionStorage.getItem('liner-token-reload') || 0; } catch {}
+  if (Date.now() - last < 60000) return;
+  try { sessionStorage.setItem('liner-token-reload', String(Date.now())); } catch {}
+  location.reload();
+}
+const cmd = op => fetchT(BRIDGE + '/cmd', 4000, { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Liner-Token': TOKEN }, body: JSON.stringify({ op }) })
+  .then(async r => { if (r.status === 403) { const j = await r.json().catch(() => ({})); if (j.reason === 'token') staleToken(); } }).catch(() => {}).then(() => setTimeout(poll, 250));
+addEventListener('keydown', e => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.key === ' ') { e.preventDefault(); cmd('toggle'); }
+  else if (e.key === 'ArrowRight') { e.preventDefault(); cmd('next'); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); cmd('prev'); }
+  else if (e.key === 'v' || e.key === 'V') vj = !vj;
+});
+
+/* Match the Omarchy desktop's colours and font, the way the journey stage does (template.html). */
+const themeCss = document.createElement('style'); document.head.append(themeCss);
+let themeKey = '';
+const rgbOf = c => { const m = /^#?([0-9a-f]{6})$/i.exec(c || ''); return m ? [0, 2, 4].map(i => parseInt(m[1].slice(i, i + 2), 16)) : null; };
+const lum = c => { const [r, g, b] = c.map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
+const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+const mixc = (a, b, t) => a.map((v, i) => Math.round(v * (1 - t) + b[i] * t));
+const hex = c => '#' + c.map(v => v.toString(16).padStart(2, '0')).join('');
+const shade = (ink, bg, t, min) => { for (; t > 0; t -= 0.02) { const c = mixc(ink, bg, t); if (contrast(c, bg) >= min) return c; } return ink; };
+const readable = (c, ink, bg, min = 4.5) => { for (let t = 0; t <= 1; t += 0.05) { const x = mixc(c, ink, t); if (contrast(x, bg) >= min) return x; } return ink; };
+async function syncTheme() {
+  let t; try { t = await (await fetchT(BRIDGE + '/theme', 3000)).json(); } catch { return; }
+  if (!t || !t.ok || !t.colors) return;
+  const key = JSON.stringify(t); if (key === themeKey) return; themeKey = key;
+  const c = t.colors, bg = rgbOf(c.background); if (!bg) return;
+  const fgs = ['foreground', 'bright_foreground', 'light_foreground'].map(k => rgbOf(c[k])).filter(Boolean);
+  const ink = fgs.find(f => contrast(f, bg) >= 6) || fgs.sort((a, b) => contrast(b, bg) - contrast(a, bg))[0] || (t.mode === 'light' ? [20, 20, 20] : [230, 230, 230]);
+  const accent = rgbOf(c.accent) || rgbOf(c.blue) || ink;
+  const ansi = k => hex(readable(rgbOf(c[k]) || rgbOf(c['bright_' + k]) || accent, ink, bg));
+  const fname = String(t.font || '').replace(/[^\w .+-]/g, '').trim(), font = fname ? `"${fname}", ` : '';
+  themeCss.textContent = `:root { --svbg: ${bg}; --ink: ${hex(ink)}; --mid: ${hex(shade(ink, bg, 0.22, 5.5))}; --faint: ${hex(shade(ink, bg, 0.42, 4.6))};
+    --amber: ${hex(accent)}; --pane: ${hex(rgbOf(c.muted) || mixc(ink, bg, 0.6))}; --rule: rgba(${ink},0.15);
+    --green: ${ansi('green')}; --yellow: ${ansi('yellow')}; --red: ${ansi('red')}; --tmono: ${font}"JetBrainsMono Nerd Font", ui-monospace, monospace; }`;
+}
+const themeLoop = () => { if (!document.hidden) syncTheme(); setTimeout(themeLoop, document.hidden ? 30000 : 5000); };
+themeLoop();
+</script>
+</body>
+</html>
