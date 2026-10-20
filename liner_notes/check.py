@@ -81,7 +81,7 @@ def check(log=print):
                 sid = (r.get("original") or {}).get("song")
                 if sid and sid not in bank.songs:
                     problems.append(f"{slug}: {r['title']!r} flips {sid}, which isn't in the bank")
-                if not sid and not (r.get("original") or {}).get("lyrics"):
+                if not sid and not (r.get("original") or {}).get("file"):
                     problems.append(f"{slug}: {r['title']!r} names no original")
             notes.append(f"{slug}: {len(j.get('remixes') or [])} remixes")
             continue
@@ -112,35 +112,89 @@ def check(log=print):
 
 
 # What must never be in the repo or in a page built for sharing: other people's pictures, lyrics
-# (retimed ones included), video, and the ids that only exist to drive personal video.
+# (retimed ones included), audio and video, and the ids that only exist to drive personal video.
+# Binaries work on an allowlist: our own era pictures are the only images the repo carries.
 PERSONAL_DIRS = ("lyrics", "remixes", "originals", "media/covers", "media/culture", "media/artists", "media/depth", "standins")
 PERSONAL_FILES = ("standins.json", "culture-videos.json", "stage-cache.json", "av-latency.json")
-MEDIA_EXT = (".mp4", ".webm", ".m4a", ".opus", ".mp3", ".mkv", ".aac", ".flac")
-JPEG_URI = "data:image/" + "jpeg"  # split, so this file doesn't trip its own check
+MEDIA_EXT = {
+    ".mp4",
+    ".webm",
+    ".m4a",
+    ".m4v",
+    ".opus",
+    ".ogg",
+    ".oga",
+    ".mp3",
+    ".mkv",
+    ".mov",
+    ".avi",
+    ".aac",
+    ".flac",
+    ".wav",
+    ".aiff",
+    ".lrc",
+}
+IMAGE_EXT = {".webp", ".jpg", ".jpeg", ".png", ".gif", ".avif", ".bmp", ".tif", ".tiff", ".heic", ".ico"}
+TEXT_EXT = {".html", ".htm", ".json", ".js", ".mjs", ".md", ".css", ".txt", ".py", ".toml", ".yml", ".yaml", ".csv", ".tsv", ".svg", ""}
+ERA_IMAGE = re.compile(r"journeys/[a-z0-9-]+/media/eras/era\d+\.webp")
+RASTER_URI = re.compile(r"data:image/(?:jpe?g|png|gif|avif|bmp)\b", re.I)
+WEBP_URI = re.compile(r"data:image/(?:webp)\b", re.I)
+LRC_LINE = re.compile(r"^\s*\[\d{1,2}:\d{2}(?:[.:]\d+)?\]", re.M)
+LRC_ANY = re.compile(r"\[\d{1,2}:\d{2}(?:[.:]\d+)?\]\s*\S")
+LYRIC_KEYS = {"lyrics", "syncedLyrics", "plainLyrics", "syncedlyrics", "plainlyrics"}
+STANDIN_KEYS = {"standin", "standin_offset", "standin_rate"}
 
 
 def tree_files(root):
-    """Files git would commit: tracked plus untracked-but-not-ignored. Falls back to a walk without git."""
+    """Files git would commit: tracked plus untracked-but-not-ignored."""
     import subprocess
 
-    try:
-        r = subprocess.run(
-            ["git", "-C", str(root), "ls-files", "-z", "--cached", "--others", "--exclude-standard"], capture_output=True, check=True
-        )
-        names = [n for n in r.stdout.decode().split("\0") if n]
-        return [root / n for n in names if (root / n).is_file()]
-    except (OSError, subprocess.CalledProcessError):
-        skip = {".git", ".venv", "node_modules", "__pycache__", "dist", ".pytest_cache", ".ruff_cache"}
-        return [p for p in root.rglob("*") if p.is_file() and not skip & set(p.relative_to(root).parts)]
+    r = subprocess.run(["git", "-C", str(root), "ls-files", "-z", "--cached", "--others", "--exclude-standard"], capture_output=True)
+    if r.returncode:
+        raise SystemExit(f"liner-notes: check --publish needs a git checkout, and {root} isn't one")
+    names = [n for n in r.stdout.decode().split("\0") if n]
+    return [root / n for n in names if (root / n).is_file()]
 
 
-def _lyric_doc(p):
-    try:
-        d = read_json(p)
-    except (ValueError, UnicodeDecodeError, OSError):
-        return False
-    lines = d.get("lines") if isinstance(d, dict) else None
-    return isinstance(lines, list) and any(isinstance(x, dict) and "text" in x for x in lines)
+def _walk(obj):
+    if isinstance(obj, dict):
+        yield obj
+        for v in obj.values():
+            yield from _walk(v)
+    elif isinstance(obj, list):
+        for v in obj:
+            yield from _walk(v)
+
+
+def json_problems(obj):
+    """Lyrics or stand-ins anywhere in a JSON document, whatever the file is called."""
+    out = set()
+    for d in _walk(obj):
+        if LYRIC_KEYS & set(d):
+            out.add("lyrics")
+        lines = d.get("lines")
+        if isinstance(lines, list) and any(isinstance(x, dict) and any(isinstance(v, str) for v in x.values()) for x in lines):
+            out.add("lyric lines")
+        if STANDIN_KEYS & set(d):
+            out.add("stand-in video ids")
+    return sorted(out)
+
+
+def text_problems(text):
+    out = []
+    if RASTER_URI.search(text):
+        out.append("an inline JPEG, PNG or GIF picture (covers and photos are other people's)")
+    if WEBP_URI.search(text):
+        out.append("an inline WebP picture")
+    if len(LRC_LINE.findall(text)) >= 2:
+        out.append("timed lyric lines")
+    return out
+
+
+def _magic_webp(p):
+    with open(p, "rb") as f:
+        head = f.read(12)
+    return head[:4] == b"RIFF" and head[8:12] == b"WEBP"
 
 
 def scan_tree(root):
@@ -151,33 +205,58 @@ def scan_tree(root):
     out = []
     for p in tree_files(root):
         rel = p.relative_to(root).as_posix()
-        parts = "/" + rel
-        if any(f"/{d}/" in parts for d in PERSONAL_DIRS):
+        ext = p.suffix.lower()
+        if any(f"/{d}/" in "/" + rel for d in PERSONAL_DIRS):
             out.append(f"{rel}: personal data (covers, pictures, lyrics, stand-ins) never goes in the repo")
-        elif p.name in PERSONAL_FILES or p.suffix.lower() in MEDIA_EXT:
-            out.append(f"{rel}: personal media or video ids")
-        elif p.suffix == ".json" and _lyric_doc(p):
-            out.append(f"{rel}: looks like a lyrics file")
-        elif p.suffix in (".html", ".json", ".js", ".md", ".css", ".txt", ".py") and p.stat().st_size < 50_000_000:
+        elif p.name in PERSONAL_FILES or ext in MEDIA_EXT:
+            out.append(f"{rel}: personal media, lyrics or video ids")
+        elif ext in IMAGE_EXT:
+            if rel.startswith("tests/fixtures/") and ext == ".webp":
+                continue
+            if not (ERA_IMAGE.fullmatch(rel) and _magic_webp(p)):
+                out.append(f"{rel}: the only pictures the repo carries are WebP era pictures at journeys/<slug>/media/eras/era<n>.webp")
+        elif ext in TEXT_EXT and p.stat().st_size < 50_000_000:
             try:
-                if JPEG_URI in p.read_text(errors="ignore"):
-                    out.append(f"{rel}: has an inline JPEG (covers are JPEG; our own pictures are WebP)")
+                text = p.read_text(errors="ignore")
             except OSError:
-                pass
+                continue
+            found = text_problems(text)
+            if ext == ".json":
+                try:
+                    found += json_problems(json.loads(text))
+                except ValueError:
+                    pass
+            out += [f"{rel}: {f}" for f in found]
+        else:
+            out.append(f"{rel}: a file type the publish check doesn't know; add it to check.py if it's ours")
     return out
 
 
 def scan_page(html, journey=None, bank=None):
     """Problems with a page built for sharing."""
     out = []
-    if JPEG_URI in html:
-        out.append("an inline JPEG picture")
+    m = re.search(r"window\.JOURNEY = (.*?);</script>", html, re.S)
+    try:
+        data = json.loads(m.group(1)) if m else {}
+    except ValueError:
+        data = {}
+    # Our own era pictures are the one inline WebP a public page may carry.
+    rest = html
+    for e in data.get("eras") or []:
+        if e.get("image"):
+            rest = rest.replace(e["image"], "")
+    if RASTER_URI.search(rest):
+        out.append("an inline JPEG, PNG or GIF picture")
+    if WEBP_URI.search(rest):
+        out.append("an inline WebP picture that isn't an era picture")
     if re.search(r"/v/[\w-]{11}\.mp4|\.mp4\b", html):
         out.append("a video path")
-    if re.search(r'"(lines|lyrics)":\s*\[\s*\{', html):
+    if LRC_ANY.search(html):
+        out.append("timed lyric lines")
+    if re.search(r'"(?:lines|lyrics|syncedLyrics|plainLyrics)"\s*:', html, re.I):
         out.append("lyric lines")
-    m = re.search(r"window\.JOURNEY = (.*?);</script>", html, re.S)
-    data = json.loads(m.group(1)) if m else {}
+    if re.search(r'"standin(?:_offset|_rate)?"\s*:', html):
+        out.append("stand-in video ids")
     for s in data.get("stops") or []:
         cover = s.get("cover") or ""
         if cover and not cover.startswith("data:image/svg+xml"):
@@ -201,7 +280,11 @@ def publish(log=print):
 
     from .build import Refused, build
 
-    problems = [f"tree: {p}" for p in scan_tree(paths.home())]
+    home = paths.home()
+    if not (home / ".git").exists():
+        log(f"liner-notes: check --publish checks a git checkout before you push, and {home} isn't one")
+        return 2
+    problems = [f"tree: {p}" for p in scan_tree(home)]
     bank = Bank()
     with tempfile.TemporaryDirectory() as d:
         for slug, j in sorted(bank.journeys.items()):

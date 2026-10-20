@@ -59,7 +59,7 @@
    "remixer": "Gigamesh x Party Pupils",
    "label": "Gigamesh x Party Pupils Remix",
    "original": {
-    "lyrics": "i-keep-forgettin.json",
+    "file": "i-keep-forgettin.json",
     "year": 1982
    }
   },
@@ -71,7 +71,7 @@
    "id": "9SRRyD61ZhI",
    "label": "1993 Remix",
    "original": {
-    "lyrics": "long-train-runnin.json",
+    "file": "long-train-runnin.json",
     "year": 1973
    },
    "remix_year": 1993

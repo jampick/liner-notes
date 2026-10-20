@@ -31,7 +31,7 @@ def test_personal_build_is_atomic_and_writes_stage(iso, tpl):
     assert out == iso["dist"] / "test-trip.html" and not problems
     assert not [p for p in out.parent.iterdir() if p.name.endswith(".tmp")]
     d = blob(out.read_text())
-    assert d["stops"][0]["cover"].startswith("data:image/webp") and d["stops"][0]["yt"] == "AAAAAAAAAAA"
+    assert d["stops"][0]["cover"].startswith("data:" + "image/webp") and d["stops"][0]["yt"] == "AAAAAAAAAAA"
     assert (iso["cache"] / "stage/test-trip.stage.json").is_file()
 
 

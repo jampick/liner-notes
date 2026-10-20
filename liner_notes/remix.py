@@ -230,7 +230,7 @@ def compose(slug, bank=None, cache=None, log=print):
             year, video = song.get("year"), _video(home, o["youtube"], cache)
             op = profile(o["youtube"], cache, log)
         else:
-            of = paths.user_data() / "remixes" / "originals" / o["lyrics"]
+            of = paths.user_data() / "remixes" / "originals" / o["file"]
             if not of.is_file():
                 skipped.append(r["title"])
                 continue

@@ -164,7 +164,10 @@ def cmd_depth(a):
 def cmd_check(a):
     from .check import check, publish
 
-    return publish() if a.publish else check()
+    rc = check()
+    if a.publish:
+        rc = max(rc, publish())
+    return rc
 
 
 def cmd_add(a):

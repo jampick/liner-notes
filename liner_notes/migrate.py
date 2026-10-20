@@ -297,7 +297,7 @@ def migrate_remix(folder, root=None, log=print):
                 log(f"  {r['title']}: no song in the bank has the upload {o['ytid']}")
             orig = {"song": sid, "youtube": o["ytid"]}
         else:
-            orig = {"lyrics": Path(o["lyrics"]).name, "year": o.get("year")}
+            orig = {"file": Path(o["lyrics"]).name, "year": o.get("year")}
         remixes.append({k: v for k, v in {**r, "original": orig}.items() if v is not None})
     panel = read_json(folder / "panel.json") if (folder / "panel.json").exists() else {}
     title = " ".join(w.capitalize() for w in slug.split("-"))

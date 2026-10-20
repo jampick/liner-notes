@@ -50,7 +50,7 @@ def remix_journey(d):
                     "id": "123",
                     "remixer": "DJ Test",
                     "label": "Edit",
-                    "original": {"lyrics": "old-song.json", "year": 1975},
+                    "original": {"file": "old-song.json", "year": 1975},
                 },
                 {
                     "title": "Unmeasured (Mix)",
@@ -60,7 +60,7 @@ def remix_journey(d):
                     "id": "UUUUUUUUUUU",
                     "remixer": "DJ Test",
                     "label": "Mix",
-                    "original": {"lyrics": "none.json"},
+                    "original": {"file": "none.json"},
                 },
             ],
         },
@@ -89,7 +89,7 @@ def test_compose(iso):
     assert a["id"] == "RRRRRRRRRRR" and a["match"] == "First Song (Club Mix)" and a["year"] == 1990
     assert a["original"]["bpm"] == 125.0  # counted in double time, halved
     assert a["original"]["lines"] == LINES and a["video"] == {"id": "AAAAAAAAAAA", "off": 0.0, "rate": 1.0, "kind": None}
-    assert a["remix"]["cover"].startswith("data:image/webp") and a["original"]["cover"].startswith("data:image/webp")
+    assert a["remix"]["cover"].startswith("data:" + "image/webp") and a["original"]["cover"].startswith("data:" + "image/webp")
     assert a["notes"]["orig"][0] == {"h": "How it was made", "p": "Made in a room."}
     assert a["notes"]["panel"] == [{"h": "A Judge", "p": "Keeps the hook."}]
     heads = [n["h"] for n in a["notes"]["flip"]]

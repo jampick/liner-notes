@@ -42,7 +42,7 @@
     "gear": [],
     "artifact": ""
    },
-   "image": "data:image/webp;base64,UklGRgwAAABXRUJQVlA4IGVyYQE="
+   "image": "(the era picture, as a data URI in the real output)"
   },
   {
    "n": 2,
@@ -59,7 +59,7 @@
     "gear": [],
     "artifact": ""
    },
-   "image": "data:image/webp;base64,UklGRgwAAABXRUJQVlA4IGVyYQI="
+   "image": "(the era picture, as a data URI in the real output)"
   }
  ],
  "stops": [
