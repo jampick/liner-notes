@@ -236,3 +236,39 @@ def _review_todo(jdir, journey, root):
         if s["notes"].get("unverified"):
             lines.append(f"    - writer couldn't confirm: {s['notes']['unverified']}")
     (jdir / "REVIEW.md").write_text("\n".join(lines) + "\n")
+
+
+def migrate_remix(folder, root=None, log=print):
+    """A pilot remix folder (remixes.json, panel.json) into journeys/<slug>/journey.json.
+
+    The remix list, its uploads and the panel are ours and go in the repo. The alignments, the
+    originals' lyrics and the Party Pupils covers are personal: migrate-personal copies those."""
+    from .bank import Bank
+
+    folder = Path(folder).expanduser().resolve()
+    root = Path(root or paths.home())
+    slug = folder.name
+    bank = Bank([root])
+    remixes = []
+    for r in read_json(folder / "remixes.json"):
+        o = r["original"]
+        if o.get("ytid"):
+            sid = next((s["id"] for s in bank.songs.values() if o["ytid"] in ((s.get("aliases") or {}).get("youtube") or [])), None)
+            if not sid:
+                log(f"  {r['title']}: no song in the bank has the upload {o['ytid']}")
+            orig = {"song": sid, "youtube": o["ytid"]}
+        else:
+            orig = {"lyrics": Path(o["lyrics"]).name, "year": o.get("year")}
+        remixes.append({k: v for k, v in {**r, "original": orig}.items() if v is not None})
+    panel = read_json(folder / "panel.json") if (folder / "panel.json").exists() else {}
+    title = " ".join(w.capitalize() for w in slug.split("-"))
+    words = title.split()
+    journey = {
+        "slug": slug, "kind": "remix", "title": title, "titleA": words[0], "titleB": " ".join(words[1:]),
+        "kicker": f"{len(remixes)} remixes", "description": f"{title}: {len(remixes)} house remixes, each laid against the record it flips.",
+        "songs": [], "remixes": remixes, "panel": {"quotes": panel},
+        "review": {"state": "draft", "by": None, "date": None},
+    }
+    write_json(root / "journeys" / slug / "journey.json", journey)
+    log(f"{slug}: {len(remixes)} remixes, {len(panel)} panel quotes")
+    return journey

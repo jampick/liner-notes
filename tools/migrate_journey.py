@@ -16,4 +16,9 @@ if __name__ == "__main__":
     ap.add_argument("--root", help="data root to write into (default: this checkout)")
     ap.add_argument("--cache", help="cache for pictures other people own (default: ~/.cache/liner-notes)")
     a = ap.parse_args()
-    migrate(a.folder, a.root, a.cache)
+    from liner_notes.migrate import migrate_remix  # noqa: E402
+
+    if (Path(a.folder).expanduser() / "remixes.json").exists():
+        migrate_remix(a.folder, a.root)
+    else:
+        migrate(a.folder, a.root, a.cache)

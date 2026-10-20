@@ -1,0 +1,313 @@
+{
+ "slug": "yacht-house",
+ "kind": "remix",
+ "title": "Yacht House",
+ "titleA": "Yacht",
+ "titleB": "House",
+ "kicker": "15 remixes",
+ "description": "Yacht House: 15 house remixes, each laid against the record it flips.",
+ "songs": [],
+ "remixes": [
+  {
+   "title": "Ride Like the Wind (Yacht House Mix)",
+   "song": "Ride Like the Wind",
+   "artist": "Christopher Cross",
+   "path": "https://www.youtube.com/watch?v=8ODf0VI3Pp4",
+   "id": "8ODf0VI3Pp4",
+   "remixer": "Party Pupils",
+   "label": "Yacht House Mix",
+   "original": {
+    "song": "christopher-cross--ride-like-the-wind",
+    "youtube": "kA9uaBqvRtA"
+   },
+   "volume": 1
+  },
+  {
+   "title": "What You Won't Do for Love (Party Pupils Remix)",
+   "song": "What You Won't Do for Love",
+   "artist": "Bobby Caldwell",
+   "path": "https://soundcloud.com/partypupils/bobby-caldwell-what-you-wont",
+   "id": "2297020100",
+   "remixer": "Party Pupils",
+   "label": "Party Pupils Remix",
+   "original": {
+    "song": "bobby-caldwell--what-you-wont-do-for-love",
+    "youtube": "n9DmdAwUbxc"
+   },
+   "volume": 1
+  },
+  {
+   "title": "What a Fool Believes (Party Pupils Remix)",
+   "song": "What a Fool Believes",
+   "artist": "The Doobie Brothers",
+   "path": "https://www.youtube.com/watch?v=DtYSs-HrxDg",
+   "id": "DtYSs-HrxDg",
+   "remixer": "Party Pupils",
+   "label": "Party Pupils Remix",
+   "original": {
+    "song": "the-doobie-brothers--what-a-fool-believes",
+    "youtube": "exnHAdopRxA"
+   },
+   "volume": 1
+  },
+  {
+   "title": "I Keep Forgettin' (Gigamesh x Party Pupils Remix)",
+   "song": "I Keep Forgettin'",
+   "artist": "Michael McDonald",
+   "path": "https://www.youtube.com/watch?v=tUPruKhAF3A",
+   "id": "tUPruKhAF3A",
+   "remixer": "Gigamesh x Party Pupils",
+   "label": "Gigamesh x Party Pupils Remix",
+   "original": {
+    "lyrics": "i-keep-forgettin.json",
+    "year": 1982
+   }
+  },
+  {
+   "title": "Long Train Runnin' (1993 Remix)",
+   "song": "Long Train Runnin'",
+   "artist": "The Doobie Brothers",
+   "path": "https://www.youtube.com/watch?v=9SRRyD61ZhI",
+   "id": "9SRRyD61ZhI",
+   "label": "1993 Remix",
+   "original": {
+    "lyrics": "long-train-runnin.json",
+    "year": 1973
+   },
+   "remix_year": 1993
+  },
+  {
+   "title": "Lotta Love (Joey Negro Yacht Disco Mix)",
+   "song": "Lotta Love",
+   "artist": "Nicolette Larson",
+   "path": "https://www.youtube.com/watch?v=8sCbreKoKGw",
+   "id": "8sCbreKoKGw",
+   "remixer": "Joey Negro",
+   "label": "Joey Negro Yacht Disco Mix",
+   "original": {
+    "song": "nicolette-larson--lotta-love",
+    "youtube": "vpFfjWdhROU"
+   }
+  },
+  {
+   "title": "I Can't Go for That (Party Pupils Remix)",
+   "song": "I Can't Go for That",
+   "artist": "Daryl Hall & John Oates",
+   "path": "https://soundcloud.com/user-65803281/hall-oates-i-cant-go-for-that",
+   "id": "2287972010",
+   "remixer": "Party Pupils",
+   "label": "Party Pupils Remix",
+   "original": {
+    "song": "daryl-hall-john-oates--i-cant-go-for-that",
+    "youtube": "ccenFp_3kq8"
+   },
+   "volume": 1
+  },
+  {
+   "title": "How Long (Party Pupils Remix)",
+   "song": "How Long",
+   "artist": "Ace",
+   "path": "https://www.youtube.com/watch?v=xxh2JQbX5Ug",
+   "id": "xxh2JQbX5Ug",
+   "remixer": "Party Pupils",
+   "label": "Party Pupils Remix",
+   "original": {
+    "song": "ace--how-long",
+    "youtube": "gBMnGYCTBxE"
+   },
+   "volume": 3
+  },
+  {
+   "title": "Reminiscing (Party Pupils Remix)",
+   "song": "Reminiscing",
+   "artist": "Little River Band",
+   "path": "https://www.youtube.com/watch?v=UiR7_jKILA8",
+   "id": "UiR7_jKILA8",
+   "remixer": "Party Pupils",
+   "label": "Party Pupils Remix",
+   "original": {
+    "song": "little-river-band--reminiscing",
+    "youtube": "9QYk1E8zdxU"
+   },
+   "volume": 3
+  },
+  {
+   "title": "Biggest Part of Me (Party Pupils Remix)",
+   "song": "Biggest Part of Me",
+   "artist": "Ambrosia",
+   "path": "https://www.youtube.com/watch?v=C-x94UfraDI",
+   "id": "C-x94UfraDI",
+   "remixer": "Party Pupils",
+   "label": "Party Pupils Remix",
+   "original": {
+    "song": "ambrosia--biggest-part-of-me",
+    "youtube": "RuMnXi7L7wE"
+   },
+   "volume": 3
+  },
+  {
+   "title": "Steal Away (Party Pupils Remix)",
+   "song": "Steal Away",
+   "artist": "Robbie Dupree",
+   "path": "https://www.youtube.com/watch?v=ZBqtu-3HRBc",
+   "id": "ZBqtu-3HRBc",
+   "remixer": "Party Pupils",
+   "label": "Party Pupils Remix",
+   "original": {
+    "song": "robbie-dupree--steal-away",
+    "youtube": "jYHeDNc237M"
+   },
+   "volume": 2
+  },
+  {
+   "title": "Brandy (Party Pupils Remix)",
+   "song": "Brandy",
+   "artist": "Looking Glass",
+   "path": "https://www.youtube.com/watch?v=s76Wo8dSeAI",
+   "id": "s76Wo8dSeAI",
+   "remixer": "Party Pupils",
+   "label": "Party Pupils Remix",
+   "original": {
+    "song": "looking-glass--brandy",
+    "youtube": "DVx8L7a3MuE"
+   },
+   "volume": 1
+  },
+  {
+   "title": "Baby Come Back (Party Pupils Remix feat. Mayer Hawthorne)",
+   "song": "Baby Come Back",
+   "artist": "Player",
+   "path": "https://www.youtube.com/watch?v=m9JBhtgpR1A",
+   "id": "m9JBhtgpR1A",
+   "remixer": "Party Pupils",
+   "label": "Party Pupils Remix feat. Mayer Hawthorne",
+   "original": {
+    "song": "player--baby-come-back",
+    "youtube": "BVXmy22EoLA"
+   },
+   "volume": 2
+  },
+  {
+   "title": "Turn Your Love Around (Party Pupils Remix)",
+   "song": "Turn Your Love Around",
+   "artist": "George Benson",
+   "path": "https://www.youtube.com/watch?v=s8WIbbqKGhQ",
+   "id": "s8WIbbqKGhQ",
+   "remixer": "Party Pupils",
+   "label": "Party Pupils Remix",
+   "original": {
+    "song": "george-benson--turn-your-love-around",
+    "youtube": "gA_kOJP94Hc"
+   },
+   "volume": 3
+  },
+  {
+   "title": "Georgy Porgy (Party Pupils Remix)",
+   "song": "Georgy Porgy",
+   "artist": "Toto",
+   "path": "https://www.youtube.com/watch?v=J9CogSVOhz0",
+   "id": "J9CogSVOhz0",
+   "remixer": "Party Pupils",
+   "label": "Party Pupils Remix",
+   "original": {
+    "song": "toto--georgy-porgy",
+    "youtube": "EWIgEtkE3GA"
+   },
+   "volume": 2
+  }
+ ],
+ "panel": {
+  "quotes": {
+   "Ride Like the Wind": {
+    "who": "Lou Ferreira, the Hashtag Scout",
+    "quote": "The only record with 'Yacht House' in its own title, released under Cross's name. This is where the tag comes from.",
+    "votes": "5/5"
+   },
+   "What You Won't Do for Love": {
+    "who": "Maurice Delahaye, the Vocal Keeper",
+    "quote": "Keeps 13 of the 17 lines, with a voice on for 43% of the track. The second verse is cut, and 'and I can't let go' goes round six times at 1:33. You can still sing along.",
+    "votes": "5/5"
+   },
+   "What a Fool Believes": {
+    "who": "Corinne Blythe-Vasquez, the Yacht Purist",
+    "quote": "The genre's founding text. If a yacht house list doesn't open the door with McDonald, it isn't one.",
+    "votes": "5/5"
+   },
+   "Lowdown": {
+    "who": "Lou Ferreira, the Hashtag Scout",
+    "quote": "First track on Yacht House Summer Vol 1. The tag starts here.",
+    "votes": "5/5"
+   },
+   "I Keep Forgettin'": {
+    "who": "Ingrid Solheim, the Remix Critic",
+    "quote": "Warren G and Nate Dogg built 'Regulate' on this hook in 1994, and Party Pupils' live sets mash the two together. A remix that knows the song's whole history.",
+    "votes": "5/5"
+   },
+   "Long Train Runnin'": {
+    "who": "Tunde Okafor-Marsh, the House DJ",
+    "quote": "A 1993 house remix took it to number 7 in the UK, twenty years after the original. Yacht house before anyone called it that.",
+    "votes": "4/5"
+   },
+   "Lotta Love": {
+    "who": "Ingrid Solheim, the Remix Critic",
+    "quote": "Joey Negro has re-edited disco since the 80s, and he named it a yacht mix himself.",
+    "votes": "4/5"
+   },
+   "Peg": {
+    "who": "Corinne Blythe-Vasquez, the Yacht Purist",
+    "quote": "Steely Dan is the hardest band to remix without losing the point. Vol 1 tries, and the panel wants to hear it before it stays.",
+    "votes": "4/5"
+   },
+   "I Can't Go for That": {
+    "who": "Ingrid Solheim, the Remix Critic",
+    "quote": "A Roland CompuRhythm loop to start with. It was always a dance record waiting.",
+    "votes": "5/5"
+   },
+   "How Long": {
+    "who": "Maurice Delahaye, the Vocal Keeper",
+    "quote": "Keeps 11 of 14 lines, nearly in the original's order, and the voice is on for 58% of the track at almost the same tempo. Closer to an extended edit than a flip, and the easiest one here to sing along to.",
+    "votes": "4/5"
+   },
+   "Reminiscing": {
+    "who": "Tunde Okafor-Marsh, the House DJ",
+    "quote": "About 94 up to 109 BPM, and the voice is on for under a third of the track. It's a groove record with Glenn Shorrock dropping in, which is what a DJ wants.",
+    "votes": "4/5"
+   },
+   "Biggest Part of Me": {
+    "who": "Ingrid Solheim, the Remix Critic",
+    "quote": "The one Party Pupils remix that really cuts the song up. It uses 13 of the 53 lines and ad-libs, jumps back through the original nine times, and sings for under a third of the track.",
+    "votes": "4/5"
+   },
+   "Steal Away": {
+    "who": "Corinne Blythe-Vasquez, the Yacht Purist",
+    "quote": "Already on our Yacht Rock list, and on Vol 2 of Party Pupils' own canon.",
+    "votes": "4/5"
+   },
+   "Brandy": {
+    "who": "Lou Ferreira, the Hashtag Scout",
+    "quote": "Vol 1, next to Lowdown and Peg. 1972 is early, but our Yacht Rock list already took it.",
+    "votes": "4/5"
+   },
+   "Baby Come Back": {
+    "who": "Ingrid Solheim, the Remix Critic",
+    "quote": "With Mayer Hawthorne on it. The one remix here with a guest from the 2010s soul revival.",
+    "votes": "4/5"
+   },
+   "Turn Your Love Around": {
+    "who": "Ingrid Solheim, the Remix Critic",
+    "quote": "Jay Graydon, Steve Lukather and Bill Champlin wrote it, so it's yacht royalty, and it's on Vol 3 and on the tag's Spotify list.",
+    "votes": "5/5"
+   },
+   "Georgy Porgy": {
+    "who": "Tunde Okafor-Marsh, the House DJ",
+    "quote": "Toto's most dance-floor groove, with Cheryl Lynn on the chorus. Vol 2.",
+    "votes": "4/5"
+   }
+  }
+ },
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ }
+}
