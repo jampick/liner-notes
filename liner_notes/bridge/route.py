@@ -9,6 +9,7 @@ delay with it, so the route is "easyeffects_sink>" plus that device.
 Finding the route costs three pactl calls, so Latency looks it up at most once a minute and never
 per request. A new measurement shows up within that minute.
 """
+
 import json
 import shutil
 import subprocess

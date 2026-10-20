@@ -1,4 +1,5 @@
 """A stand-in for `cliamp visstream`: emit (24 lines a second), silent (never writes) or die (3 lines, then exits)."""
+
 import json
 import sys
 import time

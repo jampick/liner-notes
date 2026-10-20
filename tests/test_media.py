@@ -31,11 +31,25 @@ def media(env):
     return env
 
 
-@pytest.mark.parametrize("header,want", [
-    (None, None), ("", None), ("bytes=0-99", (0, 99)), ("bytes=1000-", (1000, 1023)), ("bytes=1000-5000", (1000, 1023)),
-    ("bytes=-100", (924, 1023)), ("bytes=-5000", (0, 1023)), ("bytes=1024-", UNSATISFIABLE), ("bytes=-0", UNSATISFIABLE),
-    ("bytes=-", None), ("bytes=5-1", None), ("bytes=0-1,5-9", None), ("items=0-1", None), ("bytes=abc", None),
-])
+@pytest.mark.parametrize(
+    "header,want",
+    [
+        (None, None),
+        ("", None),
+        ("bytes=0-99", (0, 99)),
+        ("bytes=1000-", (1000, 1023)),
+        ("bytes=1000-5000", (1000, 1023)),
+        ("bytes=-100", (924, 1023)),
+        ("bytes=-5000", (0, 1023)),
+        ("bytes=1024-", UNSATISFIABLE),
+        ("bytes=-0", UNSATISFIABLE),
+        ("bytes=-", None),
+        ("bytes=5-1", None),
+        ("bytes=0-1,5-9", None),
+        ("items=0-1", None),
+        ("bytes=abc", None),
+    ],
+)
 def test_parse_range(header, want):
     assert parse_range(header, 1024) == want
 
@@ -74,12 +88,30 @@ def test_pictures_and_depth_maps(start, media):
 
 
 TRAVERSALS = [
-    "/v/../../secret.txt", "/v/..%2f..%2fsecret.mp4", "/v/%2e%2e%2fsecret12.mp4", "/v/AbCdEfGhIjK.mp4/../x", "/v/AbCdEfGhIjK.mp4%00",
-    "/m/demo/culture/../../secret.txt", "/m/demo/culture/..%2f..%2fsecret.webp", "/m/demo/../culture/poster.webp",
-    "/m/demo/culture/.poster.webp", "/m/demo/covers/poster.webp", "/m/../culture/poster.webp", "/m/demo/culture/%2e%2e/poster.webp",
-    "/d/demo/culture/../../secret.txt", "/d/demo/eras/..%2f..%2fera1.webp", "/d/demo/depth/x.png", "/d/Demo/culture/poster.webp",
-    "/p/../secret.html", "/p/..%2fsecret.html", "/p/demo.html/../x", "/p/.%2e/secret.stage.json",
-    "/journey/../songs/x.json", "/journey/..%2fx.json", "/song/../../etc.json", "/song/%2e%2e%2fpasswd.json",
+    "/v/../../secret.txt",
+    "/v/..%2f..%2fsecret.mp4",
+    "/v/%2e%2e%2fsecret12.mp4",
+    "/v/AbCdEfGhIjK.mp4/../x",
+    "/v/AbCdEfGhIjK.mp4%00",
+    "/m/demo/culture/../../secret.txt",
+    "/m/demo/culture/..%2f..%2fsecret.webp",
+    "/m/demo/../culture/poster.webp",
+    "/m/demo/culture/.poster.webp",
+    "/m/demo/covers/poster.webp",
+    "/m/../culture/poster.webp",
+    "/m/demo/culture/%2e%2e/poster.webp",
+    "/d/demo/culture/../../secret.txt",
+    "/d/demo/eras/..%2f..%2fera1.webp",
+    "/d/demo/depth/x.png",
+    "/d/Demo/culture/poster.webp",
+    "/p/../secret.html",
+    "/p/..%2fsecret.html",
+    "/p/demo.html/../x",
+    "/p/.%2e/secret.stage.json",
+    "/journey/../songs/x.json",
+    "/journey/..%2fx.json",
+    "/song/../../etc.json",
+    "/song/%2e%2e%2fpasswd.json",
 ]
 
 

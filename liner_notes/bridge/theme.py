@@ -5,6 +5,7 @@ and where the `current` link points). The font comes from `omarchy-font-current`
 path at most once every `font_every` seconds and outside the lock, so other requests get the last
 answer meanwhile; a slow or missing one just means no font.
 """
+
 import os
 import re
 import shutil

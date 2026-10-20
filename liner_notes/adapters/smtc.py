@@ -10,6 +10,7 @@ Contract for the helper's lines: {"title", "artist", "album", "durationSec", "po
 "lastUpdated" (ISO 8601, when positionSec was true), "status" ("Playing" | "Paused" | "Stopped"),
 "appId"}. Unknown keys are ignored.
 """
+
 import datetime as dt
 import json
 import os
@@ -27,10 +28,17 @@ def parse(line):
         at = dt.datetime.fromisoformat(str(d.get("lastUpdated")).replace("Z", "+00:00")).timestamp()
     except ValueError:
         at = time.time()
-    return NowPlaying(title=d["title"], artist=d.get("artist") or "", album=d.get("album") or "",
-                      duration=float(d.get("durationSec") or 0), position=float(d.get("positionSec") or 0), position_at=at,
-                      state={"Playing": "playing", "Paused": "paused"}.get(d.get("status"), "stopped"), source="smtc",
-                      ids={"app": d["appId"]} if d.get("appId") else {})
+    return NowPlaying(
+        title=d["title"],
+        artist=d.get("artist") or "",
+        album=d.get("album") or "",
+        duration=float(d.get("durationSec") or 0),
+        position=float(d.get("positionSec") or 0),
+        position_at=at,
+        state={"Playing": "playing", "Paused": "paused"}.get(d.get("status"), "stopped"),
+        source="smtc",
+        ids={"app": d["appId"]} if d.get("appId") else {},
+    )
 
 
 class SmtcAdapter(Adapter):

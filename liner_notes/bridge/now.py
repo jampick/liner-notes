@@ -11,6 +11,7 @@ snapshot doesn't carry a name, so `liner-notes play` writes it to state()/playli
 twin counts as its online list), else the journey that holds most of the loaded queue, else the
 first journey in the bank with the song.
 """
+
 import logging
 import os
 import re
@@ -245,11 +246,24 @@ class Now:
         _, m = self.lib.get()
         song = m.match(np.as_track())
         playlist = np.ids.get("cliamp_playlist") or self.playlist_file.get()
-        return {"ok": True, **base, "source": np.source or self.adapter.name, "state": np.state, "title": np.title,
-                "artist": np.artist, "album": np.album, "yt": np.ids.get("youtube"), "song": song,
-                "journey": self.lib.journey_for(song, playlist, self.qjourney), "playlist": playlist,
-                "position": round(r["position"], 3), "duration": np.duration, "epoch": r["epoch"],
-                "moving": r["moving"], "latency": r["latency"]}
+        return {
+            "ok": True,
+            **base,
+            "source": np.source or self.adapter.name,
+            "state": np.state,
+            "title": np.title,
+            "artist": np.artist,
+            "album": np.album,
+            "yt": np.ids.get("youtube"),
+            "song": song,
+            "journey": self.lib.journey_for(song, playlist, self.qjourney),
+            "playlist": playlist,
+            "position": round(r["position"], 3),
+            "duration": np.duration,
+            "epoch": r["epoch"],
+            "moving": r["moving"],
+            "latency": r["latency"],
+        }
 
     def wait(self, version, timeout=15):
         with self.cond:

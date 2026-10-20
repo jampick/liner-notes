@@ -15,6 +15,7 @@ and the position is held, so the page keeps its stills up instead of starting th
 
 The sampler stops after `idle` seconds without a reader and starts again on the next one.
 """
+
 import threading
 import time
 
@@ -107,14 +108,17 @@ class Clock:
                 self.starting = t
             if self.starting is not None and ((playing and pos < 3 and pos != old_raw) or t - self.starting > START_GIVEUP):
                 self.starting, self.samples, self.epoch = None, [], self.epoch + 1
-            if not same or (guess is not None and abs(pos - guess) > 0.3) or (not playing and old_raw is not None and abs(pos - old_raw) > 0.3):
+            if (
+                not same
+                or (guess is not None and abs(pos - guess) > 0.3)
+                or (not playing and old_raw is not None and abs(pos - old_raw) > 0.3)
+            ):
                 self.samples, self.epoch = [], self.epoch + 1
             if old_raw is not None and pos != old_raw:
                 self.changed_at = t
             elif old_raw is None:
                 self.changed_at = None
-            moving = (playing and self.starting is None and self.changed_at is not None
-                      and t - self.changed_at < STILL and pos > latency)
+            moving = playing and self.starting is None and self.changed_at is not None and t - self.changed_at < STILL and pos > latency
             if not moving:
                 self.samples = []  # a stall would bend the fit; start again once the position moves
             else:

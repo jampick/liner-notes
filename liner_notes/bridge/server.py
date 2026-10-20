@@ -12,6 +12,7 @@ With --lan it binds to every interface and every request from another machine mu
 pairing token: in the URL once (?t=...), then in a cookie. The pairing token is a different secret
 from the page token and never appears in a response body. LAN mode caps open connections.
 """
+
 import errno
 import hashlib
 import hmac
@@ -45,10 +46,12 @@ PORT = 47391
 log = logging.getLogger("liner_notes.bridge")
 
 APPLE_PREVIEWS = "https://audio-ssl.itunes.apple.com"  # the page plays and analyses Apple's song previews
-CSP = ("default-src 'self'; img-src 'self' data: blob:; "
-       f"media-src 'self' blob: {APPLE_PREVIEWS}; style-src 'self' 'unsafe-inline'; "
-       f"script-src 'self' 'unsafe-inline'; connect-src 'self' {APPLE_PREVIEWS}; font-src 'self' data:; frame-src 'none'; "
-       "object-src 'none'; base-uri 'none'")
+CSP = (
+    "default-src 'self'; img-src 'self' data: blob:; "
+    f"media-src 'self' blob: {APPLE_PREVIEWS}; style-src 'self' 'unsafe-inline'; "
+    f"script-src 'self' 'unsafe-inline'; connect-src 'self' {APPLE_PREVIEWS}; font-src 'self' data:; frame-src 'none'; "
+    "object-src 'none'; base-uri 'none'"
+)
 TOKEN_META = b'<meta name="liner-token" content="">'
 NULL_CORS = ("/now", "/theme")  # all a page opened from disk may read
 EXIT_PORT_BUSY = 3
@@ -209,7 +212,9 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
                     return False
                 given = self.headers.get("X-Liner-Token")
                 if not same_token(given):
-                    log.warning("POST %s refused from %s: %s page token", self.route(), self.client_address[0], "a stale" if given else "no")
+                    log.warning(
+                        "POST %s refused from %s: %s page token", self.route(), self.client_address[0], "a stale" if given else "no"
+                    )
                     self.send_json({"ok": False, "reason": "token", "error": "reload the page for the current token"}, 403)
                     return False
                 return True
@@ -367,8 +372,15 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
             o = self.headers.get("Origin")
             if not self.host_ok() or not o or not self.own_origin(o):
                 return self.send_json({"ok": False, "error": "origin"}, 403)
-            self.head(204, extra={"Access-Control-Allow-Methods": "GET, POST", "Access-Control-Allow-Headers": "Content-Type, X-Liner-Token",
-                                  "Access-Control-Max-Age": "600", "Content-Length": "0"})
+            self.head(
+                204,
+                extra={
+                    "Access-Control-Allow-Methods": "GET, POST",
+                    "Access-Control-Allow-Headers": "Content-Type, X-Liner-Token",
+                    "Access-Control-Max-Age": "600",
+                    "Content-Length": "0",
+                },
+            )
 
         def get(self):
             if not self.gate():
@@ -430,10 +442,14 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
         def index(self, bank):
             rows = "".join(
                 f"<li><a href='/p/{s}.html#companion'>{html.escape(j['title'])}</a> <small>{len(j['songs'])} songs</small></li>"
-                for s, j in sorted(bank.journeys.items()) if (paths.dist() / f"{s}.html").is_file())
-            body = (f"<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'>"
-                    f"<title>Liner Notes</title><style>body{{font:17px/1.5 Georgia,serif;margin:32px 16px;background:#111;color:#eee}}"
-                    f"a{{color:#f0c27b}}small{{color:#999}}li{{margin:10px 0}}</style><h1>Liner Notes</h1><ul>{rows or '<li>No built journeys yet.</li>'}</ul>").encode()
+                for s, j in sorted(bank.journeys.items())
+                if (paths.dist() / f"{s}.html").is_file()
+            )
+            body = (
+                f"<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'>"
+                f"<title>Liner Notes</title><style>body{{font:17px/1.5 Georgia,serif;margin:32px 16px;background:#111;color:#eee}}"
+                f"a{{color:#f0c27b}}small{{color:#999}}li{{margin:10px 0}}</style><h1>Liner Notes</h1><ul>{rows or '<li>No built journeys yet.</li>'}</ul>"
+            ).encode()
             self.send_body(body, "text/html; charset=utf-8", cache="no-store")
 
         def history(self, matcher):
@@ -443,7 +459,14 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
             out = []
             for h in ad.history(200):
                 t = h.get("track") or {}
-                out.append({"yt": youtube_id(t.get("path")), "song": matcher.match(t), "at": h.get("played_at"), "secs": t.get("duration_secs") or 0})
+                out.append(
+                    {
+                        "yt": youtube_id(t.get("path")),
+                        "song": matcher.match(t),
+                        "at": h.get("played_at"),
+                        "secs": t.get("duration_secs") or 0,
+                    }
+                )
             return self.send_json({"ok": True, "plays": out})
 
         def events(self):
@@ -539,7 +562,9 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
                     log.warning("cmd %s failed: %s", body["op"], e)
                     return self.send_json({"ok": False, "error": "the player didn't answer"}, 502)
                 return self.send_json({"ok": bool(ok)})
-            if path == "/play" and (re.fullmatch(r"[\w-]{11}", str(body.get("yt") or "")) or re.fullmatch(r"[a-z0-9-]+", str(body.get("song") or ""))):
+            if path == "/play" and (
+                re.fullmatch(r"[\w-]{11}", str(body.get("yt") or "")) or re.fullmatch(r"[a-z0-9-]+", str(body.get("song") or ""))
+            ):
                 if "jump" not in ad.capabilities:
                     return self.send_json({"ok": False, "error": f"{ad.name} can't jump to a song"})
                 _, matcher = lib.get()
@@ -574,9 +599,15 @@ def playing_song(np, bank):
         return out
     review = s.get("review") or {"state": "draft"}
     notes = s.get("notes") or {}
-    out.update(title=s["title"], artist=s["artist"], album=s.get("album") or np.get("album"), year=s.get("year"),
-               notes={k: notes[k] for k in ("listen_for", "made", "context", "leads_to", "unverified") if notes.get(k)},
-               review=review, draft=review.get("state") != "reviewed")
+    out.update(
+        title=s["title"],
+        artist=s["artist"],
+        album=s.get("album") or np.get("album"),
+        year=s.get("year"),
+        notes={k: notes[k] for k in ("listen_for", "made", "context", "leads_to", "unverified") if notes.get(k)},
+        review=review,
+        draft=review.get("state") != "reviewed",
+    )
     j = bank.journeys.get(np.get("journey") or "")
     if j:
         out["journey"] = {"slug": j["slug"], "title": j["title"]}
@@ -615,9 +646,13 @@ def tailscale_cert():
     d.mkdir(parents=True, exist_ok=True)
     crt, key = d / f"{name}.crt", d / f"{name}.key"
     if not crt.exists() or time.time() - crt.stat().st_mtime > 30 * 86400:
-        r = subprocess.run(["tailscale", "cert", "--cert-file", str(crt), "--key-file", str(key), name], capture_output=True, text=True, timeout=60)
+        r = subprocess.run(
+            ["tailscale", "cert", "--cert-file", str(crt), "--key-file", str(key), name], capture_output=True, text=True, timeout=60
+        )
         if r.returncode != 0:
-            raise RuntimeError(f"tailscale cert failed: {r.stderr.strip()}. If it's a permissions error: sudo tailscale set --operator=$USER")
+            raise RuntimeError(
+                f"tailscale cert failed: {r.stderr.strip()}. If it's a permissions error: sudo tailscale set --operator=$USER"
+            )
     return name, next((i for i in ips if ":" not in i), ips[0]), crt, key
 
 
@@ -686,9 +721,15 @@ def announce_pairing(url, tailscale, out=None):
     Without a terminal (systemd) it goes to state()/pairing, mode 0600, and the log says where."""
     out = out or sys.stdout
     if out.isatty():
-        print(f"On your {'tailnet' if tailscale else 'network'}: {url}\nAnyone with this address can see what you play and skip tracks. Stop the server to revoke it.", file=out)
+        print(
+            f"On your {'tailnet' if tailscale else 'network'}: {url}\nAnyone with this address can see what you play and skip tracks. Stop the server to revoke it.",
+            file=out,
+        )
         if not tailscale:
-            print("Plain http on a network address isn't a secure context, so phones won't keep the screen awake. --tailscale serves HTTPS.", file=out)
+            print(
+                "Plain http on a network address isn't a secure context, so phones won't keep the screen awake. --tailscale serves HTTPS.",
+                file=out,
+            )
         try:
             print(subprocess.run(["qrencode", "-t", "ansiutf8", url], capture_output=True, text=True, timeout=5).stdout, file=out)
         except (OSError, subprocess.SubprocessError):

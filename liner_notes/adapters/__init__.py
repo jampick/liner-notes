@@ -20,6 +20,7 @@ Adapters, in the order `auto` tries them:
     homeassistant  a Home Assistant media_player over its WebSocket API (Sonos, Cast, Apple TV, ...)
     lastfm         a Last.fm user's now-playing scrobble; no position, last resort
 """
+
 import time
 from dataclasses import asdict, dataclass, field
 
@@ -45,8 +46,12 @@ class NowPlaying:
 
     def as_track(self):
         """The cliamp-style track dict the matcher reads."""
-        return {"title": self.title, "artist": self.artist, "path": self.ids.get("path") or self.ids.get("url") or "",
-                "provider_meta": {k: v for k, v in self.ids.items() if k not in ("path", "url")}}
+        return {
+            "title": self.title,
+            "artist": self.artist,
+            "path": self.ids.get("path") or self.ids.get("url") or "",
+            "provider_meta": {k: v for k, v in self.ids.items() if k not in ("path", "url")},
+        }
 
     def key(self):
         return (self.title, self.artist, self.ids.get("path") or self.ids.get("url"), self.state)
@@ -100,8 +105,14 @@ class Adapter:
 def registry():
     from . import cliamp, homeassistant, lastfm, macos, mpris, smtc
 
-    return {"cliamp": cliamp.CliampAdapter, "mpris": mpris.MprisAdapter, "macos": macos.MacAdapter,
-            "smtc": smtc.SmtcAdapter, "homeassistant": homeassistant.HomeAssistantAdapter, "lastfm": lastfm.LastfmAdapter}
+    return {
+        "cliamp": cliamp.CliampAdapter,
+        "mpris": mpris.MprisAdapter,
+        "macos": macos.MacAdapter,
+        "smtc": smtc.SmtcAdapter,
+        "homeassistant": homeassistant.HomeAssistantAdapter,
+        "lastfm": lastfm.LastfmAdapter,
+    }
 
 
 def pick(name="auto", **opts):

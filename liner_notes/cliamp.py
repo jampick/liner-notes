@@ -9,6 +9,7 @@ When the socket isn't there (cliamp not running, or an older cliamp) it falls ba
 `cliamp` CLI, which speaks the same protocol for us. Only the bridge's few control endpoints
 and `liner-notes add` ever call an operation that changes anything.
 """
+
 import itertools
 import json
 import os

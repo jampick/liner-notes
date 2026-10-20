@@ -4,6 +4,7 @@ Every route takes its names from a fullmatch on the raw path ([a-z0-9-] slugs, [
 11-character YouTube ids), so nothing like ../ or %2f reaches the file system. During the move
 from the pilot, video is also read from ~/.cache/journeys/video.
 """
+
 import hashlib
 import re
 import threading

@@ -4,6 +4,7 @@ A song id is "artist--title" in lowercase ASCII, with the title's parentheticals
 "Massive Attack", "Unfinished Sympathy (2012 Mix)" -> "massive-attack--unfinished-sympathy".
 When two different recordings collide, the second gets "--<year>".
 """
+
 import re
 import unicodedata
 

@@ -62,7 +62,7 @@ def test_one_visstream_for_many_clients(start):
     b = start(bands_mode="emit")
     socks = [client(b.port) for _ in range(3)]
     for s in socks:
-        assert b"data: {\"bands\"" in read_until(s, b"data: ")
+        assert b'data: {"bands"' in read_until(s, b"data: ")
     bands = b.svc["bands"]
     assert bands.spawned == 1 and children() == 1
     for s in socks:

@@ -8,6 +8,7 @@ unreadable.
 The pairing token lets another machine in (--lan, --tailscale). It is new each start unless one is
 given, and never appears in a response body.
 """
+
 import os
 import re
 import secrets

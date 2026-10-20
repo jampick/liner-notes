@@ -1,4 +1,5 @@
 """cliamp over its V2 IPC socket: the first-class adapter, with events, control and the extras."""
+
 import os
 import time
 
@@ -20,9 +21,18 @@ def from_snapshot(s):
     if s.get("playlist"):
         ids["cliamp_playlist"] = s["playlist"]
     meta = {k: s[k] for k in ("playlist_revision", "index", "total", "shuffle") if k in s}
-    return NowPlaying(title=t.get("title") or "", artist=t.get("artist") or "", album=t.get("album") or "",
-                      duration=float(s.get("duration") or t.get("duration_secs") or 0), position=float(s.get("position") or 0),
-                      position_at=time.time(), state=s.get("state") or "stopped", source="cliamp", ids=ids, meta=meta)
+    return NowPlaying(
+        title=t.get("title") or "",
+        artist=t.get("artist") or "",
+        album=t.get("album") or "",
+        duration=float(s.get("duration") or t.get("duration_secs") or 0),
+        position=float(s.get("position") or 0),
+        position_at=time.time(),
+        state=s.get("state") or "stopped",
+        source="cliamp",
+        ids=ids,
+        meta=meta,
+    )
 
 
 class CliampAdapter(Adapter):

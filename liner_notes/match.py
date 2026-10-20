@@ -5,6 +5,7 @@ for provider tracks, provider_meta. We try exact aliases first (a YouTube id, a 
 provider id), then a normalised artist and title, so "Protection (Remastered 2006)" by
 "Massive Attack - Topic" still lands on massive-attack--protection.
 """
+
 from .ids import clean_artist, clean_title, key, split_upload_title, youtube_id
 
 PROVIDER_KEYS = ("spotify", "tidal", "qobuz", "navidrome", "jellyfin", "plex", "emby", "ytmusic", "soundcloud", "local")

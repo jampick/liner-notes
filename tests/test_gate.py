@@ -41,8 +41,19 @@ def test_origins(start, env):
     assert st == 200 and h.get("Access-Control-Allow-Origin") == "null"
     assert b.req("GET", "/theme", origin="null")[2].get("Access-Control-Allow-Origin") == "null"
     # and nothing else: above all not a page, which carries the page token
-    for path in ("/history", "/lyrics", "/v/", "/p/demo.html", "/journey/demo.json", "/song/christopher-cross--sailing.json",
-                 "/song", "/events", "/m/demo/culture/x.webp", "/d/demo/culture/x.webp", "/"):
+    for path in (
+        "/history",
+        "/lyrics",
+        "/v/",
+        "/p/demo.html",
+        "/journey/demo.json",
+        "/song/christopher-cross--sailing.json",
+        "/song",
+        "/events",
+        "/m/demo/culture/x.webp",
+        "/d/demo/culture/x.webp",
+        "/",
+    ):
         h = b.req("HEAD" if path == "/events" else "GET", path, origin="null")[2]
         assert "Access-Control-Allow-Origin" not in h, path
     st, _, h = b.req("GET", "/history", origin=f"http://127.0.0.1:{b.port}")
@@ -78,8 +89,10 @@ def test_preflight(start):
 @pytest.mark.parametrize("length", ["-1", "abc", "1e3", "99999999999", " "])
 def test_bad_content_length_gets_400_fast(start, length):
     b = start()
-    head = (f"POST /cmd HTTP/1.1\r\nHost: 127.0.0.1:{b.port}\r\nOrigin: http://127.0.0.1:{b.port}\r\n"
-            f"X-Liner-Token: {b.token}\r\nContent-Length: {length}\r\n\r\n").encode()
+    head = (
+        f"POST /cmd HTTP/1.1\r\nHost: 127.0.0.1:{b.port}\r\nOrigin: http://127.0.0.1:{b.port}\r\n"
+        f"X-Liner-Token: {b.token}\r\nContent-Length: {length}\r\n\r\n"
+    ).encode()
     out, took = raw(b.port, head + b'{"op":"next"}')
     assert out.startswith(b"HTTP/1.1 400") and took < 1.0, (length, out[:60])
 
@@ -172,8 +185,26 @@ def test_streams_stay_open_over_tls(env):
     if not shutil.which("openssl"):
         pytest.skip("no openssl to make a test certificate")
     crt, key = env["tmp"] / "t.crt", env["tmp"] / "t.key"
-    subprocess.run(["openssl", "req", "-x509", "-newkey", "rsa:2048", "-nodes", "-subj", "/CN=localhost", "-days", "1",
-                    "-keyout", str(key), "-out", str(crt)], check=True, capture_output=True)
+    subprocess.run(
+        [
+            "openssl",
+            "req",
+            "-x509",
+            "-newkey",
+            "rsa:2048",
+            "-nodes",
+            "-subj",
+            "/CN=localhost",
+            "-days",
+            "1",
+            "-keyout",
+            str(key),
+            "-out",
+            str(crt),
+        ],
+        check=True,
+        capture_output=True,
+    )
     fake = FakeCliamp(env["sock"], [dict(t) for t in TRACKS])
     srv, _ = bridge.make_server(0, adapter=CliampAdapter(), roots=[env["root"]], tls=(crt, key))
     threading.Thread(target=srv.serve_forever, daemon=True).start()
@@ -244,8 +275,26 @@ def test_an_idle_tls_peer_doesnt_stall_the_server(env):
     if not shutil.which("openssl"):
         pytest.skip("no openssl to make a test certificate")
     crt, key = env["tmp"] / "t.crt", env["tmp"] / "t.key"
-    subprocess.run(["openssl", "req", "-x509", "-newkey", "rsa:2048", "-nodes", "-subj", "/CN=localhost", "-days", "1",
-                    "-keyout", str(key), "-out", str(crt)], check=True, capture_output=True)
+    subprocess.run(
+        [
+            "openssl",
+            "req",
+            "-x509",
+            "-newkey",
+            "rsa:2048",
+            "-nodes",
+            "-subj",
+            "/CN=localhost",
+            "-days",
+            "1",
+            "-keyout",
+            str(key),
+            "-out",
+            str(crt),
+        ],
+        check=True,
+        capture_output=True,
+    )
     srv, _ = bridge.make_server(0, adapter=CliampAdapter(), roots=[env["root"]], tls=(crt, key))
     srv.handshake_timeout = 1
     threading.Thread(target=srv.serve_forever, daemon=True).start()

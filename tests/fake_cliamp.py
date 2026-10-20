@@ -9,6 +9,7 @@ fake.lyrics_delay makes the `lyrics` operation slow; it answers for whatever is 
 finishes, the way cliamp does. fake.restart() removes the socket and makes a new one. Every
 operation is logged in fake.ops; fake.calls counts IPC methods.
 """
+
 import json
 import os
 import socket
@@ -66,9 +67,18 @@ class FakeCliamp:
 
     def snapshot(self):
         t = dict(self.tracks[self.index], index=self.index)
-        return {"revision": self.revision, "playlist_revision": 1, "state": self.state, "track": t, "logical_track": t,
-                "position": self.position(), "duration": t.get("duration_secs", 200), "index": self.index,
-                "total": len(self.tracks), "shuffle": self.shuffle}
+        return {
+            "revision": self.revision,
+            "playlist_revision": 1,
+            "state": self.state,
+            "track": t,
+            "logical_track": t,
+            "position": self.position(),
+            "duration": t.get("duration_secs", 200),
+            "index": self.index,
+            "total": len(self.tracks),
+            "shuffle": self.shuffle,
+        }
 
     def play(self, index):
         """Change song the way cliamp does: the new title at once, the old position for a while."""
@@ -142,8 +152,14 @@ class FakeCliamp:
         self.jobs[jid] = {"id": jid, "operation": op, "state": "succeeded" if result is not None else "failed", "result": result}
 
     def lyrics_for(self, track):
-        return {"ok": True, "lyrics": [{"start": 1.5, "text": f"lyrics of {track['title']}"}, {"start": 4.0, "text": "second line"},
-                                       {"start": 7.0, "text": "third line"}]}
+        return {
+            "ok": True,
+            "lyrics": [
+                {"start": 1.5, "text": f"lyrics of {track['title']}"},
+                {"start": 4.0, "text": "second line"},
+                {"start": 7.0, "text": "third line"},
+            ],
+        }
 
     def _op(self, op, params):
         if op == "queue.list":

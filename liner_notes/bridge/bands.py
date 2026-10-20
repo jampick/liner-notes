@@ -5,6 +5,7 @@ when the last one leaves. If visstream exits while clients are still listening, 
 again after a second. Each subscriber gets a small queue; a slow one loses old frames rather
 than holding up the others.
 """
+
 import logging
 import queue
 import select
@@ -79,7 +80,9 @@ class Bands:
                     self.thread, self.proc = None, None
                     return
                 try:
-                    proc = self.proc = subprocess.Popen(self.command(), stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
+                    proc = self.proc = subprocess.Popen(
+                        self.command(), stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL
+                    )
                     self.spawned += 1
                 except OSError as e:
                     log.warning("bands: can't start visstream: %s", e)

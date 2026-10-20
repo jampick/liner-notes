@@ -8,8 +8,25 @@ from liner_notes.adapters import Adapter, NowPlaying
 
 from .bridge_kit import TRACKS
 
-NOW_KEYS = {"ok", "version", "source", "state", "title", "artist", "album", "yt", "song", "journey", "playlist",
-            "position", "duration", "epoch", "moving", "latency", "can"}
+NOW_KEYS = {
+    "ok",
+    "version",
+    "source",
+    "state",
+    "title",
+    "artist",
+    "album",
+    "yt",
+    "song",
+    "journey",
+    "playlist",
+    "position",
+    "duration",
+    "epoch",
+    "moving",
+    "latency",
+    "can",
+}
 
 
 def test_now_shape_and_matching(start):
@@ -127,7 +144,9 @@ def test_adapter_without_extras(start):
             return True
 
         def now(self):
-            return NowPlaying(title="Sailing", artist="Christopher Cross", duration=255, position=10, position_at=0, state="paused", source="plain")
+            return NowPlaying(
+                title="Sailing", artist="Christopher Cross", duration=255, position=10, position_at=0, state="paused", source="plain"
+            )
 
         def command(self, op):
             self.op = op

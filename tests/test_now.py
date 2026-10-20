@@ -144,8 +144,11 @@ def test_journey_resolution(env):
     assert lib.journey_for(song, "Soul Rap Covers") == "demo"  # a playlist with no journey
     assert lib.journey_for("christopher-cross--sailing", "Trip-Hop") == "demo"  # not on that journey
     assert lib.journey_for(None) is None
-    tracks = [{"title": "Teardrop", "artist": "Massive Attack", "path": "/x/journeys/audio/u7K72X4eo_s.webm"},
-              {"title": "Protection", "artist": "Massive Attack", "path": "https://www.youtube.com/watch?v=0Rw-UsRPNqc"}, {"title": "?", "path": "y"}]
+    tracks = [
+        {"title": "Teardrop", "artist": "Massive Attack", "path": "/x/journeys/audio/u7K72X4eo_s.webm"},
+        {"title": "Protection", "artist": "Massive Attack", "path": "https://www.youtube.com/watch?v=0Rw-UsRPNqc"},
+        {"title": "?", "path": "y"},
+    ]
     assert lib.queue_journey(tracks) == "trip-hop"
     assert lib.queue_journey(tracks[1:]) is None  # a tie says nothing
 
@@ -209,7 +212,10 @@ def test_exact_offline_name_from_play(start, env):
     """port/build's play writes the cliamp playlist's exact name, "(offline)" and all, no newline."""
     from liner_notes.bank import write_json
 
-    write_json(env["root"] / "journeys/yacht-rock/journey.json", {"slug": "yacht-rock", "title": "Yacht Rock", "songs": ["christopher-cross--sailing"], "eras": []})
+    write_json(
+        env["root"] / "journeys/yacht-rock/journey.json",
+        {"slug": "yacht-rock", "title": "Yacht Rock", "songs": ["christopher-cross--sailing"], "eras": []},
+    )
     st = env["tmp"] / "state/liner-notes"
     st.mkdir(parents=True, exist_ok=True)
     (st / "playlist").write_text("Yacht Rock (offline)")

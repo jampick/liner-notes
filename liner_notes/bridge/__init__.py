@@ -28,11 +28,23 @@ clock.py smooths the position; tokens.py keeps the page token (state()/token) ap
 pairing token; lyrics.py, bands.py, media.py and theme.py serve one route family each. The only
 files written are state()/token and, in LAN mode without a terminal, state()/pairing.
 """
+
 from http.server import ThreadingHTTPServer
 
 from .clock import Clock
 from .now import Library, Now
 from .server import PORT, Server, make_handler, make_server, playing_song, serve, setup_logging
 
-__all__ = ["PORT", "Clock", "Library", "Now", "Server", "ThreadingHTTPServer", "make_handler", "make_server", "playing_song", "serve",
-           "setup_logging"]
+__all__ = [
+    "PORT",
+    "Clock",
+    "Library",
+    "Now",
+    "Server",
+    "ThreadingHTTPServer",
+    "make_handler",
+    "make_server",
+    "playing_song",
+    "serve",
+    "setup_logging",
+]

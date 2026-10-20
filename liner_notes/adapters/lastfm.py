@@ -4,6 +4,7 @@ There's no position, so the stage shows the song's notes in order without timing
 music. Settings: LINER_NOTES_LASTFM_USER and LINER_NOTES_LASTFM_KEY (an API key from
 https://www.last.fm/api/account/create). It polls every 15 seconds, well under Last.fm's limits.
 """
+
 import json
 import os
 import time
@@ -28,8 +29,14 @@ def parse(doc):
         ids["mbid"] = t["mbid"]
     if t.get("url"):
         ids["lastfm_url"] = t["url"]
-    return NowPlaying(title=t.get("name") or "", artist=(t.get("artist") or {}).get("#text", ""),
-                      album=(t.get("album") or {}).get("#text", ""), state="playing", source="lastfm", ids=ids)
+    return NowPlaying(
+        title=t.get("name") or "",
+        artist=(t.get("artist") or {}).get("#text", ""),
+        album=(t.get("album") or {}).get("#text", ""),
+        state="playing",
+        source="lastfm",
+        ids=ids,
+    )
 
 
 class LastfmAdapter(Adapter):
