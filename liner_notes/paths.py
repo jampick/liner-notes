@@ -51,6 +51,11 @@ def config_file():
     return _env_path("LINER_NOTES_CONFIG", xdg / "liner-notes" / "config.toml")
 
 
+def user_systemd_dir():
+    xdg = _env_path("XDG_CONFIG_HOME", Path.home() / ".config")
+    return _env_path("LINER_NOTES_SYSTEMD_DIR", xdg / "systemd" / "user")
+
+
 def roots():
     """Data roots, highest priority first."""
     out = []

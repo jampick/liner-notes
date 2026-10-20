@@ -13,6 +13,8 @@ import tomllib
 
 from . import paths
 
+PORT = 47391  # the bridge, on loopback
+
 KEYS = {
     "sophisti": "Sophisti-Pop",
     "soulrap": "Soul Rap Covers",

@@ -16,6 +16,7 @@ def iso(tmp_path, monkeypatch):
     monkeypatch.setenv("LINER_NOTES_PILOT_CACHE", str(d["pilot_cache"]))
     monkeypatch.setenv("LINER_NOTES_CONFIG", str(tmp_path / "config.toml"))
     monkeypatch.setenv("CLIAMP_CONFIG_DIR", str(d["cliamp"]))
+    monkeypatch.setenv("LINER_NOTES_SYSTEMD_DIR", str(tmp_path / "systemd"))
     monkeypatch.delenv("LINER_NOTES_OFFLINE", raising=False)
     monkeypatch.delenv("LINER_NOTES_WORKSPACE", raising=False)
     return d
