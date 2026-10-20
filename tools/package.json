@@ -1,9 +1,12 @@
 {
   "name": "liner-notes-headless-checks",
   "private": true,
-  "description": "Headless browser checks for built Liner Notes pages. Uses the system Chromium; never opens a visible window.",
+  "description": "Headless browser checks for Liner Notes pages, against tools/fake_bridge.py. Uses the system Chromium; never opens a visible window.",
   "license": "MIT",
+  "scripts": {
+    "test": "node scenarios.js"
+  },
   "dependencies": {
-    "playwright-core": "1.48.2"
+    "playwright-core": "1.64.1"
   }
 }

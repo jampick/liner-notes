@@ -2,7 +2,7 @@
 // and the page must never POST (which would change the music).   node companion.js <bridge url> <slug> <out dir>
 const { chromium } = require('playwright-core');
 const [bridge, slug, out] = process.argv.slice(2);
-const exe = process.env.CHROMIUM || '/usr/bin/chromium';
+const exe = process.env.CHROMIUM || '/usr/lib/chromium/chromium';
 (async () => {
   const now = await (await fetch(bridge + '/now')).json();
   const browser = await chromium.launch({ executablePath: exe, headless: true });

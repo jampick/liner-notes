@@ -3,7 +3,7 @@
 // Never opens a visible window.   node shoot.js <built html> <out dir>
 const { chromium } = require('playwright-core');
 const file = require('path').resolve(process.argv[2]), out = process.argv[3];
-const exe = process.env.CHROMIUM || '/usr/bin/chromium';
+const exe = process.env.CHROMIUM || '/usr/lib/chromium/chromium';
 (async () => {
   const browser = await chromium.launch({ executablePath: exe, headless: true });
   let failed = 0;
