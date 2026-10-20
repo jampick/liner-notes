@@ -1,0 +1,79 @@
+{
+ "id": "lil-jon-the-east-side-boyz-ai-soul-cover--get-low",
+ "title": "Get Low",
+ "artist": "Lil Jon & the East Side Boyz (AI soul cover)",
+ "year": 2002,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it. On Kings of Crunk (October 2002); the single came out February 18, 2003, and charted through 2003.",
+ "album": "YouTube upload; the original is on Kings of Crunk",
+ "aliases": {
+  "youtube": [
+   "tbz9hJJf8jQ"
+  ],
+  "titles": [
+   "Lil Jon - Get Low (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Lil Jon produced it for BME and TVT, and Kings of Crunk was cut across a long list of rooms, among them Stankonia, Patchwerk and The Zone in Atlanta. On the One Song podcast in 2025 he played the demo, then called 'Let It Go', with Kaine of Ying Yang Twins singing an Auto-Tuned chorus Jon called the wackest he ever did. His engineer Ray Seay had the idea of moving the Twins' whispered, melodic part to the top of the track.",
+  "context": "Crunk had come out of Memphis strip clubs and Miami bass, and Lil Jon sold two gold records independently before TVT signed him in 2001. 'Get Low' is the single credited with taking it national: number two on the Hot 100, number 11 for all of 2003, and Kings of Crunk was the best-selling independent album of 2003 and 2004. A year later Dave Chappelle was playing Lil Jon on television.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "the Ying Yang Twins' hushed, half-sung part, moved to the front on Ray Seay's suggestion."
+   },
+   {
+    "where": "the chorus",
+    "note": "a shouted chant that calls out where to dance and the crowd answers, the call-and-response crunk takes from 1980s rap."
+   }
+  ],
+  "leads_to": {
+   "artist": "Usher featuring Lil Jon and Ludacris",
+   "title": "Yeah!",
+   "year": 2004,
+   "why": "Lil Jon's own sequel: it reuses a line from 'Get Low' and took his crunk sound to number one."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Get_Low_(Lil_Jon_%26_the_East_Side_Boyz_song)",
+   "https://en.wikipedia.org/wiki/Kings_of_Crunk",
+   "https://en.wikipedia.org/wiki/Crunk",
+   "https://www.aol.com/lil-jon-premieres-scrapped-version-205204770.html",
+   "https://en.wikipedia.org/wiki/Chappelle%27s_Show",
+   "https://en.wikipedia.org/wiki/Need_for_Speed:_Underground"
+  ],
+  "unverified": "One search summary said Jon started the song in the late 1990s after hearing DMX's 'Party Up'; I couldn't read that in a source, so it's out."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Chappelle's Lil Jon",
+   "line": "In 2004 Chappelle's Show ran 'A Moment in the Life of Lil Jon', with Chappelle playing him; the real Lil Jon appears in one and credited the sketch with raising his profile.",
+   "wiki": "Chappelle's_Show",
+   "source": "https://en.wikipedia.org/wiki/Chappelle%27s_Show"
+  },
+  {
+   "kind": "screen",
+   "title": "Need for Speed: Underground",
+   "line": "The theme song of EA's November 2003 street-racing game, which sold about 15 million copies.",
+   "wiki": "Need_for_Speed:_Underground",
+   "source": "https://en.wikipedia.org/wiki/Need_for_Speed:_Underground"
+  },
+  {
+   "kind": "live",
+   "title": "2024 Democratic convention",
+   "line": "Lil Jon performed a version with altered words at the 2024 Democratic National Convention.",
+   "wiki": "Get_Low_(Lil_Jon_&_the_East_Side_Boyz_song)",
+   "source": "https://en.wikipedia.org/wiki/Get_Low_(Lil_Jon_%26_the_East_Side_Boyz_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-5)",
+  "written_on": "2026-10-20"
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "id": "nas-ai-soul-cover--n-y-state-of-mind",
+ "title": "N.Y. State of Mind",
+ "artist": "Nas (AI soul cover)",
+ "year": 1994,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Illmatic",
+ "aliases": {
+  "youtube": [
+   "gnKdFuDGyVc"
+  ],
+  "titles": [
+   "N.Y. State of Mind - 1950's Soul Version"
+  ]
+ },
+ "notes": {
+  "made": "DJ Premier built it from a Kool & the Gang drum break ('N.T.'), a piano loop from Joe Chambers' 1978 'Mind Rain' and the chirping figure from Donald Byrd's 'Flight Time'. For the chorus he scratched in Rakim from Eric B. & Rakim's 'Mahogany' and Nas's own voice from Main Source's 'Live at the Barbeque'. Premier says Nas wrote the verses on the spot in the studio, mumbled them to himself, and did the first verse in one take.",
+  "context": "Illmatic came out on Columbia on April 19, 1994, with Nas 20 years old and the Queensbridge Houses, hit hard by crack through the 1980s, all over it. It sold 59,000 copies in its first week and none of its singles charted much, but The Source gave it five mics, and over the next few years it became the album New York rappers measured themselves against. This is its first full song after the intro.",
+  "listen_for": [
+   {
+    "where": "the opening bars",
+    "note": "the song opens on a loop from Donald Byrd's 'Flight Time', and the Joe Chambers piano carries it from there, a minor-key figure a soul band can play as chords."
+   },
+   {
+    "where": "the chorus",
+    "note": "there's no sung hook, only scratched Rakim and early Nas, so a soul cover has to write a melody where Premier put a turntable."
+   }
+  ],
+  "leads_to": {
+   "artist": "Joe Chambers",
+   "title": "Mind Rain",
+   "year": 1978,
+   "why": "The jazz drummer's piano piece from Double Exposure is the menace under the whole song."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/N.Y._State_of_Mind",
+   "https://en.wikipedia.org/wiki/Illmatic"
+  ],
+  "unverified": "Which of the four Illmatic studios the song was cut in; the song's 1992 recording date is unsourced on Wikipedia. I didn't confirm from a page I read that 'The Genesis' contains the 'Live at the Barbeque' snippet, so the panel correction rests on that point being shaky rather than wrong."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Games and Ozark",
+   "line": "It's on the soundtracks of True Crime: New York City and Saints Row 2, and Ozark took the title of a season 4 episode, 'Cousin of Death', from one of its lines.",
+   "wiki": "N.Y._State_of_Mind",
+   "source": "https://en.wikipedia.org/wiki/N.Y._State_of_Mind"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-3)",
+  "written_on": "2026-10-20"
+ }
+}

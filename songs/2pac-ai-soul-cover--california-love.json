@@ -1,0 +1,70 @@
+{
+ "id": "2pac-ai-soul-cover--california-love",
+ "title": "California Love",
+ "artist": "2Pac (AI soul cover)",
+ "year": 1995,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it. Released as a single on December 3, 1995; its two weeks at number one came in 1996.",
+ "album": "YouTube upload; the original is on single (remix on All Eyez on Me, 1996)",
+ "aliases": {
+  "youtube": [
+   "Zzwk-JjfX80"
+  ],
+  "titles": [
+   "California Love (1950s Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Dr. Dre first made it for himself, with three of his own verses and Roger Troutman's talk-box chorus, before Suge Knight pushed for 2Pac to take it over. The piano-and-horn hook comes from Joe Cocker's 1972 'Woman to Woman', by way of EPMD's 'Knick Knack Patty Wack', and Troutman's talk box reworks his own 1981 'So Ruff, So Tuff'. The remix on the album, by Laylaw, uses Kleeer's 'Intimate Connection' instead.",
+  "context": "Knight posted 2Pac's $1.4 million bail in October 1995 and signed him to Death Row, and this was the comeback single. It went out in December as a double A-side with 'How Do U Want It' and topped the Hot 100 for two weeks. Four months after the Source Awards, Death Row answered New York with a song about California.",
+  "listen_for": [
+   {
+    "where": "the opening and the chorus",
+    "note": "Troutman sings the hook through a talk box, a real melody, so a soul singer can take it straight off the original."
+   },
+   {
+    "where": "the riff under the verses",
+    "note": "the piano and horns are Joe Cocker's 'Woman to Woman', a 1972 riff that had been a breakdance break for years."
+   }
+  ],
+  "leads_to": {
+   "artist": "Joe Cocker",
+   "title": "Woman to Woman",
+   "year": 1972,
+   "why": "The B-side of 'Midnight Rider', co-written with Chris Stainton, whose piano-and-horn riff Dre turned into 2Pac's homecoming."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/California_Love",
+   "https://en.wikipedia.org/wiki/Woman_to_Woman_(Joe_Cocker_song)",
+   "https://en.wikipedia.org/wiki/Suge_Knight",
+   "https://en.wikipedia.org/wiki/East_Coast%E2%80%93West_Coast_hip-hop_rivalry"
+  ],
+  "unverified": "Jimmy Iovine says Interscope and Time Warner fronted the bail money rather than Knight himself (Complex); I kept the plain 'Knight posted bail' from Wikipedia."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Thunderdome in 2095",
+   "line": "Hype Williams directed a video set in a desert in 2095, from Jada Pinkett Smith's idea based on Mad Max Beyond Thunderdome; the remix video recasts it as a nightmare ending at a Death Row house party.",
+   "wiki": "Mad_Max_Beyond_Thunderdome",
+   "source": "https://en.wikipedia.org/wiki/California_Love"
+  },
+  {
+   "kind": "chart",
+   "title": "Two weeks at the top",
+   "line": "As a double A-side with 'How Do U Want It' it held number one on the Hot 100 for two weeks, and topped the charts in Italy, New Zealand and Sweden.",
+   "wiki": "California_Love",
+   "source": "https://en.wikipedia.org/wiki/California_Love"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-3)",
+  "written_on": "2026-10-20"
+ }
+}

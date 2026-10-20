@@ -1,0 +1,69 @@
+{
+ "id": "too-short-ai-soul-cover--the-ghetto",
+ "title": "The Ghetto",
+ "artist": "Too $hort (AI soul cover)",
+ "year": 1990,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Short Dog's in the House",
+ "aliases": {
+  "youtube": [
+   "fG4fgAi32aA"
+  ],
+  "titles": [
+   "Too $hort – The Ghetto (50s Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Too Short and Al Eaton produced and mixed it at One Little Indian Studios in El Cerrito, across the bay from San Francisco, with Eaton on guitar and Keenan 'The Maestro' Foster on keys. The instrumental is built on Donny Hathaway's 1969 song of the same name, so Hathaway and Leroy Hutson share the writing credit. Gerald Levert sings the chorus.",
+  "context": "Jive released it on October 8, 1990, as the lead single from Short Dog's in the House, his first album made for the label after it reissued his Oakland independent records nationally. The song is about the crack years in Oakland's poor neighborhoods, and it takes a swipe at the city for putting money toward a stadium for the Raiders. It reached 42 on the Hot 100 and three on the rap chart, and the album went platinum.",
+  "listen_for": [
+   {
+    "where": "the chorus",
+    "note": "Gerald Levert sings it, so the original already has a soul singer on the hook and a tune to keep."
+   },
+   {
+    "where": "the groove under the verses",
+    "note": "Built on Hathaway's 'The Ghetto', a long, mostly instrumental 1969 jam, which a soul cover is taking back home."
+   }
+  ],
+  "leads_to": {
+   "artist": "Donny Hathaway",
+   "title": "The Ghetto",
+   "year": 1969,
+   "why": "The Atlantic single from Everything Is Everything that Too Short built his record on: Hathaway on Wurlitzer, a conga solo, street talk and his baby daughter Lalah near the end."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Ghetto_(Too_Short_song)",
+   "https://en.wikipedia.org/wiki/The_Ghetto_(Donny_Hathaway_song)",
+   "https://albumism.com/features/too-short-short-dogs-in-the-house-album-anniversary"
+  ],
+  "unverified": "Whether Hathaway's recording is sampled directly or replayed isn't clear from what I read; Wikipedia says the instrumental is 'based on' it, so the notes say built on."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number 42, number 3 rap",
+   "line": "The single reached 42 on the Hot 100, 12 on the R&B chart and three on Hot Rap Singles.",
+   "wiki": "The_Ghetto_(Too_Short_song)",
+   "source": "https://en.wikipedia.org/wiki/The_Ghetto_(Too_Short_song)"
+  },
+  {
+   "kind": "sample",
+   "title": "Hathaway's most famous rap use",
+   "line": "Wikipedia's article on Hathaway's song names Too Short's record, with Levert on the chorus, as the best-known hip-hop use of it.",
+   "wiki": "The_Ghetto_(Donny_Hathaway_song)",
+   "source": "https://en.wikipedia.org/wiki/The_Ghetto_(Donny_Hathaway_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-1)",
+  "written_on": "2026-10-20"
+ }
+}

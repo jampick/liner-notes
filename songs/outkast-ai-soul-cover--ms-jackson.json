@@ -1,0 +1,71 @@
+{
+ "id": "outkast-ai-soul-cover--ms-jackson",
+ "title": "Ms. Jackson",
+ "artist": "OutKast (AI soul cover)",
+ "year": 2000,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Stankonia",
+ "aliases": {
+  "youtube": [
+   "s90T-CoiDhE"
+  ],
+  "titles": [
+   "Outkast - Ms. Jackson (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "André said it started as an acoustic guitar song he was playing at home. Earthtone III (André, Big Boi and Mr. DJ, David Sheats) produced it at Stankonia, the Atlanta studio the duo had bought from Bobby Brown in 1998. The track is usually credited with a sample of the Brothers Johnson's 'Strawberry Letter 23', pitched and run backwards, though the Rock Hall calls it an echo of that record's textures rather than an exact lift.",
+  "context": "André had split from Erykah Badu in 1998; their son Seven was born in November 1997, and the song is a loosely fictional apology to the mother of the woman he left, promising to support the child. It came out on October 24, 2000, a week before Stankonia, which sold 525,844 in its first week and sat behind Jay-Z at number two. It was OutKast's first number one, in February 2001, and Badu later said her mother loved it enough to get a 'Ms. Jackson' license plate.",
+  "listen_for": [
+   {
+    "where": "the chorus",
+    "note": "André sings it rather than raps it, an apology melody that already works as a soul refrain."
+   },
+   {
+    "where": "under the verses",
+    "note": "the backwards, smeared guitar textures traced to the Brothers Johnson's 'Strawberry Letter 23', Quincy Jones' 1977 production of a Shuggie Otis song."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Brothers Johnson",
+   "title": "Strawberry Letter 23",
+   "year": 1977,
+   "why": "The record usually named under 'Ms. Jackson', Quincy Jones producing and Lee Ritenour recreating Shuggie Otis's guitar solo; it went to number one R&B."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ms._Jackson",
+   "https://en.wikipedia.org/wiki/Stankonia",
+   "https://en.wikipedia.org/wiki/André_3000",
+   "https://rockhall.com/sonic-connections/sorry-ms-jackson-a-hip-hop-symphony/",
+   "https://en.wikipedia.org/wiki/Strawberry_Letter_23"
+  ],
+  "unverified": "Wikipedia flags the 'Strawberry Letter 23' sample as needing a better source, and the Rock Hall says it isn't an exact sample; I couldn't settle exactly what was lifted."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number one in February 2001",
+   "line": "It topped the Hot 100 for one week, on February 17, 2001, and stayed on the chart 22 weeks. It also reached number one in Germany, the Netherlands, Norway and Sweden.",
+   "wiki": "Ms._Jackson",
+   "source": "https://en.wikipedia.org/wiki/Ms._Jackson"
+  },
+  {
+   "kind": "award",
+   "title": "Grammy, 2002",
+   "line": "Best Rap Performance by a Duo or Group at the 44th Grammys, the same night Stankonia won Best Rap Album.",
+   "wiki": "44th_Annual_Grammy_Awards",
+   "source": "https://en.wikipedia.org/wiki/Stankonia"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-5)",
+  "written_on": "2026-10-20"
+ }
+}

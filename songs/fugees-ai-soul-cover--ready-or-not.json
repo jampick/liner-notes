@@ -1,0 +1,76 @@
+{
+ "id": "fugees-ai-soul-cover--ready-or-not",
+ "title": "Ready or Not",
+ "artist": "Fugees (AI soul cover)",
+ "year": 1996,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on The Score",
+ "aliases": {
+  "youtube": [
+   "MlHwVineh-w"
+  ],
+  "titles": [
+   "Fugees - Ready or Not (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Wyclef Jean, Pras, Lauryn Hill and Jerry Duplessis produced it for The Score, an album the group made mostly in the Booga Basement, a studio in Wyclef's uncle's basement in East Orange, New Jersey. The bed is Enya's 1987 'Boadicea', sampled without permission, and the chorus comes from the Delfonics' 1968 'Ready or Not Here I Come (Can't Hide from Love)', which Wyclef suggested. Pras later said Hill cut a reference hook, got emotional during the bridge and walked out for a while; when she came back and re-sang it, the group kept the first take.",
+  "context": "The Score came out in February 1996, went to number one on the Billboard 200 and sold an estimated 22 million copies worldwide. 'Ready or Not' followed 'Killing Me Softly' to number one in the UK in September 1996. In America it was never sold as a commercial single, so under Billboard's rules of the day it could not enter the Hot 100 at all. Its $1.3 million Marcus Nispel video is often called the first rap video with a seven-figure budget.",
+  "listen_for": [
+   {
+    "where": "the opening and under every verse",
+    "note": "In the original, Enya's 'Boadicea' is the whole bed: a slow, wordless choral drone. A soul arrangement has a minor-key pad to build on rather than a drum break."
+   },
+   {
+    "where": "the chorus",
+    "note": "Lauryn Hill sings a hook adapted from the Delfonics' 1968 Philly soul single, so the sung line a cover keeps was a soul melody before it was a rap hook."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Delfonics",
+   "title": "Ready or Not Here I Come (Can't Hide from Love)",
+   "year": 1968,
+   "why": "Thom Bell and William Hart wrote the chorus Hill borrowed; it reached number 14 R&B on Philly Groove."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ready_or_Not_(Fugees_song)",
+   "https://en.wikipedia.org/wiki/The_Score_(Fugees_album)",
+   "https://en.wikipedia.org/wiki/Ready_or_Not_Here_I_Come_(Can%27t_Hide_from_Love)"
+  ],
+  "unverified": "Which studio the song itself was cut in; The Score was recorded at the Booga Basement and The Crib."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "The million-dollar video",
+   "line": "Marcus Nispel's clip cost about $1.3 million, and Vibe said it helped start the era of movie-sized hip-hop videos.",
+   "wiki": "Marcus Nispel",
+   "source": "https://en.wikipedia.org/wiki/Ready_or_Not_(Fugees_song)"
+  },
+  {
+   "kind": "chart",
+   "title": "UK number one, US no-show",
+   "line": "Number one in the UK and top ten in fifteen countries, but ineligible for the Hot 100 because no US retail single existed.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Ready_or_Not_(Fugees_song)"
+  },
+  {
+   "kind": "sample",
+   "title": "Enya's settlement",
+   "line": "Enya considered suing over the uncleared 'Boadicea' sample and settled out of court once she decided the group's music was not gangsta rap.",
+   "wiki": "Enya",
+   "source": "https://en.wikipedia.org/wiki/Ready_or_Not_(Fugees_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-4)",
+  "written_on": "2026-10-20"
+ }
+}

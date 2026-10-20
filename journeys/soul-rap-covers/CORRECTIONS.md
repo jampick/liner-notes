@@ -1,0 +1,13 @@
+# Corrections to carry into every artifact (chat tables, review doc, page)
+- Ain't No Half-Steppin': the single's title has the hyphen.
+- Let's Talk About Sex: year 1990 (track 10 on Blacks' Magic, 19 March 1990; the single came in August 1991). It sits in the first era by year even though the 1991–93 writer covered it.
+- Who Am I? (What's My Name?): official title has both question marks.
+- Ice Ice Baby (Joanna): "seven covers in the playlist" is about the playlist, not the record. New quote: "The first hip-hop single to top the Hot 100, one week in November 1990, riding the 'Under Pressure' bass line he hadn't cleared."
+- Big Poppa (Rashaad): "'Between the Sheets' again" was wrong; Ice Cube used a different Isley record. New quote: "The Isley Brothers again, this time 'Between the Sheets', a 1983 quiet-storm slow jam. Covering it as soul sends it home."
+- N.Y. State of Mind (Vernell): the intro "The Genesis" already has a snippet of Nas. New quote: "DJ Premier on the beat and Nas at 20, writing his verses in the studio. The first full song on Illmatic is where the 1990s East Coast starts."
+- Ready or Not (Rashaad): the hook melody comes from the Delfonics. New quote: "Enya's 'Boadicea' under it, and Lauryn Hill singing a hook lifted from the Delfonics' 1968 'Ready or Not Here I Come'. The soul was in it from the start."
+- Ten Crack Commandments (Vernell): Biggie counts the numbers himself; Chuck D's voice is a scratched snippet of "Shut 'Em Down", and Chuck D sued personally, settling in 1998. New quote: "DJ Premier's beat, with a scratched bit of Chuck D from 'Shut 'Em Down' against every rule Biggie counts off. Chuck D sued, and settled in 1998."
+- Doo Wop (That Thing) (Ottilie): "named for doo-wop" and "girl-group lilt" had no source. New quote: "Hill opens on doo-wop harmonies and puts soul horns and a Motown-style string part over a sped-up 5th Dimension sample. The cover only has to lean in."
+- Get Low (Dex): "every club still plays" can't be checked, and the old quote described the cover, which nobody here has heard. New quote: "Number two on the Hot 100 and the single that took crunk national. The chorus is already a chant and a reply, so a slow room can answer it."
+- Lean Back (Joanna): it's a Terror Squad single. New quote: "Number one for three weeks in August 2004. It's a Terror Squad single, and the only time Fat Joe reached the top."
+- Thrift Shop (Joanna): "no major label behind it" overstates it (distributed by ADA, owned by Warner). New quote: "Number one for six weeks in 2013 on Macklemore's own label, the second independent chart-topper since Lisa Loeb in 1994."

@@ -1,0 +1,65 @@
+{
+ "id": "outkast-ai-soul-cover--the-way-you-move",
+ "title": "The Way You Move",
+ "artist": "OutKast (AI soul cover)",
+ "year": 2003,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Speakerboxxx/The Love Below",
+ "aliases": {
+  "youtube": [
+   "9-uA2Yb-E_A"
+  ],
+  "titles": [
+   "OutKast - The Way You Move (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Carlton Mahone (Carl-Mo) made the beat in 2000 and brought it to Big Boi, who co-produced and used it a few years later at Stankonia. Sleepy Brown heard it at a Big Boi cookout and wrote the hook on the spot; it nearly went to his own solo album. The live horns are Atlanta's Hornz Unlimited, with Victor Vick on guitar and Debra Killings on bass.",
+  "context": "Speakerboxxx/The Love Below came out on September 23, 2003, as two solo albums in one box: Big Boi's rap disc and André's mostly sung one. 'Hey Ya!' and this were released together as the second singles, and this one spent eight weeks at number two behind its sister, then replaced it at number one on February 14, 2004. Six days earlier the album had won Album of the Year, the second rap record to do it after Lauryn Hill.",
+  "listen_for": [
+   {
+    "where": "the chorus",
+    "note": "Sleepy Brown's Marvin Gaye-style lead with the horns punching under it; it's a soul hook already."
+   },
+   {
+    "where": "between the verses",
+    "note": "Hornz Unlimited, a live section critics heard as Earth, Wind & Fire, over a Dirty South drum-machine bounce."
+   }
+  ],
+  "leads_to": {
+   "artist": "Brick",
+   "title": "Dazz",
+   "year": 1976,
+   "why": "Sleepy Brown's father, Jimmy Brown, sang and played sax in Brick, and 'Dazz' was four weeks at number one R&B: the Atlanta funk the hook comes from."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Way_You_Move",
+   "https://www.songfacts.com/facts/outkast/the-way-you-move",
+   "https://www.grammy.com/news/deep-10-nirvanas-mtv-unplugged-in-new-york",
+   "https://en.wikipedia.org/wiki/Speakerboxxx/The_Love_Below",
+   "https://en.wikipedia.org/wiki/Sleepy_Brown",
+   "https://en.wikipedia.org/wiki/Dazz"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Replacing 'Hey Ya!'",
+   "line": "It took number one from 'Hey Ya!' on February 14, 2004, making OutKast the sixth act to replace themselves at the top of the Hot 100. Its eight weeks at number two was a record until 2019.",
+   "wiki": "The_Way_You_Move",
+   "source": "https://www.songfacts.com/facts/outkast/the-way-you-move"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-5)",
+  "written_on": "2026-10-20"
+ }
+}

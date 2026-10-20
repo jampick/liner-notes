@@ -1,0 +1,78 @@
+{
+ "id": "the-notorious-b-i-g-ai-soul-cover--ten-crack-commandments",
+ "title": "Ten Crack Commandments",
+ "artist": "The Notorious B.I.G. (AI soul cover)",
+ "year": 1997,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it. An album track on Life After Death (March 25, 1997), never a single.",
+ "album": "YouTube upload; the original is on Life After Death",
+ "aliases": {
+  "youtube": [
+   "OGksTRozFC4"
+  ],
+  "titles": [
+   "Biggie Smalls – Ten Crack Commandments (50s Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "DJ Premier produced it, in the years when he worked out of Studio A at D&D in New York on an Akai MPC60 and S950 sampler. Premier says Biggie counted off the numbers himself and asked him to pair each one with a scratched snippet of Chuck D's voice from Public Enemy's 1991 'Shut 'Em Down'. Rolling Stone also credits a Les McCann composition, 'Vallarta', in the track. Biggie reportedly drew the idea from a sidebar of dealers' rules in a July 1994 Source article by Khary Kimani Turner, who is a credited writer.",
+  "context": "Crack had shaped the neighborhoods rap came from for over a decade, and this is the coldest treatment of it on Biggie's records: no chorus, no 16-bar verses, ten numbered rules for staying alive in the trade. Chuck D sued the estate and Premier because he did not want his voice on a song that seemed to back drug dealing, and settled in November 1998. Premier said he would never have sued a dead man, and that he and Chuck made peace at Jam Master Jay's wake in 2002.",
+  "listen_for": [
+   {
+    "where": "each number as it's called",
+    "note": "The count is the structure of the song, with a scratched Chuck D fragment marking each rule; any cover has to keep that list shape in place of a chorus."
+   },
+   {
+    "where": "the whole length",
+    "note": "There is no sung hook in the original at all, so a soul version has to invent its own melody where Premier's loop and Biggie's spoken rules sat."
+   }
+  ],
+  "leads_to": {
+   "artist": "Public Enemy",
+   "title": "Shut 'Em Down",
+   "year": 1991,
+   "why": "The Def Jam single from Apocalypse 91... The Enemy Strikes Black that supplied Chuck D's voice, and the root of the lawsuit."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ten_Crack_Commandments",
+   "https://www.cheatsheet.com/news/drama-behind-chuck-d-sample-notorious-big-ten-crack-commandments.html/",
+   "https://en.wikipedia.org/wiki/Shut_%27Em_Down_(Public_Enemy_song)",
+   "https://ca.rollingstone.com/music/les-mccann-jazz-pioneer-sampled-by-notorious-b-i-g-snoop-dogg-and-dr-dre-dead-at-88/",
+   "https://www.soundonsound.com/node/4911066"
+  ],
+  "unverified": "The release and year of Les McCann's 'Vallarta' (couldn't find it), and whether Premier made this beat at D&D specifically."
+ },
+ "culture": [
+  {
+   "kind": "cover",
+   "title": "Ten Duel Commandments",
+   "line": "Lin-Manuel Miranda built the dueling-rules number in Hamilton as a homage to it.",
+   "wiki": "Ten Duel Commandments",
+   "source": "https://en.wikipedia.org/wiki/Ten_Crack_Commandments"
+  },
+  {
+   "kind": "sample",
+   "title": "Chuck D's lawsuit",
+   "line": "Chuck D sued over his sampled voice and settled in November 1998; Premier later said he had wanted the blame on himself rather than on Biggie's estate.",
+   "wiki": "",
+   "source": "https://www.cheatsheet.com/news/drama-behind-chuck-d-sample-notorious-big-ten-crack-commandments.html/"
+  },
+  {
+   "kind": "chart",
+   "title": "A deep cut that lasted",
+   "line": "Billboard put it ninth among his 25 best songs in 2020, and it went Silver in the UK on streams and sales since 2004.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Ten_Crack_Commandments"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-4)",
+  "written_on": "2026-10-20"
+ }
+}

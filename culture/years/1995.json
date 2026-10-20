@@ -1,0 +1,54 @@
+{
+ "year": 1995,
+ "items": [
+  {
+   "kind": "news",
+   "title": "Oklahoma City bombing",
+   "line": "At 9:02 a.m. on April 19, 1995, a truck bomb destroyed much of the Alfred P. Murrah Federal Building in Oklahoma City. It killed 168 people, 19 of them children, and injured more than 680.",
+   "wiki": "Oklahoma_City_bombing",
+   "source": "https://en.wikipedia.org/wiki/Oklahoma_City_bombing"
+  },
+  {
+   "kind": "tech",
+   "title": "Windows 95",
+   "line": "Microsoft put Windows 95 in shops on August 24, 1995, with the first Start button and taskbar, and advertised it with the Rolling Stones' 'Start Me Up'. About a million copies shipped in the first four days.",
+   "wiki": "Windows_95",
+   "source": "https://en.wikipedia.org/wiki/Windows_95"
+  },
+  {
+   "kind": "game",
+   "title": "PlayStation reaches America",
+   "line": "Sony's PlayStation launched in North America on September 9, 1995 at $299, nine months after Japan. It went on to sell about 102 million units.",
+   "wiki": "PlayStation_(console)",
+   "source": "https://en.wikipedia.org/wiki/PlayStation_(console)"
+  },
+  {
+   "kind": "sport",
+   "title": "Ripken's 2,131",
+   "line": "On September 6, 1995 at Camden Yards, Cal Ripken Jr. played his 2,131st straight game, passing Lou Gehrig. His lap of the warning track drew an ovation of more than 22 minutes.",
+   "wiki": "Cal_Ripken_Jr.",
+   "source": "https://en.wikipedia.org/wiki/Cal_Ripken_Jr."
+  },
+  {
+   "kind": "tv",
+   "title": "The Simpson verdict",
+   "line": "After a trial televised for 134 days, the jury acquitted O. J. Simpson on October 3, 1995. Around 100 million people worldwide watched or listened to the verdict.",
+   "wiki": "O._J._Simpson_murder_case",
+   "source": "https://en.wikipedia.org/wiki/O._J._Simpson_murder_case"
+  },
+  {
+   "kind": "news",
+   "title": "Million Man March",
+   "line": "On October 16, 1995, Louis Farrakhan's Million Man March filled the National Mall in Washington. The Park Police estimated 400,000; Boston University researchers put it near 837,000.",
+   "wiki": "Million_Man_March",
+   "source": "https://en.wikipedia.org/wiki/Million_Man_March"
+  },
+  {
+   "kind": "film",
+   "title": "Toy Story",
+   "line": "Pixar's Toy Story, the first entirely computer-animated feature, opened on November 22, 1995 and became the highest-grossing film of the year in the US.",
+   "wiki": "Toy_Story",
+   "source": "https://en.wikipedia.org/wiki/Toy_Story"
+  }
+ ]
+}

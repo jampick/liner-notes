@@ -1,0 +1,71 @@
+{
+ "id": "macklemore-ryan-lewis-ai-soul-cover--thrift-shop",
+ "title": "Thrift Shop",
+ "artist": "Macklemore & Ryan Lewis (AI soul cover)",
+ "year": 2012,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on The Heist",
+ "aliases": {
+  "youtube": [
+   "G2r6gtlML70"
+  ],
+  "titles": [
+   "Macklemore - Thrift Shop (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Ryan Lewis produced it around a looping saxophone line; the track was recorded in 2011. Lewis wanted a hook singer who sounded like Nate Dogg, and the producer Sane called Wanz, a Seattle singer then in his fifties working as a software test engineer. He told American Songwriter it took about three hours from the call to the finished hook, with 45 minutes in the booth.",
+  "context": "It came out on Macklemore's own label in August 2012, distributed by ADA, a Warner Music Group company, which is as close to the majors as it got. The video, shot in Seattle Goodwill and Value Village stores, did the work radio used to, and YouTube views started counting on the Hot 100 that same February, while it was at number one. Billboard made it the top song of 2013, and it was the second independent number one since Lisa Loeb's 'Stay' in 1994.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "the looping sax figure that carries the whole track, the part most covers keep."
+   },
+   {
+    "where": "the chorus",
+    "note": "Wanz's deep, sung hook, cut to sound like Nate Dogg, so it's already a soul vocal."
+   }
+  ],
+  "leads_to": {
+   "artist": "Warren G and Nate Dogg",
+   "title": "Regulate",
+   "year": 1994,
+   "why": "The voice Ryan Lewis asked for when he went looking for a hook singer; number two in 1994, over a Michael McDonald sample."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Thrift_Shop",
+   "https://americansongwriter.com/behind-the-song-thrift-shop-with-hook-singer-wanz/",
+   "https://en.wikipedia.org/wiki/Wanz",
+   "https://en.wikipedia.org/wiki/Billboard_Hot_100",
+   "https://en.wikipedia.org/wiki/Regulate_(song)"
+  ],
+  "unverified": "I couldn't find who played the saxophone or whether it was sampled."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Seattle thrift-store video",
+   "line": "Co-directed by Jon Jon Augustavo, Macklemore and Lewis and shot in Seattle thrift shops; it passed 1.9 billion YouTube views by February 2025.",
+   "wiki": "Thrift_Shop",
+   "source": "https://en.wikipedia.org/wiki/Thrift_Shop"
+  },
+  {
+   "kind": "award",
+   "title": "Two Grammys",
+   "line": "Best Rap Performance and Best Rap Song at the 56th Grammys in 2014.",
+   "wiki": "56th_Annual_Grammy_Awards",
+   "source": "https://en.wikipedia.org/wiki/Thrift_Shop"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-5)",
+  "written_on": "2026-10-20"
+ }
+}

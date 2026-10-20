@@ -1,0 +1,82 @@
+{
+ "id": "salt-n-pepa-ai-soul-cover--lets-talk-about-sex",
+ "title": "Let's Talk About Sex",
+ "artist": "Salt-N-Pepa (AI soul cover)",
+ "year": 1990,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it. It was track 10 on Blacks' Magic, released March 19, 1990; the single followed in August 1991, which is why it charts as a 1991 hit.",
+ "album": "YouTube upload; the original is on Blacks' Magic",
+ "aliases": {
+  "youtube": [
+   "M4AJQc43j5w"
+  ],
+  "titles": [
+   "Let's Talk About Sex - 1950's Soul Version"
+  ]
+ },
+ "notes": {
+  "made": "Hurby 'Luv Bug' Azor wrote it and co-produced it with the Invincibles, and Blacks' Magic was recorded at Bayside Sound and Soundtrack in New York in 1989–90. The track samples the Staple Singers' 'I'll Take You There', the 1972 Stax number one played by the Muscle Shoals Rhythm Section. Azor was the man who started the group: he had Cheryl James and Sandra Denton, his co-workers at a Sears in College Point, Queens, cut a song for his production class.",
+  "context": "The album was more than a year old when Next Plateau put this out as its fourth single, and it was the record that made Salt-N-Pepa international: number two in the UK, and number one in Germany, the first original song by an American hip-hop act to top that chart. It is a safe-sex song that also takes a swing at the censorship of sex on American radio and TV. Peter Jennings liked it and asked them to go further on HIV, so they rewrote it as 'Let's Talk About AIDS' for his special Growing Up in the Age of AIDS. Pepa has said the point was to get people talking about something their families never did.",
+  "listen_for": [
+   {
+    "where": "the groove under the verses",
+    "note": "The Staple Singers' 'I'll Take You There' is the sample, a gospel-soul record already, so a soul version hands it back to its family."
+   },
+   {
+    "where": "the chorus",
+    "note": "The hook is the title phrase, chanted rather than sung, so it is short and easy for a singer to turn into a melody."
+   },
+   {
+    "where": "the verses",
+    "note": "The verses argue with the people who won't discuss sex on air; the AIDS version of the song keeps the shape and rewrites them around HIV."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Staple Singers",
+   "title": "I'll Take You There",
+   "year": 1972,
+   "why": "The sample source, a Hot 100 and R&B number one whose own intro and bass line were lifted from Harry J Allstars' reggae hit 'The Liquidator'."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Let%27s_Talk_About_Sex",
+   "https://en.wikipedia.org/wiki/Blacks%27_Magic",
+   "https://en.wikipedia.org/wiki/I%27ll_Take_You_There",
+   "https://en.wikipedia.org/wiki/Salt-N-Pepa",
+   "https://www.newcastleherald.com.au/story/9315334/salt-n-pepa-it-was-and-still-is-a-male-dominated-field/"
+  ],
+  "unverified": "Which part of 'I'll Take You There' the track uses (bass, guitar or drums); sources only say it is sampled. The air date of the Jennings special."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number one across Europe",
+   "line": "It reached 13 in the US and 2 in the UK, and went to number one in Germany, the Netherlands, Austria, Switzerland and Australia.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Let%27s_Talk_About_Sex"
+  },
+  {
+   "kind": "screen",
+   "title": "Let's Talk About AIDS",
+   "line": "At Peter Jennings' request the group rewrote the lyrics around HIV for his special Growing Up in the Age of AIDS; the version went to radio as a promo single.",
+   "wiki": "Peter_Jennings",
+   "source": "https://www.newcastleherald.com.au/story/9315334/salt-n-pepa-it-was-and-still-is-a-male-dominated-field/"
+  },
+  {
+   "kind": "award",
+   "title": "Grammy nomination",
+   "line": "It was nominated for Best Rap Performance by a Duo or Group at the 1992 Grammys.",
+   "wiki": "34th_Annual_Grammy_Awards",
+   "source": "https://en.wikipedia.org/wiki/Let%27s_Talk_About_Sex"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-2)",
+  "written_on": "2026-10-20"
+ }
+}

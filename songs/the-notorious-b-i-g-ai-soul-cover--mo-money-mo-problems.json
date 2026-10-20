@@ -1,0 +1,76 @@
+{
+ "id": "the-notorious-b-i-g-ai-soul-cover--mo-money-mo-problems",
+ "title": "Mo Money Mo Problems",
+ "artist": "The Notorious B.I.G. (AI soul cover)",
+ "year": 1997,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Life After Death",
+ "aliases": {
+  "youtube": [
+   "t1jQnB3I0Yw"
+  ],
+  "titles": [
+   "The Notorious B.I.G. – Mo Money Mo Problems (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Puff Daddy and Stevie J looped the groove of Diana Ross's 1980 'I'm Coming Out', which Nile Rodgers and Bernard Edwards of Chic wrote and produced, so both get songwriting credit (Edwards had died the year before). Kelly Price sings a reworded version of Ross's hook, uncredited. Mase takes the first verse, Puffy the second and Biggie the last.",
+  "context": "It was the second single from Life After Death, released in July 1997, and it replaced Puffy's Biggie tribute 'I'll Be Missing You' after that song's eleven weeks at number one. Bad Boy's run of hits that year was the biggest sustained Hot 100 streak since the Bee Gees in 1978, and much of it was driven by Biggie's death. Mase's debut Harlem World followed within months and went quadruple platinum.",
+  "listen_for": [
+   {
+    "where": "the intro and under every verse",
+    "note": "The bed is Chic's bass and guitar from 'I'm Coming Out', a disco-soul groove with its own horn fanfare, so a soul arrangement is close to the source already."
+   },
+   {
+    "where": "the chorus",
+    "note": "Kelly Price sings over the 'I'm Coming Out' changes; it is a full-voiced R&B hook rather than a chant."
+   }
+  ],
+  "leads_to": {
+   "artist": "Diana Ross",
+   "title": "I'm Coming Out",
+   "year": 1980,
+   "why": "The Motown single the whole track rides on; Rodgers wrote it after seeing drag queens dressed as Ross at a New York club, and it reached number five."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mo_Money_Mo_Problems",
+   "https://stereogum.com/2186248/the-number-ones-the-notorious-b-i-g-s-mo-money-mo-problems-feat-puff-daddy-mase/columns/the-number-ones",
+   "https://en.wikipedia.org/wiki/I%27m_Coming_Out"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Shiny suits at the Unisphere",
+   "line": "Hype Williams shot Puff and Mase in shiny suits in front of the Unisphere in Flushing Meadows, with a golf-tournament story where Biggie's spirit helps Puffy win.",
+   "wiki": "Hype Williams",
+   "source": "https://stereogum.com/2186248/the-number-ones-the-notorious-b-i-g-s-mo-money-mo-problems-feat-puff-daddy-mase/columns/the-number-ones"
+  },
+  {
+   "kind": "chart",
+   "title": "Second posthumous number one",
+   "line": "Two weeks at number one from August 30, 1997; Stereogum's 2022 column notes Biggie is the only artist with more than one posthumous number one.",
+   "wiki": "",
+   "source": "https://stereogum.com/2186248/the-number-ones-the-notorious-b-i-g-s-mo-money-mo-problems-feat-puff-daddy-mase/columns/the-number-ones"
+  },
+  {
+   "kind": "award",
+   "title": "Grammy nomination",
+   "line": "Nominated for Best Rap Performance by a Duo or Group at the 1998 Grammys.",
+   "wiki": "40th Annual Grammy Awards",
+   "source": "https://en.wikipedia.org/wiki/Mo_Money_Mo_Problems"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-4)",
+  "written_on": "2026-10-20"
+ }
+}

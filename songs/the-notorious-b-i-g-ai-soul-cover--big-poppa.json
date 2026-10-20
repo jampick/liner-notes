@@ -1,0 +1,63 @@
+{
+ "id": "the-notorious-b-i-g-ai-soul-cover--big-poppa",
+ "title": "Big Poppa",
+ "artist": "The Notorious B.I.G. (AI soul cover)",
+ "year": 1994,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it. Bad Boy released the single on December 24, 1994; it charted in early 1995.",
+ "album": "YouTube upload; the original is on Ready to Die",
+ "aliases": {
+  "youtube": [
+   "1_6o-rFpQYE"
+  ],
+  "titles": [
+   "The Notorious B.I.G. - Big Poppa (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Chucky Thompson and Nashiem Myrick built it on the Isley Brothers' 1983 'Between the Sheets', with Combs credited as producer too, and Biggie recorded it at the Hit Factory in June 1994, one of the last songs cut for the album. The beat had first gone to Lost Boyz, and Combs traded them another one to get it back. Myrick has said Biggie didn't even like the song. A Minimoog whistle sits on top of the loop.",
+  "context": "It was the second single from Ready to Die and the one that took Biggie onto pop radio: it debuted and peaked at number six, his first Hot 100 top ten. The B-side was 'Who Shot Ya?', which 2Pac took as a taunt after he was shot at Quad Studios that November, and the song lost the Best Rap Solo Performance Grammy to Coolio's 'Gangsta's Paradise' in 1996.",
+  "listen_for": [
+   {
+    "where": "the loop from the first bar",
+    "note": "it's 'Between the Sheets', a quiet-storm record at 84 BPM in A minor, so the chords and tempo are already slow-dance soul."
+   },
+   {
+    "where": "on top of the loop",
+    "note": "the Minimoog whistle line is the one part that isn't the Isleys; it's what a cover has to find a home for."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Isley Brothers",
+   "title": "Between the Sheets",
+   "year": 1983,
+   "why": "Recorded at Bearsville in February 1983 with Chris Jasper on keys and drum machine, it peaked at number three R&B and had already been sampled by Audio Two and A Tribe Called Quest before Biggie got to it."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Big_Poppa",
+   "https://en.wikipedia.org/wiki/Between_the_Sheets_(song)",
+   "https://en.wikipedia.org/wiki/Ready_to_Die",
+   "https://en.wikipedia.org/wiki/East_Coast%E2%80%93West_Coast_hip-hop_rivalry"
+  ],
+  "unverified": "The Big Poppa page credits Hype Williams as video director only in its category list, so I left the director out. Sources disagree on whether the 'Who Shot Ya?' B-side came out in December 1994 or February 1995."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Bad Boy family photo",
+   "line": "The video premiered on BET and MTV in December 1994, with cameos from Mary J. Blige, Faith Evans, Lil' Kim, Craig Mack and Busta Rhymes.",
+   "wiki": "Big_Poppa",
+   "source": "https://en.wikipedia.org/wiki/Big_Poppa"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-3)",
+  "written_on": "2026-10-20"
+ }
+}

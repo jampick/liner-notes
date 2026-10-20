@@ -1,0 +1,69 @@
+{
+ "id": "the-notorious-b-i-g-ai-soul-cover--juicy",
+ "title": "Juicy",
+ "artist": "The Notorious B.I.G. (AI soul cover)",
+ "year": 1994,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Ready to Die",
+ "aliases": {
+  "youtube": [
+   "TvWPs4Z8hWY"
+  ],
+  "titles": [
+   "Biggie Smalls – Juicy (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Sean Combs and Poke of Trackmasters produced it at the Hit Factory in New York in 1994, lifting the bed straight from the 'Fruity Instrumental' mix of Mtume's 1983 'Juicy Fruit'. The girl group Total sing the chorus with Combs. Pete Rock has said he made the original version of the beat at his house and never got credit, though he says he holds no grudge now.",
+  "context": "Combs had been fired from Uptown and started Bad Boy, and Biggie spent a stretch dealing in North Carolina before coming back to finish the album. 'Juicy' came out in August 1994 as the first single, a rags-to-riches story from Brooklyn, at a time when West Coast records ruled the charts. It also had a line about the 1993 World Trade Center bombing, which Hot 97 and other stations quietly cut after 9/11; Billboard asked them to restore it in 2017.",
+  "listen_for": [
+   {
+    "where": "the chorus",
+    "note": "Total and Combs sing over Mtume's 'Juicy Fruit', so the hook was already a sung R&B melody; a soul singer can take it as written."
+   },
+   {
+    "where": "under every verse",
+    "note": "the instrumental mix of 'Juicy Fruit' never drops out, a mid-tempo 1983 groove that Mtume built on a Linn LM-1 drum machine."
+   }
+  ],
+  "leads_to": {
+   "artist": "Mtume",
+   "title": "Juicy Fruit",
+   "year": 1983,
+   "why": "The record under every bar of 'Juicy', eight weeks at number one on Billboard's R&B chart in 1983, with Tawatha Agee singing lead."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Juicy_(The_Notorious_B.I.G._song)",
+   "https://en.wikipedia.org/wiki/Juicy_Fruit_(song)",
+   "https://en.wikipedia.org/wiki/Ready_to_Die"
+  ],
+  "unverified": "The page credits Combs as director of the video but flags it as needing a citation, so I left the video out."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Slow climb, long life",
+   "line": "It peaked at only 27 on the Hot 100 but went to number one on Hot Rap Singles, and the RIAA now has it at six times platinum.",
+   "wiki": "Juicy_(The_Notorious_B.I.G._song)",
+   "source": "https://en.wikipedia.org/wiki/Juicy_(The_Notorious_B.I.G._song)"
+  },
+  {
+   "kind": "award",
+   "title": "National Recording Registry",
+   "line": "Ready to Die, the album 'Juicy' opened the door for, was added to the Library of Congress's National Recording Registry in 2024.",
+   "wiki": "Ready_to_Die",
+   "source": "https://en.wikipedia.org/wiki/Ready_to_Die"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-3)",
+  "written_on": "2026-10-20"
+ }
+}

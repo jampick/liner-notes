@@ -1,0 +1,70 @@
+{
+ "id": "big-daddy-kane-ai-soul-cover--aint-no-half-steppin",
+ "title": "Ain't No Half-Steppin'",
+ "artist": "Big Daddy Kane (AI soul cover)",
+ "year": 1988,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Long Live the Kane",
+ "aliases": {
+  "youtube": [
+   "3hvXnQkjdqA"
+  ],
+  "titles": [
+   "Big Daddy Kane - Ain't No Half Steppin' (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Marley Marl produced it for Cold Chillin', working the way the Juice Crew did: Kane brought in the records he wanted and Marley built the beat on a sampler. It takes from three places, Heatwave's 'Ain't No Half Steppin'', ESG's 'UFO' and the Emotions' 'Blind Alley', a Stax-era Volt track produced by Isaac Hayes and David Porter. Kane said Marley didn't like the song at first because it piled up so many samples.",
+  "context": "Long Live the Kane came out on June 21, 1988, Kane's debut, and went gold in 1989 after peaking at number five on the R&B album chart. The single only reached 53 on the Black Singles chart, but it is the record rappers kept quoting: Nice & Smooth, Biggie, Jeru the Damaja and MF Doom all sampled it. Rolling Stone put it at 25 on its 2012 list of the greatest hip-hop songs.",
+  "listen_for": [
+   {
+    "where": "under the verses",
+    "note": "The Emotions' 'Blind Alley' loop, a Chicago sister group's soul record, so a soul arrangement is going back to the source."
+   },
+   {
+    "where": "the hook",
+    "note": "The title comes from Heatwave's record of the same name, a soul-funk band's phrase, which gives a singer something to hold."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Emotions",
+   "title": "Blind Alley",
+   "year": 1971,
+   "why": "The David Porter song on the Volt album Untouched that runs under Kane's verses, and one of the most sampled soul records there is (Mariah Carey's 'Dreamlover' uses it too)."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ain%27t_No_Half-Steppin%27",
+   "https://en.wikipedia.org/wiki/Long_Live_the_Kane",
+   "https://en.wikipedia.org/wiki/Untouched_(The_Emotions_album)",
+   "https://www.strandedrecords.com/products/the-emotions-untouched-lp"
+  ],
+  "unverified": "Title corrected to the hyphenated 'Ain't No Half-Steppin''. Untouched is dated 1971 in its Wikipedia infobox and reissue copy but 1972 elsewhere on Wikipedia; I used 1971. I couldn't confirm which part of each sample lands where in the track (WhoSampled was blocked), so the listen_for notes stay general."
+ },
+ "culture": [
+  {
+   "kind": "award",
+   "title": "Rolling Stone's number 25",
+   "line": "Rolling Stone ranked it 25th on its 2012 list of the 50 greatest hip-hop songs.",
+   "wiki": "Ain't_No_Half-Steppin'",
+   "source": "https://en.wikipedia.org/wiki/Ain%27t_No_Half-Steppin%27"
+  },
+  {
+   "kind": "sample",
+   "title": "Sampled down the line",
+   "line": "Nice & Smooth, Ed O.G. & Da Bulldogs, the Notorious B.I.G., Jeru the Damaja, Elzhi and MF Doom all sampled it.",
+   "wiki": "Long_Live_the_Kane",
+   "source": "https://en.wikipedia.org/wiki/Long_Live_the_Kane"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-1)",
+  "written_on": "2026-10-20"
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "year": 2003,
+ "items": [
+  {
+   "kind": "news",
+   "title": "The invasion of Iraq",
+   "line": "The US-led invasion began on March 20, 2003, with about 467,000 US troops among 590,000 coalition forces. Baghdad fell on April 9, and Bush declared the end of major combat on May 1.",
+   "wiki": "2003_invasion_of_Iraq",
+   "source": "https://en.wikipedia.org/wiki/2003_invasion_of_Iraq"
+  },
+  {
+   "kind": "news",
+   "title": "Columbia breaks up",
+   "line": "The shuttle Columbia came apart over Texas and Louisiana on February 1, 2003, killing all seven crew of STS-107. Foam from the fuel tank had damaged its wing at launch, and the shuttles were grounded for 29 months.",
+   "wiki": "Space_Shuttle_Columbia_disaster",
+   "source": "https://en.wikipedia.org/wiki/Space_Shuttle_Columbia_disaster"
+  },
+  {
+   "kind": "tech",
+   "title": "The iTunes Music Store",
+   "line": "Apple opened it on April 28, 2003, with over 200,000 songs at 99 cents each, Mac only. A Windows version followed on October 16, and by December 15 it had sold 25 million songs.",
+   "wiki": "ITunes_Store",
+   "source": "https://www.apple.com/newsroom/2003/04/28Apple-Launches-the-iTunes-Music-Store/"
+  },
+  {
+   "kind": "tv",
+   "title": "Chappelle's Show",
+   "line": "Dave Chappelle and Neal Brennan's sketch show premiered on Comedy Central on January 22, 2003. Its first-season DVD became the best-selling TV set ever, past The Simpsons.",
+   "wiki": "Chappelle's_Show",
+   "source": "https://en.wikipedia.org/wiki/Chappelle%27s_Show"
+  },
+  {
+   "kind": "sport",
+   "title": "LeBron goes first",
+   "line": "On June 26, 2003, at Madison Square Garden, the Cleveland Cavaliers drafted LeBron James straight out of St. Vincent–St. Mary High School in Akron. Darko Miličić went second, Carmelo Anthony third.",
+   "wiki": "2003_NBA_draft",
+   "source": "https://en.wikipedia.org/wiki/2003_NBA_draft"
+  },
+  {
+   "kind": "film",
+   "title": "The Return of the King",
+   "line": "Released in the US on December 17, 2003, it was the year's top-grossing film at over $1.1 billion and later won all 11 Oscars it was up for, tying Ben-Hur and Titanic.",
+   "wiki": "The_Lord_of_the_Rings:_The_Return_of_the_King",
+   "source": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King"
+  },
+  {
+   "kind": "game",
+   "title": "Need for Speed: Underground",
+   "line": "EA's street-racing game came out on November 17, 2003, with 20 tuner cars and 'Get Low' as its theme. It sold about 15 million copies.",
+   "wiki": "Need_for_Speed:_Underground",
+   "source": "https://en.wikipedia.org/wiki/Need_for_Speed:_Underground"
+  }
+ ]
+}

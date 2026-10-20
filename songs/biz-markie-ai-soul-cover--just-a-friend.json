@@ -1,0 +1,62 @@
+{
+ "id": "biz-markie-ai-soul-cover--just-a-friend",
+ "title": "Just a Friend",
+ "artist": "Biz Markie (AI soul cover)",
+ "year": 1989,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it. Released September 26, 1989; it peaked on the Hot 100 in 1990.",
+ "album": "YouTube upload; the original is on The Biz Never Sleeps",
+ "aliases": {
+  "youtube": [
+   "0v-Vj-CviDo"
+  ],
+  "titles": [
+   "Biz Markie – Just a Friend (50s Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Biz Markie wrote and produced it for Cold Chillin', with Kenny Gamble and Leon Huff credited as writers because the chorus is built on the chords and melody of Freddie Scott's 1968 soul single '(You) Got What I Need'. Biz sings that chorus himself. The label's staff producer Karma later said he produced it and never got credit.",
+  "context": "The verses tell a story about chasing a woman who keeps saying the other man is only a friend, and the joke landed with pop radio: it reached number nine on the Hot 100 in 1990 and went platinum in April that year. Most rap on the chart then was boasting or message records. Biz was the clown of the Juice Crew, and this one made him a household name for one song, which is why VH1 later listed him as a one-hit wonder.",
+  "listen_for": [
+   {
+    "where": "the chorus",
+    "note": "Biz singing Freddie Scott's melody in his own unsteady voice; the tune is a real 1968 soul song, so a trained singer can sing it straight."
+   },
+   {
+    "where": "the verses",
+    "note": "A told story in order, from meeting the girl to catching her out, so the song works as a ballad narrative."
+   }
+  ],
+  "leads_to": {
+   "artist": "Freddie Scott",
+   "title": "(You) Got What I Need",
+   "year": 1968,
+   "why": "The Shout Records soul single whose chords and melody Biz turned into his chorus."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Just_a_Friend",
+   "https://en.wikipedia.org/wiki/Biz_Markie",
+   "https://www.qobuz.com/ca-en/interpreter/freddie-scott/197812"
+  ],
+  "unverified": "Who played the piano on the record isn't stated anywhere I read. The Gamble and Huff credit comes from Wikipedia only."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "The powdered wig",
+   "line": "In the video Biz sings the chorus in a powdered wig and 18th-century clothes, miming at a piano in a room lit by candles.",
+   "wiki": "Just_a_Friend",
+   "source": "https://en.wikipedia.org/wiki/Just_a_Friend"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-1)",
+  "written_on": "2026-10-20"
+ }
+}

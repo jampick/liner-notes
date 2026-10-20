@@ -1,0 +1,66 @@
+{
+ "id": "eric-b-rakim-ai-soul-cover--paid-in-full",
+ "title": "Paid in Full",
+ "artist": "Eric B. & Rakim (AI soul cover)",
+ "year": 1987,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Paid in Full",
+ "aliases": {
+  "youtube": [
+   "rNZ2l7HyCdc"
+  ],
+  "titles": [
+   "Paid in Full - 1950's Soul Version"
+  ]
+ },
+ "notes": {
+  "made": "Eric B. and Rakim cut it at Power Play Studios, one of three songs they recorded there the night before a label deadline, and produced it themselves. The drums loop the Soul Searchers' 1974 'Ashley's Roachclip', the bass line comes from Dennis Edwards and Siedah Garrett's 1984 Motown single 'Don't Look Any Further' (Paul Jackson Jr. played bass on that one), and Eric B. scratches in a line from Fab 5 Freddy's 'Change the Beat'.",
+  "context": "It first came out as the B-side of 'Move the Crowd' and became the fifth single from the duo's debut, released on Island's 4th & B'way imprint in July 1987. Rakim's internal rhymes and level delivery raised the bar for what a rap verse could be, and rappers from Nas to Jay-Z worked from his template. In Britain the record took off through Coldcut's remix, which got it to number 15.",
+  "listen_for": [
+   {
+    "where": "the opening bars",
+    "note": "The bass line lifted from 'Don't Look Any Further', a sung R&B duet, so the melody under the rap was a soul record to begin with."
+   },
+   {
+    "where": "under every verse",
+    "note": "The 'Ashley's Roachclip' drum loop, which never changes; the whole record is one groove and one voice."
+   },
+   {
+    "where": "where the chorus would be",
+    "note": "There is no sung hook in the original, only rap and Eric B.'s scratching, so a soul singer has to build a refrain from the bass line."
+   }
+  ],
+  "leads_to": {
+   "artist": "Dennis Edwards featuring Siedah Garrett",
+   "title": "Don't Look Any Further",
+   "year": 1984,
+   "why": "The Motown duet whose bass line Eric B. & Rakim took; it went to number two on the Black Singles chart."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Paid_in_Full_(Eric_B._%26_Rakim_song)",
+   "https://en.wikipedia.org/wiki/Paid_in_Full_(album)",
+   "https://en.wikipedia.org/wiki/Don%27t_Look_Any_Further"
+  ],
+  "unverified": "Wikipedia places Power Play Studios in both Queens and Manhattan, so I left the borough out."
+ },
+ "culture": [
+  {
+   "kind": "sample",
+   "title": "Seven Minutes of Madness",
+   "line": "Coldcut's remix wrapped the track in vocal samples, most of all Ofra Haza's 'Im Nin'alu', and took the song into the top 15 in several countries.",
+   "wiki": "Paid_in_Full_(Eric_B._&_Rakim_song)",
+   "source": "https://en.wikipedia.org/wiki/Paid_in_Full_(Eric_B._%26_Rakim_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-1)",
+  "written_on": "2026-10-20"
+ }
+}

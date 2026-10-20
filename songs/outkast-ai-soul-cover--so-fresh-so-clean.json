@@ -1,0 +1,64 @@
+{
+ "id": "outkast-ai-soul-cover--so-fresh-so-clean",
+ "title": "So Fresh, So Clean",
+ "artist": "OutKast (AI soul cover)",
+ "year": 2000,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it. On Stankonia (October 31, 2000); released as a single on March 13, 2001.",
+ "album": "YouTube upload; the original is on Stankonia",
+ "aliases": {
+  "youtube": [
+   "h-ZwLlHBYHI"
+  ],
+  "titles": [
+   "So Fresh, So Clean - 1950's Soul Version"
+  ]
+ },
+ "notes": {
+  "made": "Organized Noize produced it, and the hook is built over Joe Simon's 1977 Spring single 'Before the Night Is Over' (Wikipedia also lists Funkadelic's 'I'll Stay'). Sleepy Brown says he came up with the idea, played a piano line for Rico Wade at the Dungeon, and Wade came back singing words he'd thought of in the shower. It was meant for Big Boi; André didn't like it until Preston Crump's bass part pulled him in.",
+  "context": "Stankonia came out of what OutKast called vibe sessions: the crew went to downtown Atlanta clubs, brought performers they liked back to the studio, and built songs from there. This was the third single, a slow strut next to the speed of 'B.O.B.', and it peaked at number 30 on the Hot 100 in May 2001. It kept selling for twenty years and went platinum in October 2020.",
+  "listen_for": [
+   {
+    "where": "the chorus",
+    "note": "the hook is sung, a slow, smug melody over the Joe Simon sample, so a soul singer has nothing to translate."
+   },
+   {
+    "where": "the bass under the verses",
+    "note": "Preston Crump's funk bass line, the part Sleepy Brown says changed André's mind about the song."
+   }
+  ],
+  "leads_to": {
+   "artist": "Joe Simon",
+   "title": "Before the Night Is Over",
+   "year": 1977,
+   "why": "The soul record under the hook, a 1977 Spring Records single by the Grammy-winning Simon, whose obituaries in 2021 still named OutKast."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/So_Fresh,_So_Clean",
+   "https://en.wikipedia.org/wiki/Stankonia",
+   "https://www.hot97.com/?p=144636",
+   "https://en.wikipedia.org/wiki/Joe_Simon_(musician)",
+   "https://nts.live/artists/751-joe-simon"
+  ],
+  "unverified": "I couldn't confirm which Joe Simon album 'Before the Night Is Over' sits on (it's on Ace's Easy to Love/A Bad Case of Love two-fer, both 1977), or who sings the final hook."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Beauty parlor and church",
+   "line": "The video puts the duo and Sleepy Brown in front of CGI backdrops, in a beauty parlor and in a church, with cameos from Ludacris, Chilli of TLC and Goodie Mob.",
+   "wiki": "So_Fresh,_So_Clean",
+   "source": "https://en.wikipedia.org/wiki/So_Fresh,_So_Clean"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-5)",
+  "written_on": "2026-10-20"
+ }
+}

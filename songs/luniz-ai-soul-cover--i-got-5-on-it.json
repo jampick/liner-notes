@@ -1,0 +1,70 @@
+{
+ "id": "luniz-ai-soul-cover--i-got-5-on-it",
+ "title": "I Got 5 on It",
+ "artist": "Luniz (AI soul cover)",
+ "year": 1995,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Operation Stackola",
+ "aliases": {
+  "youtube": [
+   "JfRgj_m6Qu0"
+  ],
+  "titles": [
+   "I Got 5 On It - 1950's Soul Version"
+  ]
+ },
+ "notes": {
+  "made": "Tone Capone produced it for the Oakland duo Numskull and Yukmouth, interpolating Club Nouveau's 'Why You Treat Me So Bad' and working in Kool & the Gang's 'Jungle Boogie' and Audio Two's 'Top Billin''. R&B singer Michael Marshall sings the hook. Capone also did the Bay Area remix with E-40, Dru Down, Richie Rich, Shock G and Spice 1.",
+  "context": "Noo Trybe and C-Note put it out on May 23, 1995, a song about chipping in five dollars toward a bag of weed. It went to number eight on the Hot 100 and number three in the UK, topped the Dutch chart, and was certified platinum on October 31, 1995. It put the Oakland scene on charts across Europe.",
+  "listen_for": [
+   {
+    "where": "the main melody under the verses",
+    "note": "it's Club Nouveau's hook replayed, the 1980s R&B line that Pitchfork says turned the track into an exercise in paranoia."
+   },
+   {
+    "where": "the chorus",
+    "note": "Michael Marshall already sings it, smooth and high, so a soul cover is following an R&B vocal rather than inventing one."
+   }
+  ],
+  "leads_to": {
+   "artist": "Club Nouveau",
+   "title": "Why You Treat Me So Bad",
+   "year": 1986,
+   "why": "From the group's 1986 album Life, Love & Pain (a single in 1987, number two R&B), and its hook itself came from Jay King's earlier Timex Social Club hit."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/I_Got_5_on_It",
+   "https://en.wikipedia.org/wiki/Why_You_Treat_Me_So_Bad",
+   "https://en.wikipedia.org/wiki/Luniz",
+   "https://en.wikipedia.org/wiki/Us_(2019_film)"
+  ],
+  "unverified": "Wikipedia's sample list for the song carries a citation-needed tag. I couldn't confirm Club Nouveau's hometown from a page I read, so I left it out."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "Us (2019)",
+   "line": "Jordan Peele used it in Us as the family drives to the beach, then as a slowed orchestral 'Tethered Mix' at the climax. The film grossed $256 million.",
+   "wiki": "Us_(2019_film)",
+   "source": "https://en.wikipedia.org/wiki/Us_(2019_film)"
+  },
+  {
+   "kind": "chart",
+   "title": "Bigger abroad",
+   "line": "Number eight in the US, number three in the UK, number two in Germany and number one in the Netherlands in 1995, with UK re-entries in 1998.",
+   "wiki": "I_Got_5_on_It",
+   "source": "https://en.wikipedia.org/wiki/I_Got_5_on_It"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-3)",
+  "written_on": "2026-10-20"
+ }
+}

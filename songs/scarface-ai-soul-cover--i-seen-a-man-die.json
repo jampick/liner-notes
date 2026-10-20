@@ -1,0 +1,64 @@
+{
+ "id": "scarface-ai-soul-cover--i-seen-a-man-die",
+ "title": "I Seen a Man Die",
+ "artist": "Scarface (AI soul cover)",
+ "year": 1994,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on The Diary",
+ "aliases": {
+  "youtube": [
+   "ITXmTGhSvLs"
+  ],
+  "titles": [
+   "Scarface – I Seen a Man Die (50s Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "N.O. Joe, Mike Dean and Scarface produced it for Rap-A-Lot, and the album leaned on in-house studio musicians more than samples. RapReviews hears a reverberating bassline, a somber synth arrangement and sleigh bells. Scarface has said N.O. Joe brought him 'a new sound', a funky swing with heavy drums.",
+  "context": "It was the first single from The Diary, out September 27, 1994, ahead of the album on October 18. The song follows a man out of prison after seven years who tries to go straight, slides back into crime and dies; the later verses look back from the far side of it. For the single it was retitled 'Never Seen a Man Cry', and it became Scarface's first top 40 hit, at number 37, while the album went to number two and was platinum by December.",
+  "listen_for": [
+   {
+    "where": "the low end from the start",
+    "note": "the reverberating bassline and somber synths sit under everything, with sleigh bells on top, a slow bed a soul arrangement can keep."
+   },
+   {
+    "where": "across the three verses",
+    "note": "it's one story told start to finish, the shape of a ballad more than a party record, so a slow soul arrangement fits its pace."
+   }
+  ],
+  "leads_to": {
+   "artist": "Geto Boys",
+   "title": "Six Feet Deep",
+   "year": 1993,
+   "why": "Scarface and N.O. Joe a year earlier, a funeral song built on the Commodores' 'Easy' and Marvin Gaye's 'What's Going On'."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/I_Seen_a_Man_Die",
+   "https://en.wikipedia.org/wiki/The_Diary_(Scarface_album)",
+   "https://albumism.com/features/scarface-the-diary-album-anniversary",
+   "https://www.rapreviews.com/?p=17296",
+   "https://en.wikipedia.org/wiki/Six_Feet_Deep_(song)"
+  ],
+  "unverified": "The Diary's Wikipedia page lists a sample of Julie Driscoll, Brian Auger and the Trinity's 'Light My Fire' on this track, but the song's own page names no sample and I couldn't confirm it anywhere else, so I left it out. No video director found."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "First top 40",
+   "line": "Number 37 on the Hot 100, number 15 R&B and number two on Hot Rap Songs, one of only two Hot 100 entries in Scarface's career.",
+   "wiki": "I_Seen_a_Man_Die",
+   "source": "https://en.wikipedia.org/wiki/I_Seen_a_Man_Die"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-3)",
+  "written_on": "2026-10-20"
+ }
+}

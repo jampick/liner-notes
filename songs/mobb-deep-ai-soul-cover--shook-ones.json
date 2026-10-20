@@ -1,0 +1,69 @@
+{
+ "id": "mobb-deep-ai-soul-cover--shook-ones",
+ "title": "Shook Ones (Part II)",
+ "artist": "Mobb Deep (AI soul cover)",
+ "year": 1995,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on The Infamous",
+ "aliases": {
+  "youtube": [
+   "v4qgej3bfwo"
+  ],
+  "titles": [
+   "Shook Ones, Pt. Ii (1950S Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Havoc made the beat in his bedroom in the Queensbridge Houses, drums sequenced on an Akai MPC60 and the samples on an Ensoniq EPS-16 Plus. The piano is Herbie Hancock's 'Jessica' slowed and repitched, the strings come from Quincy Jones's 'Kitty with the Bent Frame', and the drums from the Daly-Wilson Big Band's 'Dirty Feet'. He nearly deleted it until Prodigy talked him out of it, and they recorded at Battery Studios in 1994.",
+  "context": "Their first album, Juvenile Hell, had flopped in 1993, and Havoc has said Part II came out of being 'kind of paranoid' after that. Released by Loud on February 7, 1995, it only got to 59 on the Hot 100, but The Infamous went gold within two months of its April release and the beat has been voted the greatest in hip-hop. With Illmatic a year earlier, it fixed Queensbridge as the hardest-sounding place in New York rap.",
+  "listen_for": [
+   {
+    "where": "the opening bars",
+    "note": "the slowed, repitched 'Jessica' piano is the track's whole melodic idea, so a soul pianist has a real figure to play rather than a drum pattern."
+   },
+   {
+    "where": "under the verses",
+    "note": "the Quincy Jones strings sit behind the piano, the closest thing the original has to a pad for chords."
+   }
+  ],
+  "leads_to": {
+   "artist": "Herbie Hancock",
+   "title": "Jessica",
+   "year": 1969,
+   "why": "Cut at Van Gelder Studio for Fat Albert Rotunda with Joe Henderson and Buster Williams, it's the gentle jazz ballad Havoc slowed into the coldest piano in rap."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Shook_Ones_(Part_II)",
+   "https://en.wikipedia.org/wiki/The_Infamous",
+   "https://en.wikipedia.org/wiki/Fat_Albert_Rotunda"
+  ],
+  "unverified": "I confirmed Prodigy has the first verse only from search snippets of reviews, not a page I read in full."
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "8 Mile",
+   "line": "It plays in the 2002 film 8 Mile and the 2005 game Grand Theft Auto: Liberty City Stories, and a line from it turns up in Hamilton's 'My Shot'.",
+   "wiki": "8_Mile_(film)",
+   "source": "https://en.wikipedia.org/wiki/Shook_Ones_(Part_II)"
+  },
+  {
+   "kind": "sample",
+   "title": "Mariah Carey's 'The Roof'",
+   "line": "Carey built 'The Roof (Back in Time)' on it in 1997, and Mobb Deep rapped new verses for the remix and appeared in its video.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Shook_Ones_(Part_II)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-3)",
+  "written_on": "2026-10-20"
+ }
+}

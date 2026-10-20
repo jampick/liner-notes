@@ -1,0 +1,68 @@
+{
+ "id": "terror-squad-ai-soul-cover--lean-back",
+ "title": "Lean Back",
+ "artist": "Terror Squad (AI soul cover)",
+ "year": 2004,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on True Story",
+ "aliases": {
+  "youtube": [
+   "FuLp7uPVw30"
+  ],
+  "titles": [
+   "Fat Joe -  Lean Back (Soul’d Out Version)"
+  ]
+ },
+ "notes": {
+  "made": "Scott Storch, the former Roots keyboardist, made the beat with Fat Joe in about 15 minutes, by Storch's account; Joe asked for something a little Arabian, like the film Belly, and for a big intro, which became the horror-movie strings. Joe cut three verses, then Remy Ma insisted on a place and he dropped one of his to make room. It was recorded at Jerusalem Studios in Miami and mixed at The Hit Factory Criteria.",
+  "context": "Terror Squad had lost Big Pun to a heart attack in early 2000, and Fat Joe had rebuilt with the number-two 'What's Luv?'. The hook is about the rockaway, a dance where you barely move and lean back. It went to number one on August 21, 2004, for three weeks, held number one R&B for seven, and Lil Jon's crunk remix with Eminem and Mase probably helped push it there.",
+  "listen_for": [
+   {
+    "where": "the intro",
+    "note": "Storch's dramatic strings, built because Joe wanted a big entrance."
+   },
+   {
+    "where": "the second verse",
+    "note": "Remy Ma's verse, the one she demanded and Joe made room for."
+   },
+   {
+    "where": "the chorus",
+    "note": "a chanted dance instruction over the Eastern-sounding keyboard line, not a sung melody, so a soul singer has to find one."
+   }
+  ],
+  "leads_to": {
+   "artist": "Big Pun featuring Joe",
+   "title": "Still Not a Player",
+   "year": 1998,
+   "why": "Terror Squad's first crossover, on Brenda Russell's 'A Little Bit of Love', by the member who wasn't there for 'Lean Back'."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lean_Back",
+   "https://www.stereogum.com/2207694/the-number-ones-terror-squads-lean-back/columns/the-number-ones/",
+   "https://en.wikipedia.org/wiki/True_Story_(Terror_Squad_album)",
+   "https://en.wikipedia.org/wiki/Fat_Joe_discography",
+   "https://en.wikipedia.org/wiki/Still_Not_a_Player"
+  ],
+  "unverified": "I didn't confirm a Grammy nomination for 'Lean Back'."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Three weeks at number one",
+   "line": "Number one on the Hot 100 from August 21, 2004, and number 10 for the whole year.",
+   "wiki": "Lean_Back",
+   "source": "https://en.wikipedia.org/wiki/Lean_Back"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-5)",
+  "written_on": "2026-10-20"
+ }
+}

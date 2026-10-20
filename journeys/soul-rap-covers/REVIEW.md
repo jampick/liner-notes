@@ -1,0 +1,71 @@
+# Review: Soul Rap Covers
+
+Every song here starts as a draft. A draft shows as "draft notes" on the stage. Tick a song once
+you've checked its facts against the sources, then set `review.state` to `reviewed` in its file
+(`liner-notes review <song id>` does both).
+
+- [ ] `run-dmc-ai-soul-cover--walk-this-way` Walk This Way, Run-DMC (AI soul cover) (1986)
+    - writer couldn't confirm: The exact recording date of the session (Wikipedia's infobox gives March 9, 1986) wasn't confirmed elsewhere, so I left it out.
+- [ ] `eric-b-rakim-ai-soul-cover--paid-in-full` Paid in Full, Eric B. & Rakim (AI soul cover) (1987)
+    - writer couldn't confirm: Wikipedia places Power Play Studios in both Queens and Manhattan, so I left the borough out.
+- [ ] `big-daddy-kane-ai-soul-cover--aint-no-half-steppin` Ain't No Half-Steppin', Big Daddy Kane (AI soul cover) (1988)
+    - writer couldn't confirm: Title corrected to the hyphenated 'Ain't No Half-Steppin''. Untouched is dated 1971 in its Wikipedia infobox and reissue copy but 1972 elsewhere on Wikipedia; I used 1971. I couldn't confirm which part of each sample lands where in the track (WhoSampled was blocked), so the listen_for notes stay general.
+- [ ] `biz-markie-ai-soul-cover--just-a-friend` Just a Friend, Biz Markie (AI soul cover) (1989)
+    - writer couldn't confirm: Who played the piano on the record isn't stated anywhere I read. The Gamble and Huff credit comes from Wikipedia only.
+- [ ] `vanilla-ice-ai-soul-cover--ice-ice-baby` Ice Ice Baby, Vanilla Ice (AI soul cover) (1990)
+    - writer couldn't confirm: The studio where the original was recorded isn't confirmed (Luminous Sound in Dallas is listed for To the Extreme as a whole). Wikipedia names David Morales and Stereogum an unnamed Georgia DJ as the one who flipped the single; I went with the Georgia DJ.
+- [ ] `too-short-ai-soul-cover--the-ghetto` The Ghetto, Too Short (AI soul cover) (1990)
+    - writer couldn't confirm: Whether Hathaway's recording is sampled directly or replayed isn't clear from what I read; Wikipedia says the instrumental is 'based on' it, so the notes say built on.
+- [ ] `salt-n-pepa-ai-soul-cover--lets-talk-about-sex` Let's Talk About Sex, Salt-N-Pepa (AI soul cover) (1990)
+    - writer couldn't confirm: Which part of 'I'll Take You There' the track uses (bass, guitar or drums); sources only say it is sampled. The air date of the Jennings special.
+- [ ] `geto-boys-ai-soul-cover--mind-playing-tricks-on-me` Mind Playing Tricks on Me, Geto Boys (AI soul cover) (1991)
+    - writer couldn't confirm: No studio or engineer credit for the track; the album credits list several producers (John Bido among them) and I couldn't confirm who did what beyond Scarface.
+- [ ] `ice-cube-ai-soul-cover--it-was-a-good-day` It Was a Good Day, Ice Cube (AI soul cover) (1992)
+    - writer couldn't confirm: Which bars of 'Footsteps in the Dark' and 'Sexy Mama' DJ Pooh used; sources name the samples but not the parts.
+- [ ] `house-of-pain-ai-soul-cover--jump-around` Jump Around, House of Pain (AI soul cover) (1992)
+    - writer couldn't confirm: The source of the squeal stays disputed; I left it as a dispute.
+- [ ] `snoop-doggy-dogg-ai-soul-cover--gin-and-juice` Gin and Juice, Snoop Doggy Dogg (AI soul cover) (1993)
+    - writer couldn't confirm: Whether the 'I Get Lifted' line is a direct sample or replayed by Tony Green; sources disagree. The album for Slave's 'Watching You' (likely Stone Jam).
+- [ ] `snoop-doggy-dogg-ai-soul-cover--who-am-i` Who Am I? (What's My Name?), Snoop Doggy Dogg (AI soul cover) (1993)
+- [ ] `the-notorious-b-i-g-ai-soul-cover--juicy` Juicy, The Notorious B.I.G. (AI soul cover) (1994)
+    - writer couldn't confirm: The page credits Combs as director of the video but flags it as needing a citation, so I left the video out.
+- [ ] `the-notorious-b-i-g-ai-soul-cover--big-poppa` Big Poppa, The Notorious B.I.G. (AI soul cover) (1994)
+    - writer couldn't confirm: The Big Poppa page credits Hype Williams as video director only in its category list, so I left the director out. Sources disagree on whether the 'Who Shot Ya?' B-side came out in December 1994 or February 1995.
+- [ ] `nas-ai-soul-cover--n-y-state-of-mind` N.Y. State of Mind, Nas (AI soul cover) (1994)
+    - writer couldn't confirm: Which of the four Illmatic studios the song was cut in; the song's 1992 recording date is unsourced on Wikipedia. I didn't confirm from a page I read that 'The Genesis' contains the 'Live at the Barbeque' snippet, so the panel correction rests on that point being shaky rather than wrong.
+- [ ] `scarface-ai-soul-cover--i-seen-a-man-die` I Seen a Man Die, Scarface (AI soul cover) (1994)
+    - writer couldn't confirm: The Diary's Wikipedia page lists a sample of Julie Driscoll, Brian Auger and the Trinity's 'Light My Fire' on this track, but the song's own page names no sample and I couldn't confirm it anywhere else, so I left it out. No video director found.
+- [ ] `coolio-ai-soul-cover--gangstas-paradise` Gangsta's Paradise, Coolio (AI soul cover) (1995)
+    - writer couldn't confirm: Whether Rasheed's track replays the string line on a synth or with players; Wikipedia calls it an interpolation without saying how.
+- [ ] `2pac-ai-soul-cover--california-love` California Love, 2Pac (AI soul cover) (1995)
+    - writer couldn't confirm: Jimmy Iovine says Interscope and Time Warner fronted the bail money rather than Knight himself (Complex); I kept the plain 'Knight posted bail' from Wikipedia.
+- [ ] `mobb-deep-ai-soul-cover--shook-ones` Shook Ones (Part II), Mobb Deep (AI soul cover) (1995)
+    - writer couldn't confirm: I confirmed Prodigy has the first verse only from search snippets of reviews, not a page I read in full.
+- [ ] `luniz-ai-soul-cover--i-got-5-on-it` I Got 5 on It, Luniz (AI soul cover) (1995)
+    - writer couldn't confirm: Wikipedia's sample list for the song carries a citation-needed tag. I couldn't confirm Club Nouveau's hometown from a page I read, so I left it out.
+- [ ] `fugees-ai-soul-cover--ready-or-not` Ready or Not, Fugees (AI soul cover) (1996)
+    - writer couldn't confirm: Which studio the song itself was cut in; The Score was recorded at the Booga Basement and The Crib.
+- [ ] `the-notorious-b-i-g-ai-soul-cover--hypnotize` Hypnotize, The Notorious B.I.G. (AI soul cover) (1997)
+    - writer couldn't confirm: Whether the track was recorded at Daddy's House or in Trinidad; the album used both.
+- [ ] `the-notorious-b-i-g-ai-soul-cover--mo-money-mo-problems` Mo Money Mo Problems, The Notorious B.I.G. (AI soul cover) (1997)
+- [ ] `the-notorious-b-i-g-ai-soul-cover--ten-crack-commandments` Ten Crack Commandments, The Notorious B.I.G. (AI soul cover) (1997)
+    - writer couldn't confirm: The release and year of Les McCann's 'Vallarta' (couldn't find it), and whether Premier made this beat at D&D specifically.
+- [ ] `will-smith-ai-soul-cover--men-in-black` Men in Black, Will Smith (AI soul cover) (1997)
+- [ ] `lauryn-hill-ai-soul-cover--doo-wop` Doo Wop (That Thing), Lauryn Hill (AI soul cover) (1998)
+    - writer couldn't confirm: Which of Hill's collaborators arranged the horns and strings.
+- [ ] `outkast-ai-soul-cover--ms-jackson` Ms. Jackson, OutKast (AI soul cover) (2000)
+    - writer couldn't confirm: Wikipedia flags the 'Strawberry Letter 23' sample as needing a better source, and the Rock Hall says it isn't an exact sample; I couldn't settle exactly what was lifted.
+- [ ] `outkast-ai-soul-cover--so-fresh-so-clean` So Fresh, So Clean, OutKast (AI soul cover) (2000)
+    - writer couldn't confirm: I couldn't confirm which Joe Simon album 'Before the Night Is Over' sits on (it's on Ace's Easy to Love/A Bad Case of Love two-fer, both 1977), or who sings the final hook.
+- [ ] `lil-jon-the-east-side-boyz-ai-soul-cover--get-low` Get Low, Lil Jon & the East Side Boyz (AI soul cover) (2002)
+    - writer couldn't confirm: One search summary said Jon started the song in the late 1990s after hearing DMX's 'Party Up'; I couldn't read that in a source, so it's out.
+- [ ] `outkast-ai-soul-cover--the-way-you-move` The Way You Move, OutKast (AI soul cover) (2003)
+- [ ] `terror-squad-ai-soul-cover--lean-back` Lean Back, Terror Squad (AI soul cover) (2004)
+    - writer couldn't confirm: I didn't confirm a Grammy nomination for 'Lean Back'.
+- [ ] `kanye-west-ai-soul-cover--gold-digger` Gold Digger, Kanye West (AI soul cover) (2005)
+- [ ] `soulja-boy-tell-em-ai-soul-cover--crank-that` Crank That (Soulja Boy), Soulja Boy Tell 'Em (AI soul cover) (2007)
+    - writer couldn't confirm: The ten-minute writing time is a secondhand report on Wikipedia.
+- [ ] `macklemore-ryan-lewis-ai-soul-cover--thrift-shop` Thrift Shop, Macklemore & Ryan Lewis (AI soul cover) (2012)
+    - writer couldn't confirm: I couldn't find who played the saxophone or whether it was sampled.
+- [ ] `roddy-ricch-ai-soul-cover--the-box` The Box, Roddy Ricch (AI soul cover) (2019)
+    - writer couldn't confirm: Dr. Dre's Compton birthplace, used in the thread to stop 20, I didn't read here.

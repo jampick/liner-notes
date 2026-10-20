@@ -1,0 +1,78 @@
+{
+ "id": "will-smith-ai-soul-cover--men-in-black",
+ "title": "Men in Black",
+ "artist": "Will Smith (AI soul cover)",
+ "year": 1997,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Men in Black: The Album",
+ "aliases": {
+  "youtube": [
+   "t2U6q2E9wwE"
+  ],
+  "titles": [
+   "Will Smith – Men In Black (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Poke and Tone of Trackmasters produced it, their first record with Smith, and it re-sings the chorus of Patrice Rushen's 1982 'Forget Me Nots' over that record's groove; Rushen, Terri McFaddin and bassist Freddie Washington share the writing credit. Coko of SWV sings the chorus and background vocals. It was Smith's first single without DJ Jazzy Jeff.",
+  "context": "Columbia put it out on June 3, 1997, as the lead single for Barry Sonnenfeld's film, which opened July 2 and grossed about $589 million worldwide. With no US retail single it was shut out of the Hot 100, yet it topped the airplay chart for four weeks and the UK singles chart for four. It later went on Smith's solo debut Big Willie Style, and won him the Grammy for Best Rap Solo Performance over 'Hypnotize'.",
+  "listen_for": [
+   {
+    "where": "the bass line from the top",
+    "note": "Freddie Washington's bass from 'Forget Me Nots' is the hook the whole track rides on; a soul band only has to play it."
+   },
+   {
+    "where": "the chorus",
+    "note": "Coko sings a reworked Rushen chorus, so the sung melody in any cover is a 1982 R&B tune."
+   }
+  ],
+  "leads_to": {
+   "artist": "Patrice Rushen",
+   "title": "Forget Me Nots",
+   "year": 1982,
+   "why": "The Elektra single under 'Men in Black', number four R&B and number eight in the UK, with Gerald Albright on tenor sax."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Men_in_Black_(song)",
+   "https://www.songfacts.com/facts/will-smith/men-in-black",
+   "https://en.wikipedia.org/wiki/Forget_Me_Nots",
+   "https://en.wikipedia.org/wiki/Men_in_Black_(1997_film)",
+   "https://en.wikipedia.org/wiki/Big_Willie_Style"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "screen",
+   "title": "The film",
+   "line": "Written for Barry Sonnenfeld's Men in Black, starring Smith and Tommy Lee Jones, which grossed about $589 million worldwide.",
+   "wiki": "Men in Black (1997 film)",
+   "source": "https://en.wikipedia.org/wiki/Men_in_Black_(1997_film)"
+  },
+  {
+   "kind": "award",
+   "title": "Grammy win",
+   "line": "Best Rap Solo Performance at the 1998 Grammys.",
+   "wiki": "40th Annual Grammy Awards",
+   "source": "https://en.wikipedia.org/wiki/Men_in_Black_(song)"
+  },
+  {
+   "kind": "video",
+   "title": "Dancing with an alien",
+   "line": "Robert Caruso's video has Smith dancing with an alien and ends with a neuralyzer-style flash; two versions were made.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Men_in_Black_(song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-4)",
+  "written_on": "2026-10-20"
+ }
+}
