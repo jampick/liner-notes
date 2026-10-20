@@ -112,6 +112,9 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
         now_adapter = now.adapter.name
         _status = None
 
+        def log_request(self, code="-", size="-"):
+            pass  # _run logs every request, without the query string (it can carry the pairing token)
+
         def log_message(self, fmt, *a):
             log.debug("http: " + fmt, *a)
 
@@ -313,6 +316,8 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
             bank, matcher = lib.get()
             if path == "/song":
                 return self.send_json(playing_song(now.payload(), bank))
+            if self.command == "HEAD" and path in ("/events", "/bands"):
+                return self.send_json({"ok": False, "error": "streams answer GET only"}, 405)
             if path == "/events":
                 return self.events()
             if path == "/bands":

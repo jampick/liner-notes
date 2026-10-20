@@ -127,3 +127,19 @@ def test_cliamp_timeouts_dont_hang(start):
     t0 = time.monotonic()
     st, body, _ = b.post("/cmd", {"op": "next"}, timeout=10)
     assert st == 200 and json.loads(body) == {"ok": False} and time.monotonic() - t0 < 7
+
+
+def test_requests_are_logged_without_the_query(start, caplog):
+    import logging
+
+    b = start(lan=True)
+    with caplog.at_level(logging.DEBUG, logger="liner_notes.bridge"):
+        b.req("GET", f"/now?t={b.token}", host=f"192.168.1.20:{b.port}")
+        b.req("GET", "/history")
+        b.req("GET", "/now", host="evil.example:1")  # in LAN mode: unpaired
+        time.sleep(0.2)  # the line is written after the response goes out
+    lines = [(r.levelno, r.getMessage()) for r in caplog.records if r.name == "liner_notes.bridge"]
+    assert any(lv == logging.DEBUG and m.startswith("GET /now 200 ") for lv, m in lines)
+    assert any(lv == logging.INFO and m.startswith("GET /history 200 ") for lv, m in lines)
+    assert any(lv == logging.WARNING and m.startswith("GET /now 401 ") for lv, m in lines)
+    assert not any(b.token in m for _, m in lines)  # the ?t= pairing token stays out of the journal
