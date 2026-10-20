@@ -1,0 +1,64 @@
+{
+ "era": {
+  "n": 1,
+  "name": "Docks",
+  "years": "1980-84",
+  "essay": "The first era.",
+  "scene": {
+   "cities": [
+    "Port"
+   ],
+   "labels": [],
+   "gear": [],
+   "artifact": ""
+  },
+  "sources": []
+ },
+ "stops": [
+  {
+   "n": 1,
+   "title": "Harbour Lights",
+   "artist": "The Quays",
+   "year": 1983,
+   "year_note": "",
+   "album": "Single",
+   "made": "Cut in a boathouse.",
+   "context": "Context for Harbour Lights.",
+   "listen_for": [],
+   "leads_to": {},
+   "threads": [
+    {
+     "to": 3,
+     "kind": "same band",
+     "note": "Also them."
+    }
+   ],
+   "sources": [
+    "https://example.org/1"
+   ],
+   "unverified": ""
+  },
+  {
+   "n": 2,
+   "title": "Second Wind",
+   "artist": "Mona Vale",
+   "year": 1981,
+   "year_note": "",
+   "album": "Gale",
+   "made": "Two takes.",
+   "context": "Context for Second Wind.",
+   "listen_for": [
+    {
+     "where": "the intro",
+     "note": "Gulls."
+    }
+   ],
+   "leads_to": {},
+   "threads": [],
+   "sources": [
+    "https://example.org/2"
+   ],
+   "unverified": ""
+  }
+ ]
+}

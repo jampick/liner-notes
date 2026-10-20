@@ -1,0 +1,219 @@
+{
+ "slug": "mini-trip",
+ "title": "Mini Trip",
+ "titleA": "Mini",
+ "titleB": "Trip",
+ "kicker": "Five made-up songs",
+ "lede": "Nothing here is real.",
+ "copy": {
+  "start": "Start",
+  "credits": "Fixture text."
+ },
+ "judges": {
+  "A": {
+   "name": "Ada",
+   "role": "the Archivist"
+  },
+  "B": {
+   "name": "Bo",
+   "role": "the Barman"
+  }
+ },
+ "express": {
+  "note": "One per era.",
+  "n": [
+   1,
+   5
+  ]
+ },
+ "eras": [
+  {
+   "n": 1,
+   "name": "Docks",
+   "years": "1980-84",
+   "from": 1980,
+   "to": 1984,
+   "essay": "The first era.",
+   "scene": {
+    "cities": [
+     "Port"
+    ],
+    "labels": [],
+    "gear": [],
+    "artifact": ""
+   },
+   "image": "data:image/webp;base64,UklGRgwAAABXRUJQVlA4IGVyYQE="
+  },
+  {
+   "n": 2,
+   "name": "Open Water",
+   "years": "1985-90",
+   "from": 1985,
+   "to": 1990,
+   "essay": "The second era.",
+   "scene": {
+    "cities": [],
+    "labels": [
+     "Tidal"
+    ],
+    "gear": [],
+    "artifact": ""
+   },
+   "image": "data:image/webp;base64,UklGRgwAAABXRUJQVlA4IGVyYQI="
+  }
+ ],
+ "stops": [
+  {
+   "title": "Second Wind",
+   "artist": "Mona Vale",
+   "year": 1981,
+   "yearNote": "",
+   "album": "Gale",
+   "era": 1,
+   "judge": "B",
+   "quote": "Sing it.",
+   "dissent": false,
+   "made": "Two takes.",
+   "context": "Context for Second Wind.",
+   "listen": [
+    {
+     "where": "the intro",
+     "note": "Gulls."
+    }
+   ],
+   "leads": null,
+   "sources": [
+    "https://example.org/2"
+   ],
+   "cover": "",
+   "youtube": "https://www.youtube.com/watch?v=AAAAAAAAAA2",
+   "yt": "AAAAAAAAAA2",
+   "preview": "https://example.org/preview.m4a",
+   "apple": "https://example.org/album?i=1",
+   "n": 1,
+   "threads": []
+  },
+  {
+   "title": "Harbour Lights",
+   "artist": "The Quays",
+   "year": 1983,
+   "yearNote": "",
+   "album": "",
+   "era": 1,
+   "judge": "A",
+   "quote": "The first one.",
+   "dissent": false,
+   "made": "Cut in a boathouse.",
+   "context": "Context for Harbour Lights.",
+   "listen": [],
+   "leads": null,
+   "sources": [
+    "https://example.org/1"
+   ],
+   "cover": "",
+   "youtube": "https://www.youtube.com/watch?v=AAAAAAAAAA1",
+   "yt": "AAAAAAAAAA1",
+   "preview": null,
+   "apple": null,
+   "n": 2,
+   "threads": [
+    {
+     "to": 4,
+     "kind": "same band",
+     "note": "Also them."
+    }
+   ]
+  },
+  {
+   "title": "Low Tide",
+   "artist": "Mona Vale",
+   "year": 1985,
+   "yearNote": "",
+   "album": "",
+   "era": 2,
+   "judge": "A",
+   "quote": "Out.",
+   "dissent": false,
+   "made": "Recorded at low tide.",
+   "context": "Context for Low Tide.",
+   "listen": [],
+   "leads": null,
+   "sources": [
+    "https://example.org/5"
+   ],
+   "cover": "",
+   "youtube": "https://www.youtube.com/watch?v=AAAAAAAAAA5",
+   "yt": "AAAAAAAAAA5",
+   "preview": null,
+   "apple": null,
+   "n": 3,
+   "threads": []
+  },
+  {
+   "title": "Paper Boats",
+   "artist": "The Quays",
+   "year": 1987,
+   "yearNote": "",
+   "album": "",
+   "era": 2,
+   "judge": "A",
+   "quote": "Folded twice.",
+   "dissent": true,
+   "made": "Folded paper.",
+   "context": "Context for Paper Boats.",
+   "listen": [],
+   "leads": null,
+   "sources": [
+    "https://example.org/3"
+   ],
+   "cover": "",
+   "youtube": "https://www.youtube.com/watch?v=AAAAAAAAAA3",
+   "yt": "AAAAAAAAAA3",
+   "preview": null,
+   "apple": null,
+   "n": 4,
+   "threads": [
+    {
+     "to": 2,
+     "kind": "same band",
+     "note": "Also them."
+    },
+    {
+     "to": 3,
+     "kind": "same band",
+     "note": "Also them."
+    }
+   ]
+  },
+  {
+   "title": "Night Ferry",
+   "artist": "Delta Glass",
+   "year": 1987,
+   "yearNote": "",
+   "album": "",
+   "era": 2,
+   "judge": "B",
+   "quote": "Late.",
+   "dissent": false,
+   "made": "A ferry horn.",
+   "context": "Context for Night Ferry.",
+   "listen": [],
+   "leads": {
+    "artist": "X",
+    "title": "Y",
+    "year": 1990,
+    "why": "Z."
+   },
+   "sources": [
+    "https://example.org/4"
+   ],
+   "cover": "",
+   "youtube": "https://www.youtube.com/watch?v=AAAAAAAAAA4",
+   "yt": "AAAAAAAAAA4",
+   "preview": null,
+   "apple": null,
+   "n": 5,
+   "threads": []
+  }
+ ]
+}

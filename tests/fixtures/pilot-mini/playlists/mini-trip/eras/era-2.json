@@ -1,0 +1,86 @@
+{
+ "era": {
+  "n": 2,
+  "name": "Open Water",
+  "years": "1985-90",
+  "essay": "The second era.",
+  "scene": {
+   "cities": [],
+   "labels": [
+    "Tidal"
+   ],
+   "gear": [],
+   "artifact": ""
+  },
+  "sources": []
+ },
+ "stops": [
+  {
+   "n": 3,
+   "title": "Paper Boats",
+   "artist": "The Quays",
+   "year": 1987,
+   "year_note": "",
+   "album": "",
+   "made": "Folded paper.",
+   "context": "Context for Paper Boats.",
+   "listen_for": [],
+   "leads_to": {},
+   "threads": [
+    {
+     "to": 1,
+     "kind": "same band",
+     "note": "Also them."
+    },
+    {
+     "to": 5,
+     "kind": "same band",
+     "note": "Also them."
+    }
+   ],
+   "sources": [
+    "https://example.org/3"
+   ],
+   "unverified": ""
+  },
+  {
+   "n": 4,
+   "title": "Night Ferry",
+   "artist": "Delta Glass",
+   "year": 1987,
+   "year_note": "",
+   "album": "",
+   "made": "A ferry horn.",
+   "context": "Context for Night Ferry.",
+   "listen_for": [],
+   "leads_to": {
+    "artist": "X",
+    "title": "Y",
+    "year": 1990,
+    "why": "Z."
+   },
+   "threads": [],
+   "sources": [
+    "https://example.org/4"
+   ],
+   "unverified": ""
+  },
+  {
+   "n": 5,
+   "title": "Low Tide",
+   "artist": "Mona Vale",
+   "year": 1985,
+   "year_note": "",
+   "album": "",
+   "made": "Recorded at low tide.",
+   "context": "Context for Low Tide.",
+   "listen_for": [],
+   "leads_to": {},
+   "threads": [],
+   "sources": [
+    "https://example.org/5"
+   ],
+   "unverified": ""
+  }
+ ]
+}

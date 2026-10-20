@@ -1,8 +1,9 @@
 """The new format builds the same page data as the pilot's build.py did.
 
-Runs the pilot's own engine/build.py on a copy of its playlist folder (the pilot repo is never
-written to), migrates the same folder into a temporary data root, composes the new data, and
-compares the two with ids, covers and images set aside.
+test_fixture_equivalent needs nothing outside the repo: tests/fixtures/pilot-mini is a made-up
+pilot playlist folder, and expected.json is what the pilot's engine/build.py made of it (run once,
+on a copy). test_downtempo_equivalent does the same against the real pilot checkout, when it's on
+this machine (the pilot repo is never written to). Ids, covers and images are set aside.
 """
 import json
 import re
@@ -20,7 +21,7 @@ from liner_notes.migrate import migrate
 PILOT = Path.home() / "Projects/Music/journeys"
 FOLDER = PILOT / "playlists/downtempo-drift"
 
-pytestmark = pytest.mark.skipif(not FOLDER.exists(), reason="the journeys pilot isn't on this machine")
+FIXTURE = Path(__file__).parent / "fixtures/pilot-mini"
 
 
 def old_data(tmp):
@@ -52,6 +53,24 @@ def strip(d):
     return d
 
 
+def test_fixture_equivalent(tmp_path):
+    old = json.loads((FIXTURE / "expected.json").read_text())
+    root, cache = tmp_path / "root", tmp_path / "cache"
+    migrate(FIXTURE / "playlists/mini-trip", root, cache, log=lambda *a: None)
+    new, problems, _ = compose("mini-trip", Bank([root]), cache=cache)
+    assert problems == []
+    a, b = strip(old), strip(new)
+    assert [s["title"] for s in a["stops"]] == [s["title"] for s in b["stops"]] == ["Second Wind", "Harbour Lights", "Low Tide", "Paper Boats", "Night Ferry"]
+    for so, sn in zip(a["stops"], b["stops"], strict=True):
+        assert so == sn, so["title"]
+    a.pop("stops"), b.pop("stops")
+    assert a == b
+    # The journey lists its songs in the order the page numbers them.
+    j = json.loads((root / "journeys/mini-trip/journey.json").read_text())
+    assert [s.split("--")[1] for s in j["songs"]] == ["second-wind", "harbour-lights", "low-tide", "paper-boats", "night-ferry"]
+
+
+@pytest.mark.skipif(not FOLDER.exists(), reason="the journeys pilot isn't on this machine")
 def test_downtempo_equivalent(tmp_path):
     old = old_data(tmp_path)
     root, cache = tmp_path / "root", tmp_path / "cache"

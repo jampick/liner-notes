@@ -1,0 +1,23 @@
+{
+ "years": {
+  "1981": [
+   {
+    "kind": "news",
+    "title": "A Fair",
+    "line": "A fair came to town."
+   }
+  ]
+ },
+ "songs": {
+  "Second Wind": [
+   {
+    "kind": "film",
+    "title": "Sails",
+    "line": "A film about sails."
+   }
+  ]
+ },
+ "artists": {
+  "Mona Vale": "Mona Vale (band)"
+ }
+}

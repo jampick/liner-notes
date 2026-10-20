@@ -1,0 +1,24 @@
+{
+ "slug": "mini-trip",
+ "title": "Mini Trip",
+ "titleA": "Mini",
+ "titleB": "Trip",
+ "kicker": "Five made-up songs",
+ "description": "A fixture for the build-equivalence test.",
+ "lede": "Nothing here is real.",
+ "fonts": "https://fonts.googleapis.com/css2?family=Spectral",
+ "copy": {
+  "start": "Start",
+  "credits": "Fixture text."
+ },
+ "eraBounds": [
+  [
+   1980,
+   1984
+  ],
+  [
+   1985,
+   1990
+  ]
+ ]
+}

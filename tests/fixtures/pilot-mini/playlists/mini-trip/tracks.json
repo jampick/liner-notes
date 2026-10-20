@@ -1,0 +1,42 @@
+[
+ {
+  "title": "Harbour Lights (2010 Remaster)",
+  "artist": "The Quays",
+  "ytid": "AAAAAAAAAA1",
+  "youtube": "https://www.youtube.com/watch?v=AAAAAAAAAA1",
+  "preview": null,
+  "apple": null
+ },
+ {
+  "title": "Second Wind",
+  "artist": "Mona Vale",
+  "ytid": "AAAAAAAAAA2",
+  "youtube": "https://www.youtube.com/watch?v=AAAAAAAAAA2",
+  "preview": "https://example.org/preview.m4a",
+  "apple": "https://example.org/album?i=1"
+ },
+ {
+  "title": "Paper Boats",
+  "artist": "The Quays",
+  "ytid": "AAAAAAAAAA3",
+  "youtube": "https://www.youtube.com/watch?v=AAAAAAAAAA3",
+  "preview": null,
+  "apple": null
+ },
+ {
+  "title": "Night Ferry",
+  "artist": "Delta Glass",
+  "ytid": "AAAAAAAAAA4",
+  "youtube": "https://www.youtube.com/watch?v=AAAAAAAAAA4",
+  "preview": null,
+  "apple": null
+ },
+ {
+  "title": "Low Tide",
+  "artist": "Mona Vale",
+  "ytid": "AAAAAAAAAA5",
+  "youtube": "https://www.youtube.com/watch?v=AAAAAAAAAA5",
+  "preview": null,
+  "apple": null
+ }
+]

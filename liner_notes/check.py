@@ -147,8 +147,6 @@ def scan_tree(root):
     for p in tree_files(root):
         rel = p.relative_to(root).as_posix()
         parts = "/" + rel
-        if rel.startswith("tests/fixtures/"):
-            continue
         if any(f"/{d}/" in parts for d in PERSONAL_DIRS):
             out.append(f"{rel}: personal data (covers, pictures, lyrics, stand-ins) never goes in the repo")
         elif p.name in PERSONAL_FILES or p.suffix.lower() in MEDIA_EXT:

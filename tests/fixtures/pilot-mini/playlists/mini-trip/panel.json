@@ -1,0 +1,42 @@
+{
+ "judges": {
+  "A": {
+   "name": "Ada",
+   "role": "the Archivist"
+  },
+  "B": {
+   "name": "Bo",
+   "role": "the Barman"
+  }
+ },
+ "express": {
+  "note": "One per era.",
+  "titles": [
+   "Second Wind",
+   "Night Ferry"
+  ]
+ },
+ "quotes": {
+  "Harbour Lights": {
+   "j": "A",
+   "q": "The first one."
+  },
+  "Second Wind": {
+   "j": "B",
+   "q": "Sing it."
+  },
+  "Paper Boats": {
+   "j": "A",
+   "q": "Folded twice.",
+   "dissent": true
+  },
+  "Night Ferry": {
+   "j": "B",
+   "q": "Late."
+  },
+  "Low Tide": {
+   "j": "A",
+   "q": "Out."
+  }
+ }
+}
