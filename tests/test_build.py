@@ -169,3 +169,22 @@ def test_build_all_skips_refused(iso, tpl, monkeypatch):
     assert B.build_all(bank=Bank([iso["home"]]), log=lambda *a: None) == 1
     assert (iso["dist"] / "test-trip.html").exists() and (iso["dist"] / "live.html").exists()
     assert not (iso["dist"] / "other-trip.html").exists()
+
+
+def test_media_never_asks_youtube(iso, monkeypatch):
+    from liner_notes import media
+
+    make_bank(iso["home"])
+    s = read_json(iso["home"] / "songs/ann-artist--first-song.json")
+    s["aliases"]["apple"] = {"url": "https://music.apple.com/us/album/x/1?i=123"}
+    write_json(iso["home"] / "songs/ann-artist--first-song.json", s)
+    asked = []
+
+    def get(self, url, tries=5):
+        asked.append(url)
+        raise OSError("offline")
+
+    monkeypatch.setattr(media.Fetcher, "get", get)
+    out = media.stage("test-trip", bank=Bank([iso["home"]]), cache=iso["cache"], log=lambda *a: None)
+    assert out == iso["cache"] / "stage/test-trip.stage.json" and out.is_file()
+    assert asked and not any("youtube" in u or "ytimg" in u or "googlevideo" in u for u in asked)
