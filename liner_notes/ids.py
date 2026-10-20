@@ -8,6 +8,9 @@ import re
 import unicodedata
 
 YT = re.compile(r"(?:[?&]v=|youtu\.be/|/shorts/|/embed/)([\w-]{11})")
+# An offline playlist plays the cached audio, named by its YouTube id: ~/.cache/journeys/audio/<id>.webm
+# from the pilot, ~/.cache/liner-notes/audio/<id>.<ext> from here.
+OFFLINE = re.compile(r"/(?:journeys|liner-notes)/audio/([\w-]{11})\.\w+$")
 
 # Upload and release noise that says nothing about which song it is.
 _NOISE = re.compile(
@@ -77,5 +80,5 @@ def song_id(artist, title):
 
 
 def youtube_id(path):
-    m = YT.search(path or "")
+    m = YT.search(path or "") or OFFLINE.search(path or "")
     return m.group(1) if m else None

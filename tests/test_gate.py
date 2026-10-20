@@ -1,0 +1,129 @@
+import json
+import socket
+import time
+
+import pytest
+
+from liner_notes.bridge.server import CSP
+
+
+def raw(port, data, wait=3.0):
+    """Send bytes as they are and return what comes back (status line first), with how long it took."""
+    s = socket.create_connection(("127.0.0.1", port), timeout=wait)
+    t0 = time.monotonic()
+    s.sendall(data)
+    out = b""
+    try:
+        while b"\r\n\r\n" not in out:
+            chunk = s.recv(4096)
+            if not chunk:
+                break
+            out += chunk
+    except TimeoutError:
+        pass
+    s.close()
+    return out, time.monotonic() - t0
+
+
+def test_host_rebinding_is_refused(start):
+    b = start()
+    assert b.req("GET", "/now", host="evil.example:47391")[0] == 403
+    assert b.req("POST", "/cmd", {"op": "next"}, host="evil.example:47391", token=b.token)[0] == 403
+    assert ("next", {}) not in b.fake.ops
+
+
+def test_origins(start):
+    b = start()
+    assert b.req("GET", "/now", origin="https://evil.example")[0] == 403
+    st, _, h = b.req("GET", "/now", origin="null")  # a page opened from disk can follow along
+    assert st == 200 and h.get("Access-Control-Allow-Origin") == "null"
+    for path in ("/history", "/lyrics", "/v/"):  # but gets nothing private
+        st, _, h = b.req("GET", path, origin="null")
+        assert "Access-Control-Allow-Origin" not in h, path
+    st, _, h = b.req("GET", "/history", origin=f"http://127.0.0.1:{b.port}")
+    assert h.get("Access-Control-Allow-Origin") == f"http://127.0.0.1:{b.port}"
+
+
+def test_posts_need_the_token_and_a_real_origin(start):
+    b = start()
+    own = f"http://127.0.0.1:{b.port}"
+    assert b.req("POST", "/cmd", {"op": "toggle"}, origin="null", token=b.token)[0] == 403
+    assert b.req("POST", "/cmd", {"op": "toggle"}, origin="https://evil.example", token=b.token)[0] == 403
+    assert b.req("POST", "/cmd", {"op": "toggle"}, origin=own)[0] == 403
+    assert b.req("POST", "/cmd", {"op": "toggle"}, origin=own, token="wrong")[0] == 403
+    assert b.req("POST", "/cmd", {"op": "toggle"}, origin=own, token="été")[0] == 403
+    assert ("toggle", {}) not in b.fake.ops
+    st, body, _ = b.req("POST", "/cmd", {"op": "toggle"}, origin=own, token=b.token)
+    assert st == 200 and json.loads(body)["ok"]
+    assert ("toggle", {}) in b.fake.ops
+    assert b.req("POST", "/cmd", {"op": "next"}, token=b.token)[0] == 200  # a script with the token, no Origin
+
+
+def test_preflight(start):
+    b = start()
+    st, _, h = b.req("OPTIONS", "/cmd", origin=f"http://127.0.0.1:{b.port}")
+    assert st == 204 and "X-Liner-Token" in h["Access-Control-Allow-Headers"]
+    assert "Access-Control-Allow-Private-Network" not in h
+    assert b.req("OPTIONS", "/cmd", origin="null")[0] == 403
+    assert b.req("OPTIONS", "/cmd", origin="https://evil.example")[0] == 403
+
+
+@pytest.mark.parametrize("length", ["-1", "abc", "1e3", "99999999999", " "])
+def test_bad_content_length_gets_400_fast(start, length):
+    b = start()
+    head = (f"POST /cmd HTTP/1.1\r\nHost: 127.0.0.1:{b.port}\r\nOrigin: http://127.0.0.1:{b.port}\r\n"
+            f"X-Liner-Token: {b.token}\r\nContent-Length: {length}\r\n\r\n").encode()
+    out, took = raw(b.port, head + b'{"op":"next"}')
+    assert out.startswith(b"HTTP/1.1 400") and took < 1.0, (length, out[:60])
+
+
+def test_short_body_doesnt_hang_a_thread(start):
+    b = start()
+    b.handler.timeout = 1  # 10 s in real use
+    head = (f"POST /cmd HTTP/1.1\r\nHost: 127.0.0.1:{b.port}\r\nX-Liner-Token: {b.token}\r\nContent-Length: 100\r\n\r\n").encode()
+    s = socket.create_connection(("127.0.0.1", b.port), timeout=15)
+    s.sendall(head + b'{"op"')
+    t0 = time.monotonic()
+    s.settimeout(15)
+    got = s.recv(4096)
+    assert time.monotonic() - t0 < 3  # the handler's socket timeout lets go
+    s.close()
+    assert not got or got.startswith(b"HTTP/1.1 400")
+    assert b.req("GET", "/now")[0] == 200
+
+
+@pytest.mark.parametrize("body", [b"[]", b'"next"', b"null", b"42", b"{bad"])
+def test_body_must_be_a_json_object(start, body):
+    b = start()
+    st, out, _ = b.req("POST", "/cmd", token=b.token, raw=body, headers={"Content-Type": "application/json"})
+    assert st == 400
+
+
+def test_oversized_body(start):
+    b = start()
+    st, _, _ = b.req("POST", "/cmd", token=b.token, raw=b'{"op":"next","pad":"' + b"x" * 5000 + b'"}')
+    assert st == 400
+    assert b.req("POST", "/cmd", token=b.token, raw=b"x", headers={"Transfer-Encoding": "chunked"})[0] in (400, 501)
+
+
+def test_pages_get_the_token_and_a_csp(start, env):
+    b = start()
+    dist = env["tmp"] / "dist"
+    dist.mkdir()
+    (dist / "demo.html").write_text('<!doctype html><head><meta name="liner-token" content=""></head><body>hi</body>')
+    st, body, h = b.req("GET", "/p/demo.html")
+    assert st == 200 and f'<meta name="liner-token" content="{b.token}">'.encode() in body
+    assert h["Content-Security-Policy"] == CSP and "frame-src 'none'" in CSP
+    assert h["Cache-Control"] == "no-cache" and h["ETag"]
+    assert b.req("GET", "/p/demo.html", headers={"If-None-Match": h["ETag"]})[0] == 304
+    st, _, h = b.req("GET", "/")
+    assert st == 200 and h["Content-Security-Policy"] == CSP
+    assert "Content-Security-Policy" not in b.req("GET", "/now")[2]
+
+
+def test_cliamp_timeouts_dont_hang(start):
+    b = start()
+    b.fake.hang.add("next")  # the job never finishes
+    t0 = time.monotonic()
+    st, body, _ = b.post("/cmd", {"op": "next"}, timeout=10)
+    assert st == 200 and json.loads(body) == {"ok": False} and time.monotonic() - t0 < 7

@@ -35,6 +35,7 @@ class NowPlaying:
     state: str = "playing"  # playing | paused | stopped
     source: str = ""
     ids: dict = field(default_factory=dict)
+    meta: dict = field(default_factory=dict)  # player details that don't identify the track (cliamp's playlist revision)
 
     def position_now(self, now=None):
         if self.state != "playing" or not self.position_at:
@@ -50,6 +51,10 @@ class NowPlaying:
     def key(self):
         return (self.title, self.artist, self.ids.get("path") or self.ids.get("url"), self.state)
 
+    def track_key(self):
+        """Which recording, whatever the play state."""
+        return self.key()[:3]
+
     def to_dict(self):
         return asdict(self)
 
@@ -57,6 +62,7 @@ class NowPlaying:
 class Adapter:
     name = ""
     capabilities = frozenset()
+    auto = False
 
     def available(self):
         return False
@@ -99,7 +105,10 @@ def registry():
 
 
 def pick(name="auto", **opts):
-    """An adapter by name, or the first available one in registry order."""
+    """An adapter by name, or the first available one in registry order.
+
+    An adapter picked automatically carries auto = True, and the bridge keeps looking: it moves
+    to cliamp as soon as cliamp's socket appears, and off a player that went away."""
     reg = registry()
     if name != "auto":
         return reg[name](**opts)
@@ -109,5 +118,8 @@ def pick(name="auto", **opts):
         except TypeError:
             continue  # needs settings (a token, a user name) that auto can't guess
         if a.available():
+            a.auto = True
             return a
-    return reg["cliamp"]()
+    a = reg["cliamp"]()
+    a.auto = True
+    return a
