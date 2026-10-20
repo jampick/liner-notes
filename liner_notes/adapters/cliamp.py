@@ -53,15 +53,21 @@ class CliampAdapter(Adapter):
                 yield from_snapshot(d)
 
     def command(self, op):
-        job = cliamp.call(op, timeout=5)
-        return bool(job) and job.get("state") == "succeeded"
+        """True when cliamp did it, False when it refused; TimeoutError when it didn't answer."""
+        return self._done(cliamp.call(op, timeout=5))
+
+    @staticmethod
+    def _done(job):
+        err = (job or {}).get("error")
+        if not job or (isinstance(err, dict) and err.get("code") == "timeout" and job.get("state") != "succeeded"):
+            raise TimeoutError("cliamp didn't answer")
+        return job.get("state") == "succeeded"
 
     def queue(self):
         return cliamp.queue()
 
     def jump(self, index):
-        job = cliamp.call("queue.play", {"index": index}, timeout=5)
-        return bool(job) and job.get("state") == "succeeded"
+        return self._done(cliamp.call("queue.play", {"index": index}, timeout=5))
 
     def lyrics(self):
         return cliamp.result("lyrics", timeout=20)

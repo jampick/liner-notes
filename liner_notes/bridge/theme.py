@@ -2,7 +2,8 @@
 
 Pages ask every few seconds, so the answer is kept until the theme's files change (their mtimes
 and where the `current` link points). The font comes from `omarchy-font-current`, run by its full
-path at most once every `font_every` seconds; a slow or missing one just means no font.
+path at most once every `font_every` seconds and outside the lock, so other requests get the last
+answer meanwhile; a slow or missing one just means no font.
 """
 import os
 import re
@@ -24,7 +25,7 @@ class Theme:
     def __init__(self, root=None, font_bin=None, font_every=30.0):
         self.root, self.font_bin, self.font_every = Path(root or THEME), font_bin, font_every
         self.lock = threading.Lock()
-        self.stamp, self.value, self.font, self.font_at = None, None, "", None
+        self.stamp, self.value, self.font, self.font_at, self.font_busy = None, None, "", None, False
 
     def _stamp(self):
         out = [os.path.realpath(self.root)]
@@ -37,19 +38,22 @@ class Theme:
         return tuple(out)
 
     def _font(self):
-        now = time.monotonic()
-        if self.font_at is not None and now - self.font_at < self.font_every:
-            return self.font
-        self.font_at = now
+        """The cached font, refreshed by at most one caller at a time and never under the lock."""
+        with self.lock:
+            now = time.monotonic()
+            if self.font_busy or (self.font_at is not None and now - self.font_at < self.font_every):
+                return self.font
+            self.font_busy, self.font_at = True, now
         exe = self.font_bin or font_binary()
-        if not exe:
-            self.font = ""
-            return ""
-        try:
-            self.font = subprocess.run([exe], capture_output=True, text=True, timeout=3).stdout.strip()
-        except (OSError, subprocess.SubprocessError):
-            self.font = ""
-        return self.font
+        font = ""
+        if exe:
+            try:
+                font = subprocess.run([exe], capture_output=True, text=True, timeout=3).stdout.strip()
+            except (OSError, subprocess.SubprocessError):
+                font = ""
+        with self.lock:
+            self.font, self.font_busy = font, False
+        return font
 
     def _read(self):
         colors = {}
@@ -69,6 +73,7 @@ class Theme:
             stamp = self._stamp()
             if stamp != self.stamp:
                 self.stamp, self.value = stamp, self._read()
-            if self.value is None:
-                return {"ok": False}
-            return {**self.value, "font": self._font()}
+            value = self.value
+        if value is None:
+            return {"ok": False}
+        return {**value, "font": self._font()}

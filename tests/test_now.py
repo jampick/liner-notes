@@ -203,3 +203,57 @@ def test_now_closes(env):
     assert n.clock.thread is None
     fake.close()
     assert not os.path.exists(env["sock"])
+
+
+def test_exact_offline_name_from_play(start, env):
+    """port/build's play writes the cliamp playlist's exact name, "(offline)" and all, no newline."""
+    from liner_notes.bank import write_json
+
+    write_json(env["root"] / "journeys/yacht-rock/journey.json", {"slug": "yacht-rock", "title": "Yacht Rock", "songs": ["christopher-cross--sailing"], "eras": []})
+    st = env["tmp"] / "state/liner-notes"
+    st.mkdir(parents=True, exist_ok=True)
+    (st / "playlist").write_text("Yacht Rock (offline)")
+    b = start(playing=1)
+    r = b.get("/now")
+    assert r["song"] == "christopher-cross--sailing" and r["playlist"] == "Yacht Rock (offline)" and r["journey"] == "yacht-rock"
+
+
+def test_theme_requests_dont_wait_on_the_font(tmp_path):
+    import threading
+
+    root = tmp_path / "current"
+    (root / "theme").mkdir(parents=True)
+    (root / "theme/colors.toml").write_text('background = "#111111"\n')
+    (root / "theme.name").write_text("x\n")
+    slow = tmp_path / "font"
+    slow.write_text("#!/bin/sh\nsleep 1\necho Mono\n")
+    slow.chmod(0o755)
+    t = Theme(root, font_bin=str(slow))
+    first = threading.Thread(target=t.get)
+    first.start()
+    time.sleep(0.1)
+    t0 = time.monotonic()
+    assert t.get()["ok"] and time.monotonic() - t0 < 0.3  # answered from what's there
+    first.join()
+    assert t.get()["font"] == "Mono"
+
+
+def test_library_reload_doesnt_block_readers(env, monkeypatch):
+    import threading
+
+    lib = Library([env["root"]], every=0)
+    real = lib._load
+
+    def slow():
+        time.sleep(0.8)
+        return real()
+
+    monkeypatch.setattr(lib, "_stamp", lambda: ("changed",))
+    monkeypatch.setattr(lib, "_load", slow)
+    t = threading.Thread(target=lib.get)
+    t.start()
+    time.sleep(0.1)
+    t0 = time.monotonic()
+    bank, _ = lib.get()
+    assert "demo" in bank.journeys and time.monotonic() - t0 < 0.2
+    t.join()

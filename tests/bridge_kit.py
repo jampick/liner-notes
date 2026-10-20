@@ -96,7 +96,8 @@ class Running:
     def __init__(self, srv, now, handler):
         self.srv, self.now, self.handler = srv, now, handler
         self.port = srv.server_address[1]
-        self.token = handler.services["token"]
+        self.token = handler.services["token"]  # the page token
+        self.pair = handler.services["pair"]  # the LAN pairing token
         self.svc = handler.services
 
     def req(self, method, path, body=None, host=None, origin=None, cookie=None, token=None, headers=None, raw=None, timeout=5):

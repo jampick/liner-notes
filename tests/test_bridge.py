@@ -52,20 +52,23 @@ def test_play_by_song_id(start):
     assert json.loads(b.post("/play", {"yt": "u7K72X4eo_s"})[1]) == {"ok": True, "index": 3}  # an offline path
 
 
-def test_lan_needs_token(start):
+def test_lan_needs_pairing(start):
     b = start(lan=True)
+    assert b.pair == "tok-123" and b.token != b.pair  # two different secrets
     lan_host = f"192.168.1.20:{b.port}"
     assert b.req("GET", "/now")[0] == 200  # this machine needs no pairing
     assert b.req("GET", "/now", host=lan_host)[0] == 401
     assert b.req("GET", "/now?t=wrong", host=lan_host)[0] == 401
     assert b.req("GET", "/now?t=%C3%A9t%C3%A9", host=lan_host)[0] == 401  # non-ASCII used to raise TypeError
-    assert b.req("GET", "/now", host=lan_host, headers={"X-Liner-Token": "été"})[0] == 401
-    st, _, headers = b.req("GET", f"/now?t={b.token}", host=lan_host)
-    assert st == 200 and "ln_token=" in headers.get("Set-Cookie", "")
-    assert b.req("GET", "/now", host=lan_host, cookie=f"ln_token={b.token}")[0] == 200
+    assert b.req("GET", "/now", host=lan_host, headers={"X-Liner-Pair": "été"})[0] == 401
+    assert b.req("GET", "/now", host=lan_host, token=b.token)[0] == 401  # the page token doesn't pair
+    st, _, headers = b.req("GET", f"/now?t={b.pair}", host=lan_host)
+    assert st == 200 and f"ln_pair={b.pair}" in headers.get("Set-Cookie", "")
+    assert b.req("GET", "/now", host=lan_host, cookie=f"ln_pair={b.pair}")[0] == 200
     # A paired phone's page drives playback from the bridge's own origin with the page token; nothing else can.
-    assert b.post("/cmd", {"op": "next"}, host=lan_host, cookie=f"ln_token={b.token}", origin=f"http://{lan_host}")[0] == 200
-    assert b.post("/cmd", {"op": "next"}, host=lan_host, cookie=f"ln_token={b.token}", origin="https://evil.example")[0] == 403
+    assert b.post("/cmd", {"op": "next"}, host=lan_host, cookie=f"ln_pair={b.pair}", origin=f"http://{lan_host}")[0] == 200
+    assert b.post("/cmd", {"op": "next"}, host=lan_host, cookie=f"ln_pair={b.pair}", origin="https://evil.example")[0] == 403
+    assert b.post("/cmd", {"op": "next"}, host=lan_host, origin=f"http://{lan_host}")[0] == 401  # token but not paired
 
 
 def test_events_stream_on_track_change(start):
@@ -162,8 +165,9 @@ def test_player_errors_become_502(start):
 def test_make_server_keeps_its_signature(env):
     from liner_notes.adapters.cliamp import CliampAdapter
 
-    srv, token = bridge.make_server(0, adapter=CliampAdapter(), roots=[env["root"]])
-    assert token and srv.server_address[0] == "127.0.0.1"
+    srv, pair = bridge.make_server(0, adapter=CliampAdapter(), roots=[env["root"]])
+    assert pair is None and srv.server_address[0] == "127.0.0.1"  # no pairing on loopback
+    assert srv.RequestHandlerClass.services["token"]  # but pages get a token
     threading.Thread(target=srv.serve_forever, daemon=True).start()
     port = srv.server_address[1]
     c = http.client.HTTPConnection("127.0.0.1", port, timeout=5)

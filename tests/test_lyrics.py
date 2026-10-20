@@ -89,3 +89,30 @@ def test_lrclib_when_cliamp_has_only_plain_lyrics(start, env):
     assert r["lines"][1]["t"] == 60.0
     q = urllib.parse.parse_qs(env["lrclib"].hits[0].split("?", 1)[1])
     assert q == {"artist_name": ["Massive Attack"], "track_name": ["Protection"]}  # the bank's names, not the upload's
+
+
+def test_a_change_and_back_during_the_lookup_is_caught(start):
+    """A -> B -> A inside one cliamp call, with no events: cliamp fetched B's lyrics, A is playing again."""
+    b = start()
+    b.fake.quiet = True
+    b.fake.lyrics_mid = True
+    b.fake.lyrics_delay = 1.2
+    out = {}
+    t = threading.Thread(target=lambda: out.update(b.get("/lyrics?yt=0Rw-UsRPNqc")))
+    t.start()
+    time.sleep(0.35)
+    b.fake.index = 1
+    time.sleep(0.5)
+    b.fake.index = 0
+    t.join()
+    assert "Sailing" not in json.dumps(out) and not out["ok"]
+    b.fake.lyrics_mid, b.fake.lyrics_delay = False, 0.0
+    r = b.get("/lyrics?yt=0Rw-UsRPNqc")
+    assert r["ok"] and "Protection" in r["lines"][0]["text"]  # nothing bad was cached
+
+
+def test_followers_wait_longer_than_the_leader_can_take():
+    from liner_notes.bridge.lyrics import Lyrics
+
+    ly = Lyrics(lambda: None, lambda: (None, 0))
+    assert ly.wait > Lyrics.CLIAMP_TIMEOUT + Lyrics.LRCLIB_TIMEOUT

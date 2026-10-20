@@ -20,10 +20,13 @@ GET  /m/<slug>/<dir>/<file>    a stage picture from the cache;  /d/<slug>/<dir>/
 GET  /v/  /v/<id>.mp4          the YouTube ids with a video on disk; one video, with Range
 POST /play {yt, song}          jump cliamp to that song in the loaded playlist      (X-Liner-Token required)
 POST /cmd {op}                 toggle, next or prev                                  (X-Liner-Token required)
+                               a missing or stale token: 403 {"ok": false, "reason": "token", "error": ...};
+                               cliamp not answering: 502
 
 server.py has the gate (Host, Origin, token, CSP) and the routes; now.py follows the player;
-clock.py smooths the position; lyrics.py, bands.py, media.py and theme.py serve one route family
-each. Nothing here writes to disk.
+clock.py smooths the position; tokens.py keeps the page token (state()/token) apart from the LAN
+pairing token; lyrics.py, bands.py, media.py and theme.py serve one route family each. The only
+files written are state()/token and, in LAN mode without a terminal, state()/pairing.
 """
 from http.server import ThreadingHTTPServer
 

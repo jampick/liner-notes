@@ -28,6 +28,8 @@ class FakeCliamp:
         self.search = {}
         self.shuffle = False
         self.hang = set()  # operations whose jobs never finish
+        self.quiet = False  # True: no events, so only a poll sees a change
+        self.lyrics_mid = False  # True: answer for the track that played halfway through the lookup
         self.calls = Counter()
         self.clock, self.stale = clock, stale
         self.base, self.t0, self.stale_until, self.stale_pos = 0.0, time.monotonic(), 0.0, 0.0
@@ -80,6 +82,8 @@ class FakeCliamp:
         self._emit("runtime.playback")
 
     def _emit(self, event):
+        if self.quiet:
+            return
         ev = json.dumps({"event": event, "seq": self.revision, "data": self.snapshot()}) + "\n"
         for f in list(self.subs):
             try:
@@ -157,8 +161,12 @@ class FakeCliamp:
         if op == "lyrics":
             with self.lock:
                 self.lyrics_calls += 1
-            time.sleep(self.lyrics_delay)
-            return self.lyrics if self.lyrics is not None else self.lyrics_for(self.tracks[self.index])
+            time.sleep(self.lyrics_delay / 2)
+            mid = self.index
+            time.sleep(self.lyrics_delay / 2)
+            if self.lyrics is not None:
+                return self.lyrics
+            return self.lyrics_for(self.tracks[mid if self.lyrics_mid else self.index])
         if op == "provider.search":
             return {"ok": True, "tracks": self.search.get(params.get("query"), [])}
         if op == "provider.tracks":

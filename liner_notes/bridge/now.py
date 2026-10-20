@@ -36,27 +36,46 @@ def playlist_slug(name):
 class Library:
     """The bank and matcher, reloaded when a song or journey file changes (checked every 5 s at most)."""
 
-    def __init__(self, roots=None):
-        self.roots, self.stamp, self.at = roots, None, 0
+    def __init__(self, roots=None, every=5.0):
+        self.roots, self.every = roots, every
         self.lock = threading.Lock()
-        self._load()
+        self.at, self.busy = time.monotonic(), False
+        self.state = self._load()
 
     def _stamp(self):
         files = [p for r in (self.roots or paths.roots()) for d in ("songs", "journeys") for p in (Path(r) / d).rglob("*.json")]
         return (len(files), max((p.stat().st_mtime for p in files), default=0))
 
     def _load(self):
-        self.bank = Bank(self.roots)
-        self.matcher = Matcher(self.bank.songs)
-        self.stamp = self._stamp()
+        stamp = self._stamp()
+        bank = Bank(self.roots)
+        return bank, Matcher(bank.songs), stamp
 
     def get(self):
+        """(bank, matcher). Every `every` seconds one caller checks the files and, if they changed,
+        builds the new bank outside the lock; everyone else keeps using the current pair meanwhile."""
         with self.lock:
-            if time.monotonic() - self.at > 5:
-                self.at = time.monotonic()
-                if self._stamp() != self.stamp:
-                    self._load()
-            return self.bank, self.matcher
+            bank, matcher, stamp = self.state
+            due = not self.busy and time.monotonic() - self.at > self.every
+            if due:
+                self.busy, self.at = True, time.monotonic()
+        if due:
+            try:
+                if self._stamp() != stamp:
+                    new = self._load()
+                    with self.lock:
+                        self.state = new
+                    bank, matcher = new[0], new[1]
+            except (OSError, ValueError) as e:
+                log.warning("bank reload failed, keeping the old one: %s", e)
+            finally:
+                with self.lock:
+                    self.busy = False
+        return bank, matcher
+
+    @property
+    def bank(self):
+        return self.state[0]
 
     def journey_for(self, song, playlist=None, hint=None):
         """The loaded playlist's journey if it has the song, then the queue's journey, then any."""

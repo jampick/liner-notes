@@ -1,16 +1,18 @@
 """The HTTP side of the bridge: routes, the gate, logging, and starting it all.
 
 Safety. By default it binds to 127.0.0.1 and checks the Host header, so a DNS-rebinding page can't
-reach it under another name. Cross-origin reads are answered for the bridge's own origin and, for
-the public ones (/now, /theme and the like), for file:// pages (Origin: null). Private reads
-(/history, /lyrics, /v/) give Origin null no CORS. Nothing with Origin null can POST, and every POST
-needs the X-Liner-Token header: a token made fresh each start, which the bridge writes into the
-pages it serves (`<meta name="liner-token" content="">`). Pages get a strict Content-Security-Policy.
+reach it under another name. Cross-origin reads are answered for the bridge's own origin, and
+Origin null (a page opened from disk) gets CORS on /now and /theme only. Nothing with Origin null
+can POST, and every POST needs the X-Liner-Token header: the page token from state()/token, which
+the bridge writes into the pages it serves (`<meta name="liner-token" content="">`). A POST with a
+missing or stale token gets 403 {"ok": false, "reason": "token"}, so a page can reload itself to
+pick up the current one. Pages get a strict Content-Security-Policy.
 
 With --lan it binds to every interface and every request from another machine must carry the
-pairing token: in the URL once (?t=...), then in a cookie. It's the same token, so a paired phone's
-page can POST too.
+pairing token: in the URL once (?t=...), then in a cookie. The pairing token is a different secret
+from the page token and never appears in a response body. LAN mode caps open connections.
 """
+import errno
 import hashlib
 import hmac
 import html
@@ -19,7 +21,6 @@ import logging
 import os
 import queue
 import re
-import secrets
 import select
 import socket
 import ssl
@@ -34,7 +35,7 @@ from pathlib import Path
 
 from .. import __version__, adapters, paths
 from ..ids import youtube_id
-from . import media
+from . import media, tokens
 from .bands import Bands
 from .lyrics import Lyrics
 from .now import Library, Now
@@ -43,11 +44,15 @@ from .theme import Theme
 PORT = 47391
 log = logging.getLogger("liner_notes.bridge")
 
-CSP = ("default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; "
-       "script-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:; frame-src 'none'; "
+APPLE_PREVIEWS = "https://audio-ssl.itunes.apple.com"  # the page plays and analyses Apple's song previews
+CSP = ("default-src 'self'; img-src 'self' data: blob:; "
+       f"media-src 'self' blob: {APPLE_PREVIEWS}; style-src 'self' 'unsafe-inline'; "
+       f"script-src 'self' 'unsafe-inline'; connect-src 'self' {APPLE_PREVIEWS}; font-src 'self' data:; frame-src 'none'; "
        "object-src 'none'; base-uri 'none'")
 TOKEN_META = b'<meta name="liner-token" content="">'
-PRIVATE = ("/history", "/lyrics", "/v/")
+NULL_CORS = ("/now", "/theme")  # all a page opened from disk may read
+EXIT_PORT_BUSY = 3
+LAN_MAX_CONNECTIONS = 64
 QUIET = ("/now", "/bands", "/theme", "/song", "/events")  # polled; logged at DEBUG
 MAX_BODY = 4096
 CHUNK = 256 * 1024
@@ -58,6 +63,7 @@ class Pages:
 
     def __init__(self, token, size=8):
         self.token, self.size, self.lock, self.cache = token, size, threading.Lock(), {}
+        self.warned = set()
 
     def get(self, f):
         st = f.stat()
@@ -66,7 +72,11 @@ class Pages:
             hit = self.cache.get(str(f))
             if hit and hit[0] == stamp:
                 return hit[1], hit[2], st.st_mtime
-        body = f.read_bytes().replace(TOKEN_META, f'<meta name="liner-token" content="{html.escape(self.token)}">'.encode(), 1)
+        raw = f.read_bytes()
+        if TOKEN_META not in raw and (str(f), stamp) not in self.warned:
+            self.warned.add((str(f), stamp))
+            log.warning("%s has no liner-token placeholder; its buttons will get 403 (rebuild it)", f.name)
+        body = raw.replace(TOKEN_META, f'<meta name="liner-token" content="{html.escape(self.token)}">'.encode(), 1)
         etag = '"' + hashlib.sha256(body).hexdigest()[:20] + '"'
         with self.lock:
             if str(f) not in self.cache and len(self.cache) >= self.size:
@@ -80,7 +90,39 @@ class BadRequest(Exception):
 
 
 class Server(ThreadingHTTPServer):
+    """Threaded, with the TLS handshake done in the request's own thread (with a timeout), so a peer
+    that connects and says nothing can't stall accept(), and an optional cap on open connections."""
+
     daemon_threads = True
+    handshake_timeout = 10
+
+    def __init__(self, addr, handler, max_connections=None):
+        super().__init__(addr, handler)
+        self.slots = threading.BoundedSemaphore(max_connections) if max_connections else None
+
+    def process_request(self, request, client_address):
+        if self.slots and not self.slots.acquire(blocking=False):
+            log.warning("too many connections; dropped one from %s", client_address[0])
+            self.shutdown_request(request)
+            return
+        super().process_request(request, client_address)
+
+    def process_request_thread(self, request, client_address):
+        try:
+            super().process_request_thread(request, client_address)
+        finally:
+            if self.slots:
+                self.slots.release()
+
+    def finish_request(self, request, client_address):
+        if isinstance(request, ssl.SSLSocket):
+            request.settimeout(self.handshake_timeout)
+            try:
+                request.do_handshake()
+            except (ssl.SSLError, OSError) as e:
+                log.debug("TLS handshake with %s failed: %s", client_address[0], e)
+                return
+        super().finish_request(request, client_address)
 
     def handle_error(self, request, client_address):
         """A client that hung up mid-request is routine; anything else goes to the log, not bare stderr."""
@@ -91,8 +133,11 @@ class Server(ThreadingHTTPServer):
             log.exception("request from %s failed", client_address[0])
 
 
-def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=None, bands=None, theme=None):
-    token = token or secrets.token_urlsafe(18)
+def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=None, bands=None, theme=None, page_token=None):
+    """token is the LAN pairing token (made here when lan and none is given); page_token is the
+    POST token written into pages (state()/token by default)."""
+    pair = token or (tokens.pairing_token() if lan else None)
+    token = page_token or tokens.page_token()
     own = {f"http://127.0.0.1:{port}", f"http://localhost:{port}", f"http://[::1]:{port}"}
     loop_hosts = {f"127.0.0.1:{port}", f"localhost:{port}", f"[::1]:{port}"}
     lyrics = lyrics or Lyrics(lambda: now.adapter, now.fresh)
@@ -101,10 +146,13 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
     pages = Pages(token)
     depth = media.Depth()
 
-    services = {"lib": lib, "now": now, "lyrics": lyrics, "bands": bands, "theme": theme, "token": token}
+    services = {"lib": lib, "now": now, "lyrics": lyrics, "bands": bands, "theme": theme, "token": token, "pair": pair}
+
+    def same(given, secret):
+        return bool(given) and bool(secret) and hmac.compare_digest(given.encode("utf-8", "replace"), secret.encode())
 
     def same_token(given):
-        return bool(given) and hmac.compare_digest(given.encode("utf-8", "replace"), token.encode())
+        return same(given, token)
 
     class Handler(BaseHTTPRequestHandler):
         protocol_version = "HTTP/1.1"
@@ -126,9 +174,9 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
         def token_ok(self):
             if not lan or self.loopback():
                 return True
-            m = re.search(r"(?:^|;\s*)ln_token=([^;\s]+)", self.headers.get("Cookie", ""))
-            given = self.headers.get("X-Liner-Token") or (m.group(1) if m else None) or urllib.parse.unquote(self.query().get("t", ""))
-            return same_token(given)
+            m = re.search(r"(?:^|;\s*)ln_pair=([^;\s]+)", self.headers.get("Cookie", ""))
+            given = self.headers.get("X-Liner-Pair") or (m.group(1) if m else None) or urllib.parse.unquote(self.query().get("t", ""))
+            return same(given, pair)
 
         def own_origin(self, o):
             return o in own or (lan and o == f"{scheme}://{self.headers.get('Host', '')}")
@@ -140,7 +188,7 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
                 return None
             if self.own_origin(o):
                 return o
-            if o == "null" and not self.route().startswith(PRIVATE) and self.command != "POST":
+            if o == "null" and self.route() in NULL_CORS and self.command in ("GET", "HEAD"):
                 return o
             return None
 
@@ -159,8 +207,10 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
                 if o is not None and not self.own_origin(o):
                     self.send_json({"ok": False, "error": "origin"}, 403)
                     return False
-                if not same_token(self.headers.get("X-Liner-Token")):
-                    self.send_json({"ok": False, "error": "token"}, 403)
+                given = self.headers.get("X-Liner-Token")
+                if not same_token(given):
+                    log.warning("POST %s refused from %s: %s page token", self.route(), self.client_address[0], "a stale" if given else "no")
+                    self.send_json({"ok": False, "reason": "token", "error": "reload the page for the current token"}, 403)
                     return False
                 return True
             if o is not None and o != "null" and not self.own_origin(o):
@@ -194,7 +244,7 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
             self.send_header("Vary", "Origin")
             if lan and self.query().get("t") and not self.loopback() and self.token_ok():
                 secure = "; Secure" if scheme == "https" else ""
-                self.send_header("Set-Cookie", f"ln_token={token}; Path=/; HttpOnly; SameSite=Strict; Max-Age=31536000{secure}")
+                self.send_header("Set-Cookie", f"ln_pair={pair}; Path=/; HttpOnly; SameSite=Strict; Max-Age=31536000{secure}")
             for k, v in (extra or {}).items():
                 self.send_header(k, v)
             self.end_headers()
@@ -585,17 +635,69 @@ def setup_logging():
 
 def make_server(port=PORT, lan=False, token=None, roots=None, adapter=None, tls=None, bind=None):
     """tls = (cert file, key file) serves HTTPS, which a phone needs for Wake Lock and offline caching.
-    Returns (server, token); the token pairs a LAN client and is the pages' POST token."""
+    Returns (server, pairing token); the pairing token is None unless lan. The page token is in state()/token."""
     lib = Library(roots)
     now = Now(lib, adapter or adapters.pick())
-    token = token or secrets.token_urlsafe(18)
-    srv = Server((bind or ("0.0.0.0" if lan else "127.0.0.1"), port), lambda *a: None)
-    srv.RequestHandlerClass = make_handler(lib, now, srv.server_address[1], lan, token, "https" if tls else "http")
+    pair = (token or tokens.pairing_token()) if lan else None
+    srv = Server((bind or ("0.0.0.0" if lan else "127.0.0.1"), port), lambda *a: None, max_connections=LAN_MAX_CONNECTIONS if lan else None)
+    srv.RequestHandlerClass = make_handler(lib, now, srv.server_address[1], lan, pair, "https" if tls else "http")
     if tls:
         ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
         ctx.load_cert_chain(str(tls[0]), str(tls[1]))
-        srv.socket = ctx.wrap_socket(srv.socket, server_side=True)
-    return srv, token
+        srv.socket = ctx.wrap_socket(srv.socket, server_side=True, do_handshake_on_connect=False)
+    return srv, pair
+
+
+def port_holder(port, proc=Path("/proc")):
+    """(pid, command line) of the process listening on this TCP port, when /proc says; else None."""
+    inodes = set()
+    for name in ("net/tcp", "net/tcp6"):
+        try:
+            rows = (proc / name).read_text().splitlines()[1:]
+        except OSError:
+            continue
+        for row in rows:
+            f = row.split()
+            if len(f) > 9 and f[3] == "0A" and int(f[1].rsplit(":", 1)[1], 16) == port:
+                inodes.add(f[9])
+    if not inodes:
+        return None
+    wanted = {f"socket:[{i}]" for i in inodes}
+    for d in proc.iterdir():
+        if not d.name.isdigit():
+            continue
+        try:
+            fds = list((d / "fd").iterdir())
+        except OSError:
+            continue  # someone else's process, or gone
+        for fd in fds:
+            try:
+                if os.readlink(fd) not in wanted:
+                    continue
+                cmd = (d / "cmdline").read_bytes().replace(b"\0", b" ").decode(errors="replace").strip()
+            except OSError:
+                continue  # that fd closed while we looked; the others still count
+            return int(d.name), cmd
+    return None
+
+
+def announce_pairing(url, tailscale, out=None):
+    """The pairing URL carries the pairing token: printed once to a terminal, never into a log.
+    Without a terminal (systemd) it goes to state()/pairing, mode 0600, and the log says where."""
+    out = out or sys.stdout
+    if out.isatty():
+        print(f"On your {'tailnet' if tailscale else 'network'}: {url}\nAnyone with this address can see what you play and skip tracks. Stop the server to revoke it.", file=out)
+        if not tailscale:
+            print("Plain http on a network address isn't a secure context, so phones won't keep the screen awake. --tailscale serves HTTPS.", file=out)
+        try:
+            print(subprocess.run(["qrencode", "-t", "ansiutf8", url], capture_output=True, text=True, timeout=5).stdout, file=out)
+        except (OSError, subprocess.SubprocessError):
+            pass
+        return None
+    f = paths.state() / "pairing"
+    tokens.write_private(f, url + "\n")
+    log.info("pairing address written to %s (readable by you only)", f)
+    return f
 
 
 def serve(port=PORT, lan=False, token=None, tailscale=False, adapter=None):
@@ -608,21 +710,20 @@ def serve(port=PORT, lan=False, token=None, tailscale=False, adapter=None):
             sys.exit(f"liner-notes: {e}")
         tls, lan = (crt, key), True
     try:
-        srv, token = make_server(port, lan, token, adapter=adapter, tls=tls, bind=bind)
+        srv, pair = make_server(port, lan, token, adapter=adapter, tls=tls, bind=bind)
     except OSError as e:
-        sys.exit(f"liner-notes: {e}")
+        busy = e.errno == errno.EADDRINUSE
+        holder = port_holder(port) if busy else None
+        if holder:
+            log.error("port %s is taken by pid %s: %s", port, holder[0], holder[1])
+        else:
+            log.error("can't serve on port %s: %s", port, e)
+        sys.exit(EXIT_PORT_BUSY if busy else 1)
     log.info("liner-notes %s on port %s, player %s", __version__, srv.server_address[1], srv.RequestHandlerClass.now_adapter)
     if not tailscale:
         print(f"Liner Notes is serving http://127.0.0.1:{port}/  (player: {srv.RequestHandlerClass.now_adapter})", flush=True)
     if lan:
-        url = f"https://{host}:{port}/?t={token}" if tailscale else f"http://{lan_address()}:{port}/?t={token}"
-        print(f"On your {'tailnet' if tailscale else 'network'}: {url}\nAnyone with this address can see what you play and skip tracks. Stop the server to revoke it.")
-        if not tailscale:
-            print("Plain http on a network address isn't a secure context, so phones won't keep the screen awake. --tailscale serves HTTPS.")
-        try:
-            print(subprocess.run(["qrencode", "-t", "ansiutf8", url], capture_output=True, text=True, timeout=5).stdout)
-        except (OSError, subprocess.SubprocessError):
-            pass
+        announce_pairing(f"https://{host}:{port}/?t={pair}" if tailscale else f"http://{lan_address()}:{port}/?t={pair}", tailscale)
     try:
         srv.serve_forever()
     except KeyboardInterrupt:
