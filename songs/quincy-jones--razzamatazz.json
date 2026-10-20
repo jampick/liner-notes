@@ -1,0 +1,63 @@
+{
+ "id": "quincy-jones--razzamatazz",
+ "title": "Razzamatazz",
+ "artist": "Quincy Jones featuring Patti Austin",
+ "year": 1981,
+ "year_note": "",
+ "album": "The Dude",
+ "aliases": {
+  "youtube": [
+   "51k-5vkNcgg"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/12/9d/10/129d100c-057c-4d23-fe3a-b772bab21041/mzaf_18318398652620301661.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/razzamatazz/1405193623?i=1405193727&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote it alone and did the vocal, rhythm and synthesizer arrangements, with Jones producing and adding his own synth arrangements at Westlake in 1980. Bruce Swedien engineered and mixed with Ed Cherney assisting. Patti Austin sings lead and backing, Herbie Hancock plays electric piano, Steve Lukather plays guitar and the solo, and Hawk Wolinski plays the synth bass on a Yamaha CS-80. Jerry Hey, Chuck Findley and Bill Reichenbach are in the horns, with Ernie Watts and Kim Hutchcroft on saxes.",
+  "context": "The Dude came out on A&M on 26 March 1981, went to number one on the R&B and jazz album charts and won three Grammys from twelve nominations. Razzamatazz went out in June 1981 as a double A-side with Betcha' Wouldn't Hurt Me and reached number 11 in the UK, Jones's biggest solo hit there. At home it got to 17 on the R&B chart and never made the Hot 100.",
+  "listen_for": [
+   {
+    "where": "under the verses",
+    "note": "The bass is a synth, Wolinski's Yamaha CS-80, sitting where an electric bass would usually be."
+   },
+   {
+    "where": "the instrumental break",
+    "note": "Steve Lukather takes the guitar solo, a rock session player inside a Temperton arrangement."
+   }
+  ],
+  "leads_to": {
+   "artist": "Quincy Jones",
+   "title": "Ai No Corrida",
+   "year": 1981,
+   "why": "The Chaz Jankel and Kenny Young song from the same album, with Dune and Patti Austin singing; it made 14 in the UK that May, and Jerry Hey and Jones won a Grammy for its arrangement."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Dude_(Quincy_Jones_album)",
+   "https://sessiondays.com/2015/12/1981-quincy-jones-razzamatazz/",
+   "https://en.wikipedia.org/wiki/Ai_No_Corrida_(song)"
+  ],
+  "unverified": "I couldn't reach the Official Charts page for the single, so the UK 11 rests on Wikipedia and Sessiondays."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Bigger in Britain",
+   "line": "Number 11 in the UK in 1981, Quincy Jones's biggest solo hit there, while in the US it stopped at 17 R&B and missed the Hot 100.",
+   "wiki": "The_Dude_(Quincy_Jones_album)",
+   "source": "https://en.wikipedia.org/wiki/The_Dude_(Quincy_Jones_album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-4)",
+  "written_on": "2026-10-20"
+ }
+}

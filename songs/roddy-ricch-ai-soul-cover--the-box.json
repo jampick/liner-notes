@@ -1,0 +1,70 @@
+{
+ "id": "roddy-ricch-ai-soul-cover--the-box",
+ "title": "The Box",
+ "artist": "Roddy Ricch (AI soul cover)",
+ "year": 2019,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it. On Please Excuse Me for Being Antisocial (December 6, 2019); a single from January 11, 2020.",
+ "album": "YouTube upload; the original is on Please Excuse Me for Being Antisocial",
+ "aliases": {
+  "youtube": [
+   "-XzwBABl_b4"
+  ],
+  "titles": [
+   "Roddy Ricch - The Box (1950\"s Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "30 Roc, Datboisqueeze and Zentachi produced it. The opening swell isn't a sample of Ciara, as many listeners guessed; 30 Roc says it's an Omnisphere plug-in. The squeaky 'eee err' sound was Ricch's own last-minute addition after the song was done, which he said came from Michael Jackson's beatboxing.",
+  "context": "Rodrick Moore Jr. is from Compton and was 21 when his debut album came out on Atlantic and Bird Vision; it went to number one. 'The Box' climbed on streaming and social apps, the 'eee err' doing the spreading, and it was the first new song to top the Hot 100 in the 2020s, holding number one from January 18 to March 28, 2020.",
+  "listen_for": [
+   {
+    "where": "the first bars",
+    "note": "the orchestral swell from Omnisphere, the bit everyone mistook for 'Love Sex Magic'."
+   },
+   {
+    "where": "the chorus",
+    "note": "Ricch half-sings it, a melodic flow a soul singer can take straight, with the squeak as punctuation."
+   }
+  ],
+  "leads_to": {
+   "artist": "Ciara featuring Justin Timberlake",
+   "title": "Love Sex Magic",
+   "year": 2009,
+   "why": "The record half the internet thought was under the intro; play them back to back and judge 30 Roc's denial yourself."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Box_(Roddy_Ricch_song)",
+   "https://en.wikipedia.org/wiki/List_of_Billboard_Hot_100_number_ones_of_2020",
+   "https://en.wikipedia.org/wiki/Roddy_Ricch",
+   "https://en.wikipedia.org/wiki/Love_Sex_Magic"
+  ],
+  "unverified": "Dr. Dre's Compton birthplace, used in the thread to stop 20, I didn't read here."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Eleven weeks",
+   "line": "Number one from January 18 to March 28, 2020, the longest run of the year.",
+   "wiki": "List_of_Billboard_Hot_100_number_ones_of_2020",
+   "source": "https://en.wikipedia.org/wiki/List_of_Billboard_Hot_100_number_ones_of_2020"
+  },
+  {
+   "kind": "award",
+   "title": "Three Grammy nominations",
+   "line": "Song of the Year, Best Rap Song and Best Melodic Rap Performance at the 63rd Grammys.",
+   "wiki": "63rd_Annual_Grammy_Awards",
+   "source": "https://en.wikipedia.org/wiki/The_Box_(Roddy_Ricch_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-5)",
+  "written_on": "2026-10-20"
+ }
+}

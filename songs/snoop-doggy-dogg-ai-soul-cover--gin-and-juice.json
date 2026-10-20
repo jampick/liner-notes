@@ -1,0 +1,79 @@
+{
+ "id": "snoop-doggy-dogg-ai-soul-cover--gin-and-juice",
+ "title": "Gin and Juice",
+ "artist": "Snoop Doggy Dogg (AI soul cover)",
+ "year": 1993,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it. On Doggystyle in November 1993; the single came out in January 1994.",
+ "album": "YouTube upload; the original is on Doggystyle",
+ "aliases": {
+  "youtube": [
+   "cguaI-hhU-0"
+  ],
+  "titles": [
+   "Snoop Dogg - Gin and Juice (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Dr. Dre produced it, and the bass line is George McCrae's 'I Get Lifted' according to Songfacts and XXL, with Tony Green credited for creating it, so it was most likely replayed. The chorus reworks Slave's 1980 'Watching You', after someone in the studio started singing the Slave song, Snoop has said. David Ruffin Jr., son of the Temptations' David Ruffin, sings the chorus, with Daz, Jewell and others on extra vocals.",
+  "context": "Snoop has said gin and juice was what young players drank in 1991 and 1992, and that he brought a bottle to the studio every day of the Doggystyle sessions. The Grand Upright ruling of 1991 had made sampling expensive, and this is what the workaround sounds like: a famous funk line and a famous R&B chorus redone by new players and singers. It reached eight on the Hot 100, topped the rap chart and was nominated for a Grammy, losing to Queen Latifah's 'U.N.I.T.Y.'.",
+  "listen_for": [
+   {
+    "where": "the chorus",
+    "note": "In the original it's sung, by a Temptation's son, to a melody from Slave's 'Watching You'. A soul singer can take it as it is."
+   },
+   {
+    "where": "the bass line under the verses",
+    "note": "The low, rubbery line comes from George McCrae's 1974 'I Get Lifted'."
+   }
+  ],
+  "leads_to": {
+   "artist": "Slave",
+   "title": "Watching You",
+   "year": 1980,
+   "why": "The Dayton funk band's R&B top ten hit whose chorus became Snoop's, after someone sang it in the studio."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gin_and_Juice",
+   "https://www.songfacts.com/facts/snoop-dogg/gin-and-juice",
+   "https://www.xxlmag.com/today-hip-hop-snoop-dogg-drops-gin-juice/",
+   "https://en.wikipedia.org/wiki/Doggystyle",
+   "https://en.wikipedia.org/wiki/Slave_(band)",
+   "https://en.wikipedia.org/wiki/Grand_Upright_Music,_Ltd._v._Warner_Bros._Records_Inc."
+  ],
+  "unverified": "Whether the 'I Get Lifted' line is a direct sample or replayed by Tony Green; sources disagree. The album for Slave's 'Watching You' (likely Stone Jam)."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Home Boy Alone",
+   "line": "The video parodies Home Alone: a teenage Snoop gets the house to himself and throws a party, with Dr. Dre, Warren G, Nate Dogg and a young Bow Wow in it.",
+   "wiki": "Home_Alone",
+   "source": "https://en.wikipedia.org/wiki/Gin_and_Juice"
+  },
+  {
+   "kind": "award",
+   "title": "Grammy nomination",
+   "line": "Nominated for Best Rap Solo Performance at the 1995 Grammys, it lost to Queen Latifah's 'U.N.I.T.Y.'.",
+   "wiki": "37th_Annual_Grammy_Awards",
+   "source": "https://en.wikipedia.org/wiki/Doggystyle"
+  },
+  {
+   "kind": "cover",
+   "title": "The Gourds go bluegrass",
+   "line": "The country and bluegrass band the Gourds covered it in 1998.",
+   "wiki": "The_Gourds",
+   "source": "https://www.songfacts.com/facts/snoop-dogg/gin-and-juice"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-2)",
+  "written_on": "2026-10-20"
+ }
+}

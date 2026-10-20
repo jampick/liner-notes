@@ -1,0 +1,82 @@
+{
+ "id": "geto-boys-ai-soul-cover--mind-playing-tricks-on-me",
+ "title": "Mind Playing Tricks on Me",
+ "artist": "Geto Boys (AI soul cover)",
+ "year": 1991,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on We Can't Be Stopped",
+ "aliases": {
+  "youtube": [
+   "1BaMyw0TsLU"
+  ],
+  "titles": [
+   "Geto Boys – Mind Playing Tricks on Me (1950s Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Scarface built it and wrote three of the four verses, first meaning it for a solo record, until Rap-A-Lot decided it would break the group instead. The loop is the blues guitar figure from Isaac Hayes' 'Hung Up on My Baby', an instrumental from his 1974 Tough Guys soundtrack where Charles 'Skip' Pitts played through a Gibson Maestro Rhythm N Sound. Under it sits the drum break from Graham Central Station's 'The Jam', slowed right down. The album was cut in a few weeks, and DJ Ready Red left the group partway through.",
+  "context": "Rap-A-Lot was a Houston label run by James Prince, and two years earlier Geffen had pulled a Geto Boys album a week before release over its lyrics. In 1991 Priority picked up distribution, starting with this album, and SoundScan had just started counting real sales for Billboard. The song went to number one on the rap chart and 23 on the Hot 100, the group's best placing. NPR's Rodney Carmichael later singled it out for putting the trauma and vulnerability of street life up front, and Scarface said the title came from his grandmother muttering to herself.",
+  "listen_for": [
+   {
+    "where": "the opening bars, before anyone raps",
+    "note": "The Hayes guitar figure starts alone. It is a soul instrumental played straight, so a soul arrangement already has its main melody."
+   },
+   {
+    "where": "the chorus",
+    "note": "In the original the chorus has no vocals at all, just the loop, so any sung hook in that space is new writing."
+   },
+   {
+    "where": "under every verse",
+    "note": "The drums are Graham Central Station's 'The Jam' slowed down, which is where the heavy, dragging walk of the track comes from."
+   }
+  ],
+  "leads_to": {
+   "artist": "Isaac Hayes",
+   "title": "Hung Up on My Baby",
+   "year": 1974,
+   "why": "The source of the guitar figure, the longest instrumental on the Tough Guys soundtrack, where Skip Pitts takes a fuzzed guitar solo."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mind_Playing_Tricks_on_Me",
+   "https://en.wikipedia.org/wiki/We_Can%27t_Be_Stopped",
+   "https://www.stereogum.com/2020717/hung-up-on-my-baby-samples/columns/breaks-with-tradition",
+   "https://en.wikipedia.org/wiki/Rap-A-Lot_Records",
+   "https://en.wikipedia.org/wiki/Nielsen_SoundScan"
+  ],
+  "unverified": "No studio or engineer credit for the track; the album credits list several producers (John Bido among them) and I couldn't confirm who did what beyond Scarface."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "Number one on the rap chart",
+   "line": "It topped Billboard's Hot Rap Singles, reached 10 on the R&B chart and 23 on the Hot 100, and went gold.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Mind_Playing_Tricks_on_Me"
+  },
+  {
+   "kind": "award",
+   "title": "The Source's best song of 1991",
+   "line": "The Source gave it its Best Song award for 1991. Rolling Stone later ranked it fifth on its 2012 list of the greatest hip-hop songs.",
+   "wiki": "The_Source",
+   "source": "https://en.wikipedia.org/wiki/We_Can%27t_Be_Stopped"
+  },
+  {
+   "kind": "screen",
+   "title": "West Coast Classics in GTA V",
+   "line": "It plays on the West Coast Classics station in Grand Theft Auto V, a long way from Houston. Kid Cudi has called it his favorite song and said it inspired 'Day 'n' Nite'.",
+   "wiki": "Grand_Theft_Auto_V",
+   "source": "https://en.wikipedia.org/wiki/Mind_Playing_Tricks_on_Me"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-2)",
+  "written_on": "2026-10-20"
+ }
+}

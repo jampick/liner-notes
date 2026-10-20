@@ -1,0 +1,828 @@
+{
+ "slug": "rod-temperton",
+ "title": "Rod Temperton",
+ "titleA": "Rod",
+ "titleB": "Temperton",
+ "kicker": "20 songs by the man from Cleethorpes · Heatwave 1976 to Anita Baker 1986",
+ "description": "A walk through 20 recordings of Rod Temperton's songs, from Heatwave to Thriller to Anita Baker, with a taste of each, what to listen for, and how his writing ties them together.",
+ "lede": "Rod Temperton filleted fish in Grimsby and played keyboards in dance bands as far off as West Germany before he answered a Melody Maker ad placed by an American ex-serviceman. The band was Heatwave, and the songs he wrote for it made Quincy Jones pick up the phone. Over the next ten years he wrote 'Rock with You', 'Off the Wall' and 'Thriller' for Michael Jackson and hits for George Benson, Donna Summer and Patti Austin, most of them cut at Westlake in Los Angeles, and he kept so far out of sight that people called him the Invisible Man. These are twenty of his songs, one at a time, in the order the records came out.",
+ "fonts": "https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Chivo+Mono:wght@400;500&display=swap",
+ "copy": {
+  "companion": "Already playing the full playlist in cliamp? Companion mode keeps the previews quiet until you ask for one.",
+  "panelNote": "The panel is fictional: five invented judges who argued the list into shape. The facts under each song are real and sourced; open Sources on any stop.",
+  "endEmpty": "You didn't keep anything this time. Press K on a stop to keep it, and the link remembers your picks.",
+  "start": "Drop the needle",
+  "resume": "Pick up at",
+  "express": "Express: five stops",
+  "endKept": "These are the ones you kept. The link below carries them, so whoever opens it gets the same set.",
+  "credits": "Picked by Hilary, Desmond, Renata, Lorenzo and Fenella, a fictional panel. Researched from the sources listed on each stop. Previews and covers courtesy of Apple Music, era photographs generated for this page."
+ },
+ "panel": {
+  "judges": {
+   "hilary": {
+    "name": "Hilary Gostelow",
+    "title": "the Credits Purist",
+    "lens": "Grew up a few miles from Cleethorpes. Can veto a song where Temperton's share is a sliver or the recording isn't the one that counts."
+   },
+   "desmond": {
+    "name": "Desmond Achterberg",
+    "title": "the Chart Historian",
+    "lens": "US pop, US R&B and UK peaks, and how long a song stayed on the radio."
+   },
+   "renata": {
+    "name": "Renata Szabo",
+    "title": "the Arranger",
+    "lens": "Reads the chart. Chord movement, horn lines, where the bass sits."
+   },
+   "lorenzo": {
+    "name": "Lorenzo Batiste",
+    "title": "the Crate-Digger",
+    "lens": "Samples, covers and the afterlife in hip-hop and R&B."
+   },
+   "fenella": {
+    "name": "Fenella Wray",
+    "title": "the Party Host",
+    "lens": "Would a normal room in 2026 move, or sing along, or at least stop talking."
+   }
+  },
+  "express": {
+   "note": "Hilary's one-per-era picks, for when you have ten minutes.",
+   "songs": [
+    "heatwave--boogie-nights",
+    "michael-jackson--rock-with-you",
+    "george-benson--give-me-the-night",
+    "michael-jackson--thriller",
+    "anita-baker--mystery"
+   ]
+  },
+  "quotes": {
+   "heatwave--boogie-nights": {
+    "j": "fenella",
+    "q": "The slow false start, then the groove drops and the whole room goes. Number two in both countries."
+   },
+   "heatwave--too-hot-to-handle": {
+    "j": "hilary",
+    "q": "Title track and opener of the album that started all this. Paired with 'Slip Your Disc to This', it reached number 15 in the UK in 1977."
+   },
+   "heatwave--always-and-forever": {
+    "j": "hilary",
+    "q": "A musician who toured with them said he wrote it on a Wurlitzer next to a pile of washing. Number two R&B, and Luther covered it in 1994."
+   },
+   "heatwave--the-groove-line": {
+    "j": "desmond",
+    "q": "Number seven pop and number three R&B in the summer of 1978, a bigger pop hit than 'Always and Forever'. Three US hits off two albums said Heatwave weren't a one-song band."
+   },
+   "michael-jackson--rock-with-you": {
+    "j": "desmond",
+    "q": "Number one pop and number one R&B at the start of 1980. The smoothest number one of the disco comedown."
+   },
+   "michael-jackson--off-the-wall": {
+    "j": "fenella",
+    "q": "Louis Johnson's bass sits right in the pocket and the tempo never pushes, so the room moves without being told to. Top ten in America and number seven in the UK."
+   },
+   "michael-jackson--burn-this-disco-out": {
+    "j": "lorenzo",
+    "q": "It closes Off the Wall and never got a single. The most straight-up disco on the record."
+   },
+   "george-benson--give-me-the-night": {
+    "j": "renata",
+    "q": "Benson scatting in unison with his own guitar, over a chart that leaves him exactly enough room. Number one R&B."
+   },
+   "the-brothers-johnson--stomp": {
+    "j": "lorenzo",
+    "q": "Louis Johnson's thumb bass is the engine. A four-way write with the Johnsons, and it went to number one R&B."
+   },
+   "george-benson--love-x-love": {
+    "j": "lorenzo",
+    "q": "Zhané built 'Vibe' on it in 1994. Number ten in the UK, which liked it more than America did."
+   },
+   "george-benson--off-broadway": {
+    "j": "renata",
+    "q": "An instrumental that won Benson a Grammy. With no lyric, you hear how much of the song lives in the arrangement."
+   },
+   "quincy-jones--razzamatazz": {
+    "j": "desmond",
+    "q": "Number eleven in the UK, where it was bigger than at home. Patti Austin carrying a Temperton song before 'Baby, Come to Me'."
+   },
+   "patti-austin-james-ingram--baby-come-to-me": {
+    "j": "desmond",
+    "q": "It stalled on first release. Then General Hospital used it and it went to number one in early 1983."
+   },
+   "donna-summer--love-is-in-control": {
+    "j": "fenella",
+    "q": "Donna Summer with Quincy producing. Number ten pop, and the hook still lands."
+   },
+   "michael-jackson--thriller": {
+    "j": "hilary",
+    "q": "It was 'Starlight', then 'Midnight Man', until he woke up with the one word. The Vincent Price rap is his writing too."
+   },
+   "michael-jackson--the-lady-in-my-life": {
+    "j": "lorenzo",
+    "q": "Never released as a single, then LL Cool J and Boyz II Men built 'Hey Lover' on it and took it to number three. Temperton got a writing credit on a Grammy-winning rap record."
+   },
+   "michael-jackson--baby-be-mine": {
+    "j": "renata",
+    "q": "Temperton arranged it and Jerry Hey's horn fills punch through every gap. Jones called it Coltrane in a pop song, and it only ever got out as a B-side."
+   },
+   "james-ingram-michael-mcdonald--yah-mo-b-there": {
+    "j": "desmond",
+    "q": "Only number 19 on the Hot 100, and it won a Grammy anyway."
+   },
+   "michael-mcdonald--sweet-freedom": {
+    "j": "desmond",
+    "q": "Number seven in 1986, one of five new Temperton songs in Running Scared."
+   },
+   "anita-baker--mystery": {
+    "j": "hilary",
+    "q": "The Manhattan Transfer cut it first on Bodies and Souls in 1983, and their single stalled at 102 pop. Anita Baker's take on Rapture is the recording that found the song."
+   }
+  }
+ },
+ "eras": [
+  {
+   "n": 1,
+   "name": "Heatwave, from Hull clubs to the Hot 100",
+   "years": "1976–78",
+   "from": 1976,
+   "to": 1978,
+   "essay": "Heatwave was a London band made of parts that had no business meeting. Johnnie Wilder Jr. was a US serviceman from Dayton, Ohio, who stayed in Europe after his discharge and placed an advert in Melody Maker. Rod Temperton, from Cleethorpes, had filleted fish at Ross Frozen Foods in Grimsby and played keyboards in dance bands as far off as Worms in West Germany, and he answered it. Johnnie brought his brother Keith over from Dayton. As Chicago Heatwave they worked the northern club circuit, Monday nights at the Trog Bar in Hull included, and in November 1974 they cut demos at Fairview Studios in Willerby. Those Temperton songs got GTO boss Dick Leahy to sign them. Barry Blue, a pop hitmaker turned producer, spent about 20 months on the first album between tours, at Audio International in London with John Cameron arranging. Epic took it to America, and a British-American band reached number two on the Hot 100 in November 1977, the month the Saturday Night Fever soundtrack came out. Then the luck turned. Bassist Mario Mantese was stabbed in 1978 and left blind and paralysed, and in 1979 a car crash in Ohio paralysed Johnnie Wilder from the neck down. Temperton had already stepped off the road to write.",
+   "scene": {
+    "cities": [
+     "London",
+     "Hull",
+     "Grimsby",
+     "Cleethorpes",
+     "Dayton, Ohio",
+     "Worms, West Germany"
+    ],
+    "labels": [
+     "GTO Records",
+     "Epic Records"
+    ],
+    "gear": [
+     "Fender Rhodes electric piano",
+     "Wurlitzer piano",
+     "Hohner clavinet",
+     "synthesizers",
+     "organ",
+     "harp (Sheila Bromberg on Boogie Nights)"
+    ],
+    "artifact": "A Melody Maker classified ad: Johnnie Wilder's call for a keyboard player is how a Grimsby fish filleter ended up writing for Michael Jackson."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Heatwave_(band)",
+    "https://en.wikipedia.org/wiki/Rod_Temperton",
+    "https://thehullstory.com/allarticles/rod-temperton-part-2",
+    "https://en.wikipedia.org/wiki/Too_Hot_to_Handle_(Heatwave_album)",
+    "https://en.wikipedia.org/wiki/Central_Heating_(Heatwave_album)",
+    "https://en.wikipedia.org/wiki/Saturday_Night_Fever_(soundtrack)",
+    "https://www.songfacts.com/facts/heatwave/boogie-nights",
+    "https://popdose.com/soul-serenade-heatwave-always-and-forever/"
+   ],
+   "image": "media/eras/era1.webp"
+  },
+  {
+   "n": 2,
+   "name": "Off the Wall",
+   "years": "1979",
+   "from": 1979,
+   "to": 1979,
+   "essay": "In 1978 Michael Jackson played the Scarecrow in The Wiz, a film the critics savaged, and Quincy Jones arranged its score. Jackson was 20, still singing lead in the Jacksons on Epic, and wanted a solo record that sounded nothing like the family band. Jones agreed to produce it. He had loved \"Boogie Nights\", and his engineer Bruce Swedien listened to the Heatwave album and came back raving about the arrangements, so Jones called the keyboard player. Temperton flew to Los Angeles with three songs, hoping one would make it. Jones kept all three. Sessions started on 4 December 1978, rhythm tracks and vocals at Allen Zentz in Hollywood, horns at Westlake, strings at Cherokee, with Swedien mixing at Westlake. The players were Jones's crew: John Robinson on drums, Greg Phillinganes on keys, Louis Johnson of the Brothers Johnson on bass, and Jerry Hey's horn section from Seawind. Off the Wall came out on 10 August 1979, a month after Disco Demolition Night, when 47,795 paying fans at Comiskey Park in Chicago watched a crate of disco records blown up in center field and labels started calling disco \"dance music\". The album sold three million in the US by New Year anyway, and it was the first solo album with four Hot 100 top tens.",
+   "scene": {
+    "cities": [
+     "Los Angeles",
+     "Hollywood",
+     "West Hollywood",
+     "Chicago"
+    ],
+    "labels": [
+     "Epic Records",
+     "CBS"
+    ],
+    "gear": [
+     "Fender Rhodes",
+     "synthesizers programmed by Michael Boddicker and George Duke",
+     "Seawind Horns (trumpet, sax, trombone)",
+     "string section under Ben Wright"
+    ],
+    "artifact": "The Off the Wall sleeve: Jackson in a tuxedo with glowing socks, the look John Branca, who worked for Jackson, said was the plan for the whole project."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Off_the_Wall_(album)",
+    "https://en.wikipedia.org/wiki/Disco_Demolition_Night",
+    "https://en.wikipedia.org/wiki/Rod_Temperton",
+    "https://stereogum.com/2076517/the-number-ones-michael-jacksons-rock-with-you/columns/the-number-ones",
+    "https://www.sessiondays.com/2015/10/1979-michael-jackson-off-the-wall/",
+    "https://soultracks.com/?p=80692"
+   ],
+   "image": "media/eras/era2.webp"
+  },
+  {
+   "n": 3,
+   "name": "Give Me the Night",
+   "years": "1980",
+   "from": 1980,
+   "to": 1980,
+   "essay": "In July 1979 a Chicago DJ blew up a crate of disco records at Comiskey Park, and by 1980 the labels were relabeling the same records \"dance music\" and hoping nobody noticed. Quincy Jones had already found a way through. He was still under contract to A&M, where he produced the Brothers Johnson, and that year he started Qwest as a joint venture with Warner Bros. Its first release was George Benson's Give Me the Night, shared with Warner because Benson was signed there. Rod Temperton wrote for both camps. He wrote or co-wrote seven of the nine songs on the Johnsons' Light Up the Night, out that spring, and five of the ten on Give Me the Night in August, two of them songs Heatwave had recorded first. The players overlapped: Greg Phillinganes on keys, John Robinson on drums, Paulinho da Costa on percussion, Jerry Hey's horns, Louis Johnson's bass, with Bruce Swedien at the board in Kendun in Burbank and Cherokee, Allen Zentz and A&M in Hollywood. The records kept disco's steady kick but added jazz chord changes and full string charts. Benson came out of the year with three Grammys and the Johnsons with their biggest hit, number one R&B and number six in Britain.",
+   "scene": {
+    "cities": [
+     "Los Angeles (Hollywood)",
+     "Burbank"
+    ],
+    "labels": [
+     "Qwest",
+     "Warner Bros.",
+     "A&M"
+    ],
+    "gear": [
+     "Sequential Circuits Prophet-5",
+     "Music Man StingRay bass",
+     "synth bass",
+     "electric piano",
+     "Jerry Hey horn section"
+    ],
+    "artifact": "The Give Me the Night LP, the first record with a Qwest label on it, Jones's new company sharing the sleeve with Warner Bros."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Disco_Demolition_Night",
+    "https://en.wikipedia.org/wiki/Qwest_Records",
+    "https://en.wikipedia.org/wiki/Light_Up_the_Night_(The_Brothers_Johnson_album)",
+    "https://en.wikipedia.org/wiki/Give_Me_the_Night_(album)",
+    "https://daily.redbullmusicacademy.com/2015/01/rod-temperton-guide",
+    "https://www.vintageguitar.com/21020/renowned-bassist-louis-johnson-passes/"
+   ],
+   "image": "media/eras/era3.webp"
+  },
+  {
+   "n": 4,
+   "name": "Westlake with Quincy",
+   "years": "1981–82",
+   "from": 1981,
+   "to": 1982,
+   "essay": "By 1981 Temperton had left Germany for Beverly Hills, and most of his working hours went into Westlake Recording Studios in Los Angeles, the Tom Hidley-designed rooms where Quincy Jones and engineer Bruce Swedien kept a regular crew: Greg Phillinganes on keys, Jerry Hey writing and playing the horns, Michael Boddicker on synths, Ndugu Chancler or John Robinson on drums. The Dude came out on A&M in March 1981, cut at Westlake in 1980, with Temperton writing three songs, co-writing the title track and arranging four. Jones had also started Qwest, a joint venture with Warner Bros., and signed his goddaughter Patti Austin. Then David Geffen shelved Donna Summer's Moroder album I'm a Rainbow and sent her to Jones, so Temperton was writing for her too, between December 1981 and April 1982. Disco had been a dirty word on American radio since 1979, and these records answer with synths, vocoders and horn stabs instead of strings and four on the floor. MTV launched on 1 August 1981 and played almost no Black artists at first. Thriller, cut at Westlake from 14 April to 8 November 1982 on a $750,000 budget, was the record that changed that.",
+   "scene": {
+    "cities": [
+     "Los Angeles",
+     "Beverly Hills",
+     "New York"
+    ],
+    "labels": [
+     "A&M",
+     "Qwest",
+     "Warner Bros.",
+     "Geffen",
+     "Epic"
+    ],
+    "gear": [
+     "ARP 2600",
+     "Roland Jupiter-8",
+     "Sequential Prophet-5",
+     "LinnDrum",
+     "Yamaha CS-80",
+     "Polymoog",
+     "vocoder",
+     "E-mu Emulator",
+     "Fender Rhodes"
+    ],
+    "artifact": "The Thriller LP inner sleeve, where the credits list Temperton as writer and arranger of three of its nine songs and Vincent Price under \"Rap\"."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rod_Temperton",
+    "https://en.wikipedia.org/wiki/Westlake_Recording_Studios",
+    "https://en.wikipedia.org/wiki/The_Dude_(Quincy_Jones_album)",
+    "https://en.wikipedia.org/wiki/Qwest_Records",
+    "https://en.wikipedia.org/wiki/Donna_Summer_(album)",
+    "https://en.wikipedia.org/wiki/MTV",
+    "https://en.wikipedia.org/wiki/Thriller_(album)",
+    "https://en.wikipedia.org/wiki/Thriller_(song)",
+    "https://www.thriller40.com/music/thriller/"
+   ],
+   "image": "media/eras/era4.webp"
+  },
+  {
+   "n": 5,
+   "name": "After Thriller",
+   "years": "1983–86",
+   "from": 1983,
+   "to": 1986,
+   "essay": "Thriller sold 32 million copies in the US, and its main writer stayed out of sight anyway. People called him the Invisible Man for keeping clear of the celebrity side, and by then he had moved from Germany to Beverly Hills. The work came out of the same small circle. Quincy Jones's Qwest put out James Ingram's It's Your Night in 1983, and Yah Mo B There, a four-way write with Jones, Ingram and Michael McDonald, ran on a LinnDrum played by John Robinson and won a Grammy in 1985. Dick Rudolph produced the Manhattan Transfer's Bodies and Souls for Atlantic that September with two Temperton songs on it, then joined Temperton and Bruce Swedien at Westlake Audio to make the Running Scared soundtrack for MCA, out with Peter Hyams's Gregory Hines and Billy Crystal cop film on 27 June 1986. Temperton wrote five of its songs and composed the score, after The Color Purple had earned him two Oscar nominations. The keyboards were Synclaviers and synths now. Meanwhile Anita Baker was in court with Beverly Glen over her move to Elektra; the judge ruled for her on 19 March 1986, Rapture came out the next day with Temperton's Mystery on it, and it sold about five million in the US.",
+   "scene": {
+    "cities": [
+     "Los Angeles",
+     "Detroit"
+    ],
+    "labels": [
+     "Qwest",
+     "MCA",
+     "Elektra",
+     "Atlantic"
+    ],
+    "gear": [
+     "LinnDrum",
+     "Synclavier",
+     "synthesizers",
+     "finger snaps"
+    ],
+    "artifact": "The Running Scared soundtrack LP, with Temperton's name as producer and on five songs, plus a band of his own, the Rod Temperton Beat Wagon, on the last two tracks."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rod_Temperton",
+    "https://en.wikipedia.org/wiki/Yah_Mo_B_There",
+    "https://en.wikipedia.org/wiki/Bodies_and_Souls",
+    "https://en.wikipedia.org/wiki/Running_Scared_(1986_film)",
+    "https://www.sessiondays.com/2018/08/1986-soundtrack-running-scared/",
+    "https://en.wikipedia.org/wiki/Sweet_Freedom_(Michael_McDonald_song)",
+    "https://en.wikipedia.org/wiki/Rapture_(Anita_Baker_album)",
+    "https://albumism.com/features/anita-baker-rapture-album-anniversary"
+   ],
+   "image": "media/eras/era5.webp"
+  }
+ ],
+ "songs": [
+  "heatwave--boogie-nights",
+  "heatwave--always-and-forever",
+  "heatwave--too-hot-to-handle",
+  "heatwave--the-groove-line",
+  "michael-jackson--rock-with-you",
+  "michael-jackson--off-the-wall",
+  "michael-jackson--burn-this-disco-out",
+  "george-benson--give-me-the-night",
+  "the-brothers-johnson--stomp",
+  "george-benson--love-x-love",
+  "george-benson--off-broadway",
+  "patti-austin-james-ingram--baby-come-to-me",
+  "quincy-jones--razzamatazz",
+  "michael-jackson--thriller",
+  "michael-jackson--the-lady-in-my-life",
+  "donna-summer--love-is-in-control",
+  "michael-jackson--baby-be-mine",
+  "james-ingram-michael-mcdonald--yah-mo-b-there",
+  "michael-mcdonald--sweet-freedom",
+  "anita-baker--mystery"
+ ],
+ "pins": {
+  "michael-jackson--rock-with-you": {
+   "youtube": "5X-Mrc2l1d0"
+  },
+  "michael-jackson--thriller": {
+   "youtube": "sO4vI8P88NM"
+  },
+  "heatwave--boogie-nights": {
+   "youtube": "bJ0Rk3piR44"
+  },
+  "george-benson--give-me-the-night": {
+   "youtube": "Omnpu8mzX4c"
+  },
+  "the-brothers-johnson--stomp": {
+   "youtube": "wmR7JWPMdoQ"
+  },
+  "heatwave--always-and-forever": {
+   "youtube": "oD46U-6NO4E"
+  },
+  "michael-jackson--off-the-wall": {
+   "youtube": "_BfcRjZn6y4"
+  },
+  "heatwave--the-groove-line": {
+   "youtube": "sw1OwMrh7XA"
+  },
+  "george-benson--love-x-love": {
+   "youtube": "sBrHa_RgvvU"
+  },
+  "patti-austin-james-ingram--baby-come-to-me": {
+   "youtube": "fbPb9_KkI9I"
+  },
+  "james-ingram-michael-mcdonald--yah-mo-b-there": {
+   "youtube": "HQ1nvhLf1EU"
+  },
+  "michael-jackson--the-lady-in-my-life": {
+   "youtube": "hbjIhgk_X18"
+  },
+  "michael-mcdonald--sweet-freedom": {
+   "youtube": "yvXFGUWBMHY"
+  },
+  "donna-summer--love-is-in-control": {
+   "youtube": "iBbJ0KKQMxY"
+  },
+  "quincy-jones--razzamatazz": {
+   "youtube": "51k-5vkNcgg"
+  },
+  "michael-jackson--baby-be-mine": {
+   "youtube": "q3HD_2i5ddQ"
+  },
+  "michael-jackson--burn-this-disco-out": {
+   "youtube": "_F06umiWDDw"
+  },
+  "anita-baker--mystery": {
+   "youtube": "byI1q82-MuU"
+  },
+  "heatwave--too-hot-to-handle": {
+   "youtube": "jpSsbljDam8"
+  },
+  "george-benson--off-broadway": {
+   "youtube": "uwXFE08GV14"
+  }
+ },
+ "threads": [
+  {
+   "from": "heatwave--boogie-nights",
+   "to": "heatwave--too-hot-to-handle",
+   "kind": "producer",
+   "note": "Same album, same producer, Barry Blue."
+  },
+  {
+   "from": "heatwave--boogie-nights",
+   "to": "heatwave--always-and-forever",
+   "kind": "producer",
+   "note": "Also on Too Hot to Handle, also Barry Blue."
+  },
+  {
+   "from": "heatwave--boogie-nights",
+   "to": "michael-jackson--rock-with-you",
+   "kind": "influence",
+   "note": "Quincy Jones loved this record and flew Temperton to Los Angeles to write for Off the Wall."
+  },
+  {
+   "from": "heatwave--too-hot-to-handle",
+   "to": "heatwave--boogie-nights",
+   "kind": "producer",
+   "note": "Same album, same Barry Blue sessions, same lead singer."
+  },
+  {
+   "from": "heatwave--too-hot-to-handle",
+   "to": "heatwave--always-and-forever",
+   "kind": "writer",
+   "note": "Both Temperton songs from the debut, an uptempo opener and the ballad."
+  },
+  {
+   "from": "heatwave--too-hot-to-handle",
+   "to": "george-benson--give-me-the-night",
+   "kind": "writer",
+   "note": "\"Turn Out the Lamplight\", demoed in 1975 and recorded in these sessions, ended up on George Benson's Give Me the Night album."
+  },
+  {
+   "from": "heatwave--always-and-forever",
+   "to": "heatwave--boogie-nights",
+   "kind": "producer",
+   "note": "Same album and producer, and Epic's follow-up to it in America."
+  },
+  {
+   "from": "heatwave--always-and-forever",
+   "to": "michael-jackson--the-lady-in-my-life",
+   "kind": "writer",
+   "note": "Temperton's slow side again, six years later for Michael Jackson."
+  },
+  {
+   "from": "heatwave--always-and-forever",
+   "to": "patti-austin-james-ingram--baby-come-to-me",
+   "kind": "writer",
+   "note": "Another Temperton ballad that found its biggest life years after it was cut."
+  },
+  {
+   "from": "heatwave--the-groove-line",
+   "to": "michael-jackson--rock-with-you",
+   "kind": "writer",
+   "note": "Temperton had hoped to put the tune that became \"Rock with You\" on Central Heating, and Heatwave passed on it."
+  },
+  {
+   "from": "heatwave--the-groove-line",
+   "to": "george-benson--give-me-the-night",
+   "kind": "writer",
+   "note": "\"The Star of a Story\" from Central Heating was recut on George Benson's Give Me the Night album."
+  },
+  {
+   "from": "heatwave--the-groove-line",
+   "to": "heatwave--boogie-nights",
+   "kind": "producer",
+   "note": "Barry Blue again, and the same rhythm section."
+  },
+  {
+   "from": "michael-jackson--rock-with-you",
+   "to": "heatwave--the-groove-line",
+   "kind": "writer",
+   "note": "Temperton had first hoped to place the tune on Heatwave's Central Heating."
+  },
+  {
+   "from": "michael-jackson--rock-with-you",
+   "to": "heatwave--boogie-nights",
+   "kind": "influence",
+   "note": "\"Boogie Nights\" is why Jones flew Temperton to Los Angeles."
+  },
+  {
+   "from": "michael-jackson--rock-with-you",
+   "to": "michael-jackson--off-the-wall",
+   "kind": "producer",
+   "note": "Same album, same sessions, same Jones and Swedien team."
+  },
+  {
+   "from": "michael-jackson--rock-with-you",
+   "to": "michael-jackson--thriller",
+   "kind": "producer",
+   "note": "Jones and Swedien had Temperton back for Thriller three years later."
+  },
+  {
+   "from": "michael-jackson--off-the-wall",
+   "to": "the-brothers-johnson--stomp",
+   "kind": "session",
+   "note": "Louis Johnson on bass, a year before Temperton wrote \"Stomp!\" for him and his brother."
+  },
+  {
+   "from": "michael-jackson--off-the-wall",
+   "to": "michael-jackson--thriller",
+   "kind": "writer",
+   "note": "Temperton wrote the title tracks of both Off the Wall and Thriller."
+  },
+  {
+   "from": "michael-jackson--off-the-wall",
+   "to": "michael-jackson--rock-with-you",
+   "kind": "producer",
+   "note": "Same Jones and Swedien sessions in December 1978."
+  },
+  {
+   "from": "michael-jackson--off-the-wall",
+   "to": "michael-jackson--burn-this-disco-out",
+   "kind": "session",
+   "note": "Same rhythm section and horns, Louis Johnson included."
+  },
+  {
+   "from": "michael-jackson--burn-this-disco-out",
+   "to": "michael-jackson--off-the-wall",
+   "kind": "session",
+   "note": "Same rhythm section and Louis Johnson on bass; the two Temperton songs bookend side two."
+  },
+  {
+   "from": "michael-jackson--burn-this-disco-out",
+   "to": "michael-jackson--rock-with-you",
+   "kind": "producer",
+   "note": "The third of Temperton's three Off the Wall songs, all kept by Jones."
+  },
+  {
+   "from": "michael-jackson--burn-this-disco-out",
+   "to": "quincy-jones--razzamatazz",
+   "kind": "singer",
+   "note": "Patti Austin duets with Jackson on \"It's the Falling in Love\", the song just before it on the album."
+  },
+  {
+   "from": "george-benson--give-me-the-night",
+   "to": "george-benson--love-x-love",
+   "kind": "producer",
+   "note": "Same Quincy Jones album, and the Temperton song that went out next as a single."
+  },
+  {
+   "from": "george-benson--give-me-the-night",
+   "to": "george-benson--off-broadway",
+   "kind": "writer",
+   "note": "Off Broadway sits two tracks earlier on the same LP, another of Temperton's five songs there."
+  },
+  {
+   "from": "george-benson--give-me-the-night",
+   "to": "patti-austin-james-ingram--baby-come-to-me",
+   "kind": "singer",
+   "note": "Patti Austin sings the backing and scat lines here, a year before her own Temperton duet with James Ingram."
+  },
+  {
+   "from": "george-benson--give-me-the-night",
+   "to": "heatwave--boogie-nights",
+   "kind": "writer",
+   "note": "Three years after Boogie Nights, Heatwave's keyboard player hands a Jones production its title track."
+  },
+  {
+   "from": "the-brothers-johnson--stomp",
+   "to": "michael-jackson--rock-with-you",
+   "kind": "session",
+   "note": "Louis Johnson plays bass on Off the Wall, and Michael Jackson sings backup here."
+  },
+  {
+   "from": "the-brothers-johnson--stomp",
+   "to": "michael-jackson--thriller",
+   "kind": "session",
+   "note": "Louis Johnson went on to play bass on Thriller."
+  },
+  {
+   "from": "the-brothers-johnson--stomp",
+   "to": "george-benson--love-x-love",
+   "kind": "session",
+   "note": "Louis Johnson, Phillinganes, Robinson and the Hey horns are on Love X Love too, months later."
+  },
+  {
+   "from": "the-brothers-johnson--stomp",
+   "to": "george-benson--off-broadway",
+   "kind": "session",
+   "note": "Louis Johnson plays bass on Benson's Off Broadway."
+  },
+  {
+   "from": "george-benson--love-x-love",
+   "to": "george-benson--give-me-the-night",
+   "kind": "producer",
+   "note": "Same album and the same Jones and Swedien team."
+  },
+  {
+   "from": "george-benson--love-x-love",
+   "to": "george-benson--off-broadway",
+   "kind": "writer",
+   "note": "The next track on the LP, also Temperton's, also with Phillinganes, Robinson and Louis Johnson."
+  },
+  {
+   "from": "george-benson--love-x-love",
+   "to": "quincy-jones--razzamatazz",
+   "kind": "singer",
+   "note": "Patti Austin is in the backing choir here, a year before she fronted Razzamatazz."
+  },
+  {
+   "from": "george-benson--love-x-love",
+   "to": "the-brothers-johnson--stomp",
+   "kind": "session",
+   "note": "Louis Johnson, Phillinganes, Robinson and the Hey horns came over from Stomp!."
+  },
+  {
+   "from": "george-benson--off-broadway",
+   "to": "george-benson--give-me-the-night",
+   "kind": "producer",
+   "note": "Same album, same Jones production, two tracks apart."
+  },
+  {
+   "from": "george-benson--off-broadway",
+   "to": "the-brothers-johnson--stomp",
+   "kind": "session",
+   "note": "Louis Johnson, Robinson, Phillinganes and da Costa, the Stomp! rhythm section, play here too."
+  },
+  {
+   "from": "quincy-jones--razzamatazz",
+   "to": "patti-austin-james-ingram--baby-come-to-me",
+   "kind": "singer",
+   "note": "Patti Austin again, on the Temperton duet Jones produced for her Qwest debut."
+  },
+  {
+   "from": "quincy-jones--razzamatazz",
+   "to": "michael-jackson--thriller",
+   "kind": "session",
+   "note": "Same Westlake crew: Jones, Swedien, Phillinganes, Jerry Hey and Bill Reichenbach."
+  },
+  {
+   "from": "quincy-jones--razzamatazz",
+   "to": "george-benson--give-me-the-night",
+   "kind": "producer",
+   "note": "Jones and Swedien had made Give Me the Night with Temperton the year before."
+  },
+  {
+   "from": "patti-austin-james-ingram--baby-come-to-me",
+   "to": "quincy-jones--razzamatazz",
+   "kind": "singer",
+   "note": "Patti Austin sang Temperton's Razzamatazz for Jones's The Dude the same year."
+  },
+  {
+   "from": "patti-austin-james-ingram--baby-come-to-me",
+   "to": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "kind": "singer",
+   "note": "James Ingram, here duetting, later sang Yah Mo B There with Michael McDonald, who sings backing on this one."
+  },
+  {
+   "from": "patti-austin-james-ingram--baby-come-to-me",
+   "to": "donna-summer--love-is-in-control",
+   "kind": "session",
+   "note": "Ingram sings backing vocals and co-arranges on Donna Summer's Love Is in Control."
+  },
+  {
+   "from": "patti-austin-james-ingram--baby-come-to-me",
+   "to": "george-benson--give-me-the-night",
+   "kind": "label",
+   "note": "Both are early Qwest releases, the label Jones started with Warner Bros. in 1980."
+  },
+  {
+   "from": "donna-summer--love-is-in-control",
+   "to": "patti-austin-james-ingram--baby-come-to-me",
+   "kind": "singer",
+   "note": "James Ingram sings backing and co-arranges, the same year as his Patti Austin duet."
+  },
+  {
+   "from": "donna-summer--love-is-in-control",
+   "to": "michael-jackson--thriller",
+   "kind": "session",
+   "note": "Ndugu Chancler, Boddicker, Phillinganes, Jerry Hey and Swedien all moved on to Thriller."
+  },
+  {
+   "from": "donna-summer--love-is-in-control",
+   "to": "michael-jackson--baby-be-mine",
+   "kind": "session",
+   "note": "The same Hey, Grant and Reichenbach horn section."
+  },
+  {
+   "from": "michael-jackson--thriller",
+   "to": "michael-jackson--off-the-wall",
+   "kind": "writer",
+   "note": "Temperton wrote both Jackson title tracks, Off the Wall in 1979 and this one."
+  },
+  {
+   "from": "michael-jackson--thriller",
+   "to": "michael-jackson--the-lady-in-my-life",
+   "kind": "writer",
+   "note": "One of three Temperton songs on Thriller, the same count he had on Off the Wall."
+  },
+  {
+   "from": "michael-jackson--thriller",
+   "to": "michael-jackson--baby-be-mine",
+   "kind": "session",
+   "note": "Same players on both: David Williams, Larry Williams, Hey, Grant, Reichenbach."
+  },
+  {
+   "from": "michael-jackson--thriller",
+   "to": "quincy-jones--razzamatazz",
+   "kind": "session",
+   "note": "Phillinganes, Hey and Reichenbach, the Westlake regulars from The Dude."
+  },
+  {
+   "from": "michael-jackson--the-lady-in-my-life",
+   "to": "the-brothers-johnson--stomp",
+   "kind": "session",
+   "note": "Louis Johnson, the bass behind Stomp!, plays bass here."
+  },
+  {
+   "from": "michael-jackson--the-lady-in-my-life",
+   "to": "heatwave--always-and-forever",
+   "kind": "writer",
+   "note": "Temperton's slow side, five years on from Always and Forever."
+  },
+  {
+   "from": "michael-jackson--the-lady-in-my-life",
+   "to": "george-benson--love-x-love",
+   "kind": "session",
+   "note": "George Benson covered it in 2011 and it went to number one on smooth jazz radio."
+  },
+  {
+   "from": "michael-jackson--baby-be-mine",
+   "to": "michael-jackson--thriller",
+   "kind": "session",
+   "note": "Same Thriller players and the same Temperton arranging credit."
+  },
+  {
+   "from": "michael-jackson--baby-be-mine",
+   "to": "michael-jackson--burn-this-disco-out",
+   "kind": "writer",
+   "note": "Temperton's uptempo dance song for a Jackson album, the slot Burn This Disco Out filled on Off the Wall."
+  },
+  {
+   "from": "michael-jackson--baby-be-mine",
+   "to": "donna-summer--love-is-in-control",
+   "kind": "session",
+   "note": "Ndugu Chancler and the Hey horn section from the Donna Summer sessions."
+  },
+  {
+   "from": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "to": "patti-austin-james-ingram--baby-come-to-me",
+   "kind": "singer",
+   "note": "James Ingram again, two years after Baby, Come to Me."
+  },
+  {
+   "from": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "to": "michael-mcdonald--sweet-freedom",
+   "kind": "singer",
+   "note": "Michael McDonald back on a Temperton song three years later, this time on his own."
+  },
+  {
+   "from": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "to": "michael-jackson--thriller",
+   "kind": "producer",
+   "note": "Quincy Jones produced and co-wrote it, a year after Thriller."
+  },
+  {
+   "from": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "to": "george-benson--give-me-the-night",
+   "kind": "label",
+   "note": "Qwest again; Give Me the Night was the label's first release."
+  },
+  {
+   "from": "michael-mcdonald--sweet-freedom",
+   "to": "james-ingram-michael-mcdonald--yah-mo-b-there",
+   "kind": "singer",
+   "note": "McDonald's second Temperton hit, after the Ingram duet."
+  },
+  {
+   "from": "michael-mcdonald--sweet-freedom",
+   "to": "anita-baker--mystery",
+   "kind": "producer",
+   "note": "Co-producer Dick Rudolph had produced the Manhattan Transfer's first recording of Mystery."
+  },
+  {
+   "from": "michael-mcdonald--sweet-freedom",
+   "to": "george-benson--off-broadway",
+   "kind": "session",
+   "note": "Greg Phillinganes and Jerry Hey were on Off Broadway too, six years earlier."
+  },
+  {
+   "from": "anita-baker--mystery",
+   "to": "michael-mcdonald--sweet-freedom",
+   "kind": "producer",
+   "note": "Dick Rudolph produced the Manhattan Transfer original before co-producing Sweet Freedom."
+  },
+  {
+   "from": "anita-baker--mystery",
+   "to": "michael-jackson--the-lady-in-my-life",
+   "kind": "writer",
+   "note": "Another Temperton ballad that was never an A-side and found its audience anyway."
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ }
+}

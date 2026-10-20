@@ -1,0 +1,76 @@
+{
+ "id": "coolio-ai-soul-cover--gangstas-paradise",
+ "title": "Gangsta's Paradise",
+ "artist": "Coolio (AI soul cover)",
+ "year": 1995,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Dangerous Minds (soundtrack); Gangsta's Paradise",
+ "aliases": {
+  "youtube": [
+   "W6a0xzUjIhw"
+  ],
+  "titles": [
+   "Gangsta’s Paradise - 1950's Soul Version"
+  ]
+ },
+ "notes": {
+  "made": "Coolio, L.V. and producer Doug Rasheed wrote it on top of an interpolation of Stevie Wonder's 1976 'Pastime Paradise', which got Wonder a writing credit. Wonder objected to the swearing, Coolio took it out, and Wonder then approved it. L.V. stacked his own voice on the chorus until it sounded like a choir.",
+  "context": "It came out August 1, 1995 as the lead single from the Michelle Pfeiffer film Dangerous Minds, then anchored Coolio's November album. It spent three weeks at number one and nine at number two, finished as Billboard's top Hot 100 single of 1995, held number one in Australia for 14 weeks, and was the first rap single to debut at number one in Britain. It was the biggest single of a year when the rap business was splitting along the coasts.",
+  "listen_for": [
+   {
+    "where": "the chorus",
+    "note": "L.V.'s stacked vocal is already a gospel-style choir over Wonder's melody, so this is the one hook on the era a soul singer gets fully formed."
+   },
+   {
+    "where": "the string line under the verses",
+    "note": "it's the 'Pastime Paradise' line, which Wonder had played on a Yamaha GX-1 synth to sound like a string section."
+   }
+  ],
+  "leads_to": {
+   "artist": "Stevie Wonder",
+   "title": "Pastime Paradise",
+   "year": 1976,
+   "why": "From Songs in the Key of Life, a synth-string meditation with a West Angeles Church of God choir and Hare Krishna chanters at the end."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gangsta%27s_Paradise",
+   "https://en.wikipedia.org/wiki/Pastime_Paradise",
+   "https://en.wikipedia.org/wiki/Ready_to_Die"
+  ],
+  "unverified": "Whether Rasheed's track replays the string line on a synth or with players; Wikipedia calls it an interpolation without saying how."
+ },
+ "culture": [
+  {
+   "kind": "award",
+   "title": "Grammy and two VMAs",
+   "line": "Coolio won the Grammy for Best Rap Solo Performance and the song was up for Record of the Year; the video won Best Rap Video and Best Video from a Film at the MTV VMAs.",
+   "wiki": "Gangsta's_Paradise",
+   "source": "https://en.wikipedia.org/wiki/Gangsta%27s_Paradise"
+  },
+  {
+   "kind": "video",
+   "title": "Pfeiffer in the video",
+   "line": "Antoine Fuqua directed it, with Michelle Pfeiffer back in character as LouAnne Johnson from Dangerous Minds.",
+   "wiki": "Dangerous_Minds",
+   "source": "https://en.wikipedia.org/wiki/Gangsta%27s_Paradise"
+  },
+  {
+   "kind": "cover",
+   "title": "Amish Paradise",
+   "line": "'Weird Al' Yankovic's 1996 parody reached number 53; Coolio said he hadn't approved it, and later called objecting one of the least smart things he'd done.",
+   "wiki": "Amish_Paradise",
+   "source": "https://en.wikipedia.org/wiki/Gangsta%27s_Paradise"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-3)",
+  "written_on": "2026-10-20"
+ }
+}

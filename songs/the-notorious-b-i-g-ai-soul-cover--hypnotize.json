@@ -1,0 +1,77 @@
+{
+ "id": "the-notorious-b-i-g-ai-soul-cover--hypnotize",
+ "title": "Hypnotize",
+ "artist": "The Notorious B.I.G. (AI soul cover)",
+ "year": 1997,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Life After Death",
+ "aliases": {
+  "youtube": [
+   "3ky_JkKc62A"
+  ],
+  "titles": [
+   "The Notorious B.I.G. - Hypnotize (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Bad Boy's Hitmen producers Deric 'D-Dot' Angelettie and Ron 'Amen-Ra' Lawrence built it with Puff Daddy on the entire groove of Herb Alpert's 1979 number one 'Rise'; Randy 'Badazz' Alpert approved the sample after Puffy told him what the record meant to him as a kid. The chorus melody and the title come from Slick Rick's 1985 'La Di Da Di', and Rick got no credit. Biggie sang the hook on the demo, but the released version is Pamela Long of Total, credited only for background vocals.",
+  "context": "Bad Boy released it on March 4, 1997. Five days later Biggie was shot dead in Los Angeles after a Soul Train Awards after-party, six months after Tupac was killed in Las Vegas. The single debuted at number two behind Puffy's own 'Can't Nobody Hold Me Down', then went to number one on the May 3 chart for three weeks, his first Hot 100 chart-topper, eight weeks after his death.",
+  "listen_for": [
+   {
+    "where": "the first bars and all the way through",
+    "note": "The groove is Alpert's 'Rise', a slow, slinky instrumental that drummer Steve Schaeffer had talked down to about 100 bpm. A soul cover is going back to a record that was already built for a band."
+   },
+   {
+    "where": "the chorus",
+    "note": "Pamela Long sings Slick Rick's 'La Di Da Di' melody, so the hook is already a sung line with a tune a singer can carry."
+   }
+  ],
+  "leads_to": {
+   "artist": "Herb Alpert",
+   "title": "Rise",
+   "year": 1979,
+   "why": "The whole bed of 'Hypnotize'; it spent two weeks at number one in October 1979 and won the Grammy for Best Pop Instrumental Performance."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hypnotize_(The_Notorious_B.I.G._song)",
+   "https://stereogum.com/2185381/the-number-ones-the-notorious-b-i-g-s-hypnotize/columns/the-number-ones",
+   "https://en.wikipedia.org/wiki/Rise_(instrumental)",
+   "https://en.wikipedia.org/wiki/Life_After_Death"
+  ],
+  "unverified": "Whether the track was recorded at Daddy's House or in Trinidad; the album used both."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "A number one he never saw",
+   "line": "Three weeks at number one from May 3, 1997, replacing Puffy's 'Can't Nobody Hold Me Down'; Biggie became the fifth artist with a posthumous Hot 100 number one.",
+   "wiki": "",
+   "source": "https://stereogum.com/2185381/the-number-ones-the-notorious-b-i-g-s-hypnotize/columns/the-number-ones"
+  },
+  {
+   "kind": "video",
+   "title": "Paul Hunter's yacht chase",
+   "line": "Shot in California though captioned 'Florida Keys', with a yacht party, a parking-garage chase and an underwater pool scene.",
+   "wiki": "Paul Hunter (director)",
+   "source": "https://en.wikipedia.org/wiki/Hypnotize_(The_Notorious_B.I.G._song)"
+  },
+  {
+   "kind": "award",
+   "title": "Grammy nomination",
+   "line": "Nominated for Best Rap Solo Performance at the 1998 Grammys; it lost to Will Smith's 'Men in Black'.",
+   "wiki": "40th Annual Grammy Awards",
+   "source": "https://en.wikipedia.org/wiki/Hypnotize_(The_Notorious_B.I.G._song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-4)",
+  "written_on": "2026-10-20"
+ }
+}

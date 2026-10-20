@@ -1,0 +1,81 @@
+{
+ "id": "snoop-doggy-dogg-ai-soul-cover--who-am-i",
+ "title": "Who Am I? (What's My Name?)",
+ "artist": "Snoop Doggy Dogg (AI soul cover)",
+ "year": 1993,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Doggystyle",
+ "aliases": {
+  "youtube": [
+   "AyER4LToYH4"
+  ],
+  "titles": [
+   "Snoop Dogg – Who Am I (What’s My Name)? (1950’s Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Dr. Dre produced it at the Doggystyle sessions, recorded at Death Row Studios in early 1993. The chorus and much of the track lean on George Clinton's 'Atomic Dog', the bass line comes from Funkadelic's '(Not Just) Knee Deep', and the bridge interpolates Parliament's 'Give Up the Funk (Tear the Roof off the Sucker)'. Jewell and Edward Tony Green sang extra vocals. The way the album was built, per Rolling Stone's Jonathan Gold, was loops plus a bassist's line and a Minimoog melody, with samples off an Akai MPC60.",
+  "context": "Snoop was on 12 of the 16 tracks of Dre's The Chronic, so by November 1993 everyone knew the voice and was waiting for the name. This was his first solo single, out November 11, and it reached eight on the Hot 100, his first top ten as lead artist. Doggystyle came out twelve days later and sold 806,858 copies in its first week, a record for a debut. All of this happened while he was charged with murder over an August 1993 shooting; he was cleared in 1996.",
+  "listen_for": [
+   {
+    "where": "the chorus",
+    "note": "The title question is answered with 'Atomic Dog', George Clinton's 1982 R&B number one, so the P-Funk is right there in the hook."
+   },
+   {
+    "where": "under the verses",
+    "note": "The bass line is Funkadelic's '(Not Just) Knee Deep', a funk line a soul band can play as written."
+   },
+   {
+    "where": "the bridge",
+    "note": "It quotes Parliament's 'Give Up the Funk', a crowd chant a singer can lead."
+   }
+  ],
+  "leads_to": {
+   "artist": "George Clinton",
+   "title": "Atomic Dog",
+   "year": 1982,
+   "why": "The record under the chorus, P-Funk's last R&B number one, which never made the Hot 100 at all."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Who_Am_I%3F_(What%27s_My_Name%3F)",
+   "https://en.wikipedia.org/wiki/Doggystyle",
+   "https://en.wikipedia.org/wiki/The_Chronic",
+   "https://en.wikipedia.org/wiki/Atomic_Dog"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Dogs and dog catchers",
+   "line": "Fab 5 Freddy directed the CGI video, where Snoop, Kurupt, Daz and Warren G turn into dogs and dodge the pound, partly shot on the roof of V.I.P. Records.",
+   "wiki": "Fab_5_Freddy",
+   "source": "https://en.wikipedia.org/wiki/Who_Am_I%3F_(What%27s_My_Name%3F)"
+  },
+  {
+   "kind": "live",
+   "title": "Arsenio and Soul Train",
+   "line": "He played it on The Arsenio Hall Show on December 17, 1993 and Soul Train the next day.",
+   "wiki": "The_Arsenio_Hall_Show",
+   "source": "https://en.wikipedia.org/wiki/Who_Am_I%3F_(What%27s_My_Name%3F)"
+  },
+  {
+   "kind": "chart",
+   "title": "Three weeks at number one on rap",
+   "line": "Number eight on the Hot 100 and the R&B chart, three weeks at number one on Hot Rap Songs, gold by February 1994.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Doggystyle"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-2)",
+  "written_on": "2026-10-20"
+ }
+}

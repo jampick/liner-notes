@@ -1,0 +1,74 @@
+{
+ "id": "run-dmc-ai-soul-cover--walk-this-way",
+ "title": "Walk This Way",
+ "artist": "Run-DMC (AI soul cover)",
+ "year": 1986,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Raising Hell",
+ "aliases": {
+  "youtube": [
+   "BFR1zeLLzFA"
+  ],
+  "titles": [
+   "Run DMC - Walk This Way (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "Jam Master Jay had been cutting up the drum intro of Aerosmith's 1975 record for years when Rick Rubin walked in on the group looping it during the Raising Hell sessions and asked if they knew the song. Rubin got Steven Tyler and Joe Perry to Magic Ventures Studios in New York. Run and DMC rapped verses they had first called hillbilly gibberish, Tyler sang, and Perry played guitar and bass on a bass borrowed from one of the Beastie Boys. Rubin and Russell Simmons produced.",
+  "context": "Aerosmith were coming off the flop of Done with Mirrors and years of drug trouble, and this record brought them back. The single came out on Profile on July 4, 1986, reached number four on the Hot 100 and number eight in the UK, while Raising Hell went to number three on the album chart. Rap and rock were still kept in separate rooms, which is the joke the video plays on.",
+  "listen_for": [
+   {
+    "where": "the first two bars",
+    "note": "Joey Kramer's drum intro from the 1975 original, the break Jam Master Jay had been looping on turntables before anyone thought to remake the song."
+   },
+   {
+    "where": "the chorus",
+    "note": "Steven Tyler sings it, so the original already has a sung hook with a short repeated title phrase; a soul singer only has to take it over."
+   },
+   {
+    "where": "the riff under the verses",
+    "note": "Joe Perry's guitar figure, which he said came from New Orleans funk, so it already swings."
+   }
+  ],
+  "leads_to": {
+   "artist": "Aerosmith",
+   "title": "Walk This Way",
+   "year": 1975,
+   "why": "The Toys in the Attic original, cut at the Record Plant in New York, with the drum intro that made it a b-boy break record."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Walk_This_Way",
+   "https://en.wikipedia.org/wiki/Raising_Hell_(album)",
+   "https://www.loudersound.com/features/the-story-behind-the-song-walk-this-way-by-run-dmc",
+   "https://www.wbur.org/hereandnow/2019/02/21/walk-this-way-run-dmc-aerosmith"
+  ],
+  "unverified": "The exact recording date of the session (Wikipedia's infobox gives March 9, 1986) wasn't confirmed elsewhere, so I left it out."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Through the wall",
+   "line": "Jon Small shot the video at the Park Theater in Union City, New Jersey. The rappers and the rock band play in rooms next door to each other until Tyler breaks through the wall.",
+   "wiki": "Walk_This_Way",
+   "source": "https://en.wikipedia.org/wiki/Walk_This_Way"
+  },
+  {
+   "kind": "chart",
+   "title": "First rap single in the top five",
+   "line": "It reached number four on the Hot 100 in 1986, the first rap single to get that high, and Raising Hell became the first hip-hop album to go platinum.",
+   "wiki": "Raising_Hell_(album)",
+   "source": "https://en.wikipedia.org/wiki/Raising_Hell_(album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-1)",
+  "written_on": "2026-10-20"
+ }
+}

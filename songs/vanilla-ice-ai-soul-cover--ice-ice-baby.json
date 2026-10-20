@@ -1,0 +1,70 @@
+{
+ "id": "vanilla-ice-ai-soul-cover--ice-ice-baby",
+ "title": "Ice Ice Baby",
+ "artist": "Vanilla Ice (AI soul cover)",
+ "year": 1990,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it. It first appeared as a B-side on Ichiban's Hooked, which Wikipedia dates both 1989 and early 1990; the SBK single that charted is 1990.",
+ "album": "YouTube upload; the original is on To the Extreme",
+ "aliases": {
+  "youtube": [
+   "v7-JXQSoctU"
+  ],
+  "titles": [
+   "Vanilla Ice - Ice Ice Baby (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "The bass line is the riff from Queen and David Bowie's 1981 'Under Pressure', used without clearance, and the chorus chant comes from the Black fraternity Alpha Phi Alpha. Vanilla Ice is credited as producer, but who made the beat is disputed: Dallas DJ Earthquake says it was him, and Mario 'Chocolate' Johnson later claimed much of the writing. Queen and Bowie got writing credit after a settlement out of court.",
+  "context": "Ice was a regular at City Lights in Dallas, whose owner Tommy Quon managed him and got him onto Ichiban, an Atlanta indie, where the song sat on the B-side of a 'Play That Funky Music' cover. A Georgia DJ played the flip, Quon paid $8,000 for a video that ran on The Box and BET's Rap City, and SBK signed him and repackaged the album as To the Extreme. The single topped the Hot 100 for one week (chart dated November 3, 1990), the first hip-hop single to do it, and the album sat at number one for 12 weeks.",
+  "listen_for": [
+   {
+    "where": "the opening bars",
+    "note": "The 'Under Pressure' bass riff, a rock record's line that a soul band can play on upright or electric bass."
+   },
+   {
+    "where": "the chorus",
+    "note": "The title chant, borrowed from an Alpha Phi Alpha step chant, a call a room can shout back."
+   }
+  ],
+  "leads_to": {
+   "artist": "Queen and David Bowie",
+   "title": "Under Pressure",
+   "year": 1981,
+   "why": "The bass line under the whole record, and the reason the songwriting credits changed."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ice_Ice_Baby",
+   "https://en.wikipedia.org/wiki/Hooked_(Vanilla_Ice_album)",
+   "https://stereogum.com/2164461/the-number-ones-vanilla-ices-ice-ice-baby/columns/the-number-ones",
+   "https://en.wikipedia.org/wiki/List_of_Billboard_Hot_100_number_ones_of_1990"
+  ],
+  "unverified": "The studio where the original was recorded isn't confirmed (Luminous Sound in Dallas is listed for To the Extreme as a whole). Wikipedia names David Morales and Stereogum an unnamed Georgia DJ as the one who flipped the single; I went with the Georgia DJ."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "First hip-hop number one",
+   "line": "It reached number one on the Hot 100 on the chart dated November 3, 1990, for one week, and also topped the UK chart.",
+   "wiki": "Ice_Ice_Baby",
+   "source": "https://stereogum.com/2164461/the-number-ones-vanilla-ices-ice-ice-baby/columns/the-number-ones"
+  },
+  {
+   "kind": "screen",
+   "title": "School Daze",
+   "line": "The chant had been heard in Spike Lee's 1988 film School Daze before Ice put it on record.",
+   "wiki": "School_Daze",
+   "source": "https://stereogum.com/2164461/the-number-ones-vanilla-ices-ice-ice-baby/columns/the-number-ones"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-1)",
+  "written_on": "2026-10-20"
+ }
+}

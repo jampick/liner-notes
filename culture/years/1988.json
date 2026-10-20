@@ -1,0 +1,47 @@
+{
+ "year": 1988,
+ "items": [
+  {
+   "kind": "film",
+   "title": "School Daze",
+   "line": "Spike Lee's second feature opened on February 12, 1988, set at a Black college in Atlanta over homecoming weekend. It cost $6.1 million and took $14.5 million, and E.U.'s 'Da Butt' from it went to number one on the R&B chart.",
+   "wiki": "School_Daze",
+   "source": "https://en.wikipedia.org/wiki/School_Daze"
+  },
+  {
+   "kind": "tv",
+   "title": "Yo! MTV Raps",
+   "line": "MTV aired the US pilot on August 6, 1988, hosted by Run-DMC, with DJ Jazzy Jeff & the Fresh Prince as first guests. Fab 5 Freddy took over as host, and the show ran until August 1995.",
+   "wiki": "Yo!_MTV_Raps",
+   "source": "https://en.wikipedia.org/wiki/Yo!_MTV_Raps"
+  },
+  {
+   "kind": "sport",
+   "title": "Ben Johnson in Seoul",
+   "line": "On September 24, 1988, Ben Johnson won the Olympic 100 metres in a world-record 9.79 seconds. His sample tested positive for stanozolol and he lost the gold medal and the record days later.",
+   "wiki": "Ben_Johnson_(Canadian_sprinter)",
+   "source": "https://en.wikipedia.org/wiki/Ben_Johnson_(Canadian_sprinter)"
+  },
+  {
+   "kind": "game",
+   "title": "Super Mario Bros. 3",
+   "line": "Nintendo released it in Japan on October 23, 1988. Americans waited until February 1990, and it sold more than 17 million copies worldwide by 2000.",
+   "wiki": "Super_Mario_Bros._3",
+   "source": "https://en.wikipedia.org/wiki/Super_Mario_Bros._3"
+  },
+  {
+   "kind": "tech",
+   "title": "The Morris worm",
+   "line": "Cornell graduate student Robert Tappan Morris launched a self-copying program from MIT's network at 8:30 p.m. on November 2, 1988. It is usually said to have hit about 6,000 Unix machines, and he became the first person convicted of a felony under the 1986 Computer Fraud and Abuse Act.",
+   "wiki": "Morris_worm",
+   "source": "https://en.wikipedia.org/wiki/Morris_worm"
+  },
+  {
+   "kind": "news",
+   "title": "Bush beats Dukakis",
+   "line": "On November 8, 1988, George H. W. Bush won the presidency with 426 electoral votes and 53.4 percent of the vote to Michael Dukakis's 111. Republican ads about a Massachusetts prison furlough painted Dukakis as soft on crime and were accused of race-baiting.",
+   "wiki": "1988_United_States_presidential_election",
+   "source": "https://en.wikipedia.org/wiki/1988_United_States_presidential_election"
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "id": "lauryn-hill-ai-soul-cover--doo-wop",
+ "title": "Doo Wop (That Thing)",
+ "artist": "Lauryn Hill (AI soul cover)",
+ "year": 1998,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on The Miseducation of Lauryn Hill",
+ "aliases": {
+  "youtube": [
+   "nkU-9KbjGkE"
+  ],
+  "titles": [
+   "Lauryn Hill - Doo Wop (That Thing) | 1950's Soul Version"
+  ]
+ },
+ "notes": {
+  "made": "Hill wrote and produced it, and it was recorded in 1997–98 at Marley Music in Kingston and Chung King in New York. James Poyser played piano and Rhodes, with Kingston horn players Dean Fraser, Nambo Robinson and Everol Wray, the Indigo Quartet on strings and DJ Supreme on scratches. Underneath sits a sped-up piece of the 5th Dimension's 'Together Let's Find Love'.",
+  "context": "Hill had her son Zion in 1997, between The Score and this record. Miseducation sold 422,000 in its first week, then a record for a woman, and Columbia pressed a limited 'Doo Wop' single in October 1998, which let it debut at number one on the Hot 100. It was the first number one by a female rapper. In February 1999 the album won five Grammys including Album of the Year, the first for a hip-hop record; New Ark, the musicians who worked on it, sued over credit and settled in 2001.",
+  "listen_for": [
+   {
+    "where": "the verses",
+    "note": "Hill sings and raps over multi-tracked doo-wop harmonies of her own, so the vocal group sound a 1950s cover reaches for is already in the original."
+   },
+   {
+    "where": "the chorus and the bridge",
+    "note": "The chorus is sung, over horn stabs and a Motown-style string part that Stereogum hears hitting hardest on the bridge."
+   }
+  ],
+  "leads_to": {
+   "artist": "The 5th Dimension",
+   "title": "Together Let's Find Love",
+   "year": 1971,
+   "why": "The Willie Hutch co-write Hill sped up under the track; a Bell single from December 1971 that reached number 22 R&B."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Doo_Wop_(That_Thing)",
+   "https://en.wikipedia.org/wiki/The_Miseducation_of_Lauryn_Hill",
+   "https://stereogum.com/2190677/the-number-ones-lauryn-hills-doo-wop-that-thing/columns/the-number-ones",
+   "https://en.wikipedia.org/wiki/Together_Let%27s_Find_Love"
+  ],
+  "unverified": "Which of Hill's collaborators arranged the horns and strings."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "1967 and 1998, side by side",
+   "line": "Monty Whitebloom and Andy Delaney (Big TV) split the screen between a 1967 Hill in a beehive and a 1998 Hill, shot in Washington Heights. It won four VMAs including Video of the Year, a first for hip-hop.",
+   "wiki": "1999 MTV Video Music Awards",
+   "source": "https://en.wikipedia.org/wiki/Doo_Wop_(That_Thing)"
+  },
+  {
+   "kind": "award",
+   "title": "Two Grammys",
+   "line": "Best R&B Song and Best Female R&B Vocal Performance at the 41st Grammys in 1999.",
+   "wiki": "41st Annual Grammy Awards",
+   "source": "https://en.wikipedia.org/wiki/Doo_Wop_(That_Thing)"
+  },
+  {
+   "kind": "chart",
+   "title": "Straight in at number one",
+   "line": "Debuted at number one and held it for two weeks in November 1998; on the R&B chart it stalled at two behind Deborah Cox.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Doo_Wop_(That_Thing)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-4)",
+  "written_on": "2026-10-20"
+ }
+}

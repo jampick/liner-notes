@@ -1,0 +1,77 @@
+{
+ "id": "heatwave--always-and-forever",
+ "title": "Always and Forever",
+ "artist": "Heatwave",
+ "year": 1976,
+ "year_note": "It is on the album Too Hot to Handle (GTO, 15 June 1976). The US single came out in December 1977 and peaked in March 1978, which is where the 1978 working year comes from.",
+ "album": "Too Hot to Handle",
+ "aliases": {
+  "youtube": [
+   "oD46U-6NO4E"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/2f/61/172f61da-f9c5-f358-9965-92ac15adff61/mzaf_8684142504477322960.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/always-and-forever/153421868?i=153422067&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote it, and it was already old when it was recorded: it is on the demo the band cut at Fairview Studios in Willerby in November 1974, the tape that got them signed. Alan Kirk, who toured with the band, told Paul Gambaccini's BBC Radio 2 documentary that Temperton wrote it on a Wurlitzer piano beside a pile of washing, and Barry Blue described the same one-room flat with the TV sitting on the organ. Johnnie Wilder Jr. sings it, and Blue produced. The album take runs 6:14; the single edit is 3:32.",
+  "context": "Epic chose a ballad as the US follow-up to \"Boogie Nights\", a gamble for a band sold as a dance act, and it reached 18 on the Hot 100 in March 1978 and two on the soul chart. Britain got it last, as a double A-side with Johnnie Wilder's \"Mind Blowing Decisions\" in November 1978, and it held number nine. It sold a million in the US and became the slow dance at proms and weddings for the next decade, especially in inner-city neighborhoods.",
+  "listen_for": [
+   {
+    "where": "Johnnie Wilder's lead, especially the ad-libs",
+    "note": "He sings with gospel heat and ad-libs as if the band were playing live in the room, which is a long way from Keith's party voice on \"Boogie Nights\"."
+   }
+  ],
+  "leads_to": {
+   "artist": "Luther Vandross",
+   "title": "Always and Forever",
+   "year": 1994,
+   "why": "Luther's faithful remake from Songs, co-produced with Walter Afanasieff; it reached 16 R&B and 20 in the UK and got a Grammy nomination, which shows how far the song had traveled from a Grimsby flat."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Always_and_Forever_(Heatwave_song)",
+   "https://en.wikipedia.org/wiki/Rod_Temperton",
+   "https://thehullstory.com/allarticles/rod-temperton-part-2",
+   "https://www.officialcharts.com/search/singles/always-and-forever/",
+   "https://www.officialcharts.com/search/singles/mind-blowing-decisions/",
+   "https://grooveoftheday.substack.com/p/heatwave",
+   "https://popdose.com/soul-serenade-heatwave-always-and-forever/"
+  ],
+  "unverified": "A Daily Mail obituary says he wrote it in a one-room flat in Germany; I only read that in a search summary, so the location of the flat is left out."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK top ten, a year late",
+   "line": "Released in Britain as a double A-side with \"Mind Blowing Decisions\", it entered the chart on 4 November 1978 and reached number nine.",
+   "wiki": "",
+   "source": "https://www.officialcharts.com/search/singles/always-and-forever/"
+  },
+  {
+   "kind": "screen",
+   "title": "House Party",
+   "line": "It plays over the slow-dance scene in the 1990 film House Party.",
+   "wiki": "House Party (1990 film)",
+   "source": "https://en.wikipedia.org/wiki/Always_and_Forever_(Heatwave_song)"
+  },
+  {
+   "kind": "cover",
+   "title": "Whistle, 1990",
+   "line": "The R&B group Whistle took their version to nine on the R&B chart and 35 on the Hot 100 in 1990.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Always_and_Forever_(Heatwave_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-1)",
+  "written_on": "2026-10-20"
+ }
+}

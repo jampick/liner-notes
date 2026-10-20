@@ -1,0 +1,68 @@
+{
+ "id": "heatwave--too-hot-to-handle",
+ "title": "Too Hot to Handle",
+ "artist": "Heatwave",
+ "year": 1976,
+ "year_note": "It opens the album Too Hot to Handle (GTO, 15 June 1976). The UK single, a double A-side with \"Slip Your Disc to This\", followed in May 1977.",
+ "album": "Too Hot to Handle",
+ "aliases": {
+  "youtube": [
+   "jpSsbljDam8"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/82/37/34/82373437-395f-beb4-45aa-23360b761492/mzaf_9128334077015529431.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/too-hot-to-handle/1542826812?i=1542826814&uo=4"
+  }
+ },
+ "notes": {
+  "made": "Temperton wrote every song on the album, this one included, and it opens side one. Keith Wilder sings lead here and on \"Boogie Nights\"; Johnnie takes lead on the rest of the record. Barry Blue produced at Audio International in London, in sessions the band fitted between tours over about 20 months.",
+  "context": "GTO put it out in spring 1977 as a double A-side with \"Slip Your Disc to This\", while \"Boogie Nights\" was still fresh, and it entered the UK chart on 7 May and reached 15. The album did less at home (number 46 for two weeks) than in America, where Epic released it on 30 May 1977 and it went to 11 on the Billboard album chart, five on the soul albums chart, and platinum. GTO's sleeve sold the band as an English import, telling buyers that if they couldn't move to England they could at least afford its disco sound.",
+  "listen_for": [
+   {
+    "where": "the lead vocal",
+    "note": "This is Keith Wilder, not his brother. Put it next to Johnnie's lead on \"Always and Forever\", three tracks later on the album, and you hear the band's two voices."
+   }
+  ],
+  "leads_to": {
+   "artist": "Heatwave",
+   "title": "Ain't No Half Steppin'",
+   "year": 1976,
+   "why": "The album's first single, a Temperton song the band demoed at Fairview in 1975, which went nowhere in 1976: the band before anyone was buying."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Too_Hot_to_Handle_(Heatwave_album)",
+   "https://www.officialcharts.com/search/singles/too-hot-to-handle/",
+   "https://thehullstory.com/allarticles/rod-temperton-part-2",
+   "https://daily.redbullmusicacademy.com/2015/01/rod-temperton-guide",
+   "https://en.wikipedia.org/wiki/Heatwave_(band)"
+  ],
+  "unverified": "I found no description of this track's arrangement or sound, so the listening note sticks to who is singing."
+ },
+ "culture": [
+  {
+   "kind": "chart",
+   "title": "UK 15, as a double A-side",
+   "line": "\"Too Hot to Handle\" / \"Slip Your Disc to This\" entered the UK chart on 7 May 1977, peaked at 15 and stayed 11 weeks.",
+   "wiki": "",
+   "source": "https://www.officialcharts.com/search/singles/too-hot-to-handle/"
+  },
+  {
+   "kind": "chart",
+   "title": "A platinum album in America",
+   "line": "The album reached 11 on the Billboard Top LPs and 5 on the soul albums chart, and the RIAA certified it platinum.",
+   "wiki": "Too Hot to Handle (Heatwave album)",
+   "source": "https://en.wikipedia.org/wiki/Too_Hot_to_Handle_(Heatwave_album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-1)",
+  "written_on": "2026-10-20"
+ }
+}

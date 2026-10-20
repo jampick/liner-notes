@@ -1,0 +1,79 @@
+{
+ "id": "ice-cube-ai-soul-cover--it-was-a-good-day",
+ "title": "It Was a Good Day",
+ "artist": "Ice Cube (AI soul cover)",
+ "year": 1992,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it. Recorded May 1992 and released on The Predator in November 1992; the single followed on February 23, 1993.",
+ "album": "YouTube upload; the original is on The Predator",
+ "aliases": {
+  "youtube": [
+   "0gIcnP5U0Cs"
+  ],
+  "titles": [
+   "Ice Cube - It Was A Good Day (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "DJ Pooh produced it and Ice Cube wrote it alone. The groove is the Isley Brothers' 'Footsteps in the Dark', a 1977 slow jam cut at Bearsville Studios with Ernie Isley on guitar, and there's a sample of the Moments' 'Sexy Mama' as well. The Predator was recorded at Echo Sound in Glendale and the Hit Factory in New York. The track runs 4:20, which is a joke about weed.",
+  "context": "The Rodney King verdicts came on April 29, 1992 and Los Angeles burned for days; Cube recorded this the following month, and most of The Predator is angry about the riots and the police. This is the opposite: one ordinary day in Los Angeles where nothing goes wrong. The album debuted at number one with 193,000 sold in its first week, and the single reached 15 on the Hot 100 and topped the rap chart. In 2012 a comedian worked out from the lyrics that the day was January 20, 1992; Cube says it's fiction stitched from several days.",
+  "listen_for": [
+   {
+    "where": "under every verse",
+    "note": "That slow, warm guitar groove is the Isley Brothers' 'Footsteps in the Dark'. The soul ballad is already playing; a soul cover can sing over its own record."
+   },
+   {
+    "where": "the end of the last verse",
+    "note": "Cube tells his DJ to stop the record, which leaves open whether the good day happened at all."
+   }
+  ],
+  "leads_to": {
+   "artist": "The Isley Brothers",
+   "title": "Footsteps in the Dark",
+   "year": 1977,
+   "why": "The groove under the whole song, a B-side to 'Groove with You' from Go for Your Guns, and later sampled by J Dilla on 'Won't Do'."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/It_Was_a_Good_Day",
+   "https://en.wikipedia.org/wiki/The_Predator_(album)",
+   "https://en.wikipedia.org/wiki/Footsteps_in_the_Dark",
+   "https://www.songfacts.com/facts/ice-cube/it-was-a-good-day/1000",
+   "https://glidemagazine.com/324377/golden-age-thursday-samples-the-isley-brothers-footsteps-in-the-dark-pts-1-2-1977-becomes-classic-hip-hop-landmark-via-ice-cube-1992-j-dilla-2006",
+   "https://en.wikipedia.org/wiki/1992_Los_Angeles_riots"
+  ],
+  "unverified": "Which bars of 'Footsteps in the Dark' and 'Sexy Mama' DJ Pooh used; sources name the samples but not the parts."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "F. Gary Gray's day in the life",
+   "line": "F. Gary Gray directed it: breakfast, a green 1964 Impala, street basketball, Yo! MTV Raps, then police at the door and 'To Be Continued' into 'Check Yo Self'.",
+   "wiki": "F._Gary_Gray",
+   "source": "https://en.wikipedia.org/wiki/It_Was_a_Good_Day"
+  },
+  {
+   "kind": "chart",
+   "title": "His best Hot 100 placing",
+   "line": "It reached 15 on the Hot 100, his highest there at the time, 7 on the R&B chart and number one on the rap chart.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/It_Was_a_Good_Day"
+  },
+  {
+   "kind": "screen",
+   "title": "Grand Theft Auto: San Andreas",
+   "line": "It is on the soundtrack of Grand Theft Auto: San Andreas and turns up in The Last of Us Part II.",
+   "wiki": "Grand_Theft_Auto:_San_Andreas",
+   "source": "https://en.wikipedia.org/wiki/The_Predator_(album)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-2)",
+  "written_on": "2026-10-20"
+ }
+}

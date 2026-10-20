@@ -1,0 +1,78 @@
+{
+ "id": "kanye-west-ai-soul-cover--gold-digger",
+ "title": "Gold Digger",
+ "artist": "Kanye West (AI soul cover)",
+ "year": 2005,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on Late Registration",
+ "aliases": {
+  "youtube": [
+   "OoQ5-fB_YUY"
+  ],
+  "titles": [
+   "Kanye West - Gold Digger (1950's Soul Version)"
+  ]
+ },
+ "notes": {
+  "made": "West wrote it first for Shawnna's 2004 album; she passed, and he kept it. He and Jon Brion produced it, and Late Registration was mostly cut at Sony Music Studios in New York and the Record Plant in Hollywood. It samples Ray Charles' 'I Got a Woman', and West had Jamie Foxx, fresh from playing Charles in Ray, sing the line as an interpolation in case the sample didn't clear.",
+  "context": "The Sixth Circuit had just ruled in Bridgeport v. Dimension (June 2005) that any sample needs a license, which is why a backup vocal was worth recording. The song hit radio in July, Late Registration sold 860,000 in its first week, and on September 2 West told an NBC hurricane telethon that George Bush doesn't care about Black people. 'Gold Digger' sold over 80,000 downloads in one week, a record then, and spent 10 weeks at number one.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "Foxx doing Ray Charles, a line from a 1954 Atlantic R&B number one, before any rap starts."
+   },
+   {
+    "where": "the chorus",
+    "note": "it's a sung soul line from 'I Got a Woman' turned inside out, so the cover hands it back to its source."
+   }
+  ],
+  "leads_to": {
+   "artist": "Ray Charles",
+   "title": "I Got a Woman",
+   "year": 1954,
+   "why": "The record under it, cut at an Atlanta radio station on November 18, 1954, with trumpeter Renald Richard, and built on the gospel song 'It Must Be Jesus'."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gold_Digger_(Kanye_West_song)",
+   "https://en.wikipedia.org/wiki/Late_Registration",
+   "https://en.wikipedia.org/wiki/I_Got_a_Woman",
+   "https://en.wikipedia.org/wiki/A_Concert_for_Hurricane_Relief",
+   "https://en.wikipedia.org/wiki/Bridgeport_Music,_Inc._v._Dimension_Films"
+  ],
+  "unverified": ""
+ },
+ "culture": [
+  {
+   "kind": "award",
+   "title": "Grammy, 2006",
+   "line": "Best Rap Solo Performance at the 48th Grammys, plus a Record of the Year nomination.",
+   "wiki": "48th_Annual_Grammy_Awards",
+   "source": "https://en.wikipedia.org/wiki/Gold_Digger_(Kanye_West_song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Ten weeks on top",
+   "line": "It debuted at number 92 and climbed to number one for 10 weeks; its first-week download total was the biggest yet.",
+   "wiki": "Gold_Digger_(Kanye_West_song)",
+   "source": "https://en.wikipedia.org/wiki/Gold_Digger_(Kanye_West_song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Glee",
+   "line": "Covered on Glee in 2009.",
+   "wiki": "Glee_(TV_series)",
+   "source": "https://en.wikipedia.org/wiki/Gold_Digger_(Kanye_West_song)"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-5)",
+  "written_on": "2026-10-20"
+ }
+}

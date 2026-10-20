@@ -1,0 +1,84 @@
+{
+ "id": "michael-jackson--thriller",
+ "title": "Thriller",
+ "artist": "Michael Jackson",
+ "year": 1982,
+ "year_note": "The album came out on 29 November 1982 per Wikipedia (rushed forward after copies leaked to radio); the single followed on 11 November 1983 in the UK and 23 January 1984 in the US.",
+ "album": "Thriller",
+ "aliases": {
+  "youtube": [
+   "sO4vI8P88NM"
+  ],
+  "apple": {
+   "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/58/8c/cb/588ccb9a-ab79-4a38-43b5-d4c24ea42859/mzaf_2083607504726567992.plus.aac.p.m4a",
+   "url": "https://music.apple.com/us/album/thriller/269572838?i=269573303&uo=4"
+  }
+ },
+ "notes": {
+  "made": "All of it is Temperton's: words, music, and the vocal, rhythm and synthesizer arrangement, and he plays synth on it alongside Greg Phillinganes and Brian Banks, with Jerry Hey arranging the horns. The demo was called Starlight; when Jones asked for a new title he went back to his hotel, wrote two or three hundred, got as far as Midnight Man, and woke the next morning saying Thriller. He wrote the Vincent Price spoken section in a taxi on the day it was recorded, and Price, suggested by Jones's wife Peggy Lipton, did it in two takes. Swedien and Bruce Cannon built the effects: rented Universal doors for the creak, and Jackson's own wolf howls after Swedien's dog refused to perform.",
+  "context": "Thriller took eight months at Westlake on a $750,000 budget, with Jones and Jackson working through 30 songs to get nine. The album reached number one on 26 February 1983 and stayed 37 weeks. Epic thought the title track was a novelty (Walter Yetnikoff asked who wanted a single about monsters) and only released it as the seventh single after Frank DiLeo pitched it with a new video. John Landis's 13-minute film premiered on MTV on 2 December 1983, two years after the channel launched barely playing Black artists, and doubled the album's sales.",
+  "listen_for": [
+   {
+    "where": "the opening",
+    "note": "A creaking door, thunder, footsteps, wind and wolves, the howls being Jackson himself mixed with library effects."
+   },
+   {
+    "where": "the bassline from the first verse on",
+    "note": "An ARP 2600 that Temperton wanted to keep building, like stretching an elastic band to hold the suspense."
+   },
+   {
+    "where": "the last part of the song",
+    "note": "Vincent Price's spoken section, Temperton's words from that taxi ride."
+   }
+  ],
+  "leads_to": {
+   "artist": "Michael Jackson",
+   "title": "Someone in the Dark",
+   "year": 1982,
+   "why": "Temperton wrote the music (Alan and Marilyn Bergman the words) for Jones's E.T. storybook album, recorded that June; Epic sued, MCA withdrew the album, and the promo single is one of Jackson's rarest records."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Thriller_(song)",
+   "https://en.wikipedia.org/wiki/Thriller_(album)",
+   "https://www.thriller40.com/music/thriller/",
+   "https://www.cbsnews.com/amp/sanfrancisco/news/thriller-songwriter-rod-temperton-dies-in-london-at-66",
+   "https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial_(album)",
+   "https://en.wikipedia.org/wiki/MTV"
+  ],
+  "unverified": "Wikipedia puts the album's release on 29 November 1982, not the 30th in my brief. Ndugu Chancler and Michael Boddicker are uncredited on the sleeve, so their parts rest on Wikipedia."
+ },
+ "culture": [
+  {
+   "kind": "video",
+   "title": "Michael Jackson's Thriller",
+   "line": "John Landis's 13-minute short, with Michael Peters's zombie choreography, premiered on MTV on 2 December 1983. In 2009 it became the first music video added to the National Film Registry.",
+   "wiki": "Michael_Jackson's_Thriller_(music_video)",
+   "source": "https://en.wikipedia.org/wiki/Thriller_(song)"
+  },
+  {
+   "kind": "chart",
+   "title": "Seventh single",
+   "line": "Number 10 in the UK in November 1983 and number 4 on the Hot 100 in early 1984. It keeps coming back every Halloween, reaching 19 on the Hot 100 in 2021.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Thriller_(song)"
+  },
+  {
+   "kind": "screen",
+   "title": "Price's second take",
+   "line": "Price re-recorded his part for the video because a synthesizer could be heard on his original take.",
+   "wiki": "Vincent_Price",
+   "source": "https://www.thriller40.com/music/thriller/"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (rod-temperton, era-4)",
+  "written_on": "2026-10-20"
+ }
+}

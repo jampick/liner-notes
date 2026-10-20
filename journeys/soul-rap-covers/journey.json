@@ -1,0 +1,954 @@
+{
+ "slug": "soul-rap-covers",
+ "title": "Soul Rap Covers",
+ "titleA": "Soul Rap",
+ "titleB": "Covers",
+ "kicker": "35 rap records sung back as soul · Run-DMC 1986 to Roddy Ricch 2019",
+ "description": "A walk through 35 rap records from 1986 to 2019, heard as AI-made soul covers, with notes on each original, the soul record already inside it, and how they connect.",
+ "lede": "Every recording here is an AI-made soul cover from YouTube: a rap record redone as if it had come out of a 1950s or 1960s studio. Nobody played on them and we know nothing about each one beyond its upload title, so the notes are about the originals: who made them, what was going on, and the soul or funk record that so often sits inside them already as a sample. That's why the treatment fits better than it should. Thirty-five of them, from Run-DMC in 1986 to Roddy Ricch in 2019, in the order the originals came out.",
+ "fonts": "https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Chivo+Mono:wght@400;500&display=swap",
+ "copy": {
+  "companion": "The covers live on YouTube, so there are no previews here. Play the playlist in cliamp and companion mode follows along.",
+  "panelNote": "The panel is fictional: five invented judges who argued the list into shape. The facts under each song are real and sourced; open Sources on any stop.",
+  "endEmpty": "You didn't keep anything this time. Press K on a stop to keep it, and the link remembers your picks.",
+  "start": "Press play",
+  "resume": "Pick up at",
+  "express": "Express: five stops",
+  "endKept": "These are the ones you kept. The link below carries them, so whoever opens it gets the same tape.",
+  "credits": "Picked by Vernell, Ottilie, Rashaad, Joanna and Dex, a fictional panel. The covers are AI-made uploads from YouTube channels such as Soul'd Out, ReSoul'd and Smokey Basement; the notes are about the original records and are researched from the sources listed on each stop. Era photographs generated for this page."
+ },
+ "panel": {
+  "judges": {
+   "vernell": {
+    "name": "Vernell Pruitt",
+    "title": "the Hip-Hop Historian",
+    "lens": "Can veto a cover whose original isn't a rap record, or doesn't matter to rap's story."
+   },
+   "ottilie": {
+    "name": "Ottilie Brandt",
+    "title": "the Soul Arranger",
+    "lens": "What an arrangement has to work with: a melody, a hook a singer can hold, the chords under it."
+   },
+   "rashaad": {
+    "name": "Rashaad Kimbrough",
+    "title": "the Crate-Digger",
+    "lens": "The soul or funk record already inside the original."
+   },
+   "joanna": {
+    "name": "Joanna Ferriday",
+    "title": "the Chart Historian",
+    "lens": "The original's Hot 100 and R&B peaks, and whether people still play it."
+   },
+   "dex": {
+    "name": "Dex Amoroso",
+    "title": "the House-Party Host",
+    "lens": "Would a room sing the hook back at slow-dance tempo, or laugh at it."
+   }
+  },
+  "express": {
+   "note": "Vernell's one-per-era picks, for when you have ten minutes.",
+   "songs": [
+    "eric-b-rakim-ai-soul-cover--paid-in-full",
+    "geto-boys-ai-soul-cover--mind-playing-tricks-on-me",
+    "nas-ai-soul-cover--n-y-state-of-mind",
+    "the-notorious-b-i-g-ai-soul-cover--hypnotize",
+    "outkast-ai-soul-cover--ms-jackson"
+   ]
+  },
+  "quotes": {
+   "run-dmc-ai-soul-cover--walk-this-way": {
+    "j": "joanna",
+    "q": "Number four on the Hot 100 in 1986, the first rap single in the top five. Aerosmith's rock song, rapped, now sung as soul."
+   },
+   "biz-markie-ai-soul-cover--just-a-friend": {
+    "j": "dex",
+    "q": "Biz sang the chorus himself, off-key, borrowing Freddie Scott's '(You) Got What I Need'. A soul singer finally gets to hit the notes."
+   },
+   "geto-boys-ai-soul-cover--mind-playing-tricks-on-me": {
+    "j": "rashaad",
+    "q": "Isaac Hayes' 'Hung Up on My Baby' is the guitar line. Houston's best rap record was half a soul record already."
+   },
+   "ice-cube-ai-soul-cover--it-was-a-good-day": {
+    "j": "rashaad",
+    "q": "The Isley Brothers' 'Footsteps in the Dark' runs under every verse. Cube's calmest record."
+   },
+   "snoop-doggy-dogg-ai-soul-cover--gin-and-juice": {
+    "j": "rashaad",
+    "q": "Dr. Dre's track leans on George McCrae's 'I Get Lifted'."
+   },
+   "the-notorious-b-i-g-ai-soul-cover--juicy": {
+    "j": "rashaad",
+    "q": "Mtume's 'Juicy Fruit' carries the whole thing. The soul singer gets the melody back."
+   },
+   "the-notorious-b-i-g-ai-soul-cover--big-poppa": {
+    "j": "rashaad",
+    "q": "The Isley Brothers again, this time 'Between the Sheets', a 1983 quiet-storm slow jam. Covering it as soul sends it home."
+   },
+   "coolio-ai-soul-cover--gangstas-paradise": {
+    "j": "joanna",
+    "q": "Number one for three weeks and Billboard's top single of 1995. Built on Stevie Wonder's 'Pastime Paradise', so it was half soul already."
+   },
+   "2pac-ai-soul-cover--california-love": {
+    "j": "dex",
+    "q": "Roger Troutman's talk box on the hook. That's half a soul record already."
+   },
+   "the-notorious-b-i-g-ai-soul-cover--hypnotize": {
+    "j": "joanna",
+    "q": "His first number one on the Hot 100, and it got there after he was killed. Herb Alpert's 'Rise' under it."
+   },
+   "lauryn-hill-ai-soul-cover--doo-wop": {
+    "j": "ottilie",
+    "q": "Hill opens on doo-wop harmonies and puts soul horns and a Motown-style string part over a sped-up 5th Dimension sample. The cover only has to lean in."
+   },
+   "outkast-ai-soul-cover--ms-jackson": {
+    "j": "joanna",
+    "q": "Number one in America, and André's apology to his son's grandmother."
+   },
+   "outkast-ai-soul-cover--the-way-you-move": {
+    "j": "joanna",
+    "q": "It replaced 'Hey Ya!' at number one, so OutKast knocked themselves off the top."
+   },
+   "kanye-west-ai-soul-cover--gold-digger": {
+    "j": "rashaad",
+    "q": "Jamie Foxx sings Ray Charles' 'I Got a Woman' on top. The soul round trip ends here."
+   },
+   "eric-b-rakim-ai-soul-cover--paid-in-full": {
+    "j": "rashaad",
+    "q": "Built on the bass line of Dennis Edwards' 'Don't Look Any Further'."
+   },
+   "big-daddy-kane-ai-soul-cover--aint-no-half-steppin": {
+    "j": "rashaad",
+    "q": "Marley Marl looped the Emotions' 'Blind Alley', so the soul is already under it."
+   },
+   "vanilla-ice-ai-soul-cover--ice-ice-baby": {
+    "j": "joanna",
+    "q": "The first hip-hop single to top the Hot 100, one week in November 1990, riding the 'Under Pressure' bass line he hadn't cleared."
+   },
+   "too-short-ai-soul-cover--the-ghetto": {
+    "j": "rashaad",
+    "q": "Named for Donny Hathaway's 'The Ghetto' and built on it. A soul cover takes it back where it came from."
+   },
+   "salt-n-pepa-ai-soul-cover--lets-talk-about-sex": {
+    "j": "rashaad",
+    "q": "Hurby Azor built it on the Staple Singers' 'I'll Take You There'."
+   },
+   "house-of-pain-ai-soul-cover--jump-around": {
+    "j": "dex",
+    "q": "Number three on the Hot 100 and still the song every stadium jumps to. The hook is one shouted line, so hearing it sung is half the fun."
+   },
+   "snoop-doggy-dogg-ai-soul-cover--who-am-i": {
+    "j": "joanna",
+    "q": "Snoop's first single under his own name, number eight on the Hot 100."
+   },
+   "nas-ai-soul-cover--n-y-state-of-mind": {
+    "j": "vernell",
+    "q": "DJ Premier on the beat and Nas at 20, writing his verses in the studio. The first full song on Illmatic is where the 1990s East Coast starts."
+   },
+   "scarface-ai-soul-cover--i-seen-a-man-die": {
+    "j": "vernell",
+    "q": "Scarface at his most serious, from The Diary, the album that went to number two."
+   },
+   "mobb-deep-ai-soul-cover--shook-ones": {
+    "j": "vernell",
+    "q": "Havoc's piano loop and Prodigy's first verse. Queensbridge at its coldest."
+   },
+   "luniz-ai-soul-cover--i-got-5-on-it": {
+    "j": "rashaad",
+    "q": "Club Nouveau's 'Why You Treat Me So Bad' under it, and it came back in the 2019 film Us."
+   },
+   "fugees-ai-soul-cover--ready-or-not": {
+    "j": "rashaad",
+    "q": "Enya's 'Boadicea' under it, and Lauryn Hill singing a hook lifted from the Delfonics' 1968 'Ready or Not Here I Come'. The soul was in it from the start."
+   },
+   "the-notorious-b-i-g-ai-soul-cover--mo-money-mo-problems": {
+    "j": "rashaad",
+    "q": "Diana Ross's 'I'm Coming Out' under Puff and Mase. A Motown sample, now a Motown-style cover."
+   },
+   "the-notorious-b-i-g-ai-soul-cover--ten-crack-commandments": {
+    "j": "vernell",
+    "q": "DJ Premier's beat, with a scratched bit of Chuck D from 'Shut 'Em Down' against every rule Biggie counts off. Chuck D sued, and settled in 1998."
+   },
+   "will-smith-ai-soul-cover--men-in-black": {
+    "j": "rashaad",
+    "q": "Patrice Rushen's 'Forget Me Nots' is the whole groove."
+   },
+   "outkast-ai-soul-cover--so-fresh-so-clean": {
+    "j": "rashaad",
+    "q": "Organized Noize built it on Joe Simon's 'Before the Night Is Over'."
+   },
+   "lil-jon-the-east-side-boyz-ai-soul-cover--get-low": {
+    "j": "dex",
+    "q": "Number two on the Hot 100 and the single that took crunk national. The chorus is already a chant and a reply, so a slow room can answer it."
+   },
+   "terror-squad-ai-soul-cover--lean-back": {
+    "j": "joanna",
+    "q": "Number one for three weeks in August 2004. It's a Terror Squad single, and the only time Fat Joe reached the top."
+   },
+   "soulja-boy-tell-em-ai-soul-cover--crank-that": {
+    "j": "joanna",
+    "q": "Number one for seven weeks, and a dance a teenager taught the internet."
+   },
+   "macklemore-ryan-lewis-ai-soul-cover--thrift-shop": {
+    "j": "joanna",
+    "q": "Number one for six weeks in 2013 on Macklemore's own label, the second independent chart-topper since Lisa Loeb in 1994."
+   },
+   "roddy-ricch-ai-soul-cover--the-box": {
+    "j": "joanna",
+    "q": "Eleven weeks at number one in 2020, the longest run of the year."
+   }
+  }
+ },
+ "eras": [
+  {
+   "n": 1,
+   "name": "Break Beats and B-Sides",
+   "years": "1986–90",
+   "from": 1986,
+   "to": 1990,
+   "essay": "In 1986 Run-DMC's Raising Hell, cut at Chung King in New York, became the first hip-hop record to go platinum, and a year later E-mu put out the SP-1200 for $2,995. It held ten seconds of sound at 12 bits, which was enough to loop a bass line or a drum break from a soul record nobody had cleared. That is why so much soul sits inside these songs. Rakim recorded at Marley Marl's home studio in Chestnut Ridge, Marley built Big Daddy Kane's beats from records the rapper brought in, and Cold Chillin' put out both Kane and Biz Markie. The music still moved through small labels: Profile, 4th & B'way, Jive, and Ichiban in Atlanta, where 'Ice Ice Baby' started life as a B-side. In August 1988 MTV started Yo! MTV Raps with Run-DMC hosting the pilot, and two years later a white rapper from Dallas topped the Hot 100 over a Queen bass line he hadn't paid for. In Oakland, Too Short was selling crack-era stories through Jive. The free run ended in December 1991, when a federal judge ruled against Biz Markie for sampling Gilbert O'Sullivan, and clearing a loop got expensive.",
+   "scene": {
+    "cities": [
+     "Hollis, Queens",
+     "New York City",
+     "Chestnut Ridge, New York",
+     "Dallas",
+     "Atlanta",
+     "Oakland"
+    ],
+    "labels": [
+     "Profile",
+     "Def Jam",
+     "4th & B'way",
+     "Cold Chillin'",
+     "Jive",
+     "Ichiban",
+     "SBK"
+    ],
+    "gear": [
+     "E-mu SP-1200",
+     "turntables and the drum break",
+     "Wurlitzer and conga records from 1969–71 soul, looped"
+    ],
+    "artifact": "The B-side of an Ichiban single, where 'Ice Ice Baby' hid behind a cover of 'Play That Funky Music' until a Georgia DJ flipped the record over."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Raising_Hell_(album)",
+    "https://en.wikipedia.org/wiki/E-mu_SP-1200",
+    "https://en.wikipedia.org/wiki/Paid_in_Full_(album)",
+    "https://en.wikipedia.org/wiki/Long_Live_the_Kane",
+    "https://en.wikipedia.org/wiki/Yo!_MTV_Raps",
+    "https://stereogum.com/2164461/the-number-ones-vanilla-ices-ice-ice-baby/columns/the-number-ones",
+    "https://albumism.com/features/too-short-short-dogs-in-the-house-album-anniversary",
+    "https://en.wikipedia.org/wiki/Grand_Upright_Music,_Ltd._v._Warner_Bros._Records_Inc."
+   ],
+   "image": "media/eras/era1.webp"
+  },
+  {
+   "n": 2,
+   "name": "Houston, Queens and the G-funk coast",
+   "years": "1991–93",
+   "from": 1991,
+   "to": 1993,
+   "essay": "In March 1991 Billboard's album chart began counting barcode scans through SoundScan, and from the May 25 issue the charts showed what stores were selling, not what clerks said they sold. Rap-A-Lot in Houston, which Geffen had embarrassed in 1989 by pulling a Geto Boys album a week before release, signed a distribution deal with Priority and took We Can't Be Stopped to number 24 on the album chart. Then on December 17, 1991, Judge Kevin Duffy ruled against Biz Markie over a Gilbert O'Sullivan sample, and every loop now needed a license. Producers used fewer of them and paid musicians to replay or reshape the rest, which is why Snoop's choruses quote Slave and Parliament as new performances. Los Angeles burned for days after the Rodney King verdicts on April 29, 1992. Ice Cube recorded his calmest song the next month, and The Predator debuted at number one that November. Dr. Dre's The Chronic followed on December 15: one or two P-Funk samples per track, live bass, a Minimoog line. Doggystyle sold 806,858 copies in its first week in November 1993.",
+   "scene": {
+    "cities": [
+     "Houston",
+     "Los Angeles",
+     "Long Beach",
+     "Queens",
+     "New York City"
+    ],
+    "labels": [
+     "Rap-A-Lot",
+     "Priority",
+     "Next Plateau",
+     "Tommy Boy",
+     "Lench Mob",
+     "Death Row",
+     "Interscope"
+    ],
+    "gear": [
+     "Akai MPC60",
+     "Minimoog",
+     "live bass guitar replaying funk lines",
+     "sample-clearance paperwork"
+    ],
+    "artifact": "A Billboard 200 built from SoundScan barcode scans, first printed in the May 25, 1991 issue, which counted rap records at the cash register."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nielsen_SoundScan",
+    "https://en.wikipedia.org/wiki/Rap-A-Lot_Records",
+    "https://en.wikipedia.org/wiki/We_Can%27t_Be_Stopped",
+    "https://en.wikipedia.org/wiki/Grand_Upright_Music,_Ltd._v._Warner_Bros._Records_Inc.",
+    "https://en.wikipedia.org/wiki/1992_Los_Angeles_riots",
+    "https://en.wikipedia.org/wiki/The_Predator_(album)",
+    "https://en.wikipedia.org/wiki/The_Chronic",
+    "https://en.wikipedia.org/wiki/Doggystyle",
+    "https://en.wikipedia.org/wiki/It_Was_a_Good_Day"
+   ],
+   "image": "media/eras/era2.webp"
+  },
+  {
+   "n": 3,
+   "name": "New York answers back",
+   "years": "1994–95",
+   "from": 1994,
+   "to": 1995,
+   "essay": "For two years Los Angeles had owned rap, and in 1994 New York answered from three directions at once. In April Columbia put out Illmatic by a Queensbridge rapper who was 20 when it came out; it debuted at number 12 with 59,000 copies, below expectations, though The Source gave it five mics. In September Bad Boy, the label Sean Combs started in 1993, released Ready to Die, cut mostly at the Hit Factory and D&D. Mobb Deep followed in April 1995 with The Infamous, much of it made on an Akai MPC60 in Havoc's Queensbridge apartment. Houston kept its own counsel through Rap-A-Lot, and Scarface's The Diary went to number two. Then the coasts turned on each other. 2Pac was shot at Quad Studios in Manhattan on November 30, 1994, Suge Knight goaded Combs from the stage of the Source Awards on August 3, 1995, and that October Knight posted 2Pac's $1.4 million bail and signed him to Death Row. The soul under these records was close to the surface: Mtume and the Isley Brothers were looped straight off the vinyl, while Coolio and Luniz had Stevie Wonder and Club Nouveau melodies replayed and sung.",
+   "scene": {
+    "cities": [
+     "Brooklyn",
+     "Queensbridge, Queens",
+     "Manhattan (Hit Factory, Battery, Quad Studios)",
+     "Houston",
+     "Los Angeles",
+     "Oakland"
+    ],
+    "labels": [
+     "Bad Boy / Arista",
+     "Columbia",
+     "Loud / RCA",
+     "Rap-A-Lot / Noo Trybe",
+     "Death Row / Interscope",
+     "Tommy Boy / MCA",
+     "C-Note / Noo Trybe"
+    ],
+    "gear": [
+     "Akai MPC60",
+     "Ensoniq EPS-16 Plus",
+     "Minimoog",
+     "talk box",
+     "turntables for scratched hooks"
+    ],
+    "artifact": "The Source's five-mic review of Illmatic, a rating the magazine had held back from Dr. Dre's The Chronic two years earlier."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Illmatic",
+    "https://en.wikipedia.org/wiki/Ready_to_Die",
+    "https://en.wikipedia.org/wiki/The_Infamous",
+    "https://en.wikipedia.org/wiki/Shook_Ones_(Part_II)",
+    "https://en.wikipedia.org/wiki/The_Diary_(Scarface_album)",
+    "https://en.wikipedia.org/wiki/East_Coast%E2%80%93West_Coast_hip-hop_rivalry",
+    "https://en.wikipedia.org/wiki/Suge_Knight",
+    "https://en.wikipedia.org/wiki/Gangsta%27s_Paradise",
+    "https://en.wikipedia.org/wiki/Why_You_Treat_Me_So_Bad"
+   ],
+   "image": "media/eras/era3.webp"
+  },
+  {
+   "n": 4,
+   "name": "Shiny suits and big samples",
+   "years": "1996–98",
+   "from": 1996,
+   "to": 1998,
+   "essay": "Rap spent these three years getting rich and burying people. Tupac was shot in Las Vegas in September 1996, and the Notorious B.I.G. was shot in Los Angeles on March 9, 1997, sixteen days before Life After Death came out and sold 690,000 copies in its first week. Bad Boy turned grief into a hit machine. The Hitmen, working out of Daddy's House in New York, built singles on whole grooves lifted from records everyone's parents owned: Herb Alpert's 'Rise', Diana Ross's 'I'm Coming Out'. Clearing those cost songwriting shares (Nile Rodgers and Bernard Edwards are on the Biggie credits), and Puffy paid, because a familiar hook sold. Hype Williams shot the shiny suits. Across the river in New Jersey the Fugees recorded The Score in Wyclef's uncle's basement on a $135,000 advance, and it sold millions. Two years later Lauryn Hill cut most of Miseducation at Tuff Gong in Kingston and won Album of the Year. Meanwhile Billboard still kept songs off the Hot 100 unless a retail single existed, so 'Ready or Not' and 'Men in Black' were everywhere on radio and nowhere on that chart, until the rule changed on December 5, 1998. DJ Premier stayed in Studio A at D&D, chopping on an Akai MPC60.",
+   "scene": {
+    "cities": [
+     "New York",
+     "East Orange, New Jersey",
+     "Los Angeles",
+     "Kingston, Jamaica"
+    ],
+    "labels": [
+     "Bad Boy",
+     "Arista",
+     "Ruffhouse",
+     "Columbia",
+     "Def Jam"
+    ],
+    "gear": [
+     "Akai MPC60",
+     "Akai S950 sampler",
+     "E-mu SP-12"
+    ],
+    "artifact": "The double-CD case of Life After Death, released sixteen days after its author was killed and certified Diamond in 2000."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Life_After_Death",
+    "https://en.wikipedia.org/wiki/The_Score_(Fugees_album)",
+    "https://en.wikipedia.org/wiki/The_Miseducation_of_Lauryn_Hill",
+    "https://en.wikipedia.org/wiki/Hot_Singles_Sales",
+    "https://stereogum.com/2185381/the-number-ones-the-notorious-b-i-g-s-hypnotize/columns/the-number-ones",
+    "https://stereogum.com/2186248/the-number-ones-the-notorious-b-i-g-s-mo-money-mo-problems-feat-puff-daddy-mase/columns/the-number-ones",
+    "https://www.soundonsound.com/node/4911066"
+   ],
+   "image": "media/eras/era4.webp"
+  },
+  {
+   "n": 5,
+   "name": "Atlanta, then the internet",
+   "years": "2000–19",
+   "from": 1999,
+   "to": 2019,
+   "essay": "The center of rap moved south. OutKast bought Bobby Brown's old studio off Northside Drive in Atlanta in 1998, renamed it Stankonia, and by 2002 Lil Jon was cutting Kings of Crunk sessions there, one of more than a dozen studios on that album. Crunk came out of Memphis strip clubs and Miami bass, ran on Roland 808 claps and chants, and Lil Jon sold it independently before TVT signed him in 2001. Snap music and Soulja Boy followed out of the same city. The money changed under all of it. iTunes opened in April 2003 at 99 cents a song, and from February 2005 paid downloads counted toward the Hot 100; streams came in from August 2007 and YouTube views from February 2013. That is how a 16-year-old with a demo copy of FL Studio and two Seattle independents ended up at number one. Sampling got harder too. In June 2005 the Sixth Circuit ruled in Bridgeport v. Dimension that any sample needs a license, so Kanye had Jamie Foxx re-sing Ray Charles in case the original didn't clear. Soul still sits inside these records, but now it's as often played or sung by a hired voice as lifted off a 1977 single.",
+   "scene": {
+    "cities": [
+     "Atlanta",
+     "College Park, Georgia",
+     "Miami",
+     "the Bronx",
+     "Seattle",
+     "Compton"
+    ],
+    "labels": [
+     "LaFace",
+     "Arista",
+     "TVT",
+     "BME",
+     "SRC/Universal",
+     "Roc-A-Fella",
+     "Def Jam",
+     "Interscope",
+     "Macklemore LLC (via ADA)",
+     "Atlantic",
+     "Bird Vision"
+    ],
+    "gear": [
+     "Roland TR-808",
+     "FL Studio (an unregistered demo copy)",
+     "Omnisphere",
+     "live horns (Hornz Unlimited)",
+     "iTunes Music Store",
+     "MySpace",
+     "YouTube"
+    ],
+    "artifact": "A ringtone: 'Crank That' went triple platinum as a mastertone, three million people paying to have a rap hook ring out of their phones."
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Stankonia",
+    "https://en.wikipedia.org/wiki/Kings_of_Crunk",
+    "https://en.wikipedia.org/wiki/Crunk",
+    "https://en.wikipedia.org/wiki/Billboard_Hot_100",
+    "https://www.apple.com/newsroom/2003/04/28Apple-Launches-the-iTunes-Music-Store/",
+    "https://en.wikipedia.org/wiki/Bridgeport_Music,_Inc._v._Dimension_Films",
+    "https://en.wikipedia.org/wiki/Gold_Digger_(Kanye_West_song)",
+    "https://en.wikipedia.org/wiki/Crank_That_(Soulja_Boy)",
+    "https://en.wikipedia.org/wiki/Thrift_Shop"
+   ],
+   "image": "media/eras/era5.webp"
+  }
+ ],
+ "songs": [
+  "run-dmc-ai-soul-cover--walk-this-way",
+  "eric-b-rakim-ai-soul-cover--paid-in-full",
+  "big-daddy-kane-ai-soul-cover--aint-no-half-steppin",
+  "biz-markie-ai-soul-cover--just-a-friend",
+  "vanilla-ice-ai-soul-cover--ice-ice-baby",
+  "too-short-ai-soul-cover--the-ghetto",
+  "salt-n-pepa-ai-soul-cover--lets-talk-about-sex",
+  "geto-boys-ai-soul-cover--mind-playing-tricks-on-me",
+  "ice-cube-ai-soul-cover--it-was-a-good-day",
+  "house-of-pain-ai-soul-cover--jump-around",
+  "snoop-doggy-dogg-ai-soul-cover--gin-and-juice",
+  "snoop-doggy-dogg-ai-soul-cover--who-am-i",
+  "the-notorious-b-i-g-ai-soul-cover--juicy",
+  "the-notorious-b-i-g-ai-soul-cover--big-poppa",
+  "nas-ai-soul-cover--n-y-state-of-mind",
+  "scarface-ai-soul-cover--i-seen-a-man-die",
+  "coolio-ai-soul-cover--gangstas-paradise",
+  "2pac-ai-soul-cover--california-love",
+  "mobb-deep-ai-soul-cover--shook-ones",
+  "luniz-ai-soul-cover--i-got-5-on-it",
+  "fugees-ai-soul-cover--ready-or-not",
+  "the-notorious-b-i-g-ai-soul-cover--hypnotize",
+  "the-notorious-b-i-g-ai-soul-cover--mo-money-mo-problems",
+  "the-notorious-b-i-g-ai-soul-cover--ten-crack-commandments",
+  "will-smith-ai-soul-cover--men-in-black",
+  "lauryn-hill-ai-soul-cover--doo-wop",
+  "outkast-ai-soul-cover--ms-jackson",
+  "outkast-ai-soul-cover--so-fresh-so-clean",
+  "lil-jon-the-east-side-boyz-ai-soul-cover--get-low",
+  "outkast-ai-soul-cover--the-way-you-move",
+  "terror-squad-ai-soul-cover--lean-back",
+  "kanye-west-ai-soul-cover--gold-digger",
+  "soulja-boy-tell-em-ai-soul-cover--crank-that",
+  "macklemore-ryan-lewis-ai-soul-cover--thrift-shop",
+  "roddy-ricch-ai-soul-cover--the-box"
+ ],
+ "pins": {
+  "run-dmc-ai-soul-cover--walk-this-way": {
+   "youtube": "BFR1zeLLzFA"
+  },
+  "biz-markie-ai-soul-cover--just-a-friend": {
+   "youtube": "0v-Vj-CviDo"
+  },
+  "geto-boys-ai-soul-cover--mind-playing-tricks-on-me": {
+   "youtube": "1BaMyw0TsLU"
+  },
+  "ice-cube-ai-soul-cover--it-was-a-good-day": {
+   "youtube": "0gIcnP5U0Cs"
+  },
+  "snoop-doggy-dogg-ai-soul-cover--gin-and-juice": {
+   "youtube": "cguaI-hhU-0"
+  },
+  "the-notorious-b-i-g-ai-soul-cover--juicy": {
+   "youtube": "TvWPs4Z8hWY"
+  },
+  "the-notorious-b-i-g-ai-soul-cover--big-poppa": {
+   "youtube": "1_6o-rFpQYE"
+  },
+  "coolio-ai-soul-cover--gangstas-paradise": {
+   "youtube": "W6a0xzUjIhw"
+  },
+  "2pac-ai-soul-cover--california-love": {
+   "youtube": "Zzwk-JjfX80"
+  },
+  "the-notorious-b-i-g-ai-soul-cover--hypnotize": {
+   "youtube": "3ky_JkKc62A"
+  },
+  "lauryn-hill-ai-soul-cover--doo-wop": {
+   "youtube": "nkU-9KbjGkE"
+  },
+  "outkast-ai-soul-cover--ms-jackson": {
+   "youtube": "s90T-CoiDhE"
+  },
+  "outkast-ai-soul-cover--the-way-you-move": {
+   "youtube": "9-uA2Yb-E_A"
+  },
+  "kanye-west-ai-soul-cover--gold-digger": {
+   "youtube": "OoQ5-fB_YUY"
+  },
+  "eric-b-rakim-ai-soul-cover--paid-in-full": {
+   "youtube": "rNZ2l7HyCdc"
+  },
+  "big-daddy-kane-ai-soul-cover--aint-no-half-steppin": {
+   "youtube": "3hvXnQkjdqA"
+  },
+  "vanilla-ice-ai-soul-cover--ice-ice-baby": {
+   "youtube": "v7-JXQSoctU"
+  },
+  "too-short-ai-soul-cover--the-ghetto": {
+   "youtube": "fG4fgAi32aA"
+  },
+  "salt-n-pepa-ai-soul-cover--lets-talk-about-sex": {
+   "youtube": "M4AJQc43j5w"
+  },
+  "house-of-pain-ai-soul-cover--jump-around": {
+   "youtube": "cePWzKP8iWg"
+  },
+  "snoop-doggy-dogg-ai-soul-cover--who-am-i": {
+   "youtube": "AyER4LToYH4"
+  },
+  "nas-ai-soul-cover--n-y-state-of-mind": {
+   "youtube": "gnKdFuDGyVc"
+  },
+  "scarface-ai-soul-cover--i-seen-a-man-die": {
+   "youtube": "ITXmTGhSvLs"
+  },
+  "mobb-deep-ai-soul-cover--shook-ones": {
+   "youtube": "v4qgej3bfwo"
+  },
+  "luniz-ai-soul-cover--i-got-5-on-it": {
+   "youtube": "JfRgj_m6Qu0"
+  },
+  "fugees-ai-soul-cover--ready-or-not": {
+   "youtube": "MlHwVineh-w"
+  },
+  "the-notorious-b-i-g-ai-soul-cover--mo-money-mo-problems": {
+   "youtube": "t1jQnB3I0Yw"
+  },
+  "the-notorious-b-i-g-ai-soul-cover--ten-crack-commandments": {
+   "youtube": "OGksTRozFC4"
+  },
+  "will-smith-ai-soul-cover--men-in-black": {
+   "youtube": "t2U6q2E9wwE"
+  },
+  "outkast-ai-soul-cover--so-fresh-so-clean": {
+   "youtube": "h-ZwLlHBYHI"
+  },
+  "lil-jon-the-east-side-boyz-ai-soul-cover--get-low": {
+   "youtube": "tbz9hJJf8jQ"
+  },
+  "terror-squad-ai-soul-cover--lean-back": {
+   "youtube": "FuLp7uPVw30"
+  },
+  "soulja-boy-tell-em-ai-soul-cover--crank-that": {
+   "youtube": "Qg_gA91hi2E"
+  },
+  "macklemore-ryan-lewis-ai-soul-cover--thrift-shop": {
+   "youtube": "G2r6gtlML70"
+  },
+  "roddy-ricch-ai-soul-cover--the-box": {
+   "youtube": "-XzwBABl_b4"
+  }
+ },
+ "threads": [
+  {
+   "from": "run-dmc-ai-soul-cover--walk-this-way",
+   "to": "vanilla-ice-ai-soul-cover--ice-ice-baby",
+   "kind": "influence",
+   "note": "Another rap hit built on a rock record, Queen and Bowie's 'Under Pressure'."
+  },
+  {
+   "from": "eric-b-rakim-ai-soul-cover--paid-in-full",
+   "to": "big-daddy-kane-ai-soul-cover--aint-no-half-steppin",
+   "kind": "producer",
+   "note": "Marley Marl's home studio hosted the Paid in Full sessions, and he produced Big Daddy Kane's record a year later."
+  },
+  {
+   "from": "big-daddy-kane-ai-soul-cover--aint-no-half-steppin",
+   "to": "eric-b-rakim-ai-soul-cover--paid-in-full",
+   "kind": "producer",
+   "note": "Marley Marl again; Eric B. & Rakim cut their album in his home studio."
+  },
+  {
+   "from": "big-daddy-kane-ai-soul-cover--aint-no-half-steppin",
+   "to": "biz-markie-ai-soul-cover--just-a-friend",
+   "kind": "label",
+   "note": "Cold Chillin' and the Juice Crew, Biz Markie's label and crew."
+  },
+  {
+   "from": "biz-markie-ai-soul-cover--just-a-friend",
+   "to": "big-daddy-kane-ai-soul-cover--aint-no-half-steppin",
+   "kind": "label",
+   "note": "Cold Chillin' and the Juice Crew, Big Daddy Kane's label and crew."
+  },
+  {
+   "from": "vanilla-ice-ai-soul-cover--ice-ice-baby",
+   "to": "run-dmc-ai-soul-cover--walk-this-way",
+   "kind": "influence",
+   "note": "Like 'Walk This Way', a rap hit carried to pop radio on a rock record."
+  },
+  {
+   "from": "too-short-ai-soul-cover--the-ghetto",
+   "to": "ice-cube-ai-soul-cover--it-was-a-good-day",
+   "kind": "session",
+   "note": "Ice Cube guests on another track on Short Dog's in the House."
+  },
+  {
+   "from": "geto-boys-ai-soul-cover--mind-playing-tricks-on-me",
+   "to": "scarface-ai-soul-cover--i-seen-a-man-die",
+   "kind": "singer",
+   "note": "Scarface again; he redid this song solo as 'Mind Playin' Tricks '94' on The Diary."
+  },
+  {
+   "from": "geto-boys-ai-soul-cover--mind-playing-tricks-on-me",
+   "to": "ice-cube-ai-soul-cover--it-was-a-good-day",
+   "kind": "label",
+   "note": "Priority distributed both, Rap-A-Lot from this album and Ice Cube's Lench Mob."
+  },
+  {
+   "from": "salt-n-pepa-ai-soul-cover--lets-talk-about-sex",
+   "to": "nas-ai-soul-cover--n-y-state-of-mind",
+   "kind": "city",
+   "note": "Queens: Salt and Pepa met working at a Sears in College Point."
+  },
+  {
+   "from": "house-of-pain-ai-soul-cover--jump-around",
+   "to": "ice-cube-ai-soul-cover--it-was-a-good-day",
+   "kind": "producer",
+   "note": "Muggs offered this beat to Ice Cube first, and produced on The Predator."
+  },
+  {
+   "from": "ice-cube-ai-soul-cover--it-was-a-good-day",
+   "to": "the-notorious-b-i-g-ai-soul-cover--big-poppa",
+   "kind": "sample",
+   "note": "The Isley Brothers again; Biggie's 'Big Poppa' uses their 'Between the Sheets'."
+  },
+  {
+   "from": "ice-cube-ai-soul-cover--it-was-a-good-day",
+   "to": "house-of-pain-ai-soul-cover--jump-around",
+   "kind": "producer",
+   "note": "DJ Muggs, who worked on The Predator, offered Cube the 'Jump Around' beat."
+  },
+  {
+   "from": "ice-cube-ai-soul-cover--it-was-a-good-day",
+   "to": "snoop-doggy-dogg-ai-soul-cover--who-am-i",
+   "kind": "city",
+   "note": "Los Angeles, a year before Doggystyle."
+  },
+  {
+   "from": "snoop-doggy-dogg-ai-soul-cover--who-am-i",
+   "to": "snoop-doggy-dogg-ai-soul-cover--gin-and-juice",
+   "kind": "producer",
+   "note": "Same album, same producer: Dr. Dre on Doggystyle."
+  },
+  {
+   "from": "snoop-doggy-dogg-ai-soul-cover--who-am-i",
+   "to": "2pac-ai-soul-cover--california-love",
+   "kind": "producer",
+   "note": "Dr. Dre again, two years on."
+  },
+  {
+   "from": "snoop-doggy-dogg-ai-soul-cover--gin-and-juice",
+   "to": "snoop-doggy-dogg-ai-soul-cover--who-am-i",
+   "kind": "producer",
+   "note": "Same album and producer, Dr. Dre."
+  },
+  {
+   "from": "snoop-doggy-dogg-ai-soul-cover--gin-and-juice",
+   "to": "2pac-ai-soul-cover--california-love",
+   "kind": "producer",
+   "note": "Dr. Dre's next big West Coast single on this list."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--juicy",
+   "to": "the-notorious-b-i-g-ai-soul-cover--big-poppa",
+   "kind": "producer",
+   "note": "Same album, same Hit Factory sessions, Combs producing both."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--juicy",
+   "to": "nas-ai-soul-cover--n-y-state-of-mind",
+   "kind": "producer",
+   "note": "The B-side, 'Unbelievable', was a DJ Premier track, and Premier did 'N.Y. State of Mind' the same year."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--juicy",
+   "to": "the-notorious-b-i-g-ai-soul-cover--hypnotize",
+   "kind": "singer",
+   "note": "Biggie's debut single; 'Hypnotize' came three years later."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--big-poppa",
+   "to": "ice-cube-ai-soul-cover--it-was-a-good-day",
+   "kind": "sample",
+   "note": "Another Isley Brothers sample, this time 'Between the Sheets' instead of 'Footsteps in the Dark'."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--big-poppa",
+   "to": "the-notorious-b-i-g-ai-soul-cover--juicy",
+   "kind": "producer",
+   "note": "Same album and studio, both executive-produced by Combs."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--big-poppa",
+   "to": "coolio-ai-soul-cover--gangstas-paradise",
+   "kind": "influence",
+   "note": "Lost the 1996 Grammy for Best Rap Solo Performance to 'Gangsta's Paradise'."
+  },
+  {
+   "from": "nas-ai-soul-cover--n-y-state-of-mind",
+   "to": "eric-b-rakim-ai-soul-cover--paid-in-full",
+   "kind": "sample",
+   "note": "Premier scratches Rakim from Eric B. & Rakim's 'Mahogany' into the chorus."
+  },
+  {
+   "from": "nas-ai-soul-cover--n-y-state-of-mind",
+   "to": "mobb-deep-ai-soul-cover--shook-ones",
+   "kind": "city",
+   "note": "Both from Queensbridge, both partly recorded at Battery Studios."
+  },
+  {
+   "from": "nas-ai-soul-cover--n-y-state-of-mind",
+   "to": "the-notorious-b-i-g-ai-soul-cover--ten-crack-commandments",
+   "kind": "producer",
+   "note": "DJ Premier made both beats."
+  },
+  {
+   "from": "scarface-ai-soul-cover--i-seen-a-man-die",
+   "to": "geto-boys-ai-soul-cover--mind-playing-tricks-on-me",
+   "kind": "singer",
+   "note": "Scarface fronted the Geto Boys, and The Diary includes 'Mind Playin' Tricks 94' on the same Isaac Hayes sample."
+  },
+  {
+   "from": "scarface-ai-soul-cover--i-seen-a-man-die",
+   "to": "luniz-ai-soul-cover--i-got-5-on-it",
+   "kind": "label",
+   "note": "Both came out through Noo Trybe."
+  },
+  {
+   "from": "mobb-deep-ai-soul-cover--shook-ones",
+   "to": "nas-ai-soul-cover--n-y-state-of-mind",
+   "kind": "city",
+   "note": "Queensbridge again, and Battery Studios again."
+  },
+  {
+   "from": "coolio-ai-soul-cover--gangstas-paradise",
+   "to": "the-notorious-b-i-g-ai-soul-cover--big-poppa",
+   "kind": "influence",
+   "note": "Beat 'Big Poppa' for the 1996 Best Rap Solo Performance Grammy."
+  },
+  {
+   "from": "coolio-ai-soul-cover--gangstas-paradise",
+   "to": "2pac-ai-soul-cover--california-love",
+   "kind": "influence",
+   "note": "The two West Coast rap records that topped the Hot 100 across 1995–96."
+  },
+  {
+   "from": "luniz-ai-soul-cover--i-got-5-on-it",
+   "to": "scarface-ai-soul-cover--i-seen-a-man-die",
+   "kind": "label",
+   "note": "Noo Trybe released both."
+  },
+  {
+   "from": "2pac-ai-soul-cover--california-love",
+   "to": "snoop-doggy-dogg-ai-soul-cover--who-am-i",
+   "kind": "producer",
+   "note": "Dr. Dre, two years after producing Snoop's debut."
+  },
+  {
+   "from": "2pac-ai-soul-cover--california-love",
+   "to": "snoop-doggy-dogg-ai-soul-cover--gin-and-juice",
+   "kind": "label",
+   "note": "Death Row again."
+  },
+  {
+   "from": "2pac-ai-soul-cover--california-love",
+   "to": "coolio-ai-soul-cover--gangstas-paradise",
+   "kind": "influence",
+   "note": "The other West Coast rap number one of 1995–96."
+  },
+  {
+   "from": "fugees-ai-soul-cover--ready-or-not",
+   "to": "lauryn-hill-ai-soul-cover--doo-wop",
+   "kind": "singer",
+   "note": "Lauryn Hill sings the hook here and makes her solo debut on 'Doo Wop (That Thing)', both on Ruffhouse/Columbia."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--hypnotize",
+   "to": "the-notorious-b-i-g-ai-soul-cover--mo-money-mo-problems",
+   "kind": "producer",
+   "note": "Same album, same Puff Daddy production line, and the next posthumous number one."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--hypnotize",
+   "to": "the-notorious-b-i-g-ai-soul-cover--ten-crack-commandments",
+   "kind": "label",
+   "note": "Also on Life After Death, the double album released sixteen days after his murder."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--hypnotize",
+   "to": "the-notorious-b-i-g-ai-soul-cover--juicy",
+   "kind": "singer",
+   "note": "Biggie's first single, 'Juicy', also stood on a well-known R&B record."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--mo-money-mo-problems",
+   "to": "the-notorious-b-i-g-ai-soul-cover--hypnotize",
+   "kind": "producer",
+   "note": "Puffy's second posthumous Biggie number one, from the same album."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--mo-money-mo-problems",
+   "to": "the-notorious-b-i-g-ai-soul-cover--big-poppa",
+   "kind": "singer",
+   "note": "Biggie again over a famous R&B groove, as on 'Big Poppa'."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--ten-crack-commandments",
+   "to": "nas-ai-soul-cover--n-y-state-of-mind",
+   "kind": "producer",
+   "note": "DJ Premier also made 'N.Y. State of Mind'."
+  },
+  {
+   "from": "the-notorious-b-i-g-ai-soul-cover--ten-crack-commandments",
+   "to": "the-notorious-b-i-g-ai-soul-cover--hypnotize",
+   "kind": "label",
+   "note": "Same double album, Life After Death, on Bad Boy/Arista."
+  },
+  {
+   "from": "will-smith-ai-soul-cover--men-in-black",
+   "to": "coolio-ai-soul-cover--gangstas-paradise",
+   "kind": "soundtrack",
+   "note": "Another movie-soundtrack rap hit built on an R&B record, two years after Coolio's."
+  },
+  {
+   "from": "will-smith-ai-soul-cover--men-in-black",
+   "to": "the-notorious-b-i-g-ai-soul-cover--hypnotize",
+   "kind": "influence",
+   "note": "It beat 'Hypnotize' for Best Rap Solo Performance at the 1998 Grammys."
+  },
+  {
+   "from": "lauryn-hill-ai-soul-cover--doo-wop",
+   "to": "fugees-ai-soul-cover--ready-or-not",
+   "kind": "singer",
+   "note": "Hill's solo debut two years after she sang the hook on 'Ready or Not'."
+  },
+  {
+   "from": "outkast-ai-soul-cover--ms-jackson",
+   "to": "outkast-ai-soul-cover--so-fresh-so-clean",
+   "kind": "producer",
+   "note": "Same album, Stankonia, but Earthtone III produced this one and Organized Noize the other."
+  },
+  {
+   "from": "outkast-ai-soul-cover--ms-jackson",
+   "to": "outkast-ai-soul-cover--the-way-you-move",
+   "kind": "session",
+   "note": "OutKast again, three years later, recorded in the same Stankonia studio."
+  },
+  {
+   "from": "outkast-ai-soul-cover--so-fresh-so-clean",
+   "to": "outkast-ai-soul-cover--ms-jackson",
+   "kind": "producer",
+   "note": "Same album; Earthtone III made 'Ms. Jackson', Organized Noize made this."
+  },
+  {
+   "from": "outkast-ai-soul-cover--so-fresh-so-clean",
+   "to": "outkast-ai-soul-cover--the-way-you-move",
+   "kind": "singer",
+   "note": "Sleepy Brown of Organized Noize is in this video and sings the hook on 'The Way You Move'."
+  },
+  {
+   "from": "lil-jon-the-east-side-boyz-ai-soul-cover--get-low",
+   "to": "outkast-ai-soul-cover--ms-jackson",
+   "kind": "session",
+   "note": "Kings of Crunk was partly recorded at Stankonia, OutKast's studio."
+  },
+  {
+   "from": "lil-jon-the-east-side-boyz-ai-soul-cover--get-low",
+   "to": "terror-squad-ai-soul-cover--lean-back",
+   "kind": "producer",
+   "note": "Lil Jon reworked 'Lean Back' into a crunk remix with Eminem and Mase."
+  },
+  {
+   "from": "lil-jon-the-east-side-boyz-ai-soul-cover--get-low",
+   "to": "soulja-boy-tell-em-ai-soul-cover--crank-that",
+   "kind": "city",
+   "note": "Atlanta party rap again, five years on, as crunk gave way to snap."
+  },
+  {
+   "from": "outkast-ai-soul-cover--the-way-you-move",
+   "to": "outkast-ai-soul-cover--so-fresh-so-clean",
+   "kind": "singer",
+   "note": "Sleepy Brown co-produced 'So Fresh, So Clean' with Organized Noize and sings this hook."
+  },
+  {
+   "from": "outkast-ai-soul-cover--the-way-you-move",
+   "to": "outkast-ai-soul-cover--ms-jackson",
+   "kind": "session",
+   "note": "OutKast, Stankonia studio, three years after 'Ms. Jackson'."
+  },
+  {
+   "from": "terror-squad-ai-soul-cover--lean-back",
+   "to": "lil-jon-the-east-side-boyz-ai-soul-cover--get-low",
+   "kind": "producer",
+   "note": "Lil Jon made the crunk remix."
+  },
+  {
+   "from": "kanye-west-ai-soul-cover--gold-digger",
+   "to": "the-notorious-b-i-g-ai-soul-cover--juicy",
+   "kind": "sample",
+   "note": "Like 'Juicy' with Mtume, a hit soul record carried whole under the verses."
+  },
+  {
+   "from": "soulja-boy-tell-em-ai-soul-cover--crank-that",
+   "to": "lil-jon-the-east-side-boyz-ai-soul-cover--get-low",
+   "kind": "city",
+   "note": "Atlanta party rap again, with snap following crunk."
+  },
+  {
+   "from": "soulja-boy-tell-em-ai-soul-cover--crank-that",
+   "to": "macklemore-ryan-lewis-ai-soul-cover--thrift-shop",
+   "kind": "influence",
+   "note": "Both broke online first: a MySpace dance video here, a YouTube video shot in Seattle thrift stores there."
+  },
+  {
+   "from": "macklemore-ryan-lewis-ai-soul-cover--thrift-shop",
+   "to": "soulja-boy-tell-em-ai-soul-cover--crank-that",
+   "kind": "influence",
+   "note": "Another hit that broke on the internet before radio."
+  },
+  {
+   "from": "roddy-ricch-ai-soul-cover--the-box",
+   "to": "2pac-ai-soul-cover--california-love",
+   "kind": "city",
+   "note": "Compton, Dr. Dre's hometown, a generation on."
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ }
+}

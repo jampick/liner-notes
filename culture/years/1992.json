@@ -1,0 +1,54 @@
+{
+ "year": 1992,
+ "items": [
+  {
+   "kind": "news",
+   "title": "The Los Angeles riots",
+   "line": "Four LAPD officers were acquitted of beating Rodney King on April 29, 1992, and the city rioted until May 3. More than 12,000 people were arrested and the damage came to about $1 billion.",
+   "wiki": "1992_Los_Angeles_riots",
+   "source": "https://en.wikipedia.org/wiki/1992_Los_Angeles_riots"
+  },
+  {
+   "kind": "sport",
+   "title": "The Dream Team",
+   "line": "The first US Olympic basketball team with NBA players went 8–0 in Barcelona, winning by an average of 43.8 points. They beat Croatia 117–85 for gold on August 8.",
+   "wiki": "1992_United_States_men%27s_Olympic_basketball_team",
+   "source": "https://en.wikipedia.org/wiki/1992_United_States_men%27s_Olympic_basketball_team"
+  },
+  {
+   "kind": "tv",
+   "title": "Carson signs off",
+   "line": "Johnny Carson hosted his last Tonight Show on May 22, 1992, after nearly 30 years. Jay Leno took over.",
+   "wiki": "Johnny_Carson",
+   "source": "https://en.wikipedia.org/wiki/Johnny_Carson"
+  },
+  {
+   "kind": "film",
+   "title": "Malcolm X",
+   "line": "Spike Lee's 202-minute Malcolm X opened in North America on November 18, 1992. Denzel Washington was nominated for Best Actor and lost to Al Pacino.",
+   "wiki": "Malcolm_X_(1992_film)",
+   "source": "https://en.wikipedia.org/wiki/Malcolm_X_(1992_film)"
+  },
+  {
+   "kind": "game",
+   "title": "Mortal Kombat",
+   "line": "Midway put Mortal Kombat in arcades in August 1992, with digitized actors and fatalities. Its gore led to Senate hearings and, in the end, the ESRB ratings.",
+   "wiki": "Mortal_Kombat_(1992_video_game)",
+   "source": "https://en.wikipedia.org/wiki/Mortal_Kombat_(1992_video_game)"
+  },
+  {
+   "kind": "tech",
+   "title": "The first text message",
+   "line": "On December 3, 1992, engineer Neil Papworth typed 'Merry Christmas' on a PC and sent it over Vodafone's UK network to Richard Jarvis's Orbitel 901 phone.",
+   "wiki": "SMS",
+   "source": "https://en.wikipedia.org/wiki/SMS"
+  },
+  {
+   "kind": "news",
+   "title": "Clinton beats Bush and Perot",
+   "line": "Bill Clinton won the November 3, 1992 election with 370 electoral votes and 43% of the vote. Ross Perot took 18.9% and no states.",
+   "wiki": "1992_United_States_presidential_election",
+   "source": "https://en.wikipedia.org/wiki/1992_United_States_presidential_election"
+  }
+ ]
+}

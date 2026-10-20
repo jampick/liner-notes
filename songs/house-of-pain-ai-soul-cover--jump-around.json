@@ -1,0 +1,81 @@
+{
+ "id": "house-of-pain-ai-soul-cover--jump-around",
+ "title": "Jump Around",
+ "artist": "House of Pain (AI soul cover)",
+ "year": 1992,
+ "year_note": "The year is the original's. This recording is an AI-made soul cover posted on YouTube, and its upload title is all we know about it.",
+ "album": "YouTube upload; the original is on House of Pain (Fine Malt Lyrics)",
+ "aliases": {
+  "youtube": [
+   "cePWzKP8iWg"
+  ],
+  "titles": [
+   "Jump Around - 1950's Soul Version"
+  ]
+ },
+ "notes": {
+  "made": "DJ Muggs of Cypress Hill made the beat for his own group, but B-Real couldn't write to it and Ice Cube turned it down, so it went to Everlast's House of Pain. The opening fanfare is the horn intro of Bob & Earl's 1963 'Harlem Shuffle', and there's Chubby Checker's 'Popeye the Hitchhiker' in there too. The squeal that goes off about 66 times is the famous argument: people have said Prince's 'Gett Off', a spectrogram matched Junior Walker's 'Shoot Your Shot', Everlast has said it came by way of Divine Styler, and Muggs says neither.",
+  "context": "House of Pain were on Tommy Boy and played up being Irish-American, with track titles like 'Shamrocks and Shenanigans' and a video shot at the 1992 New York St. Patrick's Day Parade. The single came out in May 1992, reached three on the Hot 100, topped the maxi-single sales chart, and went platinum. In Britain it only made 32 the first time, then hit eight when XL re-released it in May 1993. A beat made for Cypress Hill ended up a fixture at football stadiums.",
+  "listen_for": [
+   {
+    "where": "the first few seconds",
+    "note": "The horn fanfare is Bob & Earl's 'Harlem Shuffle', a 1963 soul record, so a soul cover opening with horns is returning it."
+   },
+   {
+    "where": "the chorus",
+    "note": "The hook is the title, shouted over and over by a crowd of voices with no tune to it; a singer has to invent one."
+   },
+   {
+    "where": "all the way through",
+    "note": "The squeal comes back roughly 66 times, and nobody agrees where it was sampled from."
+   }
+  ],
+  "leads_to": {
+   "artist": "Bob & Earl",
+   "title": "Harlem Shuffle",
+   "year": 1963,
+   "why": "The horn fanfare at the top of 'Jump Around' is its intro, arranged by Gene Page; it flopped in Britain at first and went top ten there on reissue in 1969."
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jump_Around",
+   "https://en.wikipedia.org/wiki/House_of_Pain_(album)",
+   "https://en.wikipedia.org/wiki/Harlem_Shuffle",
+   "https://www.uwalumni.com/news/story-of-the-tradition"
+  ],
+  "unverified": "The source of the squeal stays disputed; I left it as a dispute."
+ },
+ "culture": [
+  {
+   "kind": "live",
+   "title": "Camp Randall's fourth quarter",
+   "line": "Wisconsin played it at the end of the third quarter of the homecoming game against Purdue on October 10, 1998, and the student section has jumped to it at home games since.",
+   "wiki": "Camp_Randall_Stadium",
+   "source": "https://www.uwalumni.com/news/story-of-the-tradition"
+  },
+  {
+   "kind": "video",
+   "title": "St. Patrick's Day, 1992",
+   "line": "The video was shot during the 1992 New York St. Patrick's Day Parade, with scenes in Central Park and the Old Town Bar, and ends with a dedication to a friend of the band who died that year.",
+   "wiki": "",
+   "source": "https://en.wikipedia.org/wiki/Jump_Around"
+  },
+  {
+   "kind": "screen",
+   "title": "Happy Gilmore",
+   "line": "It is in Happy Gilmore (1996) and its sequel, and darts player Gary Anderson walks on to it.",
+   "wiki": "Happy_Gilmore",
+   "source": "https://en.wikipedia.org/wiki/Jump_Around"
+  }
+ ],
+ "review": {
+  "state": "draft",
+  "by": null,
+  "date": null
+ },
+ "provenance": {
+  "ai_generated": true,
+  "model": "Claude (Anthropic), research agents with web search",
+  "written_by": "Liner Notes era writer (soul-rap-covers, era-2)",
+  "written_on": "2026-10-20"
+ }
+}
