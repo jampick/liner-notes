@@ -11,6 +11,7 @@
 
 Nothing waits on cliamp's terminal: it's started in its own session, so the key returns at once.
 """
+
 import json
 import os
 import shlex
@@ -270,8 +271,14 @@ def open_page(system, page, cfg, port, log, quiet=True):
     new = None
     end = system.now() + 5
     while system.now() < end and not new:
-        new = next((c["address"] for c in hypr.clients() if str(c.get("class", "")).startswith(PAGE_CLASS)
-                    and chromium.uses_profile(system.cmdline(c.get("pid", 0)), profile)), None)
+        new = next(
+            (
+                c["address"]
+                for c in hypr.clients()
+                if str(c.get("class", "")).startswith(PAGE_CLASS) and chromium.uses_profile(system.cmdline(c.get("pid", 0)), profile)
+            ),
+            None,
+        )
         if not new:
             system.sleep(0.2)
     if new:

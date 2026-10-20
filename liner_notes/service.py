@@ -6,6 +6,7 @@ then enables and starts it. It restarts the bridge when it dies and logs to the 
 
     journalctl --user -u liner-notes -f
 """
+
 import sys
 
 from . import paths
@@ -19,7 +20,7 @@ def unit_path():
 
 
 def render(template=None, python=None):
-    t = (template or TEMPLATE)
+    t = template or TEMPLATE
     if not t.is_file():
         raise SystemExit(f"liner-notes: the unit template {t} isn't in this install")
     text = t.read_text()

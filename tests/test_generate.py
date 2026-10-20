@@ -6,11 +6,20 @@ from liner_notes.bank import Bank, read_json, write_json
 
 
 def reply(song):
-    body = {"title": song, "artist": "Christopher Cross", "year": 1979, "year_note": "", "album": "Christopher Cross",
-            "made": "Michael Omartian produced it at Warner Bros. Recording Studios — with Cross on a Strat.",
-            "context": "It went to number one in 1980.", "listen_for": [{"where": "the intro", "note": "the guitar"}],
-            "leads_to": {"artist": "Steely Dan", "title": "Peg", "year": 1977, "why": "Same session circle."},
-            "culture": [], "sources": ["https://example.org/sailing"], "unverified": ""}
+    body = {
+        "title": song,
+        "artist": "Christopher Cross",
+        "year": 1979,
+        "year_note": "",
+        "album": "Christopher Cross",
+        "made": "Michael Omartian produced it at Warner Bros. Recording Studios — with Cross on a Strat.",
+        "context": "It went to number one in 1980.",
+        "listen_for": [{"where": "the intro", "note": "the guitar"}],
+        "leads_to": {"artist": "Steely Dan", "title": "Peg", "year": 1977, "why": "Same session circle."},
+        "culture": [],
+        "sources": ["https://example.org/sailing"],
+        "unverified": "",
+    }
     return "Here you go.\n```json\n" + json.dumps(body) + "\n```"
 
 
@@ -36,14 +45,22 @@ class FakeClient:
     def stream(self, **kw):
         self.calls.append(kw)
         title = kw["messages"][0]["content"].split('"')[1]
-        usage = NS(input_tokens=2000, output_tokens=1500, cache_read_input_tokens=3000, cache_creation_input_tokens=0,
-                   server_tool_use=NS(web_search_requests=4))
+        usage = NS(
+            input_tokens=2000,
+            output_tokens=1500,
+            cache_read_input_tokens=3000,
+            cache_creation_input_tokens=0,
+            server_tool_use=NS(web_search_requests=4),
+        )
         return FakeStream(NS(content=[NS(type="text", text=reply(title))], stop_reason="end_turn", usage=usage, model=gen.MODEL))
 
 
 def lookup(artist, title, yt):
-    return {"year": {"Sailing": 1979, "Ride Like the Wind": 1979, "Steppin' Out": 1982, "Avalon": 1982, "Lowdown": 1976}.get(title, 1980),
-            "mbid": "00000000-0000-0000-0000-000000000000", "isrc": ["USWB19900001"]}
+    return {
+        "year": {"Sailing": 1979, "Ride Like the Wind": 1979, "Steppin' Out": 1982, "Avalon": 1982, "Lowdown": 1976}.get(title, 1980),
+        "mbid": "00000000-0000-0000-0000-000000000000",
+        "isrc": ["USWB19900001"],
+    }
 
 
 TOML = """
@@ -66,9 +83,18 @@ artist = "Massive Attack"
 
 def setup(tmp_path, monkeypatch):
     home, data, cliamp = tmp_path / "home", tmp_path / "data", tmp_path / "cliamp"
-    write_json(home / "songs/massive-attack--protection.json", {"id": "massive-attack--protection", "title": "Protection", "artist": "Massive Attack",
-                                                                "year": 1994, "aliases": {"youtube": ["0Rw-UsRPNqc"]}, "notes": {"made": "Already written."},
-                                                                "review": {"state": "reviewed"}})
+    write_json(
+        home / "songs/massive-attack--protection.json",
+        {
+            "id": "massive-attack--protection",
+            "title": "Protection",
+            "artist": "Massive Attack",
+            "year": 1994,
+            "aliases": {"youtube": ["0Rw-UsRPNqc"]},
+            "notes": {"made": "Already written."},
+            "review": {"state": "reviewed"},
+        },
+    )
     (cliamp / "playlists").mkdir(parents=True)
     (cliamp / "playlists/Test Mix.toml").write_text(TOML)
     monkeypatch.setenv("LINER_NOTES_HOME", str(home))

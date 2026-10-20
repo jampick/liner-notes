@@ -7,6 +7,7 @@
 Every string that goes into Lua is quoted by lua_str, so a slug, a path with a space or a quote
 in a playlist name can't end the string early.
 """
+
 import os
 import socket
 from pathlib import Path
@@ -64,11 +65,18 @@ class Hypr:
         return self.dispatch(f"hl.dsp.focus({window(addr)})")
 
     def move_silent(self, addr, workspace):
-        return self.dispatch(f"hl.dsp.window.move({{ window = {lua_str('address:' + addr)}, workspace = {lua_str(workspace)}, follow = false }})")
+        return self.dispatch(
+            f"hl.dsp.window.move({{ window = {lua_str('address:' + addr)}, workspace = {lua_str(workspace)}, follow = false }})"
+        )
 
     def events_socket(self):
         env = self.sys.env
-        return Path(env.get("XDG_RUNTIME_DIR", f"/run/user/{os.getuid()}")) / "hypr" / env.get("HYPRLAND_INSTANCE_SIGNATURE", "") / ".socket2.sock"
+        return (
+            Path(env.get("XDG_RUNTIME_DIR", f"/run/user/{os.getuid()}"))
+            / "hypr"
+            / env.get("HYPRLAND_INSTANCE_SIGNATURE", "")
+            / ".socket2.sock"
+        )
 
 
 def watch(addr, sock_path, remember, connect=None):

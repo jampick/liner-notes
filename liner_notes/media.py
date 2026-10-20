@@ -13,6 +13,7 @@ on whether its video is in the disk cache (see stage.py). Network answers are ca
 cache/http.json, so a second run only fetches what's new. Requests are slow on purpose; Wikipedia
 answers 429 when asked too fast.
 """
+
 import io
 import json
 import re
@@ -88,7 +89,10 @@ def wiki_picture(f, title, sub):
     rel = f"{sub}/{out.name}"
     if out.exists():
         return rel, f.credits.get(rel) or {"source": f"https://en.wikipedia.org/wiki/{title}", "license": "unknown"}
-    d = f.memo("summary:" + title, lambda: json.loads(f.get("https://en.wikipedia.org/api/rest_v1/page/summary/" + urllib.parse.quote(title, safe=""))))
+    d = f.memo(
+        "summary:" + title,
+        lambda: json.loads(f.get("https://en.wikipedia.org/api/rest_v1/page/summary/" + urllib.parse.quote(title, safe=""))),
+    )
     src = ((d or {}).get("originalimage") or (d or {}).get("thumbnail") or {}).get("source")
     if not src:
         return None, None
@@ -97,8 +101,15 @@ def wiki_picture(f, title, sub):
         name = urllib.parse.unquote(src.split("/")[-1])
         if "/thumb/" in src:
             name = urllib.parse.unquote(src.split("/")[-2])
-        meta = f.memo("commons:" + name, lambda: json.loads(f.get(
-            "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=extmetadata&titles=File:" + urllib.parse.quote(name))))
+        meta = f.memo(
+            "commons:" + name,
+            lambda: json.loads(
+                f.get(
+                    "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=extmetadata&titles=File:"
+                    + urllib.parse.quote(name)
+                )
+            ),
+        )
         pages = ((meta or {}).get("query") or {}).get("pages") or {}
         em = next(iter(pages.values()), {}).get("imageinfo", [{}])[0].get("extmetadata", {}) if pages else {}
         credit["license"] = (em.get("LicenseShortName") or {}).get("value") or "unknown"

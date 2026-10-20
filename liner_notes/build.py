@@ -15,6 +15,7 @@ stage data, nothing that isn't ours. A journey with problems (a song missing fro
 outside every era) isn't written unless you pass --force, and every write is atomic, so the page
 the bridge is serving is never half a file.
 """
+
 import base64
 import html as htmllib
 import json
@@ -40,9 +41,11 @@ def lettered(title, artist):
     """A stand-in cover: the song's initials on a quiet square, for public builds."""
     initials = "".join(w[0] for w in title.split()[:2] if w[:1].isalnum()).upper() or "?"
     hue = sum(map(ord, artist)) % 360
-    svg = (f"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'><rect width='600' height='600' fill='hsl({hue} 22% 22%)'/>"
-           f"<text x='300' y='350' font-family='Georgia,serif' font-size='190' fill='hsl({hue} 30% 82%)' text-anchor='middle'>"
-           f"{htmllib.escape(initials)}</text></svg>")
+    svg = (
+        f"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'><rect width='600' height='600' fill='hsl({hue} 22% 22%)'/>"
+        f"<text x='300' y='350' font-family='Georgia,serif' font-size='190' fill='hsl({hue} 30% 82%)' text-anchor='middle'>"
+        f"{htmllib.escape(initials)}</text></svg>"
+    )
     return "data:image/svg+xml;base64," + base64.b64encode(svg.encode()).decode()
 
 
@@ -64,9 +67,18 @@ def compose(slug, bank=None, public=False, cache=None, video=False, warnings=Non
     eras = []
     for e in j["eras"]:
         img = jdir / e["image"] if e.get("image") else None
-        eras.append({"n": e["n"], "name": e["name"], "years": e["years"], "from": e["from"], "to": e["to"],
-                     "essay": e["essay"], "scene": e["scene"],
-                     "image": data_uri(img, "image/webp") if img and img.exists() else ""})
+        eras.append(
+            {
+                "n": e["n"],
+                "name": e["name"],
+                "years": e["years"],
+                "from": e["from"],
+                "to": e["to"],
+                "essay": e["essay"],
+                "scene": e["scene"],
+                "image": data_uri(img, "image/webp") if img and img.exists() else "",
+            }
+        )
         if not (img and img.exists()):
             (warnings if j.get("generated") else problems).append(f"era {e['n']} has no image")
 
@@ -96,18 +108,33 @@ def compose(slug, bank=None, public=False, cache=None, video=False, warnings=Non
         else:
             cover_uri = data_uri(cover, "image/webp")
         leads = notes.get("leads_to") or {}
-        stops.append({
-            "id": sid, "order": order, "title": s["title"], "artist": s["artist"], "year": year,
-            "yearNote": s.get("year_note") or "", "album": s.get("album") if (s.get("album") or "").lower() != "single" else "",
-            "era": era, "judge": q["j"] if q else None, "quote": q["q"] if q else "", "dissent": bool(q and q.get("dissent")),
-            "made": notes.get("made", ""), "context": notes.get("context", ""), "listen": notes.get("listen_for", []),
-            "leads": leads if leads.get("title") else None,
-            "sources": notes.get("sources", []), "cover": cover_uri,
-            # Upload ids drive the personal stage (follow, disk video). A shared file has no use for them.
-            "youtube": f"https://www.youtube.com/watch?v={yt}" if yt and not public else "", "yt": "" if public else yt,
-            "preview": apple.get("preview") or None, "apple": apple.get("url") or None,
-            "draft": (s.get("review") or {}).get("state") != "reviewed",
-        })
+        stops.append(
+            {
+                "id": sid,
+                "order": order,
+                "title": s["title"],
+                "artist": s["artist"],
+                "year": year,
+                "yearNote": s.get("year_note") or "",
+                "album": s.get("album") if (s.get("album") or "").lower() != "single" else "",
+                "era": era,
+                "judge": q["j"] if q else None,
+                "quote": q["q"] if q else "",
+                "dissent": bool(q and q.get("dissent")),
+                "made": notes.get("made", ""),
+                "context": notes.get("context", ""),
+                "listen": notes.get("listen_for", []),
+                "leads": leads if leads.get("title") else None,
+                "sources": notes.get("sources", []),
+                "cover": cover_uri,
+                # Upload ids drive the personal stage (follow, disk video). A shared file has no use for them.
+                "youtube": f"https://www.youtube.com/watch?v={yt}" if yt and not public else "",
+                "yt": "" if public else yt,
+                "preview": apple.get("preview") or None,
+                "apple": apple.get("url") or None,
+                "draft": (s.get("review") or {}).get("state") != "reviewed",
+            }
+        )
 
     stops.sort(key=lambda s: (s["year"], s["order"]))
     n_of = {}
@@ -127,10 +154,18 @@ def compose(slug, bank=None, public=False, cache=None, video=False, warnings=Non
 
     express = panel.get("express") or {}
     data = {
-        "slug": j["slug"], "title": j["title"], "titleA": j["titleA"], "titleB": j["titleB"], "kicker": j["kicker"],
-        "lede": j["lede"], "copy": j["copy"], "judges": panel.get("judges") or {},
+        "slug": j["slug"],
+        "title": j["title"],
+        "titleA": j["titleA"],
+        "titleB": j["titleB"],
+        "kicker": j["kicker"],
+        "lede": j["lede"],
+        "copy": j["copy"],
+        "judges": panel.get("judges") or {},
         "express": {"note": express.get("note", ""), "n": [n_of[x] for x in express.get("songs", []) if x in n_of]},
-        "eras": eras, "stops": stops, "product": "Liner Notes",
+        "eras": eras,
+        "stops": stops,
+        "product": "Liner Notes",
         # The muted, synced music video is a personal-use opt-in for local builds only: YouTube's developer
         # policies don't allow separating a video from its audio, so a shareable file never carries it.
         "video": bool(video and not public),
@@ -147,21 +182,44 @@ def live_data(video=False):
     """The page with no journey: the generic live stage for whatever is playing."""
     from .generate import DEFAULT_COPY
 
-    data = {"slug": LIVE, "title": "Liner Notes", "titleA": "Liner", "titleB": "Notes", "kicker": "Now playing",
-            "lede": "", "copy": dict(DEFAULT_COPY), "judges": {}, "express": {"note": "", "n": []}, "eras": [], "stops": [],
-            "product": "Liner Notes", "video": bool(video), "live": True, "provenance": provenance([])}
-    meta = {"title": "Now playing", "description": "Liner Notes: the song that's playing, with its lyrics and the night so far.", "fonts": ""}
+    data = {
+        "slug": LIVE,
+        "title": "Liner Notes",
+        "titleA": "Liner",
+        "titleB": "Notes",
+        "kicker": "Now playing",
+        "lede": "",
+        "copy": dict(DEFAULT_COPY),
+        "judges": {},
+        "express": {"note": "", "n": []},
+        "eras": [],
+        "stops": [],
+        "product": "Liner Notes",
+        "video": bool(video),
+        "live": True,
+        "provenance": provenance([]),
+    }
+    meta = {
+        "title": "Now playing",
+        "description": "Liner Notes: the song that's playing, with its lyrics and the night so far.",
+        "fonts": "",
+    }
     return data, meta
 
 
-DISCLOSURE = ("An AI model wrote the notes from the sources listed under each song. "
-              "Songs marked Draft notes haven't been checked by a person yet.")
+DISCLOSURE = (
+    "An AI model wrote the notes from the sources listed under each song. Songs marked Draft notes haven't been checked by a person yet."
+)
 
 
 def provenance(stops):
     reviewed = sum(1 for s in stops if not s["draft"])
-    return {"aiGenerated": True, "songs": len(stops), "reviewedByPerson": reviewed,
-            "statement": f"Notes written by an AI model (Claude, Anthropic) from cited sources; {reviewed} of {len(stops)} songs reviewed by a person."}
+    return {
+        "aiGenerated": True,
+        "songs": len(stops),
+        "reviewedByPerson": reviewed,
+        "statement": f"Notes written by an AI model (Claude, Anthropic) from cited sources; {reviewed} of {len(stops)} songs reviewed by a person.",
+    }
 
 
 def script_json(obj, **kw):
@@ -173,14 +231,23 @@ def head_tags(data, meta):
     """Machine-readable AI disclosure (EU AI Act Article 50 applies from 2 August 2026)."""
     from . import __version__
 
-    ld = {"@context": "https://schema.org", "@type": "CreativeWork", "name": meta["title"], "description": meta["description"],
-          "creativeWorkStatus": "draft" if data["provenance"]["reviewedByPerson"] < data["provenance"]["songs"] else "reviewed",
-          "creator": {"@type": "SoftwareApplication", "name": "Liner Notes", "softwareVersion": __version__},
-          "additionalProperty": [{"@type": "PropertyValue", "name": "aiGenerated", "value": True},
-                                 {"@type": "PropertyValue", "name": "aiDisclosure", "value": data["provenance"]["statement"]}]}
-    return (f'<meta name="generator" content="Liner Notes {htmllib.escape(__version__)}">\n'
-            f'<meta name="ai-disclosure" content="{htmllib.escape(data["provenance"]["statement"])}">\n'
-            f'<script type="application/ld+json">{script_json(ld)}</script>\n')
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": meta["title"],
+        "description": meta["description"],
+        "creativeWorkStatus": "draft" if data["provenance"]["reviewedByPerson"] < data["provenance"]["songs"] else "reviewed",
+        "creator": {"@type": "SoftwareApplication", "name": "Liner Notes", "softwareVersion": __version__},
+        "additionalProperty": [
+            {"@type": "PropertyValue", "name": "aiGenerated", "value": True},
+            {"@type": "PropertyValue", "name": "aiDisclosure", "value": data["provenance"]["statement"]},
+        ],
+    }
+    return (
+        f'<meta name="generator" content="Liner Notes {htmllib.escape(__version__)}">\n'
+        f'<meta name="ai-disclosure" content="{htmllib.escape(data["provenance"]["statement"])}">\n'
+        f'<script type="application/ld+json">{script_json(ld)}</script>\n'
+    )
 
 
 def render(data, meta, template=None):
@@ -190,8 +257,12 @@ def render(data, meta, template=None):
     html = html.replace("<title>", head_tags(data, meta) + "<title>", 1)
     title = htmllib.escape(meta["title"] + " · Liner Notes")
     # Every placeholder is replaced in one pass, so text in the data can never be read as another placeholder.
-    parts = {"__TITLE__": title, "__DESCRIPTION__": htmllib.escape(meta["description"]),
-             "__FONTS__": htmllib.escape(meta.get("fonts") or ""), DATA_MARK: script_json(data, separators=(",", ":"))}
+    parts = {
+        "__TITLE__": title,
+        "__DESCRIPTION__": htmllib.escape(meta["description"]),
+        "__FONTS__": htmllib.escape(meta.get("fonts") or ""),
+        DATA_MARK: script_json(data, separators=(",", ":")),
+    }
     head, sep, tail = html.partition(DATA_MARK)
     for k, v in parts.items():
         if k != DATA_MARK:
@@ -225,8 +296,10 @@ def build(slug, out=None, public=False, bank=None, cache=None, video=False, forc
     out = Path(out) if out else paths.dist() / (f"{slug}.public.html" if public else f"{slug}.html")
     write_page(out, html, problems, force, log)
     stops = data["stops"]
-    log(f"{out}  {len(html) / 1e6:.2f} MB  {len(stops)} stops  {sum(1 for s in stops if s['preview'])} previews  "
-        f"{sum(len(s['threads']) for s in stops)} threads  {sum(1 for s in stops if s['draft'])} draft")
+    log(
+        f"{out}  {len(html) / 1e6:.2f} MB  {len(stops)} stops  {sum(1 for s in stops if s['preview'])} previews  "
+        f"{sum(len(s['threads']) for s in stops)} threads  {sum(1 for s in stops if s['draft'])} draft"
+    )
     for p in problems:
         log("  problem:", p)
     if warnings:

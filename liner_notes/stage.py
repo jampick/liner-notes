@@ -14,6 +14,7 @@ Everything here comes from disk, with no network at all:
 
 Culture clips stay off until they can come from disk too, so no item carries a video id.
 """
+
 import re
 from pathlib import Path
 
@@ -120,6 +121,8 @@ def write(slug, bank=None, cache=None, public=False, log=print):
     paths.atomic_write(out, json.dumps(d, ensure_ascii=False))
     n_img = sum(1 for v in list(d["years"].values()) + list(d["songs"].values()) for i in v if "img" in i)
     tr = d["tracks"].values()
-    log(f"{out}  {sum(t['motion'] for t in tr)}/{len(tr)} videos on disk  {sum(1 for t in tr if t.get('standin'))} stand-ins  "
-        f"{n_img} culture pictures  {len(d['artists'])} artists")
+    log(
+        f"{out}  {sum(t['motion'] for t in tr)}/{len(tr)} videos on disk  {sum(1 for t in tr if t.get('standin'))} stand-ins  "
+        f"{n_img} culture pictures  {len(d['artists'])} artists"
+    )
     return out

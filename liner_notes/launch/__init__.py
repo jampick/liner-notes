@@ -4,6 +4,7 @@ Every external program goes through a System object, so tests swap in a fake one
 real is started, focused or played. The real one runs argv lists (never a shell), and starts
 long-lived programs detached in their own session so the caller never waits on them.
 """
+
 import json
 import os
 import shutil
@@ -45,8 +46,15 @@ class System:
 
     def spawn(self, argv):
         """Start a program detached: its own session, no pipes, and we don't wait for it."""
-        p = subprocess.Popen(list(argv), stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                             start_new_session=True, env=self.env, close_fds=True)
+        p = subprocess.Popen(
+            list(argv),
+            stdin=subprocess.DEVNULL,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            start_new_session=True,
+            env=self.env,
+            close_fds=True,
+        )
         return p.pid
 
     def which(self, name):

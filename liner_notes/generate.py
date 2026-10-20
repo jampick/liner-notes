@@ -17,6 +17,7 @@ The budget is checked before every song, the first one included: the next song i
 the larger of ESTIMATE and the average so far, and the run stops if that could pass --budget. Every
 request counts, including the ones that end in a refusal or a reply that won't parse.
 """
+
 import datetime as dt
 import json
 import re
@@ -36,10 +37,14 @@ PRICE = {"input": 2.00, "output": 10.00, "cache_read": 0.10, "cache_write": 2.50
 ESTIMATE = (30_000 * PRICE["input"] + 6_000 * PRICE["output"]) / 1e6 + 8 * PRICE["search"]
 BRIEF = paths.PACKAGE / "prompts" / "SONG-BRIEF.md"
 DEFAULT_COPY = {
-    "start": "Start listening", "resume": "Pick up at", "express": "Express: one per era",
+    "start": "Start listening",
+    "resume": "Pick up at",
+    "express": "Express: one per era",
     "companion": "Already playing this in your player? Companion mode keeps the previews quiet until you ask for one.",
-    "panelNote": "", "endKept": "These are the ones you kept. The link below carries them.",
-    "endEmpty": "You didn't keep anything this time. Press K on a stop to keep it.", "credits": "",
+    "panelNote": "",
+    "endKept": "These are the ones you kept. The link below carries them.",
+    "endEmpty": "You didn't keep anything this time. Press K on a stop to keep it.",
+    "credits": "",
 }
 FONTS = "https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Chivo+Mono:wght@400;500&display=swap"
 
@@ -111,11 +116,21 @@ def plan(tracks, name, bank=None, lookup=None, log=print):
             sid = song_id(artist, title)
             if sid not in bank.songs and sid not in new:
                 info = lookup(artist, title, yt) or {}
-                new[sid] = {"id": sid, "title": title, "artist": artist, "year": info.get("year") or 0, "year_note": "", "album": "",
-                            **({"mbid": info["mbid"]} if info.get("mbid") else {}), "isrc": info.get("isrc") or [],
-                            "aliases": {"youtube": [yt] if yt else [], **({"local": [t["path"]]} if t.get("path", "").startswith("/") else {})},
-                            "notes": {}, "culture": [], "review": {"state": "draft", "by": None, "date": None},
-                            "provenance": {"ai_generated": False, "written_by": None, "written_on": None}}
+                new[sid] = {
+                    "id": sid,
+                    "title": title,
+                    "artist": artist,
+                    "year": info.get("year") or 0,
+                    "year_note": "",
+                    "album": "",
+                    **({"mbid": info["mbid"]} if info.get("mbid") else {}),
+                    "isrc": info.get("isrc") or [],
+                    "aliases": {"youtube": [yt] if yt else [], **({"local": [t["path"]]} if t.get("path", "").startswith("/") else {})},
+                    "notes": {},
+                    "culture": [],
+                    "review": {"state": "draft", "by": None, "date": None},
+                    "provenance": {"ai_generated": False, "written_by": None, "written_on": None},
+                }
                 log(f"  {title}, {artist}: {info.get('year') or 'year unknown'}")
         if sid not in order:
             order.append(sid)
@@ -130,22 +145,46 @@ def plan(tracks, name, bank=None, lookup=None, log=print):
     for s in order:  # songs with no year go in the last era rather than vanish
         if not every[s].get("year"):
             every[s]["year"] = bounds[-1][1]
-    eras = [{"n": i, "name": f"{lo} to {hi}" if lo != hi else str(lo), "years": f"{lo}–{str(hi)[2:]}" if lo != hi else str(lo),
-             "from": lo, "to": hi, "essay": "", "scene": {"cities": [], "labels": [], "gear": [], "artifact": ""}, "sources": [], "image": ""}
-            for i, (lo, hi) in enumerate(bounds, 1)]
+    eras = [
+        {
+            "n": i,
+            "name": f"{lo} to {hi}" if lo != hi else str(lo),
+            "years": f"{lo}–{str(hi)[2:]}" if lo != hi else str(lo),
+            "from": lo,
+            "to": hi,
+            "essay": "",
+            "scene": {"cities": [], "labels": [], "gear": [], "artifact": ""},
+            "sources": [],
+            "image": "",
+        }
+        for i, (lo, hi) in enumerate(bounds, 1)
+    ]
     words = name.split()
-    journey = {"slug": slug(name), "title": name, "titleA": " ".join(words[: max(1, len(words) // 2)]), "titleB": " ".join(words[max(1, len(words) // 2):]),
-               "kicker": f"{len(order)} songs · {min(years)} to {max(years)}",
-               "description": f"{name}: {len(order)} songs from {min(years)} to {max(years)}, with notes on each.",
-               "lede": "", "fonts": FONTS, "copy": dict(DEFAULT_COPY), "panel": {}, "eras": eras, "songs": order, "pins": pins,
-               "threads": [], "review": {"state": "draft", "by": None, "date": None}, "generated": True}
+    journey = {
+        "slug": slug(name),
+        "title": name,
+        "titleA": " ".join(words[: max(1, len(words) // 2)]),
+        "titleB": " ".join(words[max(1, len(words) // 2) :]),
+        "kicker": f"{len(order)} songs · {min(years)} to {max(years)}",
+        "description": f"{name}: {len(order)} songs from {min(years)} to {max(years)}, with notes on each.",
+        "lede": "",
+        "fonts": FONTS,
+        "copy": dict(DEFAULT_COPY),
+        "panel": {},
+        "eras": eras,
+        "songs": order,
+        "pins": pins,
+        "threads": [],
+        "review": {"state": "draft", "by": None, "date": None},
+        "generated": True,
+    }
     missing = [s for s in order if not (every[s].get("notes") or {}).get("made")]
     return journey, new, missing
 
 
 def parse_reply(text):
     m = re.findall(r"```json\s*(\{.*?\})\s*```", text, re.S)
-    raw = m[-1] if m else text[text.find("{"): text.rfind("}") + 1]
+    raw = m[-1] if m else text[text.find("{") : text.rfind("}") + 1]
     d = json.loads(raw)
     for k in ("title", "artist", "year", "made", "context", "sources"):
         if k not in d:
@@ -160,9 +199,12 @@ def parse_reply(text):
 def cost_of(usage):
     u = usage
     search = getattr(getattr(u, "server_tool_use", None), "web_search_requests", 0) or 0
-    return ((u.input_tokens or 0) * PRICE["input"] + (u.output_tokens or 0) * PRICE["output"]
-            + (getattr(u, "cache_read_input_tokens", 0) or 0) * PRICE["cache_read"]
-            + (getattr(u, "cache_creation_input_tokens", 0) or 0) * PRICE["cache_write"]) / 1e6 + search * PRICE["search"]
+    return (
+        (u.input_tokens or 0) * PRICE["input"]
+        + (u.output_tokens or 0) * PRICE["output"]
+        + (getattr(u, "cache_read_input_tokens", 0) or 0) * PRICE["cache_read"]
+        + (getattr(u, "cache_creation_input_tokens", 0) or 0) * PRICE["cache_write"]
+    ) / 1e6 + search * PRICE["search"]
 
 
 class Meter:
@@ -184,17 +226,28 @@ def write_song(client, song, effort="medium", log=print, meter=None):
     meter = meter or Meter()
     start = meter.spent
     system = [{"type": "text", "text": BRIEF.read_text(), "cache_control": {"type": "ephemeral"}}]
-    ask = (f"Write the liner notes for \"{song['title']}\" by {song['artist']}"
-           + (f" (released {song['year']}, per MusicBrainz; check it)" if song.get("year") else "") + ".")
+    ask = (
+        f'Write the liner notes for "{song["title"]}" by {song["artist"]}'
+        + (f" (released {song['year']}, per MusicBrainz; check it)" if song.get("year") else "")
+        + "."
+    )
     messages = [{"role": "user", "content": ask}]
-    tools = [{"type": "web_search_20260209", "name": "web_search", "max_uses": 8},
-             {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 6}]
+    tools = [
+        {"type": "web_search_20260209", "name": "web_search", "max_uses": 8},
+        {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 6},
+    ]
     final = None
     for _turn in range(5):  # pause_turn: a long server-tool turn hands back control; send it back to continue
         try:
             with client.beta.messages.stream(
-                model=MODEL, max_tokens=32000, system=system, messages=messages, tools=tools,
-                output_config={"effort": effort}, betas=["server-side-fallback-2026-07-01"], fallbacks="default",
+                model=MODEL,
+                max_tokens=32000,
+                system=system,
+                messages=messages,
+                tools=tools,
+                output_config={"effort": effort},
+                betas=["server-side-fallback-2026-07-01"],
+                fallbacks="default",
             ) as stream:
                 final = stream.get_final_message()
         except anthropic.RateLimitError as e:
@@ -215,28 +268,66 @@ def write_song(client, song, effort="medium", log=print, meter=None):
     try:
         return parse_reply(text), meter.spent - start, final.model
     except (ValueError, json.JSONDecodeError):
-        messages += [{"role": "assistant", "content": final.content},
-                     {"role": "user", "content": "Reply again with only the JSON object in a ```json block, in the shape the brief gives."}]
-        with client.beta.messages.stream(model=MODEL, max_tokens=16000, system=system, messages=messages,
-                                         output_config={"effort": "low"}, betas=["server-side-fallback-2026-07-01"], fallbacks="default") as stream:
+        messages += [
+            {"role": "assistant", "content": final.content},
+            {"role": "user", "content": "Reply again with only the JSON object in a ```json block, in the shape the brief gives."},
+        ]
+        with client.beta.messages.stream(
+            model=MODEL,
+            max_tokens=16000,
+            system=system,
+            messages=messages,
+            output_config={"effort": "low"},
+            betas=["server-side-fallback-2026-07-01"],
+            fallbacks="default",
+        ) as stream:
             again = stream.get_final_message()
         meter.add(again.usage)
         return parse_reply("".join(b.text for b in again.content if b.type == "text")), meter.spent - start, again.model
 
 
 def apply_notes(song, d, model, day):
-    song.update({"title": d["title"], "artist": d["artist"], "year": int(d.get("year") or song.get("year") or 0),
-                 "year_note": d.get("year_note") or "", "album": d.get("album") or ""})
-    song["notes"] = {"made": d["made"], "context": d["context"], "listen_for": d.get("listen_for") or [],
-                     "leads_to": d.get("leads_to") or {}, "sources": d["sources"], "unverified": d.get("unverified") or ""}
+    song.update(
+        {
+            "title": d["title"],
+            "artist": d["artist"],
+            "year": int(d.get("year") or song.get("year") or 0),
+            "year_note": d.get("year_note") or "",
+            "album": d.get("album") or "",
+        }
+    )
+    song["notes"] = {
+        "made": d["made"],
+        "context": d["context"],
+        "listen_for": d.get("listen_for") or [],
+        "leads_to": d.get("leads_to") or {},
+        "sources": d["sources"],
+        "unverified": d.get("unverified") or "",
+    }
     song["culture"] = d.get("culture") or []
     song["review"] = {"state": "draft", "by": None, "date": None}
-    song["provenance"] = {"ai_generated": True, "model": f"{model} with web search, via liner-notes generate", "written_by": "liner-notes generate", "written_on": day}
+    song["provenance"] = {
+        "ai_generated": True,
+        "model": f"{model} with web search, via liner-notes generate",
+        "written_by": "liner-notes generate",
+        "written_on": day,
+    }
     return song
 
 
-def generate(name=None, provider=None, playlist=None, write=False, budget=2.0, effort="medium", root=None, client=None, lookup=None, log=print,
-             estimate=ESTIMATE):
+def generate(
+    name=None,
+    provider=None,
+    playlist=None,
+    write=False,
+    budget=2.0,
+    effort="medium",
+    root=None,
+    client=None,
+    lookup=None,
+    log=print,
+    estimate=ESTIMATE,
+):
     root = Path(root or paths.user_data())
     bank = Bank()
     if provider:
@@ -250,7 +341,9 @@ def generate(name=None, provider=None, playlist=None, write=False, budget=2.0, e
         write_json(root / "songs" / f"{s['id']}.json", s)
     write_json(root / "journeys" / journey["slug"] / "journey.json", journey)
     have = len(journey["songs"]) - len(missing)
-    log(f"journey {journey['slug']}: {len(journey['songs'])} songs, {len(journey['eras'])} eras, {have} already have notes, {len(missing)} don't")
+    log(
+        f"journey {journey['slug']}: {len(journey['songs'])} songs, {len(journey['eras'])} eras, {have} already have notes, {len(missing)} don't"
+    )
     if not write or not missing:
         if missing:
             log("  add --write --budget <USD> to write the missing ones")

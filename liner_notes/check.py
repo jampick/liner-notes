@@ -6,6 +6,7 @@ needs nothing outside the standard library. It also checks what a schema can't: 
 song exists, threads point at songs in the journey, era photographs exist, our own text has no
 em dashes, and every written song lists sources.
 """
+
 import json
 import re
 
@@ -19,7 +20,10 @@ def validate(doc, schema, at="$"):
     errs = []
     t = schema.get("type")
     if t:
-        ok = any(isinstance(doc, TYPES[x]) and not (x in ("integer", "number") and isinstance(doc, bool)) for x in (t if isinstance(t, list) else [t]))
+        ok = any(
+            isinstance(doc, TYPES[x]) and not (x in ("integer", "number") and isinstance(doc, bool))
+            for x in (t if isinstance(t, list) else [t])
+        )
         if not ok:
             return [f"{at}: expected {t}"]
     if "enum" in schema and doc not in schema["enum"]:
@@ -120,8 +124,9 @@ def tree_files(root):
     import subprocess
 
     try:
-        r = subprocess.run(["git", "-C", str(root), "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
-                           capture_output=True, check=True)
+        r = subprocess.run(
+            ["git", "-C", str(root), "ls-files", "-z", "--cached", "--others", "--exclude-standard"], capture_output=True, check=True
+        )
         names = [n for n in r.stdout.decode().split("\0") if n]
         return [root / n for n in names if (root / n).is_file()]
     except (OSError, subprocess.CalledProcessError):

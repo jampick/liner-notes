@@ -5,6 +5,7 @@ the songs with notes, a cover in the cache, moving pictures on disk (the upload'
 stand-in), and retimed lyrics (the files the bridge serves before asking cliamp or LRCLIB). --songs
 lists every song with what it's missing.
 """
+
 import importlib.util
 import os
 import platform
@@ -57,12 +58,17 @@ def coverage(slug, bank, cache=None):
         yt = ((j.get("pins") or {}).get(sid) or {}).get("youtube") or ((s.get("aliases") or {}).get("youtube") or [None])[0]
         lyr = paths.lyric_file(yt) if yt else None
         stand = (si.get(yt) or {}).get("standin") if yt else None
-        rows.append((s, {
-            "notes": "written" if (s.get("notes") or {}).get("made") else "",
-            "cover": "cache" if (cache / "covers" / f"{sid}.webp").is_file() else "",
-            "video": "own" if has_video(cache, yt) else ("stand-in" if stand and has_video(cache, stand) else ""),
-            "lyrics": ("retimed" if lyr.parent == paths.user_data() / "lyrics" else "retimed (pilot)") if lyr else "",
-        }))
+        rows.append(
+            (
+                s,
+                {
+                    "notes": "written" if (s.get("notes") or {}).get("made") else "",
+                    "cover": "cache" if (cache / "covers" / f"{sid}.webp").is_file() else "",
+                    "video": "own" if has_video(cache, yt) else ("stand-in" if stand and has_video(cache, stand) else ""),
+                    "lyrics": ("retimed" if lyr.parent == paths.user_data() / "lyrics" else "retimed (pilot)") if lyr else "",
+                },
+            )
+        )
     return rows
 
 
@@ -71,8 +77,16 @@ def remix_coverage(slug, bank, cache=None):
     out = []
     for r in bank.journeys[slug].get("remixes") or []:
         lf = paths.lyric_file(r["id"])
-        out.append((r, {"alignment": "yes" if lf else "", "profile": "yes" if (cache / "profiles" / f"{r['id']}.json").is_file() else "",
-                        "audio": "yes" if paths.audio_file(r["id"]) else ""}))
+        out.append(
+            (
+                r,
+                {
+                    "alignment": "yes" if lf else "",
+                    "profile": "yes" if (cache / "profiles" / f"{r['id']}.json").is_file() else "",
+                    "audio": "yes" if paths.audio_file(r["id"]) else "",
+                },
+            )
+        )
     return out
 
 
@@ -99,11 +113,17 @@ def run(system, songs=False, log=print):
     else:
         line(WARN, "cliamp", "not on PATH (serve --player mpris works with other players)")
     sock = Path(cliamp.socket_path())
-    line(OK if sock.is_socket() else WARN, "cliamp IPC socket", f"{sock}" + ("" if sock.is_socket() else " (not there: cliamp isn't running)"))
+    line(
+        OK if sock.is_socket() else WARN,
+        "cliamp IPC socket",
+        f"{sock}" + ("" if sock.is_socket() else " (not there: cliamp isn't running)"),
+    )
     browser = chromium.find(system, cfg["stage"].get("browser") or "")
     line(OK if browser else WARN, "browser", browser or "no Chromium or Chrome; play opens your default browser instead")
     hy = system.env.get("HYPRLAND_INSTANCE_SIGNATURE")
-    line(OK if hy else WARN, "hyprland", "found, pages open silently on their workspace" if hy else "not found, pages open as plain windows")
+    line(
+        OK if hy else WARN, "hyprland", "found, pages open silently on their workspace" if hy else "not found, pages open as plain windows"
+    )
 
     owner = port_owner(config.PORT)
     if owner is None:
@@ -111,7 +131,13 @@ def run(system, songs=False, log=print):
     else:
         pid, argv = owner
         who = " ".join(a for a in argv if a)[:120] or "another user's process"
-        kind = "pilot bridge" if "engine/bridge.py" in who else "liner-notes" if "liner_notes" in who or "liner-notes" in who else "something else"
+        kind = (
+            "pilot bridge"
+            if "engine/bridge.py" in who
+            else "liner-notes"
+            if "liner_notes" in who or "liner-notes" in who
+            else "something else"
+        )
         line(OK if kind == "liner-notes" else WARN, f"port {config.PORT}", f"{kind}, pid {pid}: {who}")
     up = unit_path()
     if up.is_file():
@@ -119,15 +145,25 @@ def run(system, songs=False, log=print):
         line(OK if act.ok else WARN, "service", f"{up} ({(act.stdout or '').strip() or 'inactive'})")
     else:
         line(WARN, "service", "not installed (liner-notes service install)")
-    for name, p in (("data", paths.user_data()), ("cache", paths.cache()), ("state", paths.state()), ("pages", paths.dist()),
-                    ("config", paths.config_file())):
+    for name, p in (
+        ("data", paths.user_data()),
+        ("cache", paths.cache()),
+        ("state", paths.state()),
+        ("pages", paths.dist()),
+        ("config", paths.config_file()),
+    ):
         line(OK if p.exists() else WARN, name, f"{p}" + ("" if p.exists() else " (not there yet)"))
     line(OK, "offline mode", "on: keys load the (offline) twins" if is_offline() else "off")
     have = [m for m in ("numpy", "onnxruntime", "PIL") if importlib.util.find_spec(m)]
     from .depth import model_path
 
-    line(OK if len(have) == 3 and model_path().is_file() else WARN, "depth maps",
-         "ready" if len(have) == 3 and model_path().is_file() else f"optional: [depth] extra ({', '.join(have) or 'none'} installed), model {model_path()}")
+    line(
+        OK if len(have) == 3 and model_path().is_file() else WARN,
+        "depth maps",
+        "ready"
+        if len(have) == 3 and model_path().is_file()
+        else f"optional: [depth] extra ({', '.join(have) or 'none'} installed), model {model_path()}",
+    )
     pilot_lyrics = len(list((paths.pilot() / "lyrics").glob("*.json"))) if (paths.pilot() / "lyrics").is_dir() else 0
     ours = len(list((paths.user_data() / "lyrics").glob("*.json"))) if (paths.user_data() / "lyrics").is_dir() else 0
     if pilot_lyrics and ours < pilot_lyrics:
@@ -142,8 +178,10 @@ def run(system, songs=False, log=print):
         if j.get("kind") == "remix":
             rows = remix_coverage(slug, bank)
             n = len(rows)
-            log(f"{slug:18} {n:>5} remixes: {sum(1 for _, h in rows if h['alignment'])} aligned, "
-                f"{sum(1 for _, h in rows if h['profile'])} measured, {sum(1 for _, h in rows if h['audio'])} with audio  {built}")
+            log(
+                f"{slug:18} {n:>5} remixes: {sum(1 for _, h in rows if h['alignment'])} aligned, "
+                f"{sum(1 for _, h in rows if h['profile'])} measured, {sum(1 for _, h in rows if h['audio'])} with audio  {built}"
+            )
             continue
         rows = coverage(slug, bank)
         c = {k: sum(1 for _, h in rows if h[k]) for k in ("notes", "cover", "lyrics")}
@@ -153,5 +191,8 @@ def run(system, songs=False, log=print):
         if songs:
             for s, h in rows:
                 miss = [k for k, v in h.items() if not v]
-                log(f"    {s['title'][:40]:40} {', '.join(f'{k}: {v}' for k, v in h.items() if v)}" + (f"  (no {', '.join(miss)})" if miss else ""))
+                log(
+                    f"    {s['title'][:40]:40} {', '.join(f'{k}: {v}' for k, v in h.items() if v)}"
+                    + (f"  (no {', '.join(miss)})" if miss else "")
+                )
     return 1 if bad else 0

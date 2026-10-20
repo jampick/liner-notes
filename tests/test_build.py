@@ -123,11 +123,21 @@ def test_stage_data_from_disk_only(iso):
     root = iso["home"]
     make_bank(root)
     c = iso["cache"]
-    for sub, name in (("video", "AAAAAAAAAAA.mp4"), ("video", "SSSSSSSSSSS.mp4"), ("culture", "A_Film.webp"), ("artists", "Ann_Artist__singer_.webp")):
+    for sub, name in (
+        ("video", "AAAAAAAAAAA.mp4"),
+        ("video", "SSSSSSSSSSS.mp4"),
+        ("culture", "A_Film.webp"),
+        ("artists", "Ann_Artist__singer_.webp"),
+    ):
         (c / sub).mkdir(exist_ok=True)
         (c / sub / name).write_bytes(b"x")
-    write_json(c / "credits.json", {"culture/A_Film.webp": {"license": "non-free"}, "artists/Ann_Artist__singer_.webp": {"license": "CC BY-SA 4.0"}})
-    write_json(iso["data"] / "standins/test-trip.json", {"BBBBBBBBBBB": {"standin": "SSSSSSSSSSS", "standin_offset": 1.5, "standin_rate": 1.01}})
+    write_json(
+        c / "credits.json",
+        {"culture/A_Film.webp": {"license": "non-free"}, "artists/Ann_Artist__singer_.webp": {"license": "CC BY-SA 4.0"}},
+    )
+    write_json(
+        iso["data"] / "standins/test-trip.json", {"BBBBBBBBBBB": {"standin": "SSSSSSSSSSS", "standin_offset": 1.5, "standin_rate": 1.01}}
+    )
     d = stage.compose("test-trip", Bank([root]), c)
     assert d["tracks"]["AAAAAAAAAAA"]["motion"] is True
     b = d["tracks"]["BBBBBBBBBBB"]

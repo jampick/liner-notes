@@ -43,8 +43,9 @@ class Fake(System):
             if not self.running:
                 return Result(1)
             if argv[1] == "status":
-                return Result(0, json.dumps({"ok": True, "state": "playing" if self.playing else "stopped",
-                                             "track": {"path": self.playing or ""}}))
+                return Result(
+                    0, json.dumps({"ok": True, "state": "playing" if self.playing else "stopped", "track": {"path": self.playing or ""}})
+                )
             return Result(0, "{}")
         if argv[0] == "hyprctl":
             if argv[1] == "clients":
@@ -53,7 +54,7 @@ class Fake(System):
                 return Result(0, json.dumps({"address": self.active_} if self.active_ else {}))
             if argv[1] == "dispatch" and argv[2].startswith("hl.dsp.exec_cmd("):
                 pid = 4242
-                cmd = shlex.split(json.loads(argv[2][len("hl.dsp.exec_cmd("):argv[2].index('", {') + 1]))
+                cmd = shlex.split(json.loads(argv[2][len("hl.dsp.exec_cmd(") : argv[2].index('", {') + 1]))
                 self.procs[pid] = cmd
                 url = next(a for a in cmd if a.startswith("--app=")).split("/p/")[1].split("#")[0]
                 self.clients_.append({"address": "0xnew", "class": f"{PAGE_CLASS}{url}-Default", "pid": pid, "workspace": {"name": "2"}})
@@ -137,8 +138,13 @@ def test_same_playlist_playing_leaves_music_alone(iso):
 def test_our_page_already_open_is_left_alone(iso):
     bank = setup_lists(iso)
     profile = iso["state"] / "chromium"
-    ours = {"address": "0xours", "class": f"{PAGE_CLASS}downtempo-drift.html-Default", "pid": 77, "workspace": {"name": "2"},
-            "_cmd": ["chromium", f"--user-data-dir={profile}"]}
+    ours = {
+        "address": "0xours",
+        "class": f"{PAGE_CLASS}downtempo-drift.html-Default",
+        "pid": 77,
+        "workspace": {"name": "2"},
+        "_cmd": ["chromium", f"--user-data-dir={profile}"],
+    }
     f = Fake(playing="https://www.youtube.com/watch?v=ZZZZZZZZZZZ", clients=[ours])
     P.play("trip", f, cfg(), 47421, log=lambda *a: None, bank=bank)
     assert f.dispatches() == []  # no close, no new window, no focus change: the page switches journeys itself
@@ -147,8 +153,13 @@ def test_our_page_already_open_is_left_alone(iso):
 
 def test_foreign_page_is_replaced_on_its_workspace(iso):
     bank = setup_lists(iso)
-    pilot = {"address": "0xold", "class": f"{PAGE_CLASS}yacht-rock.html-Default", "pid": 55, "workspace": {"name": "7"},
-             "_cmd": ["chromium", "--user-data-dir=/home/u/.local/state/journeys/chromium"]}
+    pilot = {
+        "address": "0xold",
+        "class": f"{PAGE_CLASS}yacht-rock.html-Default",
+        "pid": 55,
+        "workspace": {"name": "7"},
+        "_cmd": ["chromium", "--user-data-dir=/home/u/.local/state/journeys/chromium"],
+    }
     f = Fake(playing=None, clients=[pilot])
     P.play("trip", f, cfg(), 47421, log=lambda *a: None, bank=bank)
     d = f.dispatches()
@@ -217,7 +228,11 @@ def test_cold_start_is_detached_and_fast(iso, tmp_path):
         assert P.play("trip", f, cfg(), 47421, log=lambda *a: None, bank=bank) == "started"
         assert time.monotonic() - t0 < 5
         term = f.spawned[0]
-        assert term[:2] == ["omarchy-launch-tui", "--app-id=org.omarchy.cliamp"] and term[-3:] == ["--no-shuffle", "--playlist", "Test Trip"]
+        assert term[:2] == ["omarchy-launch-tui", "--app-id=org.omarchy.cliamp"] and term[-3:] == [
+            "--no-shuffle",
+            "--playlist",
+            "Test Trip",
+        ]
         assert os.getpgid(f.term) == f.term  # its own session and process group
         ops = [o for o in f.cliamp_log() if o[0] != "status"]
         assert ops == [["shuffle", "off"], ["remote", "call", "queue.play", "--params", '{"index": 0}', "--wait"]]
@@ -254,7 +269,7 @@ def unlua(s):
         if c == "\\":
             n = s[i + 1]
             if n.isdigit():
-                out.append(chr(int(s[i + 1:i + 4])))
+                out.append(chr(int(s[i + 1 : i + 4])))
                 i += 4
                 continue
             out.append({"n": "\n"}.get(n, n))
@@ -266,7 +281,7 @@ def unlua(s):
     return "".join(out)
 
 
-@pytest.mark.parametrize("text", ['plain', 'a "quoted" name', "back\\slash", "new\nline", "tab\there\x01", "it's /p/x.html#companion"])
+@pytest.mark.parametrize("text", ["plain", 'a "quoted" name', "back\\slash", "new\nline", "tab\there\x01", "it's /p/x.html#companion"])
 def test_lua_strings_round_trip(text):
     assert unlua(lua_str(text)) == text
 
@@ -277,9 +292,9 @@ def test_exec_cmd_quotes_paths_with_spaces(iso, monkeypatch):
     f = Fake(playing=None)
     P.play("trip", f, cfg(), 47421, log=lambda *a: None, bank=bank)
     ex = next(x for x in f.dispatches() if x.startswith("hl.dsp.exec_cmd("))
-    cmd = unlua(ex[len("hl.dsp.exec_cmd("):ex.index(", {")])
+    cmd = unlua(ex[len("hl.dsp.exec_cmd(") : ex.index(", {")])
     argv = shlex.split(cmd)
-    assert f"--user-data-dir={iso['state']}/my \"state\" dir/chromium" in argv
+    assert f'--user-data-dir={iso["state"]}/my "state" dir/chromium' in argv
 
 
 def test_watch_remembers_moves_until_close(iso):

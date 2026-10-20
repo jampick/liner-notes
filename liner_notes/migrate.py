@@ -9,6 +9,7 @@ It is idempotent and merges: a song already in the bank keeps its notes and revi
 only gains aliases, alternative titles and culture items it didn't have. Pictures other people own
 go to the cache, never into the repo; our own era photographs go into the journey folder.
 """
+
 import datetime as dt
 import re
 import shutil
@@ -94,18 +95,29 @@ def migrate(folder, root=None, cache=None, log=print):
         if song is None:
             created += 1
             song = {
-                "id": sid, "title": s["title"], "artist": s["artist"], "year": int(s["year"]),
-                "year_note": s.get("year_note") or "", "album": s.get("album") or "",
+                "id": sid,
+                "title": s["title"],
+                "artist": s["artist"],
+                "year": int(s["year"]),
+                "year_note": s.get("year_note") or "",
+                "album": s.get("album") or "",
                 "aliases": aliases,
                 "notes": {
-                    "made": s.get("made", ""), "context": s.get("context", ""),
-                    "listen_for": s.get("listen_for", []), "leads_to": s.get("leads_to") or {},
-                    "sources": s.get("sources", []), "unverified": s.get("unverified", ""),
+                    "made": s.get("made", ""),
+                    "context": s.get("context", ""),
+                    "listen_for": s.get("listen_for", []),
+                    "leads_to": s.get("leads_to") or {},
+                    "sources": s.get("sources", []),
+                    "unverified": s.get("unverified", ""),
                 },
                 "culture": [],
                 "review": {"state": "draft", "by": None, "date": None},
-                "provenance": {"ai_generated": True, "model": "Claude (Anthropic), research agents with web search",
-                               "written_by": f"journeys pilot era writer ({slug}, {f.stem})", "written_on": _day(f)},
+                "provenance": {
+                    "ai_generated": True,
+                    "model": "Claude (Anthropic), research agents with web search",
+                    "written_by": f"journeys pilot era writer ({slug}, {f.stem})",
+                    "written_on": _day(f),
+                },
             }
         else:
             merged += 1
@@ -175,8 +187,19 @@ def migrate(folder, root=None, cache=None, log=print):
         if img.exists():
             (jdir / "media/eras").mkdir(parents=True, exist_ok=True)
             shutil.copy2(img, jdir / "media/eras" / img.name)
-        eras.append({"n": n, "name": e["name"], "years": e["years"], "from": lo, "to": hi, "essay": e["essay"],
-                     "scene": e["scene"], "sources": e.get("sources", []), "image": f"media/eras/era{n}.webp"})
+        eras.append(
+            {
+                "n": n,
+                "name": e["name"],
+                "years": e["years"],
+                "from": lo,
+                "to": hi,
+                "essay": e["essay"],
+                "scene": e["scene"],
+                "sources": e.get("sources", []),
+                "image": f"media/eras/era{n}.webp",
+            }
+        )
 
     # Release year, then the panel's order within a year: the order the page numbers the stops in, and
     # the order the cliamp playlist plays them in.
@@ -205,15 +228,27 @@ def migrate(folder, root=None, cache=None, log=print):
                 threads.append({"from": frm, "to": to, "kind": th.get("kind", ""), "note": th.get("note", "")})
 
     journey = {
-        "slug": slug, "title": meta["title"], "titleA": meta["titleA"], "titleB": meta["titleB"],
-        "kicker": meta["kicker"], "description": meta["description"], "lede": meta["lede"],
-        "fonts": meta["fonts"], "copy": meta["copy"],
+        "slug": slug,
+        "title": meta["title"],
+        "titleA": meta["titleA"],
+        "titleB": meta["titleB"],
+        "kicker": meta["kicker"],
+        "description": meta["description"],
+        "lede": meta["lede"],
+        "fonts": meta["fonts"],
+        "copy": meta["copy"],
         "panel": {
             "judges": panel["judges"],
-            "express": {"note": panel["express"]["note"], "songs": [ids_by_key[key(t)] for t in panel["express"]["titles"] if key(t) in ids_by_key]},
+            "express": {
+                "note": panel["express"]["note"],
+                "songs": [ids_by_key[key(t)] for t in panel["express"]["titles"] if key(t) in ids_by_key],
+            },
             "quotes": quotes,
         },
-        "eras": eras, "songs": order, "pins": pins, "threads": threads,
+        "eras": eras,
+        "songs": order,
+        "pins": pins,
+        "threads": threads,
         "review": {"state": "draft", "by": None, "date": None},
     }
     write_json(jdir / "journey.json", journey)
@@ -225,10 +260,14 @@ def migrate(folder, root=None, cache=None, log=print):
 
 
 def _review_todo(jdir, journey, root):
-    lines = [f"# Review: {journey['title']}", "",
-             "Every song here starts as a draft. A draft shows as \"draft notes\" on the stage. Tick a song once",
-             "you've checked its facts against the sources, then set `review.state` to `reviewed` in its file",
-             "(`liner-notes review <song id>` does both).", ""]
+    lines = [
+        f"# Review: {journey['title']}",
+        "",
+        'Every song here starts as a draft. A draft shows as "draft notes" on the stage. Tick a song once',
+        "you've checked its facts against the sources, then set `review.state` to `reviewed` in its file",
+        "(`liner-notes review <song id>` does both).",
+        "",
+    ]
     for sid in journey["songs"]:
         s = read_json(root / "songs" / f"{sid}.json")
         mark = "x" if s.get("review", {}).get("state") == "reviewed" else " "
@@ -264,9 +303,16 @@ def migrate_remix(folder, root=None, log=print):
     title = " ".join(w.capitalize() for w in slug.split("-"))
     words = title.split()
     journey = {
-        "slug": slug, "kind": "remix", "title": title, "titleA": words[0], "titleB": " ".join(words[1:]),
-        "kicker": f"{len(remixes)} remixes", "description": f"{title}: {len(remixes)} house remixes, each laid against the record it flips.",
-        "songs": [], "remixes": remixes, "panel": {"quotes": panel},
+        "slug": slug,
+        "kind": "remix",
+        "title": title,
+        "titleA": words[0],
+        "titleB": " ".join(words[1:]),
+        "kicker": f"{len(remixes)} remixes",
+        "description": f"{title}: {len(remixes)} house remixes, each laid against the record it flips.",
+        "songs": [],
+        "remixes": remixes,
+        "panel": {"quotes": panel},
         "review": {"state": "draft", "by": None, "date": None},
     }
     write_json(root / "journeys" / slug / "journey.json", journey)

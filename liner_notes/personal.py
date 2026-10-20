@@ -22,6 +22,7 @@ with the same content is left alone, and one that exists with different content 
 reported, so a rerun is safe. Every file ends up in a manifest with its SHA-256
 (~/.local/state/liner-notes/migrate-personal.json). --dry-run prints the plan and touches nothing.
 """
+
 import datetime as dt
 import errno
 import hashlib
@@ -193,13 +194,26 @@ def run(src, dry_run=False, bank=None, pilot_cache=None, pilot_state=None, log=p
             log(f"kept  {s.dest} (it differs from {s.src}; delete it to take the pilot's)")
         st = s.dest.lstat()
         prev = old.get(str(s.dest))
-        entries.append({"what": s.what, "src": str(s.src), "dest": str(s.dest), "how": status,
-                        "size": st.st_size, "mtime_ns": st.st_mtime_ns,
-                        "sha256": sha256(s.dest, prev) if s.dest.is_file() else None})
+        entries.append(
+            {
+                "what": s.what,
+                "src": str(s.src),
+                "dest": str(s.dest),
+                "how": status,
+                "size": st.st_size,
+                "mtime_ns": st.st_mtime_ns,
+                "sha256": sha256(s.dest, prev) if s.dest.is_file() else None,
+            }
+        )
     for p in unmapped:
         log(f"skip  cover with no song in the bank: {p}")
-    manifest = {"from": str(Path(src).expanduser()), "date": dt.datetime.now().isoformat(timespec="seconds"),
-                "counts": counts, "files": entries, "skipped": [str(p) for p in unmapped]}
+    manifest = {
+        "from": str(Path(src).expanduser()),
+        "date": dt.datetime.now().isoformat(timespec="seconds"),
+        "counts": counts,
+        "files": entries,
+        "skipped": [str(p) for p in unmapped],
+    }
     paths.atomic_write(mf, json.dumps(manifest, indent=1))
     log(f"{len(entries)} files: " + ", ".join(f"{n} {k}" for k, n in sorted(counts.items())) + f". Manifest: {mf}")
     return manifest

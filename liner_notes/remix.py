@@ -20,6 +20,7 @@ measuring again. Covers and photos go into the page as data URIs, video comes fr
 (/v/<id>.mp4), so the page is meant to be opened through it. It follows cliamp through /now by
 upload id, and by cliamp's title for SoundCloud tracks, which have no id.
 """
+
 import base64
 import json
 import re
@@ -51,21 +52,22 @@ def measure(path):
 
     import numpy as np
 
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"],
-                         capture_output=True, check=True).stdout
+    raw = subprocess.run(
+        ["ffmpeg", "-v", "error", "-i", str(path), "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"], capture_output=True, check=True
+    ).stdout
     x = np.frombuffer(raw, np.int16).astype(np.float32) / 32768
     hop, n = 110, 1024
     frames = np.lib.stride_tricks.sliding_window_view(x, n)[::hop] * np.hanning(n)
     mag = np.abs(np.fft.rfft(frames, axis=1))
     flux = np.maximum(np.diff(np.log1p(mag), axis=0), 0).sum(axis=1)
     flux -= flux.mean()
-    ac = np.correlate(flux, flux, "full")[len(flux) - 1:]
+    ac = np.correlate(flux, flux, "full")[len(flux) - 1 :]
     lags = np.arange(len(ac))
     ok = (lags >= 100 * 60 / 180) & (lags <= 100 * 60 / 70)
     w = np.exp(-0.5 * (np.log2(np.where(lags > 0, 6000 / np.maximum(lags, 1), 1) / 120) / 0.6) ** 2)
     lag = lags[ok][np.argmax((ac * w)[ok])]
     sec = x[: len(x) // SR * SR].reshape(-1, SR)
-    r = np.sqrt((sec ** 2).mean(axis=1))
+    r = np.sqrt((sec**2).mean(axis=1))
     r = r / (r.max() or 1)
     return {"bpm": round(6000 / float(lag), 1), "seconds": round(len(x) / SR, 1), "energy": [round(float(v), 3) for v in r]}
 
@@ -118,32 +120,57 @@ def flip_notes(events, olines, rbpm, obpm, rlen, olen):
     """What the remix did to the song, said plainly from the alignment. Nothing here is guessed."""
     notes = []
     if obpm and abs(rbpm / obpm - 1) < 0.03:
-        notes.append({"h": f"Same tempo, about {rnd(rbpm)} BPM",
-                      "p": f"The remix keeps the original's speed and adds the kick. It runs {mmss(rlen)} against the original's {mmss(olen)}."})
+        notes.append(
+            {
+                "h": f"Same tempo, about {rnd(rbpm)} BPM",
+                "p": f"The remix keeps the original's speed and adds the kick. It runs {mmss(rlen)} against the original's {mmss(olen)}.",
+            }
+        )
     elif obpm:
-        notes.append({"h": f"About {rnd(obpm)} to {rnd(rbpm)} BPM",
-                      "p": f"The remix runs {rbpm / obpm:.2f} times the original's tempo, and {mmss(rlen)} against the original's {mmss(olen)}."})
+        notes.append(
+            {
+                "h": f"About {rnd(obpm)} to {rnd(rbpm)} BPM",
+                "p": f"The remix runs {rbpm / obpm:.2f} times the original's tempo, and {mmss(rlen)} against the original's {mmss(olen)}.",
+            }
+        )
     else:
         notes.append({"h": f"About {rnd(rbpm)} BPM", "p": f"The remix runs {mmss(rlen)} against the original's {mmss(olen)}."})
     sung = list(dict.fromkeys(ln["text"] for ln in olines if ln["text"]))
     used = {olines[e["line"]]["text"] for e in events if 0 <= e["line"] < len(olines)}
     cut = [t for t in sung if t not in used]
     if cut:
-        notes.append({"h": f"Keeps {len(sung) - len(cut)} of {len(sung)} lines",
-                      "p": f"Gone: “{cut[0]}”" + (f" and {len(cut) - 1} more." if len(cut) > 1 else ".")})
+        notes.append(
+            {
+                "h": f"Keeps {len(sung) - len(cut)} of {len(sung)} lines",
+                "p": f"Gone: “{cut[0]}”" + (f" and {len(cut) - 1} more." if len(cut) > 1 else "."),
+            }
+        )
     loops = sorted(events, key=lambda e: -len(e["times"]))
     if loops and len(loops[0]["times"]) > 2:
         e = loops[0]
-        notes.append({"h": f"“{e['text']}” ×{len(e['times'])}",
-                      "p": f"From {mmss(e['times'][0])} it goes round {len(e['times'])} times in {round(e['end'] - e['times'][0])} seconds"
-                           + (", a few words cut out of the line and stuttered." if e["chop"] else ".")})
+        notes.append(
+            {
+                "h": f"“{e['text']}” ×{len(e['times'])}",
+                "p": f"From {mmss(e['times'][0])} it goes round {len(e['times'])} times in {round(e['end'] - e['times'][0])} seconds"
+                + (", a few words cut out of the line and stuttered." if e["chop"] else "."),
+            }
+        )
     back = sum(1 for a, b in zip(events, events[1:], strict=False) if b["orig"] < a["orig"] - 5)
     if back:
-        notes.append({"h": "Out of order", "p": f"The remix jumps back to an earlier part of the original {back} times. "
-                      "The map under the picture draws each jump as a ribbon from where the line was to where it is now."})
+        notes.append(
+            {
+                "h": "Out of order",
+                "p": f"The remix jumps back to an earlier part of the original {back} times. "
+                "The map under the picture draws each jump as a ribbon from where the line was to where it is now.",
+            }
+        )
     vocal = sum(e["end"] - e["times"][0] for e in events)
-    notes.append({"h": f"Voice on {round(100 * vocal / rlen)}% of the time",
-                  "p": "The rest is the remixer's: the build, the drop and the breakdowns. The liner notes take those stretches."})
+    notes.append(
+        {
+            "h": f"Voice on {round(100 * vocal / rlen)}% of the time",
+            "p": "The rest is the remixer's: the build, the drop and the breakdowns. The liner notes take those stretches.",
+        }
+    )
     return notes
 
 
@@ -164,7 +191,12 @@ def _video(slug_of_original, yt, cache):
         return {"id": yt, "off": 0.0, "rate": 1.0, "kind": None}
     si = standins(slug_of_original).get(yt) if slug_of_original else None
     if si and (paths.video_file(si["standin"]) or (cache / "video" / f"{si['standin']}.mp4").is_file()):
-        return {"id": si["standin"], "off": float(si.get("standin_offset") or 0), "rate": float(si.get("standin_rate") or 1.0), "kind": si.get("kind")}
+        return {
+            "id": si["standin"],
+            "off": float(si.get("standin_offset") or 0),
+            "rate": float(si.get("standin_rate") or 1.0),
+            "kind": si.get("kind"),
+        }
     return None
 
 
@@ -212,22 +244,44 @@ def compose(slug, bank=None, cache=None, log=print):
         rcover = cache / "covers" / f"{slug}-vol{r['volume']}.webp" if r.get("volume") else None
         ev = lyr["remix"]["events"]
         notes = song.get("notes") or {}
-        orig_notes = [x for x in [{"h": "How it was made", "p": notes.get("made")}, {"h": "What was going on", "p": notes.get("context")}] if x["p"]]
+        orig_notes = [
+            x for x in [{"h": "How it was made", "p": notes.get("made")}, {"h": "What was going on", "p": notes.get("context")}] if x["p"]
+        ]
         orig_notes += [{"h": f"Listen for {x['where']}", "p": x["note"]} for x in (notes.get("listen_for") or [])[:1]]
         q = panel.get(r["song"])
-        out.append({
-            "id": r["id"], "match": r["title"], "title": r["song"], "artist": r["artist"], "year": year,
-            "remixer": r.get("remixer") or r.get("label"), "remixYear": r.get("remix_year"),
-            "volume": r.get("volume"), "video": video,
-            "remix": {"length": rp["seconds"], "bpm": rp["bpm"], "energy": rp["energy"],
-                      "cover": data_uri(rcover) if rcover and rcover.is_file() else None},
-            "original": {"length": op["seconds"], "bpm": op.get("bpm"), "energy": op.get("energy"), "lines": olines,
-                         "cover": data_uri(cover) if cover and cover.is_file() else None},
-            "events": ev, "photo": _photo(bank, cache, r["artist"]),
-            "notes": {"orig": pages(orig_notes + r.get("notes", [])),
-                      "flip": flip_notes(ev, olines, rp["bpm"], op.get("bpm"), rp["seconds"], op["seconds"]),
-                      "panel": [{"h": q["who"], "p": q["quote"]}] if q else []},
-        })
+        out.append(
+            {
+                "id": r["id"],
+                "match": r["title"],
+                "title": r["song"],
+                "artist": r["artist"],
+                "year": year,
+                "remixer": r.get("remixer") or r.get("label"),
+                "remixYear": r.get("remix_year"),
+                "volume": r.get("volume"),
+                "video": video,
+                "remix": {
+                    "length": rp["seconds"],
+                    "bpm": rp["bpm"],
+                    "energy": rp["energy"],
+                    "cover": data_uri(rcover) if rcover and rcover.is_file() else None,
+                },
+                "original": {
+                    "length": op["seconds"],
+                    "bpm": op.get("bpm"),
+                    "energy": op.get("energy"),
+                    "lines": olines,
+                    "cover": data_uri(cover) if cover and cover.is_file() else None,
+                },
+                "events": ev,
+                "photo": _photo(bank, cache, r["artist"]),
+                "notes": {
+                    "orig": pages(orig_notes + r.get("notes", [])),
+                    "flip": flip_notes(ev, olines, rp["bpm"], op.get("bpm"), rp["seconds"], op["seconds"]),
+                    "panel": [{"h": q["who"], "p": q["quote"]}] if q else [],
+                },
+            }
+        )
     return out, skipped
 
 

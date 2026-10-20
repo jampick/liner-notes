@@ -14,6 +14,7 @@ Everything personal stays out of git, in the XDG directories:
   ~/.local/state/liner-notes/{chromium,workspace,av-latency.json,offline} (LINER_NOTES_STATE)
   ~/.config/liner-notes/config.toml                      keys and workspaces (LINER_NOTES_CONFIG)
 """
+
 import os
 import tempfile
 from pathlib import Path

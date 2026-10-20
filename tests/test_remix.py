@@ -9,25 +9,62 @@ from liner_notes.bank import Bank, write_json
 from tests.helpers_build import iso, make_bank  # noqa: F401
 
 LINES = [{"t": 10.0, "text": "first line"}, {"t": 14.0, "text": "second line"}, {"t": 18.0, "text": "third line"}]
-EVENTS = [{"line": 0, "text": "first line", "chop": False, "times": [30.0, 45.0, 60.0], "end": 70.0, "orig": 10.0},
-          {"line": 1, "text": "second line", "chop": True, "times": [80.0], "end": 83.0, "orig": 14.0}]
+EVENTS = [
+    {"line": 0, "text": "first line", "chop": False, "times": [30.0, 45.0, 60.0], "end": 70.0, "orig": 10.0},
+    {"line": 1, "text": "second line", "chop": True, "times": [80.0], "end": 83.0, "orig": 14.0},
+]
 
 
 def remix_journey(d):
     root = d["home"]
     make_bank(root)
-    write_json(root / "journeys/test-house/journey.json", {
-        "slug": "test-house", "kind": "remix", "title": "Test House", "titleA": "Test", "titleB": "House", "kicker": "2 remixes",
-        "description": "Remixes.", "songs": [], "panel": {"quotes": {"First Song": {"who": "A Judge", "quote": "Keeps the hook."}}},
-        "remixes": [
-            {"title": "First Song (Club Mix)", "song": "First Song", "artist": "Ann Artist", "path": "https://www.youtube.com/watch?v=RRRRRRRRRRR",
-             "id": "RRRRRRRRRRR", "remixer": "DJ Test", "label": "Club Mix", "volume": 1,
-             "original": {"song": "ann-artist--first-song", "youtube": "AAAAAAAAAAA"}},
-            {"title": "Old Song (Edit)", "song": "Old Song", "artist": "Nobody", "path": "https://soundcloud.com/x/y",
-             "id": "123", "remixer": "DJ Test", "label": "Edit", "original": {"lyrics": "old-song.json", "year": 1975}},
-            {"title": "Unmeasured (Mix)", "song": "Unmeasured", "artist": "Nobody", "path": "https://www.youtube.com/watch?v=UUUUUUUUUUU",
-             "id": "UUUUUUUUUUU", "remixer": "DJ Test", "label": "Mix", "original": {"lyrics": "none.json"}},
-        ]})
+    write_json(
+        root / "journeys/test-house/journey.json",
+        {
+            "slug": "test-house",
+            "kind": "remix",
+            "title": "Test House",
+            "titleA": "Test",
+            "titleB": "House",
+            "kicker": "2 remixes",
+            "description": "Remixes.",
+            "songs": [],
+            "panel": {"quotes": {"First Song": {"who": "A Judge", "quote": "Keeps the hook."}}},
+            "remixes": [
+                {
+                    "title": "First Song (Club Mix)",
+                    "song": "First Song",
+                    "artist": "Ann Artist",
+                    "path": "https://www.youtube.com/watch?v=RRRRRRRRRRR",
+                    "id": "RRRRRRRRRRR",
+                    "remixer": "DJ Test",
+                    "label": "Club Mix",
+                    "volume": 1,
+                    "original": {"song": "ann-artist--first-song", "youtube": "AAAAAAAAAAA"},
+                },
+                {
+                    "title": "Old Song (Edit)",
+                    "song": "Old Song",
+                    "artist": "Nobody",
+                    "path": "https://soundcloud.com/x/y",
+                    "id": "123",
+                    "remixer": "DJ Test",
+                    "label": "Edit",
+                    "original": {"lyrics": "old-song.json", "year": 1975},
+                },
+                {
+                    "title": "Unmeasured (Mix)",
+                    "song": "Unmeasured",
+                    "artist": "Nobody",
+                    "path": "https://www.youtube.com/watch?v=UUUUUUUUUUU",
+                    "id": "UUUUUUUUUUU",
+                    "remixer": "DJ Test",
+                    "label": "Mix",
+                    "original": {"lyrics": "none.json"},
+                },
+            ],
+        },
+    )
     data, cache = d["data"], d["cache"]
     write_json(data / "lyrics/RRRRRRRRRRR.json", {"lines": LINES, "remix": {"events": EVENTS}})
     write_json(data / "lyrics/123.json", {"lines": LINES, "remix": {"events": EVENTS[:1]}})

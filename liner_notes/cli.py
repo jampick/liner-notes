@@ -1,4 +1,5 @@
 """liner-notes: a second screen for cliamp (and any player)."""
+
 import argparse
 import datetime as dt
 import json
@@ -111,7 +112,7 @@ def cmd_migrate(a):
     from .migrate import migrate, migrate_remix
 
     for folder in a.folders:
-        if (os.path.exists(os.path.join(os.path.expanduser(folder), "remixes.json"))):
+        if os.path.exists(os.path.join(os.path.expanduser(folder), "remixes.json")):
             migrate_remix(folder, a.root)
         else:
             migrate(folder, a.root, a.cache)
@@ -187,7 +188,11 @@ def cmd_review(a):
         if sid not in bank.songs:
             sys.exit(f"liner-notes: no song {sid}")
         s = bank.songs[sid]
-        s["review"] = {"state": "draft" if a.undo else "reviewed", "by": None if a.undo else a.by, "date": None if a.undo else dt.date.today().isoformat()}
+        s["review"] = {
+            "state": "draft" if a.undo else "reviewed",
+            "by": None if a.undo else a.by,
+            "date": None if a.undo else dt.date.today().isoformat(),
+        }
         write_json(bank.song_files[sid], s)
         print(f"{sid}: {s['review']['state']}")
 

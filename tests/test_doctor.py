@@ -10,7 +10,9 @@ def test_port_owner_from_proc(tmp_path):
     proc = tmp_path / "proc"
     (proc / "net").mkdir(parents=True)
     head = "  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode\n"
-    (proc / "net/tcp").write_text(head + "   0: 0100007F:B91F 00000000:0000 0A 00000000:00000000 00:00000000 00000000  1000        0 424242 1\n")
+    (proc / "net/tcp").write_text(
+        head + "   0: 0100007F:B91F 00000000:0000 0A 00000000:00000000 00:00000000 00000000  1000        0 424242 1\n"
+    )
     (proc / "net/tcp6").write_text(head)
     (proc / "321/fd").mkdir(parents=True)
     os.symlink("socket:[424242]", proc / "321/fd/5")

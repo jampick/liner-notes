@@ -5,6 +5,7 @@ pilot playlist folder, and expected.json is what the pilot's engine/build.py mad
 on a copy). test_downtempo_equivalent does the same against the real pilot checkout, when it's on
 this machine (the pilot repo is never written to). Ids, covers and images are set aside.
 """
+
 import json
 import re
 import shutil
@@ -30,12 +31,14 @@ def old_data(tmp):
     shutil.copy2(PILOT / "engine/build.py", work / "engine/build.py")
     shutil.copy2(PILOT / "engine/template.html", work / "engine/template.html")
     shutil.copytree(FOLDER, work / "playlists/downtempo-drift", ignore=shutil.ignore_patterns("originals", "culture"))
-    subprocess.run([sys.executable, str(work / "engine/build.py"), str(work / "playlists/downtempo-drift")], check=False, capture_output=True)
+    subprocess.run(
+        [sys.executable, str(work / "engine/build.py"), str(work / "playlists/downtempo-drift")], check=False, capture_output=True
+    )
     html = (work / "dist/downtempo-drift.html").read_text()
     tpl = (PILOT / "engine/template.html").read_text()
     pre = tpl.split("/*__DATA__*/null")[0].split("\n")[-1]
     line = next(ln for ln in html.split("\n") if ln.startswith(pre))
-    blob = line[len(pre):]
+    blob = line[len(pre) :]
     post = tpl.split("/*__DATA__*/null")[1].split("\n")[0]
     return json.loads(blob[: len(blob) - len(post)] if post else blob)
 
@@ -60,7 +63,11 @@ def test_fixture_equivalent(tmp_path):
     new, problems, _ = compose("mini-trip", Bank([root]), cache=cache)
     assert problems == []
     a, b = strip(old), strip(new)
-    assert [s["title"] for s in a["stops"]] == [s["title"] for s in b["stops"]] == ["Second Wind", "Harbour Lights", "Low Tide", "Paper Boats", "Night Ferry"]
+    assert (
+        [s["title"] for s in a["stops"]]
+        == [s["title"] for s in b["stops"]]
+        == ["Second Wind", "Harbour Lights", "Low Tide", "Paper Boats", "Night Ferry"]
+    )
     for so, sn in zip(a["stops"], b["stops"], strict=True):
         assert so == sn, so["title"]
     a.pop("stops"), b.pop("stops")

@@ -12,6 +12,7 @@ Optional: it needs the [depth] extra (numpy, pillow, onnxruntime) and the model 
 [depth] model in config.toml or LINER_NOTES_DEPTH_MODEL. Without them it says why and does nothing,
 and the stage shows the pictures standing still.
 """
+
 import hashlib
 import os
 from pathlib import Path

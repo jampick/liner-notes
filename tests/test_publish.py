@@ -17,15 +17,18 @@ def tree(root):
     return root
 
 
-@pytest.mark.parametrize("bad, why", [
-    ("journeys/x/media/covers/AAAAAAAAAAA.webp", "personal data"),
-    ("journeys/x/media/culture/Film.webp", "personal data"),
-    ("lyrics/AAAAAAAAAAA.json", "personal data"),
-    ("journeys/x/standins.json", "video ids"),
-    ("clip.mp4", "personal media"),
-    ("notes/retimed.json", "lyrics file"),
-    ("README.md", "inline JPEG"),
-])
+@pytest.mark.parametrize(
+    "bad, why",
+    [
+        ("journeys/x/media/covers/AAAAAAAAAAA.webp", "personal data"),
+        ("journeys/x/media/culture/Film.webp", "personal data"),
+        ("lyrics/AAAAAAAAAAA.json", "personal data"),
+        ("journeys/x/standins.json", "video ids"),
+        ("clip.mp4", "personal media"),
+        ("notes/retimed.json", "lyrics file"),
+        ("README.md", "inline JPEG"),
+    ],
+)
 def test_tree_guard(tmp_path, bad, why):
     root = tree(tmp_path / "repo")
     assert check.scan_tree(root) == []

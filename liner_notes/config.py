@@ -9,6 +9,7 @@
 
 Anything missing falls back to the defaults below, so an empty or absent file is fine.
 """
+
 import tomllib
 
 from . import paths

@@ -11,6 +11,7 @@ the ones it couldn't find, are saved to ~/.local/share/liner-notes/matches/<slug
 for you to look over. Creating the playlist on that service is left to you (or a later --apply),
 because it writes to your account.
 """
+
 import json
 
 from . import paths
@@ -30,7 +31,9 @@ def youtube_toml(journey, bank):
         if not (s and yt):
             skipped.append(sid)
             continue
-        out.append(f"[[track]]\npath = {toml_quote('https://www.youtube.com/watch?v=' + yt)}\ntitle = {toml_quote(s['title'])}\nartist = {toml_quote(s['artist'])}\n")
+        out.append(
+            f"[[track]]\npath = {toml_quote('https://www.youtube.com/watch?v=' + yt)}\ntitle = {toml_quote(s['title'])}\nartist = {toml_quote(s['artist'])}\n"
+        )
     return "\n".join(out), skipped
 
 
@@ -61,7 +64,9 @@ def add(slug, provider="youtube", dry_run=False, force=False, log=print):
         s = bank.songs.get(sid)
         if not s:
             continue
-        res = cliamp.result("provider.search", {"provider": provider, "query": f"{s['artist']} {s['title']}", "limit": 10}, timeout=30) or {}
+        res = (
+            cliamp.result("provider.search", {"provider": provider, "query": f"{s['artist']} {s['title']}", "limit": 10}, timeout=30) or {}
+        )
         rows = res.get("tracks") or res.get("results") or []
         m = Matcher({sid: s})
         hit = next((r for r in rows if m.match(r) == sid), None)

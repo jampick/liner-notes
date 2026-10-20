@@ -15,18 +15,30 @@ def pilot_tree(base):
     write_json(f / "standins.json", {"BBBBBBBBBBB": {"standin": "SSSSSSSSSSS", "standin_offset": 1}})
     write_json(f / "culture-videos.json", {"A Film": {"yt": "CCCCCCCCCCC", "start": 0}})
     write_json(f / "stage-cache.json", {"wiki:A Film": "https://example.org/a.jpg"})
-    for sub, name in (("covers", "AAAAAAAAAAA.webp"), ("covers", "ZZZZZZZZZZZ.webp"), ("culture", "A_Film.webp"),
-                      ("artists", "Ann.webp"), ("depth", "ab12.png")):
+    for sub, name in (
+        ("covers", "AAAAAAAAAAA.webp"),
+        ("covers", "ZZZZZZZZZZZ.webp"),
+        ("culture", "A_Film.webp"),
+        ("artists", "Ann.webp"),
+        ("depth", "ab12.png"),
+    ):
         (f / "media" / sub).mkdir(parents=True, exist_ok=True)
         (f / "media" / sub / name).write_bytes(name.encode())
     h = src / "playlists/test-house"
-    write_json(h / "remixes.json", [{"id": "RRRRRRRRRRR", "title": "First Song (Remix)", "original": {"slug": "test-trip", "ytid": "AAAAAAAAAAA"}}])
+    write_json(
+        h / "remixes.json", [{"id": "RRRRRRRRRRR", "title": "First Song (Remix)", "original": {"slug": "test-trip", "ytid": "AAAAAAAAAAA"}}]
+    )
     write_json(h / "originals/old-song.json", {"lines": [{"t": 0, "text": "old"}]})
     (h / "media/covers").mkdir(parents=True)
     (h / "media/covers/vol1.webp").write_bytes(b"vol1")
     (src / "dist").mkdir()
-    songs = [{"id": "RRRRRRRRRRR", "remix": {"bpm": 124.0, "length": 300.0, "energy": [0.5]},
-              "original": {"bpm": 100.0, "length": 240.0, "energy": [0.4]}}]
+    songs = [
+        {
+            "id": "RRRRRRRRRRR",
+            "remix": {"bpm": 124.0, "length": 300.0, "energy": [0.5]},
+            "original": {"bpm": 100.0, "length": 240.0, "energy": [0.4]},
+        }
+    ]
     (src / "dist/test-house.html").write_text("<script>\nconst SONGS = " + json.dumps(songs) + ";\n</script>")
     for sub, name in (("video", "AAAAAAAAAAA.mp4"), ("audio", "AAAAAAAAAAA.webm"), ("soundcloud", "123.m4a")):
         (pc / sub).mkdir(parents=True, exist_ok=True)
