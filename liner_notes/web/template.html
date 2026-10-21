@@ -897,7 +897,7 @@ html, body { overflow-x: clip; }
   const anyOpen = () => ['#eracard', '#map', '#ending', '#opening'].find(s => !$(s).hidden);
 
   /* ---------- toggles ---------- */
-  const drift = $('#drift'); drift.onclick = () => { state.drift = !state.drift; drift.setAttribute('aria-pressed', String(state.drift)); live.textContent = state.drift ? 'Drift on: each preview plays and moves on.' : 'Drift off.'; if (state.drift && audio.paused) playPreview(true); };
+  const drift = $('#drift'); drift.onclick = () => { if (sync.on) return; state.drift = !state.drift; drift.setAttribute('aria-pressed', String(state.drift)); live.textContent = state.drift ? 'Drift on: each preview plays and moves on.' : 'Drift off.'; if (state.drift && audio.paused) playPreview(true); };
   const thBtn = $('#threadsBtn'); thBtn.onclick = () => { state.threads = !state.threads; thBtn.setAttribute('aria-pressed', String(state.threads)); drawThreads(); };
 
   /* ---------- keys. One map per screen, and each screen's hint row lists exactly what works there.
@@ -1011,7 +1011,9 @@ html, body { overflow-x: clip; }
     sync.reason = j && !j.ok ? j.reason || '' : '';
     if (sync.on !== was) {
       followBtn.hidden = !sync.on; $('#stageBtn').hidden = !sync.on || LIVE;
-      if (sync.on) { state.companion = true; stopAudio(0.3).then(() => setPaused(true)); }
+      // Drift walks the iTunes previews; while cliamp plays, a preview would sound over it.
+      $('#drift').hidden = sync.on;
+      if (sync.on) { state.companion = true; state.drift = false; $('#drift').setAttribute('aria-pressed', 'false'); stopAudio(0.3).then(() => setPaused(true)); }
       if (state.started && !stg.on) render();
     }
     if (sync.on !== was || down !== wasDown) { syncBands(); paintPageKeys(); }

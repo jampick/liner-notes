@@ -481,6 +481,25 @@ scenarios['churn-30-songs'] = async () => {
   await ctx.close();
 };
 
+// Drift plays the iTunes previews. While cliamp plays, a preview of the same song sounded over it, a few seconds
+// behind, so the button hides and does nothing until cliamp stops.
+scenarios['no-drift-over-cliamp'] = async () => {
+  const m = M(), s = m.stops[4];
+  play(s, { pos0: 20 });
+  const { ctx, page } = await newPage();
+  await page.goto(B + '/p/downtempo-drift.html#companion');
+  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, s.title);
+  await page.keyboard.press('Escape'); await sleep(800);
+  check('Drift is hidden while cliamp plays', !(await page.isVisible('#drift')));
+  await page.evaluate(() => document.querySelector('#drift').click());
+  await page.keyboard.press('d'); await page.keyboard.press('a');
+  const loud = await within(page, 2500, () => { const a = document.querySelector('#pv'); return !a.paused || !!a.getAttribute('src'); });
+  check('no preview plays over cliamp', loud === null);
+  put({ now: { ok: false, reason: 'stopped' } });
+  check('Drift comes back when cliamp stops', (await within(page, 4000, () => !document.querySelector('#drift').hidden)) !== null);
+  await ctx.close();
+};
+
 scenarios['bands-reconnect'] = async () => {
   const m = M(), s = m.stops[20];
   put({ bands_close_after: 5 });
