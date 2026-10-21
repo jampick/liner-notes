@@ -12,13 +12,11 @@ from collections import OrderedDict
 from pathlib import Path
 
 from .. import paths
+from . import contract
 
 PILOT_VIDEO = Path.home() / ".cache/journeys/video"
-VIDEO = re.compile(r"/v/([\w-]{11})\.mp4")
-PICTURE = re.compile(r"/m/([a-z0-9-]+)/(culture|artists)/([\w-][\w.-]*\.(webp|jpg|png))")
-DEPTH = re.compile(r"/d/([a-z0-9-]+)/(culture|artists|eras|covers)/([\w-][\w.-]*\.(?:webp|jpg|png))")
-TYPES = {"webp": "image/webp", "jpg": "image/jpeg", "png": "image/png"}
-UNSATISFIABLE = "unsatisfiable"
+VIDEO, PICTURE, COVER, DEPTH, TYPES = contract.VIDEO, contract.PICTURE, contract.COVER, contract.DEPTH, contract.TYPES
+UNSATISFIABLE, parse_range = contract.UNSATISFIABLE, contract.parse_range
 
 
 def video_dirs():
@@ -40,29 +38,6 @@ def video_ids(dirs=None):
         if d.is_dir():
             ids.update(f.stem for f in d.glob("*.mp4") if re.fullmatch(r"[\w-]{11}", f.stem))
     return sorted(ids)
-
-
-def parse_range(header, size):
-    """RFC 7233 for one byte range: None means "send it all with 200" (no header, a malformed one,
-    several ranges, or `bytes=-`), UNSATISFIABLE means 416, else (first, last) inclusive."""
-    if not header:
-        return None
-    m = re.fullmatch(r"\s*bytes\s*=\s*(\d*)\s*-\s*(\d*)\s*", header)
-    if not m or not (m.group(1) or m.group(2)):
-        return None
-    a, b = m.groups()
-    if a:
-        first = int(a)
-        last = int(b) if b else size - 1
-        if b and last < first:
-            return None  # not a valid range, so the header is ignored
-        if first >= size:
-            return UNSATISFIABLE
-        return first, min(last, size - 1)
-    n = int(b)
-    if n == 0 or size == 0:
-        return UNSATISFIABLE
-    return max(0, size - n), size - 1
 
 
 class Depth:
@@ -105,3 +80,17 @@ class Depth:
 def picture(folder, name):
     f = paths.cache() / folder / name
     return f if f.is_file() else None
+
+
+def cover(key, matcher=None):
+    """cache()/covers/<key>.webp, where key is a song id or a YouTube id. A YouTube id with no file of
+    its own is looked up in the bank's aliases and served as that song's cover."""
+    d = paths.cache() / "covers"
+    f = d / f"{key}.webp"
+    if f.is_file():
+        return f
+    if matcher is not None and contract.YT_ID.fullmatch(key):
+        sid = matcher.by_alias.get(("youtube", key))
+        if sid and (d / f"{sid}.webp").is_file():
+            return d / f"{sid}.webp"
+    return None

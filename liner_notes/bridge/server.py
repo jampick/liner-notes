@@ -36,7 +36,7 @@ from pathlib import Path
 
 from .. import __version__, adapters, paths
 from ..ids import youtube_id
-from . import media, tokens
+from . import contract, media, tokens
 from .bands import Bands
 from .lyrics import Lyrics
 from .now import Library, Now
@@ -45,24 +45,22 @@ from .theme import Theme
 PORT = 47391
 log = logging.getLogger("liner_notes.bridge")
 
-APPLE_PREVIEWS = "https://audio-ssl.itunes.apple.com"  # the page plays and analyses Apple's song previews
-CSP = (
-    "default-src 'self'; img-src 'self' data: blob:; "
-    f"media-src 'self' blob: {APPLE_PREVIEWS}; style-src 'self' 'unsafe-inline'; "
-    f"script-src 'self' 'unsafe-inline'; connect-src 'self' {APPLE_PREVIEWS}; font-src 'self' data:; frame-src 'none'; "
-    "object-src 'none'; base-uri 'none'"
+APPLE_PREVIEWS, CSP, TOKEN_META, NULL_CORS, MAX_BODY = (
+    contract.APPLE_PREVIEWS,
+    contract.CSP,
+    contract.TOKEN_META,
+    contract.NULL_CORS,
+    contract.MAX_BODY,
 )
-TOKEN_META = b'<meta name="liner-token" content="">'
-NULL_CORS = ("/now", "/theme")  # all a page opened from disk may read
 EXIT_PORT_BUSY = 3
 LAN_MAX_CONNECTIONS = 64
 QUIET = ("/now", "/bands", "/theme", "/song", "/events")  # polled; logged at DEBUG
-MAX_BODY = 4096
 CHUNK = 256 * 1024
 
 
 class Pages:
-    """Built pages with the token written in, kept while the file is unchanged (a few MB each)."""
+    """Built pages with the token written in and the CSP listing their inline scripts' hashes,
+    kept while the file is unchanged (a few MB each)."""
 
     def __init__(self, token, size=8):
         self.token, self.size, self.lock, self.cache = token, size, threading.Lock(), {}
@@ -74,18 +72,19 @@ class Pages:
         with self.lock:
             hit = self.cache.get(str(f))
             if hit and hit[0] == stamp:
-                return hit[1], hit[2], st.st_mtime
+                return hit[1], hit[2], st.st_mtime, hit[3]
         raw = f.read_bytes()
         if TOKEN_META not in raw and (str(f), stamp) not in self.warned:
             self.warned.add((str(f), stamp))
             log.warning("%s has no liner-token placeholder; its buttons will get 403 (rebuild it)", f.name)
-        body = raw.replace(TOKEN_META, f'<meta name="liner-token" content="{html.escape(self.token)}">'.encode(), 1)
+        body = contract.inject_token(raw, self.token)
         etag = '"' + hashlib.sha256(body).hexdigest()[:20] + '"'
+        policy = contract.csp(contract.script_hashes(body))  # the token only touches a meta tag
         with self.lock:
             if str(f) not in self.cache and len(self.cache) >= self.size:
                 self.cache.pop(next(iter(self.cache)))
-            self.cache[str(f)] = (stamp, body, etag)
-        return body, etag, st.st_mtime
+            self.cache[str(f)] = (stamp, body, etag, policy)
+        return body, etag, st.st_mtime, policy
 
 
 class BadRequest(Exception):
@@ -215,7 +214,7 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
                     log.warning(
                         "POST %s refused from %s: %s page token", self.route(), self.client_address[0], "a stale" if given else "no"
                     )
-                    self.send_json({"ok": False, "reason": "token", "error": "reload the page for the current token"}, 403)
+                    self.send_json(contract.token_refusal(), 403)
                     return False
                 return True
             if o is not None and o != "null" and not self.own_origin(o):
@@ -235,13 +234,13 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
             self._status = code
             super().send_response(code, message)
 
-        def head(self, code, ctype="application/json", extra=None, cache="no-store"):
+        def head(self, code, ctype="application/json", extra=None, cache=contract.CACHE["api"], csp=None):
             self.send_response(code)
             self.send_header("Content-Type", ctype)
             self.send_header("Cache-Control", cache)
             self.send_header("X-Content-Type-Options", "nosniff")
             if ctype.startswith("text/html"):
-                self.send_header("Content-Security-Policy", CSP)
+                self.send_header("Content-Security-Policy", csp or CSP)
                 self.send_header("Referrer-Policy", "no-referrer")
             o = self.cors_origin()
             if o:
@@ -260,22 +259,22 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
             if self.command != "HEAD":
                 self.wfile.write(body)
 
-        def send_body(self, body, ctype, etag=None, mtime=None, cache="no-cache"):
+        def send_body(self, body, ctype, etag=None, mtime=None, cache=contract.CACHE["page"], csp=None):
             extra = {}
             if etag:
                 extra["ETag"] = etag
             if mtime:
                 extra["Last-Modified"] = formatdate(mtime, usegmt=True)
             if etag and self.headers.get("If-None-Match") == etag:
-                return self.head(304, ctype, extra, cache)
-            self.head(200, ctype, {**extra, "Content-Length": str(len(body))}, cache)
+                return self.head(304, ctype, extra, cache, csp)
+            self.head(200, ctype, {**extra, "Content-Length": str(len(body))}, cache, csp)
             if self.command != "HEAD":
                 self.wfile.write(body)
 
-        def send_file(self, p, ctype, cache="private, max-age=3600"):
+        def send_file(self, p, ctype, cache=contract.CACHE["picture"]):
             self.send_range(Path(p), ctype, cache=cache, ranges=False)
 
-        def send_range(self, f, ctype, cache="private, max-age=86400", ranges=True):
+        def send_range(self, f, ctype, cache=contract.CACHE["video"], ranges=True):
             """A file in chunks, with ETag and Last-Modified, and one byte range when asked (206/416)."""
             st = f.stat()
             size = st.st_size
@@ -411,29 +410,33 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
             if m:
                 f = media.find_video(m.group(1))
                 return self.send_range(f, "video/mp4") if f else self.not_found()
-            m = re.fullmatch(r"/journey/([a-z0-9-]+)\.json", path)
+            m = contract.JOURNEY.fullmatch(path)
             if m and m.group(1) in bank.journeys:
                 return self.send_json(bank.journeys[m.group(1)])
-            m = re.fullmatch(r"/song/([a-z0-9-]+)\.json", path)
+            m = contract.SONG.fullmatch(path)
             if m and m.group(1) in bank.songs:
                 return self.send_json(bank.songs[m.group(1)])
             m = media.PICTURE.fullmatch(path)
             if m:
                 f = media.picture(m.group(2), m.group(3))
                 return self.send_file(f, media.TYPES[m.group(4)]) if f else self.not_found()
+            m = contract.COVER.fullmatch(path)
+            if m:
+                f = media.cover(m.group(2), matcher)
+                return self.send_file(f, "image/webp") if f else self.not_found()
             m = media.DEPTH.fullmatch(path)
             if m:
                 f = depth.find(m.group(1), m.group(2), m.group(3), bank.journey_dirs.get(m.group(1)))
                 return self.send_file(f, "image/png") if f else self.send_json({"ok": False, "error": "no depth map"}, 404)
-            m = re.fullmatch(r"/p/([a-z0-9-]+)\.html", path)
+            m = contract.PAGE.fullmatch(path)
             if m and (paths.dist() / f"{m.group(1)}.html").is_file():
-                body, etag, mtime = pages.get(paths.dist() / f"{m.group(1)}.html")
-                return self.send_body(body, "text/html; charset=utf-8", etag, mtime)
-            m = re.fullmatch(r"/p/([a-z0-9-]+)\.stage\.json", path)
+                body, etag, mtime, policy = pages.get(paths.dist() / f"{m.group(1)}.html")
+                return self.send_body(body, "text/html; charset=utf-8", etag, mtime, csp=policy)
+            m = contract.STAGE.fullmatch(path)
             if m:
                 for p in (paths.cache() / "stage" / f"{m.group(1)}.stage.json", paths.dist() / f"{m.group(1)}.stage.json"):
                     if p.is_file():
-                        return self.send_file(p, "application/json", cache="no-cache")
+                        return self.send_file(p, "application/json", cache=contract.CACHE["page"])
             self.not_found()
 
         def not_found(self):
@@ -450,7 +453,7 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
                 f"<title>Liner Notes</title><style>body{{font:17px/1.5 Georgia,serif;margin:32px 16px;background:#111;color:#eee}}"
                 f"a{{color:#f0c27b}}small{{color:#999}}li{{margin:10px 0}}</style><h1>Liner Notes</h1><ul>{rows or '<li>No built journeys yet.</li>'}</ul>"
             ).encode()
-            self.send_body(body, "text/html; charset=utf-8", cache="no-store")
+            self.send_body(body, "text/html; charset=utf-8", cache=contract.CACHE["api"])
 
         def history(self, matcher):
             ad = now.adapter
@@ -522,7 +525,7 @@ def make_handler(lib, now, port, lan=False, token=None, scheme="http", lyrics=No
             q = self.query()
             want_yt, want_song = urllib.parse.unquote(q.get("yt", "")), urllib.parse.unquote(q.get("song", ""))
             if (want_yt or want_song) and not ((want_yt and want_yt == out["yt"]) or (want_song and want_song == out["song"])):
-                return self.send_json({"ok": False, "error": "not playing", "lines": [], "source": None, **out})
+                return self.send_json(contract.lyrics_not_playing(out["yt"], out["song"]))
             res = lyrics.get(np, gen, bank.songs.get(song or ""))
             return self.send_json({**res, **out})
 

@@ -88,6 +88,13 @@ def test_pictures_and_depth_maps(start, media):
 
 
 TRAVERSALS = [
+    "/m/live/covers/../../secret.webp",
+    "/m/live/covers/..%2f..%2fsecret.webp",
+    "/m/live/covers/.hidden.webp",
+    "/m/live/covers/a.b.webp",
+    "/m/live/covers/%2e%2e.webp",
+    "/m/Live/covers/massive-attack--protection.webp",
+    "/m/live/covers/massive-attack--protection.png",
     "/v/../../secret.txt",
     "/v/..%2f..%2fsecret.mp4",
     "/v/%2e%2e%2fsecret12.mp4",
@@ -121,3 +128,18 @@ def test_no_way_out_of_the_cache(start, media, path):
     st, body, _ = b.req("GET", path)
     assert st in (400, 404), (path, st)
     assert b"private" not in body
+
+
+def test_covers_by_song_id_or_youtube_id(start, env):
+    covers = env["tmp"] / "cache/covers"
+    covers.mkdir(parents=True)
+    (covers / "massive-attack--protection.webp").write_bytes(b"RIFFprotection")
+    (covers / "ZZZZZZZZZZZ.webp").write_bytes(b"RIFFoffbank")
+    b = start()
+    st, body, h = b.req("GET", "/m/live/covers/massive-attack--protection.webp")
+    assert st == 200 and body == b"RIFFprotection" and h["Content-Type"] == "image/webp" and h["Cache-Control"] == "private, max-age=3600"
+    assert b.req("GET", "/m/demo/covers/massive-attack--protection.webp")[1] == b"RIFFprotection"  # any journey's slug
+    assert b.req("GET", "/m/live/covers/0Rw-UsRPNqc.webp")[1] == b"RIFFprotection"  # a YouTube id, through the bank's aliases
+    assert b.req("GET", "/m/live/covers/ZZZZZZZZZZZ.webp")[1] == b"RIFFoffbank"  # a song not in the bank, cached by its id
+    assert b.req("GET", "/m/live/covers/christopher-cross--sailing.webp")[0] == 404  # in the bank, no cover
+    assert b.req("GET", "/m/live/covers/AAAAAAAAAAA.webp")[0] == 404

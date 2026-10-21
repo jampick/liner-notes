@@ -133,7 +133,8 @@ def test_pages_get_the_token_and_a_csp(start, env):
     (dist / "demo.html").write_text('<!doctype html><head><meta name="liner-token" content=""></head><body>hi</body>')
     st, body, h = b.req("GET", "/p/demo.html")
     assert st == 200 and f'<meta name="liner-token" content="{b.token}">'.encode() in body
-    assert h["Content-Security-Policy"] == CSP and "frame-src 'none'" in CSP
+    assert h["Content-Security-Policy"] == CSP and "frame-src 'none'" in CSP  # no inline script, so script-src 'self' alone
+    assert "script-src 'self';" in CSP and "'unsafe-inline'" not in CSP.split("script-src", 1)[1].split(";")[0]
     assert h["Cache-Control"] == "no-cache" and h["ETag"]
     assert b.req("GET", "/p/demo.html", headers={"If-None-Match": h["ETag"]})[0] == 304
     st, _, h = b.req("GET", "/")
@@ -383,3 +384,70 @@ def test_port_holder_and_exit_code(env, monkeypatch, caplog):
         assert any(f"port {port} is taken by pid {os.getpid()}" in r.getMessage() for r in caplog.records)
     finally:
         s.close()
+
+
+PAGE = """<!doctype html><head><meta name="liner-token" content="">
+<script type="application/json" id="data">{"a": 1}</script>
+<script src="/x.js"></script>
+<script>\r\nwindow.one = 1;\r\n</script></head><body>
+<SCRIPT defer>document.body.dataset.ran = window.one + 1;</SCRIPT>
+</body>"""
+
+
+def sha(text):
+    import base64
+    import hashlib
+
+    return "'sha256-" + base64.b64encode(hashlib.sha256(text.encode()).digest()).decode() + "'"
+
+
+def test_page_scripts_are_allowed_by_hash(start, env):
+    b = start()
+    (env["tmp"] / "dist").mkdir()
+    (env["tmp"] / "dist/demo.html").write_text(PAGE, newline="")
+    st, body, h = b.req("GET", "/p/demo.html")
+    policy = h["Content-Security-Policy"]
+    script_src = policy.split("script-src ", 1)[1].split(";")[0].split()
+    assert "'unsafe-inline'" not in script_src and script_src[0] == "'self'"
+    for inline in ('{"a": 1}', "\nwindow.one = 1;\n", "document.body.dataset.ran = window.one + 1;"):
+        assert sha(inline) in script_src, inline  # CRLF hashed as the parser sees it, LF
+    assert len(script_src) == 4  # 'self' and three inline blocks; the src= one isn't hashed
+    assert sha("alert(document.cookie)") not in policy  # anything injected later isn't listed
+    assert "style-src 'self' 'unsafe-inline'" in policy
+    assert b.req("GET", "/p/demo.html")[2]["Content-Security-Policy"] == policy  # cached with the page
+
+
+def test_hashed_scripts_run_in_a_browser(start, env, tmp_path):
+    """Headless Chromium, nothing but the bridge's own origin: the page's script runs, and a script it
+    injects at run time (not in the file, so not hashed) is blocked."""
+    import shutil
+    import subprocess
+
+    chromium = shutil.which("chromium") or shutil.which("chromium-browser")
+    if not chromium:
+        pytest.skip("no chromium")
+    b = start()
+    (env["tmp"] / "dist").mkdir()
+    (env["tmp"] / "dist/demo.html").write_text(
+        '<!doctype html><meta name="liner-token" content=""><body><script>document.body.dataset.ran = "yes";'
+        'const s = document.createElement("script"); s.textContent = "document.body.dataset.injected = 1"; document.body.append(s);'
+        "</script></body>"
+    )
+    r = subprocess.run(
+        [
+            chromium,
+            "--headless=new",
+            "--disable-gpu",
+            "--no-first-run",
+            "--no-default-browser-check",
+            f"--user-data-dir={tmp_path / 'profile'}",
+            "--virtual-time-budget=2000",
+            "--dump-dom",
+            f"http://127.0.0.1:{b.port}/p/demo.html",
+        ],
+        capture_output=True,
+        text=True,
+        timeout=60,
+    )
+    assert 'data-ran="yes"' in r.stdout, r.stderr[-500:]
+    assert "data-injected" not in r.stdout

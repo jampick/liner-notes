@@ -28,6 +28,7 @@ from .clock import Clock
 from .route import Latency
 
 log = logging.getLogger("liner_notes.bridge")
+STRONG = ("playlist", "queue", "remix")
 OFFLINE = re.compile(r"\s*\(offline\)\s*$", re.I)
 
 
@@ -81,14 +82,19 @@ class Library:
 
     def journey_for(self, song, playlist=None, hint=None):
         """The loaded playlist's journey if it has the song, then the queue's journey, then any."""
+        return self.journey_choice(song, playlist, hint)[0]
+
+    def journey_choice(self, song, playlist=None, hint=None):
+        """(slug, why) with why "playlist", "queue" or "bank" (the first journey in the bank with the
+        song, a guess), or (None, None)."""
         bank, _ = self.get()
         if not song:
-            return None
-        for slug in (playlist_slug(playlist), hint):
+            return None, None
+        for slug, why in ((playlist_slug(playlist), "playlist"), (hint, "queue")):
             if slug and slug in bank.journeys and song in bank.journeys[slug]["songs"]:
-                return slug
+                return slug, why
         have = bank.journeys_with(song)
-        return have[0] if have else None
+        return (have[0], "bank") if have else (None, None)
 
     def remix_journey(self, track):
         """The remix journey listing this exact upload (by id, path or title); remixes aren't bank songs."""
@@ -143,6 +149,7 @@ class Now:
         self.track = None
         self.cond = threading.Condition()
         self.qrev, self.qjourney, self.qbusy = None, None, False
+        self.sticky = None  # ((track, generation), journey, why) for the play under way
         self.playlist_file = playlist_file or PlaylistFile()
         self.clock = Clock(self._sample, latency or Latency().get, interval=self._interval(adapter))
         self.repicked = time.monotonic()
@@ -270,7 +277,7 @@ class Now:
             "album": np.album,
             "yt": np.ids.get("youtube"),
             "song": song,
-            "journey": remix or self.lib.journey_for(song, playlist, self.qjourney),
+            "journey": self.journey(np, remix, song, playlist),
             "playlist": playlist,
             "position": round(r["position"], 3),
             "duration": np.duration,
@@ -278,6 +285,18 @@ class Now:
             "moving": r["moving"],
             "latency": r["latency"],
         }
+
+    def journey(self, np, remix, song, playlist):
+        """The journey for this play, sticky so a page never bounces between two journeys: an answer
+        from the playlist name, the queue or a remix list stays for the rest of the play; a first-in-bank
+        guess may be replaced once, when one of those turns up (the queue lookup lands a moment later)."""
+        cand = (remix, "remix") if remix else self.lib.journey_choice(song, playlist, self.qjourney)
+        with self.cond:
+            key = (np.track_key(), self.gen)
+            cur = self.sticky if self.sticky and self.sticky[0] == key else None
+            if cur is None or (cur[2] not in STRONG and cand[1] in STRONG):
+                self.sticky = (key, *cand)
+            return self.sticky[1]
 
     def wait(self, version, timeout=15):
         with self.cond:

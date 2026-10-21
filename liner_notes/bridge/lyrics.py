@@ -26,6 +26,7 @@ from pathlib import Path
 
 from .. import USER_AGENT, paths
 from ..ids import clean_artist, clean_title, split_upload_title
+from . import contract
 
 PILOT = Path.home() / "Projects/Music/journeys/lyrics"
 LRCLIB = "https://lrclib.net"
@@ -41,10 +42,9 @@ def lines_out(rows):
     out = []
     for r in rows or []:
         try:
-            s = round(float(r.get("start") or 0), 3)
+            out.append(contract.lyric_line(r.get("start") or 0, r.get("text")))
         except (TypeError, ValueError, AttributeError):
             continue
-        out.append({"t": s, "start": s, "text": str(r.get("text") or "")})
     return out
 
 

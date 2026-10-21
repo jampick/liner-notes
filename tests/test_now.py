@@ -278,3 +278,35 @@ def test_remix_uploads_name_their_remix_journey(tmp_path):
     assert lib.remix_journey({"path": "https://www.youtube.com/watch?v=8ODf0VI3Pp4", "title": "anything"}) == "house"
     assert lib.remix_journey({"path": "", "title": "what you won't do for love (party pupils remix)"}) == "house"
     assert lib.remix_journey({"path": "https://www.youtube.com/watch?v=zzzzzzzzzzz", "title": "Ride Like the Wind"}) is None
+
+
+def test_journey_is_sticky_for_a_play(start, env):
+    """Protection is on demo and trip-hop. The first answer is a bank guess (demo); the queue lookup
+    landing upgrades it once; after that nothing moves it until the song plays again."""
+    b = start()
+    first = b.get("/now")
+    assert first["journey"] == "demo"  # first in the bank: a guess
+    assert wait_for(lambda: b.now.qrev is not None and not b.now.qbusy)  # the real lookup is a tie here; let it finish
+    b.now.qjourney = "trip-hop"  # the queue lookup lands
+    assert [b.get("/now")["journey"] for _ in range(3)] == ["trip-hop"] * 3
+    b.now.qjourney = "demo"
+    st = env["tmp"] / "state/liner-notes"
+    st.mkdir(parents=True, exist_ok=True)
+    (st / "playlist").write_text("Demo")
+    assert [b.get("/now")["journey"] for _ in range(3)] == ["trip-hop"] * 3  # no ping-pong
+    b.fake.play(1)
+    assert wait_for(lambda: b.get("/now")["song"] == "christopher-cross--sailing")
+    b.fake.play(0)  # the same song again is a new play: decided afresh
+    assert wait_for(lambda: b.get("/now")["journey"] == "demo")
+
+
+def test_a_strong_first_answer_is_never_downgraded(start, env):
+    st = env["tmp"] / "state/liner-notes"
+    st.mkdir(parents=True, exist_ok=True)
+    (st / "playlist").write_text("Trip-Hop")
+    b = start()
+    assert b.get("/now")["journey"] == "trip-hop"
+    assert wait_for(lambda: b.now.qrev is not None and not b.now.qbusy)
+    (st / "playlist").write_text("Something Else")
+    b.now.qjourney = "demo"
+    assert b.get("/now")["journey"] == "trip-hop"

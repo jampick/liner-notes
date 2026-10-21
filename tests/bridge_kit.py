@@ -127,6 +127,7 @@ def env(tmp_path, monkeypatch):
     monkeypatch.setattr("liner_notes.bridge.media.PILOT_VIDEO", tmp_path / "pilot-video")
     monkeypatch.setattr("liner_notes.bridge.route.PILOT_TABLE", tmp_path / "pilot-av.json")
     monkeypatch.setattr("liner_notes.bridge.route.route", lambda: "")
+    monkeypatch.setattr("liner_notes.bridge.theme.THEME", tmp_path / "no-omarchy-theme")  # never the desktop's own
     lrc = FakeLrclib()
     monkeypatch.setenv("LINER_NOTES_LRCLIB_URL", lrc.url)
     yield {"tmp": tmp_path, "root": root, "sock": sock, "lrclib": lrc}
