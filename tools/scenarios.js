@@ -30,7 +30,7 @@ const FORBIDDEN = /(^|\.)(youtube\.com|youtube-nocookie\.com|ytimg\.com|googlevi
 let bridge = null, S = {}, epoch = 1;
 function put(patch) { Object.assign(S, patch); const f = path.join(FX, 'state.json'); fs.writeFileSync(f + '.tmp', JSON.stringify(S)); fs.renameSync(f + '.tmp', f); }
 async function startBridge() {
-  bridge = spawn(PY, [path.join(ROOT, 'tools/fake_bridge.py'), 'serve', FX, '--port', String(PORT)], { stdio: 'ignore' });
+  bridge = spawn(PY, [path.join(ROOT, 'tools/fake_bridge.py'), 'serve', FX, '--port', String(PORT)], { stdio: 'ignore', env: { ...process.env, PYTHONPATH: ROOT } });
   for (let k = 0; k < 50; k++) { try { const r = await fetch(B + '/now'); if (r.ok) return; } catch {} await sleep(100); }
   throw new Error('fake bridge did not start');
 }
@@ -76,7 +76,8 @@ async function newPage(opt = {}) {
 }
 function watch(page) {
   page.on('crash', () => check('renderer did not crash', false));
-  page.on('pageerror', e => check('no page errors', false, e.message));
+  const seen = new Set();  // each distinct error once, not once per timer tick
+  page.on('pageerror', e => { if (!seen.has(e.message)) { seen.add(e.message); check('no page errors', false, e.message); } });
 }
 // Resolves to the milliseconds it took, or null after `ms`.
 async function within(page, ms, fn, arg) { const t = Date.now(); try { await page.waitForFunction(fn, arg, { timeout: ms, polling: 50 }); return Date.now() - t; } catch { return null; } }
@@ -218,13 +219,17 @@ scenarios['s6-no-video'] = async () => {
   const before = forbidden.size;
   await page.goto(B + '/p/downtempo-drift.html#companion');
   await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, s.title);
-  await sleep(10000);
+  await sleep(4000);
+  const f0 = await page.evaluate(() => LinerNotes.hero().frames || 0);
+  await sleep(6000);
   check('no YouTube or Google requests', forbidden.size === before);
   const lbl = await text(page, '#svVisLabel');
   check('the big pane shows the artist photo', /^•— photo/.test(lbl), lbl);
   const stats = await page.evaluate(() => LinerNotes.hero());
   console.log('      hero', JSON.stringify(stats));
-  if (stats.gl) check('depth parallax runs at no more than 15 fps', stats.frames / 10 <= 16.5, `${stats.frames} frames`);
+  check('depth parallax is up (WebGL2 in this browser)', stats.gl && stats.on, JSON.stringify(stats));
+  const fps = (stats.frames - f0) / 6;
+  check('depth parallax draws 10 to 15 frames a second', fps >= 10 && fps <= 15.5, fps.toFixed(1));
   await shot(page, 'stage-photo-1920x1080');
   await ctx.close();
 };
@@ -324,15 +329,19 @@ scenarios['s4-switch-journeys'] = async () => {
   play({ ...o, id: o.song, journey: null }, { pos0: 5 });
   await sleep(2500);
   check('a song with no journey stays put, on the live stage', new URL(page.url()).pathname === '/p/drift-b.html' && (await text(page, '#svTitle')) === o.title, page.url());
-  await page.goto(B + '/p/live.html');
-  check('/p/live.html shows the song', await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, o.title) !== null);
-  check('/p/live.html has no full-page button', !(await page.isVisible('#svExit')));
-  await shot(page, 'stage-live-1920x1080');
-  play(s, { pos0: 5 });
-  check('/p/live.html moves to the journey when one has the song', await within(page, 3000, () => location.pathname === '/p/downtempo-drift.html') !== null, page.url());
   await ctx.close();
+  const lp = await newPage();
+  await lp.page.goto(B + '/p/live.html');
+  check('/p/live.html shows the song', await within(lp.page, 3000, t => document.querySelector('#svTitle').textContent === t, o.title) !== null);
+  check('/p/live.html has no full-page button', !(await lp.page.isVisible('#svExit')));
+  await shot(lp.page, 'stage-live-1920x1080');
+  play(s, { pos0: 5 });
+  check('/p/live.html moves to the journey when one has the song', await within(lp.page, 4000, () => location.pathname === '/p/downtempo-drift.html') !== null, lp.page.url());
+  await lp.ctx.close();
 };
 
+// The bridge keeps its token across restarts, so a refusal means the page predates a token change (a new
+// state dir, a rotated token). The page should reload once for the new one, and not loop if refusals go on.
 scenarios['token-refresh'] = async () => {
   const m = M(), s = m.stops[18];
   play(s, { pos0: 20 });
@@ -340,15 +349,22 @@ scenarios['token-refresh'] = async () => {
   await page.goto(B + '/p/downtempo-drift.html#companion');
   await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, s.title);
   await page.evaluate(() => { window.__same = 'yes'; });
-  stopBridge(); await startBridge();  // a new start, a new token
-  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, s.title);
+  stopBridge(); await startBridge();
+  await page.keyboard.press('ArrowRight'); await sleep(700);
+  check('the token survives a bridge restart', logLines('posts.log').slice(-1)[0].token_ok === true);
+  check('and nothing reloads', (await page.evaluate(() => window.__same)) === 'yes');
+  put({ refuse_token: true });
   clearLogs();
   await page.keyboard.press('ArrowRight');
   check('a refused token reloads the page once', await within(page, 4000, () => !window.__same) !== null);
   await within(page, 3000, t => document.querySelector('#svTitle') && document.querySelector('#svTitle').textContent === t, s.title);
+  await page.evaluate(() => { window.__again = 'yes'; });
+  await page.keyboard.press('ArrowRight'); await sleep(1500);
+  check('a second refusal within a minute doesn\'t reload again', (await page.evaluate(() => window.__again)) === 'yes');
+  put({ refuse_token: false });
   await page.keyboard.press('ArrowRight'); await sleep(700);
   const posts = logLines('posts.log');
-  check('and the next POST carries the new token', posts.length === 2 && !posts[0].token_ok && posts[1].token_ok, JSON.stringify(posts.map(p => p.token_ok)));
+  check('POSTs go through once the bridge takes the token', posts.length === 3 && !posts[0].token_ok && !posts[1].token_ok && posts[2].token_ok, JSON.stringify(posts.map(p => p.token_ok)));
   await ctx.close();
 };
 
@@ -409,7 +425,7 @@ scenarios['perf-stage'] = async () => {
   const nowN = req.filter(r => r.p === '/now').length;
   check('under 20 /now a minute when hidden', nowN * 2 < 20, `${nowN} in 30 s`);
   check('nothing else asked for while hidden', req.filter(r => r.p !== '/now').length <= 1, req.filter(r => r.p !== '/now').map(r => r.p).join(','));
-  check('the video stops while hidden', await page.$eval('.sv-vid video', v => v.paused).catch(() => true));
+  check('the video stops while hidden', await page.$eval('.sv-vid video', v => v.paused));
   await ctx.close();
 };
 
@@ -495,8 +511,137 @@ scenarios['remix'] = async () => {
   await rm.ctx.close();
 };
 
+scenarios['webgl-context-loss'] = async () => {
+  const m = M(), s = m.artist_stop, c = m.culture_stop;
+  play(s, { pos0: 30 });
+  const { ctx, page } = await newPage();
+  await page.goto(B + '/p/downtempo-drift.html#companion');
+  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, s.title);
+  check('parallax up before the loss', await within(page, 5000, () => LinerNotes.hero().on) !== null);
+  await page.evaluate(() => { window.__lc = document.querySelector('#svGl').getContext('webgl2').getExtension('WEBGL_lose_context'); window.__lc.loseContext(); });
+  await sleep(600);
+  const a = await page.evaluate(() => LinerNotes.hero());
+  play(c, { pos0: 30 });  // a new picture while the context is gone
+  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, c.title);
+  await sleep(2000);
+  const b = await page.evaluate(() => [LinerNotes.hero(), document.querySelector('#svGl').classList.contains('on'), document.querySelector('#stagev').classList.contains('glon')]);
+  check('while lost: canvas off, no drawing', b[0].lost && !b[1] && !b[2] && b[0].frames === a.frames, JSON.stringify([a.frames, b]));
+  check('the still shows meanwhile', await page.evaluate(() => [...document.querySelectorAll('.sv-still')].some(i => i.classList.contains('on'))));
+  await page.evaluate(() => window.__lc.restoreContext());
+  check('after restore the parallax comes back', await within(page, 5000, () => { const h = LinerNotes.hero(); return !h.lost && h.on && h.running; }) !== null, JSON.stringify(await page.evaluate(() => LinerNotes.hero())));
+  const f0 = await page.evaluate(() => LinerNotes.hero().frames); await sleep(1500);
+  check('and draws again', (await page.evaluate(() => LinerNotes.hero().frames)) > f0);
+  await ctx.close();
+};
+
+scenarios['journey-ping-pong'] = async () => {
+  const m = M(), s = m.stops[12];
+  play(s, { pos0: 20 });
+  const { ctx, page } = await newPage();
+  await page.goto(B + '/p/downtempo-drift.html#companion');
+  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, s.title);
+  put({ now: { ...S.now, journey: 'drift-b' } });  // one answer naming another journey, then back
+  await sleep(450);
+  put({ now: { ...S.now, journey: 'downtempo-drift' } });
+  await sleep(2500);
+  check('one stray answer doesn\'t move the window', new URL(page.url()).pathname === '/p/downtempo-drift.html', page.url());
+  put({ now: { ...S.now, journey: 'drift-b' } });
+  check('two answers that agree do', await within(page, 4000, () => location.pathname === '/p/drift-b.html') !== null, page.url());
+  await within(page, 3000, t => document.querySelector('#svTitle') && document.querySelector('#svTitle').textContent === t, s.title);
+  put({ now: { ...S.now, journey: 'downtempo-drift' } });
+  await sleep(5000);
+  check('and it doesn\'t bounce straight back to the page it left', new URL(page.url()).pathname === '/p/drift-b.html', page.url());
+  await ctx.close();
+};
+
+scenarios['video-retry'] = async () => {
+  const m = M(), a = m.video_stops[0], b = m.video_stops[1];
+  if (!m.videos) return check('fixtures have video (ffmpeg)', false);
+  put({ video_broken: [a.yt], videos: null, lyrics: {} });
+  play(a, { pos0: 20 });
+  const { ctx, page } = await newPage();
+  await page.goto(B + '/p/downtempo-drift.html#companion');
+  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, a.title);
+  check('a video that errors is set aside', await within(page, 5000, yt => LinerNotes.stage().videoFailed.includes(yt), a.yt) !== null);
+  check('the stage shows a picture instead', !(await page.evaluate(() => document.querySelector('#stagev').classList.contains('cinema'))));
+  const all = m.video_stops.map(x => x.yt);
+  put({ video_broken: [], videos: all.filter(x => x !== a.yt) });  // the bridge stops listing it
+  await sleep(5500);
+  play(b, { pos0: 20 });
+  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, b.title);
+  put({ videos: null });  // and lists it again
+  await sleep(5500);
+  play(a, { pos0: 20 });
+  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, a.title);
+  check('listed again, it plays again', await within(page, 6000, () => document.querySelector('#stagev').classList.contains('cinema')) !== null, JSON.stringify(await page.evaluate(() => LinerNotes.stage())));
+  await ctx.close();
+};
+
+scenarios['stage-copy-and-layout'] = async () => {
+  const m = M(), r = m.rawsong, o = m.offsong;
+  put({ now: { ok: false, reason: 'stopped' }, lyrics: {}, history: [], videos: null, video_broken: [] });
+  const { ctx, page } = await newPage();
+  await page.goto(B + '/p/downtempo-drift.html#companion');
+  await sleep(1500);
+  const stopped = await page.evaluate(() => document.querySelector('#stagev').innerText);
+  check('"Nothing playing" is said once', (stopped.match(/Nothing playing/g) || []).length === 1, stopped.replace(/\n/g, ' | ').slice(0, 300));
+  check('no L in the hint row with nothing playing', !/lyrics/.test(await text(page, '#svKeys')), await text(page, '#svKeys'));
+  play({ ...r, id: r.song, journey: null }, { pos0: 10 });
+  check('a raw upload title reads as title and artist', await within(page, 3000, () => document.querySelector('#svTitle').textContent === 'Big Poppa' && document.querySelector('#svBy').textContent === 'Biggie Smalls') !== null,
+    `${await text(page, '#svTitle')} / ${await text(page, '#svBy')}`);
+  check('L shows once a song plays', await within(page, 2000, () => /lyrics/.test(document.querySelector('#svKeys').textContent)) !== null);
+  const note = await within(page, 3000, () => /isn’t on it/.test(document.querySelector('#svNote').textContent));
+  check('a playlist with a journey: the copy says this song isn\'t on it', note !== null, await text(page, '#svNote'));
+  check('no cover in the cache: no cover card', await page.$eval('#svCover', i => !i.getAttribute('src')));
+  await shot(page, 'stage-raw-title-1920x1080');
+  play({ ...o, id: o.song, journey: null }, { pos0: 10 });
+  check('a playlist with no journey says so', await within(page, 3000, () => /has no liner notes yet/.test(document.querySelector('#svNote').textContent)) !== null, await text(page, '#svNote'));
+  const c = m.culture_stop;
+  play(c, { pos0: 10 });
+  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, c.title);
+  await page.keyboard.press('k'); await sleep(300);
+  const st = await page.evaluate(() => { const b = document.querySelector('#svStamp'), x = document.querySelector('#svExit').getBoundingClientRect(), r = b.getBoundingClientRect(); return { h: r.height, lh: parseFloat(getComputedStyle(b).fontSize) * 1.8, overlap: r.left < x.right && r.right > x.left && r.top < x.bottom && r.bottom > x.top }; });
+  check('the stamp stays on one line', st.h <= st.lh, JSON.stringify(st));
+  check('and clear of the full-page chip', !st.overlap, JSON.stringify(st));
+  check('the lettered cover stays away on the stage', await page.$eval('#svCover', i => !i.getAttribute('src')));
+  const era = await page.$eval('#svEra', n => { const d = n.querySelector('.nw'); return d ? d.getClientRects().length : -1; });
+  check('"draft notes, AI-written" never breaks', era === 1 || era === -1, String(era));
+  await page.keyboard.press('k');
+  stopBridge();
+  await within(page, 3000, () => /bridge/i.test(document.querySelector('#svTitle').textContent));
+  const codes = await page.$$eval('#svNote code', cs => cs.map(c => [c.textContent, c.getClientRects().length, getComputedStyle(c).whiteSpace]));
+  check('bridge down: both commands on one line each, in mono', codes.length === 2 && codes.every(x => x[1] === 1 && x[2] === 'nowrap'), JSON.stringify(codes));
+  check('no stray word in the stamp', (await text(page, '#svStamp')) === '');
+  await startBridge();
+  await ctx.close();
+};
+
+scenarios['small-screens'] = async () => {
+  const m = M(), s = m.culture_stop;
+  put({ lyrics: { [s.yt]: lyricsFor(2, 3).map((l, k) => ({ ...l, text: k % 2 ? l.text : 'a much longer made-up lyric line that takes two lines on a small screen' })) }, theme: null });
+  for (const [w, h] of [[1366, 768], [1024, 600]]) {
+    play(s, { pos0: 20 });
+    const { ctx, page } = await newPage({ viewport: { width: w, height: h } });
+    await page.goto(B + '/p/downtempo-drift.html#companion');
+    await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, s.title);
+    await within(page, 5000, () => document.querySelector('#stagev').classList.contains('lyrics'));
+    await sleep(2500);
+    const r = await page.evaluate(() => {
+      const box = q => document.querySelector(q).getBoundingClientRect();
+      const lyr = box('.sv-lyr'), now = box('#svLyric .now'), nx = box('#svLyric .nx'), note = document.querySelector('#svNote');
+      return { lyrics: now.bottom <= lyr.bottom - 2 && nx.bottom <= lyr.bottom - 2 && now.top >= lyr.top, notes: note.scrollHeight <= note.clientHeight + 2 || note.classList.contains('clip') };
+    });
+    check(`${w}x${h}: lyric lines whole`, r.lyrics, JSON.stringify(r));
+    check(`${w}x${h}: notes whole or faded, never cut`, r.notes, JSON.stringify(r));
+    await shot(page, `stage-default-${w}x${h}`);
+    await ctx.close();
+  }
+};
+
 const THEMES = {
   dark: { ok: true, name: 'test-dark', mode: 'dark', font: 'JetBrainsMono Nerd Font', colors: { background: '#1a1b26', foreground: '#a9b1d6', accent: '#7aa2f7', blue: '#7aa2f7', cyan: '#7dcfff', green: '#9ece6a', yellow: '#e0af68', red: '#f7768e', magenta: '#bb9af7', muted: '#565f89', lighter_background: '#24283b' } },
+  // The owner's theme on WS2 (GET /theme from the running bridge, 2026-10-20).
+  'astro-arc': { ok: true, name: 'astro-arc', mode: 'dark', font: 'JetBrainsMono Nerd Font', colors: { accent: '#5694b4', selection: '#424457', muted: '#6c6f81', background: '#2e251c', dark_background: '#271f18', darker_background: '#1e1812', lighter_background: '#3e3226', foreground: '#cead7b', dark_foreground: '#6c7086', light_foreground: '#bac2de', bright_foreground: '#cead7b', red: '#f38ba8', yellow: '#f9e2af', orange: '#f6b6ab', green: '#a6e3a1', cyan: '#94e2d5', blue: '#5694b4', magenta: '#f5c2e7', brown: '#9f8883' } },
   light: { ok: true, name: 'test-light', mode: 'light', font: 'JetBrainsMono Nerd Font', colors: { background: '#e1e2e7', foreground: '#3760bf', accent: '#2e7de9', blue: '#2e7de9', cyan: '#007197', green: '#587539', yellow: '#8c6c3e', red: '#f52a65', magenta: '#9854f1', muted: '#a8aecb', dark_background: '#d0d5e3' } },
 };
 
@@ -504,7 +649,7 @@ scenarios['themes-contrast-shots'] = async () => {
   const m = M(), s = m.culture_stop, v = m.video_stops[1];
   for (const [name, theme] of [...Object.entries(THEMES), ['default', null]]) {
     put({ theme, lyrics: { [s.yt]: lyricsFor(2, 4), [v.yt]: lyricsFor(2, 4) } });
-    for (const [w, h] of theme ? [[1920, 1080], [1366, 768], [390, 844]] : [[1920, 1080]]) {
+    for (const [w, h] of theme ? [[1920, 1080], [1366, 768], [1024, 600], [390, 844]] : [[1920, 1080]]) {
       const stop = w === 390 ? v : s;
       play(stop, { pos0: 30 });
       const { ctx, page } = await newPage({ viewport: { width: w, height: h }, colorScheme: name === 'light' ? 'light' : 'dark' });
@@ -540,6 +685,8 @@ scenarios['themes-contrast-shots'] = async () => {
 (async () => {
   fs.mkdirSync(SHOTS, { recursive: true });
   execFileSync(PY, [path.join(ROOT, 'tools/fake_bridge.py'), 'fixtures', FX], { env: { ...process.env, PYTHONPATH: ROOT }, stdio: 'inherit' });
+  // Without ffmpeg there's no test video and every video check is skipped; under CI that's a failure, not a pass.
+  if (!M().videos) { if (process.env.CI) failures.push('fixtures: no test video (ffmpeg missing)'); else console.log('NOTE: no ffmpeg, so the video checks are skipped'); }
   put({ now: { ok: false, reason: 'stopped' }, lyrics: {}, history: [], theme: null });
   clearLogs();
   await startBridge();

@@ -35,6 +35,12 @@ html, body { margin: 0; height: 100%; background: rgb(var(--svbg)); color: var(-
 .pic video.on { opacity: .9; }
 .pic .wash { position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(0deg, rgb(var(--svbg)) 0%, rgba(var(--svbg), .0) 38%), radial-gradient(ellipse 85% 80% at 50% 45%, transparent 55%, rgba(var(--svbg), .55) 100%); }
+/* No video, photo or covers: the original's name, big and quiet, rather than an empty pane. */
+.pic .empty { position: absolute; inset: 0; display: none; place-content: center; text-align: center; gap: 1.5vh; padding: 0 8%; color: var(--mid); }
+body.nopic .pic .empty { display: grid; }
+.pic .empty i { font-style: normal; font-size: 18cqh; line-height: 1; color: color-mix(in srgb, var(--amber) 45%, transparent); }
+.pic .empty b { font: 400 max(28px, 5cqh)/1.1 var(--serif); color: var(--ink); }
+.pic .empty span { font-size: 20px; color: var(--mid); }
 .covers { position: absolute; left: 28px; bottom: 22px; display: flex; align-items: center; gap: 22px; z-index: 2; }
 .covers figure { margin: 0; display: grid; gap: 8px; }
 .covers figure.none { display: none; }
@@ -131,6 +137,7 @@ body.idle-on .idle { display: grid; }
     <div class="pic">
       <img class="photo" id="photo" alt="">
       <video id="vid" muted playsinline preload="auto"></video>
+      <div class="empty" aria-hidden="true"><i>♪</i><b id="etitle"></b><span id="eartist"></span></div>
       <div class="wash"></div>
       <div class="vjtag" id="vjtag"></div>
       <div class="covers">
@@ -247,6 +254,8 @@ function load(s) {
   $('#ocap').replaceChildren(...(S.year ? [h('b', {}, String(S.year)), ' original'] : ['original']));
   $('#rcap').replaceChildren(...(S.volume ? [h('b', {}, `vol ${S.volume}`), ' ' + S.remixer] : [S.remixer]));
   $('#len').textContent = mmss(S.remix.length);
+  document.body.classList.toggle('nopic', !S.photo && !S.video && !S.original.cover && !S.remix.cover);
+  $('#etitle').textContent = S.title; $('#eartist').textContent = [S.artist, S.year].filter(Boolean).join(' · ');
   const bar = $('#bar'); bar.querySelectorAll('b').forEach(b => b.remove());
   passes.forEach(p => { const b = document.createElement('b'); b.style.left = (100 * p.start / S.remix.length) + '%'; bar.appendChild(b); });
   drawMap(S);
