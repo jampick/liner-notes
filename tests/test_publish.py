@@ -39,6 +39,10 @@ PROBES = [
     ("journeys/x/media/eras/era8.webp", JPEG_BYTES, "only pictures"),
     ("culture/pics/foo.png", b"\x89PNG\r\n\x1a\n" + b"\0" * 20, "only pictures"),
     ("journeys/x/cover.webp", WEBP_BYTES, "only pictures"),
+    ("docs/screenshots/stage.gif", JPEG_BYTES, "only pictures"),
+    ("docs/screenshots/stop.webp", JPEG_BYTES, "only pictures"),
+    ("docs/screenshots/stop.png", b"\x89PNG\r\n\x1a\n" + b"\0" * 20, "only pictures"),
+    ("docs/screenshots/sub/stop.webp", WEBP_BYTES, "only pictures"),
     ("README.md", "![c](data:image/" + "jpg;base64,/9j/4AAQ)", "inline JPEG"),
     ("docs/a.md", "![c](data:image/" + "JPEG;base64,/9j/4AAQ)", "inline JPEG"),
     ("docs/c.md", f"![cover]({JPEG})", "inline JPEG"),
@@ -77,6 +81,14 @@ def test_fixture_webp_allowed(tmp_path):
     root = tree(tmp_path / "repo")
     (root / "tests/fixtures/x/media/eras").mkdir(parents=True)
     (root / "tests/fixtures/x/media/eras/era1.webp").write_bytes(b"stub")
+    assert check.scan_tree(root) == []
+
+
+def test_readme_screenshots_allowed(tmp_path):
+    root = tree(tmp_path / "repo")
+    (root / "docs/screenshots").mkdir(parents=True)
+    (root / "docs/screenshots/stop.webp").write_bytes(WEBP_BYTES)
+    (root / "docs/screenshots/stage.gif").write_bytes(b"GIF89a" + b"\0" * 20)
     assert check.scan_tree(root) == []
 
 

@@ -1,10 +1,29 @@
-Liner Notes is a second screen for cliamp.
+# Liner Notes
 
-Put it on a monitor, a tablet or a phone next to your player. It shows what's playing at reading distance and plays the liner notes along with the song: what to listen for in the intro while the intro plays, how the record was made, what was going on that year, the lyrics as they're sung, and one record to chase next. It follows the player. Skip, shuffle or jump around the playlist, and the page keeps up.
+![The stage following cliamp through Khruangbin's "White Gloves": a band photo drifting in parallax, the lyric line lighting up as it's sung, and the notes on the barn in Burton, Texas](docs/screenshots/stage.gif)
 
-It started as a page for one playlist, Downtempo Drift (49 songs, Bristol 1991 to Texas 2020), and turned into a small engine for any playlist. Four journeys ship here: Downtempo Drift, Sophisti-Pop (42 songs, 1982 to 1990), Yacht Rock (60 songs, 1972 to 1984) and Yacht House, 15 house remixes of yacht rock records, each laid against the original it flips.
+Remember reading the sleeve while the record played? Liner Notes brings that back for whatever you're streaming. Put it on a second monitor, a tablet or a phone next to [cliamp](https://github.com/bjarneo/cliamp) and it reads along with the song.
 
-An AI model wrote every note in the bank, working from the sources listed in each file. All 151 songs are still drafts: nobody has checked them against their sources yet, and the page labels them "Draft notes".
+The clip above is the stage, the lean-back view. cliamp is playing "White Gloves" and the page keeps time with it: each lyric line lights up as it's sung, the band photo drifts in parallax off a depth map, and the right column works through how the record was made (a barn on the Speer family's land in Burton, Texas, where they had to clear the bees out first). The strip along the bottom is the whole journey, 49 songs from Bristol in 1991 to Texas in 2020, with a marker on song 39. Skip, shuffle or jump around in cliamp and the page follows within half a second. On Omarchy it takes its colours and font from your theme.
+
+On my own machine the stage goes further. When the music video is on disk it plays muted on the stage, synced under cliamp's audio after a measured correction for the speakers' latency (the sync tests land at a median of 6 or 7 ms). Lyrics are retimed against the exact upload cliamp is playing, so a video edit that starts 37 seconds into the album cut still lines up. None of that leaves the machine, for reasons further down.
+
+| The journey page | Every song, with what to listen for |
+|---|---|
+| ![Yacht Rock's opening: "For about seven years the same few dozen Los Angeles session players turned up on half the soft-rock radio", over a guitar case on a canyon porch](docs/screenshots/opening-yacht-rock.webp) | ![Stop 1 of Downtempo Drift, "Unfinished Sympathy": the chart of songs by year, a judge's quote, and what to listen for in the drum loop and the falsetto](docs/screenshots/stop-downtempo-drift.webp) |
+
+Away from the stage, each journey is a page you can read on its own: an essay per era over a picture, a chart of every song by year, and for each song what to listen for (the drum loop under "Unfinished Sympathy" is J. J. Johnson's "Parade Strut", slowed down), how it was made, what was going on that year, threads to other songs on the list, and one record to chase next. A panel of five invented judges argued each list into shape, and their quotes and close calls are on the page. These two screenshots are the shareable build, which is why the covers are lettered squares.
+
+It started as a page for one playlist, Downtempo Drift, and turned into a small engine for any playlist. Six journeys ship here:
+
+- Downtempo Drift, 49 songs, Bristol 1991 to Texas 2020
+- Sophisti-Pop, 42 songs, 1982 to 1990
+- Yacht Rock, 60 songs, 1972 to 1983
+- Yacht House, 15 house remixes of yacht rock records, each laid against the original it flips
+- Rod Temperton, 20 songs by the man from Cleethorpes, Heatwave in 1976 to Anita Baker in 1986
+- Soul Rap Covers, 35 rap records sung back as soul, Run-DMC in 1986 to Roddy Ricch in 2019
+
+An AI model wrote every note in the bank, working from the sources listed in each file. All 203 songs are still drafts: nobody has checked them against their sources yet, and the page labels them "Draft notes". The band photo in the clip is by Alexander Kellner, from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Khruangbin_am_Haldern_Pop_Festival_2019_-_09_-_Foto_Alexander_Kellner.jpg), CC BY-SA 4.0. The pictures behind the journey pages are AI-generated.
 
 ## What you need
 

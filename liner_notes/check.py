@@ -155,6 +155,8 @@ TEXT_EXT = {
     "",
 }
 ERA_IMAGE = re.compile(r"journeys/[a-z0-9-]+/media/eras/era\d+\.webp")
+# README screenshots: shot from public builds (no covers), photos only where the licence is free and credited.
+SCREENSHOT = re.compile(r"docs/screenshots/[a-z0-9-]+\.(webp|gif)")
 RASTER_URI = re.compile(r"data:image/(?:jpe?g|png|gif|avif|bmp)\b", re.I)
 WEBP_URI = re.compile(r"data:image/(?:webp)\b", re.I)
 LRC_LINE = re.compile(r"^\s*\[\d{1,2}:\d{2}(?:[.:]\d+)?\]", re.M)
@@ -215,6 +217,11 @@ def _magic_webp(p):
     return head[:4] == b"RIFF" and head[8:12] == b"WEBP"
 
 
+def _magic_gif(p):
+    with open(p, "rb") as f:
+        return f.read(6) in (b"GIF87a", b"GIF89a")
+
+
 def scan_tree(root):
     """Problems with what the repo would publish."""
     from pathlib import Path
@@ -230,6 +237,9 @@ def scan_tree(root):
             out.append(f"{rel}: personal media, lyrics or video ids")
         elif ext in IMAGE_EXT:
             if rel.startswith("tests/fixtures/") and ext == ".webp":
+                continue
+            shot = SCREENSHOT.fullmatch(rel)
+            if shot and (_magic_gif(p) if shot.group(1) == "gif" else _magic_webp(p)):
                 continue
             if not (ERA_IMAGE.fullmatch(rel) and _magic_webp(p)):
                 out.append(f"{rel}: the only pictures the repo carries are WebP era pictures at journeys/<slug>/media/eras/era<n>.webp")
