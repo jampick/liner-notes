@@ -263,3 +263,18 @@ def test_library_reload_doesnt_block_readers(env, monkeypatch):
     bank, _ = lib.get()
     assert "demo" in bank.journeys and time.monotonic() - t0 < 0.2
     t.join()
+
+
+def test_remix_uploads_name_their_remix_journey(tmp_path):
+    d = tmp_path / "journeys" / "house"
+    d.mkdir(parents=True)
+    remixes = [
+        {"title": "Ride Like the Wind (Yacht House Mix)", "path": "https://www.youtube.com/watch?v=8ODf0VI3Pp4", "id": "8ODf0VI3Pp4"},
+        {"title": "What You Won't Do for Love (Party Pupils Remix)", "path": "https://soundcloud.com/x/y", "id": "2297020100"},
+    ]
+    (d / "journey.json").write_text(json.dumps({"slug": "house", "kind": "remix", "title": "House", "songs": [], "remixes": remixes}))
+    (tmp_path / "songs").mkdir()
+    lib = Library([tmp_path])
+    assert lib.remix_journey({"path": "https://www.youtube.com/watch?v=8ODf0VI3Pp4", "title": "anything"}) == "house"
+    assert lib.remix_journey({"path": "", "title": "what you won't do for love (party pupils remix)"}) == "house"
+    assert lib.remix_journey({"path": "https://www.youtube.com/watch?v=zzzzzzzzzzz", "title": "Ride Like the Wind"}) is None

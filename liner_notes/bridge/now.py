@@ -22,6 +22,7 @@ from pathlib import Path
 from .. import __version__, adapters, cliamp, paths
 from ..bank import Bank
 from ..ids import slug as slugify
+from ..ids import youtube_id
 from ..match import Matcher
 from .clock import Clock
 from .route import Latency
@@ -88,6 +89,17 @@ class Library:
                 return slug
         have = bank.journeys_with(song)
         return have[0] if have else None
+
+    def remix_journey(self, track):
+        """The remix journey listing this exact upload (by id, path or title); remixes aren't bank songs."""
+        bank, _ = self.get()
+        path, title = track.get("path") or "", (track.get("title") or "").casefold()
+        yt = youtube_id(path)
+        for slug, j in bank.journeys.items():
+            for r in j.get("remixes") or ():
+                if (yt and r.get("id") == yt) or (path and r.get("path") == path) or (title and (r.get("title") or "").casefold() == title):
+                    return slug
+        return None
 
     def queue_journey(self, tracks):
         """The journey that holds the most of these tracks (at least 3, or half of a short queue); None on a tie."""
@@ -244,7 +256,9 @@ class Now:
         if np.state == "stopped":
             return {"ok": False, "reason": "stopped", **base, "title": np.title, "artist": np.artist}
         _, m = self.lib.get()
-        song = m.match(np.as_track())
+        track = np.as_track()
+        remix = self.lib.remix_journey(track)
+        song = None if remix else m.match(track)
         playlist = np.ids.get("cliamp_playlist") or self.playlist_file.get()
         return {
             "ok": True,
@@ -256,7 +270,7 @@ class Now:
             "album": np.album,
             "yt": np.ids.get("youtube"),
             "song": song,
-            "journey": self.lib.journey_for(song, playlist, self.qjourney),
+            "journey": remix or self.lib.journey_for(song, playlist, self.qjourney),
             "playlist": playlist,
             "position": round(r["position"], 3),
             "duration": np.duration,
