@@ -73,13 +73,12 @@ jobs:
           liner-notes build downtempo-drift --public --out dist/downtempo-drift.public.html
           liner-notes build downtempo-drift
           liner-notes build live
-      - name: Headless checks (both themes, phone width, disclosures, companion mode)
+      - name: ffmpeg, for the scenarios' test-pattern video
+        run: sudo apt-get update -q && sudo apt-get install -yq ffmpeg
+      - name: Headless checks of the shareable page (both themes, phone width, disclosures)
         run: |
           mkdir -p shots
           node tools/shoot.js dist/downtempo-drift.public.html shots
-          python tools/fake_bridge.py downtempo-drift 47399 &
-          sleep 2
-          node tools/companion.js http://127.0.0.1:47399 downtempo-drift shots
       - name: Page scenarios on a fake bridge
         if: hashFiles('tools/scenarios.js') != ''
         run: node tools/scenarios.js

@@ -438,6 +438,7 @@ def test_hashed_scripts_run_in_a_browser(start, env, tmp_path):
             chromium,
             "--headless=new",
             "--disable-gpu",
+            "--no-sandbox",  # CI runners have no user namespaces for the sandbox; the page is our own test file
             "--no-first-run",
             "--no-default-browser-check",
             f"--user-data-dir={tmp_path / 'profile'}",
