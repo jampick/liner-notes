@@ -2,7 +2,7 @@
 
 ![The stage following cliamp through Khruangbin's "White Gloves": a band photo drifting in parallax, the lyric line lighting up as it's sung, and the notes on the barn in Burton, Texas](docs/screenshots/stage.gif)
 
-Remember reading the sleeve while the record played? Liner Notes brings that back for whatever you're streaming. Put it on a second monitor, a tablet or a phone next to [cliamp](https://github.com/bjarneo/cliamp) and it reads along with the song.
+Remember reading the sleeve while the record played? Me neither, but I like the idea of it. Liner Notes does that for whatever you're streaming. Put it on a second monitor, a tablet or a phone next to [cliamp](https://github.com/bjarneo/cliamp) and it reads along with the song.
 
 The clip above is the stage, the lean-back view. cliamp is playing "White Gloves" and the page keeps time with it: each lyric line lights up as it's sung, the band photo drifts in parallax off a depth map, and the right column works through how the record was made (a barn on the Speer family's land in Burton, Texas, where they had to clear the bees out first). The strip along the bottom is the whole journey, 49 songs from Bristol in 1991 to Texas in 2020, with a marker on song 39. Skip, shuffle or jump around in cliamp and the page follows within half a second. On Omarchy it takes its colours and font from your theme.
 
