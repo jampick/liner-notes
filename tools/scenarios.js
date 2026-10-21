@@ -30,7 +30,7 @@ const FORBIDDEN = /(^|\.)(youtube\.com|youtube-nocookie\.com|ytimg\.com|googlevi
 let bridge = null, S = {}, epoch = 1;
 function put(patch) { Object.assign(S, patch); const f = path.join(FX, 'state.json'); fs.writeFileSync(f + '.tmp', JSON.stringify(S)); fs.renameSync(f + '.tmp', f); }
 async function startBridge() {
-  bridge = spawn(PY, [path.join(ROOT, 'tools/fake_bridge.py'), 'serve', FX, '--port', String(PORT)], { stdio: 'ignore', env: { ...process.env, PYTHONPATH: ROOT } });
+  bridge = spawn(PY, [path.join(ROOT, 'tools/fake_bridge.py'), 'serve', FX, '--port', String(PORT)], { stdio: ['ignore', 'ignore', process.env.LN_DEBUG ? fs.openSync(path.join(WORK, 'fake.err'), 'a') : 'ignore'], env: { ...process.env, PYTHONPATH: ROOT } });
   for (let k = 0; k < 50; k++) { try { const r = await fetch(B + '/now'); if (r.ok) return; } catch {} await sleep(100); }
   throw new Error('fake bridge did not start');
 }
@@ -59,9 +59,12 @@ const hiddenShim = () => {
 };
 async function guard(ctx) {
   await ctx.addInitScript(hiddenShim);
-  await ctx.route('**/*', r => {
+  // Only requests that leave the fake bridge are intercepted (and aborted). Routing the bridge's own requests
+  // through Playwright as well stalled the browser's connections to it on a video 404 (the page stopped hearing
+  // from the bridge), and slowed every scenario on CI.
+  await ctx.route(url => !url.href.startsWith(B + '/'), r => {
     const u = r.request().url();
-    if (u.startsWith(B + '/') || u.startsWith('data:') || u.startsWith('blob:')) return r.continue();
+    if (u.startsWith('data:') || u.startsWith('blob:')) return r.continue();
     let host = ''; try { host = new URL(u).hostname; } catch {}
     if (FORBIDDEN.test(host)) forbidden.add(u); else offsite.add(u);
     return r.abort();
@@ -75,12 +78,27 @@ async function newPage(opt = {}) {
   return { ctx, page };
 }
 function watch(page) {
+  if (process.env.LN_DEBUG) page.on('console', m => console.log('      console:', m.text().slice(0, 200)));
+  if (process.env.LN_DEBUG) { page.on('framenavigated', f => console.log('      nav:', f.url())); page.on('requestfailed', r => console.log('      reqfail:', r.url(), r.failure() && r.failure().errorText)); }
   page.on('crash', () => check('renderer did not crash', false));
   const seen = new Set();  // each distinct error once, not once per timer tick
   page.on('pageerror', e => { if (!seen.has(e.message)) { seen.add(e.message); check('no page errors', false, e.message); } });
 }
+// Node-side wait on a condition (the fake's logs), polling every 50 ms; true if it came true in time.
+async function waitFor(fn, ms) { const t = Date.now(); while (Date.now() - t < ms) { if (fn()) return true; await sleep(50); } return fn(); }
 // Resolves to the milliseconds it took, or null after `ms`.
-async function within(page, ms, fn, arg) { const t = Date.now(); try { await page.waitForFunction(fn, arg, { timeout: ms, polling: 50 }); return Date.now() - t; } catch { return null; } }
+// Polls with page.evaluate, which runs under the page's CSP the way the page itself does. page.waitForFunction
+// evaluates a string, and the bridge's hash-based CSP (no 'unsafe-eval') makes that throw at once, which turned
+// every wait into an instant "no" and let checks that expect nothing to happen pass without waiting.
+async function within(page, ms, fn, arg) {
+  const t = Date.now(); let err = null;
+  while (Date.now() - t < ms) {
+    try { if (await page.evaluate(fn, arg)) return Date.now() - t; err = null; } catch (e) { err = e; }  // a navigation in between: try again
+    await sleep(50);
+  }
+  if (err && process.env.LN_DEBUG) console.log('      within:', err.message.split('\n')[0]);
+  return null;
+}
 const text = (page, sel) => page.$eval(sel, n => n.textContent).catch(() => null);
 const shot = (page, name) => page.screenshot({ path: path.join(SHOTS, name + '.png') });
 
@@ -342,27 +360,41 @@ scenarios['s4-switch-journeys'] = async () => {
 
 // The bridge keeps its token across restarts, so a refusal means the page predates a token change (a new
 // state dir, a rotated token). The page should reload once for the new one, and not loop if refusals go on.
+// Every step waits on something it can see (a POST in the fake's log, a navigation), never on a fixed sleep.
 scenarios['token-refresh'] = async () => {
   const m = M(), s = m.stops[18];
   play(s, { pos0: 20 });
   const { ctx, page } = await newPage();
+  const ready = async () => {
+    await within(page, 15000, t => window.LinerNotes && LinerNotes.stage().sync && document.querySelector('#svTitle').textContent === t, s.title);
+  };
+  const press = async n => { await page.keyboard.press('ArrowRight'); return waitFor(() => logLines('posts.log').length >= n, 10000); };
   await page.goto(B + '/p/downtempo-drift.html#companion');
-  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, s.title);
+  await ready();
   await page.evaluate(() => { window.__same = 'yes'; });
   stopBridge(); await startBridge();
-  await page.keyboard.press('ArrowRight'); await sleep(700);
-  check('the token survives a bridge restart', logLines('posts.log').slice(-1)[0].token_ok === true);
+  await ready();
+  clearLogs();
+  await press(1);
+  check('the token survives a bridge restart', (logLines('posts.log')[0] || {}).token_ok === true, JSON.stringify(logLines('posts.log')));
   check('and nothing reloads', (await page.evaluate(() => window.__same)) === 'yes');
   put({ refuse_token: true });
   clearLogs();
-  await page.keyboard.press('ArrowRight');
-  check('a refused token reloads the page once', await within(page, 4000, () => !window.__same) !== null);
-  await within(page, 3000, t => document.querySelector('#svTitle') && document.querySelector('#svTitle').textContent === t, s.title);
+  const nav = page.waitForEvent('framenavigated', { timeout: 15000 }).then(() => true, () => false);
+  await press(1);
+  check('a refused token reloads the page once', await nav);
+  await page.waitForLoadState('load');
+  await ready();
   await page.evaluate(() => { window.__again = 'yes'; });
-  await page.keyboard.press('ArrowRight'); await sleep(1500);
-  check('a second refusal within a minute doesn\'t reload again', (await page.evaluate(() => window.__again)) === 'yes');
+  let navigated = false;
+  const onNav = () => { navigated = true; };
+  page.on('framenavigated', onNav);
+  await press(2);
+  await sleep(1000);  // a reload would have started by now; the page reloads in the same task as the 403
+  page.off('framenavigated', onNav);
+  check('a second refusal within a minute doesn\'t reload again', !navigated && (await page.evaluate(() => window.__again)) === 'yes');
   put({ refuse_token: false });
-  await page.keyboard.press('ArrowRight'); await sleep(700);
+  await press(3);
   const posts = logLines('posts.log');
   check('POSTs go through once the bridge takes the token', posts.length === 3 && !posts[0].token_ok && !posts[1].token_ok && posts[2].token_ok, JSON.stringify(posts.map(p => p.token_ok)));
   await ctx.close();
@@ -554,6 +586,8 @@ scenarios['journey-ping-pong'] = async () => {
   await ctx.close();
 };
 
+// A video that fails (here the bridge answers 404 for a file it lists) is set aside; once the bridge serves it
+// again, the next song change asks /v/ again and the video gets another try.
 scenarios['video-retry'] = async () => {
   const m = M(), a = m.video_stops[0], b = m.video_stops[1];
   if (!m.videos) return check('fixtures have video (ffmpeg)', false);
@@ -561,21 +595,18 @@ scenarios['video-retry'] = async () => {
   play(a, { pos0: 20 });
   const { ctx, page } = await newPage();
   await page.goto(B + '/p/downtempo-drift.html#companion');
-  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, a.title);
-  check('a video that errors is set aside', await within(page, 5000, yt => LinerNotes.stage().videoFailed.includes(yt), a.yt) !== null);
+  await within(page, 10000, t => document.querySelector('#svTitle').textContent === t, a.title);
+  check('a video that errors is set aside', await within(page, 15000, yt => LinerNotes.stage().videoFailed.includes(yt), a.yt) !== null);
   check('the stage shows a picture instead', !(await page.evaluate(() => document.querySelector('#stagev').classList.contains('cinema'))));
-  const all = m.video_stops.map(x => x.yt);
-  put({ video_broken: [], videos: all.filter(x => x !== a.yt) });  // the bridge stops listing it
-  await sleep(5500);
+  put({ video_broken: [] });  // the bridge serves it again
   play(b, { pos0: 20 });
-  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, b.title);
-  put({ videos: null });  // and lists it again
-  await sleep(5500);
+  await within(page, 10000, t => document.querySelector('#svTitle').textContent === t, b.title);
   play(a, { pos0: 20 });
-  await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, a.title);
-  check('listed again, it is no longer set aside', await within(page, 6000, yt => !LinerNotes.stage().videoFailed.includes(yt), a.yt) !== null);
+  await within(page, 10000, t => document.querySelector('#svTitle').textContent === t, a.title);
+  check('back on the song, it is no longer set aside', await within(page, 10000, yt => !LinerNotes.stage().videoFailed.includes(yt), a.yt) !== null,
+    JSON.stringify(await page.evaluate(() => LinerNotes.stage())));
   // Software decoding on a CI runner can take a while to get the first frame up.
-  check('listed again, it plays again', await within(page, 15000, () => document.querySelector('#stagev').classList.contains('cinema')) !== null, JSON.stringify(await page.evaluate(() => LinerNotes.stage())));
+  check('and it plays', await within(page, 20000, () => document.querySelector('#stagev').classList.contains('cinema')) !== null, JSON.stringify(await page.evaluate(() => LinerNotes.stage())));
   await ctx.close();
 };
 
@@ -694,6 +725,16 @@ scenarios['themes-contrast-shots'] = async () => {
   await startBridge();
   browser = await chromium.launch({ executablePath: EXE, headless: true });
   const names = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(scenarios);
+  // The suite's waits must wait, under the page's own CSP: a wait that gives up at once makes every
+  // "nothing happens" check pass for free.
+  {
+    current = 'harness';
+    const { ctx, page } = await newPage();
+    await page.goto(B + '/p/downtempo-drift.html');
+    const t = Date.now(), r = await within(page, 400, () => false), took = Date.now() - t;
+    check('waits really wait under the page\'s CSP', r === null && took >= 380 && (await within(page, 2000, () => !!window.LinerNotes)) !== null, `${took} ms`);
+    await ctx.close();
+  }
   try {
     for (const n of names) {
       if (!scenarios[n]) { failures.push(`no scenario ${n}`); continue; }

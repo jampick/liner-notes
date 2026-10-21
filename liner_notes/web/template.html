@@ -1364,16 +1364,24 @@ html, body { overflow-x: clip; }
      (latency already taken off). A new epoch means cliamp jumped (seek, pause, new song), so the video snaps to it;
      otherwise the playback rate is steered up to 5% either way, so drift closes over a second or two without a
      visible skip. The stills stay up until this song's sound has reached the speakers. A video that errors (a
-     bridge restart mid-stream is enough) rests for three minutes, or until /v/ lists it again after leaving it out. */
+     bridge restart mid-stream is enough) rests for three minutes, or until the next song change finds it still
+     listed at /v/: every song change asks /v/ again, and a video that failed before that answer gets one more try. */
   const RETRY = 180000;
-  const lv = { el: null, id: null, live: false, ids: new Set(), failed: new Map(), listed: -Infinity, epoch: null, started: false };
-  function localIds(now, soon) {
-    if (!SERVED || now - lv.listed < (soon ? 5000 : 60000)) return; lv.listed = now;
+  const lv = { el: null, id: null, live: false, ids: new Set(), failed: new Map(), listed: -Infinity, epoch: null, started: false, asking: false, again: 0 };
+  // `since`: a song change's time. Failures from before it, of videos the answer still lists, get another try.
+  function localIds(now, since = null) {
+    if (!SERVED) return;
+    if (lv.asking) { if (since != null) lv.again = Math.max(lv.again || 0, since); return; }  // one ask at a time
+    if (since == null && now - lv.listed < 60000) return;
+    lv.listed = now; lv.asking = true;
     fetchT(BRIDGE + '/v/', 4000).then(r => r.json()).then(j => {
       const ids = new Set(Array.isArray(j.ids) ? j.ids : []);
-      for (const id of lv.failed.keys()) if (ids.has(id) && !lv.ids.has(id)) lv.failed.delete(id);
+      if (since != null) for (const [id, t] of lv.failed) if (t < since && ids.has(id)) lv.failed.delete(id);
       lv.ids = ids;
-    }).catch(() => {});
+    }).catch(() => {}).finally(() => {
+      lv.asking = false;
+      if (lv.again) { const at = lv.again; lv.again = 0; localIds(performance.now(), at); }
+    });
   }
   const failedNow = id => { const t = lv.failed.get(id); if (t == null) return false; if (performance.now() - t > RETRY) { lv.failed.delete(id); return false; } return true; };
   function syncLocal(want, pos, playing, early) {
@@ -1588,7 +1596,7 @@ html, body { overflow-x: clip; }
       $('#svLyric .now').textContent = ''; $('#svLyric .nx').textContent = ''; SV.classList.remove('lyrics', 'singing');
       $('#svCover').removeAttribute('src'); SV.classList.remove('bigcover');
       replay($('#svTitle'), 'fresh');
-      if (n) { fetchLyrics(key, n); fetchPlays(); localIds(performance.now(), true); }
+      if (n) { fetchLyrics(key, n); fetchPlays(); localIds(performance.now(), performance.now()); }
     }
     stg.beats = []; stg.beat = -1;
     if (!s) {
@@ -1745,7 +1753,7 @@ html, body { overflow-x: clip; }
 
   // A read-only window for the headless checks in tools/scenarios.js.
   window.LinerNotes = Object.freeze({
-    stage: () => ({ on: stg.on, mode: stg.mode, key: stg.key, beat: stg.beat, beats: stg.beats.map(b => ({ at: b.at, label: b.label, kind: b.kind || '' })), lines: !!stg.lines, shown: stg.shown, live: LIVE, hero: stg.hero && stg.hero.kind, video: lv.id, videoLive: lv.live, videoFailed: [...lv.failed.keys()] }),
+    stage: () => ({ on: stg.on, mode: stg.mode, key: stg.key, beat: stg.beat, beats: stg.beats.map(b => ({ at: b.at, label: b.label, kind: b.kind || '' })), lines: !!stg.lines, shown: stg.shown, live: LIVE, hero: stg.hero && stg.hero.kind, video: lv.id, videoLive: lv.live, videoFailed: [...lv.failed.keys()], videoIds: [...lv.ids], sync: sync.on }),
     hero: () => hero.stats(),
     keeps: () => [...state.keep],
   });
