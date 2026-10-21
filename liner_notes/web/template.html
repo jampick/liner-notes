@@ -74,7 +74,7 @@ button { font: inherit; color: inherit; }
 #followBtn { max-width: 360px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* The coastline chart */
-.chart { padding-block: 8px 4px; }
+.chart { position: relative; z-index: 4; padding-block: 8px 4px; }
 .chart .scroll { overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; }
 .coast { position: relative; min-width: 900px; }
 .eras { display: grid; gap: 0; }
@@ -98,6 +98,16 @@ button { font: inherit; color: inherit; }
 .threads { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
 .threads path { fill: none; stroke: var(--sea); stroke-width: 1.5; stroke-dasharray: 4 4; opacity: 0.85; animation: flow 1.6s linear infinite; }
 .threads path.hot { stroke: var(--amber); stroke-width: 2.2; stroke-dasharray: none; opacity: 1; }
+.threads path.hit { stroke: transparent; stroke-width: 14; stroke-dasharray: none; animation: none; opacity: 1; pointer-events: stroke; cursor: pointer; }
+.dot.threadhot .tip { opacity: 0; }
+/* The card for the thread under the pointer: just under the chart, lined up with the thread's far end. It sits
+   outside the chart's scroller, which would clip it. */
+.threadcard { position: absolute; z-index: 6; width: max-content; max-width: 300px; padding: 10px 12px; background: var(--panel-solid); border: 1px solid var(--amber); box-shadow: 0 6px 24px rgba(0,0,0,0.35); pointer-events: none; opacity: 0; transition: opacity .15s; }
+.threadcard.on { opacity: 1; }
+.threadcard .k { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); }
+.threadcard .t { font-family: var(--display); font-size: 17px; margin-top: 4px; }
+.threadcard .a { font-family: var(--mono); font-size: 10px; color: var(--faint); margin-top: 2px; }
+.threadcard .n { font-size: 13px; line-height: 1.45; color: var(--ink); margin-top: 6px; }
 @keyframes flow { to { stroke-dashoffset: -16; } }
 .tide { display: block; width: 100%; height: 26px; }
 
@@ -417,7 +427,7 @@ html, body { overflow-x: clip; }
     </div>
   </div></header>
 
-  <nav class="chart" aria-label="The coastline: every song by release year"><div class="wrap"><div class="scroll" id="chartScroll">
+  <nav class="chart" aria-label="The coastline: every song by release year"><div class="threadcard" id="threadCard" aria-hidden="true"></div><div class="wrap"><div class="scroll" id="chartScroll">
     <div class="coast" id="coast">
       <div class="eras" id="eraRow"></div>
       <div class="years" id="years"></div>
@@ -648,7 +658,7 @@ html, body { overflow-x: clip; }
     const here = stops.filter(s => s.year === y);
     const col = el('div', { class: 'yr' + (here.length ? '' : ' empty'), 'data-year': y, style: `background: var(${e && e.n === eras.length ? '--band-warm' : (e && e.n % 2 ? '--band-a' : '--band-b')})` }, el('div', { class: 'y', text: "'" + String(y).slice(2) }));
     here.forEach(s => {
-      const b = el('button', { class: 'dot' + (s.dissent ? ' close' : ''), type: 'button', 'aria-label': `Stop ${s.n}: ${s.title}, ${s.artist}, ${s.year}`, onclick: () => go(stops.indexOf(s)) }, el('span', { class: 'tip', text: `${s.title} · ${s.artist}` }));
+      const b = el('button', { class: 'dot' + (s.dissent ? ' close' : ''), type: 'button', 'aria-label': `Stop ${s.n}: ${s.title}, ${s.artist}, ${s.year}`, onclick: () => go(stops.indexOf(s), threadTo(s.n) ? 'thread' : false), onmouseenter: () => { if (threadTo(s.n)) drawThreads(s.n); }, onmouseleave: () => { if (threadTo(s.n)) drawThreads(); } }, el('span', { class: 'tip', text: `${s.title} · ${s.artist}` }));
       dots.set(s.n, b); col.append(b);
     });
     years.append(col);
@@ -745,21 +755,43 @@ html, body { overflow-x: clip; }
   }
 
   /* ---------- threads drawn across the chart ---------- */
-  const threadSvg = $('#threadSvg');
+  const threadSvg = $('#threadSvg'), threadCard = $('#threadCard');
+  const threadTo = n => !LIVE && stops[state.i].threads.find(t => t.to === n && t.to !== stops[state.i].n);
+  // Every thread drawn gets a wide invisible twin to hover and click. Hovering lights it in place (no redraw, which
+  // would swap the element under the pointer and fire another enter).
+  const lightThread = to => {
+    threadSvg.querySelectorAll('path:not(.hit)').forEach(p => p.classList.toggle('hot', +p.dataset.to === to));
+    dots.forEach((d, n) => d.classList.toggle('threadhot', n === to));
+    const th = to != null && threadTo(to), o = th && byN.get(to);
+    if (!o || !dots.has(to)) { threadCard.classList.remove('on'); return; }
+    threadCard.replaceChildren(el('div', { class: 'k', text: `Thread · ${th.kind}` }), el('div', { class: 't', text: o.title }), el('div', { class: 'a', text: `${o.artist} · ${o.year} · stop ${o.n}` }), th.note ? el('div', { class: 'n', text: th.note }) : null);
+    const nav = threadCard.parentElement.getBoundingClientRect(), coast = $('#coast').getBoundingClientRect(), r = dots.get(to).getBoundingClientRect();
+    const x = r.left - nav.left + r.width / 2, w = threadCard.offsetWidth;
+    threadCard.style.left = Math.max(8, Math.min(nav.width - w - 8, x - w / 2)) + 'px';
+    threadCard.style.top = (coast.bottom - nav.top + 8) + 'px';
+    threadCard.classList.add('on');
+  };
   const drawThreads = (hotTo) => {
     threadSvg.replaceChildren();
-    if (LIVE || stg.on) return;
-    const s = stops[state.i]; if (!s.threads.length || (!state.threads && hotTo == null)) return;
+    if (LIVE || stg.on) return lightThread(null);
+    const s = stops[state.i]; if (!s.threads.length || (!state.threads && hotTo == null)) return lightThread(null);
     const box = $('#coast').getBoundingClientRect(); threadSvg.setAttribute('viewBox', `0 0 ${box.width} ${box.height}`); threadSvg.setAttribute('width', box.width); threadSvg.setAttribute('height', box.height);
     const c = n => { const r = dots.get(n).getBoundingClientRect(); return [r.left - box.left + r.width / 2, r.top - box.top + r.height / 2]; };
     const [x1, y1] = c(s.n);
     s.threads.forEach(th => {
       if (!dots.has(th.to) || (!state.threads && th.to !== hotTo)) return;
-      const [x2, y2] = c(th.to); const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      if (Math.abs(x2 - x1) < 8) { const bow = 34 + Math.abs(y2 - y1) * 0.4; p.setAttribute('d', `M${x1} ${y1} C${x1 + bow} ${y1} ${x2 + bow} ${y2} ${x2} ${y2}`); }
-      else { const lift = Math.min(90, 26 + Math.abs(x2 - x1) * 0.18); p.setAttribute('d', `M${x1} ${y1} Q${(x1 + x2) / 2} ${Math.min(y1, y2) - lift} ${x2} ${y2}`); }
-      if (th.to === hotTo) p.classList.add('hot'); threadSvg.append(p);
+      const [x2, y2] = c(th.to); let d;
+      if (Math.abs(x2 - x1) < 8) { const bow = 34 + Math.abs(y2 - y1) * 0.4; d = `M${x1} ${y1} C${x1 + bow} ${y1} ${x2 + bow} ${y2} ${x2} ${y2}`; }
+      else { const lift = Math.min(90, 26 + Math.abs(x2 - x1) * 0.18); d = `M${x1} ${y1} Q${(x1 + x2) / 2} ${Math.min(y1, y2) - lift} ${x2} ${y2}`; }
+      const p = document.createElementNS('http://www.w3.org/2000/svg', 'path'); p.setAttribute('d', d); p.dataset.to = th.to; threadSvg.append(p);
+      // The hover strip stops 12 px short of each end, so the dots there still take their own clicks.
+      const L = p.getTotalLength(), pts = []; for (let k = 0; k <= 24; k++) { const q = p.getPointAtLength(12 + (L - 24) * k / 24); pts.push(`${q.x.toFixed(1)} ${q.y.toFixed(1)}`); }
+      const hit = document.createElementNS('http://www.w3.org/2000/svg', 'path'); hit.setAttribute('d', 'M' + pts.join(' L')); hit.classList.add('hit');
+      hit.addEventListener('mouseenter', () => lightThread(th.to)); hit.addEventListener('mouseleave', () => lightThread(null));
+      hit.addEventListener('click', () => go(stops.indexOf(byN.get(th.to)), 'thread'));
+      threadSvg.append(hit);
     });
+    lightThread(hotTo ?? null);
   };
   addEventListener('resize', () => drawThreads());
 
@@ -797,7 +829,7 @@ html, body { overflow-x: clip; }
         el('div', { class: 't' }, `${s.leads.artist}, “${s.leads.title}”`, s.leads.year ? el('i', { text: ` (${s.leads.year})` }) : null),
         el('p', { style: 'margin: 6px 0 10px', text: s.leads.why }),
         el('a', { href: 'https://www.youtube.com/results?search_query=' + encodeURIComponent(`${s.leads.artist} ${s.leads.title}`), target: '_blank', rel: 'noopener', class: 'mono' }, 'Find it ↗'))) : null,
-      s.threads.length ? el('section', { class: 'sec' }, el('h2', { text: 'Threads' }), el('div', { class: 'threadlist' }, s.threads.filter(t => byN.has(t.to)).map(t => { const o = byN.get(t.to); return el('button', { class: 'thread', type: 'button', onmouseenter: () => drawThreads(t.to), onfocus: () => drawThreads(t.to), onmouseleave: () => drawThreads(), onblur: () => drawThreads(), onclick: () => go(stops.indexOf(o)) }, el('span', { class: 'k', text: t.kind }), el('span', { class: 'to' }, o.title, el('small', { text: `${o.artist} · ${o.year}` })), el('span', { class: 'n', text: t.note })); }))) : null,
+      s.threads.length ? el('section', { class: 'sec' }, el('h2', { text: 'Threads' }), el('div', { class: 'threadlist' }, s.threads.filter(t => byN.has(t.to)).map(t => { const o = byN.get(t.to); return el('button', { class: 'thread', type: 'button', onmouseenter: () => drawThreads(t.to), onfocus: () => drawThreads(t.to), onmouseleave: () => drawThreads(), onblur: () => drawThreads(), onclick: () => go(stops.indexOf(o), 'thread') }, el('span', { class: 'k', text: t.kind }), el('span', { class: 'to' }, o.title, el('small', { text: `${o.artist} · ${o.year}` })), el('span', { class: 'n', text: t.note })); }))) : null,
       el('section', { class: 'sec' }, s.yearNote ? el('p', { class: 'yearnote', text: s.yearNote }) : null,
         s.sources && s.sources.length ? el('details', { class: 'src' }, el('summary', { text: `Sources (${s.sources.length})` }), el('ol', {}, s.sources.map(u => el('li', {}, web(u) ? el('a', { href: web(u), target: '_blank', rel: 'noopener', text: u.replace(/^https?:\/\/(www\.)?/, '') }) : String(u))))) : null));
     root.append(left, right);
@@ -832,7 +864,8 @@ html, body { overflow-x: clip; }
     const prevEra = stops[state.i].era; state.i = k; const s = stops[k];
     await stopAudio(reduced ? 0.05 : 0.6);
     render(); if (!stg.on) window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
-    if (s.era !== prevEra && !state.erasShown.has(s.era) && state.started && !stg.on) return showEra(s.era, false, auto === 'follow');
+    // A thread is a jump to one song: its era card waits for a walk into that era.
+    if (s.era !== prevEra && !state.erasShown.has(s.era) && state.started && !stg.on && auto !== 'thread') return showEra(s.era, false, auto === 'follow');
     if (sync.on) setPaused(!(sync.now && stopFor(sync.now) === s && sync.now.state === 'playing'));
     else if (!state.companion || auto === true) playPreview(true);
   }

@@ -500,6 +500,40 @@ scenarios['no-drift-over-cliamp'] = async () => {
   await ctx.close();
 };
 
+// A thread's far end on the chart: hovering it (or its line) shows the thread's card there, and following it goes
+// straight to that song, era card or not.
+scenarios['thread-cards'] = async () => {
+  const m = M(), byId = new Map(m.stops.map(s => [s.id, s]));
+  const J = JSON.parse(fs.readFileSync(path.join(ROOT, 'journeys', m.slug, 'journey.json')));
+  const th = J.threads.find(t => byId.has(t.from) && byId.has(t.to) && byId.get(t.from).era !== byId.get(t.to).era && t.note);
+  if (!check('fixture has a thread across eras', !!th)) return;
+  const from = byId.get(th.from), to = byId.get(th.to);
+  put({ now: { ok: false, reason: 'stopped' } });
+  const { ctx, page } = await newPage();
+  await page.goto(B + `/p/${m.slug}.html#s=${from.n}`);
+  await page.click('#start'); await sleep(900);
+  if (await page.isVisible('#eracard')) { await page.click('#eraGo'); await sleep(600); }
+  const dot = `button.dot[aria-label^="Stop ${to.n}:"]`;
+  await page.hover(dot);
+  const shown = await within(page, 1500, () => document.querySelector('#threadCard').classList.contains('on'));
+  const card = await text(page, '#threadCard');
+  check('hovering a thread\'s far end shows its card on the chart', shown !== null && card.includes(to.title) && card.includes(th.note.slice(0, 30)), card);
+  await sleep(300); await shot(page, 'thread-card');
+  check('the hovered thread\'s line is lit', await page.$$eval('#threadSvg path.hot', ps => ps.length) === 1);
+  await page.mouse.move(5, 5);
+  check('the card goes when the pointer leaves', (await within(page, 1500, () => !document.querySelector('#threadCard').classList.contains('on'))) !== null);
+  await page.click('#threadsBtn'); await sleep(300);
+  const hit = await page.$$eval('#threadSvg path.hit', ps => ps.map(p => { const L = p.getTotalLength(), q = p.getPointAtLength(L / 2), m = p.getScreenCTM(); return { to: p.previousElementSibling.dataset.to, x: q.x * m.a + m.e, y: q.y * m.d + m.f }; }));
+  const mid = hit.find(h => +h.to === to.n);
+  check('Threads on draws a hover strip per line', !!mid, JSON.stringify(hit));
+  if (mid) { await page.mouse.move(mid.x, mid.y); check('hovering a line shows its card', (await within(page, 1500, (t) => document.querySelector('#threadCard').classList.contains('on') && document.querySelector('#threadCard').textContent.includes(t), to.title)) !== null); }
+  await page.click(dot); await sleep(1200);
+  const at = await page.evaluate(() => new URLSearchParams(location.hash.slice(1)).get('s'));
+  check('following a thread lands on the song', at === String(to.n), at);
+  check('following a thread skips the era card', !(await page.isVisible('#eracard')));
+  await ctx.close();
+};
+
 scenarios['bands-reconnect'] = async () => {
   const m = M(), s = m.stops[20];
   put({ bands_close_after: 5 });
