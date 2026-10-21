@@ -2,11 +2,12 @@
 
 test_fixture_equivalent needs nothing outside the repo: tests/fixtures/pilot-mini is a made-up
 pilot playlist folder, and expected.json is what the pilot's engine/build.py made of it (run once,
-on a copy). test_downtempo_equivalent does the same against the real pilot checkout, when it's on
-this machine (the pilot repo is never written to). Ids, covers and images are set aside.
+on a copy). test_downtempo_equivalent does the same against a real pilot checkout, when
+LINER_NOTES_PILOT names one (the pilot repo is never written to). Ids, covers and images are set aside.
 """
 
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -19,8 +20,9 @@ from liner_notes.bank import Bank
 from liner_notes.build import compose
 from liner_notes.migrate import migrate
 
-PILOT = Path.home() / "Projects/Music/journeys"
-FOLDER = PILOT / "playlists/downtempo-drift"
+# Your pilot checkout, only when you point at one: LINER_NOTES_PILOT=<checkout> pytest
+PILOT = Path(os.environ["LINER_NOTES_PILOT"]).expanduser() if os.environ.get("LINER_NOTES_PILOT") else None
+FOLDER = PILOT / "playlists/downtempo-drift" if PILOT else None
 
 FIXTURE = Path(__file__).parent / "fixtures/pilot-mini"
 
@@ -77,7 +79,7 @@ def test_fixture_equivalent(tmp_path):
     assert [s.split("--")[1] for s in j["songs"]] == ["second-wind", "harbour-lights", "low-tide", "paper-boats", "night-ferry"]
 
 
-@pytest.mark.skipif(not FOLDER.exists(), reason="the journeys pilot isn't on this machine")
+@pytest.mark.skipif(not (FOLDER and FOLDER.exists()), reason="set LINER_NOTES_PILOT to a pilot checkout to compare against it")
 def test_downtempo_equivalent(tmp_path):
     old = old_data(tmp_path)
     root, cache = tmp_path / "root", tmp_path / "cache"

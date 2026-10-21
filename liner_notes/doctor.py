@@ -173,10 +173,11 @@ def run(system, songs=False, log=print):
     ]
     if dangling:
         line(WARN, "media links", f"{len(dangling)} links in {paths.cache()} point at files that are gone, first {dangling[0].name}")
-    pilot_lyrics = len(list((paths.pilot() / "lyrics").glob("*.json"))) if (paths.pilot() / "lyrics").is_dir() else 0
+    pilot = paths.pilot()
+    pilot_lyrics = len(list((pilot / "lyrics").glob("*.json"))) if pilot and (pilot / "lyrics").is_dir() else 0
     ours = len(list((paths.user_data() / "lyrics").glob("*.json"))) if (paths.user_data() / "lyrics").is_dir() else 0
     if pilot_lyrics and ours < pilot_lyrics:
-        line(WARN, "pilot data", f"{pilot_lyrics} lyric files still only in {paths.pilot()} (liner-notes migrate-personal)")
+        line(WARN, "pilot data", f"{pilot_lyrics} lyric files still only in {pilot} (liner-notes migrate-personal)")
 
     bank = Bank()
     log("")

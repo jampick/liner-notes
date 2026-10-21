@@ -1,6 +1,9 @@
 """`liner-notes migrate-personal`: bring the pilot's personal data into the XDG directories.
 
-    liner-notes migrate-personal --from ~/Projects/Music/journeys [--dry-run]
+    liner-notes migrate-personal --from <your pilot checkout> [--cache DIR] [--state DIR] [--dry-run]
+
+--cache is the pilot's media cache and --state its state dir (or LINER_NOTES_PILOT_CACHE and
+LINER_NOTES_PILOT_STATE). Without them only the checkout's own files move.
 
 What moves, and where to:
 
@@ -13,9 +16,9 @@ What moves, and where to:
   playlists/<slug>/media/{culture,artists,depth}/*      ~/.cache/liner-notes/{culture,artists,depth}/
   playlists/<slug>/stage-cache.json                     ~/.cache/liner-notes/pilot/<slug>.stage-cache.json
   dist/<remix slug>.html (the measured tempo shapes)    ~/.cache/liner-notes/profiles/<id>.json
-  ~/.cache/journeys/{video,audio,soundcloud}/*          hard links in ~/.cache/liner-notes/{video,audio,soundcloud}/
-  ~/.local/state/journeys/{av-latency.json,workspace}   ~/.local/state/liner-notes/
-  ~/.local/state/journeys/chromium (the page's profile)  ~/.local/state/liner-notes/chromium, without caches
+  <cache>/{video,audio,soundcloud}/*                    hard links in ~/.cache/liner-notes/{video,audio,soundcloud}/
+  <state>/{av-latency.json,workspace}                   ~/.local/state/liner-notes/
+  <state>/chromium (the page's profile)                 ~/.local/state/liner-notes/chromium, without caches
 
 The Chromium profile carries the page's localStorage for http://127.0.0.1:47391: per-song lyric
 offsets, the lyric lead and the theme. It's copied only when the new profile doesn't exist yet and
@@ -83,8 +86,8 @@ def _upload_to_song(bank):
 def plan(src, bank=None, pilot_cache=None, pilot_state=None):
     """Every step, in order. Reads the pilot, writes nothing."""
     src = Path(src).expanduser()
-    pilot_cache = Path(pilot_cache or Path.home() / ".cache/journeys")
-    pilot_state = Path(pilot_state or Path.home() / ".local/state/journeys")
+    pilot_cache = Path(pilot_cache).expanduser() if pilot_cache else paths.pilot_cache()
+    pilot_state = Path(pilot_state).expanduser() if pilot_state else paths.pilot_state()
     bank = bank or Bank()
     data, cache, state = paths.user_data(), paths.cache(), paths.state()
     by_upload = _upload_to_song(bank)
@@ -118,10 +121,10 @@ def plan(src, bank=None, pilot_cache=None, pilot_state=None):
         if rf.is_file():
             for rid, prof in _profiles(page, read_json(rf)).items():
                 steps.append(Step("remix profile", page, cache / "profiles" / f"{rid}.json", "profile", prof))
-    for sub in ("video", "audio", "soundcloud"):
+    for sub in ("video", "audio", "soundcloud") if pilot_cache else ():
         for p in _files(pilot_cache / sub):
             steps.append(Step(sub, p, cache / sub / p.name, "link"))
-    for name in ("av-latency.json", "workspace"):
+    for name in ("av-latency.json", "workspace") if pilot_state else ():
         if (pilot_state / name).is_file():
             steps.append(Step("state", pilot_state / name, state / name))
     # Two pilot folders can hold the same picture; keep the first.
@@ -220,7 +223,10 @@ def _procs():
 
 def chromium_step(pilot_state, procs=None):
     """(src, dest, why not) for the page's Chromium profile; why not is None when it should be copied."""
-    src, dest = Path(pilot_state) / "chromium", paths.state() / "chromium"
+    dest = paths.state() / "chromium"
+    if not pilot_state:
+        return None, dest, "no pilot profile"
+    src = Path(pilot_state) / "chromium"
     if not src.is_dir():
         return src, dest, "no pilot profile"
     if dest.exists() or dest.is_symlink():
@@ -243,7 +249,8 @@ def copy_profile(src, dest):
 def run(src, dry_run=False, bank=None, pilot_cache=None, pilot_state=None, log=print, procs=None):
     """Carry out the plan. Returns the manifest (a dict)."""
     steps, unmapped = plan(src, bank, pilot_cache, pilot_state)
-    csrc, cdest, cwhy = chromium_step(pilot_state or Path.home() / ".local/state/journeys", procs)
+    pilot_state = Path(pilot_state).expanduser() if pilot_state else paths.pilot_state()
+    csrc, cdest, cwhy = chromium_step(pilot_state, procs)
     mf = paths.state() / "migrate-personal.json"
     old = {e["dest"]: e for e in (read_json(mf).get("files") if mf.is_file() else [])}
     if dry_run:

@@ -1,6 +1,6 @@
 """Convert a journeys-pilot playlist folder into the song bank, the culture bank and a journey.
 
-    python3 tools/migrate_journey.py ~/Projects/Music/journeys/playlists/downtempo-drift
+    liner-notes migrate <your pilot checkout>/playlists/downtempo-drift
 
 Old folder: playlist.json, panel.json, tracks.json, eras/era-N.json, culture/era-N.json,
 stage-cache.json, media/{covers,eras,culture,artists}/.

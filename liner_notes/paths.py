@@ -75,18 +75,32 @@ def cliamp_dir():
     return _env_path("CLIAMP_CONFIG_DIR", Path.home() / ".config/cliamp")
 
 
+# A journeys pilot checkout, its media cache and its state dir, read as fallbacks only when you name
+# them. Nothing is read from a pilot unless these are set; `liner-notes migrate-personal` moves the data.
+
+
 def pilot():
-    """The journeys pilot checkout, read as a fallback until `liner-notes migrate-personal` has run."""
-    return _env_path("LINER_NOTES_PILOT", Path.home() / "Projects/Music/journeys")
+    """Your pilot checkout (LINER_NOTES_PILOT), or None."""
+    return _env_path("LINER_NOTES_PILOT", None)
 
 
 def pilot_cache():
-    return _env_path("LINER_NOTES_PILOT_CACHE", Path.home() / ".cache/journeys")
+    """The pilot's video and audio cache (LINER_NOTES_PILOT_CACHE), or None."""
+    return _env_path("LINER_NOTES_PILOT_CACHE", None)
+
+
+def pilot_state():
+    """The pilot's state dir, with av-latency.json and the page's Chromium profile (LINER_NOTES_PILOT_STATE), or None."""
+    return _env_path("LINER_NOTES_PILOT_STATE", None)
+
+
+def _under(base, *parts):
+    return [base.joinpath(*parts)] if base else []
 
 
 def lyric_file(yt):
     """A retimed lyrics file for an upload, ours first, then the pilot's."""
-    for d in (user_data() / "lyrics", pilot() / "lyrics"):
+    for d in (user_data() / "lyrics", *_under(pilot(), "lyrics")):
         p = d / f"{yt}.json"
         if p.is_file():
             return p
@@ -94,7 +108,7 @@ def lyric_file(yt):
 
 
 def video_file(yt):
-    for d in (cache() / "video", pilot_cache() / "video"):
+    for d in (cache() / "video", *_under(pilot_cache(), "video")):
         p = d / f"{yt}.mp4"
         if p.is_file():
             return p
@@ -105,7 +119,7 @@ AUDIO = (".m4a", ".webm", ".opus", ".mp3", ".ogg", ".flac", ".wav", ".aac")
 
 
 def audio_file(yt):
-    for d in (cache() / "audio", cache() / "soundcloud", pilot_cache() / "audio", pilot_cache() / "soundcloud"):
+    for d in (cache() / "audio", cache() / "soundcloud", *_under(pilot_cache(), "audio"), *_under(pilot_cache(), "soundcloud")):
         hit = next((p for p in sorted(d.glob(f"{yt}.*")) if p.suffix.lower() in AUDIO), None) if d.is_dir() else None
         if hit:
             return hit

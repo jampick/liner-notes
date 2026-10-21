@@ -114,7 +114,7 @@ Covers belong to the labels. Wikipedia pictures each have their licence recorded
 
 `liner-notes build <slug> --public` makes a page you can send to someone: no covers, no video ids, the same notes. `liner-notes check --publish` fails if anything from the table turns up in the tree or in a public build, and CI runs it on every push.
 
-`liner-notes migrate-personal --from ~/Projects/Music/journeys` moved my own pilot's lyrics, pictures and caches into those folders (video and audio as hard links). It's safe to rerun, and `--dry-run` shows the plan.
+`liner-notes migrate-personal --from <your pilot checkout> --cache <its media cache> --state <its state dir>` moved my own pilot's lyrics, pictures, caches and page profile into those folders (video and audio as hard links). Until you've run it, setting LINER_NOTES_PILOT, LINER_NOTES_PILOT_CACHE and LINER_NOTES_PILOT_STATE makes the bridge read from the pilot as a fallback; without them nothing is read from a pilot. It's safe to rerun, and `--dry-run` shows the plan.
 
 Every page says in its credits, its `<head>` and its JSON-LD that an AI model wrote the notes, and how many songs a person has reviewed.
 

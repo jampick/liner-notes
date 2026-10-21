@@ -1,7 +1,7 @@
 """Timed lyrics for the playing track, from the best place that has them.
 
   1. retimed     user_data()/lyrics/<youtube id>.json (a lyric_align run against that upload),
-                 then the pilot's ~/Projects/Music/journeys/lyrics/<id>.json. Read when they change.
+                 then <your pilot checkout>/lyrics/<id>.json when LINER_NOTES_PILOT is set. Read when they change.
   2. cliamp      cliamp's own `lyrics` operation, when its lines are timed.
   3. lrclib      LRCLIB's search, the synced copy closest to the track's length
                  (LINER_NOTES_LRCLIB_URL points it elsewhere, for tests).
@@ -28,13 +28,13 @@ from .. import USER_AGENT, paths
 from ..ids import clean_artist, clean_title, split_upload_title
 from . import contract
 
-PILOT = Path.home() / "Projects/Music/journeys/lyrics"
 LRCLIB = "https://lrclib.net"
 LRC_LINE = re.compile(r"\[(\d+):(\d+(?:\.\d+)?)\]\s*(.*)")
 
 
 def retimed_dirs():
-    return [paths.user_data() / "lyrics", PILOT]
+    pilot = paths.pilot()
+    return [paths.user_data() / "lyrics", *([pilot / "lyrics"] if pilot else [])]
 
 
 def lines_out(rows):

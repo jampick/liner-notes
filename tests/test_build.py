@@ -211,3 +211,18 @@ def test_fonts_only_in_public_pages(iso, tpl):
     assert '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral">' in public.read_text()
     live = B.build_live(template=tpl, log=lambda *a: None).read_text()
     assert 'href=""' not in live and "stylesheet" not in live
+
+
+def test_no_pilot_unless_named(iso, monkeypatch):
+    """With the pilot variables unset nothing is read from a pilot, and nothing breaks."""
+    from liner_notes.bridge import lyrics, media, route
+
+    for k in ("LINER_NOTES_PILOT", "LINER_NOTES_PILOT_CACHE", "LINER_NOTES_PILOT_STATE"):
+        monkeypatch.delenv(k, raising=False)
+    assert paths.pilot() is None and paths.pilot_cache() is None and paths.pilot_state() is None
+    assert paths.lyric_file("AAAAAAAAAAA") is None and paths.video_file("AAAAAAAAAAA") is None and paths.audio_file("AAAAAAAAAAA") is None
+    assert lyrics.retimed_dirs() == [paths.user_data() / "lyrics"]
+    assert media.video_dirs() == [paths.cache() / "video"]
+    assert route.tables() == [paths.state() / "av-latency.json"]
+    make_bank(iso["home"])
+    assert stage.standins("test-trip") == {}

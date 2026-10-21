@@ -13,9 +13,9 @@ def media(env):
     v = env["tmp"] / "cache/video"
     v.mkdir(parents=True)
     (v / f"{YT}.mp4").write_bytes(BODY)
-    (env["tmp"] / "pilot-video").mkdir()
-    (env["tmp"] / "pilot-video/PiLoTvIdEo1.mp4").write_bytes(b"old cache")
-    (env["tmp"] / "pilot-video/AbCdEfGhIjK.mp4").write_bytes(b"shadowed")
+    (env["tmp"] / "pilot-cache/video").mkdir(parents=True)
+    (env["tmp"] / "pilot-cache/video/PiLoTvIdEo1.mp4").write_bytes(b"old cache")
+    (env["tmp"] / "pilot-cache/video/AbCdEfGhIjK.mp4").write_bytes(b"shadowed")
     c = env["tmp"] / "cache/culture"
     c.mkdir()
     (c / "poster.webp").write_bytes(b"RIFFposter")

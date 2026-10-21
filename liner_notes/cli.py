@@ -104,7 +104,7 @@ def cmd_doctor(a):
 def cmd_migrate_personal(a):
     from . import personal
 
-    personal.run(a.from_, dry_run=a.dry_run)
+    personal.run(a.from_, dry_run=a.dry_run, pilot_cache=a.pilot_cache, pilot_state=a.pilot_state)
     return 0
 
 
@@ -237,7 +237,11 @@ def parser():
     p.set_defaults(fn=cmd_doctor)
 
     p = sub.add_parser("migrate-personal", help="copy the journeys pilot's lyrics, pictures and caches into the XDG dirs")
-    p.add_argument("--from", dest="from_", default=str(paths.pilot()), metavar="DIR")
+    p.add_argument("--from", dest="from_", required=True, metavar="DIR", help="your pilot checkout")
+    p.add_argument(
+        "--cache", dest="pilot_cache", metavar="DIR", help="the pilot's video and audio cache (default: LINER_NOTES_PILOT_CACHE)"
+    )
+    p.add_argument("--state", dest="pilot_state", metavar="DIR", help="the pilot's state dir (default: LINER_NOTES_PILOT_STATE)")
     p.add_argument("--dry-run", action="store_true")
     p.set_defaults(fn=cmd_migrate_personal)
 

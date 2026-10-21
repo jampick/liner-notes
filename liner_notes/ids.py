@@ -9,8 +9,8 @@ import re
 import unicodedata
 
 YT = re.compile(r"(?:[?&]v=|youtu\.be/|/shorts/|/embed/)([\w-]{11})")
-# An offline playlist plays the cached audio, named by its YouTube id: ~/.cache/journeys/audio/<id>.webm
-# from the pilot, ~/.cache/liner-notes/audio/<id>.<ext> from here.
+# An offline playlist plays the cached audio, named by its YouTube id: .../journeys/audio/<id>.webm from a
+# pilot cache, ~/.cache/liner-notes/audio/<id>.<ext> from here.
 OFFLINE = re.compile(r"/(?:journeys|liner-notes)/audio/([\w-]{11})\.\w+$")
 
 # Upload and release noise that says nothing about which song it is.

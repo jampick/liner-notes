@@ -110,7 +110,8 @@ def test_moving_clock_end_to_end(start):
 def test_latency_from_the_table(env, monkeypatch):
     state = env["tmp"] / "state/liner-notes"
     state.mkdir(parents=True)
-    (env["tmp"] / "pilot-av.json").write_text(json.dumps({"sink-a": 0.4, "sink-b": 0.3}))
+    (env["tmp"] / "pilot-state").mkdir()
+    (env["tmp"] / "pilot-state/av-latency.json").write_text(json.dumps({"sink-a": 0.4, "sink-b": 0.3}))
     lat = Latency(find_route=lambda: "sink-a")
     assert lat.get() == 0.4  # from the pilot's table
     (state / "av-latency.json").write_text(json.dumps({"sink-a": 0.437}))

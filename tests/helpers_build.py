@@ -6,7 +6,7 @@ import pytest
 @pytest.fixture
 def iso(tmp_path, monkeypatch):
     """Point every place Liner Notes reads or writes at tmp, the pilot fallbacks included."""
-    d = {name: tmp_path / name for name in ("data", "cache", "state", "dist", "pilot", "pilot_cache", "cliamp", "home")}
+    d = {name: tmp_path / name for name in ("data", "cache", "state", "dist", "pilot", "pilot_cache", "pilot_state", "cliamp", "home")}
     for p in d.values():
         p.mkdir()
     monkeypatch.setenv("LINER_NOTES_DATA", str(d["data"]))
@@ -15,6 +15,7 @@ def iso(tmp_path, monkeypatch):
     monkeypatch.setenv("LINER_NOTES_DIST", str(d["dist"]))
     monkeypatch.setenv("LINER_NOTES_PILOT", str(d["pilot"]))
     monkeypatch.setenv("LINER_NOTES_PILOT_CACHE", str(d["pilot_cache"]))
+    monkeypatch.setenv("LINER_NOTES_PILOT_STATE", str(d["pilot_state"]))
     monkeypatch.setenv("LINER_NOTES_CONFIG", str(tmp_path / "config.toml"))
     monkeypatch.setenv("CLIAMP_CONFIG_DIR", str(d["cliamp"]))
     monkeypatch.setenv("LINER_NOTES_SYSTEMD_DIR", str(tmp_path / "systemd"))

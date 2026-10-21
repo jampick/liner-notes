@@ -71,7 +71,7 @@ def test_retimed_file_wins(start, env):
 
 def test_pilot_retimed_file_is_the_fallback(start, env):
     b = start()
-    write_json(env["tmp"] / "pilot-lyrics/0Rw-UsRPNqc.json", {"lines": [{"start": 3, "text": "from the pilot"}]})
+    write_json(env["tmp"] / "pilot/lyrics/0Rw-UsRPNqc.json", {"lines": [{"start": 3, "text": "from the pilot"}]})
     r = b.get("/lyrics")
     assert r["source"] == "retimed" and r["lines"][0]["text"] == "from the pilot"
 

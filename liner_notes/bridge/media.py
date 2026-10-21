@@ -1,8 +1,8 @@
 """Files the bridge serves from the cache: disk video, stage pictures and their depth maps.
 
 Every route takes its names from a fullmatch on the raw path ([a-z0-9-] slugs, [\\w.-] file names,
-11-character YouTube ids), so nothing like ../ or %2f reaches the file system. During the move
-from the pilot, video is also read from ~/.cache/journeys/video.
+11-character YouTube ids), so nothing like ../ or %2f reaches the file system. With
+LINER_NOTES_PILOT_CACHE set, video is also read from its video/ folder.
 """
 
 import hashlib
@@ -14,13 +14,13 @@ from pathlib import Path
 from .. import paths
 from . import contract
 
-PILOT_VIDEO = Path.home() / ".cache/journeys/video"
 VIDEO, PICTURE, COVER, DEPTH, TYPES = contract.VIDEO, contract.PICTURE, contract.COVER, contract.DEPTH, contract.TYPES
 UNSATISFIABLE, parse_range = contract.UNSATISFIABLE, contract.parse_range
 
 
 def video_dirs():
-    return [paths.cache() / "video", PILOT_VIDEO]
+    pilot = paths.pilot_cache()
+    return [paths.cache() / "video", *([pilot / "video"] if pilot else [])]
 
 
 def find_video(yt, dirs=None):

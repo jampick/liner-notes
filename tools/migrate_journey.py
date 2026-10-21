@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Convert a journeys-pilot playlist folder into songs/, culture/ and journeys/<slug>/.
 
-python3 tools/migrate_journey.py ~/Projects/Music/journeys/playlists/<slug> [--root DIR] [--cache DIR]
+python3 tools/migrate_journey.py <your pilot checkout>/playlists/<slug> [--root DIR] [--cache DIR]
 """
 
 import argparse

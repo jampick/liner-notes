@@ -59,3 +59,21 @@ def test_cli_offline_and_build_live(iso, capsys, monkeypatch):
     assert cli.main(["offline", "off"]) == 0 and not (iso["state"] / "offline").exists()
     if cli.paths.PACKAGE.joinpath("web/template.html").exists():
         assert cli.main(["build", "live"]) == 0 and (iso["dist"] / "live.html").exists()
+
+
+def test_migrate_personal_needs_from(iso, capsys):
+    import pytest
+
+    with pytest.raises(SystemExit):
+        cli.main(["migrate-personal", "--dry-run"])
+    assert "--from" in capsys.readouterr().err
+
+
+def test_doctor_skips_the_pilot_when_unset(iso, monkeypatch):
+    make_bank(iso["home"])
+    monkeypatch.setenv("LINER_NOTES_HOME", str(iso["home"]))
+    monkeypatch.delenv("LINER_NOTES_PILOT")
+    monkeypatch.setattr(doctor, "port_owner", lambda port: None)
+    out = []
+    doctor.run(Fake(), log=out.append)
+    assert not any("pilot data" in x for x in out)

@@ -123,9 +123,9 @@ def env(tmp_path, monkeypatch):
     monkeypatch.setenv("LINER_NOTES_DIST", str(tmp_path / "dist"))
     monkeypatch.setenv("LINER_NOTES_DATA", str(tmp_path / "data"))
     monkeypatch.setenv("XDG_STATE_HOME", str(tmp_path / "state"))
-    monkeypatch.setattr("liner_notes.bridge.lyrics.PILOT", tmp_path / "pilot-lyrics")
-    monkeypatch.setattr("liner_notes.bridge.media.PILOT_VIDEO", tmp_path / "pilot-video")
-    monkeypatch.setattr("liner_notes.bridge.route.PILOT_TABLE", tmp_path / "pilot-av.json")
+    monkeypatch.setenv("LINER_NOTES_PILOT", str(tmp_path / "pilot"))  # lyrics/ under it
+    monkeypatch.setenv("LINER_NOTES_PILOT_CACHE", str(tmp_path / "pilot-cache"))  # video/ under it
+    monkeypatch.setenv("LINER_NOTES_PILOT_STATE", str(tmp_path / "pilot-state"))  # av-latency.json in it
     monkeypatch.setattr("liner_notes.bridge.route.route", lambda: "")
     monkeypatch.setattr("liner_notes.bridge.theme.THEME", tmp_path / "no-omarchy-theme")  # never the desktop's own
     lrc = FakeLrclib()

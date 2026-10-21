@@ -1,7 +1,7 @@
 """Where cliamp's sound goes, and how late it gets there.
 
 The A/V latency table (written by an avsync measurement, seconds per route) lives in
-state()/av-latency.json, with the pilot's ~/.local/state/journeys/av-latency.json as a fallback.
+state()/av-latency.json, with <LINER_NOTES_PILOT_STATE>/av-latency.json as a fallback when that's set.
 The route is the PulseAudio/PipeWire sink cliamp's stream plays into. When that's Easy Effects,
 the sound goes on to the device in its [StreamOutputs] outputDevice and takes the effects' own
 delay with it, so the route is "easyeffects_sink>" plus that device.
@@ -20,11 +20,11 @@ from pathlib import Path
 from .. import paths
 
 EE_CONFIG = Path.home() / ".config/easyeffects/db/easyeffectsrc"
-PILOT_TABLE = Path.home() / ".local/state/journeys/av-latency.json"
 
 
 def tables():
-    return [paths.state() / "av-latency.json", PILOT_TABLE]
+    pilot = paths.pilot_state()
+    return [paths.state() / "av-latency.json", *([pilot / "av-latency.json"] if pilot else [])]
 
 
 def _pactl(*args):

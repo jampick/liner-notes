@@ -28,8 +28,9 @@ def safe(title):
 
 
 def standins(slug):
-    """Stand-in videos for a journey: personal data, ours first, then the pilot's."""
-    for f in (paths.user_data() / "standins" / f"{slug}.json", paths.pilot() / "playlists" / slug / "standins.json"):
+    """Stand-in videos for a journey: personal data, ours first, then the pilot's when LINER_NOTES_PILOT is set."""
+    pilot = paths.pilot()
+    for f in (paths.user_data() / "standins" / f"{slug}.json", *([pilot / "playlists" / slug / "standins.json"] if pilot else [])):
         if f.is_file():
             return read_json(f)
     return {}
