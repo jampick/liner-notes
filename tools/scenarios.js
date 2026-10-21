@@ -573,7 +573,9 @@ scenarios['video-retry'] = async () => {
   await sleep(5500);
   play(a, { pos0: 20 });
   await within(page, 3000, t => document.querySelector('#svTitle').textContent === t, a.title);
-  check('listed again, it plays again', await within(page, 6000, () => document.querySelector('#stagev').classList.contains('cinema')) !== null, JSON.stringify(await page.evaluate(() => LinerNotes.stage())));
+  check('listed again, it is no longer set aside', await within(page, 6000, yt => !LinerNotes.stage().videoFailed.includes(yt), a.yt) !== null);
+  // Software decoding on a CI runner can take a while to get the first frame up.
+  check('listed again, it plays again', await within(page, 15000, () => document.querySelector('#stagev').classList.contains('cinema')) !== null, JSON.stringify(await page.evaluate(() => LinerNotes.stage())));
   await ctx.close();
 };
 
