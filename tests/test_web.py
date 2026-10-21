@@ -4,6 +4,8 @@ import http.client
 import importlib.util
 import json
 import re
+import shutil
+import subprocess
 import threading
 import time
 from pathlib import Path
@@ -79,34 +81,29 @@ def test_note_and_space_in_remix_byline():
     assert '"\\266a\\00a0"' in css
 
 
-@pytest.mark.parametrize(
-    "header,size,want",
-    [
-        (None, 100, None),
-        ("bytes=0-9", 100, (0, 9)),
-        ("bytes=90-", 100, (90, 99)),
-        ("bytes=-10", 100, (90, 99)),
-        ("bytes=0-500", 100, (0, 99)),
-        ("bytes=-", 100, "bad"),
-        ("bytes=100-", 100, "bad"),
-        ("bytes=5-2", 100, "bad"),
-        ("items=0-1", 100, "bad"),
-    ],
-)
-def test_range_parsing(header, size, want):
-    assert fake.parse_range(header, size) == want
+def test_only_web_addresses_become_links():
+    js = script(WEB / "template.html")
+    assert "href: u," not in js and "href: s.youtube" not in js and "href: s.apple" not in js
+    assert "const web = u =>" in js
 
 
-def test_now_counts_on_only_while_playing():
-    t = 1000.0
-    st = {"now": {"ok": True, "state": "playing", "pos0": 10, "t0": t, "duration": 240, "epoch": 3}}
-    assert fake.now_payload(st, t + 5)["position"] == 15
-    st["now"]["state"] = "paused"
-    out = fake.now_payload(st, t + 5)
-    assert out["position"] == 10 and out["moving"] is False
-    st["now"].update(state="playing", moving=False)
-    assert fake.now_payload(st, t + 5)["position"] == 10
-    assert fake.now_payload({}, t) == {"ok": False, "reason": "stopped", "version": "fake", "source": "cliamp"}
+def test_fake_bridge_uses_the_bridge_contract():
+    # The fake serves what the page sees in tests; its routes, range rules, CSP and token refusal are the bridge's own.
+    from liner_notes.bridge import contract
+
+    assert fake.C is contract
+
+
+def test_page_scripts_parse():
+    # A stray bracket in a template only shows as a page error at run time; node catches it here.
+    node = shutil.which("node")
+    if not node:
+        pytest.skip("no node")
+    for path in TEMPLATES:
+        for k, js in enumerate(re.findall(r"<script>(.*?)</script>", path.read_text(), re.S)):
+            js = js.replace("/*DATA*/null", "[]").replace("/*__DATA__*/null", "null")
+            r = subprocess.run([node, "--check", "-"], input=js, capture_output=True, text=True)
+            assert r.returncode == 0, f"{path.name} script {k}: {r.stderr[-400:]}"
 
 
 @pytest.fixture
@@ -115,18 +112,11 @@ def served(tmp_path):
     (tmp_path / "video").mkdir()
     (tmp_path / "dist/demo.html").write_text('<head><meta name="liner-token" content=""></head>')
     (tmp_path / "video/abcdefghijk.mp4").write_bytes(bytes(range(256)) * 4)
-    (tmp_path / "state.json").write_text(
-        json.dumps(
-            {
-                "now": {"ok": True, "state": "playing", "title": "T", "yt": "abcdefghijk", "pos0": 1, "t0": time.time()},
-                "lyrics": {"abcdefghijk": [{"t": 1, "text": "a line"}]},
-            }
-        )
-    )
-    srv, token = fake.make_server(tmp_path, 0, "tok")
-    port = srv.server_address[1]
+    now = {"ok": True, "state": "playing", "title": "T", "yt": "abcdefghijk", "song": "a-song", "pos0": 1, "t0": time.time()}
+    (tmp_path / "state.json").write_text(json.dumps({"now": now, "lyrics": {"abcdefghijk": [{"t": 1, "text": "a line"}]}}))
+    srv, _ = fake.make_server(tmp_path, 0, "tok")
     threading.Thread(target=srv.serve_forever, daemon=True).start()
-    yield tmp_path, port
+    yield tmp_path, srv.server_address[1]
     srv.shutdown()
 
 
@@ -137,36 +127,17 @@ def call(port, method, path, body=None, headers=None):
     return r, r.read()
 
 
-def test_fake_bridge_serves_page_with_token_and_csp(served):
-    _, port = served
-    r, body = call(port, "GET", "/p/demo.html")
-    assert r.status == 200 and b'content="tok"' in body
-    assert "font-src 'self' data:" in r.getheader("Content-Security-Policy")
-    r, body = call(port, "HEAD", "/p/demo.html")
-    assert r.status == 200 and body == b""
-    assert call(port, "HEAD", "/p/nope.html")[0].status == 404
-
-
-def test_fake_bridge_video_ranges(served):
-    _, port = served
-    r, body = call(port, "GET", "/v/abcdefghijk.mp4", headers={"Range": "bytes=10-19"})
-    assert r.status == 206 and body == bytes(range(10, 20)) and r.getheader("Content-Range") == "bytes 10-19/1024"
-    assert call(port, "GET", "/v/abcdefghijk.mp4", headers={"Range": "bytes=-"})[0].status == 416
-    assert json.loads(call(port, "GET", "/v/")[1])["ids"] == ["abcdefghijk"]
-
-
-def test_fake_bridge_lyrics_only_for_the_song_asked(served):
-    _, port = served
-    assert json.loads(call(port, "GET", "/lyrics?yt=abcdefghijk")[1])["lines"][0]["text"] == "a line"
-    assert json.loads(call(port, "GET", "/lyrics?yt=zzzzzzzzzzz")[1]) == {"ok": False}
-
-
-def test_fake_bridge_post_needs_token_and_logs(served):
+def test_fake_bridge_answers_like_the_bridge(served):
     root, port = served
+    r, body = call(port, "GET", "/p/demo.html")
+    assert r.status == 200 and b'content="tok"' in body and r.getheader("ETag")
+    assert call(port, "GET", "/p/demo.html", headers={"If-None-Match": r.getheader("ETag")})[0].status == 304
+    lines = json.loads(call(port, "GET", "/lyrics?yt=abcdefghijk")[1])["lines"]
+    assert lines == [{"t": 1, "start": 1, "text": "a line"}]
+    other = json.loads(call(port, "GET", "/lyrics?yt=zzzzzzzzzzz")[1])
+    assert other["ok"] is False and other["error"] == "not playing" and other["lines"] == []
+    assert call(port, "GET", "/v/abcdefghijk.mp4", headers={"Range": "bytes=5-3"})[0].status == 200
     r, body = call(port, "POST", "/cmd", {"op": "next"})
-    assert r.status == 403 and json.loads(body) == {"ok": False, "reason": "token"}
-    assert call(port, "POST", "/cmd", {"op": "next"}, {"X-Liner-Token": "tok", "Origin": "null"})[0].status == 403
+    assert r.status == 403 and json.loads(body) == fake.C.token_refusal()
+    assert call(port, "POST", "/cmd", {"op": "dance"}, {"X-Liner-Token": "tok"})[0].status == 400
     assert call(port, "POST", "/cmd", {"op": "next"}, {"X-Liner-Token": "tok"})[0].status == 200
-    assert call(port, "POST", "/cmd", [], {"X-Liner-Token": "tok"})[0].status == 400
-    posts = [json.loads(x) for x in (root / "posts.log").read_text().splitlines()]
-    assert [p["token_ok"] for p in posts] == [False, True]

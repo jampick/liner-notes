@@ -4,28 +4,31 @@
     python3 tools/fake_bridge.py fixtures <dir>              build test pages and media into <dir>
     python3 tools/fake_bridge.py serve <dir> --port 47411    serve them the way the bridge does
 
-It speaks the page <-> bridge contract: /now, /lyrics, /bands, /history, /theme, /p/<slug>.html (token put in the
-page, the bridge's CSP on it), /p/<slug>.stage.json, /v/ and /v/<id>.mp4 with Range, /d/ and /m/ pictures, and
-POST /cmd and /play behind X-Liner-Token. What it says comes from <dir>/state.json, which a test rewrites
-whenever it wants the player to change (song, pause, seek, ok:false, an off-journey song). The file is read
-again on every request, so a test can kill this process and start it again on the same port and the story
-carries on: that's how bridge death is played.
+It speaks the page <-> bridge contract with the bridge's own pieces (liner_notes.bridge.contract: the route
+patterns, parse_range, the CSP and the token refusal), so the two can't drift apart quietly: /now, /lyrics
+(refused for a song that isn't playing), /bands, /history, /theme, /p/<slug>.html (token written in, CSP,
+ETag and 304), /p/<slug>.stage.json, /v/ and /v/<id>.mp4 with Range, /d/ and /m/ pictures, and POST /cmd and
+/play behind X-Liner-Token. What the player says comes from <dir>/state.json, which a test rewrites whenever it
+wants the player to change (song, pause, seek, ok:false, an off-journey song). The file is read again on every
+request, so a test can kill this process and start it again on the same port and the story carries on: that's
+how bridge death is played. The token stays the same across starts, as the real bridge's does.
 
     {"now": {"ok": true, "state": "playing", "title": ..., "artist": ..., "yt": ..., "song": ..., "journey": ...,
              "playlist": ..., "duration": 240, "pos0": 12.0, "t0": <unix time pos0 was true>, "epoch": 3, "moving": true},
      "lyrics": {"<yt>" or "song:<id>": [{"t": 1.5, "text": "..."}]},  "lyrics_delay": 0,
      "history": [{"yt": ..., "song": ..., "at": "<iso>", "secs": 240}],  "theme": {...} or null,
-     "videos": ["<id>", ...] (default: every file in <dir>/video),  "bands": true, "bands_close_after": 0}
+     "videos": ["<id>", ...] (default: every file in <dir>/video),  "video_broken": ["<id>"] (listed, but 404),
+     "bands": true, "bands_close_after": 0,  "refuse_token": false (every POST gets the token refusal)}
 
 Every request goes to <dir>/requests.log and every POST to <dir>/posts.log, one JSON object a line. The fixtures
 are made up (synthetic lyrics, pictures and video) apart from the journey text that ships in this repo.
 """
 
 import argparse
+import hashlib
 import hmac
 import json
 import re
-import secrets
 import shutil
 import struct
 import subprocess
@@ -38,12 +41,13 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+from liner_notes.bridge import contract as C  # noqa: E402  (the shared contract: routes, Range, CSP, token, answers)
+
 VERSION = "fake"
-CSP = (
-    "default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; "
-    "script-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:; frame-src 'none'; object-src 'none'; base-uri 'none'"
-)
-TOKEN_META = '<meta name="liner-token" content="">'
+TOKEN = "fake-bridge-page-token-0001"
+CAN = ["bands", "history", "jump", "lyrics", "next", "prev", "toggle"]
 
 
 class State:
@@ -70,7 +74,7 @@ class State:
 def now_payload(st, t=None):
     n = st.get("now") or {"ok": False, "reason": "stopped"}
     if not n.get("ok"):
-        return {"ok": False, "reason": n.get("reason", "stopped"), "version": VERSION, "source": "cliamp"}
+        return C.not_playing(n.get("reason", "stopped"), VERSION, "cliamp", CAN)
     t = time.time() if t is None else t
     playing, moving = n.get("state") == "playing", n.get("moving", True)
     pos = float(n.get("pos0") or 0)
@@ -78,39 +82,41 @@ def now_payload(st, t=None):
         pos += max(0.0, t - float(n.get("t0") or t))
     if n.get("duration"):
         pos = min(pos, float(n["duration"]))
-    out = {k: n.get(k) for k in ("title", "artist", "album", "yt", "song", "journey", "playlist", "duration")}
-    out.update(
-        ok=True,
-        version=VERSION,
-        source=n.get("source", "cliamp"),
-        state=n.get("state", "playing"),
-        position=round(pos, 3),
-        epoch=n.get("epoch", 0),
-        moving=bool(playing and moving),
-        latency=n.get("latency", 0.0),
-        can=["bands", "history", "lyrics", "play", "toggle", "next", "prev"],
-    )
+    vals = {
+        "ok": True,
+        "version": VERSION,
+        "source": n.get("source", "cliamp"),
+        "state": n.get("state", "playing"),
+        "position": round(pos, 3),
+        "epoch": n.get("epoch", 0),
+        "moving": bool(playing and moving),
+        "latency": n.get("latency", 0.0),
+        "can": CAN,
+    }
+    return {k: vals[k] if k in vals else n.get(k) for k in C.NOW_KEYS}
+
+
+def lyrics_payload(st, q):
+    """Only for the song playing (never another song's lines), each line with both t and start."""
+    n = st.get("now") or {}
+    if not n.get("ok"):
+        return {"ok": False, "lines": [], "source": None, "error": "nothing playing"}
+    yt, song = n.get("yt"), n.get("song")
+    want_yt, want_song = q.get("yt", ""), q.get("song", "")
+    if (want_yt or want_song) and not ((want_yt and want_yt == yt) or (want_song and want_song == song)):
+        return C.lyrics_not_playing(yt, song)
+    lyr = st.get("lyrics") or {}
+    lines = lyr.get(yt or "") or lyr.get("song:" + (song or "")) or []
+    return C.lyrics_answer([C.lyric_line(ln["t"], ln["text"]) for ln in lines], "retimed", yt, song)
+
+
+def song_payload(now):
+    """GET /song: /now plus the bank's notes for the matched song; the fake has no bank, so the notes are empty."""
+    if not now.get("ok"):
+        return now
+    out = {k: now.get(k) for k in ("ok", "source", "state", "title", "artist", "album", "song")}
+    out.update(year=None, journey=None, era=None, notes=None, review=None, draft=False)
     return out
-
-
-def parse_range(header, size):
-    """(start, end) for a single bytes range, None for no range, or 'bad' for one to refuse with 416."""
-    if not header:
-        return None
-    m = re.fullmatch(r"bytes=(\d*)-(\d*)", header.strip())
-    if not m or (not m.group(1) and not m.group(2)):
-        return "bad"
-    a, b = m.group(1), m.group(2)
-    if a:
-        start, end = int(a), min(int(b), size - 1) if b else size - 1
-    else:
-        n = int(b)
-        if n == 0:
-            return "bad"
-        start, end = max(0, size - n), size - 1
-    if start >= size or start > end:
-        return "bad"
-    return start, end
 
 
 def make_handler(root, state, token, port, log_lock):
@@ -127,29 +133,61 @@ def make_handler(root, state, token, port, log_lock):
         def log_message(self, *a):
             pass
 
+        def route(self):
+            return self.path.split("?", 1)[0]
+
         def host_ok(self):
             return self.headers.get("Host", "") in {f"127.0.0.1:{port}", f"localhost:{port}"}
 
-        def head(self, code, ctype="application/json", extra=None, length=None):
+        def cors_origin(self):
+            o = self.headers.get("Origin")
+            if not o:
+                return None
+            if o in origins:
+                return o
+            if o == "null" and self.route() in C.NULL_CORS and self.command in ("GET", "HEAD"):
+                return o
+            return None
+
+        def head(self, code, ctype="application/json", extra=None, cache=C.CACHE["api"], csp=None):
             self.send_response(code)
             self.send_header("Content-Type", ctype)
-            self.send_header("Cache-Control", "no-store")
-            if length is not None:
-                self.send_header("Content-Length", str(length))
+            self.send_header("Cache-Control", cache)
+            self.send_header("X-Content-Type-Options", "nosniff")
+            if ctype.startswith("text/html"):
+                self.send_header("Content-Security-Policy", csp or C.CSP)
+                self.send_header("Referrer-Policy", "no-referrer")
+            o = self.cors_origin()
+            if o:
+                self.send_header("Access-Control-Allow-Origin", o)
+            self.send_header("Vary", "Origin")
             for k, v in (extra or {}).items():
                 self.send_header(k, v)
             self.end_headers()
 
         def send_json(self, obj, code=200):
             body = json.dumps(obj).encode()
-            self.head(code, length=len(body))
+            self.head(code, extra={"Content-Length": str(len(body))})
             if self.command != "HEAD":
                 self.wfile.write(body)
 
-        def send_bytes(self, body, ctype, extra=None):
-            self.head(200, ctype, extra, len(body))
+        def send_body(self, body, ctype, cache, csp=None):
+            etag = '"' + hashlib.sha256(body).hexdigest()[:20] + '"'
+            if self.headers.get("If-None-Match") == etag:
+                return self.head(304, ctype, {"ETag": etag}, cache, csp)
+            self.head(200, ctype, {"ETag": etag, "Content-Length": str(len(body))}, cache, csp)
             if self.command != "HEAD":
                 self.wfile.write(body)
+
+        def gate(self, post=False):
+            if not self.host_ok():
+                self.send_json({"ok": False, "error": "host"}, 403)
+                return False
+            o = self.headers.get("Origin")
+            if o is not None and o not in origins and (post or o != "null"):
+                self.send_json({"ok": False, "error": "origin"}, 403)
+                return False
+            return True
 
         def do_HEAD(self):
             self.do_GET()
@@ -157,62 +195,61 @@ def make_handler(root, state, token, port, log_lock):
         def do_GET(self):
             path, _, qs = self.path.partition("?")
             log("requests.log", {"t": time.time(), "m": self.command, "p": path})
-            if not self.host_ok():
-                return self.send_json({"ok": False, "error": "bad host"}, 403)
+            if not self.gate():
+                return
             st = state.get()
             q = dict(p.split("=", 1) for p in qs.split("&") if "=" in p)
             if path == "/now":
                 return self.send_json(now_payload(st))
+            if path == "/song":
+                return self.send_json(song_payload(now_payload(st)))
+            if self.command == "HEAD" and path == "/bands":
+                return self.send_json({"ok": False, "error": "streams answer GET only"}, 405)
             if path == "/lyrics":
                 time.sleep(float(st.get("lyrics_delay") or 0))
-                lyr = st.get("lyrics") or {}
-                lines = lyr.get(q.get("yt", "")) or lyr.get("song:" + q.get("song", ""))
-                return self.send_json({"ok": True, "lines": lines, "source": "retimed"} if lines else {"ok": False})
+                return self.send_json(lyrics_payload(st, q))
             if path == "/history":
                 return self.send_json({"ok": True, "plays": st.get("history") or []})
             if path == "/theme":
                 return self.send_json(st.get("theme") or {"ok": False})
             if path == "/bands":
                 return self.bands(st)
-            if path == "/v/":
+            if path == C.VIDEO_LIST:
                 have = sorted(p.stem for p in (root / "video").glob("*.mp4"))
                 allowed = st.get("videos")
                 return self.send_json({"ok": True, "ids": [i for i in have if allowed is None or i in allowed]})
-            m = re.fullmatch(r"/v/([\w-]{11})\.mp4", path)
-            if m and (root / "video" / f"{m.group(1)}.mp4").is_file() and (st.get("videos") is None or m.group(1) in st["videos"]):
-                return self.video(root / "video" / f"{m.group(1)}.mp4")
-            m = re.fullmatch(r"/p/([a-z0-9-]+)\.html", path)
-            if m and (root / "dist" / f"{m.group(1)}.html").is_file():
-                page = (
-                    (root / "dist" / f"{m.group(1)}.html")
-                    .read_text()
-                    .replace(TOKEN_META, f'<meta name="liner-token" content="{token}">', 1)
-                )
-                return self.send_bytes(
-                    page.encode(), "text/html; charset=utf-8", {"Content-Security-Policy": CSP, "Referrer-Policy": "no-referrer"}
-                )
-            m = re.fullmatch(r"/p/([a-z0-9-]+)\.stage\.json", path)
-            if m and (root / "dist" / f"{m.group(1)}.stage.json").is_file():
-                return self.send_bytes((root / "dist" / f"{m.group(1)}.stage.json").read_bytes(), "application/json")
-            m = re.fullmatch(r"/([md])/[a-z0-9-]+/([a-z]+)/([\w.-]+\.(png|webp|jpg))", path)
+            m = C.VIDEO.fullmatch(path)
             if m:
-                f = root / ("media" if m.group(1) == "m" else "depth") / m.group(2) / m.group(3)
-                if f.is_file():
-                    return self.send_bytes(f.read_bytes(), "image/" + ("jpeg" if m.group(4) == "jpg" else m.group(4)))
+                f = root / "video" / f"{m.group(1)}.mp4"
+                listed = st.get("videos") is None or m.group(1) in st["videos"]
+                if f.is_file() and listed and m.group(1) not in (st.get("video_broken") or []):
+                    return self.video(f)
+            m = C.PAGE.fullmatch(path)
+            if m and (root / "dist" / f"{m.group(1)}.html").is_file():
+                page = C.inject_token((root / "dist" / f"{m.group(1)}.html").read_bytes(), token)
+                return self.send_body(page, "text/html; charset=utf-8", C.CACHE["page"], C.csp(C.script_hashes(page)))
+            m = C.STAGE.fullmatch(path)
+            if m and (root / "dist" / f"{m.group(1)}.stage.json").is_file():
+                return self.send_body((root / "dist" / f"{m.group(1)}.stage.json").read_bytes(), "application/json", C.CACHE["page"])
+            m = C.COVER.fullmatch(path)
+            if m and (root / "media/covers" / f"{m.group(2)}.webp").is_file():
+                return self.send_body((root / "media/covers" / f"{m.group(2)}.webp").read_bytes(), "image/webp", C.CACHE["picture"])
+            for rx, folder in ((C.PICTURE, "media"), (C.DEPTH, "depth")):
+                m = rx.fullmatch(path)
+                if m and (root / folder / m.group(2) / m.group(3)).is_file():
+                    f = root / folder / m.group(2) / m.group(3)
+                    return self.send_body(f.read_bytes(), C.TYPES[f.suffix[1:]], C.CACHE["picture"])
             self.send_json({"ok": False, "error": "not found"}, 404)
 
         def video(self, f):
             size = f.stat().st_size
-            r = parse_range(self.headers.get("Range"), size)
-            if r == "bad":
-                return self.head(416, "video/mp4", {"Content-Range": f"bytes */{size}"}, 0)
+            base = {"Accept-Ranges": "bytes"}
+            r = C.parse_range(self.headers.get("Range"), size)
+            if r == C.UNSATISFIABLE:
+                return self.head(416, "video/mp4", {**base, "Content-Range": f"bytes */{size}", "Content-Length": "0"}, C.CACHE["video"])
             start, end = r or (0, size - 1)
-            self.head(
-                206 if r else 200,
-                "video/mp4",
-                {"Accept-Ranges": "bytes", **({"Content-Range": f"bytes {start}-{end}/{size}"} if r else {})},
-                end - start + 1,
-            )
+            extra = {**base, "Content-Length": str(end - start + 1), **({"Content-Range": f"bytes {start}-{end}/{size}"} if r else {})}
+            self.head(206 if r else 200, "video/mp4", extra, C.CACHE["video"])
             if self.command == "HEAD":
                 return
             with open(f, "rb") as fh:
@@ -249,36 +286,42 @@ def make_handler(root, state, token, port, log_lock):
             except (BrokenPipeError, ConnectionResetError, OSError):
                 pass
 
-        def do_POST(self):
-            path = self.path.split("?")[0]
-            log("requests.log", {"t": time.time(), "m": "POST", "p": path})
-            origin = self.headers.get("Origin")
-            if not self.host_ok() or (origin is not None and origin not in origins):
-                return self.send_json({"ok": False, "error": "forbidden"}, 403)
+        def read_body(self):
+            cl = (self.headers.get("Content-Length") or "0").strip()
+            if not re.fullmatch(r"\d{1,9}", cl) or int(cl) > C.MAX_BODY:
+                return None, "bad Content-Length"
+            raw = self.rfile.read(int(cl)) if int(cl) else b""
             try:
-                n = int(self.headers.get("Content-Length", "0"))
-                if not 0 <= n <= 10000:
-                    raise ValueError
-                body = json.loads(self.rfile.read(n) or b"{}")
-                if not isinstance(body, dict):
-                    raise ValueError
+                body = json.loads(raw or b"{}")
             except ValueError:
-                return self.send_json({"ok": False, "error": "bad request"}, 400)
-            ok = hmac.compare_digest(self.headers.get("X-Liner-Token", "").encode(), token.encode())
-            log("posts.log", {"t": time.time(), "path": path, "body": body, "token_ok": ok, "origin": origin})
-            if not ok:
-                return self.send_json({"ok": False, "reason": "token"}, 403)
-            if path == "/cmd" and body.get("op") in ("toggle", "next", "prev"):
+                return None, "bad json"
+            return (body, None) if isinstance(body, dict) else (None, "the body must be a JSON object")
+
+        def do_POST(self):
+            path = self.route()
+            log("requests.log", {"t": time.time(), "m": "POST", "p": path})
+            if not self.gate(post=True):
+                self.close_connection = True
+                return
+            body, err = self.read_body()
+            st = state.get()
+            ok = hmac.compare_digest(self.headers.get("X-Liner-Token", "").encode(), token.encode()) and not st.get("refuse_token")
+            log("posts.log", {"t": time.time(), "path": path, "body": body, "token_ok": ok, "origin": self.headers.get("Origin")})
+            if not ok:  # the bridge checks the token before it looks at the body
+                return self.send_json(C.token_refusal(), 403)
+            if err:
+                self.close_connection = True
+                return self.send_json({"ok": False, "error": err}, 400)
+            if path == "/cmd" and body.get("op") in C.COMMANDS:
                 return self.send_json({"ok": True})
-            if path == "/play" and (body.get("yt") or body.get("song")):
-                return self.send_json({"ok": True})
-            self.send_json({"ok": False, "error": "unknown"}, 404)
+            if path == "/play" and (C.YT_ID.fullmatch(str(body.get("yt") or "")) or C.SONG_ID.fullmatch(str(body.get("song") or ""))):
+                return self.send_json({"ok": True, "index": 0})
+            self.send_json({"ok": False, "error": "unknown"}, 400)
 
     return H
 
 
-def make_server(root, port, token=None):
-    token = token or secrets.token_urlsafe(18)
+def make_server(root, port, token=TOKEN):
     srv = ThreadingHTTPServer(("127.0.0.1", port), BaseHTTPRequestHandler)
     srv.RequestHandlerClass = make_handler(root, State(Path(root) / "state.json"), token, srv.server_address[1], threading.Lock())
     srv.daemon_threads = True
@@ -312,42 +355,17 @@ def depth():
 
 
 def video(path, secs):
-    """A synthetic test-pattern video, for sync checks. Needs ffmpeg; the video checks are skipped without it."""
+    """A synthetic test-pattern video, for sync checks. Needs ffmpeg; the suite fails without it under CI."""
     if not shutil.which("ffmpeg"):
         return False
-    subprocess.run(
-        [
-            "ffmpeg",
-            "-loglevel",
-            "error",
-            "-y",
-            "-f",
-            "lavfi",
-            "-i",
-            f"testsrc=size=256x144:rate=10:duration={secs}",
-            "-c:v",
-            "libx264",
-            "-preset",
-            "ultrafast",
-            "-pix_fmt",
-            "yuv420p",
-            "-g",
-            "10",
-            "-movflags",
-            "+faststart",
-            str(path),
-        ],
-        check=True,
-    )
+    cmd = ["ffmpeg", "-loglevel", "error", "-y", "-f", "lavfi", "-i", f"testsrc=size=256x144:rate=10:duration={secs}"]
+    cmd += ["-c:v", "libx264", "-preset", "ultrafast", "-pix_fmt", "yuv420p", "-g", "10", "-movflags", "+faststart", str(path)]
+    subprocess.run(cmd, check=True)
     return True
 
 
-# What a page built with no journey (/p/live.html) carries: the live stage and nothing else.
-LIVE_DATA = {"slug": "live", "stops": [], "eras": [], "live": True}
-
-
 def remix_data(ids):
-    """Two made-up remixes in the shape engine/remix_build.py writes: one sung in loops, one with a chop."""
+    """Two made-up remixes in the shape the remix build writes: one sung in loops, one with a chop."""
 
     def song(i, rid, title, remixer):
         lines = [{"start": 10.0 + 8 * k, "text": f"{title} line {k + 1} goes like this"} for k in range(6)]
@@ -381,7 +399,6 @@ def remix_data(ids):
 
 
 def fixtures(out):
-    sys.path.insert(0, str(ROOT))
     from liner_notes import build
     from liner_notes.bank import Bank
 
@@ -389,16 +406,14 @@ def fixtures(out):
     for d in ("dist", "media/artists", "media/culture", "media/covers", "depth/artists", "depth/culture", "depth/eras", "video"):
         (out / d).mkdir(parents=True, exist_ok=True)
     slug = "downtempo-drift"
-    empty_cache = Path(tempfile.mkdtemp())  # lettered covers, the way a public build draws them
+    empty_cache = Path(tempfile.mkdtemp())  # no covers, the way a fresh install starts
     data, _, meta = build.compose(slug, Bank(), cache=empty_cache)
     (out / "dist" / f"{slug}.html").write_text(build.render(data, meta))
     # A second journey, to check the switch between journeys: the same notes under another slug.
     other = dict(data, slug="drift-b", title="Drift B", titleA="Drift", titleB="B")
     (out / "dist" / "drift-b.html").write_text(build.render(other, dict(meta, title="Drift B")))
-    live = dict(LIVE_DATA, provenance=build.provenance([]))
-    (out / "dist" / "live.html").write_text(
-        build.render(live, {"title": "Liner Notes", "description": "What cliamp is playing", "fonts": ""})
-    )
+    live, live_meta = build.live_data()
+    (out / "dist" / "live.html").write_text(build.render(live, live_meta))
 
     stops = data["stops"]
     intro = next(s for s in stops if any(re.search(r"open|first|intro|start|from the", x["where"], re.I) for x in s["listen"]))
@@ -446,6 +461,7 @@ def fixtures(out):
         "video_stops": [pick(s) for s in stops[:4]],
         "videos": have_video,
         "remix": remix_ids,
+        # A song from a playlist with no journey, with a cover in the cache.
         "offsong": {
             "song": "offsong-1",
             "yt": "offTrack001",
@@ -453,6 +469,15 @@ def fixtures(out):
             "artist": "Somebody Else",
             "album": "Some Album",
             "playlist": "Soul Rap Covers",
+        },
+        # A raw upload title with no artist, from a playlist that does have a journey (drift-b), and no cover.
+        "rawsong": {
+            "song": None,
+            "yt": "rawTrack002",
+            "title": "Biggie Smalls – Big Poppa (50s Soul Version)",
+            "artist": "",
+            "album": None,
+            "playlist": "Drift B",
         },
     }
     (out / "fixtures.json").write_text(json.dumps(manifest, indent=1))
@@ -468,7 +493,7 @@ def main():
     s = sub.add_parser("serve", help="serve DIR the way the bridge does")
     s.add_argument("dir")
     s.add_argument("--port", type=int, default=47411)
-    s.add_argument("--token", help="the page token; random on each start unless given")
+    s.add_argument("--token", default=TOKEN, help="the page token; the same on every start unless given")
     a = ap.parse_args()
     if a.cmd == "fixtures":
         fixtures(a.dir)
