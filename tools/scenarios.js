@@ -522,7 +522,7 @@ scenarios['thread-cards'] = async () => {
   check('the hovered thread\'s line is lit', await page.$$eval('#threadSvg path.hot', ps => ps.length) === 1);
   await page.mouse.move(5, 5);
   check('the card goes when the pointer leaves', (await within(page, 1500, () => !document.querySelector('#threadCard').classList.contains('on'))) !== null);
-  await page.click('#threadsBtn'); await sleep(300);
+  check('Threads starts on', await page.getAttribute('#threadsBtn', 'aria-pressed') === 'true');
   const hit = await page.$$eval('#threadSvg path.hit', ps => ps.map(p => { const L = p.getTotalLength(), q = p.getPointAtLength(L / 2), m = p.getScreenCTM(); return { to: p.previousElementSibling.dataset.to, x: q.x * m.a + m.e, y: q.y * m.d + m.f }; }));
   const mid = hit.find(h => +h.to === to.n);
   check('Threads on draws a hover strip per line', !!mid, JSON.stringify(hit));
@@ -531,6 +531,8 @@ scenarios['thread-cards'] = async () => {
   const at = await page.evaluate(() => new URLSearchParams(location.hash.slice(1)).get('s'));
   check('following a thread lands on the song', at === String(to.n), at);
   check('following a thread skips the era card', !(await page.isVisible('#eracard')));
+  await page.click('#threadsBtn'); await page.reload(); await sleep(900);
+  check('turning Threads off is remembered', await page.getAttribute('#threadsBtn', 'aria-pressed') === 'false');
   await ctx.close();
 };
 

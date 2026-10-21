@@ -421,7 +421,7 @@ html, body { overflow-x: clip; }
       <button class="chip" id="followBtn" type="button" aria-pressed="true" hidden title="Follow what cliamp is playing (F)"><span class="live-dot"></span><span class="lbl">cliamp</span></button>
       <button class="chip" id="stageBtn" type="button" aria-pressed="false" hidden title="Lean-back view for a second screen (S)">Stage</button>
       <button class="chip" id="drift" type="button" aria-pressed="false" title="Play each preview and move on by itself (D)">Drift</button>
-      <button class="chip" id="threadsBtn" type="button" aria-pressed="false" title="Show this stop's threads on the chart (T)">Threads</button>
+      <button class="chip" id="threadsBtn" type="button" aria-pressed="true" title="Show this stop's threads on the chart (T)">Threads</button>
       <button class="chip" id="mapBtn" type="button" title="Every stop (M)">Map</button>
       <button class="chip" id="themeBtn" type="button" aria-label="Switch light or dark">Light</button>
     </div>
@@ -587,7 +587,7 @@ html, body { overflow-x: clip; }
 
   /* ---------- state: the place and lens in the URL hash; keeps in the hash (so a copied link carries them) and in
      localStorage per journey (so they survive the window closing) ---------- */
-  const state = { i: 0, keep: new Set(), lens: 'all', companion: LIVE, drift: false, threads: false, seen: new Set(), erasShown: new Set(), started: false };
+  const state = { i: 0, keep: new Set(), lens: 'all', companion: LIVE, drift: false, threads: store.get('journey-threads') !== 'off', seen: new Set(), erasShown: new Set(), started: false };
   const KEEP_KEY = 'liner-keeps-' + D.slug;
   const readHash = () => {
     const h = new URLSearchParams(location.hash.slice(1));
@@ -931,7 +931,8 @@ html, body { overflow-x: clip; }
 
   /* ---------- toggles ---------- */
   const drift = $('#drift'); drift.onclick = () => { if (sync.on) return; state.drift = !state.drift; drift.setAttribute('aria-pressed', String(state.drift)); live.textContent = state.drift ? 'Drift on: each preview plays and moves on.' : 'Drift off.'; if (state.drift && audio.paused) playPreview(true); };
-  const thBtn = $('#threadsBtn'); thBtn.onclick = () => { state.threads = !state.threads; thBtn.setAttribute('aria-pressed', String(state.threads)); drawThreads(); };
+  const thBtn = $('#threadsBtn'); thBtn.setAttribute('aria-pressed', String(state.threads));
+  thBtn.onclick = () => { state.threads = !state.threads; store.set('journey-threads', state.threads ? 'on' : 'off'); thBtn.setAttribute('aria-pressed', String(state.threads)); drawThreads(); };
 
   /* ---------- keys. One map per screen, and each screen's hint row lists exactly what works there.
      Stage: Space play/pause, ← → previous/next song in cliamp, K keep, L lyrics (this sitting only), [ ] and { } lyric
