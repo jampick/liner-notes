@@ -267,7 +267,8 @@ def scan_page(html, journey=None, bank=None):
         out.append("an inline JPEG, PNG or GIF picture")
     if WEBP_URI.search(rest):
         out.append("an inline WebP picture that isn't an era picture")
-    if re.search(r"/v/[\w-]{11}\.mp4|\.mp4\b", html):
+    # The template's own code builds /v/<id>.mp4 at run time; only a concrete path, or one in the data, counts.
+    if re.search(r"/v/[\w-]{11}\.mp4", html) or re.search(r"\.mp4\b", json.dumps(data)):
         out.append("a video path")
     if LRC_ANY.search(html):
         out.append("timed lyric lines")

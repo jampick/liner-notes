@@ -128,3 +128,10 @@ def test_page_guard(iso, tmp_path):
 def test_page_probes(html, why):
     found = check.scan_page(html)
     assert any(why in f for f in found), found
+
+
+def test_template_code_isnt_a_video_path():
+    code = '<script>window.JOURNEY = {"stops": []};</script><script>const src = `/v/${id}.mp4`;</script>'
+    assert not any("video path" in f for f in check.scan_page(code))
+    data = '<script>window.JOURNEY = {"stops": [{"video": "clip.mp4"}]};</script>'
+    assert any("video path" in f for f in check.scan_page(data))
