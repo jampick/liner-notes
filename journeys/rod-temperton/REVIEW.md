@@ -28,7 +28,7 @@ you've checked its facts against the sources, then set `review.state` to `review
 - [ ] `quincy-jones-featuring-patti-austin--razzamatazz` Razzamatazz, Quincy Jones featuring Patti Austin (1981)
     - writer couldn't confirm: I couldn't reach the Official Charts page for the single, so the UK 11 rests on Wikipedia and Sessiondays.
 - [ ] `michael-jackson--thriller` Thriller, Michael Jackson (1982)
-    - writer couldn't confirm: Wikipedia puts the album's release on 29 November 1982, not the 30th in my brief. Ndugu Chancler and Michael Boddicker are uncredited on the sleeve, so their parts rest on Wikipedia.
+    - writer couldn't confirm: Wikipedia puts the album's release on 29 November 1982, some sources give the 30th. Ndugu Chancler and Michael Boddicker are uncredited on the sleeve, so their parts rest on Wikipedia.
 - [ ] `michael-jackson--the-lady-in-my-life` The Lady in My Life, Michael Jackson (1982)
     - writer couldn't confirm: I didn't check whether Guitar Man has its own Wikipedia article. The Moonwalk account comes through a Substack quoting it, not the book.
 - [ ] `donna-summer--love-is-in-control` Love Is in Control (Finger on the Trigger), Donna Summer (1982)
