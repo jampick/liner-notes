@@ -569,6 +569,7 @@ def test_build_all_skips_a_remix_journey_this_machine_has_no_files_for(tmp_path,
     assert refused == 0, said
     (line,) = [x for x in said if "yacht-house" in x]
     assert "skipped" in line and "migrate-personal" not in line, line
+    assert line.count("yacht-house") == 1, line
     assert "yacht-house" in Bank().journeys  # still listed
 
 
@@ -614,10 +615,18 @@ def test_a_garbled_musicbrainz_answer_is_a_musicbrainz_error(offline, monkeypatc
                 raise http.client.IncompleteRead(b"{", 100)
             return b"<html>busy</html>"
 
-    monkeypatch.setattr(urllib.request, "urlopen", lambda req, timeout=None: Bad(b""))
+    calls = []
+
+    def urlopen(req, timeout=None):
+        calls.append(1)
+        return Bad(b"")
+
+    monkeypatch.setattr(urllib.request, "urlopen", urlopen)
     with pytest.raises(MusicBrainzError) as e:
         resolve.mb("recording", query="x")
-    assert "MusicBrainz" in str(e.value)
+    assert len(calls) == 5, calls  # retried like a 503, then given up
+    msg = str(e.value)
+    assert "usable answer" in msg and "((" not in msg and "))" not in msg, msg
 
 
 def _song(sid="a--b", **kw):
@@ -678,3 +687,62 @@ def test_write_checked_is_atomic(tmp_path, monkeypatch):
         write_checked(f, _song(title="New"), "song")
     assert f.read_bytes() == before
     assert sorted(x.name for x in f.parent.iterdir()) == ["a--b.json"]  # no temp file left
+
+
+def _shipped(tmp_path, monkeypatch, year):
+    import subprocess as sp
+
+    home = tmp_path / "home"
+    sp.run(["git", "init", "-q", str(home)], check=True)
+    f = home / "songs/a--b.json"
+    write_json(f, _song(year=year))
+    monkeypatch.setenv("LINER_NOTES_HOME", str(home))
+    monkeypatch.setenv("LINER_NOTES_DATA", str(tmp_path / "data"))
+    return f
+
+
+def test_a_shipped_year_0_is_a_problem_not_undated(tmp_path, monkeypatch):
+    """The 0-means-undated reading is for 0.2.0 users' own songs, never the bank that ships."""
+    from liner_notes import check
+
+    f = _shipped(tmp_path, monkeypatch, 0)
+    said = []
+    check.check(log=lambda *a: said.append(" ".join(map(str, a))))
+    assert any(x.startswith("problem:") and str(f) in x and "year" in x for x in said), said
+
+
+@pytest.mark.parametrize("year", [0, None])
+def test_check_publish_refuses_a_shipped_song_with_no_year(tmp_path, monkeypatch, year):
+    from liner_notes import check
+
+    f = _shipped(tmp_path, monkeypatch, year)
+    said = []
+    assert check.publish(log=lambda *a: said.append(" ".join(map(str, a)))) == 1, said
+    assert any(x.startswith("problem:") and str(f) in x and "no year" in x for x in said), said
+
+
+def test_a_bad_api_url_isnt_retried_as_bad_json(offline, monkeypatch):
+    """urllib raises ValueError for a URL it can't open; that's a mistake to show, not an answer to retry."""
+    from liner_notes import resolve
+
+    calls = []
+
+    def urlopen(req, timeout=None):
+        calls.append(1)
+        raise ValueError("unknown url type: 'musicbrainz.org/ws/2/recording'")
+
+    monkeypatch.setattr(urllib.request, "urlopen", urlopen)
+    with pytest.raises(ValueError) as e:
+        resolve.mb("recording", query="x")
+    assert len(calls) == 1 and "unknown url type" in str(e.value)
+
+
+def test_an_ep_reads_as_ep(tmp_path, monkeypatch):
+    setup(tmp_path, monkeypatch)
+    said = []
+
+    def found(artist, title, yt):
+        return {**lookup(artist, title, yt), "release_title": "Night Moves", "release_kind": "ep"}
+
+    gen.generate("Night Mix", lookup=found, log=lambda *a: said.append(" ".join(map(str, a))))
+    assert any('from "Night Moves" (EP)' in x for x in said), said
