@@ -8,7 +8,12 @@
   "id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*--[a-z0-9]+(-[a-z0-9]+)*(--[0-9]{4})?$"},
   "title": {"type": "string", "minLength": 1},
   "artist": {"type": "string", "minLength": 1},
-  "year": {"type": "integer", "minimum": 0},
+  "year": {"type": ["integer", "null"], "minimum": 1800},
+  "year_source": {
+   "description": "Where the year came from: musicbrainz (the first release of the song's release group), writer (the notes' writer, with sources), person (set by hand). null when nobody found a year. Songs written before the field existed don't have it.",
+   "enum": ["musicbrainz", "writer", "person", null]
+  },
+  "release_group": {"type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"},
   "year_note": {"type": "string"},
   "album": {"type": "string"},
   "mbid": {"type": "string"},

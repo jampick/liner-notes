@@ -4,46 +4,74 @@ Song ids stay our own slug ("artist--title"). An ISRC names one recording, and a
 (the single, the album cut, the 2009 remaster), so ISRCs are kept as a list on the song. A
 MusicBrainz recording id is kept too, when we find one.
 
-Two ways in, in order:
+The recording comes from, in order:
   1. /ws/2/url?resource=<YouTube URL>: when MusicBrainz editors have linked that exact upload to
      a recording, this is an exact answer.
-  2. A recording search on artist and title, taking the earliest first-release date among
-     official releases.
+  2. The recording on the earliest release found while dating the song (below).
 
-MusicBrainz asks for at most one request a second and a meaningful User-Agent; we send
-"liner-notes/<version> ( https://github.com/jampick/liner-notes )" and never an email address.
+The year is the first release of the song's release group, not the earliest year among loose
+recording matches. A famous song has a hundred recordings, and a search's top few are mostly
+compilations and remasters (Got to Be Real's top 15 ran 1996 to 2024). So:
+  - a release-group search on title and artist finds the single (or EP, or an album of the same
+    name), and its first-release-date counts, promo releases included;
+  - a recording search (100 results) finds the album the song first came out on, counting only
+    releases in a single, EP or album release group that isn't a compilation, live album, remix
+    or DJ mix;
+  - bootlegs, pseudo-releases, and withdrawn or cancelled releases don't count anywhere.
+The earliest of those is the year, and year_source is "musicbrainz". When nothing qualifies the
+year is None. Nothing here guesses.
+
+Requests go through musicbrainz.Client: one a second across processes, a few retries, then an error.
 """
 
-import json
-import time
-import urllib.error
-import urllib.parse
-import urllib.request
+import unicodedata
 
-from . import USER_AGENT
+from . import musicbrainz
 from .ids import clean_title, key
+from .musicbrainz import quote
 
-API = "https://musicbrainz.org/ws/2/"
-_last = [0.0]
+KINDS = {"single", "ep", "album"}
+NOT_ORIGINAL = {"compilation", "live", "remix", "dj-mix", "mixtape/street", "demo", "interview", "spokenword", "audiobook"}
+NOT_RELEASED = {"bootleg", "pseudo-release", "withdrawn", "cancelled"}
 
 
 def mb(path, **params):
-    wait = 1.05 - (time.monotonic() - _last[0])
-    if wait > 0:
-        time.sleep(wait)
-    _last[0] = time.monotonic()
-    q = urllib.parse.urlencode({**params, "fmt": "json"})
-    req = urllib.request.Request(f"{API}{path}?{q}", headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=20) as r:
-            return json.loads(r.read())
-    except urllib.error.HTTPError as e:
-        if e.code == 404:
-            return None
-        if e.code == 503:
-            time.sleep(3)
-            return mb(path, **params)
-        raise
+    return musicbrainz.get(path, **params)
+
+
+def _k(s):
+    """key(s), or for a name with no Latin letters, its letters and digits casefolded."""
+    return key(s) or "".join(c for c in unicodedata.normalize("NFKC", s or "").casefold() if c.isalnum())
+
+
+def _same_title(a, b):
+    ka = _k(clean_title(a))
+    return bool(ka) and ka == _k(clean_title(b))
+
+
+def _credit(ac):
+    return "".join(c.get("name", "") + c.get("joinphrase", "") for c in ac or [])
+
+
+def _same_artist(artist, ac):
+    ka, kc = _k(artist), _k(_credit(ac))
+    return bool(ka and kc) and (ka in kc or kc in ka)
+
+
+def _original_group(rg):
+    """A single, EP or album that isn't a compilation, live album, remix or DJ mix."""
+    rg = rg or {}
+    if (rg.get("primary-type") or "").lower() not in KINDS:
+        return False
+    return not {x.lower() for x in rg.get("secondary-types") or []} & NOT_ORIGINAL
+
+
+def _released(r):
+    return (r.get("status") or "").lower() not in NOT_RELEASED
+
+
+def _year(date):
+    return int(date[:4]) if date and date[:4].isdigit() and int(date[:4]) > 0 else None
 
 
 def by_url(url):
@@ -60,41 +88,65 @@ def recording(mbid):
     return mb(f"recording/{mbid}", inc="isrcs+artist-credits+releases")
 
 
-def year_of(rec):
-    dates = [r.get("date") for r in (rec or {}).get("releases") or [] if r.get("date") and (r.get("status") in (None, "Official"))]
-    d = rec.get("first-release-date") if rec else None
-    dates += [d] if d else []
-    ys = sorted(int(x[:4]) for x in dates if x[:4].isdigit())
-    return ys[0] if ys else None
+def from_release_groups(artist, title):
+    """[(year, release group id)] for release groups named like the song, by the artist."""
+    d = mb("release-group", query=f"releasegroup:{quote(clean_title(title))} AND artist:{quote(artist)}", limit=25)
+    out = []
+    for rg in (d or {}).get("release-groups") or []:
+        if not (_same_title(rg.get("title", ""), title) and _same_artist(artist, rg.get("artist-credit")) and _original_group(rg)):
+            continue
+        if rg.get("releases") and not any(_released(r) for r in rg["releases"]):
+            continue
+        y = _year(rg.get("first-release-date"))
+        if y:
+            out.append((y, rg["id"]))
+    return out
 
 
-def search(artist, title):
-    """Best recording for artist and title: matching title and credit, earliest release."""
-    q = f'recording:"{clean_title(title)}" AND artist:"{artist}"'
-    d = mb("recording", query=q, limit=15)
-    best = None
+def from_recordings(artist, title):
+    """[(year, release group id, recording)] for each qualifying release of a matching recording."""
+    d = mb("recording", query=f"recording:{quote(clean_title(title))} AND artist:{quote(artist)}", limit=100)
+    out = []
     for rec in (d or {}).get("recordings") or []:
-        credit = "".join(c.get("name", "") + c.get("joinphrase", "") for c in rec.get("artist-credit") or [])
-        if key(clean_title(rec.get("title", ""))) != key(clean_title(title)):
+        if not (_same_title(rec.get("title", ""), title) and _same_artist(artist, rec.get("artist-credit"))):
             continue
-        if key(artist) not in key(credit) and key(credit) not in key(artist):
-            continue
-        y = year_of(rec)
-        if y and (best is None or y < best[0]):
-            best = (y, rec)
-    return best[1] if best else None
+        for r in rec.get("releases") or []:
+            rg = r.get("release-group") or {}
+            y = _year(r.get("date"))
+            if y and _released(r) and _original_group(rg):
+                out.append((y, rg.get("id"), rec))
+    return out
+
+
+def dating(artist, title):
+    """{year, release_group, recording} for the song's first release, or {} when nothing qualifies."""
+    recs = sorted(from_recordings(artist, title), key=lambda x: x[0])
+    found = [(y, g) for y, g in from_release_groups(artist, title)] + [(y, g) for y, g, _r in recs]
+    if not found:
+        return {}
+    year, group = min(found, key=lambda x: x[0])
+    # The recording on that release group if the search saw one, else the earliest one it saw.
+    rec = next((r for _y, g, r in recs if g == group), recs[0][2] if recs else None)
+    return {"year": year, "release_group": group, "recording": rec}
 
 
 def resolve(artist, title, youtube=None):
-    """{mbid, year, isrc: [...]} as far as MusicBrainz knows, or {} when it doesn't."""
+    """{year, year_source, release_group, mbid, isrc: [...]} as far as MusicBrainz knows.
+
+    year and year_source are None when MusicBrainz has no qualifying release."""
     rec = None
     if youtube:
         mbid = by_url(f"https://www.youtube.com/watch?v={youtube}")
         rec = recording(mbid) if mbid else None
-    if rec is None:
-        rec = search(artist, title)
-        if rec and not rec.get("isrcs"):
+    dated = dating(artist, title)
+    if rec is None and dated.get("recording"):
+        rec = dated["recording"]
+        if not rec.get("isrcs"):
             rec = recording(rec["id"]) or rec
-    if not rec:
-        return {}
-    return {"mbid": rec["id"], "year": year_of(rec), "isrc": sorted(set(rec.get("isrcs") or []))}
+    out = {"year": dated.get("year"), "year_source": "musicbrainz" if dated.get("year") else None, "isrc": []}
+    if dated.get("release_group"):
+        out["release_group"] = dated["release_group"]
+    if rec:
+        out["mbid"] = rec["id"]
+        out["isrc"] = sorted(set(rec.get("isrcs") or []))
+    return out

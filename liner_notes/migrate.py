@@ -16,7 +16,7 @@ import shutil
 from pathlib import Path
 
 from . import paths
-from .bank import read_json, write_json
+from .bank import read_json, write_checked, write_json
 from .ids import key as _key
 from .ids import song_id, youtube_id
 
@@ -128,7 +128,7 @@ def migrate(folder, root=None, cache=None, log=print):
             for k in ("titles", "artists"):
                 if k in aliases:
                     al[k] = _merge_list(al.get(k) or [], aliases[k], key)
-        write_json(sfile, song)
+        write_checked(sfile, song, "song")
 
         cover = folder / "media/covers" / f"{yt}.webp"
         dest = cache / "covers" / f"{sid}.webp"
@@ -144,7 +144,7 @@ def migrate(folder, root=None, cache=None, log=print):
             yf = root / "culture/years" / f"{year}.json"
             have = read_json(yf) if yf.exists() else {"year": int(year), "items": []}
             have["items"] = _merge_list(have["items"], items, _culture_ident)
-            write_json(yf, have)
+            write_checked(yf, have, "culture-year")
         for title, items in (doc.get("songs") or {}).items():
             sid = ids_by_key.get(key(title))
             if not sid:
@@ -153,7 +153,7 @@ def migrate(folder, root=None, cache=None, log=print):
             sfile = root / "songs" / f"{sid}.json"
             song = read_json(sfile)
             song["culture"] = _merge_list(song.get("culture") or [], items, _culture_ident)
-            write_json(sfile, song)
+            write_checked(sfile, song, "song")
         artists.update(doc.get("artists") or {})
     if artists:
         af = root / "culture/artists.json"
@@ -251,7 +251,7 @@ def migrate(folder, root=None, cache=None, log=print):
         "threads": threads,
         "review": {"state": "draft", "by": None, "date": None},
     }
-    write_json(jdir / "journey.json", journey)
+    write_checked(jdir / "journey.json", journey, "journey")
     if (folder / "CORRECTIONS.md").exists():
         shutil.copy2(folder / "CORRECTIONS.md", paths.guard(jdir / "CORRECTIONS.md"))
     _review_todo(jdir, journey, root)
@@ -315,6 +315,6 @@ def migrate_remix(folder, root=None, log=print):
         "panel": {"quotes": panel},
         "review": {"state": "draft", "by": None, "date": None},
     }
-    write_json(root / "journeys" / slug / "journey.json", journey)
+    write_checked(root / "journeys" / slug / "journey.json", journey, "journey")
     log(f"{slug}: {len(remixes)} remixes, {len(panel)} panel quotes")
     return journey

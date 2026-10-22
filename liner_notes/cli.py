@@ -8,7 +8,7 @@ import sys
 import urllib.request
 
 from . import __version__, config, paths
-from .bank import Bank, read_json, write_json
+from .bank import Bank, SchemaError, read_json, write_checked
 
 PORT = config.PORT
 
@@ -184,7 +184,17 @@ def cmd_generate(a):
 
     if not (a.from_ or (a.provider and a.playlist)):
         sys.exit("liner-notes: give --from <cliamp playlist> or --provider P --playlist ID")
-    generate(a.from_ or a.name, a.provider, a.playlist, a.write, a.budget, a.effort)
+    try:
+        generate(a.from_ or a.name, a.provider, a.playlist, a.write, a.budget, a.effort)
+    except SchemaError as e:
+        sys.exit(f"liner-notes: {e}")
+
+
+def _write_song(f, s):
+    try:
+        write_checked(f, s, "song")
+    except SchemaError as e:
+        sys.exit(f"liner-notes: {e}")
 
 
 def cmd_review(a):
@@ -219,7 +229,7 @@ def cmd_review(a):
                 sys.exit(f"liner-notes: {sid} isn't a shipped song")
             s = read_json(f)
             s["review"] = review
-            write_json(f, s)
+            _write_song(f, s)
             print(f"{sid}: {review['state']} in the shipped file {f}")
             continue
         shipped = overlay.shipped_song(sid)
@@ -235,7 +245,7 @@ def cmd_review(a):
                 print(f"{sid}: your review is gone; you're reading the shipped song again")
                 continue
             s["review"] = review
-            overlay.write(f, s)
+            _write_song(f, s)
             if kind == "yours":
                 print(f"{sid}: back to draft, in {f}")
             elif kind == "unknown":
@@ -249,7 +259,7 @@ def cmd_review(a):
             continue
         f, s = overlay.copy_for_writing(sid, bank)
         s["review"] = review
-        overlay.write(f, s)
+        _write_song(f, s)
         if s.get("base"):
             print(
                 f"{sid}: reviewed by {review['by']} in your copy, {f}. This is your review; the shipped song stays as the maintainer left it"

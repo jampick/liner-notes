@@ -7,6 +7,8 @@
 Without --write it costs nothing: it reads the tracks, matches them against the song bank, looks
 up release years on MusicBrainz, cuts eras from the years and writes the journey. Songs already in
 the bank keep their notes. The rest are listed, and the page shows them with what cliamp knows.
+A song MusicBrainz can't date is written with "year": null and left out of the eras; nothing
+makes a year up. Every song and the journey are checked against their schemas before any is written.
 
 With --write, each missing song gets one Claude API request (Claude Opus 5.5 with web search and
 web fetch) that follows prompts/SONG-BRIEF.md and must list its sources. The brief is the cached
@@ -26,7 +28,7 @@ import tomllib
 from pathlib import Path
 
 from . import overlay, paths
-from .bank import Bank, read_json, write_json
+from .bank import Bank, SchemaError, problems, read_json, write_checked
 from .ids import clean_artist, clean_title, slug, song_id, split_upload_title, youtube_id
 from .match import Matcher
 
@@ -120,7 +122,9 @@ def plan(tracks, name, bank=None, lookup=None, log=print):
                     "id": sid,
                     "title": title,
                     "artist": artist,
-                    "year": info.get("year") or 0,
+                    "year": info.get("year"),
+                    "year_source": info.get("year_source") if info.get("year") else None,
+                    **({"release_group": info["release_group"]} if info.get("release_group") else {}),
                     "year_note": "",
                     "album": "",
                     **({"mbid": info["mbid"]} if info.get("mbid") else {}),
@@ -139,12 +143,12 @@ def plan(tracks, name, bank=None, lookup=None, log=print):
     every = {**bank.songs, **new}
     years = [every[s]["year"] for s in order if every[s].get("year")]
     if not years:
-        raise SystemExit("liner-notes: no release years found; can't cut eras")
+        raise SystemExit("liner-notes: none of these songs has a release year, so there are no eras to cut")
     bounds = cut_eras(years)
     bounds[0] = (min(bounds[0][0], min(years)), bounds[0][1])
-    for s in order:  # songs with no year go in the last era rather than vanish
-        if not every[s].get("year"):
-            every[s]["year"] = bounds[-1][1]
+    undated = [s for s in order if not every[s].get("year")]
+    if undated:
+        log(f"  {len(undated)} without a year, written as null and outside the eras: {', '.join(undated)}")
     eras = [
         {
             "n": i,
@@ -286,12 +290,23 @@ def write_song(client, song, effort="medium", log=print, meter=None):
         return parse_reply("".join(b.text for b in again.content if b.type == "text")), meter.spent - start, again.model
 
 
+def _year_from_writer(y, song):
+    """The writer's year when it gave one (it had to cite sources), else whatever the song had, else null."""
+    try:
+        y = int(y)
+    except (TypeError, ValueError):
+        y = None
+    if y and y >= 1800:
+        return {"year": y, "year_source": "writer"}
+    return {"year": song.get("year")}
+
+
 def apply_notes(song, d, model, day):
     song.update(
         {
             "title": d["title"],
             "artist": d["artist"],
-            "year": int(d.get("year") or song.get("year") or 0),
+            **_year_from_writer(d.get("year"), song),
             "year_note": d.get("year_note") or "",
             "album": d.get("album") or "",
         }
@@ -337,9 +352,13 @@ def generate(
         tracks = tracks_from_toml(name)
     log(f"{name}: {len(tracks)} tracks")
     journey, new, missing = plan(tracks, name, bank, lookup, log)
+    bad = [f"{s['id']}: {e}" for s in new.values() for e in problems(s, "song")]
+    bad += [f"journey {journey['slug']}: {e}" for e in problems(journey, "journey")]
+    if bad:
+        raise SchemaError("not writing anything; these don't match their schemas: " + "; ".join(bad))
     for s in new.values():
-        write_json(root / "songs" / f"{s['id']}.json", s)
-    write_json(root / "journeys" / journey["slug"] / "journey.json", journey)
+        write_checked(root / "songs" / f"{s['id']}.json", s, "song")
+    write_checked(root / "journeys" / journey["slug"] / "journey.json", journey, "journey")
     have = len(journey["songs"]) - len(missing)
     log(
         f"journey {journey['slug']}: {len(journey['songs'])} songs, {len(journey['eras'])} eras, {have} already have notes, {len(missing)} don't"
@@ -374,8 +393,12 @@ def generate(
         except Exception as e:
             log(f"  {song['title']}: {e} (spent ${meter.spent:.2f} so far)")
             continue
+        try:
+            write_checked(f, apply_notes(song, d, model, day), "song")
+        except SchemaError as e:
+            log(f"  {song['title']}: the reply doesn't fit the song schema, so it wasn't saved: {e}")
+            continue
         done += 1
-        write_json(f, apply_notes(song, d, model, day))
         log(f"  wrote {song['title']}, {song['artist']}  ${cost:.3f}  ({len(d['sources'])} sources)")
     log(f"wrote {done} of {tried} songs tried for ${meter.spent:.2f} (${(meter.spent / tried if tried else 0):.3f} a request)")
     return journey, meter.spent

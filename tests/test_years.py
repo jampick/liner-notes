@@ -22,7 +22,7 @@ import pytest
 from liner_notes import generate as gen
 from liner_notes.bank import read_json, write_json
 from liner_notes.check import schemas
-from liner_notes.ids import song_id, slug
+from liner_notes.ids import slug, song_id
 
 ROOT = Path(__file__).resolve().parent.parent
 FIXTURES = Path(__file__).parent / "fixtures" / "musicbrainz"
@@ -92,7 +92,9 @@ def test_got_to_be_real_is_1978_or_unknown_never_a_compilation_year(recorded):
     assert info.get("year") != 1995
 
 
-@pytest.mark.parametrize(("artist", "title", "year"), [("George Benson", "Give Me the Night", 1980), ("Earth, Wind & Fire", "Let's Groove", 1981)])
+@pytest.mark.parametrize(
+    ("artist", "title", "year"), [("George Benson", "Give Me the Night", 1980), ("Earth, Wind & Fire", "Let's Groove", 1981)]
+)
 def test_more_years_the_reviewer_saw_wrong(recorded, artist, title, year):
     from liner_notes import resolve
 
@@ -260,7 +262,19 @@ def test_review_refuses_to_write_a_broken_song(tmp_path, monkeypatch):
     monkeypatch.setenv("LINER_NOTES_HOME", str(home))
     monkeypatch.setenv("LINER_NOTES_DATA", str(tmp_path / "data"))
     f = home / "songs/a--b.json"
-    write_json(f, {"id": "a--b", "title": "", "artist": "A", "year": 1980, "aliases": {}, "notes": {}, "review": {"state": "draft"}, "provenance": {"ai_generated": False}})
+    write_json(
+        f,
+        {
+            "id": "a--b",
+            "title": "",
+            "artist": "A",
+            "year": 1980,
+            "aliases": {},
+            "notes": {},
+            "review": {"state": "draft"},
+            "provenance": {"ai_generated": False},
+        },
+    )
     before = f.read_text()
     with pytest.raises((Exception, SystemExit)):
         cli.main(["review", "a--b", "--by", "tester"])

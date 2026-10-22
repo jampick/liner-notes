@@ -51,6 +51,14 @@ def validate(doc, schema, at="$"):
     return errs
 
 
+def year_problems(song):
+    """A year with no year_source is allowed (songs from before the field); a year_source with no year isn't."""
+    y, src = song.get("year"), song.get("year_source")
+    if y is None and src is not None:
+        return [f"$.year_source: {src!r} but no year"]
+    return []
+
+
 def schemas():
     d = paths.schemas_dir()
     return {n: read_json(d / f"{n}.schema.json") for n in ("song", "journey", "remix-journey", "culture-year")}
@@ -64,7 +72,7 @@ def check(log=print):
         problems.append(f"the shipped bank isn't installed: no songs in {paths.home() / 'songs'}")
     for sid, s in bank.songs.items():
         f = bank.song_files[sid]
-        problems += [f"{f.name}: {e}" for e in validate(s, sc["song"])]
+        problems += [f"{f.name}: {e}" for e in validate(s, sc["song"]) + year_problems(s)]
         if f.stem != sid:
             problems.append(f"{f.name}: id {sid!r} doesn't match the file name")
         n = s.get("notes") or {}

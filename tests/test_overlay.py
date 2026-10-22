@@ -147,7 +147,19 @@ def test_drop_leaves_a_song_of_your_own(iso, shipped, capsys):
 
 
 def test_review_of_your_own_song_says_nothing_about_a_maintainer(iso, shipped, capsys):
-    write_json(iso["data"] / "songs/zed--mine.json", {"id": "zed--mine", "title": "Mine", "artist": "Zed", "year": 2000})
+    write_json(
+        iso["data"] / "songs/zed--mine.json",
+        {
+            "id": "zed--mine",
+            "title": "Mine",
+            "artist": "Zed",
+            "year": 2000,
+            "aliases": {},
+            "notes": {},
+            "review": {"state": "draft"},
+            "provenance": {"ai_generated": False},
+        },
+    )
     cli.main(["review", "zed--mine", "--by", "Ann Reader"])
     out = capsys.readouterr().out
     assert "reviewed by Ann Reader" in out and "maintainer" not in out and "shipped" not in out

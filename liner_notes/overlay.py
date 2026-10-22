@@ -91,7 +91,10 @@ def undo_kind(copy, shipped_file):
 
 
 def write(path, obj):
-    paths.atomic_write(path, json.dumps(obj, indent=1, ensure_ascii=False) + "\n")
+    """A copy of a song, through the one checked writer (guard, schema, atomic). Raises SchemaError."""
+    from .bank import write_checked
+
+    write_checked(path, obj, "song")
 
 
 def _copies():

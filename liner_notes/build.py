@@ -94,6 +94,10 @@ def compose(slug, bank=None, public=False, cache=None, video=False, warnings=Non
         if panel.get("judges") and not q:
             problems.append(f"no panel quote for {s['title']!r}")
             continue
+        if s.get("year") is None:
+            # The page places every stop by year and has no undated shelf yet, so an undated song can't go on it.
+            problems.append(f"{s['title']!r} has no year yet; set one with its source in {sid}.json")
+            continue
         year = int(s["year"])
         era = next((e["n"] for e in eras if e["from"] <= year <= e["to"]), None)
         if era is None:

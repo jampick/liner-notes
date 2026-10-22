@@ -92,7 +92,7 @@ liner-notes generate --provider navidrome --playlist 42           # any cliamp p
 liner-notes generate --from "Yacht Rock" --write --budget 5       # also write the songs the bank doesn't have
 ```
 
-Without `--write` it costs nothing. It matches your tracks against the song bank, looks up release years on MusicBrainz, cuts eras at the widest gaps between years and builds a journey from what's already known. With `--write`, each missing song is one Claude API request with web search, using `liner_notes/prompts/SONG-BRIEF.md`. It must list its sources, and it stops before it can pass your budget. What you generate lives in `~/.local/share/liner-notes`, not in this repo.
+Without `--write` it costs nothing. It matches your tracks against the song bank, looks up release years on MusicBrainz, cuts eras at the widest gaps between years and builds a journey from what's already known. The year is the first release of the song's release group on MusicBrainz, promos included. When it has none, the song is saved with `"year": null` instead of a guess, and `build` names it until you set a year yourself. With `--write`, each missing song is one Claude API request with web search, using `liner_notes/prompts/SONG-BRIEF.md`. It must list its sources, and it stops before it can pass your budget. What you generate lives in `~/.local/share/liner-notes`, not in this repo.
 
 ## Players
 

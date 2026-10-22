@@ -4,7 +4,8 @@
    {
     "kind": "news",
     "title": "A Fair",
-    "line": "A fair came to town."
+    "line": "A fair came to town.",
+    "source": "https://example.org/a-fair"
    }
   ]
  },

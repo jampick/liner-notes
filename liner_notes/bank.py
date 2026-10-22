@@ -6,8 +6,36 @@ from pathlib import Path
 from . import paths
 
 
+class SchemaError(ValueError):
+    """A song, journey or culture year that doesn't match its schema. Nothing was written."""
+
+
 def read_json(p):
     return json.loads(Path(p).read_text())
+
+
+def problems(obj, kind):
+    """What's wrong with obj as a `kind` ("song", "journey" or "culture-year"), as a list of strings."""
+    from .check import schemas, validate, year_problems
+
+    if kind == "journey" and obj.get("kind") == "remix":
+        kind = "remix-journey"
+    errs = validate(obj, schemas()[kind])
+    return errs + (year_problems(obj) if kind == "song" else [])
+
+
+def write_checked(p, obj, kind):
+    """The one writer for songs, journeys and culture years: the package guard first (never into an
+    installed package), then the schema (and, for a song, that its file name is its id), then an
+    atomic write. Raises PermissionError or SchemaError and leaves the file alone otherwise."""
+    p = paths.guard(p)
+    errs = problems(obj, kind)
+    if kind == "song" and p.stem != obj.get("id"):
+        errs.append(f"file name {p.name} isn't the id {obj.get('id')!r}")
+    if errs:
+        raise SchemaError(f"not writing {p.name}: " + "; ".join(errs))
+    paths.atomic_write(p, json.dumps(obj, indent=1, ensure_ascii=False) + "\n")
+    return p
 
 
 def write_json(p, obj):
