@@ -155,7 +155,9 @@ def test_musicbrainz_retries_are_bounded(offline, monkeypatch):
         raise urllib.error.HTTPError(req.full_url, 503, "Service Unavailable", {}, None)
 
     monkeypatch.setattr(urllib.request, "urlopen", busy)
-    with pytest.raises(Exception) as e:
+    from liner_notes.musicbrainz import MusicBrainzError
+
+    with pytest.raises(MusicBrainzError) as e:
         resolve.mb("recording", query="x")
     assert 2 <= len(calls) <= 5, len(calls)
     assert "503" in str(e.value)
@@ -395,7 +397,9 @@ def test_the_writers_year_wins_and_check_names_both(tmp_path, monkeypatch):
     check.check(log=lambda *a: said.append(" ".join(map(str, a))))
     warn = [x for x in said if "Sailing" in x and "1979" in x and "1980" in x]
     assert warn and "warning" in warn[0], said
-    assert not any(x.startswith("problem:") and "Sailing" in x for x in said), said  # a warning, not a problem
+    # a warning, not a problem: the only problem is the test home having no shipped bank
+    probs = [x for x in said if x.startswith("problem:")]
+    assert len(probs) == 1 and "shipped bank isn't installed" in probs[0], probs
 
 
 def test_year_source_without_a_year_says_how_to_fix_it():
@@ -499,3 +503,178 @@ def test_a_copys_base_is_checked_against_the_schema():
     bad = problems({**song, "base": {**good, "sha256": "nope"}}, "song")
     assert any("base.sha256" in x for x in bad), bad
     assert any("base" in x for x in problems({**song, "base": {"sha256": "a" * 64}}, "song"))  # no version
+
+
+def test_a_year_a_person_set_beats_the_writer(tmp_path, monkeypatch):
+    """Trust order: person, then writer, then MusicBrainz."""
+    from liner_notes import check
+    from tests.test_generate import FakeClient
+
+    data = setup(tmp_path, monkeypatch, toml=TOML.split("[[track]]", 2)[0] + "[[track]]" + TOML.split("[[track]]", 2)[1])
+    gen.generate("Night Mix", lookup=lookup, log=lambda *a: None)
+    f = data / "songs/christopher-cross--sailing.json"
+    write_json(f, {**read_json(f), "year": 1981, "year_source": "person"})
+    gen.generate("Night Mix", write=True, budget=5, client=FakeClient(), lookup=lookup, log=lambda *a: None)
+    s = read_json(f)
+    assert s["year"] == 1981 and s["year_source"] == "person" and s["year_writer"] == 1979  # FakeClient's writer says 1979
+    said = []
+    check.check(log=lambda *a: said.append(" ".join(map(str, a))))
+    warn = [x for x in said if x.startswith("warning:") and "1981" in x and "1979" in x]
+    assert warn and str(f) in warn[0], said
+
+
+def test_generate_shows_which_release_each_year_came_from(tmp_path, monkeypatch, recorded):
+    from liner_notes import resolve
+
+    info = resolve.resolve("Queen", "Sheer Heart Attack")
+    assert info["release_title"] == "News of the World" and info["release_kind"] == "album"
+    setup(tmp_path, monkeypatch)
+    said = []
+
+    def found(artist, title, yt):
+        return {**lookup(artist, title, yt), "release_title": "Japanese Sunday Soul - Volume 1", "release_kind": "album"}
+
+    gen.generate("Night Mix", lookup=found, log=lambda *a: said.append(" ".join(map(str, a))))
+    assert any('1984, from "Japanese Sunday Soul - Volume 1" (album)' in x for x in said), said
+
+
+def test_a_hand_set_year_outside_the_eras_says_how_to_recut_them(tmp_path, monkeypatch):
+    from liner_notes.build import compose
+
+    data = setup(tmp_path, monkeypatch)
+    gen.generate("Night Mix", lookup=lookup, log=lambda *a: None)
+    f = data / "songs/nobody-famous--some-demo-nobody-dated.json"
+    write_json(f, {**read_json(f), "year": 1962, "year_source": "person"})
+    _, problems, _ = compose("night-mix", public=True)
+    (p,) = [x for x in problems if "Some Demo" in x]
+    assert "1962" in p and "liner-notes generate" in p and "re-cut" in p, p
+
+
+def test_build_all_skips_a_remix_journey_this_machine_has_no_files_for(tmp_path, monkeypatch):
+    import shutil
+
+    from liner_notes import build as B
+    from liner_notes import paths
+    from liner_notes.bank import Bank
+
+    home = tmp_path / "home"
+    shutil.copytree(paths.PACKAGE / "shipped/journeys/yacht-house", home / "journeys/yacht-house")
+    monkeypatch.setenv("LINER_NOTES_HOME", str(home))
+    monkeypatch.setenv("LINER_NOTES_DATA", str(tmp_path / "data"))
+    monkeypatch.setenv("LINER_NOTES_CACHE", str(tmp_path / "cache"))
+    monkeypatch.delenv("LINER_NOTES_PILOT", raising=False)
+    monkeypatch.setattr(B, "build_live", lambda **kw: None)
+    said = []
+    refused = B.build_all(bank=Bank(), log=lambda *a: said.append(" ".join(map(str, a))))
+    assert refused == 0, said
+    (line,) = [x for x in said if "yacht-house" in x]
+    assert "skipped" in line and "migrate-personal" not in line, line
+    assert "yacht-house" in Bank().journeys  # still listed
+
+
+def test_check_names_the_whole_path_and_an_old_year_0_is_undated(tmp_path, monkeypatch):
+    from liner_notes import check
+    from liner_notes.build import compose
+
+    data = setup(tmp_path, monkeypatch)
+    gen.generate("Night Mix", lookup=lookup, log=lambda *a: None)
+    f = data / "songs/christopher-cross--sailing.json"
+    write_json(f, {**read_json(f), "year": 0})  # what 0.2.0's generate wrote for an undated song
+    bad = data / "songs/a--b.json"
+    write_json(bad, {"id": "a--b", "title": "", "artist": "A", "year": 1980, "aliases": {}, "notes": {}, "review": {"state": "draft"}})
+    bad_doc = read_json(bad)
+    bad_doc["provenance"] = {"ai_generated": False}
+    write_json(bad, bad_doc)
+    said = []
+    check.check(log=lambda *a: said.append(" ".join(map(str, a))))
+    probs = [x for x in said if x.startswith("problem:")]
+    assert any(str(bad) in x and "title" in x for x in probs), probs
+    assert not any("sailing" in x for x in probs), probs
+    _, problems, _ = compose("night-mix", public=True, warnings=(w := []))
+    assert not any("Sailing" in x for x in problems) and any("Sailing" in x and "isn't on this page" in x for x in w)
+
+
+def test_one_era_is_one_era(tmp_path, monkeypatch):
+    setup(tmp_path, monkeypatch, toml=TOML.split("[[track]]", 2)[0] + "[[track]]" + TOML.split("[[track]]", 2)[1])
+    said = []
+    gen.generate("Night Mix", lookup=lookup, log=lambda *a: said.append(" ".join(map(str, a))))
+    assert any("1 era," in x for x in said) and not any("1 eras" in x for x in said), said
+
+
+@pytest.mark.parametrize("trouble", ["not json", "cut short"])
+def test_a_garbled_musicbrainz_answer_is_a_musicbrainz_error(offline, monkeypatch, trouble):
+    import http.client
+
+    from liner_notes import resolve
+    from liner_notes.musicbrainz import MusicBrainzError
+
+    class Bad(Answer):
+        def read(self):
+            if trouble == "cut short":
+                raise http.client.IncompleteRead(b"{", 100)
+            return b"<html>busy</html>"
+
+    monkeypatch.setattr(urllib.request, "urlopen", lambda req, timeout=None: Bad(b""))
+    with pytest.raises(MusicBrainzError) as e:
+        resolve.mb("recording", query="x")
+    assert "MusicBrainz" in str(e.value)
+
+
+def _song(sid="a--b", **kw):
+    return {
+        "id": sid,
+        "title": "B",
+        "artist": "A",
+        "year": 1980,
+        "aliases": {},
+        "notes": {},
+        "review": {"state": "draft"},
+        "provenance": {"ai_generated": False},
+        **kw,
+    }
+
+
+def test_write_checked_refuses_inside_an_installed_package(tmp_path, monkeypatch):
+    from liner_notes import paths
+    from liner_notes.bank import write_checked
+
+    pkg = tmp_path / "site-packages/liner_notes"
+    (pkg / "shipped/songs").mkdir(parents=True)
+    monkeypatch.setattr(paths, "PACKAGE", pkg)
+    with pytest.raises(PermissionError):
+        write_checked(pkg / "shipped/songs/a--b.json", _song(), "song")
+    assert not (pkg / "shipped/songs/a--b.json").exists()
+
+
+def test_write_checked_refuses_a_bad_document_and_leaves_the_old_file(tmp_path):
+    from liner_notes.bank import SchemaError, write_checked
+
+    f = tmp_path / "songs/a--b.json"
+    write_checked(f, _song(), "song")
+    before = f.read_bytes()
+    for doc, name in ((_song(title=""), "a--b"), (_song(), "c--d"), (_song(year=1700), "a--b")):
+        with pytest.raises(SchemaError):
+            write_checked(tmp_path / f"songs/{name}.json", doc, "song")
+    assert f.read_bytes() == before and not (tmp_path / "songs/c--d.json").exists()
+    with pytest.raises(SchemaError):
+        write_checked(tmp_path / "journeys/x/journey.json", {"slug": "Not A Slug", "title": "x"}, "journey")
+    assert not (tmp_path / "journeys").exists()
+
+
+def test_write_checked_is_atomic(tmp_path, monkeypatch):
+    import os
+
+    from liner_notes.bank import write_checked
+
+    f = tmp_path / "songs/a--b.json"
+    write_checked(f, _song(), "song")
+    before = f.read_bytes()
+
+    def boom(*a):
+        raise OSError("disk full")
+
+    monkeypatch.setattr(os, "replace", boom)
+    with pytest.raises(OSError):
+        write_checked(f, _song(title="New"), "song")
+    assert f.read_bytes() == before
+    assert sorted(x.name for x in f.parent.iterdir()) == ["a--b.json"]  # no temp file left
