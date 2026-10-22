@@ -261,7 +261,11 @@ def test_a_bad_reply_names_the_field_in_json_and_writes_nothing(ws, tmp_path, ca
     "stage, fn, field",
     [
         ("eras", lambda d: d.update(essay="A vibrant room above a shop."), "$.essay"),
-        ("panel", lambda d: d["candidates"][0]["votes"]["pia"].update(why="The original take — no question."), "$.candidates[0].votes.pia.why"),
+        (
+            "panel",
+            lambda d: d["candidates"][0]["votes"]["pia"].update(why="The original take \u2014 no question."),
+            "$.candidates[0].votes.pia.why",
+        ),
     ],
 )
 def test_a_reply_that_breaks_the_house_style_is_refused_by_field(ws, tmp_path, capsys, stage, fn, field):
@@ -588,6 +592,7 @@ def test_dates_apply_writes_your_copy_of_the_song_and_names_the_other_journeys(w
     assert (mine["year"], mine["year_source"], mine["year_corrected_from"]) == (1991, "writer", 1990)
     assert shipped.read_bytes() == before
     assert states(capsys)["dates"]["state"] == "accepted"
+    assert run("accept", SLUG, "eras") == 0  # eras read the old dates.json
     assert run("assemble", SLUG) == 0
 
 
@@ -606,6 +611,7 @@ def test_assemble_writes_a_journey_the_page_reads_and_only_build_makes_it_live(w
     assert j["eras"][0]["scene"]["cities"] == ["Leeds"]
     # Not live yet: list and the bank don't see it.
     assert SLUG not in Bank().journeys
+    capsys.readouterr()
     run("list")
     assert SLUG not in capsys.readouterr().out
     page = tmp_path / "page.html"
@@ -637,7 +643,7 @@ def test_force_never_assembles_an_empty_stage(ws, capsys):
     [
         (lambda d: d["eras"][0].update({"from": 1991, "to": 1990}), "1991"),
         (lambda d: d["eras"][0].update({"to": 1990}), "Second Song"),
-        (lambda d: d["eras"][0].update(essay=""), "essay"),
+        (lambda d: d["eras"][0].pop("essay"), "essay"),
     ],
 )
 def test_force_never_assembles_broken_eras(ws, capsys, fn, said):
@@ -690,3 +696,39 @@ def test_no_journey_in_the_making_shows_in_the_bank(ws, capsys):
     fill(ws, capsys)
     assert paths.user_data() / "work" / SLUG == ws["dir"]
     assert SLUG not in Bank().journeys
+
+
+def test_a_build_that_refuses_the_page_leaves_the_journey_off_the_bank(ws, tmp_path, capsys):
+    fill(ws, capsys)
+    assert run("assemble", SLUG) == 0
+    (ws["dir"] / "media/eras/era1.webp").unlink()  # the page refuses an era with no picture
+    assert run("build", SLUG, "--public", "--out", tmp_path / "page.html") == 1
+    assert SLUG not in Bank().journeys
+
+
+def test_every_stage_renders_from_the_shipped_briefs_with_nothing_left_unfilled(ws, monkeypatch, capsys):
+    monkeypatch.delenv("LINER_NOTES_PROMPTS")
+    fill(ws, capsys)
+    for name in STAGES:
+        args = ("--era", 1) if name == "eras" else ()
+        got = out_json(capsys, "prompt", SLUG, name, *args)
+        for hole in ("{inputs}", "{output_schema}", "{style_rules}"):
+            assert hole not in got["text"], (name, hole)
+        assert "Small Trip" in got["text"]
+
+
+def test_a_dates_reply_missing_a_song_is_refused(ws, tmp_path, capsys):
+    fill(ws, capsys, upto="panel")
+    d = read_json(FIX / "dates.json")
+    d["songs"].pop()
+    r = tmp_path / "reply.json"
+    write(r, d)
+    assert "no row for bob-band--second-song" in refused("reply", SLUG, "dates", r)
+
+
+def test_accept_clears_a_prompt_nobody_answered(ws, capsys):
+    fill(ws, capsys)
+    assert run("prompt", SLUG, "front") == 0
+    assert "rendered" in tomllib.loads((ws["dir"] / "journey.toml").read_text())["stages"]["front"]
+    assert run("accept", SLUG, "front") == 0
+    assert "rendered" not in tomllib.loads((ws["dir"] / "journey.toml").read_text())["stages"]["front"]

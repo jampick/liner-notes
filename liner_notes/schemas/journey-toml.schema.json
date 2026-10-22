@@ -2,7 +2,7 @@
  "$schema": "https://json-schema.org/draft/2020-12/schema",
  "$id": "https://github.com/jampick/liner-notes/schemas/journey-toml.schema.json",
  "title": "journey.toml, read as TOML: what a journey is and where each stage stands",
- "description": "stages.<name>.inputs holds the sha256 of each input as it was when the stage was last accepted; stages.<name>.output the sha256 of the output then (its sign-off). prompt is the brief the accepted output was made with, rendered the last brief shown. status compares these with the files now and reruns nothing.",
+ "description": "For each stage: by is reply (a chat's reply, not yet accepted) or accept (a person looked); inputs the sha256 of each input when the output was made (taken when its prompt was rendered, for a reply); output the sha256 of the output then; prompt the brief it answered ({id, version, hash}). rendered holds a prompt shown and not yet answered, per part (all, or era-N). status compares these with the files now and reruns nothing.",
  "type": "object",
  "required": ["schema", "slug", "title", "panel", "seed"],
  "properties": {
@@ -10,6 +10,12 @@
   "slug": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
   "title": {"type": "string", "minLength": 1},
   "panel": {"type": "boolean"},
+  "rule": {
+   "description": "The panel's rule, set by new: a pick needs `yes` yes votes of `of` judges, and with veto one judge can stop it. A panel reply can't change it.",
+   "type": "object",
+   "required": ["yes", "of", "veto"],
+   "properties": {"yes": {"type": "integer", "minimum": 1}, "of": {"type": "integer", "minimum": 1}, "veto": {"type": "boolean"}}
+  },
   "assist": {"type": "boolean"},
   "licence": {"type": "string"},
   "credits": {"type": "string"},

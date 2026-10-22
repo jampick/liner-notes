@@ -1,8 +1,8 @@
 {
  "$schema": "https://json-schema.org/draft/2020-12/schema",
  "$id": "https://github.com/jampick/liner-notes/schemas/eras.schema.json",
- "title": "A journey's eras: bounds and names from a person, essays and scenes from a writer",
- "description": "In order. assemble numbers them from 1 and writes `years` (like 1976–78) when it's left out. An era with no essay yet has an empty string.",
+ "title": "A journey's eras: names and bounds from a person, essays and scenes from a writer",
+ "description": "In order. A person writes each era's name, from and to; `reply <slug> eras --era N` fills in one era's essay, scene, sources, unverified and panel_check, and can't move its bounds. assemble numbers the eras from 1, writes `years` (like 1976–78) when it's left out, and refuses an era with no essay or scene.",
  "type": "object",
  "required": ["eras"],
  "properties": {
@@ -11,16 +11,42 @@
    "minItems": 1,
    "items": {
     "type": "object",
-    "required": ["name", "from", "to", "essay", "scene"],
+    "required": ["name", "from", "to"],
     "properties": {
-     "name": {"type": "string", "minLength": 1},
+     "name": {"x-reply": "only when the inputs leave it blank", "type": "string"},
      "from": {"type": "integer", "minimum": 1800},
      "to": {"type": "integer", "minimum": 1800},
      "years": {"type": "string"},
-     "essay": {"type": "string"},
-     "scene": {"type": "string"},
      "image": {"type": "string"},
-     "sources": {"type": "array", "items": {"type": "string", "minLength": 1}}
+     "essay": {"type": "string", "minLength": 1},
+     "scene": {
+      "type": "object",
+      "required": ["cities", "labels", "gear", "artifact"],
+      "properties": {
+       "cities": {"type": "array", "items": {"type": "string", "minLength": 1}},
+       "labels": {"type": "array", "items": {"type": "string", "minLength": 1}},
+       "gear": {"type": "array", "items": {"type": "string", "minLength": 1}},
+       "artifact": {"type": "string", "minLength": 1}
+      }
+     },
+     "sources": {"type": "array", "items": {"type": "string", "pattern": "^https?://"}},
+     "unverified": {"type": "string"},
+     "panel_check": {
+      "x-reply": "one row for each panel quote in the inputs; an empty list when there are none",
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": ["song", "judge", "quote", "verdict", "note", "source"],
+       "properties": {
+        "song": {"type": "string"},
+        "judge": {"type": "string"},
+        "quote": {"type": "string"},
+        "verdict": {"enum": ["holds", "wrong", "unconfirmed"]},
+        "note": {"x-reply": "an empty string when it holds", "type": "string"},
+        "source": {"x-reply": "a URL, or an empty string", "type": "string", "pattern": "^(https?://.*)?$"}
+       }
+      }
+     }
     }
    }
   }

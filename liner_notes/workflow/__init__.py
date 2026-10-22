@@ -1,18 +1,19 @@
 """Making a journey one stage at a time: the folder of artefacts, their hashes, and the commands
-`new`, `status`, `stage --prompt`, `stage --accept`, `accept` and `assemble`.
+`new`, `status`, `prompt`, `reply`, `accept`, `assemble` and `dates-apply`.
 
-A journey in the making is a folder in user data, ~/.local/share/liner-notes/journeys/<slug>/:
+A journey in the making is a work folder in user data, ~/.local/share/liner-notes/work/<slug>/:
 
-  journey.toml     title, seed, and each stage's input and output hashes (journeytoml.py)
+  journey.toml     title, seed, the panel's rule, and each stage's hashes (journeytoml.py)
   heuristic.md     what's in and out
-  panel.json       the rule, the judges and every vote; picks and close calls are computed (panel.py)
+  panel.json       the judges and every vote; picks and close calls are computed (panel.py)
   dates.json       each song's year with its source
-  eras.json        bounds, names, essays and scenes
+  eras.json        names and bounds from a person, essays and scenes from a writer, one era a reply
   front.json       titles, lede, copy, the express route and threads
-  journey.json     written by `assemble`, the file the page reads
+  journey.json     written by `assemble`
 
-Nothing here calls a model. `stage --prompt` prints a brief to paste anywhere, and `stage --accept`
-takes the reply back. (liner_notes/stage.py is the visual stage page; it has nothing to do with this.)
+The bank never reads the work folder. `liner-notes build <slug>` copies an assembled journey into
+your bank (publish.py), and that's when it goes live. Nothing here calls a model: `prompt` prints a
+brief to paste anywhere and `reply` takes the answer back.
 """
 
 from .. import paths

@@ -27,6 +27,8 @@
   "year_writer": {"description": "The writer's year, kept when it differs from a year a person set, so check can show both.", "type": "integer"},
   "release_group": {"type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"},
   "year_note": {"type": "string"},
+  "year_corrected_from": {"description": "The year the song had before a journey's dates stage corrected it (liner-notes dates-apply).", "type": ["integer", "null"]},
+  "year_url": {"description": "The page that settles the year, from a journey's dates stage.", "type": "string"},
   "album": {"type": "string"},
   "mbid": {"type": "string"},
   "isrc": {"type": "array", "items": {"type": "string", "pattern": "^[A-Z]{2}[A-Z0-9]{3}[0-9]{7}$"}},

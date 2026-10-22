@@ -1,19 +1,15 @@
 {
  "$schema": "https://json-schema.org/draft/2020-12/schema",
  "$id": "https://github.com/jampick/liner-notes/schemas/panel.schema.json",
- "title": "A journey's panel: the rule, the judges and every candidate's votes",
- "description": "Picks and close calls are computed from this file by liner_notes.workflow.panel, never stored. A pick has at least rule.yes yes votes and no veto, or an override to pick. A close call is any other candidate within one vote of the rule, or vetoed. Votes in `votes` are keyed by judge id, each {vote: yes|no, why}. Vote counting and the judge ids are checked by code, since this schema can't name the keys.",
+ "title": "A journey's panel: the judges and every candidate's votes",
+ "description": "The rule (how many yes votes, whether there's a veto) is the journey's, in journey.toml, and a panel can't change it. Picks and close calls are computed by liner_notes.workflow.panel, never stored. Judge ids, one vote per judge per candidate and the veto holder are checked by code, since this schema can't name the keys.",
  "type": "object",
- "required": ["rule", "judges", "candidates"],
+ "required": ["judges", "candidates"],
  "properties": {
-  "public": {"description": "Whether the votes and close-call quotes may be published. Default false: some quotes are opinions about artists.", "type": "boolean"},
-  "rule": {
-   "type": "object",
-   "required": ["yes", "of"],
-   "properties": {"yes": {"type": "integer", "minimum": 1}, "of": {"type": "integer", "minimum": 1}}
-  },
+  "public": {"x-reply-skip": true, "description": "Whether the votes and close-call quotes may be published. Default false: some quotes are opinions about artists.", "type": "boolean"},
+  "rule": {"x-reply-skip": true, "description": "Only for checking: when present it must match the journey's rule.", "type": "object"},
   "judges": {
-   "description": "Keyed by a short judge id. Each has name, title and lens; veto: true lets that judge veto.",
+   "x-reply": "keyed by a short judge id, like \"pia\": each {name, title, lens}, and \"veto\": true on the one judge who holds the veto",
    "type": "object"
   },
   "candidates": {
@@ -21,25 +17,25 @@
    "minItems": 1,
    "items": {
     "type": "object",
-    "required": ["song", "title", "artist", "votes"],
+    "required": ["title", "artist", "votes"],
     "properties": {
-     "song": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*--[a-z0-9]+(-[a-z0-9]+)*$"},
+     "song": {"x-reply": "the song's id when the inputs give one; otherwise leave it out and give title and artist", "type": "string"},
      "title": {"type": "string", "minLength": 1},
      "artist": {"type": "string", "minLength": 1},
-     "votes": {"type": "object"},
-     "veto": {"type": ["object", "null"], "required": ["by", "why"], "properties": {"by": {"type": "string"}, "why": {"type": "string", "minLength": 1}}},
+     "votes": {"x-reply": "keyed by judge id, one for every judge: {vote: \"yes\" or \"no\", why: one line}", "type": "object"},
+     "veto": {"type": ["object", "null"], "required": ["by", "why"], "properties": {"by": {"x-reply": "the judge id holding the veto", "type": "string", "minLength": 1}, "why": {"type": "string", "minLength": 1}}},
      "override": {
+      "x-reply-skip": true,
       "type": ["object", "null"],
       "required": ["to", "why"],
       "properties": {"to": {"enum": ["pick", "cut"]}, "why": {"type": "string", "minLength": 1}, "by": {"type": "string"}}
      },
      "quote": {
-      "description": "The line the page shows for a pick. Without one, assemble uses the first yes vote's reason.",
       "type": "object",
       "required": ["j", "q"],
-      "properties": {"j": {"type": "string"}, "q": {"type": "string", "minLength": 1}, "dissent": {"type": "boolean"}}
+      "properties": {"j": {"x-reply": "judge id", "type": "string"}, "q": {"type": "string", "minLength": 1}, "dissent": {"type": "boolean"}}
      },
-     "corrected_from": {"type": "string"}
+     "corrected_from": {"x-reply-skip": true, "type": "string"}
     }
    }
   }
