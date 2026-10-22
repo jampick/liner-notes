@@ -1,0 +1,47 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/jampick/liner-notes/schemas/panel.schema.json",
+ "title": "A journey's panel: the rule, the judges and every candidate's votes",
+ "description": "Picks and close calls are computed from this file by liner_notes.workflow.panel, never stored. A pick has at least rule.yes yes votes and no veto, or an override to pick. A close call is any other candidate within one vote of the rule, or vetoed. Votes in `votes` are keyed by judge id, each {vote: yes|no, why}. Vote counting and the judge ids are checked by code, since this schema can't name the keys.",
+ "type": "object",
+ "required": ["rule", "judges", "candidates"],
+ "properties": {
+  "public": {"description": "Whether the votes and close-call quotes may be published. Default false: some quotes are opinions about artists.", "type": "boolean"},
+  "rule": {
+   "type": "object",
+   "required": ["yes", "of"],
+   "properties": {"yes": {"type": "integer", "minimum": 1}, "of": {"type": "integer", "minimum": 1}}
+  },
+  "judges": {
+   "description": "Keyed by a short judge id. Each has name, title and lens; veto: true lets that judge veto.",
+   "type": "object"
+  },
+  "candidates": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": ["song", "title", "artist", "votes"],
+    "properties": {
+     "song": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*--[a-z0-9]+(-[a-z0-9]+)*$"},
+     "title": {"type": "string", "minLength": 1},
+     "artist": {"type": "string", "minLength": 1},
+     "votes": {"type": "object"},
+     "veto": {"type": ["object", "null"], "required": ["by", "why"], "properties": {"by": {"type": "string"}, "why": {"type": "string", "minLength": 1}}},
+     "override": {
+      "type": ["object", "null"],
+      "required": ["to", "why"],
+      "properties": {"to": {"enum": ["pick", "cut"]}, "why": {"type": "string", "minLength": 1}, "by": {"type": "string"}}
+     },
+     "quote": {
+      "description": "The line the page shows for a pick. Without one, assemble uses the first yes vote's reason.",
+      "type": "object",
+      "required": ["j", "q"],
+      "properties": {"j": {"type": "string"}, "q": {"type": "string", "minLength": 1}, "dissent": {"type": "boolean"}}
+     },
+     "corrected_from": {"type": "string"}
+    }
+   }
+  }
+ }
+}

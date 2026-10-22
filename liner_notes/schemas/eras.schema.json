@@ -1,0 +1,28 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/jampick/liner-notes/schemas/eras.schema.json",
+ "title": "A journey's eras: bounds and names from a person, essays and scenes from a writer",
+ "description": "In order. assemble numbers them from 1 and writes `years` (like 1976–78) when it's left out. An era with no essay yet has an empty string.",
+ "type": "object",
+ "required": ["eras"],
+ "properties": {
+  "eras": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": ["name", "from", "to", "essay", "scene"],
+    "properties": {
+     "name": {"type": "string", "minLength": 1},
+     "from": {"type": "integer", "minimum": 1800},
+     "to": {"type": "integer", "minimum": 1800},
+     "years": {"type": "string"},
+     "essay": {"type": "string"},
+     "scene": {"type": "string"},
+     "image": {"type": "string"},
+     "sources": {"type": "array", "items": {"type": "string", "minLength": 1}}
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/jampick/liner-notes/schemas/journey-toml.schema.json",
+ "title": "journey.toml, read as TOML: what a journey is and where each stage stands",
+ "description": "stages.<name>.inputs holds the sha256 of each input as it was when the stage was last accepted; stages.<name>.output the sha256 of the output then (its sign-off). prompt is the brief the accepted output was made with, rendered the last brief shown. status compares these with the files now and reruns nothing.",
+ "type": "object",
+ "required": ["schema", "slug", "title", "panel", "seed"],
+ "properties": {
+  "schema": {"type": "integer", "minimum": 1},
+  "slug": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+  "title": {"type": "string", "minLength": 1},
+  "panel": {"type": "boolean"},
+  "assist": {"type": "boolean"},
+  "licence": {"type": "string"},
+  "credits": {"type": "string"},
+  "budget": {"type": "number", "minimum": 0},
+  "created": {"type": "string"},
+  "seed": {
+   "type": "object",
+   "properties": {
+    "idea": {"type": "string"},
+    "from": {"type": "string"},
+    "songs": {"type": "array", "items": {"type": "string"}},
+    "tracks": {"description": "The playlist's entries as Artist - Title, beside songs, for the prompts.", "type": "array", "items": {"type": "string"}}
+   }
+  },
+  "stages": {"type": "object"}
+ }
+}

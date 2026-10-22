@@ -1,0 +1,26 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/jampick/liner-notes/schemas/front.schema.json",
+ "title": "A journey's front matter: titles, lede, copy, the express route and threads",
+ "type": "object",
+ "required": ["title", "titleA", "titleB", "kicker", "description", "lede"],
+ "properties": {
+  "title": {"type": "string", "minLength": 1},
+  "titleA": {"type": "string"},
+  "titleB": {"type": "string"},
+  "kicker": {"type": "string"},
+  "description": {"type": "string", "minLength": 1},
+  "lede": {"type": "string"},
+  "fonts": {"type": "string", "pattern": "^(https://fonts\\.googleapis\\.com/.*)?$"},
+  "copy": {"type": "object"},
+  "express": {"type": "object", "properties": {"note": {"type": "string"}, "songs": {"type": "array", "items": {"type": "string"}}}},
+  "threads": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": ["from", "to", "kind"],
+    "properties": {"from": {"type": "string"}, "to": {"type": "string"}, "kind": {"type": "string", "minLength": 1}, "note": {"type": "string"}}
+   }
+  }
+ }
+}

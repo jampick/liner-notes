@@ -289,6 +289,94 @@ def cmd_drop(a):
     return rc
 
 
+def _workflow(fn, *args, **kw):
+    """Run a journey-making step, turning a Problem into one plain line and exit 1."""
+    from .workflow.journeytoml import Problem
+
+    try:
+        return fn(*args, **kw)
+    except Problem as e:
+        sys.exit(f"liner-notes: {e}")
+
+
+def cmd_new(a):
+    from .workflow import journeytoml
+    from .workflow.new import new
+
+    doc = _workflow(new, a.title, slug=a.slug, source=a.from_, with_panel=a.panel)
+    where = journeytoml.folder(doc["slug"])
+    how = "with a panel" if doc["panel"] else "with no panel (the playlist is the list)"
+    print(f"{doc['slug']}: started in {where}, {how}. Next: liner-notes stage {doc['slug']} heuristic --prompt")
+    return 0
+
+
+def _print_status(st):
+    print(f"{st['slug']}  {st['title']}  ({st['folder']})")
+    for s in st["stages"]:
+        why = s["stale"] + (["edited after sign-off"] if s["unsigned"] else []) + s["problems"]
+        if s["state"] == "empty" and s["waiting"]:
+            why = ["waiting on " + ", ".join(s["waiting"])]
+        print(f"  {s['name']:10} {s['state']:9} {'; '.join(why)}")
+    if st.get("picks") is not None:
+        print(f"  panel: {len(st['picks'])} picks, {len(st['close_calls'])} close calls")
+    print("  ready to assemble" if st["ready"] else "  not ready to assemble")
+
+
+def cmd_status(a):
+    from .workflow import journeytoml, stages
+
+    slugs = [a.slug] if a.slug else journeytoml.slugs()
+    all_ = [_workflow(stages.status, s) for s in slugs]
+    if a.json:
+        print(json.dumps(all_[0] if a.slug else {"journeys": all_}, indent=1, ensure_ascii=False))
+        return 0
+    if not all_:
+        print('No journeys in the making. liner-notes new "<idea>" starts one.')
+    for st in all_:
+        _print_status(st)
+    return 0
+
+
+def cmd_stage(a):
+    from .workflow import stages
+
+    if a.prompt:
+        sys.stdout.write(_workflow(stages.render, a.slug, a.name))
+        return 0
+    text = sys.stdin.read() if a.accept == "-" else _read_reply(a.accept)
+    out = _workflow(stages.accept_reply, a.slug, a.name, text)
+    print(f"{a.slug}: {a.name} accepted and signed off, in {out}")
+    return 0
+
+
+def _read_reply(f):
+    try:
+        return open(os.path.expanduser(f), encoding="utf-8").read()
+    except OSError as e:
+        sys.exit(f"liner-notes: can't read the reply: {e}")
+
+
+def cmd_accept(a):
+    from .workflow import stages
+
+    st = _workflow(stages.accept, a.slug, a.name)
+    was = (
+        f" (it was {st['state']}: {'; '.join(st['stale'] + (['edited after sign-off'] if st['unsigned'] else []))})"
+        if st["state"] != "ok"
+        else ""
+    )
+    print(f"{a.slug}: {a.name} accepted as it stands{was}")
+    return 0
+
+
+def cmd_assemble(a):
+    from .workflow.assemble import assemble
+
+    out = _workflow(assemble, a.slug, force=a.force)
+    print(f"{a.slug}: wrote {out}. liner-notes build {a.slug} makes the page")
+    return 0
+
+
 def parser():
     ap = argparse.ArgumentParser(prog="liner-notes", description=__doc__)
     ap.add_argument("--version", action="version", version=f"liner-notes {__version__}")
@@ -393,6 +481,36 @@ def parser():
     p = sub.add_parser("drop", help="remove your copy of a shipped song or journey, so you read the shipped one again")
     p.add_argument("ids", nargs="+", metavar="ID", help="song ids or journey slugs")
     p.set_defaults(fn=cmd_drop)
+
+    p = sub.add_parser("new", help="start a journey from an idea (with a panel) or a playlist (--from, no panel)")
+    p.add_argument("title", help='the idea, which is also the title, like "Rod Temperton"')
+    p.add_argument("--slug", help="the journey's file and page name (default: made from the title)")
+    p.add_argument("--from", dest="from_", metavar="PLAYLIST", help="an .m3u or cliamp .toml file, or a saved cliamp playlist's name")
+    p.add_argument("--panel", action="store_true", default=None, help="with --from: argue the list with a panel anyway")
+    p.set_defaults(fn=cmd_new)
+
+    p = sub.add_parser("status", help="each stage of the journeys you're making: empty, draft, stale, unsigned or ok")
+    p.add_argument("slug", nargs="?", help="default: every journey in the making")
+    p.add_argument("--json", action="store_true", help="for scripts and the console")
+    p.set_defaults(fn=cmd_status)
+
+    p = sub.add_parser("stage", help="render a stage's prompt to paste anywhere, or accept the reply")
+    p.add_argument("slug")
+    p.add_argument("name", help="heuristic, panel, dates, eras or front")
+    how = p.add_mutually_exclusive_group(required=True)
+    how.add_argument("--prompt", action="store_true", help="print the brief, the inputs and the reply's schema")
+    how.add_argument("--accept", metavar="FILE", help="check a reply (a file, or - for stdin), write it and sign it off")
+    p.set_defaults(fn=cmd_stage)
+
+    p = sub.add_parser("accept", help="sign off a stage as it stands: you looked and it still holds")
+    p.add_argument("slug")
+    p.add_argument("name", help="heuristic, panel, dates, eras or front")
+    p.set_defaults(fn=cmd_accept)
+
+    p = sub.add_parser("assemble", help="write the journey.json the page reads from the stage files")
+    p.add_argument("slug")
+    p.add_argument("--force", action="store_true", help="assemble even with stages that aren't ok")
+    p.set_defaults(fn=cmd_assemble)
 
     p = sub.add_parser("watch-page")  # internal: started by play, remembers where the page window is moved
     p.add_argument("address")

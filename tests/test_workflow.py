@@ -76,13 +76,18 @@ def test_new_refuses_a_journey_that_exists(ws, capsys):
     assert "already" in str(e.value)
 
 
-def test_a_playlist_gets_no_panel_unless_asked(ws, capsys):
-    assert run("new", "Boogie Down", "--from", FIX / "boogie.m3u") == 0
+M3U = "#EXTM3U\n#EXTINF:-1,Ann Artist - First Song\nhttps://example.org/1\n#EXTINF:-1,Bob Band - Second Song (Remastered)\nhttps://example.org/2\n"
+
+
+def test_a_playlist_gets_no_panel_unless_asked(ws, tmp_path, capsys):
+    m3u = tmp_path / "boogie.m3u"  # made here: the publish check doesn't carry .m3u files in the repo
+    m3u.write_text(M3U)
+    assert run("new", "Boogie Down", "--from", m3u) == 0
     st = status(capsys, "boogie-down")
     assert st["panel"] is False
     assert [s["name"] for s in st["stages"]] == ["heuristic", "dates", "eras", "front"]
     assert st["songs"] == ["ann-artist--first-song", "bob-band--second-song"]
-    assert run("new", "Boogie Panel", "--from", FIX / "boogie.m3u", "--panel") == 0
+    assert run("new", "Boogie Panel", "--from", m3u, "--panel") == 0
     assert "panel" in [s["name"] for s in status(capsys, "boogie-panel")["stages"]]
 
 
@@ -234,6 +239,8 @@ def test_assemble_writes_a_journey_the_page_reads(ws, capsys):
     assert j["panel"]["quotes"]["ann-artist--first-song"] == {"j": "ros", "q": "Everyone in the room sings the chorus."}
     assert j["panel"]["judges"]["pia"]["name"] == "Pia Hartnell"
     assert j["eras"][0]["n"] == 1 and j["eras"][0]["years"] == "1990–91"
+    (ws["dir"] / "media/eras").mkdir(parents=True)
+    (ws["dir"] / "media/eras/era1.webp").write_bytes(b"RIFF0000WEBPVP8 ")  # the era picture the journey names
     data, probs, _ = build.compose(SLUG, Bank(), public=True)
     assert probs == []
     assert [s["title"] for s in data["stops"]] == ["First Song", "Second Song"]
