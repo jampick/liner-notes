@@ -193,6 +193,8 @@ def test_render_adds_nothing_without_a_style_file():
 
 
 def test_the_caches_keep_one_entry_per_file():
+    method._STYLES.clear()
+    method._PROMPTS.clear()
     f = method.user_style_path()
     for i in range(5):
         f.write_text(f'[words]\nbanned = ["groove{i}"]\n')

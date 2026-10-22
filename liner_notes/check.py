@@ -10,6 +10,7 @@ style.toml (banned words and constructions, no quoted lyrics).
 
 import json
 import re
+from pathlib import Path
 
 from . import overlay, paths
 from .bank import Bank, read_json
@@ -101,6 +102,7 @@ JOURNEY_TEXT = (
     "threads[].note",
 )
 CULTURE_TEXT = ("items[].line",)
+REMIX_TEXT = ("description", "kicker", "panel.quotes.*.quote")
 QUOTED = re.compile(
     '["\\u201c]([^"\\u201c\\u201d]+)["\\u201d]'  # double quotes, straight or curly
     "|\\u2018([^\\u2018\\u2019]+)\\u2019(?!\\w)"  # curly single quotes; an apostrophe inside is followed by a letter
@@ -151,10 +153,13 @@ def _words(s):
     return re.findall(r"[a-z][a-z'’-]*", s.lower())
 
 
-def lyric_quotes(text, style):
-    """Quoted spans that look like lyrics. The rule and its limits are under [lyrics] in style.toml."""
+def lyric_quotes(text, style, lead=""):
+    """Quoted spans that look like lyrics. The rule and its limits are under [lyrics] in style.toml.
+    `lead` is read in front of the text (a listen_for note's where) but never reported itself."""
     out = []
-    for m in QUOTED.finditer(text):
+    start = len(lead) + 2 if lead else 0
+    text = f"{lead}: {text}" if lead else text
+    for m in QUOTED.finditer(text, start):
         span = _span(m)
         if len(span.split()) < style.lyrics_min_words or _title_case(span):
             continue
@@ -162,9 +167,13 @@ def lyric_quotes(text, style):
         ahead = _words(re.split(r"[.!?]\s", text[: m.start()])[-1])
         past = _words(re.split(r"[.!?](?:\s|$)", text[m.end() :])[0])
         near_ahead, near_past = ahead[-style.lyrics_before :], past[: style.lyrics_after]
+        near = set(near_ahead + near_past)
+        if style.lyrics_sung & near:  # sung is a lyric, whoever else spoke in the sentence
+            out.append(span)
+            continue
         if style.lyrics_speech & set(ahead):  # someone talking, anywhere earlier in the sentence
             continue
-        cued = style.lyrics_cues & set(near_ahead + near_past)
+        cued = style.lyrics_cues & near
         if not cued and ahead and ahead[-1] in ("line", "lines"):
             cued = len(ahead) < 2 or ahead[-2] not in style.lyrics_not_lyric
         if not cued and past and past[0] in ("line", "lines"):
@@ -177,8 +186,9 @@ def lyric_quotes(text, style):
 URL = re.compile(r"https?://\S+")
 
 
-def style_problems(text, style):
-    """What in one piece of our text breaks style.toml, each with its fix."""
+def style_problems(text, style, lead=""):
+    """What in one piece of our text breaks style.toml, each with its fix. `lead` goes in front for
+    the lyric rule only (see lyric_quotes)."""
     text = URL.sub(" ", text)
     for pat in style.allowed_patterns:
         text = pat.sub(" ", text)
@@ -198,26 +208,36 @@ def style_problems(text, style):
             if m.group(0)[0].isupper() and ahead and ahead[-1] not in ".!?:\"'\u201c\u2018(" and style.user_path:
                 msg += f"; if it's a name, add it to [names] allowed in {style.user_path}"
             out.append(msg)
-    out += [f"quoted lyric {s!r}; {style.lyrics_fix}" for s in lyric_quotes(text, style)]
+    if lead:
+        lead = URL.sub(" ", lead)
+    out += [f"quoted lyric {s!r}; {style.lyrics_fix}" for s in lyric_quotes(text, style, lead)]
     return out
 
 
 def style_check(bank, style=None):
-    """style.toml over every text field of the songs, the journeys and the culture years, as problem lines."""
+    """style.toml over every text field of the songs, the journeys and the culture years, as problem
+    lines. Shipped files are judged by the house style; your own by the house style plus your additions."""
     from .method import load_style
 
-    style = style or load_style()
+    mine = style or load_style()
+    house = style or load_style(house=True)
+    shipped = paths.home().resolve()
     out = []
 
     def scan(f, doc, spec):
+        st = house if Path(f).resolve().is_relative_to(shipped) else mine
         for field, text in texts(doc, spec):
-            out.extend(f"{f}: {field}: {p}" for p in style_problems(text, style))
+            lead = ""
+            m = re.fullmatch(r"notes\.listen_for\[(\d+)\]\.note", field)
+            if m:
+                item = (doc.get("notes") or {}).get("listen_for")[int(m.group(1))]
+                lead = item.get("where") or "" if isinstance(item, dict) else ""
+            out.extend(f"{f}: {field}: {p}" for p in style_problems(text, st, lead))
 
     for sid, s in bank.songs.items():
         scan(bank.song_files[sid], s, SONG_TEXT)
     for slug, j in bank.journeys.items():
-        if j.get("kind") != "remix":
-            scan(bank.journey_dirs[slug] / "journey.json", j, JOURNEY_TEXT)
+        scan(bank.journey_dirs[slug] / "journey.json", j, REMIX_TEXT if j.get("kind") == "remix" else JOURNEY_TEXT)
     seen = set()
     for r in bank.roots:  # highest priority first; a year in your data hides the shipped one, as in the bank
         for f in sorted((r / "culture/years").glob("*.json")):
@@ -233,6 +253,13 @@ def schemas():
 
 
 def check(log=print):
+    from .method import MethodError, load_style
+
+    try:
+        load_style()
+    except MethodError as e:
+        log(f"liner-notes: {e}")
+        return 2
     sc = schemas()
     bank = Bank()
     problems, notes, warnings = [], [], []

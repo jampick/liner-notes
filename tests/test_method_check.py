@@ -235,8 +235,16 @@ def test_the_style_lets_through(what, text):
     assert problems_in(text) == []
 
 
-def test_a_name_hit_says_how_to_allow_it(home):
-    edit(home / SONG, lambda s: s["notes"].update(made="It came out on Robust Records in Leeds."))
+def your_copy(home, iso):  # noqa: F811
+    """The test song as your own copy in user data, where your style additions apply."""
+    import shutil
+
+    (iso["data"] / "songs").mkdir(parents=True, exist_ok=True)
+    return shutil.copy(home / SONG, iso["data"] / SONG)
+
+
+def test_a_name_hit_says_how_to_allow_it(home, iso):  # noqa: F811
+    edit(your_copy(home, iso), lambda s: s["notes"].update(made="It came out on Robust Records in Leeds."))
     code, probs = run_check()
     from liner_notes.method import user_style_path
 
@@ -250,13 +258,13 @@ def test_a_lowercase_hit_doesnt_suggest_a_name(home):
     assert probs and "[names]" not in probs[0], probs[0]
 
 
-def test_your_style_file_adds_words_and_names(home):
+def test_your_style_file_adds_words_and_names(home, iso):  # noqa: F811
     from liner_notes.method import user_style_path
 
     f = user_style_path()
     f.parent.mkdir(parents=True, exist_ok=True)
     f.write_text('[words]\nbanned = ["groovesome"]\n\n[names]\nallowed = ["Robust Records"]\n')
-    edit(home / SONG, lambda s: s["notes"].update(made="It came out on Robust Records, a groovesome label."))
+    edit(your_copy(home, iso), lambda s: s["notes"].update(made="It came out on Robust Records, a groovesome label."))
     code, probs = run_check()
     assert code == 1 and len(probs) == 1 and "'groovesome'" in probs[0], probs
 

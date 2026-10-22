@@ -4,12 +4,14 @@
 # (titles, artists, albums, cities, labels, gear) and URLs aren't checked.
 #
 # Change a rule here and both sides change: the next prompt a writer gets, and what check refuses.
-# A loaded prompt has these rules filled in, so a stage that hashes the prompt's text sees the change.
+# A loaded prompt has these rules filled in, so a stage that hashes Prompt.text sees the change.
 # Bump `version` too, as a note to people.
 #
 # You can add to this list without editing the package: put a style.toml beside your config.toml
 # (~/.config/liner-notes/style.toml) with more [words] banned and more [names] allowed. It can't
-# remove anything here.
+# remove anything here: an allowed name needs a capital letter, can't be a banned word on its own and
+# can't carry a dash rule. Your additions judge your own songs and journeys and go into the prompts
+# you send; the shipped bank is judged by this file alone.
 version = 1
 
 [words]
@@ -81,19 +83,24 @@ fix = "cut the signpost and say the thing"
 [lyrics]
 # No quoted lyrics, not even one line. check can't see the lyrics, so it looks for the way a lyric
 # gets quoted: a span of at least `min_words` words in quotes (double or single, straight or curly)
-# that isn't in Title Case (Title Case is a song, album or film title), with a cue word close by.
-#   - one of `cues` among the `before` words ahead of the opening quote or the `after` words past the
-#     closing one ("in the last chorus she sings '...'", "the '...' refrain");
-#   - or `line` or `lines` right against the quote ("the opening line, '...'", "the '...' line"),
-#     unless the word ahead of it says it's another kind of line (`not_lyric`: a bass line, a panel
-#     line, a chat-up line).
-# A quote with one of the `speech` verbs anywhere ahead of it in the same sentence is someone talking
-# ("Scaggs said '...'", "Rolling Stone wrote that the hook was '...'"), not a lyric. On the shipped bank this gives no false positives. It misses a lyric quoted
-# with no cue nearby; the prompts ask writers not to, and a person reviewing the song is the backstop.
+# that isn't in Title Case (Title Case is a song, album or film title), with a cue word close by,
+# among the `before` words ahead of the opening quote or the `after` words past the closing one.
+#   - A `sung` cue always makes it a lyric ("in the chorus she sings '...'", "the chorus goes '...'").
+#   - A structural cue (`cues`: "the '...' refrain"), or `line` or `lines` right against the quote
+#     ("the opening line, '...'"), makes it a lyric unless one of the `speech` verbs comes anywhere
+#     earlier in the sentence ("Rolling Stone wrote that the hook was '...'" is a critic talking).
+#     A line that the word ahead says is another kind (`not_lyric`: a bass line, a panel line, a
+#     chat-up line) isn't a cue.
+# A listen_for note is read with its `where` in front, so "the last lines" counts as a cue.
+# On the shipped bank this gives no false positives. It misses a lyric quoted with no cue nearby,
+# and a lyric inside a sentence where someone also spoke ("Daly told Smash Hits the chorus,
+# '...', came from..."); the prompts ask writers not to, and a person reviewing the song is the
+# backstop.
 min_words = 3
 before = 4
 after = 3
-cues = ["sing", "sings", "sang", "sung", "singing", "lyric", "lyrics", "chorus", "verse", "refrain", "hook", "couplet"]
+sung = ["sing", "sings", "sang", "sung", "singing", "lyric", "lyrics", "goes"]
+cues = ["chorus", "verse", "refrain", "hook", "couplet"]
 not_lyric = ["bass", "panel", "chat-up", "punch", "lead", "story", "picket", "front", "time", "tag", "phone", "bottom", "finish", "production", "assembly"]
 speech = [
   "said",

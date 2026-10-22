@@ -52,10 +52,10 @@ FONTS = "https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400
 
 
 def brief():
-    """The song writer's brief, prompts/song.md, with the house style from style.toml filled in."""
+    """The song writer's brief, prompts/song.md, with the house style and your additions to it."""
     from .method import load_prompt
 
-    return load_prompt("song").text
+    return load_prompt("song").render()
 
 
 def tracks_from_toml(name):

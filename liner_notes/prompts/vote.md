@@ -1,6 +1,6 @@
 +++
 id = "vote"
-version = 2
+version = 3
 description = "The panel: five invented judges vote on every candidate against the heuristic, with a reason each."
 +++
 # Liner Notes: panel brief
@@ -13,7 +13,7 @@ The judges are invented, and the page says so. Don't name a real critic, writer 
 
 Seat five judges whose lenses fit this idea. A pattern that has worked: a purist who knows the canon, a chart historian (peaks and how long the radio kept playing it), a player or arranger (groove, chords, craft), a crate-digger (roots, samples, the afterlife in later records, and who gets the credit for where the sound came from) and a party host (would a normal room today move or sing along). Swap any lens that doesn't fit the idea for one that does.
 
-Give every judge a short id, a full name and a title (a first and last name, then "the Purist" or whatever the lens is), plus one sentence on their lens. Names should sound like specific real people from the world the music came from, not default-sounding ones, and should be new for this panel rather than borrowed from an example. If the inputs already seat a panel, use it as given.
+Give every judge a short id, a full name and a title (a first and last name, then "the Purist" or whatever the lens is), plus one sentence on their lens. Names should sound like specific real people from the world the music came from, not default-sounding ones, and should be new for this panel. If the inputs already seat a panel, use it as given.
 
 One judge holds the veto, usually the purist. The veto means "this isn't the thing the journey is about": outside the heuristic's era, sound or personnel, or the wrong recording of the song. It isn't for songs the judge doesn't like.
 

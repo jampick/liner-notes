@@ -18,18 +18,23 @@ LINER_NOTES_PROMPTS names another folder of briefs, for tests and for trying a n
 that folder doesn't have comes from the package.
 
 You can add to the house style, never take from it: a style.toml beside your config.toml
-(~/.config/liner-notes/style.toml) may list more `[words] banned` and more `[names] allowed`.
+(~/.config/liner-notes/style.toml, or LINER_NOTES_STYLE) may list more `[words] banned` and more
+`[names] allowed`. Your additions judge your own songs and journeys; the shipped bank is judged by
+the house style alone.
 
-Both files are read again when they change on disk, so a long-running console sees an edit.
-Since the loaded text has the style filled in, a stage that hashes `Prompt.text` sees a style
-change as a changed brief.
+Which text to hash: `Prompt.text` is the brief with the house style filled in, the same on every
+machine, so a stage records a hash of that. A house style change moves it; your additions don't.
+`Prompt.render(...)` is what you send: it fills the placeholders and, when you have additions,
+appends them in a short section of their own.
+
+Both files are read again when they change on disk, so a long-running console sees an edit. The
+caches keep one entry per file.
 """
 
 import os
 import re
 import tomllib
 from dataclasses import dataclass, field
-from functools import cache
 from pathlib import Path
 
 from . import paths
@@ -59,8 +64,10 @@ class Prompt:
         return list(dict.fromkeys(PLACEHOLDER.findall(self.text)))
 
     def render(self, **values):
-        """The text with each given {name} replaced. Names not given stay as they are."""
-        return PLACEHOLDER.sub(lambda m: str(values[m.group(1)]) if m.group(1) in values else m.group(0), self.text)
+        """What to send: the text with each given {name} replaced (names not given stay as they are),
+        plus your additions to the style, if you have any, in a section of their own."""
+        out = PLACEHOLDER.sub(lambda m: str(values[m.group(1)]) if m.group(1) in values else m.group(0), self.text)
+        return out + load_style().additions()
 
 
 @dataclass(frozen=True)
@@ -94,6 +101,18 @@ class Style:
     allowed_patterns: tuple = ()  # each allowed name on word boundaries, for check
     user_path: Path | None = None  # where a creator adds words and names
     words_line: str = ""
+    extra_banned: tuple = ()  # what the creator's file added
+    extra_allowed: tuple = ()
+    lyrics_sung: frozenset = frozenset()
+
+    def additions(self):
+        """The creator's additions as a short section for the end of a prompt, or ""."""
+        lines = []
+        if self.extra_banned:
+            lines.append(f"- Also none of these words: {', '.join(self.extra_banned)}.")
+        if self.extra_allowed:
+            lines.append(f"- These names are fine as they are: {', '.join(self.extra_allowed)}.")
+        return "\n\n## Your additions to the style\n\n" + "\n".join(lines) + "\n" if lines else ""
 
     def rules(self):
         """The style as the bulleted list a prompt carries."""
@@ -119,8 +138,9 @@ def _name_pattern(name):
 
 
 def user_style_path():
-    """Your additions to the house style, beside config.toml."""
-    return paths.config_file().parent / "style.toml"
+    """Your additions to the house style: LINER_NOTES_STYLE, or style.toml beside config.toml."""
+    env = os.environ.get("LINER_NOTES_STYLE")
+    return Path(env).expanduser() if env else paths.config_file().parent / "style.toml"
 
 
 def _user_additions(path):
@@ -143,6 +163,18 @@ def _user_additions(path):
     return tuple(banned), tuple(allowed)
 
 
+def _check_allowed(name, cons, word_patterns, path):
+    """An allowed name has to be a name: capitalised, not a banned word alone, and no dash rule in it."""
+    if not any(c.isupper() for c in name):
+        raise MethodError(
+            f"{path}: {name!r} in [names] allowed has no capital letter, so it's a word, not a name; the house style keeps it"
+        )
+    if any(p.fullmatch(name) for _, p in word_patterns):
+        raise MethodError(f"{path}: {name!r} in [names] allowed is a banned word on its own; allow the full name it's part of")
+    if any(c.pattern.search(f" {name} ") for c in cons):
+        raise MethodError(f"{path}: {name!r} in [names] allowed would let a house rule through; take it out")
+
+
 def parse_style(text, path=STYLE, user=None):
     """style.toml, plus a creator's additions from `user` (a path) when it exists."""
     try:
@@ -154,10 +186,16 @@ def parse_style(text, path=STYLE, user=None):
         )
         banned = tuple(w["banned"])
         allowed = tuple((d.get("names") or {}).get("allowed") or ())
+        extra_banned, extra_allowed = (), ()
         if user is not None and Path(user).is_file():
             more_banned, more_allowed = _user_additions(Path(user))
-            banned += tuple(x for x in more_banned if x not in banned)
-            allowed += tuple(x for x in more_allowed if x not in allowed)
+            house_words = tuple((x, re.compile(_forms(x), re.I)) for x in banned)
+            for name in more_allowed:
+                _check_allowed(name, cons, house_words, user)
+            extra_banned = tuple(x for x in more_banned if x not in banned)
+            extra_allowed = tuple(x for x in more_allowed if x not in allowed)
+            banned += extra_banned
+            allowed += extra_allowed
         words_line = w["say"].format(words=", ".join(banned))
         style = Style(
             version=int(d["version"]),
@@ -180,6 +218,9 @@ def parse_style(text, path=STYLE, user=None):
             allowed_patterns=tuple(_name_pattern(x) for x in allowed),
             user_path=Path(user) if user is not None else None,
             words_line=words_line,
+            extra_banned=extra_banned,
+            extra_allowed=extra_allowed,
+            lyrics_sung=frozenset(x.lower() for x in lyr.get("sung") or ()),
         )
     except MethodError:
         raise
@@ -195,15 +236,20 @@ def _mtime(path):
         return None
 
 
-@cache
-def _style_at(path, mtime, user, user_mtime):
-    return parse_style(Path(path).read_text(), path, user)
+_STYLES = {}  # (house path, user path or None) -> ((mtimes), Style): one entry per pair of files
+_PROMPTS = {}  # prompt path -> ((mtime, house style), Prompt)
 
 
-def load_style(path=None):
-    """style.toml with your additions, parsed and compiled; read again when either file changes."""
-    path, user = str(path or STYLE), str(user_style_path())
-    return _style_at(path, _mtime(path), user, _mtime(user))
+def load_style(path=None, house=False):
+    """style.toml with your additions, parsed and compiled; read again when either file changes.
+    house=True leaves your additions out: that's the style the shipped bank and Prompt.text use."""
+    path = str(path or STYLE)
+    user = None if house else str(user_style_path())
+    key, stamp = (path, user), (_mtime(path), user and _mtime(user))
+    hit = _STYLES.get(key)
+    if not hit or hit[0] != stamp:
+        _STYLES[key] = hit = (stamp, parse_style(Path(path).read_text(), path, user))
+    return hit[1]
 
 
 def parse_prompt(text, path, style=None):
@@ -223,7 +269,7 @@ def parse_prompt(text, path, style=None):
     if not isinstance(v, int) or isinstance(v, bool) or v < 1:
         raise MethodError(f"{path}: front matter needs version = <a whole number from 1>")
     body = "\n".join(lines[end + 1 :]).lstrip("\n")
-    body = body.replace("{style_rules}", (style or load_style()).rules())
+    body = body.replace("{style_rules}", (style or load_style(house=True)).rules())
     return Prompt(id=meta["id"], version=v, text=body, path=Path(path), meta=meta)
 
 
@@ -237,11 +283,6 @@ def prompt_path(name):
     return PROMPTS / f"{name}.md"
 
 
-@cache
-def _prompt_at(path, mtime, style):
-    return parse_prompt(Path(path).read_text(), Path(path), style)
-
-
 def load_prompt(name, style=None):
     """One of the briefs, by name: song, era, heuristic, vote, front, picture or dates."""
     if name not in NAMES:
@@ -249,4 +290,11 @@ def load_prompt(name, style=None):
     p = prompt_path(name)
     if not p.is_file():
         raise MethodError(f"there's no {name} brief at {p}")
-    return _prompt_at(str(p), _mtime(p), style or load_style())
+    if style is not None:
+        return parse_prompt(p.read_text(), p, style)
+    house = load_style(house=True)
+    stamp = (_mtime(p), house)
+    hit = _PROMPTS.get(str(p))
+    if not hit or hit[0] != stamp:
+        _PROMPTS[str(p)] = hit = (stamp, parse_prompt(p.read_text(), p, house))
+    return hit[1]
