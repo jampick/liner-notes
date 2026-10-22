@@ -8,7 +8,7 @@ import sys
 import urllib.request
 
 from . import __version__, config, paths
-from .bank import Bank, write_json
+from .bank import Bank, read_json, write_json
 
 PORT = config.PORT
 
@@ -185,19 +185,48 @@ def cmd_generate(a):
 
 
 def cmd_review(a):
-    """Mark songs as checked by a person, after you've read them against their sources."""
+    """Mark songs as checked by a person, after you've read them against their sources.
+
+    The review goes into your copy in user data (an overlay) and counts as yours alone. --shipped
+    is for the maintainer: it marks the shipped file itself, and only in a git checkout.
+    """
+    from . import overlay
+
+    if not a.undo and not (a.by or "").strip():
+        sys.exit(
+            "liner-notes: review needs --by NAME, the name to record as the reviewer (it goes into the song file, so pick one you are happy to share)"
+        )
     bank = Bank()
+    review = {
+        "state": "draft" if a.undo else "reviewed",
+        "by": None if a.undo else a.by.strip(),
+        "date": None if a.undo else dt.date.today().isoformat(),
+    }
+    if a.shipped and not paths.checkout():
+        sys.exit(
+            f"liner-notes: --shipped marks the shipped song itself, which only the maintainer does, in a git checkout. {paths.home()} isn't in one"
+        )
     for sid in a.songs:
         if sid not in bank.songs:
             sys.exit(f"liner-notes: no song {sid}")
-        s = bank.songs[sid]
-        s["review"] = {
-            "state": "draft" if a.undo else "reviewed",
-            "by": None if a.undo else a.by,
-            "date": None if a.undo else dt.date.today().isoformat(),
-        }
-        write_json(bank.song_files[sid], s)
-        print(f"{sid}: {s['review']['state']}")
+        if a.shipped:
+            f = overlay.shipped_song(sid)
+            if not f:
+                sys.exit(f"liner-notes: {sid} isn't a shipped song")
+            s = read_json(f)
+            s["review"] = review
+            write_json(f, s)
+            print(f"{sid}: {review['state']} in the shipped file {f}")
+            continue
+        f, s = overlay.copy_for_writing(sid, bank)
+        s["review"] = review
+        overlay.write(f, s)
+        if a.undo:
+            print(f"{sid}: back to draft in your copy, {f}")
+        else:
+            print(
+                f"{sid}: reviewed by {review['by']} in your copy, {f}. This is your review; the shipped song stays as the maintainer left it"
+            )
 
 
 def parser():
@@ -247,7 +276,7 @@ def parser():
 
     p = sub.add_parser("migrate", help="convert journeys pilot playlist folders into the bank")
     p.add_argument("folders", nargs="+")
-    p.add_argument("--root", help="data root to write into (default: this checkout)")
+    p.add_argument("--root", help="data root to write into (default: the bank in this checkout, or your data folder when installed)")
     p.add_argument("--cache", help="where pictures other people own go (default: the cache)")
     p.set_defaults(fn=cmd_migrate)
 
@@ -295,8 +324,9 @@ def parser():
 
     p = sub.add_parser("review", help="mark songs as checked by a person")
     p.add_argument("songs", nargs="+")
-    p.add_argument("--by", default=os.environ.get("USER", "owner"))
+    p.add_argument("--by", metavar="NAME", help="who reviewed it (required, and written into the file)")
     p.add_argument("--undo", action="store_true")
+    p.add_argument("--shipped", action="store_true", help="maintainer only, in a git checkout: mark the shipped file itself")
     p.set_defaults(fn=cmd_review)
 
     p = sub.add_parser("watch-page")  # internal: started by play, remembers where the page window is moved

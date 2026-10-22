@@ -12,6 +12,8 @@ def read_json(p):
 
 def write_json(p, obj):
     p = Path(p)
+    if paths.checkout() is None and p.resolve().is_relative_to(paths.PACKAGE.resolve()):
+        raise PermissionError(f"liner-notes: not writing {p}: it's inside the installed package. Changes go to {paths.user_data()}")
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(obj, indent=1, ensure_ascii=False) + "\n")
 

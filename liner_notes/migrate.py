@@ -47,7 +47,7 @@ def _day(p):
 
 def migrate(folder, root=None, cache=None, log=print):
     folder = Path(folder).expanduser().resolve()
-    root = Path(root or paths.home())
+    root = Path(root or paths.bank_to_write())
     cache = Path(cache or paths.cache())
     meta = read_json(folder / "playlist.json")
     panel = read_json(folder / "panel.json")
@@ -285,7 +285,7 @@ def migrate_remix(folder, root=None, log=print):
     from .bank import Bank
 
     folder = Path(folder).expanduser().resolve()
-    root = Path(root or paths.home())
+    root = Path(root or paths.bank_to_write())
     slug = folder.name
     bank = Bank([root])
     remixes = []

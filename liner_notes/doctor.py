@@ -169,6 +169,10 @@ def run(system, songs=False, log=print):
             f"no songs in {shipped / 'songs'}. The shipped song bank is missing from this install, so every journey "
             "comes up empty. Reinstall liner-notes, or point LINER_NOTES_HOME at liner_notes/shipped in a checkout.",
         )
+    from . import overlay
+
+    for kind, ident, what in overlay.report():
+        line(WARN, f"{kind} overlay", f"{ident}: {overlay.WHY[what]}")
     line(OK, "offline mode", "on: keys load the (offline) twins" if is_offline() else "off")
     have = [m for m in ("numpy", "onnxruntime", "PIL") if importlib.util.find_spec(m)]
     from .depth import model_path

@@ -7,7 +7,8 @@ song overrides the shipped one:
   liner_notes/shipped/{songs,journeys,culture}           what ships with Liner Notes (LINER_NOTES_HOME)
 
 The shipped bank is package data, so a wheel carries it and a checkout reads the same files. The
-schemas are package data too, in liner_notes/schemas.
+schemas are package data too, in liner_notes/schemas. Nothing writes into an installed package: a
+change to a shipped song is an overlay in user data (overlay.py).
 
 Everything personal stays out of git, in the XDG directories:
 
@@ -50,6 +51,11 @@ def checkout():
         if (d / ".git").exists():
             return d
     return None
+
+
+def bank_to_write():
+    """Where a maintainer tool like migrate writes: the bank in a checkout, else your user data."""
+    return home() if checkout() else user_data()
 
 
 def user_data():

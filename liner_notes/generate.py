@@ -25,7 +25,7 @@ import time
 import tomllib
 from pathlib import Path
 
-from . import paths
+from . import overlay, paths
 from .bank import Bank, read_json, write_json
 from .ids import clean_artist, clean_title, slug, song_id, split_upload_title, youtube_id
 from .match import Matcher
@@ -360,7 +360,14 @@ def generate(
             log(f"  stopping: the next song could cost ${nxt:.2f} and pass the ${budget:.2f} budget (spent ${meter.spent:.2f})")
             break
         f = root / "songs" / f"{sid}.json"
-        song = read_json(f) if f.exists() else dict(Bank().songs[sid])
+        if f.exists():
+            song = read_json(f)
+        else:
+            b = Bank()
+            song = dict(b.songs[sid])
+            src = overlay.shipped_song(sid)
+            if src and b.song_files.get(sid) == src:
+                song["base"] = overlay.base_of(src)
         tried += 1
         try:
             d, cost, model = write_song(client, song, effort, log, meter)

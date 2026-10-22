@@ -113,6 +113,8 @@ The bridge reads now-playing through an adapter. Each one yields the same shape:
 
 The bank grows by pull request. Copy an existing file in `liner_notes/shipped/songs/`, keep the shape in `liner_notes/schemas/song.schema.json`, and list a source for every fact. A new song starts with `"review": {"state": "draft"}`. Drafts show as "Draft notes" on the page. A maintainer reads it against its sources before it becomes `reviewed`. `liner-notes check` runs the same checks CI does.
 
+`liner-notes review <song id> --by NAME` records your own review in a copy under `~/.local/share/liner-notes/songs/`. It never edits the shipped file, and the review counts as yours, not a maintainer's. The copy notes which shipped version it started from, so `liner-notes doctor` can tell you when the shipped song has changed since.
+
 The voice: a friend who has the records and has read the interviews. No em dashes, no "iconic", no "timeless". Specific names, studios, samples, chart positions, years. The full rules are in the song brief.
 
 ## What's public and what stays on your machine
