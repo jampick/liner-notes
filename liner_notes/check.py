@@ -60,8 +60,10 @@ def year_problems(song):
 
 
 def year_warnings(song):
-    """The writer's year and MusicBrainz's, when they differ. The writer's wins; a person should look."""
-    y, mb = song.get("year"), song.get("year_musicbrainz")
+    """Years that disagree, for a person to look at. Trust goes person, then writer, then MusicBrainz."""
+    y, mb, w = song.get("year"), song.get("year_musicbrainz"), song.get("year_writer")
+    if song.get("year_source") == "person" and w and y and w != y:
+        return [f"{song['title']!r}: you set {y}, the writer says {w}; the page uses yours."]
     if song.get("year_source") == "writer" and mb and y and mb != y:
         return [
             f"{song['title']!r}: the writer says {y}, MusicBrainz says {mb}; the page uses {y}. "
@@ -84,17 +86,17 @@ def check(log=print):
     for sid, s in bank.songs.items():
         f = bank.song_files[sid]
         warnings += [f"{f}: {w}" for w in year_warnings(s)]
-        problems += [f"{f.name}: {e}" for e in validate(s, sc["song"]) + year_problems(s)]
+        problems += [f"{f}: {e}" for e in validate(s, sc["song"]) + year_problems(s)]
         if f.stem != sid:
-            problems.append(f"{f.name}: id {sid!r} doesn't match the file name")
+            problems.append(f"{f}: id {sid!r} doesn't match the file name")
         n = s.get("notes") or {}
         if n.get("made") and not n.get("sources"):
-            problems.append(f"{f.name}: has notes but no sources")
+            problems.append(f"{f}: has notes but no sources")
         if "—" in json.dumps(n, ensure_ascii=False):
-            problems.append(f"{f.name}: em dash in the notes")
+            problems.append(f"{f}: em dash in the notes")
     for r in bank.roots:
         for f in sorted((r / "culture/years").glob("*.json")):
-            problems += [f"{f.name}: {e}" for e in validate(read_json(f), sc["culture-year"])]
+            problems += [f"{f}: {e}" for e in validate(read_json(f), sc["culture-year"])]
     for slug, j in bank.journeys.items():
         jdir = bank.journey_dirs[slug]
         if j.get("kind") == "remix":

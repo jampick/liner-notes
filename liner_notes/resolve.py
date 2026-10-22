@@ -85,7 +85,7 @@ def recording(mbid):
 
 
 def from_release_groups(artist, title):
-    """[(year, release group id)] for singles and EPs named like the song, by the artist."""
+    """[(year, release group id, title, kind)] for singles and EPs named like the song, by the artist."""
     d = mb("release-group", query=f"releasegroup:{quote(clean_title(title))} AND artist:{quote(artist)}", limit=25)
     out = []
     for rg in (d or {}).get("release-groups") or []:
@@ -97,12 +97,12 @@ def from_release_groups(artist, title):
             continue
         y = _year(rg.get("first-release-date"))
         if y:
-            out.append((y, rg["id"]))
+            out.append((y, rg["id"], rg.get("title", ""), (rg.get("primary-type") or "").lower()))
     return out
 
 
 def from_recordings(artist, title):
-    """[(year, release group id, recording)] for each qualifying release of a matching recording."""
+    """[(year, release group id, recording, release title, kind)] for each qualifying release of a matching recording."""
     query = f"recording:{quote(clean_title(title))} AND artist:{quote(artist)}"
     recs = []
     for page in range(PAGES):
@@ -118,20 +118,22 @@ def from_recordings(artist, title):
             rg = r.get("release-group") or {}
             y = _year(r.get("date"))
             if y and _released(r) and _original_group(rg):
-                out.append((y, rg.get("id"), rec))
+                out.append((y, rg.get("id"), rec, r.get("title", ""), (rg.get("primary-type") or "").lower()))
     return out
 
 
 def dating(artist, title):
-    """{year, release_group, recording} for the song's first release, or {} when nothing qualifies."""
+    """{year, release_group, release_title, release_kind, recording} for the song's first release,
+    or {} when nothing qualifies. The release title is there so a person can see where the year came
+    from: MusicBrainz files some compilations as plain albums, and only a person can tell."""
     recs = sorted(from_recordings(artist, title), key=lambda x: x[0])
-    found = [(y, g) for y, g in from_release_groups(artist, title)] + [(y, g) for y, g, _r in recs]
+    found = [(y, g, t, k) for y, g, t, k in from_release_groups(artist, title)] + [(y, g, t, k) for y, g, _r, t, k in recs]
     if not found:
         return {}
-    year, group = min(found, key=lambda x: x[0])
+    year, group, rtitle, kind = min(found, key=lambda x: x[0])
     # The recording on that release group if the search saw one, else the earliest one it saw.
-    rec = next((r for _y, g, r in recs if g == group), recs[0][2] if recs else None)
-    return {"year": year, "release_group": group, "recording": rec}
+    rec = next((r for _y, g, r, _t, _k in recs if g == group), recs[0][2] if recs else None)
+    return {"year": year, "release_group": group, "release_title": rtitle, "release_kind": kind, "recording": rec}
 
 
 def resolve(artist, title, youtube=None):
@@ -150,6 +152,7 @@ def resolve(artist, title, youtube=None):
     out = {"year": dated.get("year"), "year_source": "musicbrainz" if dated.get("year") else None, "isrc": []}
     if dated.get("release_group"):
         out["release_group"] = dated["release_group"]
+        out["release_title"], out["release_kind"] = dated["release_title"], dated["release_kind"]
     if rec:
         out["mbid"] = rec["id"]
         out["isrc"] = sorted(set(rec.get("isrcs") or []))

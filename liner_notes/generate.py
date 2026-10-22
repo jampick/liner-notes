@@ -135,7 +135,8 @@ def plan(tracks, name, bank=None, lookup=None, log=print, journey_slug=None):
                     "review": {"state": "draft", "by": None, "date": None},
                     "provenance": {"ai_generated": False, "written_by": None, "written_on": None},
                 }
-                log(f"  {title}, {artist}: {info.get('year') or 'year unknown'}")
+                where = f', from "{info["release_title"]}" ({info.get("release_kind") or "release"})' if info.get("release_title") else ""
+                log(f"  {title}, {artist}: {info.get('year') or 'year unknown'}{where if info.get('year') else ''}")
         if sid not in order:
             order.append(sid)
             if yt:
@@ -293,13 +294,19 @@ def write_song(client, song, effort="medium", log=print, meter=None):
 
 
 def _year_from_writer(y, song):
-    """The writer's year when it gave one (it had to cite sources), else whatever the song had, else null."""
+    """The year after the writer's reply. Trust goes person, then writer, then MusicBrainz.
+
+    A year a person set stays, and a different year from the writer is kept as year_writer for
+    check to show. Otherwise the writer's year (it had to cite sources) replaces MusicBrainz's,
+    which is kept as year_musicbrainz. No year from the writer leaves the song's as it was."""
     try:
         y = int(y)
     except (TypeError, ValueError):
         y = None
     if not (y and y >= 1800) or y == song.get("year"):
         return {"year": song.get("year")}
+    if song.get("year_source") == "person" and song.get("year"):
+        return {"year": song["year"], "year_writer": y}
     out = {"year": y, "year_source": "writer"}
     if song.get("year_source") == "musicbrainz" and song.get("year"):
         out["year_musicbrainz"] = song["year"]  # kept so check can show both
@@ -370,7 +377,7 @@ def generate(
     write_checked(root / "journeys" / journey["slug"] / "journey.json", journey, "journey")
     have = len(journey["songs"]) - len(missing)
     log(
-        f"journey {journey['slug']}: {len(journey['songs'])} songs, {len(journey['eras'])} eras, {have} already have notes, {len(missing)} don't"
+        f"journey {journey['slug']}: {len(journey['songs'])} songs, {len(journey['eras'])} era{'' if len(journey['eras']) == 1 else 's'}, {have} already have notes, {len(missing)} don't"
     )
     if not write or not missing:
         if missing:

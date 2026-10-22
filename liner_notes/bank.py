@@ -50,6 +50,8 @@ class Bank:
         for r in reversed(self.roots):  # lowest priority first, so higher roots overwrite
             for f in sorted((r / "songs").glob("*.json")):
                 s = read_json(f)
+                if s.get("year") == 0:  # 0.2.0's generate wrote 0 for "no year"; it means undated
+                    s["year"], s["year_source"] = None, None
                 self.songs[s["id"]] = s
                 self.song_files[s["id"]] = f
             for f in sorted((r / "journeys").glob("*/journey.json")):

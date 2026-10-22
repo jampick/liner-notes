@@ -24,6 +24,7 @@
     "content": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
    }
   },
+  "year_writer": {"description": "The writer's year, kept when it differs from a year a person set, so check can show both.", "type": "integer"},
   "release_group": {"type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"},
   "year_note": {"type": "string"},
   "album": {"type": "string"},

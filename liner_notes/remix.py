@@ -306,13 +306,16 @@ def render(data, title, template_html):
 
 
 def build(slug, out=None, public=False, bank=None, cache=None, force=False, log=print):
-    from .build import Refused, write_page
+    from .build import NotHere, Refused, write_page
 
     if public:
         raise Refused("a remix stage is built from personal alignments and lyrics, so it has no public build")
     bank = bank or Bank()
     data, skipped = compose(slug, bank, cache, log)
-    problems = [] if data else ["no remix has its alignment, lyrics and profile on this machine (run liner-notes migrate-personal)"]
+    if not data and not force:
+        how = " (run liner-notes migrate-personal)" if paths.pilot() else ""
+        raise NotHere(f"the remix files for {slug} (alignments, lyrics, profiles) aren't on this machine{how}")
+    problems = []
     html = render(data, bank.journeys[slug]["title"], template_text(log))
     out = Path(out) if out else paths.dist() / f"{slug}.html"
     write_page(out, html, problems, force, log)

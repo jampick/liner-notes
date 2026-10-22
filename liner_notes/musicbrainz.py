@@ -21,6 +21,7 @@ A 404 is an answer, not an error: get() returns None.
     mb.get("release-group", query='releasegroup:"Got to Be Real" AND artist:"Cheryl Lynn"', limit=25)
 """
 
+import http.client
 import json
 import threading
 import time
@@ -130,6 +131,10 @@ class Client:
                 why, wait = f"HTTP {e.code}", _retry_after(e)
             except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
                 why = str(getattr(e, "reason", None) or e)
+            except http.client.HTTPException as e:  # IncompleteRead and friends: the answer was cut short
+                why = f"a cut-short answer ({type(e).__name__})"
+            except ValueError:  # a 200 that isn't JSON, like a proxy's error page
+                why = "an answer that wasn't JSON"
             if attempt < self.retries:
                 self._hold(wait if wait is not None else self.backoff * 2**attempt)  # the next _turn waits it out
         raise MusicBrainzError(f"MusicBrainz didn't answer {path} after {self.retries + 1} tries ({why})")

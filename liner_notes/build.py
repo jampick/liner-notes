@@ -38,6 +38,10 @@ class Refused(Exception):
     """The build found problems and wasn't forced."""
 
 
+class NotHere(Refused):
+    """The journey needs personal files this machine doesn't have (a remix stage's alignments)."""
+
+
 def data_uri(path, mime):
     return f"data:{mime};base64," + base64.b64encode(Path(path).read_bytes()).decode()
 
@@ -98,7 +102,7 @@ def compose(slug, bank=None, public=False, cache=None, video=False, warnings=Non
         if panel.get("judges") and not q:
             problems.append(f"no panel quote for {s['title']!r}")
             continue
-        if s.get("year") is None:
+        if not s.get("year"):
             # The page places every stop by year and has no undated shelf yet, so an undated song is left off.
             warnings.append(
                 f"{LEFT_OFF}{s['title']!r} ({s['artist']}) has no year, so it isn't on this page. "
@@ -108,7 +112,13 @@ def compose(slug, bank=None, public=False, cache=None, video=False, warnings=Non
         year = int(s["year"])
         era = next((e["n"] for e in eras if e["from"] <= year <= e["to"]), None)
         if era is None:
-            problems.append(f"{s['title']!r} year {year} falls outside every era")
+            span = f"{eras[0]['from']} to {eras[-1]['to']}" if eras else "none"
+            fix = (
+                "run liner-notes generate again to re-cut the eras, or widen one in journey.json"
+                if j.get("generated")
+                else "widen an era in journey.json, or check the year"
+            )
+            problems.append(f"{s['title']!r} ({year}) is outside every era ({span}); {fix}")
             continue
         yt = youtube_of(j, s)
         apple = (s.get("aliases") or {}).get("apple") or {}
@@ -351,6 +361,8 @@ def build_all(public=False, force=False, log=print, bank=None):
             continue
         try:
             build(slug, public=public, bank=bank, force=force, log=log)
+        except NotHere as e:
+            log(f"{slug}: skipped, {e}")
         except Refused as e:
             log(f"{slug}: {e}")
             refused += 1
