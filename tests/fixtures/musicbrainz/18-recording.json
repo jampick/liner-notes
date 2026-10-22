@@ -1,0 +1,381 @@
+{
+ "path": "recording",
+ "query": {
+  "query": "recording:\"Got to Be Real\" AND artist:\"Cheryl Lynn\"",
+  "limit": "100",
+  "offset": "100"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:36:13.581Z",
+  "count": 107,
+  "offset": 100,
+  "recordings": [
+   {
+    "id": "6382ccb4-5d51-465d-80e1-99a30c0c2c02",
+    "score": 84,
+    "title": "Got to Be Real (Classic Paradise radio mix)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996",
+    "releases": [
+     {
+      "id": "508e2ffe-02a8-4fb1-a3b3-44c6837da7c1",
+      "title": "Radio FFN Baseline",
+      "status": "Official",
+      "release-group": {
+       "id": "c21a8e5d-2a99-34e1-b814-1f6fd6bc6d81",
+       "title": "Radio FFN Baseline",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     },
+     {
+      "id": "3f54faa8-1676-4c53-b9fd-3630906ab7e6",
+      "title": "Got to Be Real / Guarantee for My Heart",
+      "status": "Official",
+      "release-group": {
+       "id": "7f8494cc-600f-4853-96a8-098fa955cfa3",
+       "title": "Got to Be Real",
+       "primary-type": "Single"
+      },
+      "date": "1996"
+     }
+    ]
+   },
+   {
+    "id": "e4a48ef8-8414-4d20-ac9d-e279827493b7",
+    "score": 84,
+    "title": "Got to Be Real (Wuki & Lee Foss)",
+    "disambiguation": "part of \"All Nighter\" DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2023-04-14",
+    "releases": [
+     {
+      "id": "92d89656-dc49-4e26-837d-dde65e16b853",
+      "title": "All Nighter (DJ mix)",
+      "status": "Official",
+      "release-group": {
+       "id": "2adf13a8-7e1f-43b2-9ca8-f439d2272b78",
+       "title": "All Nighter (DJ mix)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "DJ-mix"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "30756f38-5835-4975-92b4-c9638bf9aff1",
+    "score": 84,
+    "title": "Got to Be Real '96 (Classic Paradise mix)",
+    "disambiguation": "part of \"Maharaja Night, Vol.18\" DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996-09-25",
+    "releases": [
+     {
+      "id": "b4f1a124-74b0-46e7-aa37-6e970a1a3103",
+      "title": "Maharaja Night, Vol.18: Non-Stop Disco Mix",
+      "status": "Official",
+      "release-group": {
+       "id": "e080a606-2193-4b0f-8403-693120e77fa7",
+       "title": "Maharaja Night, Vol.18: Non-Stop Disco Mix",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1996-09-25"
+     }
+    ]
+   },
+   {
+    "id": "af361176-bb4e-4c46-9094-05772f506995",
+    "score": 81,
+    "title": "Got to Be Real (John Morales M+M mix)",
+    "disambiguation": "John Morales M+M mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2017-12-01",
+    "releases": [
+     {
+      "id": "18386c0f-4643-4827-9b59-6eaa6c981c0b",
+      "title": "The M+M Mixes, Volume IV: The Ultimate Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "a8a5d3ec-64e2-49ce-be2f-586dcb1a3d64",
+       "title": "The M+M Mixes, Volume IV: The Ultimate Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Remix"
+       ]
+      },
+      "date": "2017-12-01"
+     },
+     {
+      "id": "35f5d84f-e011-461d-ac66-2c64446ee043",
+      "title": "The M+M Mixes, Volume IV: The Ultimate Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "a8a5d3ec-64e2-49ce-be2f-586dcb1a3d64",
+       "title": "The M+M Mixes, Volume IV: The Ultimate Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Remix"
+       ]
+      },
+      "date": "2017-12-01"
+     }
+    ]
+   },
+   {
+    "id": "9918c7c7-3b75-4c30-8ca9-a6164724c5a5",
+    "score": 81,
+    "title": "Got To Be Real (Robbie Doherty's 129 Time Edit)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "5d8c0c0a-5d6c-4c88-9573-c1cb533f7618",
+      "title": "Got To Be Real (Robbie Doherty's 129 Time Edit)",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "7f8494cc-600f-4853-96a8-098fa955cfa3",
+       "title": "Got to Be Real",
+       "primary-type": "Single"
+      }
+     }
+    ]
+   },
+   {
+    "id": "d2feae7b-2919-49d1-8777-488c73d67fa0",
+    "score": 79,
+    "title": "Got to Be Real (NICK BIKE & Skratch Bastid edit)",
+    "disambiguation": "part of “A-Trak at Bastid’s BBQ, Toronto, 2025” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2025-11-07",
+    "releases": [
+     {
+      "id": "579865cd-eb13-42c0-9bc7-6e569c8bfe41",
+      "title": "A-Trak at Bastid’s BBQ, Toronto, 2025",
+      "status": "Official",
+      "release-group": {
+       "id": "8ef28022-db61-4d09-bd70-846333bcd67f",
+       "title": "A-Trak at Bastid’s BBQ, Toronto, 2025",
+       "primary-type": "Other",
+       "secondary-types": [
+        "Live",
+        "DJ-mix"
+       ]
+      }
+     }
+    ],
+    "isrcs": [
+     "US23A9230048"
+    ]
+   },
+   {
+    "id": "89efd40a-02a6-448d-98c8-40723a43f73d",
+    "score": 13,
+    "title": "After Dark: Disco: I’m Coming Out / Last Night a DJ Saved My Life / Somebode Else’s Guy / Solid / Ain’t Nobody / A Night to Remember / The Rain / Never Too Much / Give Me the Night / I Found Lovin’ / I Found Lovin’ / Saturday Love / Got to be Real",
+    "artist-credit": [
+     {
+      "name": "Diana Ross",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "60d41417-feda-4734-bbbf-7dcc30e08a83",
+       "name": "Diana Ross"
+      }
+     },
+     {
+      "name": "Indeep",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "53382f53-cce6-4035-a7f0-a35e9f0c1215",
+       "name": "Indeep"
+      }
+     },
+     {
+      "name": "Jocelyn Brown",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "6a628a50-1c5c-4d29-a13a-79a73eb012d9",
+       "name": "Jocelyn Brown"
+      }
+     },
+     {
+      "name": "Ashford and Simpson",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "403bec82-50c4-47fe-a8be-1882a5a43d82",
+       "name": "Ashford & Simpson"
+      }
+     },
+     {
+      "name": "Rufus",
+      "joinphrase": " and ",
+      "artist": {
+       "id": "ec6b11b5-d6a6-4c77-af55-8076a160cc94",
+       "name": "Rufus"
+      }
+     },
+     {
+      "name": "Chaka Khan",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "900e9144-019d-4043-86cb-ec0e127c39d0",
+       "name": "Chaka Khan"
+      }
+     },
+     {
+      "name": "Shalamar",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "8e57b7d5-4548-4e2b-b32d-af4b4a51cb80",
+       "name": "Shalamar"
+      }
+     },
+     {
+      "name": "Oran “Juice” Jones",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "64825fc4-b748-48cf-bec5-f7d2a47ed246",
+       "name": "Oran “Juice” Jones"
+      }
+     },
+     {
+      "name": "Luther Vandross",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "816d9b5d-eaf9-4a97-b5f7-6e82cd01aafe",
+       "name": "Luther Vandross"
+      }
+     },
+     {
+      "name": "George Benson",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     },
+     {
+      "name": "Steve Walsh",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "31bf9535-94be-40dc-bae6-4a8f5c7aab17",
+       "name": "Steve Walsh"
+      }
+     },
+     {
+      "name": "Fatback Band",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "a7290418-82e2-4016-abf4-3fd3e7db926f",
+       "name": "Fatback"
+      }
+     },
+     {
+      "name": "Cherrelle",
+      "joinphrase": " with ",
+      "artist": {
+       "id": "2a0b3bf9-0d04-4e49-91f5-9530cbebab55",
+       "name": "Cherrelle"
+      }
+     },
+     {
+      "name": "Alexander O’Neal",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "fc4af92a-1aa8-4f35-9aea-29b2ecbe0779",
+       "name": "Alexander O’Neal"
+      }
+     },
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2019-09",
+    "releases": [
+     {
+      "id": "3d349519-5fcc-451d-9a44-4e426e715068",
+      "title": "Mastermix Issue 399: September 2019",
+      "status": "Official",
+      "release-group": {
+       "id": "d93001c3-1fde-466c-9260-78a678b9a117",
+       "title": "Mastermix Issue 399: September 2019",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -70,7 +70,7 @@ liner-notes media downtempo-drift      # covers and pictures into the cache (slo
 liner-notes build --all                # every journey and the live page, into ~/.local/share/liner-notes/dist
 ```
 
-A build is written to a temp file and moved into place, so the page on screen is never half a file. A journey with a problem (a song missing from the bank, a stop outside every era) isn't written unless you add `--force`. Yacht House is the exception to "any machine": its stage is built from remix alignments and lyrics that aren't public, so it only builds where those files are.
+A build is written to a temp file and moved into place, so the page on screen is never half a file. A journey with a problem (a song missing from the bank, a stop outside every era) isn't written unless you add `--force`. A song with no year isn't a problem: the page is written without it, and the build prints a warning with the song's file and the two keys to add. Yacht House is the exception to "any machine": its stage is built from remix alignments and lyrics that aren't public, so it only builds where those files are.
 
 Without the systemd unit, `liner-notes open` starts the bridge itself. On a tablet or phone on the same network, run `liner-notes serve --lan` and scan the QR code it prints. If you use Tailscale, `liner-notes serve --tailscale` serves HTTPS on your machine's ts.net name instead, which phones need to keep the screen awake.
 
@@ -92,7 +92,7 @@ liner-notes generate --provider navidrome --playlist 42           # any cliamp p
 liner-notes generate --from "Yacht Rock" --write --budget 5       # also write the songs the bank doesn't have
 ```
 
-Without `--write` it costs nothing. It matches your tracks against the song bank, looks up release years on MusicBrainz, cuts eras at the widest gaps between years and builds a journey from what's already known. The year is the first release of the song's release group on MusicBrainz, promos included. When it has none, the song is saved with `"year": null` instead of a guess, and `build` names it until you set a year yourself. With `--write`, each missing song is one Claude API request with web search, using `liner_notes/prompts/SONG-BRIEF.md`. It must list its sources, and it stops before it can pass your budget. What you generate lives in `~/.local/share/liner-notes`, not in this repo.
+Without `--write` it costs nothing. It matches your tracks against the song bank, looks up release years on MusicBrainz, cuts eras at the widest gaps between years and builds a journey from what's already known. The year is the first release of the song's release group on MusicBrainz (the single or album it first came out on, not a later compilation), promos included. When there isn't one, the song is saved with `"year": null` rather than a guess, and `build` leaves it off the page with a warning that names it, until you add `"year"` and `"year_source": "person"` to the song's file. If the playlist name has no readable slug (a Chinese name, say), `--slug` picks the journey's file and page name. With `--write`, each missing song is one Claude API request with web search, using `liner_notes/prompts/SONG-BRIEF.md`. It must list its sources, and it stops before it can pass your budget. What you generate lives in `~/.local/share/liner-notes`, not in this repo.
 
 ## Players
 

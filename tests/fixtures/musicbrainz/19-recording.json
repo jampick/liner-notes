@@ -1,0 +1,3395 @@
+{
+ "path": "recording",
+ "query": {
+  "query": "recording:\"Let's Groove\" AND artist:\"Earth, Wind & Fire\"",
+  "limit": "100",
+  "offset": "100"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:36:17.613Z",
+  "count": 189,
+  "offset": 100,
+  "recordings": [
+   {
+    "id": "57b9e42e-3193-4ea4-b49d-6faa9d8606b9",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2009-09-05",
+    "releases": [
+     {
+      "id": "11c303f3-b1e1-4b94-96d1-83c8e6885e0f",
+      "title": "DISCO – 100 Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "4cf7287d-b53f-4e07-af4b-7663ec7c265e",
+       "title": "DISCO – 100 Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009-09-05"
+     }
+    ]
+   },
+   {
+    "id": "dee5f119-355a-438c-ab34-2f89c3da8782",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "3ee5f3b5-f5eb-43eb-ad1e-14115b09d4f2",
+      "title": "Pop",
+      "status": "Official",
+      "release-group": {
+       "id": "8cea74fd-125b-4f5d-9828-1f4a88d56250",
+       "title": "Pop",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     }
+    ]
+   },
+   {
+    "id": "096745bf-0cb8-4ee4-a110-e2b011109e6f",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2010-11-22",
+    "releases": [
+     {
+      "id": "728aab3d-5cc1-4775-a183-8f6ce5becf0a",
+      "title": "Veronica’s Top 1000 Allertijden: Editie 2010",
+      "status": "Official",
+      "release-group": {
+       "id": "1dcda332-77f5-4a5f-b59d-8aef036d5d12",
+       "title": "Veronica’s Top 1000 Allertijden: Editie 2010",
+       "primary-type": "Other",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-11-22"
+     }
+    ]
+   },
+   {
+    "id": "3ed9bc69-6295-457b-9f58-be18f26d9e72",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1981",
+    "releases": [
+     {
+      "id": "916aa83d-b47f-47f7-9f39-4f0c08203a60",
+      "title": "All American Top 100: December 1981",
+      "status": "Promotion",
+      "release-group": {
+       "id": "221b55f2-38d0-41bb-8750-29ac13f6d4d2",
+       "title": "All American Top 100: December 1981",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1981"
+     }
+    ]
+   },
+   {
+    "id": "609886cc-9ea7-4b26-bf8b-f16582634fcc",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2004",
+    "releases": [
+     {
+      "id": "15619f56-245b-4a1f-a6b1-58528805ee41",
+      "title": "Box Dancing Days: Suas Noites Inesquecíveis",
+      "status": "Official",
+      "release-group": {
+       "id": "0e8c7d6d-0cc6-48c4-811b-8b902c76793e",
+       "title": "Box Dancing Days: Suas noites inesquecíveis",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "1ab35cdd-1c5c-4950-ac81-0c5887ac4235",
+      "title": "Body & Soul: Love & Rhythm",
+      "status": "Official",
+      "release-group": {
+       "id": "4c54090e-53f9-438c-b326-326999696d85",
+       "title": "Body & Soul: Love & Rhythm",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2004"
+     }
+    ]
+   },
+   {
+    "id": "2d71a560-803a-48f6-b1d9-b5a83f5a761e",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2015",
+    "releases": [
+     {
+      "id": "37677400-0755-4e96-adfa-7bd6dd8d84d9",
+      "title": "Best of",
+      "status": "Official",
+      "release-group": {
+       "id": "6c8eaeeb-1679-4519-beaa-34484a95bef9",
+       "title": "Best of",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015"
+     }
+    ]
+   },
+   {
+    "id": "2824d0a1-0baf-4290-aaa6-11a06fecc436",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1999",
+    "releases": [
+     {
+      "id": "c73cd470-6d9f-4401-b416-7221d9660c43",
+      "title": "80's Dance Anthems",
+      "status": "Official",
+      "release-group": {
+       "id": "1e0ea029-3763-475a-9861-1cf64f7c5064",
+       "title": "80's Dance Anthems",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     }
+    ]
+   },
+   {
+    "id": "424311b1-55e5-48cd-9fe6-d0fbc29aec4d",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1983",
+    "releases": [
+     {
+      "id": "5e1c15aa-ae8b-4520-b517-f9cabae67225",
+      "title": "Raiders of the Pop Charts",
+      "status": "Official",
+      "release-group": {
+       "id": "b87b2283-ae79-43cc-9fde-545052d62d9e",
+       "title": "Raiders of the Pop Charts",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1983"
+     }
+    ]
+   },
+   {
+    "id": "23884067-7a95-4b67-aa72-4e1e4f2ff7c7",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2015-10-20",
+    "releases": [
+     {
+      "id": "1a881046-ab58-4f81-a66e-bd7e23418118",
+      "title": "Rock & Pops Best Hits 80’s",
+      "status": "Official",
+      "release-group": {
+       "id": "7011b815-e098-4f20-8f8b-c42e37062fb7",
+       "title": "Rock & Pops Best Hits 80’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-10-20"
+     }
+    ]
+   },
+   {
+    "id": "6b01a5e9-b206-45a2-b8a8-c8d902a7a512",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1997",
+    "releases": [
+     {
+      "id": "5f14c831-d932-456f-96ec-eeebff0246fc",
+      "title": "Viral TikTok Hits 2022 | 2023",
+      "status": "Official",
+      "release-group": {
+       "id": "6132bb18-d40d-4f48-9470-d2f978a66f61",
+       "title": "Viral TikTok Hits 2022 | 2023",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "da8cc180-d23e-4510-a294-23ee5fdb36ac",
+      "title": "Les plus grands Hits Dance 1",
+      "status": "Promotion",
+      "release-group": {
+       "id": "dfd1ba4f-98b2-4e4a-a38e-872d07791c78",
+       "title": "Les plus grands Hits Dance 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "5320f073-daff-4837-a345-835ebec9c9fa",
+      "title": "RFM Party 80",
+      "status": "Official",
+      "release-group": {
+       "id": "54389ed1-a75b-4d52-8403-2a33cdb2b9bd",
+       "title": "RFM Party 80",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-01-12"
+     }
+    ],
+    "isrcs": [
+     "USSM18100641"
+    ]
+   },
+   {
+    "id": "1b2832c4-4aa0-4d4c-b518-6f7e900b2792",
+    "score": 100,
+    "title": "Let’s Groove",
+    "disambiguation": "part of “The Mix of the Century” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1999",
+    "releases": [
+     {
+      "id": "0dda2ba5-4145-40e8-b9a9-435dd67811eb",
+      "title": "The Mix of the Century",
+      "status": "Official",
+      "release-group": {
+       "id": "70d4150c-6530-45cd-9f81-06d32d048d5b",
+       "title": "The Mix of the Century",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1999"
+     }
+    ]
+   },
+   {
+    "id": "dc2d0e61-258a-42aa-84a9-4fdc425158ea",
+    "score": 100,
+    "title": "Let’s Groove",
+    "disambiguation": "part of “Funky Mix Party” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1996",
+    "releases": [
+     {
+      "id": "28c9828d-4639-4b36-9264-b77f1b0ff748",
+      "title": "Funky Mix Party",
+      "status": "Official",
+      "release-group": {
+       "id": "6cf31c68-c174-4ce8-9774-360effb5fb4a",
+       "title": "Funky Mix Party",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1996"
+     }
+    ]
+   },
+   {
+    "id": "6a151171-b41e-4d96-a63a-6db7b80e66a8",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2002",
+    "releases": [
+     {
+      "id": "67ca7899-bb8b-4631-9166-b478b1c573b9",
+      "title": "BackPack 80’s: Dance Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "e7435d55-0998-4c79-8113-2b687b7c3228",
+       "title": "BackPack 80’s: Dance Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     }
+    ]
+   },
+   {
+    "id": "f2f78e3f-aa8f-4e01-8073-88263be90f2f",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2006",
+    "releases": [
+     {
+      "id": "8a5d28a1-adda-460c-8ee4-8ebf7d52326f",
+      "title": "In Concert",
+      "status": "Official",
+      "release-group": {
+       "id": "08a892db-0de5-4ed2-ad4f-15687fa99064",
+       "title": "In Concert",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2006"
+     }
+    ]
+   },
+   {
+    "id": "120d088f-3539-4a2d-acf9-df9c8a17a94f",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2008",
+    "releases": [
+     {
+      "id": "b221d616-e029-4d61-8569-fda39f1f6a26",
+      "title": "Live In Japan",
+      "status": "Official",
+      "release-group": {
+       "id": "f767ecbc-500b-49e2-b5da-adc5765785f0",
+       "title": "Live In Japan",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "3fea7224-b091-4626-9bc0-498e8ed01c8a",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1987",
+    "releases": [
+     {
+      "id": "778b12ee-d957-4a8b-9f8b-ae97ea8a68aa",
+      "title": "The Complete Columbia Masters",
+      "status": "Official",
+      "release-group": {
+       "id": "9b746b0e-798d-41aa-88a6-470776656e48",
+       "title": "The Complete Columbia Masters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1987"
+     }
+    ]
+   },
+   {
+    "id": "65be3f64-0217-4ab9-877e-eafb5e1ab759",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2022-10-07",
+    "releases": [
+     {
+      "id": "95556e4d-0847-4733-bc94-1e8c5841d011",
+      "title": "Fantastic 80’s",
+      "release-group": {
+       "id": "83cebdbc-2016-4835-9210-9494e30d4e88",
+       "title": "Fantastic 80’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2022-10-07"
+     }
+    ]
+   },
+   {
+    "id": "fd681ec8-86a6-4f4f-80e3-02fb9c065ee9",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1992",
+    "releases": [
+     {
+      "id": "2873ae66-aefd-40cd-80e3-19b16278d73b",
+      "title": "Rock Legends",
+      "status": "Official",
+      "release-group": {
+       "id": "05025ba7-b1d7-3cd3-b227-ac83a3d7ccd4",
+       "title": "Rock Legends",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1992"
+     }
+    ]
+   },
+   {
+    "id": "9d4aa6df-db62-44e2-abf4-2d070dd93425",
+    "score": 100,
+    "title": "Let’s Groove",
+    "disambiguation": "part of “Electric Circus: Old School” DJ-Mix",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1995",
+    "releases": [
+     {
+      "id": "2ea47d74-7e0c-4731-b233-85bbbd384eed",
+      "title": "Electric Circus: Old School",
+      "status": "Official",
+      "release-group": {
+       "id": "4985629c-06a3-3175-8edf-b74ccc8b8116",
+       "title": "Electric Circus: Old School",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995"
+     }
+    ]
+   },
+   {
+    "id": "359d8117-e11e-4462-bb3a-8ab080c51daa",
+    "score": 100,
+    "title": "Let's Groove",
+    "disambiguation": "part of “Heartless Crew: Crisp Biscuit, Vol. 1” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2002-05-06",
+    "releases": [
+     {
+      "id": "159639f4-f94e-4727-87fb-d303701762d6",
+      "title": "Heartless Crew Presents: Crisp Biscuit, Volume 1",
+      "status": "Official",
+      "release-group": {
+       "id": "b852637e-1d84-4a4a-a282-fdf18b969ab1",
+       "title": "Heartless Crew Presents: Crisp Biscuit, Volume 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2002-05-06"
+     }
+    ]
+   },
+   {
+    "id": "b97b8018-51eb-4935-a4ef-a1bf93446596",
+    "score": 100,
+    "title": "Let’s Groove",
+    "disambiguation": "part of “Darsh Fest, Vol. 2” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2019-08-03",
+    "releases": [
+     {
+      "id": "c601d517-0f2d-4c47-8088-a93c679db726",
+      "title": "Darsh Fest, Vol. 2",
+      "status": "Promotion",
+      "release-group": {
+       "id": "8a57384a-a4ae-44c3-b2e7-ae740ee3d99d",
+       "title": "Darsh Fest, Vol. 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2019-08-03"
+     }
+    ]
+   },
+   {
+    "id": "1099614a-8649-4c91-83ee-b556e67f9920",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2010-11-01",
+    "releases": [
+     {
+      "id": "ed68a2de-f1c3-487e-85f5-09366101d6ef",
+      "title": "Nobu’s Popular Selection",
+      "status": "Official",
+      "release-group": {
+       "id": "306e01a3-2f22-4f66-80c5-888dbf63c3a4",
+       "title": "Nobu’s Popular Selection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-11-01"
+     }
+    ]
+   },
+   {
+    "id": "f4d89d4f-35b3-4188-acfa-906ff28ceede",
+    "score": 100,
+    "title": "Let’s Groove",
+    "disambiguation": "part of “NOW That’s What I Call 80s Hits & Remixes” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2019-10-25",
+    "releases": [
+     {
+      "id": "4f7c7fad-6774-43c0-81bd-ee53414291c3",
+      "title": "NOW That’s What I Call 80s Hits & Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "b555ca39-3126-4ccf-a214-cfc48ded206e",
+       "title": "NOW That’s What I Call 80s Hits & Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2019-10-25"
+     },
+     {
+      "id": "baedf8f0-7753-4c5a-97b0-2e054e713fca",
+      "title": "NOW That’s What I Call 80s Hits & Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "b555ca39-3126-4ccf-a214-cfc48ded206e",
+       "title": "NOW That’s What I Call 80s Hits & Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2019-10-25"
+     }
+    ],
+    "isrcs": [
+     "USSM18100801"
+    ]
+   },
+   {
+    "id": "78579e20-e5bf-47d2-9d2c-1e7fe386d389",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2008",
+    "releases": [
+     {
+      "id": "f4fb454c-329a-4be2-88e0-399b8037a35f",
+      "title": "Essential Disco Fever",
+      "status": "Official",
+      "release-group": {
+       "id": "1068dc6b-6d30-425c-b6b7-2857a77023de",
+       "title": "Essential Disco Fever",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008"
+     }
+    ]
+   },
+   {
+    "id": "58e7f0c7-b354-4cfd-a32a-000fecbb606a",
+    "score": 100,
+    "title": "Let's groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "1e563a4b-f38d-4eea-b004-9322dfcd542d",
+      "title": "C'est l'été vol. 4",
+      "status": "Official",
+      "release-group": {
+       "id": "7afc9580-ca06-4ca1-863c-4e3746c518e6",
+       "title": "C'est l'été vol. 4",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     }
+    ]
+   },
+   {
+    "id": "4d2016ab-6fcf-4752-81a8-d0f06b5820f9",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2015-07-10",
+    "releases": [
+     {
+      "id": "885c9f75-c0b1-4e92-9cb1-79d3a168b174",
+      "title": "100 Hits Disco Funk",
+      "status": "Official",
+      "release-group": {
+       "id": "cc68ff78-774e-4104-a664-22fda91b4321",
+       "title": "100 Hits Disco Funk",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-07-10"
+     }
+    ]
+   },
+   {
+    "id": "6b4d334c-a980-4e68-a1c7-b940d7e9065f",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2007",
+    "releases": [
+     {
+      "id": "e7bf44d4-aca5-44c0-8e71-69c13edd7c54",
+      "title": "Pop 80er",
+      "status": "Official",
+      "release-group": {
+       "id": "4d59ea1d-8076-4ab9-85b7-a85cf2910c83",
+       "title": "Pop 80er",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007"
+     }
+    ]
+   },
+   {
+    "id": "d0b64f1e-d611-4fb7-ba23-9a171f101974",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1998-08-26",
+    "releases": [
+     {
+      "id": "1dd1a1f4-4582-42fc-a90c-c9cb679fdb78",
+      "title": "Disco Fever",
+      "status": "Official",
+      "release-group": {
+       "id": "3670cfe1-a9c1-4423-9b71-568b04587c4c",
+       "title": "Disco Fever",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998-08-26"
+     }
+    ]
+   },
+   {
+    "id": "b90e1762-79eb-443a-9112-5d46a2f84354",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1981",
+    "releases": [
+     {
+      "id": "b0c29ed4-f3bd-4125-81e6-cc1daac142bd",
+      "title": "I've Had Enough",
+      "status": "Official",
+      "release-group": {
+       "id": "72e299c6-f853-4489-9a60-92988df2ff8d",
+       "title": "I've Had Enough",
+       "primary-type": "Single"
+      },
+      "date": "1981"
+     }
+    ]
+   },
+   {
+    "id": "9b056de9-d03d-4e85-946e-02de3cd190ce",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "72445176-37e5-479e-ba7f-e1c5f6c16b37",
+      "title": "The Radio Essential Series",
+      "status": "Promotion",
+      "release-group": {
+       "id": "db3380c7-102c-482f-84dd-35b18d927cd0",
+       "title": "The Radio Essential Series",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     }
+    ]
+   },
+   {
+    "id": "56acfdd2-6c47-443f-b42c-0b45774a6fd3",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1999",
+    "releases": [
+     {
+      "id": "65959829-b546-4892-9a77-dd8db5a694c2",
+      "title": "Big Hits and Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "5ba0537e-c36b-3133-b42d-14643c3f5ae6",
+       "title": "Big Hits & Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "6a86f042-7358-4fdf-bd1c-111297943a28",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2019",
+    "releases": [
+     {
+      "id": "1b4c3417-6405-4ab7-850b-6fd602400dad",
+      "title": "80s Fitness!",
+      "status": "Official",
+      "release-group": {
+       "id": "e3168143-ab54-40a3-99f9-7a8626d93381",
+       "title": "80s Fitness!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2019"
+     }
+    ]
+   },
+   {
+    "id": "180ba196-3c58-4654-a940-e8a79e4bda0c",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1996",
+    "releases": [
+     {
+      "id": "7f363123-1e65-4b99-8403-ff874f52e310",
+      "title": "Soul Groovin’",
+      "status": "Official",
+      "release-group": {
+       "id": "e43a22d2-f960-4636-ac9c-ae95dfecde0b",
+       "title": "Soul Groovin’",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "e11d4bda-eb90-4101-bf5b-4deb97eef2a9",
+      "title": "Grand 12-Inches 8 - Upgrades And Additions",
+      "status": "Official",
+      "release-group": {
+       "id": "bc3093a8-e4bc-473e-ada5-9fe678ffbcba",
+       "title": "Grand 12-Inches 8 - Upgrades And Additions",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2016-07-08"
+     },
+     {
+      "id": "c3b1287f-280b-43e8-b8a6-5358e56aef99",
+      "title": "Summer Beats",
+      "status": "Official",
+      "release-group": {
+       "id": "42f67f48-328a-4269-85c9-b10baa3186c7",
+       "title": "Summer Beats",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     },
+     {
+      "id": "b844c1b5-e1eb-46f2-8942-eef2b0b16ae7",
+      "title": "Soul Groovin’",
+      "status": "Official",
+      "release-group": {
+       "id": "e43a22d2-f960-4636-ac9c-ae95dfecde0b",
+       "title": "Soul Groovin’",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     }
+    ]
+   },
+   {
+    "id": "93032024-852a-45d4-bb39-1afbee66ba99",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1981-11",
+    "releases": [
+     {
+      "id": "b0455deb-889e-4e57-847b-5836a2b45ee7",
+      "title": "All American Top 100: November 1981",
+      "status": "Promotion",
+      "release-group": {
+       "id": "0303a738-2332-4a96-9739-e73814afc42d",
+       "title": "All American Top 100: November 1981",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1981-11"
+     }
+    ]
+   },
+   {
+    "id": "4dd7851d-09d1-445d-bb43-b22d676f0ad7",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2007",
+    "releases": [
+     {
+      "id": "eb7ffa28-1d80-4a73-be77-fad856b0a813",
+      "title": "NRJ Story",
+      "status": "Official",
+      "release-group": {
+       "id": "fab00def-0230-42f4-b0f7-a03e103b59b2",
+       "title": "NRJ Story",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007"
+     }
+    ]
+   },
+   {
+    "id": "261e4b1d-3838-4f46-9a38-e75b9f73cc74",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2001",
+    "releases": [
+     {
+      "id": "bd6e44a3-5db3-4781-be83-e1767044284c",
+      "title": "Mes Soirées 80's Spécial Discothèque Numéro 5",
+      "release-group": {
+       "id": "14fec163-8e03-4c6a-ac18-84be37fd1095",
+       "title": "Mes Soirées 80's Spécial Discothèque Numéro 5",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     }
+    ]
+   },
+   {
+    "id": "f100a69e-f927-46cb-a8db-bafdfb1dca14",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2020-08-21",
+    "releases": [
+     {
+      "id": "c775689f-149b-4788-9be7-eed2d199c31d",
+      "title": "grandmix earth wind & fire",
+      "status": "Official",
+      "release-group": {
+       "id": "77a8598c-10c8-4c79-84b6-87ef0dbbc922",
+       "title": "Earth, Wind & Fire and Friends",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2020-08-21"
+     }
+    ]
+   },
+   {
+    "id": "6cb0ca4e-a641-4d66-b43f-f7eaeed1be27",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2010",
+    "releases": [
+     {
+      "id": "67ae0968-b29b-4ecb-9a57-daf8c58dc54c",
+      "title": "80 Party Collection Vol.3",
+      "status": "Official",
+      "release-group": {
+       "id": "12e7212e-cc9a-4245-9857-bdd859569018",
+       "title": "80 Party Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010"
+     }
+    ]
+   },
+   {
+    "id": "b4e4ee46-5deb-4365-91b8-354b97e78cf0",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1999",
+    "releases": [
+     {
+      "id": "e8a5afe1-4d42-488e-a03f-e1f5a0bb10e7",
+      "title": "Fetenkult: Black Party",
+      "status": "Official",
+      "release-group": {
+       "id": "30df7250-7e1b-454a-990c-7db838de436b",
+       "title": "Fetenkult: Black Party",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     }
+    ]
+   },
+   {
+    "id": "754a5565-cfbf-495e-8e46-f659d438a9b8",
+    "score": 100,
+    "title": "Let’s Groove",
+    "disambiguation": "part of \"Tokyo Disneyland: Forever Club Disney Super Dancin' Mania\" DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2000-07-05",
+    "releases": [
+     {
+      "id": "7211a276-3043-452d-ac38-457c0c7096f3",
+      "title": "Tokyo Disneyland: Forever Club Disney Super Dancin’ Mania -Non Stop Best-",
+      "status": "Official",
+      "release-group": {
+       "id": "f1fa331d-2287-36c7-b46d-70d09a683b7e",
+       "title": "Tokyo Disneyland: Forever Club Disney Super Dancin’ Mania -Non Stop Best-",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2000-07-05"
+     }
+    ]
+   },
+   {
+    "id": "d91c9494-9fdb-4cb7-8c38-ad642603dd6c",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2010-05-10",
+    "releases": [
+     {
+      "id": "d489786b-00bd-425a-8697-37a905517b40",
+      "title": "Essential: Girls Night In",
+      "status": "Official",
+      "release-group": {
+       "id": "7a6f4600-68bf-40d1-bac9-509a27b63f80",
+       "title": "Essential: Girls Night In",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-05-10"
+     }
+    ]
+   },
+   {
+    "id": "8c431423-7d33-4082-a331-5a80a8270102",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2013",
+    "releases": [
+     {
+      "id": "335cdcba-aa7c-4178-a65b-02cb2563c1fe",
+      "title": "Now, Then & Forever",
+      "status": "Official",
+      "release-group": {
+       "id": "af393e0b-ea92-48fd-a1dc-a0b391e62676",
+       "title": "Now, Then & Forever",
+       "primary-type": "Album"
+      },
+      "date": "2013"
+     }
+    ]
+   },
+   {
+    "id": "14e3c22c-6f2f-487e-ad25-30dbcb9b9923",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "b60e46fe-f402-4ab5-b799-ef4d57d85381",
+      "title": "Super Hits, Volume 2",
+      "status": "Official",
+      "release-group": {
+       "id": "1a04f398-58c3-40b4-99fd-aaf492ac1e06",
+       "title": "Super Hits, Volume 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009"
+     },
+     {
+      "id": "d1916439-fc90-4ae9-8976-2de8ac68a64f",
+      "title": "The Best Of 80's Groove",
+      "release-group": {
+       "id": "8344df9a-09bb-401a-9d2f-3162080ff3cb",
+       "title": "The Best Of 80's Groove",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "3f56cd8f-3508-442a-80a0-e3bdd6973622",
+      "title": "Old Wave: 80's Party",
+      "status": "Official",
+      "release-group": {
+       "id": "86045fa7-0248-4724-9907-30e96c676407",
+       "title": "Old Wave: 80's Party",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     },
+     {
+      "id": "13c85737-536f-4637-8edb-7fa6ed011065",
+      "title": "80’s Party",
+      "status": "Official",
+      "release-group": {
+       "id": "528a1a07-0142-4aee-84c8-38874c4950b7",
+       "title": "80’s Party",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "6ff80606-6370-4e3b-b846-ef0df9248f66",
+    "score": 100,
+    "title": "Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2003",
+    "releases": [
+     {
+      "id": "61cd0069-b5f4-43ca-a458-81dcae9ae514",
+      "title": "DISCOinferno GOLD",
+      "status": "Official",
+      "release-group": {
+       "id": "45b2899e-eed6-479f-a161-09ca2321e273",
+       "title": "DISCOinferno GOLD",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003"
+     }
+    ]
+   },
+   {
+    "id": "6e0bffa6-2c72-43f1-86d9-ac14d5704895",
+    "score": 100,
+    "title": "Let's Groove",
+    "disambiguation": "part of “Funkmaster Mix” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1996-05-24",
+    "releases": [
+     {
+      "id": "6a741975-8b36-41c5-b9b9-9cd26ba8dbfe",
+      "title": "Funkmaster Mix: 40 Non-Stop Club Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "4dfc0d4f-9b6b-45a8-be5c-e134873bf249",
+       "title": "Funkmaster Mix: 40 Non-Stop Club Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1996-05-24"
+     }
+    ]
+   },
+   {
+    "id": "07d3fbe6-d47c-41a7-aa47-0e6211b93349",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2002",
+    "releases": [
+     {
+      "id": "e67b5713-ec9a-4ebc-a071-bcc4fbacfff6",
+      "title": "Nothin’ but Disco – Oh! What a Night",
+      "status": "Official",
+      "release-group": {
+       "id": "14152ccb-5bdc-47f9-9536-52af04a7e42c",
+       "title": "Nothin’ but Disco – Oh! What a Night",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     }
+    ]
+   },
+   {
+    "id": "7318daca-fc53-4c95-805c-3ccf00a55c3c",
+    "score": 100,
+    "title": "Let’s Groove",
+    "disambiguation": "live, 2004-08-17: Greek Theatre, Los Angeles, CA, USA",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2013",
+    "releases": [
+     {
+      "id": "8ff0e92b-512c-4ecf-8a54-7dd5b77b28b7",
+      "title": "Live at the Greek Theater",
+      "status": "Official",
+      "release-group": {
+       "id": "32bb98fa-d543-4d53-bccb-b4b54e38591c",
+       "title": "Live at the Greek Theater",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2013"
+     }
+    ]
+   },
+   {
+    "id": "c3ed98f2-c9fe-4263-ac46-f7bba5c1d081",
+    "score": 100,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2007",
+    "releases": [
+     {
+      "id": "5084b2e5-a20c-49b7-972c-434ca1badf03",
+      "title": "Live In Tokyo",
+      "status": "Official",
+      "release-group": {
+       "id": "bd704f21-b39f-4377-a444-556acc328140",
+       "title": "Live In Tokyo",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2007"
+     }
+    ]
+   },
+   {
+    "id": "8a1496e4-c61a-428d-9a73-68aa2fb26321",
+    "score": 100,
+    "title": "Let’s Groove",
+    "disambiguation": "part of a “Ministry of Sound: Saturday Night Club Classics” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2013-03-04",
+    "releases": [
+     {
+      "id": "865d6bd8-6ec1-4827-9f36-10c056ee7d69",
+      "title": "Saturday Night Club Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "36e46ea0-35e3-4d97-a60b-e2601dae1919",
+       "title": "Saturday Night Club Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2013-03-04"
+     }
+    ]
+   },
+   {
+    "id": "04014096-458a-4159-893c-932f54ded57c",
+    "score": 94,
+    "title": "Let’s Groove (live)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "e908e268-061e-4c61-aba7-c3f9abee4610",
+      "title": "Live in Philadelphia 2000",
+      "status": "Official",
+      "release-group": {
+       "id": "9a50ecc2-8e03-4134-a6da-d2203ad9d50c",
+       "title": "Live in Philadelphia 2000",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2000"
+     }
+    ]
+   },
+   {
+    "id": "bb547231-2f0f-47ec-82fd-099d35801af9",
+    "score": 94,
+    "title": "Let’s Groove (live)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2016",
+    "releases": [
+     {
+      "id": "046dedcc-f8bc-48f4-9139-30b5f3587798",
+      "title": "As 100 Mais Disco Music",
+      "status": "Official",
+      "release-group": {
+       "id": "64f9ae39-5b9d-4efb-8da6-ab934888dbe1",
+       "title": "As 100 Mais Disco Music",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "92553f3c-5e27-48d1-98f2-dcd40db3dd21",
+    "score": 94,
+    "title": "Let’s Groove (live)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1997",
+    "releases": [
+     {
+      "id": "f12e7353-9690-452d-bdd8-2e5535d0c781",
+      "title": "Mega Gold - Le meilleur des années 50' 60' 70' 80'",
+      "status": "Official",
+      "release-group": {
+       "id": "0d2e365e-fc55-3965-9be7-5933bbaa9d66",
+       "title": "Mega Gold 50’60’70’80’",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     }
+    ]
+   },
+   {
+    "id": "9d74a5a7-131c-4d20-95b4-55d46bd7eefd",
+    "score": 94,
+    "title": "Let’s Groove (live)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1996-05-31",
+    "releases": [
+     {
+      "id": "3b2b4f05-0841-4629-9bff-2017621dfa6d",
+      "title": "Mega Disco Fever",
+      "status": "Official",
+      "release-group": {
+       "id": "7cb60315-1cfd-3c2d-84d8-0d18c27e8b29",
+       "title": "Mega Disco Fever",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996-05-31"
+     }
+    ]
+   },
+   {
+    "id": "9b0909f1-bbcc-4ea5-88e7-729956727492",
+    "score": 94,
+    "title": "Let’s Groove (instrumental)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1981-12",
+    "releases": [
+     {
+      "id": "728bbd58-e625-4d6a-8544-28c829c363c2",
+      "title": "The Columbia Masters",
+      "status": "Official",
+      "release-group": {
+       "id": "93ded9dc-3e27-40a1-83e5-92e36a48f808",
+       "title": "The Columbia Masters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012-06-12"
+     },
+     {
+      "id": "47f625cc-ff35-4b72-ba43-59b691778812",
+      "title": "Wanna Be with You",
+      "status": "Official",
+      "release-group": {
+       "id": "368c1f7f-f177-4ea6-abe7-19e4640fad79",
+       "title": "Wanna Be with You",
+       "primary-type": "Single"
+      },
+      "date": "1981-12"
+     },
+     {
+      "id": "44933505-6273-4c4e-8e85-2c785167c0c1",
+      "title": "Raise!",
+      "status": "Official",
+      "release-group": {
+       "id": "0a28e7a2-836e-35c9-9a0b-26833dc5eefc",
+       "title": "Raise!",
+       "primary-type": "Album"
+      },
+      "date": "2011"
+     },
+     {
+      "id": "bb49e8fd-c9a9-444e-b7ad-1b6cb76a7612",
+      "title": "Raise!",
+      "status": "Official",
+      "release-group": {
+       "id": "0a28e7a2-836e-35c9-9a0b-26833dc5eefc",
+       "title": "Raise!",
+       "primary-type": "Album"
+      },
+      "date": "2015-10"
+     },
+     {
+      "id": "7e17e5ef-e417-4ed0-b507-f9d2757ee65b",
+      "title": "Let's Groove",
+      "status": "Official",
+      "release-group": {
+       "id": "a7a31779-ea19-4aac-b117-a49abae4301f",
+       "title": "Let's Groove",
+       "primary-type": "Single"
+      },
+      "date": "1981"
+     },
+     {
+      "id": "3248b3b6-5d83-4c84-b3dc-2e204d098164",
+      "title": "Dance Tracks",
+      "status": "Official",
+      "release-group": {
+       "id": "0fc71301-b2c0-3b3c-96f9-507df024e11a",
+       "title": "Dance Tracks",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "1994-03-09"
+     }
+    ],
+    "isrcs": [
+     "USSM10904566"
+    ]
+   },
+   {
+    "id": "0d7dd756-9429-4188-843e-1708f5285385",
+    "score": 94,
+    "title": "Let's Groove (Instrumental)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2012-06-12",
+    "releases": [
+     {
+      "id": "9ac2ea14-712f-48bf-a124-648a7c0c45f1",
+      "title": "Constellations: The Universe of Earth, Wind & Fire",
+      "status": "Official",
+      "release-group": {
+       "id": "cdbb8ebb-6e90-49c0-8166-8c8d778cf14e",
+       "title": "Constellations: The Universe of Earth, Wind & Fire",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012"
+     },
+     {
+      "id": "13f7d095-cac3-41c4-89ec-ed503bcc3d24",
+      "title": "Constellations: The Universe of Earth, Wind & Fire",
+      "status": "Official",
+      "release-group": {
+       "id": "f8ad8b98-f6f1-44bb-adca-61ed7cdfc057",
+       "title": "Constellations: The Universe of Earth, Wind & Fire",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012-06-12"
+     }
+    ]
+   },
+   {
+    "id": "f762995a-6cbc-4fc4-b8a1-699607fbe7d2",
+    "score": 94,
+    "title": "Let’s Groove (remix)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1999",
+    "releases": [
+     {
+      "id": "65959829-b546-4892-9a77-dd8db5a694c2",
+      "title": "Big Hits and Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "5ba0537e-c36b-3133-b42d-14643c3f5ae6",
+       "title": "Big Hits & Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "52d7b822-7412-416d-8807-28e90eb7445e",
+    "score": 94,
+    "title": "Let's Groove (live)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1996",
+    "releases": [
+     {
+      "id": "e6f32e3b-7b88-4486-86c2-8d7187d24461",
+      "title": "Disco Top 100",
+      "status": "Official",
+      "release-group": {
+       "id": "4379e931-027e-3d99-8676-4ded66ef5002",
+       "title": "Disco Top 100",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     }
+    ]
+   },
+   {
+    "id": "6b24471c-eb28-412a-81f4-7845f409b725",
+    "score": 90,
+    "title": "Let’s Groove (long version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1994",
+    "releases": [
+     {
+      "id": "c64597ed-17cf-4bf3-9a2b-43ec21ba20ee",
+      "title": "Forever Gold of 80’s, Vol. I",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "cf936509-3d9d-448f-943f-8ff220903614",
+       "title": "Forever Gold of 80’s, Vol. I",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1994"
+     }
+    ]
+   },
+   {
+    "id": "13cecfe0-0b6c-49e0-9520-1911a5780b01",
+    "score": 90,
+    "title": "Let's Groove (Restless Soul)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2002-09",
+    "releases": [
+     {
+      "id": "c99969f0-364f-4ec6-b7f1-81f9906c059c",
+      "title": "DMC DJ Only 44",
+      "status": "Promotion",
+      "release-group": {
+       "id": "2a13bc0d-e133-43df-94e4-30df745d1d13",
+       "title": "DMC DJ Only 44",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002-09"
+     }
+    ]
+   },
+   {
+    "id": "80f4cd05-288e-41b3-b2ab-ec90d4092ea8",
+    "score": 90,
+    "title": "Let’s Groove (album version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2003",
+    "releases": [
+     {
+      "id": "db5fd7eb-cb3b-46b1-b1ba-d200add2292c",
+      "title": "RFM Party 80 La Compilation Best of",
+      "status": "Official",
+      "release-group": {
+       "id": "29fcd261-78b3-414d-b25d-c9a3c4af4181",
+       "title": "RFM Party 80 La Compilation Best of",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012-03-19"
+     },
+     {
+      "id": "aa5cadb6-901b-49b2-a2b5-81a92a53add0",
+      "title": "Funky Dance Grooves, Volume 1",
+      "status": "Official",
+      "release-group": {
+       "id": "adf3ccdd-915e-4f67-8318-a37bc8d8ed2e",
+       "title": "Funky Dance Grooves, Volume 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003"
+     }
+    ]
+   },
+   {
+    "id": "cbf1b856-aa3b-4b2d-b819-0e67db4a6de8",
+    "score": 90,
+    "title": "Let’s Groove (12″ version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1994-03-09",
+    "releases": [
+     {
+      "id": "3248b3b6-5d83-4c84-b3dc-2e204d098164",
+      "title": "Dance Tracks",
+      "status": "Official",
+      "release-group": {
+       "id": "0fc71301-b2c0-3b3c-96f9-507df024e11a",
+       "title": "Dance Tracks",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "1994-03-09"
+     }
+    ]
+   },
+   {
+    "id": "c49994e1-cf8a-4765-98a2-391eed1b9e59",
+    "score": 90,
+    "title": "Let’s Groove (original remix)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind and Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2008",
+    "releases": [
+     {
+      "id": "6dbecd3c-1335-4233-9d26-ebba544ec1a1",
+      "title": "Legendary Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "1499836a-46f1-4d78-985d-d2036c2df1b7",
+       "title": "Legendary Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008"
+     }
+    ]
+   },
+   {
+    "id": "cb2d8eba-76f3-4b84-aaa5-6d7b77525816",
+    "score": 90,
+    "title": "Let's Groove (disco version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1981",
+    "releases": [
+     {
+      "id": "744f4ce0-25ac-4996-906a-f37dad85f64a",
+      "title": "Let's Groove / Fantasy (disco version)",
+      "status": "Official",
+      "release-group": {
+       "id": "a7a31779-ea19-4aac-b117-a49abae4301f",
+       "title": "Let's Groove",
+       "primary-type": "Single"
+      },
+      "date": "1981"
+     }
+    ]
+   },
+   {
+    "id": "bb0e16c8-dea5-4548-8852-38ebeff1b36f",
+    "score": 90,
+    "title": "Let’s Groove (single version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2015-10",
+    "releases": [
+     {
+      "id": "bb49e8fd-c9a9-444e-b7ad-1b6cb76a7612",
+      "title": "Raise!",
+      "status": "Official",
+      "release-group": {
+       "id": "0a28e7a2-836e-35c9-9a0b-26833dc5eefc",
+       "title": "Raise!",
+       "primary-type": "Album"
+      },
+      "date": "2015-10"
+     }
+    ]
+   },
+   {
+    "id": "9efb4726-cc43-4e5b-a0e8-bcbe94a3c80f",
+    "score": 90,
+    "title": "Let’s Groove (single version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2016-08-16",
+    "releases": [
+     {
+      "id": "c532137d-dd22-4df8-8d2c-0439136c9449",
+      "title": "Awesome 80’s Super Hits",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "eccf9fe4-9987-4153-8805-e776858a06f0",
+       "title": "Awesome 80’s Super Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2016-08-16"
+     }
+    ]
+   },
+   {
+    "id": "c0732aaa-5694-4d89-bd44-823e38ff8996",
+    "score": 90,
+    "title": "Let’s Groove (single version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2017",
+    "releases": [
+     {
+      "id": "85bd8664-07a5-4622-a803-28073dc31122",
+      "title": "NOW That’s What I Call 80s Party",
+      "status": "Official",
+      "release-group": {
+       "id": "e6fd7d71-bcce-43af-ba5f-580cbd72c6bb",
+       "title": "NOW That’s What I Call 80s Party",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017"
+     }
+    ]
+   },
+   {
+    "id": "a6d58e68-12c9-4c9a-89c3-6e0c54b8b5e0",
+    "score": 90,
+    "title": "Let's Groove (live 1988)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2021-01-29",
+    "releases": [
+     {
+      "id": "a45f2e0e-a5c0-40ff-9a48-ef0ffac4bdaf",
+      "title": "Elemental (live 1988)",
+      "status": "Official",
+      "release-group": {
+       "id": "6171d67c-00b7-4d67-900a-300c3ada5c48",
+       "title": "Elemental (live 1988)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ],
+    "isrcs": [
+     "GBSMU9437138"
+    ]
+   },
+   {
+    "id": "9ec0ac50-fbb0-44e3-b031-270743151854",
+    "score": 87,
+    "title": "Let’s Groove (Holiday version remix)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2020",
+    "releases": [
+     {
+      "id": "2591ecb9-d838-4197-94c3-a6078ed85892",
+      "title": "NOW 12″ 80s: 1981",
+      "status": "Official",
+      "release-group": {
+       "id": "46e92edf-30ae-4cd6-a3d9-7e292a08a31d",
+       "title": "NOW 12″ 80s: 1981",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2023-10-20"
+     },
+     {
+      "id": "862233a0-7a32-41a9-80c2-805df5acf234",
+      "title": "Now Presents 12\" 80s Volume One (1980-1982)",
+      "status": "Official",
+      "release-group": {
+       "id": "9238ec95-e706-46c3-bfbf-396ea1c3244b",
+       "title": "Now Presents 12\" 80s Volume One (1980-1982)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2024-12-06"
+     },
+     {
+      "id": "8110d242-0653-4973-a304-e82ed158364a",
+      "title": "Gold",
+      "status": "Official",
+      "release-group": {
+       "id": "6b58d7af-69e9-46da-a2ff-1a1c75fc8472",
+       "title": "Gold",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2020"
+     }
+    ]
+   },
+   {
+    "id": "9974d0a2-ea0b-4eec-a09d-cfb26159ab0c",
+    "score": 87,
+    "title": "Let's Groove (Flash 89 Edit)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2019-06-16",
+    "releases": [
+     {
+      "id": "7a7c5572-2c6c-4cd2-a11e-f34d4ccf508e",
+      "title": "Let's Groove (Flash 89 Edit)",
+      "status": "Promotion",
+      "release-group": {
+       "id": "eaa794b9-60a0-466b-8b40-07b581f4a5ec",
+       "title": "Let's Groove (Flash 89 Edit)",
+       "primary-type": "Single",
+       "secondary-types": [
+        "Remix"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "14fdec21-0209-4c07-9af8-314c4b1b7740",
+    "score": 84,
+    "title": "Let’s Groove (special remixed holiday version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2014-09-01",
+    "releases": [
+     {
+      "id": "e7fde8ae-7fe3-4c78-aab7-3af160a30689",
+      "title": "Pure… 80s Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "f5db2acf-229d-47c4-abd1-cb7cca507811",
+       "title": "Pure… 80s Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2014-09-01"
+     }
+    ]
+   },
+   {
+    "id": "54c3251e-04f8-4b65-97e0-3831c9ecf6d0",
+    "score": 84,
+    "title": "Let’s Groove (Merchant of Menace remix)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1999-10-18",
+    "releases": [
+     {
+      "id": "e4eacd6c-b398-434a-acb3-ab72965c0e40",
+      "title": "Big Hits & Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "5ba0537e-c36b-3133-b42d-14643c3f5ae6",
+       "title": "Big Hits & Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "66af7cac-04b2-40b8-b6c0-1c66e7cf842e",
+      "title": "Big Hits and Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "5ba0537e-c36b-3133-b42d-14643c3f5ae6",
+       "title": "Big Hits & Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "1999-10-18"
+     }
+    ],
+    "isrcs": [
+     "USSM19907143"
+    ]
+   },
+   {
+    "id": "12e1bee5-1013-4491-898e-60c0eca32f8c",
+    "score": 84,
+    "title": "Let’s Groove (Special remixed Holiday version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2017-01-30",
+    "releases": [
+     {
+      "id": "c12ecaf9-c7e9-4a63-8815-ed60613fbd80",
+      "title": "ftg Presents: The Vaults, Vol. 2",
+      "status": "Official",
+      "release-group": {
+       "id": "637e4fd4-5b87-4e44-8bdc-312cb0a75e13",
+       "title": "FTG Presents the Vaults, Vol. 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-01-30"
+     },
+     {
+      "id": "413d228d-1048-4a76-8527-79a16863c87f",
+      "title": "FTG Presents the Vaults, Vol. 2",
+      "status": "Official",
+      "release-group": {
+       "id": "637e4fd4-5b87-4e44-8bdc-312cb0a75e13",
+       "title": "FTG Presents the Vaults, Vol. 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-08-25"
+     }
+    ],
+    "isrcs": [
+     "GBZYX1600138"
+    ]
+   },
+   {
+    "id": "8a43dfb0-f135-40ec-8746-af5ecb47003a",
+    "score": 84,
+    "title": "Let’s Groove (Special remixed Holiday version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2016-06-24",
+    "releases": [
+     {
+      "id": "1836a45e-20fc-465e-94fa-c93ac0790d4e",
+      "title": "Twelve Inch Eighties: Let’s Groove",
+      "status": "Official",
+      "release-group": {
+       "id": "6474f826-4198-4592-b00e-057ef7561d2f",
+       "title": "Twelve Inch Eighties: Let’s Groove",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2016-06-24"
+     }
+    ]
+   },
+   {
+    "id": "7cf752d5-6bca-4880-b092-08e219375d16",
+    "score": 84,
+    "title": "Let’s Groove (Merchants of Menace remix)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "8327d1bd-8ba3-4a8f-b7cd-f274e7393933",
+      "title": "City Retro 2",
+      "status": "Official",
+      "release-group": {
+       "id": "84dfde3c-11a2-4016-a91c-0df804935b9a",
+       "title": "City Retro 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     }
+    ]
+   },
+   {
+    "id": "a1f64d47-70dc-443a-b2d8-7e01b510f9a3",
+    "score": 84,
+    "title": "Let's Groove - Instrumental Version, Remastered",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1987",
+    "releases": [
+     {
+      "id": "778b12ee-d957-4a8b-9f8b-ae97ea8a68aa",
+      "title": "The Complete Columbia Masters",
+      "status": "Official",
+      "release-group": {
+       "id": "9b746b0e-798d-41aa-88a6-470776656e48",
+       "title": "The Complete Columbia Masters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1987"
+     }
+    ]
+   },
+   {
+    "id": "663267fd-bc33-4d52-bba9-c7cffc259551",
+    "score": 84,
+    "title": "Let’s Groove (Broke for Free remix)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2010-10-31",
+    "releases": [
+     {
+      "id": "93ca5f99-86a3-4cf1-9234-8bff713d91e3",
+      "title": "Thank You Electronics",
+      "release-group": {
+       "id": "b7a26148-1d1e-4b49-bfd4-02c95b51e9f7",
+       "title": "Thank You Electronics"
+      }
+     }
+    ]
+   },
+   {
+    "id": "ac2d5cfb-8175-4b1a-a068-d3e18fc157dd",
+    "score": 84,
+    "title": "Let’s Groove (special remixed Holiday version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2013-10-15",
+    "releases": [
+     {
+      "id": "fd93bd01-1340-4e53-9634-128f2d709eb6",
+      "title": "Black & White 80’s (The Most Wanted 12″ Versions)",
+      "status": "Official",
+      "release-group": {
+       "id": "74ea4f1c-4ed9-41d1-bd3f-03f4c23de647",
+       "title": "Black & White 80’s (The Most Wanted 12″ Versions)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013-10-15"
+     }
+    ]
+   },
+   {
+    "id": "cd6ac3e2-aa99-44bc-b667-dac32c5c658a",
+    "score": 84,
+    "title": "Let's Groove (Merchant of Menace remix)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1999-07-26",
+    "releases": [
+     {
+      "id": "6acd4a13-42d6-493e-ac5a-8dfc919da13e",
+      "title": "The Essential Earth Wind & Fire Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "520cb974-fa51-35d5-a68d-d934945c6d74",
+       "title": "Soul Source: Earth, Wind & Fire Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "0cb60ea9-abfc-48ad-ba90-a9ce7e40890a",
+      "title": "The Ultimate Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "4bfd59e5-143f-3505-9f6d-07de44e072ac",
+       "title": "The Ultimate Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999-07-26"
+     },
+     {
+      "id": "707e806b-038c-4e92-a301-5706b29e8244",
+      "title": "Remix 2000",
+      "status": "Official",
+      "release-group": {
+       "id": "1de76d14-e967-4ef7-80e7-bde7236de544",
+       "title": "Remix 2000",
+       "primary-type": "Single"
+      },
+      "date": "1999-12-18"
+     },
+     {
+      "id": "b4bba6bd-9e5a-4482-af80-871dd5bcb7ff",
+      "title": "The Dutch Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "0dd645c2-677a-35be-a607-f393d140692c",
+       "title": "The Dutch Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "23fd96fe-2039-4758-ad80-670ae08f7263",
+      "title": "The Essential",
+      "status": "Official",
+      "release-group": {
+       "id": "a2f5984d-4796-39bb-9537-7e5971f00c60",
+       "title": "The Essential",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002-10-14"
+     },
+     {
+      "id": "7b02d8d5-0ef2-47d9-8ace-403fc5d7cb74",
+      "title": "Greatest Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "0bcb2f09-0912-4dd5-b255-f0168132e0d1",
+       "title": "Greatest Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     }
+    ]
+   },
+   {
+    "id": "d471347f-1ca4-4d72-8dcd-5b2a6c19da9b",
+    "score": 84,
+    "title": "Let’s Groove (special remixed holiday version)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2011-06-10",
+    "releases": [
+     {
+      "id": "57b0664b-de20-4512-875b-8c016a36a4ee",
+      "title": "100 Hits: 80s Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "acf6868d-1d0e-4e3f-b041-89588fe7320a",
+       "title": "100 Hits: 80s Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2014-03-07"
+     },
+     {
+      "id": "bb49e8fd-c9a9-444e-b7ad-1b6cb76a7612",
+      "title": "Raise!",
+      "status": "Official",
+      "release-group": {
+       "id": "0a28e7a2-836e-35c9-9a0b-26833dc5eefc",
+       "title": "Raise!",
+       "primary-type": "Album"
+      },
+      "date": "2015-10"
+     },
+     {
+      "id": "44933505-6273-4c4e-8e85-2c785167c0c1",
+      "title": "Raise!",
+      "status": "Official",
+      "release-group": {
+       "id": "0a28e7a2-836e-35c9-9a0b-26833dc5eefc",
+       "title": "Raise!",
+       "primary-type": "Album"
+      },
+      "date": "2011"
+     },
+     {
+      "id": "8d4d633f-bdca-4d87-a1c9-34a62ce39b13",
+      "title": "80s Remixed & Extended",
+      "status": "Official",
+      "release-group": {
+       "id": "63d43dc6-7a79-4f8d-a3b2-47156d21bcc8",
+       "title": "80s Remixed & Extended",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2016-09-02"
+     },
+     {
+      "id": "4f6569fb-af65-4549-a05e-cf704ce50509",
+      "title": "Grand 12‐Inches 8",
+      "status": "Official",
+      "release-group": {
+       "id": "b5a34282-d99e-40db-8a73-c2725efe81a5",
+       "title": "Grand 12‐Inches 8",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-06-10"
+     }
+    ],
+    "isrcs": [
+     "USSM11005728"
+    ]
+   },
+   {
+    "id": "b85ee292-0020-421e-8a22-7bb5dfb7db1c",
+    "score": 84,
+    "title": "Let’s Groove",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": " with ",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     },
+     {
+      "name": "The Emotions",
+      "joinphrase": "",
+      "artist": {
+       "id": "6ff13427-08ff-4da2-bee8-892e1fa22d3c",
+       "name": "The Emotions"
+      }
+     }
+    ],
+    "first-release-date": "2009",
+    "releases": [
+     {
+      "id": "81c2379b-caf5-4c6a-8283-0e95613d6b04",
+      "title": "Soul – Funk – Disco (Gold Metal Box)",
+      "status": "Official",
+      "release-group": {
+       "id": "51e0bc5f-d429-4d54-8cb7-ce514ed0854c",
+       "title": "Soul – Funk – Disco (Gold Metal Box)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009"
+     }
+    ]
+   },
+   {
+    "id": "d6cfddd8-f4ba-48f2-85f9-5229bbe6ccd8",
+    "score": 82,
+    "title": "Let's Groove - Special Remixed Holiday Version",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1987",
+    "releases": [
+     {
+      "id": "778b12ee-d957-4a8b-9f8b-ae97ea8a68aa",
+      "title": "The Complete Columbia Masters",
+      "status": "Official",
+      "release-group": {
+       "id": "9b746b0e-798d-41aa-88a6-470776656e48",
+       "title": "The Complete Columbia Masters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1987"
+     }
+    ]
+   },
+   {
+    "id": "606e9105-b097-4e89-b944-8dad2c6d3948",
+    "score": 82,
+    "title": "Let's Groove (Restless Soul Inspiration Information mix)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2002-07-24",
+    "releases": [
+     {
+      "id": "f0bb1d65-e6f8-48a1-87c3-9cbb0af2700e",
+      "title": "Soul Source : Earth Wind & Fire Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "520cb974-fa51-35d5-a68d-d934945c6d74",
+       "title": "Soul Source: Earth, Wind & Fire Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "6acd4a13-42d6-493e-ac5a-8dfc919da13e",
+      "title": "The Essential Earth Wind & Fire Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "520cb974-fa51-35d5-a68d-d934945c6d74",
+       "title": "Soul Source: Earth, Wind & Fire Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "eb28a013-a38e-4401-9020-d8128019ce2e",
+      "title": "Soul Source: Earth, Wind & Fire Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "520cb974-fa51-35d5-a68d-d934945c6d74",
+       "title": "Soul Source: Earth, Wind & Fire Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "2002-10-04"
+     },
+     {
+      "id": "040555d4-4308-3aad-b412-9a9b2b26aba8",
+      "title": "Soul Source: Earth, Wind & Fire Remixes",
+      "status": "Official",
+      "release-group": {
+       "id": "520cb974-fa51-35d5-a68d-d934945c6d74",
+       "title": "Soul Source: Earth, Wind & Fire Remixes",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "2002-07-24"
+     },
+     {
+      "id": "23fd96fe-2039-4758-ad80-670ae08f7263",
+      "title": "The Essential",
+      "status": "Official",
+      "release-group": {
+       "id": "a2f5984d-4796-39bb-9537-7e5971f00c60",
+       "title": "The Essential",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002-10-14"
+     }
+    ]
+   },
+   {
+    "id": "95b0ccdc-1b0c-4dc7-ba96-b27bf8cf4a2e",
+    "score": 80,
+    "title": "Megamix: September, Let's Groove, Rock That!, Boogie Wonderland",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1993",
+    "releases": [
+     {
+      "id": "c6921b3f-52c5-4877-97f4-11691dea4566",
+      "title": "The Very Best",
+      "status": "Official",
+      "release-group": {
+       "id": "da407cfc-9b17-3442-b22d-069f30eab7ef",
+       "title": "The Very Best",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1993"
+     }
+    ]
+   },
+   {
+    "id": "1955e313-fe66-4dec-be1c-9c0a86a122ae",
+    "score": 80,
+    "title": "Let’s Groove (Todd Shoaf & Les Massengale remix)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1997",
+    "releases": [
+     {
+      "id": "be8d2e0e-79ae-413e-a57a-a5764f9d6c0c",
+      "title": "Looking Back 4",
+      "status": "Promotion",
+      "release-group": {
+       "id": "29994204-c1d6-4f2a-8e89-0f9a59200086",
+       "title": "Looking Back 4",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Remix"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "5d73550b-3585-400b-a212-6ee05e360fdf",
+      "title": "Looking Back 4",
+      "status": "Promotion",
+      "release-group": {
+       "id": "29994204-c1d6-4f2a-8e89-0f9a59200086",
+       "title": "Looking Back 4",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Remix"
+       ]
+      },
+      "date": "1997"
+     }
+    ]
+   },
+   {
+    "id": "c83dae55-0928-492f-bc5f-ddc070fe2416",
+    "score": 79,
+    "title": "Let's Groove (TJO & Yusuke From Blu-Swing remix)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2013-09-11",
+    "releases": [
+     {
+      "id": "359fffe0-3087-4b4c-b718-6e3f1735b92c",
+      "title": "Now, Then & Forever",
+      "status": "Official",
+      "release-group": {
+       "id": "af393e0b-ea92-48fd-a1dc-a0b391e62676",
+       "title": "Now, Then & Forever",
+       "primary-type": "Album"
+      },
+      "date": "2013-09-11"
+     }
+    ]
+   },
+   {
+    "id": "d4ffbbda-5574-49eb-b0c3-84d5df1ec71e",
+    "score": 76,
+    "title": "Megamix: September / Let’s Groove / Rock That / Boogie Wonderland",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "1994",
+    "releases": [
+     {
+      "id": "8cc8b1c3-c7d1-40c3-86b0-cdd924b96e05",
+      "title": "The Very Best",
+      "status": "Official",
+      "release-group": {
+       "id": "41bbacaa-9028-390c-aeb0-8c6066746aa6",
+       "title": "The Very Best",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1994"
+     }
+    ]
+   },
+   {
+    "id": "9f0d7e6d-db00-4b42-9209-e1138c64e307",
+    "score": 71,
+    "title": "Let's Groove (Holiday Version Remix)",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": " & ",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     },
+     {
+      "name": "Junior Wells",
+      "joinphrase": "",
+      "artist": {
+       "id": "5f526374-0e88-4508-a8d6-7f25c16cb2d8",
+       "name": "Junior Wells"
+      }
+     }
+    ],
+    "first-release-date": "2012-06-12",
+    "releases": [
+     {
+      "id": "9ac2ea14-712f-48bf-a124-648a7c0c45f1",
+      "title": "Constellations: The Universe of Earth, Wind & Fire",
+      "status": "Official",
+      "release-group": {
+       "id": "cdbb8ebb-6e90-49c0-8166-8c8d778cf14e",
+       "title": "Constellations: The Universe of Earth, Wind & Fire",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012"
+     },
+     {
+      "id": "13f7d095-cac3-41c4-89ec-ed503bcc3d24",
+      "title": "Constellations: The Universe of Earth, Wind & Fire",
+      "status": "Official",
+      "release-group": {
+       "id": "f8ad8b98-f6f1-44bb-adca-61ed7cdfc057",
+       "title": "Constellations: The Universe of Earth, Wind & Fire",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012-06-12"
+     }
+    ]
+   },
+   {
+    "id": "9b098e96-f084-431a-b256-84280d7a60a9",
+    "score": 66,
+    "title": "Give Life To Music Vs. Let's Groove",
+    "artist-credit": [
+     {
+      "name": "Daft Punk",
+      "joinphrase": " vs. ",
+      "artist": {
+       "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+       "name": "Daft Punk"
+      }
+     },
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2018-07-03",
+    "releases": [
+     {
+      "id": "77bf0d38-b946-4004-b49f-73eddd760b47",
+      "title": "I Love Daft Punk (Classic Mixes) (Volume 1)",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "2c5c0951-f91a-4cb1-96a5-2f8bde85d964",
+       "title": "I Love Daft Punk (Classic Mixes) (Volume 1)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-07-03"
+     }
+    ]
+   },
+   {
+    "id": "6de54ff0-ce94-439c-9ba3-0d64ca317cc4",
+    "score": 52,
+    "title": "Gabriel vs. Let's Groove (Jet Boot Jack Mash Up)",
+    "artist-credit": [
+     {
+      "name": "Roy Davis Jr.",
+      "joinphrase": " feat. ",
+      "artist": {
+       "id": "a58a5d1f-9467-4df4-a157-eabb24d6bf28",
+       "name": "Roy Davis Jr."
+      }
+     },
+     {
+      "name": "Peven Everett",
+      "joinphrase": " vs. ",
+      "artist": {
+       "id": "7b42e4cf-650b-4fe0-bc7d-c95e31247729",
+       "name": "Peven Everett"
+      }
+     },
+     {
+      "name": "Earth, Wind & Fire",
+      "joinphrase": "",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire"
+      }
+     }
+    ],
+    "first-release-date": "2023-06-15",
+    "releases": [
+     {
+      "id": "a25997c1-3042-48fa-9760-75cb5be53397",
+      "title": "Mash Ups 2",
+      "status": "Official",
+      "release-group": {
+       "id": "b93c0589-d08c-4740-bb3d-dc8a7a30759d",
+       "title": "Mash Ups 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2023-06-15"
+     }
+    ]
+   }
+  ]
+ }
+}

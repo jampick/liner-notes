@@ -184,10 +184,14 @@ def cmd_generate(a):
 
     if not (a.from_ or (a.provider and a.playlist)):
         sys.exit("liner-notes: give --from <cliamp playlist> or --provider P --playlist ID")
+    from .musicbrainz import MusicBrainzError
+
     try:
-        generate(a.from_ or a.name, a.provider, a.playlist, a.write, a.budget, a.effort)
+        generate(a.from_ or a.name, a.provider, a.playlist, a.write, a.budget, a.effort, slug=a.slug)
     except SchemaError as e:
         sys.exit(f"liner-notes: {e}")
+    except MusicBrainzError as e:
+        sys.exit(f"liner-notes: {e}, so nothing was written; try again later.")
 
 
 def _write_song(f, s):
@@ -372,6 +376,7 @@ def parser():
     p.add_argument("--write", action="store_true", help="write missing notes with the Claude API (costs money)")
     p.add_argument("--budget", type=float, default=2.0, help="USD ceiling for --write (default 2)")
     p.add_argument("--effort", default="medium", choices=["low", "medium", "high", "xhigh", "max"])
+    p.add_argument("--slug", help="the journey's slug (its file and page name), when the name doesn't make a readable one")
     p.set_defaults(fn=cmd_generate)
 
     p = sub.add_parser("review", help="mark songs as checked by a person (your review, kept in your copy)")

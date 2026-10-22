@@ -29,7 +29,7 @@ from pathlib import Path
 
 from . import overlay, paths
 from .bank import Bank, SchemaError, problems, read_json, write_checked
-from .ids import clean_artist, clean_title, slug, song_id, split_upload_title, youtube_id
+from .ids import clean_artist, clean_title, slug, slug_is_hash, song_id, split_upload_title, youtube_id
 from .match import Matcher
 
 MODEL = "claude-sonnet-5-5"
@@ -102,7 +102,7 @@ def cut_eras(years, most=5, least_per=4):
     return bounds
 
 
-def plan(tracks, name, bank=None, lookup=None, log=print):
+def plan(tracks, name, bank=None, lookup=None, log=print, journey_slug=None):
     """Build the journey and stub songs. Returns (journey, new song records, ids missing notes)."""
     from .resolve import resolve
 
@@ -163,9 +163,11 @@ def plan(tracks, name, bank=None, lookup=None, log=print):
         }
         for i, (lo, hi) in enumerate(bounds, 1)
     ]
+    if not journey_slug and slug_is_hash(name):
+        log(f"  journey slug is {slug(name)} because {name} has no romanisation here; pass --slug to choose one")
     words = name.split()
     journey = {
-        "slug": slug(name),
+        "slug": journey_slug or slug(name),
         "title": name,
         "titleA": " ".join(words[: max(1, len(words) // 2)]),
         "titleB": " ".join(words[max(1, len(words) // 2) :]),
@@ -296,9 +298,12 @@ def _year_from_writer(y, song):
         y = int(y)
     except (TypeError, ValueError):
         y = None
-    if y and y >= 1800:
-        return {"year": y, "year_source": "writer"}
-    return {"year": song.get("year")}
+    if not (y and y >= 1800) or y == song.get("year"):
+        return {"year": song.get("year")}
+    out = {"year": y, "year_source": "writer"}
+    if song.get("year_source") == "musicbrainz" and song.get("year"):
+        out["year_musicbrainz"] = song["year"]  # kept so check can show both
+    return out
 
 
 def apply_notes(song, d, model, day):
@@ -342,6 +347,7 @@ def generate(
     lookup=None,
     log=print,
     estimate=ESTIMATE,
+    slug=None,
 ):
     root = Path(root or paths.user_data())
     bank = Bank()
@@ -351,11 +357,14 @@ def generate(
     else:
         tracks = tracks_from_toml(name)
     log(f"{name}: {len(tracks)} tracks")
-    journey, new, missing = plan(tracks, name, bank, lookup, log)
-    bad = [f"{s['id']}: {e}" for s in new.values() for e in problems(s, "song")]
-    bad += [f"journey {journey['slug']}: {e}" for e in problems(journey, "journey")]
+    journey, new, missing = plan(tracks, name, bank, lookup, log, slug)
+    bad = [f"  {s['id']}: {e}" for s in new.values() for e in problems(s, "song")]
+    bad += [f"  journey {journey['slug']}: {e}" for e in problems(journey, "journey")]
     if bad:
-        raise SchemaError("not writing anything; these don't match their schemas: " + "; ".join(bad))
+        raise SchemaError(
+            "nothing written: liner-notes made songs that don't match the schema, which is a bug in liner-notes. "
+            "Please report it with this output:\n" + "\n".join(bad)
+        )
     for s in new.values():
         write_checked(root / "songs" / f"{s['id']}.json", s, "song")
     write_checked(root / "journeys" / journey["slug"] / "journey.json", journey, "journey")

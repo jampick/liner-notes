@@ -3,14 +3,18 @@
 MusicBrainz asks for at most one request a second from a client and a meaningful User-Agent. We
 send "liner-notes/<version> ( https://github.com/jampick/liner-notes )" and never an email address.
 
-One a second holds across processes: the time of the last request lives in a lock file under the
-cache folder (musicbrainz.lock), and each request takes the lock, waits out the rest of the second
-and writes the new time before it goes. The console, a job worker and a CLI run started together
-still queue behind each other. Systems without fcntl (Windows) fall back to one a second per process.
+One a second holds across processes: the lock file musicbrainz.lock under the cache folder holds
+the time of the last request and a "not before" time. Each request takes the lock, waits out the
+rest of the second (or until "not before"), and writes the new time before it goes. The console, a
+job worker and a CLI run started together still queue behind each other. Systems without fcntl
+(Windows) fall back to the same rule per process.
 
 A 503 (MusicBrainz's "slow down"), a 429, a 5xx or a dropped connection is retried a few times
-with a growing wait (2, 4, 8, 16 s, or the server's Retry-After when it sends one, capped at a
-minute), then the call raises MusicBrainzError. A 404 is an answer, not an error: get() returns None.
+with a growing wait (2, 4, 8, 16 s, or the server's Retry-After in seconds when it sends one; an
+HTTP-date Retry-After falls back to the backoff), capped at a minute, then the call raises
+MusicBrainzError. The wait goes into the lock file as "not before", so every process honours it,
+since MusicBrainz's 503 asks the whole address to slow down, not one process.
+A 404 is an answer, not an error: get() returns None.
 
     from liner_notes.musicbrainz import Client
     mb = Client()
@@ -34,12 +38,13 @@ except ImportError:  # Windows
 
 API = "https://musicbrainz.org/ws/2/"
 GAP = 1.05  # seconds between requests, with a little room for clock skew
+LONGEST = 60.0  # the most any one wait can be, so a garbled lock file can't stall us
 RETRIES = 4  # tries after the first
 BACKOFF = 2.0  # first wait before a retry, doubled each time
 RETRY_CODES = (429, 500, 502, 503, 504)
 
 _local = threading.Lock()
-_last = [0.0]
+_last = [0.0, 0.0]  # last request, not before: the lock file's two numbers, for systems without fcntl
 
 
 class MusicBrainzError(RuntimeError):
@@ -63,14 +68,11 @@ class Client:
         self.api, self.gap, self.retries, self.backoff, self.timeout, self.user_agent = api, gap, retries, backoff, timeout, user_agent
         self.lock = Path(lock) if lock else paths.cache() / "musicbrainz.lock"
 
-    def _turn(self):
-        """Wait until `gap` has passed since the last request from any liner-notes process, then claim the slot."""
+    def _shared(self, change):
+        """Run change([last, not_before]) under the lock, and save what it leaves in the list."""
         with _local:
             if fcntl is None:
-                wait = _last[0] + self.gap - time.time()
-                if wait > 0:
-                    time.sleep(min(wait, self.gap))
-                _last[0] = time.time()
+                change(_last)
                 return
             self.lock.parent.mkdir(parents=True, exist_ok=True)
             with open(self.lock, "a+") as f:
@@ -78,18 +80,36 @@ class Client:
                 try:
                     f.seek(0)
                     try:
-                        last = float(f.read().strip() or 0)
+                        times = [float(x) for x in f.read().split()][:2]
                     except ValueError:
-                        last = 0.0
-                    wait = last + self.gap - time.time()
-                    if wait > 0:
-                        time.sleep(min(wait, self.gap))  # min: a garbled or future time can't stall us
+                        times = []
+                    times += [0.0] * (2 - len(times))
+                    change(times)
                     f.seek(0)
                     f.truncate()
-                    f.write(repr(time.time()))
+                    f.write(f"{times[0]!r} {times[1]!r}")
                     f.flush()
                 finally:
                     fcntl.flock(f, fcntl.LOCK_UN)
+
+    def _turn(self):
+        """Wait for our slot (a gap after the last request from any process, and not before a backoff), then claim it."""
+
+        def take(t):
+            wait = max(t[0] + self.gap, t[1]) - time.time()
+            if wait > 0:
+                time.sleep(min(wait, LONGEST))
+            t[0], t[1] = time.time(), 0.0  # the hold is served (a garbled one too, after a minute at most)
+
+        self._shared(take)
+
+    def _hold(self, seconds):
+        """Tell every process not to ask before `seconds` from now."""
+
+        def hold(t):
+            t[1] = max(t[1], time.time() + min(seconds, LONGEST))
+
+        self._shared(hold)
 
     def get(self, path, **params):
         """The JSON MusicBrainz returns for path and params, or None for a 404."""
@@ -111,7 +131,7 @@ class Client:
             except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
                 why = str(getattr(e, "reason", None) or e)
             if attempt < self.retries:
-                time.sleep(min(60.0, wait if wait is not None else self.backoff * 2**attempt))
+                self._hold(wait if wait is not None else self.backoff * 2**attempt)  # the next _turn waits it out
         raise MusicBrainzError(f"MusicBrainz didn't answer {path} after {self.retries + 1} tries ({why})")
 
 

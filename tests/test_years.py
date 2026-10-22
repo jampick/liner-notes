@@ -395,7 +395,7 @@ def test_the_writers_year_wins_and_check_names_both(tmp_path, monkeypatch):
     check.check(log=lambda *a: said.append(" ".join(map(str, a))))
     warn = [x for x in said if "Sailing" in x and "1979" in x and "1980" in x]
     assert warn and "warning" in warn[0], said
-    assert said[-1].endswith("0 problems"), said[-1]
+    assert not any(x.startswith("problem:") and "Sailing" in x for x in said), said  # a warning, not a problem
 
 
 def test_year_source_without_a_year_says_how_to_fix_it():
@@ -471,4 +471,7 @@ def test_review_refuses_to_write_a_broken_song(tmp_path, monkeypatch):
     with pytest.raises(SystemExit) as e:
         cli.main(["review", "a--b", "--by", "tester"])
     assert f.read_text() == before
-    assert str(f) in str(e.value.code) and "title" in str(e.value.code)
+    # the review would go to your copy in user data; a refused write leaves no copy behind
+    copy = tmp_path / "data/songs/a--b.json"
+    assert not copy.exists()
+    assert str(copy) in str(e.value.code) and "title" in str(e.value.code)

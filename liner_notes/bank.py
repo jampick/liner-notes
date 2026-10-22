@@ -33,7 +33,7 @@ def write_checked(p, obj, kind):
     if kind == "song" and p.stem != obj.get("id"):
         errs.append(f"file name {p.name} isn't the id {obj.get('id')!r}")
     if errs:
-        raise SchemaError(f"not writing {p.name}: " + "; ".join(errs))
+        raise SchemaError(f"not writing {p}: " + "; ".join(errs))
     paths.atomic_write(p, json.dumps(obj, indent=1, ensure_ascii=False) + "\n")
     return p
 

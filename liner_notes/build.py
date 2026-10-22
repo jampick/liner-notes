@@ -30,6 +30,10 @@ DATA_MARK = "/*__DATA__*/null"
 LIVE = "live"
 
 
+# Marks a warning about a song that build left off the page; build prints each of these on its own line.
+LEFT_OFF = "left off: "
+
+
 class Refused(Exception):
     """The build found problems and wasn't forced."""
 
@@ -95,8 +99,11 @@ def compose(slug, bank=None, public=False, cache=None, video=False, warnings=Non
             problems.append(f"no panel quote for {s['title']!r}")
             continue
         if s.get("year") is None:
-            # The page places every stop by year and has no undated shelf yet, so an undated song can't go on it.
-            problems.append(f"{s['title']!r} has no year yet; set one with its source in {sid}.json")
+            # The page places every stop by year and has no undated shelf yet, so an undated song is left off.
+            warnings.append(
+                f"{LEFT_OFF}{s['title']!r} ({s['artist']}) has no year, so it isn't on this page. "
+                f'Add "year": <year>, "year_source": "person" to {bank.song_files[sid]}'
+            )
             continue
         year = int(s["year"])
         era = next((e["n"] for e in eras if e["from"] <= year <= e["to"]), None)
@@ -284,7 +291,8 @@ def write_page(out, html, problems, force, log):
     if problems and not force:
         for p in problems:
             log("  problem:", p)
-        raise Refused(f"not writing {out}: {len(problems)} problems (--force writes it anyway)")
+        n = len(problems)
+        raise Refused(f"not writing {out}: {n} problem{'s' if n != 1 else ''} (--force writes it anyway)")
     return paths.atomic_write(out, html)
 
 
@@ -312,6 +320,10 @@ def build(slug, out=None, public=False, bank=None, cache=None, video=False, forc
     )
     for p in problems:
         log("  problem:", p)
+    left_off = [w for w in warnings if w.startswith(LEFT_OFF)]
+    for w in left_off:
+        log("  warning:", w.removeprefix(LEFT_OFF))
+    warnings = [w for w in warnings if not w.startswith(LEFT_OFF)]
     if warnings:
         log(f"  {len(warnings)} notes, first: {warnings[0]}")
     if not public:

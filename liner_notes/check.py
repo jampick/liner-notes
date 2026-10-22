@@ -55,7 +55,18 @@ def year_problems(song):
     """A year with no year_source is allowed (songs from before the field); a year_source with no year isn't."""
     y, src = song.get("year"), song.get("year_source")
     if y is None and src is not None:
-        return [f"$.year_source: {src!r} but no year"]
+        return [f"year_source is {src!r} but year is null; set a year or set year_source to null"]
+    return []
+
+
+def year_warnings(song):
+    """The writer's year and MusicBrainz's, when they differ. The writer's wins; a person should look."""
+    y, mb = song.get("year"), song.get("year_musicbrainz")
+    if song.get("year_source") == "writer" and mb and y and mb != y:
+        return [
+            f"{song['title']!r}: the writer says {y}, MusicBrainz says {mb}; the page uses {y}. "
+            'If MusicBrainz is right, set "year" to it and "year_source" to "person".'
+        ]
     return []
 
 
@@ -67,11 +78,12 @@ def schemas():
 def check(log=print):
     sc = schemas()
     bank = Bank()
-    problems, notes = [], []
+    problems, notes, warnings = [], [], []
     if not any((paths.home() / "songs").glob("*.json")):
         problems.append(f"the shipped bank isn't installed: no songs in {paths.home() / 'songs'}")
     for sid, s in bank.songs.items():
         f = bank.song_files[sid]
+        warnings += [f"{f}: {w}" for w in year_warnings(s)]
         problems += [f"{f.name}: {e}" for e in validate(s, sc["song"]) + year_problems(s)]
         if f.stem != sid:
             problems.append(f"{f.name}: id {sid!r} doesn't match the file name")
@@ -116,6 +128,8 @@ def check(log=print):
         notes.append(f"{slug}: {len(j['songs'])} songs, {len(written)} written, {reviewed} reviewed by a person{more}")
     for n in notes:
         log(n)
+    for w in warnings:
+        log("warning:", w)
     for p in problems:
         log("problem:", p)
     log(f"{len(bank.songs)} songs, {len(bank.journeys)} journeys, {len(problems)} problem{'' if len(problems) == 1 else 's'}")

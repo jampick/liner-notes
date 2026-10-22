@@ -39,6 +39,9 @@ def ascii_fold(s):
 
 
 # Letters that NFKD doesn't take apart, and scripts with a one-letter-at-a-time romanisation.
+# These tables are frozen: they make ids, and ids are file names and URLs. Changing a row, or
+# romanising a script that's hashed today (kanji readings, say), gives a song a new id, and a song
+# the Matcher can't find by alias would then be saved twice. Add a migration before touching them.
 _LATIN = dict(zip("øæœßđðþłıħŋ", "o ae oe ss d d th l i h ng".split(), strict=True))
 _CYRILLIC = dict(
     zip(
@@ -102,6 +105,12 @@ def _translit(s):
     return "".join(out)
 
 
+def slug_is_hash(s):
+    """True when slug(s) is the "x" and 8 hex digits fallback, not a romanisation."""
+    s = unicodedata.normalize("NFC", s or "").strip()
+    return bool(s) and re.fullmatch(r"x[0-9a-f]{8}", slug(s)) is not None and slug(s) != s.lower()
+
+
 def slug(s):
     """Lowercase ASCII words joined by hyphens. A name in a script with no simple romanisation here,
     or one that leaves nothing behind, becomes "x" and 8 hex digits of its hash, so it's never empty
@@ -145,8 +154,13 @@ def split_upload_title(title, artist):
 
 
 def key(s):
-    """Loose comparison key: ASCII, lowercase, alphanumerics only, leading 'the' dropped."""
+    """Loose comparison key: ASCII, lowercase, alphanumerics only, leading 'the' dropped.
+
+    A name with no Latin letters or digits keeps its own letters and digits, casefolded, so
+    竹内まりや and 松原みき don't both key to "". This isn't an id, so it can change freely."""
     k = re.sub(r"[^a-z0-9]", "", ascii_fold(s).lower())
+    if not k:
+        return "".join(c for c in unicodedata.normalize("NFKC", s or "").casefold() if c.isalnum())
     return k[3:] if k.startswith("the") and len(k) > 6 else k
 
 
