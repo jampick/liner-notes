@@ -47,10 +47,13 @@ class Bank:
     def __init__(self, roots=None):
         self.roots = [Path(r) for r in (roots or paths.roots())]
         self.songs, self.song_files, self.journeys, self.journey_dirs = {}, {}, {}, {}
+        shipped = paths.home().resolve()
         for r in reversed(self.roots):  # lowest priority first, so higher roots overwrite
+            mine = r.resolve() != shipped
             for f in sorted((r / "songs").glob("*.json")):
                 s = read_json(f)
-                if s.get("year") == 0:  # 0.2.0's generate wrote 0 for "no year"; it means undated
+                # 0.2.0's generate wrote 0 for "no year" in your own songs. In the shipped bank a 0 is a mistake, and check says so.
+                if mine and s.get("year") == 0:
                     s["year"], s["year_source"] = None, None
                 self.songs[s["id"]] = s
                 self.song_files[s["id"]] = f

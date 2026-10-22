@@ -120,9 +120,10 @@ class Client:
         for attempt in range(self.retries + 1):
             self._turn()
             wait = None
+            body = None
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout) as r:
-                    return json.loads(r.read())
+                    body = r.read()
             except urllib.error.HTTPError as e:
                 if e.code == 404:
                     return None
@@ -132,12 +133,15 @@ class Client:
             except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
                 why = str(getattr(e, "reason", None) or e)
             except http.client.HTTPException as e:  # IncompleteRead and friends: the answer was cut short
-                why = f"a cut-short answer ({type(e).__name__})"
-            except ValueError:  # a 200 that isn't JSON, like a proxy's error page
-                why = "an answer that wasn't JSON"
+                why = f"the answer was cut short, {type(e).__name__}"
+            if body is not None:
+                try:
+                    return json.loads(body)
+                except (json.JSONDecodeError, UnicodeDecodeError):  # a 200 that isn't JSON, like a proxy's error page
+                    why = "the answer wasn't JSON"
             if attempt < self.retries:
                 self._hold(wait if wait is not None else self.backoff * 2**attempt)  # the next _turn waits it out
-        raise MusicBrainzError(f"MusicBrainz didn't answer {path} after {self.retries + 1} tries ({why})")
+        raise MusicBrainzError(f"MusicBrainz didn't give a usable answer to {path} after {self.retries + 1} tries: {why}")
 
 
 def get(path, **params):

@@ -344,6 +344,9 @@ def publish(log=print):
         return 2
     problems = [f"tree: {p}" for p in scan_tree(home)]
     bank = Bank()
+    for f in sorted((paths.home() / "songs").glob("*.json")):  # the shipped files, even where your copy hides one
+        if not read_json(f).get("year"):
+            problems.append(f'{f}: no year. A shipped song needs one; set "year" and "year_source" before you push')
     with tempfile.TemporaryDirectory() as d:
         for slug, j in sorted(bank.journeys.items()):
             if j.get("kind") == "remix":

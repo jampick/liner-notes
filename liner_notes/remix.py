@@ -314,7 +314,7 @@ def build(slug, out=None, public=False, bank=None, cache=None, force=False, log=
     data, skipped = compose(slug, bank, cache, log)
     if not data and not force:
         how = " (run liner-notes migrate-personal)" if paths.pilot() else ""
-        raise NotHere(f"the remix files for {slug} (alignments, lyrics, profiles) aren't on this machine{how}")
+        raise NotHere(slug, f"its remix files (alignments, lyrics, profiles) aren't on this machine{how}")
     problems = []
     html = render(data, bank.journeys[slug]["title"], template_text(log))
     out = Path(out) if out else paths.dist() / f"{slug}.html"

@@ -41,6 +41,10 @@ class Refused(Exception):
 class NotHere(Refused):
     """The journey needs personal files this machine doesn't have (a remix stage's alignments)."""
 
+    def __init__(self, slug, why):
+        super().__init__(f"{slug}: {why}")
+        self.why = why
+
 
 def data_uri(path, mime):
     return f"data:{mime};base64," + base64.b64encode(Path(path).read_bytes()).decode()
@@ -112,13 +116,13 @@ def compose(slug, bank=None, public=False, cache=None, video=False, warnings=Non
         year = int(s["year"])
         era = next((e["n"] for e in eras if e["from"] <= year <= e["to"]), None)
         if era is None:
-            span = f"{eras[0]['from']} to {eras[-1]['to']}" if eras else "none"
+            span = f"({eras[0]['from']} to {eras[-1]['to']})" if eras else "and this journey has no eras"
             fix = (
                 "run liner-notes generate again to re-cut the eras, or widen one in journey.json"
                 if j.get("generated")
                 else "widen an era in journey.json, or check the year"
             )
-            problems.append(f"{s['title']!r} ({year}) is outside every era ({span}); {fix}")
+            problems.append(f"{s['title']!r} ({year}) is outside every era {span}; {fix}")
             continue
         yt = youtube_of(j, s)
         apple = (s.get("aliases") or {}).get("apple") or {}
@@ -362,7 +366,7 @@ def build_all(public=False, force=False, log=print, bank=None):
         try:
             build(slug, public=public, bank=bank, force=force, log=log)
         except NotHere as e:
-            log(f"{slug}: skipped, {e}")
+            log(f"{slug}: skipped, {e.why}")
         except Refused as e:
             log(f"{slug}: {e}")
             refused += 1

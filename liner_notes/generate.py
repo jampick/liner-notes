@@ -48,6 +48,7 @@ DEFAULT_COPY = {
     "endEmpty": "You didn't keep anything this time. Press K on a stop to keep it.",
     "credits": "",
 }
+KIND_NAMES = {"ep": "EP"}  # how release kinds read on screen; the rest read as MusicBrainz names them
 FONTS = "https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Chivo+Mono:wght@400;500&display=swap"
 
 
@@ -135,7 +136,11 @@ def plan(tracks, name, bank=None, lookup=None, log=print, journey_slug=None):
                     "review": {"state": "draft", "by": None, "date": None},
                     "provenance": {"ai_generated": False, "written_by": None, "written_on": None},
                 }
-                where = f', from "{info["release_title"]}" ({info.get("release_kind") or "release"})' if info.get("release_title") else ""
+                where = (
+                    f', from "{info["release_title"]}" ({KIND_NAMES.get(info.get("release_kind"), info.get("release_kind") or "release")})'
+                    if info.get("release_title")
+                    else ""
+                )
                 log(f"  {title}, {artist}: {info.get('year') or 'year unknown'}{where if info.get('year') else ''}")
         if sid not in order:
             order.append(sid)
