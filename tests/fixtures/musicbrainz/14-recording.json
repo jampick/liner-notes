@@ -1,0 +1,515 @@
+{
+ "path": "recording",
+ "query": {
+  "query": "recording:\"Give Me the Night\" AND artist:\"George Benson\"",
+  "limit": "15"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:33:02.012Z",
+  "count": 67,
+  "offset": 0,
+  "recordings": [
+   {
+    "id": "525e3792-ea5b-4c4a-9496-5f432bf3ba93",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "part of “The Power of the LP” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2005",
+    "releases": [
+     {
+      "id": "08705778-201f-453b-b686-0b91b8816551",
+      "title": "$mall ¢hange’s ‘The Power of the LP’ ¡WFMU Marathon ’05 beeyotch!",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "d9e5db85-1c89-34bb-8c4d-4f71ad090b54",
+       "title": "$mall ¢hange’s ‘The Power of the LP’ ¡WFMU Marathon ’05 beeyotch!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "2005"
+     }
+    ]
+   },
+   {
+    "id": "3730f169-8399-44fe-bf86-4311aff0372b",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "part of “The '80s Show” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2006",
+    "releases": [
+     {
+      "id": "48f99337-a077-4a8b-b136-91de77b0c5e9",
+      "title": "The '80s Show: Music for Grown Folks, Volume 1",
+      "status": "Promotion",
+      "release-group": {
+       "id": "72193688-440c-4f9f-8f6b-a14aaadab3da",
+       "title": "The '80s Show: Music for Grown Folks, Volume 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     }
+    ]
+   },
+   {
+    "id": "9043ddbc-c3df-4867-9b80-21a897ccdfe9",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2011-05-13",
+    "releases": [
+     {
+      "id": "bb6a0fc1-1465-4e8c-bbc0-c97b1ca09d14",
+      "title": "Solid Gold: 80s Funk & Soul Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "6090f87a-7ba3-4e9f-b52c-4af160652c02",
+       "title": "Solid Gold: 80s Funk & Soul Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-05-13"
+     }
+    ]
+   },
+   {
+    "id": "f71e68bd-98a5-4f30-ab72-e54b8083841b",
+    "score": 100,
+    "title": "Give Me The Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "1990",
+    "releases": [
+     {
+      "id": "a16fc29c-be2a-4615-b62b-03e97a44b608",
+      "title": "Grand New World",
+      "status": "Official",
+      "release-group": {
+       "id": "a157c927-9d43-4822-8b29-7555c654e5f4",
+       "title": "Grand New World - Greatest Love Songs",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     }
+    ]
+   },
+   {
+    "id": "717ca25c-1ca9-4910-9b0b-ff65789a29a7",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2002",
+    "releases": [
+     {
+      "id": "38b7db62-3d58-40cc-9510-f5926ea75aa1",
+      "title": "The Songs of Rod Temperton",
+      "status": "Promotion",
+      "release-group": {
+       "id": "cf3c2e4d-49e1-41bf-8ec8-52597b75a607",
+       "title": "The Songs Of Rod Temperton",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     }
+    ]
+   },
+   {
+    "id": "2314661f-c73d-4a7e-a8ab-12845c6bee2e",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2017-06-23",
+    "releases": [
+     {
+      "id": "321bad8d-e13f-4304-a0dd-5994bf80cbf9",
+      "title": "100% Tubes de l’été 2017",
+      "status": "Official",
+      "release-group": {
+       "id": "45b0fa7b-e08f-44b7-83f3-9617f41fbfb9",
+       "title": "100% Tubes de l’été 2017",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-06-23"
+     },
+     {
+      "id": "07df7837-2f99-4780-80d2-7b5797d02ef8",
+      "title": "Golden Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "0b77b269-2f34-42c9-b1b7-168c183db7a8",
+       "title": "Golden Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "8cd0968d-82cc-4481-8c4a-d06bec6af759",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2016",
+    "releases": [
+     {
+      "id": "e969f74e-6b86-4a1e-9371-b78f7be45c47",
+      "title": "Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "7bb9b9dd-12b7-421d-a416-3e5b165ac5b3",
+       "title": "Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2016"
+     }
+    ]
+   },
+   {
+    "id": "4358da93-0e6b-4105-9cd4-0295c0df2c00",
+    "score": 100,
+    "title": "Give me the night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "809cdec9-886d-4587-9cca-44659fb1f8da",
+      "title": "Live",
+      "release-group": {
+       "id": "f796767b-74f6-429c-ba29-6d9700d723ee",
+       "title": "The Best of George Benson Live (MSN exclusive)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2000"
+     }
+    ]
+   },
+   {
+    "id": "2345b206-a793-4c2f-b75e-61c4f6982376",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "part of “Ministry of Sound: 80s Soul Jams” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2018-05-04",
+    "releases": [
+     {
+      "id": "f2bbe35f-9b12-4349-a87a-3f7be4b690c2",
+      "title": "Ministry of Sound: 80s Soul Jams",
+      "status": "Official",
+      "release-group": {
+       "id": "1510f0c8-8470-4c3c-b09e-2083953dbafc",
+       "title": "Ministry of Sound: 80s Soul Jams",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2018-05-04"
+     }
+    ]
+   },
+   {
+    "id": "5ef96c32-852f-4973-b7d2-31f2bcaf1cc8",
+    "score": 100,
+    "title": "Give Me The Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2007-10-10",
+    "releases": [
+     {
+      "id": "b6440952-43ee-415a-bacb-309d2b2a754a",
+      "title": "The George Benson Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "5b9ef4d2-f72f-4824-93f3-aef1a7570b01",
+       "title": "The George Benson Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007-10-10"
+     }
+    ]
+   },
+   {
+    "id": "ad546e96-1427-4bb0-b6ee-a6f54bfdd262",
+    "score": 100,
+    "title": "Give Me The Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2013-02-18",
+    "releases": [
+     {
+      "id": "22e19ffe-7fa5-4e6b-9120-c73ad5e1045a",
+      "title": "Mum: The Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "883abb41-45d7-4472-adbd-17ff11c63216",
+       "title": "Mum: The Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013-02-18"
+     }
+    ],
+    "isrcs": [
+     "USWB11300065"
+    ]
+   },
+   {
+    "id": "d6081682-7929-47bf-9ec2-4086ed6554b3",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2019",
+    "releases": [
+     {
+      "id": "2812439d-c295-450b-9326-dbce67525257",
+      "title": "The Ultimate Collection: Disco Inferno",
+      "status": "Official",
+      "release-group": {
+       "id": "c6a6d958-89ec-4025-8eb3-57eb17e732c1",
+       "title": "The Ultimate Collection: Disco Inferno",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2019"
+     }
+    ]
+   },
+   {
+    "id": "81b24013-478b-448b-90c5-d9420dc05c4b",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "part of “Kontor: Top of the Clubs 80s Rare Grooves” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2020-08-28",
+    "releases": [
+     {
+      "id": "15ac75c9-b2fd-474d-b546-ee2205ae3b31",
+      "title": "Kontor: Top of the Clubs 80s Rare Grooves",
+      "status": "Official",
+      "release-group": {
+       "id": "a271ea55-d9a1-430c-910f-7e0568835508",
+       "title": "Kontor: Top of the Clubs 80s Rare Grooves",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2020-08-28"
+     }
+    ]
+   },
+   {
+    "id": "70c295f5-b0e1-49fb-adc6-31935c39343c",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "1991",
+    "releases": [
+     {
+      "id": "c6c3d8a4-e803-42e7-ba25-7b4a183a10ef",
+      "title": "Midnight Moods",
+      "status": "Official",
+      "release-group": {
+       "id": "cfc4ba14-d1b9-3d16-a11a-78cbd6176f39",
+       "title": "Midnight Moods",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1991"
+     }
+    ]
+   },
+   {
+    "id": "22b71f82-6f57-4aae-bdb3-5ff22fa83e73",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2008",
+    "releases": [
+     {
+      "id": "d3d3c319-31e2-465b-a44c-20c8359698e7",
+      "title": "Ferry Maat’s Soul Show Top 100",
+      "status": "Official",
+      "release-group": {
+       "id": "b6997d15-efd4-39e7-874d-c2e6e2ef9fed",
+       "title": "Ferry Maat’s Soul Show Top 100",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,1808 @@
+{
+ "path": "recording",
+ "query": {
+  "query": "recording:\"Houses of the Holy\" AND artist:\"Led Zeppelin\"",
+  "limit": "100"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:26:51.141Z",
+  "count": 5,
+  "offset": 0,
+  "recordings": [
+   {
+    "id": "cbf08889-8d66-4307-aa2b-436ad488ac27",
+    "score": 100,
+    "title": "Houses of the Holy",
+    "artist-credit": [
+     {
+      "name": "Led Zeppelin",
+      "joinphrase": "",
+      "artist": {
+       "id": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+       "name": "Led Zeppelin"
+      }
+     }
+    ],
+    "first-release-date": "1993-03-20",
+    "releases": [
+     {
+      "id": "9b124aa6-26cb-4c68-b5b6-7ae7468df8ec",
+      "title": "AT&T Showcase of Rock – The Led Zeppelin Story",
+      "status": "Official",
+      "release-group": {
+       "id": "26e073a1-a825-4098-b9c9-f1e14135678d",
+       "title": "AT&T Showcase of Rock – The Led Zeppelin Story",
+       "primary-type": "Broadcast"
+      },
+      "date": "1993-03-20"
+     }
+    ]
+   },
+   {
+    "id": "024c6727-cbf4-4094-9b97-eedfb769061c",
+    "score": 100,
+    "title": "Houses of the Holy",
+    "artist-credit": [
+     {
+      "name": "Led Zeppelin",
+      "joinphrase": "",
+      "artist": {
+       "id": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+       "name": "Led Zeppelin"
+      }
+     }
+    ],
+    "first-release-date": "1990",
+    "releases": [
+     {
+      "id": "f3bd72bf-19a4-4491-b408-9c889fa322d2",
+      "title": "Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "a8d1a687-e323-42cc-8f6f-17f9661b03c2",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     }
+    ]
+   },
+   {
+    "id": "3e0cc204-4d17-484f-bec3-7c2a9727db36",
+    "score": 100,
+    "title": "Houses of the Holy",
+    "artist-credit": [
+     {
+      "name": "Led Zeppelin",
+      "joinphrase": "",
+      "artist": {
+       "id": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+       "name": "Led Zeppelin"
+      }
+     }
+    ],
+    "first-release-date": "1975-02-24",
+    "releases": [
+     {
+      "id": "25a9c57a-a49b-4f4d-a73a-bcf35f01168c",
+      "title": "Led Zeppelin x Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "07e182ae-6567-4bc4-90f0-73619c942d73",
+       "title": "Led Zeppelin x Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-09-27"
+     },
+     {
+      "id": "36090bc6-d47a-412f-9cdf-786ec68e3614",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1994"
+     },
+     {
+      "id": "1b17ad0c-4a30-489b-87e3-1f0711ed26f9",
+      "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+      "status": "Official",
+      "release-group": {
+       "id": "d9d3b39a-c55b-31b4-84de-f423da4c39b0",
+       "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "3277201d-74dc-4d9b-acd6-f4393a5afa60",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": ""
+     },
+     {
+      "id": "9fb6891a-b87f-4d0a-85ed-2c84f9d000c0",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2005-05-25"
+     },
+     {
+      "id": "2160f0e6-d8bf-4f08-868c-2e511130b6b7",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2008-09-10"
+     },
+     {
+      "id": "1b66f202-2259-47b7-8a05-b1159a22bfbb",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1975"
+     },
+     {
+      "id": "1d9215a9-56ed-414b-b3f5-d648112171f0",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": ""
+     },
+     {
+      "id": "d94e4232-8e16-48e6-b54d-43e61552e92b",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-23"
+     },
+     {
+      "id": "885fba4e-0ada-497a-ae06-4f18a17c5934",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007"
+     },
+     {
+      "id": "ed13d9e5-9fba-4620-a6d4-5082c734c345",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997-11-05"
+     },
+     {
+      "id": "be43b15f-b31a-4357-ac8c-8d1a534e5f60",
+      "title": "Early Days & Latter Days: The Best of Led Zeppelin, Volumes One and Two",
+      "status": "Official",
+      "release-group": {
+       "id": "0994b340-aa7c-45b9-91c3-379f8b6ac0a7",
+       "title": "Early Days & Latter Days: The Best of Led Zeppelin, Volumes One and Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "4a7e5ad6-6690-40e2-ae8b-4d21fd96d714",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": ""
+     },
+     {
+      "id": "10d6aca4-f157-4cec-ab3b-efa1f109dc00",
+      "title": "Thulemann Box",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "6553f2f6-1afd-4477-b888-9a2a9379be01",
+       "title": "Thulemann Box",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2023-06-25"
+     },
+     {
+      "id": "9b6c7d58-f359-448f-8012-60191110f5a9",
+      "title": "Thulemann Box: The Complete Album Collection 1969-1982",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "6553f2f6-1afd-4477-b888-9a2a9379be01",
+       "title": "Thulemann Box",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2024"
+     },
+     {
+      "id": "60a4ab8c-db31-4131-96ea-e938528b298d",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1992-02-21"
+     },
+     {
+      "id": "dba213b6-a676-46f3-b66c-229431009337",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1975"
+     },
+     {
+      "id": "4a7656c8-62f5-4795-9bc8-b6631d2079b8",
+      "title": "The Complete Led Zeppelin",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "e0c96341-5bb2-4de6-85a0-2ee89ecf5808",
+       "title": "The Complete Led Zeppelin",
+       "primary-type": "Other",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "4a7656c8-62f5-4795-9bc8-b6631d2079b8",
+      "title": "The Complete Led Zeppelin",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "e0c96341-5bb2-4de6-85a0-2ee89ecf5808",
+       "title": "The Complete Led Zeppelin",
+       "primary-type": "Other",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "d3c520f6-0497-49d1-a20f-731ad77e023d",
+      "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+      "status": "Official",
+      "release-group": {
+       "id": "d9d3b39a-c55b-31b4-84de-f423da4c39b0",
+       "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     },
+     {
+      "id": "832e0862-e4d1-4747-8051-d8e12a720e1c",
+      "title": "The Very Best of Led Zeppelin: Early Days & Latter Days",
+      "status": "Official",
+      "release-group": {
+       "id": "0994b340-aa7c-45b9-91c3-379f8b6ac0a7",
+       "title": "Early Days & Latter Days: The Best of Led Zeppelin, Volumes One and Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "cc5b49d7-1215-4aed-b73c-e934faa4f5fe",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007"
+     },
+     {
+      "id": "b310b5aa-04de-49cd-8cc3-2c65c230dc4e",
+      "title": "Gold",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "1233a491-ee22-4f19-9bb5-831baeefe30b",
+       "title": "Greatest Hits 1969-1982",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "987fb639-4f31-47ea-b4f2-8457f3d1ffc2",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015"
+     },
+     {
+      "id": "0aeb7173-5c47-415d-b908-f1514860de45",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1987"
+     },
+     {
+      "id": "f6a4261f-4cd7-4430-a610-ba80cfe449c1",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2003-05-28"
+     },
+     {
+      "id": "0d075c33-d562-3f6c-9b8e-ad27d38c0073",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2005-05-25"
+     },
+     {
+      "id": "8dbf8496-060c-461a-82c5-1296efe3ee17",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     },
+     {
+      "id": "40d746fc-ceab-353c-9a8f-263e2ab6622c",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2006-03-06"
+     },
+     {
+      "id": "0be218c3-c96e-4a29-994e-5fd72a28f68e",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015"
+     },
+     {
+      "id": "a9d66b8a-1018-46ef-ac6c-7a4d645f8ac0",
+      "title": "Led Zeppelin",
+      "status": "Promotion",
+      "release-group": {
+       "id": "7cfaae49-db15-4c27-a3e2-86cfcb7be3ee",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "00517098-31c1-4be0-9eb7-dcf0397d3749",
+      "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+      "status": "Official",
+      "release-group": {
+       "id": "d9d3b39a-c55b-31b4-84de-f423da4c39b0",
+       "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     },
+     {
+      "id": "8841b4c9-524f-49e6-9660-05f31248c26d",
+      "title": "Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "fadd0405-9ba3-496b-890c-ad250336f3c2",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006-07"
+     },
+     {
+      "id": "4c9ff4de-69db-4613-9467-ca2d8a79d996",
+      "title": "Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "92d5e425-6dff-34d7-8edf-0c82156b46b0",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     },
+     {
+      "id": "18b4c871-01de-4886-a3cc-257890c347b5",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990-10-15"
+     },
+     {
+      "id": "aa648dee-10c7-4dd8-8e11-182d85bc2ccf",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "dcf1454b-5354-4c65-8c7b-616aff3490ed",
+      "title": "Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "92d5e425-6dff-34d7-8edf-0c82156b46b0",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990-11-15"
+     },
+     {
+      "id": "54423f8f-43bc-4736-b2cd-8ff0b43f8332",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "cc09bf24-1a1d-4b0f-a447-3aaf89fa6aa2",
+      "title": "Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "92d5e425-6dff-34d7-8edf-0c82156b46b0",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     },
+     {
+      "id": "4b925111-79c4-4cd1-97ee-87ffedbc55ec",
+      "title": "Greatest Hits 1969-1982",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "1233a491-ee22-4f19-9bb5-831baeefe30b",
+       "title": "Greatest Hits 1969-1982",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "55ffa369-eac3-4c3f-a542-584e3a9af8a0",
+      "title": "Latter Days - The Best Of Led Zeppelin Volume Two",
+      "status": "Official",
+      "release-group": {
+       "id": "d9d3b39a-c55b-31b4-84de-f423da4c39b0",
+       "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "62cd7998-f3dd-49f0-8866-5c08706043c6",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990-11-15"
+     },
+     {
+      "id": "4cc2a67e-5b9c-4371-a320-1a554d604561",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1995"
+     },
+     {
+      "id": "67e9fae2-28bf-441c-954d-9966b771cca3",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1987"
+     },
+     {
+      "id": "e772eaa2-9044-4049-b39b-c6f9b0273c24",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1989-06-10"
+     },
+     {
+      "id": "3eb5ec18-4f0f-4daf-b9cd-ae21bb867e05",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1975"
+     },
+     {
+      "id": "5fdf774f-d9be-48b8-89df-d4c4761c4271",
+      "title": "Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "92d5e425-6dff-34d7-8edf-0c82156b46b0",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "812512b2-52cf-4524-a285-1a90193025dc",
+      "title": "Forever Gold II",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "30036378-a991-3f11-ae87-ec8372d3b9b6",
+       "title": "Forever Gold II",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "c2fef9ca-f17c-40f6-a8a1-f389a7d2d3bf",
+      "title": "Greatest Hits 1973–1982",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "249879e8-274c-313a-92b2-12190c0aeda8",
+       "title": "Greatest Hits 1973–1982",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1993"
+     },
+     {
+      "id": "1ce22c94-1d97-4dc3-87f1-a73403357333",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1991"
+     },
+     {
+      "id": "d1c6f935-62f7-41ed-9109-3ebb3afe8247",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     },
+     {
+      "id": "e53120aa-ef15-491d-ad39-8ef159a6ca6b",
+      "title": "Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "92d5e425-6dff-34d7-8edf-0c82156b46b0",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990-10-08"
+     },
+     {
+      "id": "77849f5b-9389-4fdd-9a68-70124f2483b4",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007"
+     },
+     {
+      "id": "83b750c4-13a7-45f5-aa81-9ac221a0f604",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2015-11-06"
+     },
+     {
+      "id": "e3f0f405-d50f-45a4-ba71-795e7333fb56",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1975-02-24"
+     },
+     {
+      "id": "57194dc1-0b9a-45a1-b22a-e9c2717cd5f4",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2015-11-06"
+     },
+     {
+      "id": "f0b7b859-e1df-4ebb-8416-9be7bea3ed48",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "0011b950-e304-489a-bd9e-98ce761a4704",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     },
+     {
+      "id": "bb3c389d-0865-4bcf-b0be-8805d5410501",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     },
+     {
+      "id": "55ba079a-9d65-35cd-8f91-c03eea31077a",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     },
+     {
+      "id": "48f19e0f-d589-3104-b022-d77f9e2d2535",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990-10-15"
+     },
+     {
+      "id": "aee2111d-40cf-4c05-a5de-83a6519b827e",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2015-11-06"
+     },
+     {
+      "id": "50aae23c-c7a0-4078-9c81-1fc95a09816f",
+      "title": "Thulemann Box",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "6553f2f6-1afd-4477-b888-9a2a9379be01",
+       "title": "Thulemann Box",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015"
+     },
+     {
+      "id": "882a4729-1a5b-43a1-96f6-0c0c72a3353e",
+      "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+      "status": "Official",
+      "release-group": {
+       "id": "d9d3b39a-c55b-31b4-84de-f423da4c39b0",
+       "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "182790b1-9e53-413d-98b5-b536379dd4c5",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-23"
+     },
+     {
+      "id": "26e9c7d2-0bde-4f7f-b252-ae947fb720ce",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2015"
+     },
+     {
+      "id": "4f0ea8e1-20ad-456f-a2e5-9400aa954505",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1995-12-21"
+     },
+     {
+      "id": "0be3ef82-1903-4f6f-99f4-2d88398d63bb",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-23"
+     },
+     {
+      "id": "74a145eb-e35c-45a2-9379-504fa0dc39f1",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-24"
+     },
+     {
+      "id": "40a1dc08-ffc1-4a99-a257-c33f36aae175",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2003"
+     },
+     {
+      "id": "7e886fe7-cdce-4cc4-a61f-833e24bf8121",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015"
+     },
+     {
+      "id": "eca4f64f-78af-471d-86fe-24ed1b3a3e6b",
+      "title": "Led Zeppelin x Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "07e182ae-6567-4bc4-90f0-73619c942d73",
+       "title": "Led Zeppelin x Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-09-27"
+     },
+     {
+      "id": "83c6599b-53ae-445f-90f9-7a9484394904",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1989"
+     },
+     {
+      "id": "fc15594a-8a87-4550-b63e-e946c20c51a7",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-24"
+     },
+     {
+      "id": "052dfa98-047d-43c2-bb46-bfadde0765f8",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2012-12-20"
+     },
+     {
+      "id": "781f49d5-0977-471a-b16c-d1124501c552",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1994"
+     },
+     {
+      "id": "f9dce536-f711-4d3c-a33e-62667d89d46d",
+      "title": "Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "92d5e425-6dff-34d7-8edf-0c82156b46b0",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "1bf539af-2e6f-41c3-a9f4-8bfd093e68a4",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2015"
+     },
+     {
+      "id": "ad23c035-bcaa-437e-b192-9c787a791823",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007-11-13"
+     },
+     {
+      "id": "b1af3be4-ed72-4c86-9e17-904a72dffddd",
+      "title": "The Complete Studio Albums",
+      "status": "Official",
+      "release-group": {
+       "id": "b80eafc6-74f0-365d-8776-478d6e188468",
+       "title": "The Complete Studio Recordings",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013-07-23"
+     },
+     {
+      "id": "01d12847-43bc-3c48-8938-125e5545e355",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1994"
+     },
+     {
+      "id": "a8ddb865-94ac-3bba-a78c-14fb771e0a93",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1987-05"
+     },
+     {
+      "id": "5898a744-482c-4401-9e13-4477647115fc",
+      "title": "Physical Graffiti",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2012-06"
+     },
+     {
+      "id": "58d94486-e02d-4c82-b693-5806132f6273",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1994-08-16"
+     },
+     {
+      "id": "ee4fc1bb-ebd0-3473-85f4-9a9d48c6f0d7",
+      "title": "Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "92d5e425-6dff-34d7-8edf-0c82156b46b0",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990-10-23"
+     },
+     {
+      "id": "4bd72d5b-1033-395a-9ed3-6110b7b85556",
+      "title": "Led Zeppelin",
+      "status": "Official",
+      "release-group": {
+       "id": "92d5e425-6dff-34d7-8edf-0c82156b46b0",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990-10"
+     },
+     {
+      "id": "b726e175-cca4-4ee0-ac81-f4d131c6bfbc",
+      "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+      "status": "Official",
+      "release-group": {
+       "id": "d9d3b39a-c55b-31b4-84de-f423da4c39b0",
+       "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000-03-21"
+     },
+     {
+      "id": "54eb6bf3-5156-3a7e-92dd-aff617fb4a61",
+      "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+      "status": "Official",
+      "release-group": {
+       "id": "d9d3b39a-c55b-31b4-84de-f423da4c39b0",
+       "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "e5020ab2-1011-33a5-a407-9557b9765e02",
+      "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+      "status": "Official",
+      "release-group": {
+       "id": "d9d3b39a-c55b-31b4-84de-f423da4c39b0",
+       "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003-02-24"
+     },
+     {
+      "id": "54a43b33-c047-4794-93f7-5470d7987c68",
+      "title": "Definitive Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "25b1892a-c518-3871-86b8-20071a42a563",
+       "title": "Definitive Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008-09-10"
+     },
+     {
+      "id": "0702b80f-343f-3230-987b-74aa742f6ad4",
+      "title": "Definitive Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "25b1892a-c518-3871-86b8-20071a42a563",
+       "title": "Definitive Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008-11-11"
+     },
+     {
+      "id": "040ac283-690d-44bf-906b-8d12874dea59",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007"
+     },
+     {
+      "id": "9353b4ef-cff0-4b84-89bb-a10ae48c65d4",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007-11-09"
+     },
+     {
+      "id": "068634ea-8ee1-315d-84a7-85f306db7ed3",
+      "title": "Definitive Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "25b1892a-c518-3871-86b8-20071a42a563",
+       "title": "Definitive Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008-11-07"
+     },
+     {
+      "id": "4bb87132-b595-4207-84d2-5f75c51e9867",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1990"
+     },
+     {
+      "id": "c8b7e9c2-4b4a-4881-b9f1-b279f837ddc2",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": ""
+     },
+     {
+      "id": "7b28d280-2dbe-41f8-b537-f9a662c43086",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2010-06-10"
+     },
+     {
+      "id": "f4f7b03b-e483-3ebb-8dee-4bdbd4b32c5a",
+      "title": "Early Days & Latter Days: The Best of Led Zeppelin, Volumes One and Two",
+      "status": "Official",
+      "release-group": {
+       "id": "0994b340-aa7c-45b9-91c3-379f8b6ac0a7",
+       "title": "Early Days & Latter Days: The Best of Led Zeppelin, Volumes One and Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002-11-19"
+     },
+     {
+      "id": "0d06025c-afff-49fd-a1db-8005e686e4d9",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1975-02-24"
+     },
+     {
+      "id": "67456981-b2b4-4d68-8012-79ca21b4baf7",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2006"
+     },
+     {
+      "id": "28daaad3-2279-3d69-8ef1-d0598b75f1c9",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007"
+     },
+     {
+      "id": "ccea37d3-4b83-4c6f-b737-1d94bc4070e2",
+      "title": "The Complete Studio Recordings",
+      "status": "Official",
+      "release-group": {
+       "id": "b80eafc6-74f0-365d-8776-478d6e188468",
+       "title": "The Complete Studio Recordings",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1993-09-28"
+     },
+     {
+      "id": "e78f68ef-5009-44d9-8dbd-49691660b2fd",
+      "title": "The Very Best of Led Zeppelin - Early Days & Latter Days",
+      "status": "Official",
+      "release-group": {
+       "id": "0994b340-aa7c-45b9-91c3-379f8b6ac0a7",
+       "title": "Early Days & Latter Days: The Best of Led Zeppelin, Volumes One and Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003-12-17"
+     },
+     {
+      "id": "5ddd8429-2032-4741-9bc0-fe6055ab3c5b",
+      "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+      "status": "Official",
+      "release-group": {
+       "id": "d9d3b39a-c55b-31b4-84de-f423da4c39b0",
+       "title": "Latter Days: The Best of Led Zeppelin, Volume Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000-03-23"
+     },
+     {
+      "id": "72b5c27b-7e87-400c-8d97-805f03e6d9bd",
+      "title": "Early Days & Latter Days: The Best of Led Zeppelin, Volumes One and Two",
+      "status": "Official",
+      "release-group": {
+       "id": "0994b340-aa7c-45b9-91c3-379f8b6ac0a7",
+       "title": "Early Days & Latter Days: The Best of Led Zeppelin, Volumes One and Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "894420da-dc88-4edb-a651-80efe1ee78ef",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1994"
+     },
+     {
+      "id": "e38d73ad-b72f-4ecd-ba6d-68e62b1ae25b",
+      "title": "Early Days & Latter Days: The Best of Led Zeppelin, Volumes One and Two",
+      "status": "Official",
+      "release-group": {
+       "id": "0994b340-aa7c-45b9-91c3-379f8b6ac0a7",
+       "title": "Early Days & Latter Days: The Best of Led Zeppelin, Volumes One and Two",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002-11-19"
+     },
+     {
+      "id": "98628230-6bdf-40f1-b5da-141157acba27",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1987"
+     },
+     {
+      "id": "bc21d592-5843-4012-8130-8af5b8cb97bf",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007-11-13"
+     },
+     {
+      "id": "6e652c9e-4a52-42f7-87d9-cc58978184e2",
+      "title": "Led Zeppelin",
+      "status": "Promotion",
+      "release-group": {
+       "id": "f0f76bfa-96e2-4041-9e30-5bdb2c619711",
+       "title": "Led Zeppelin",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "dd433df0-cd39-3ffc-9ca2-f99d597815ea",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007-11-13"
+     },
+     {
+      "id": "156188bf-90fc-420c-89d5-a8238b6a6c2c",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1987-05"
+     },
+     {
+      "id": "59b57a37-24b5-4c8e-8330-260bb475caf4",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-24"
+     },
+     {
+      "id": "1f961350-707e-4c33-8234-e182f0aece45",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-24"
+     },
+     {
+      "id": "d487cbd1-365c-49d0-89b5-8fffff816f97",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2012-11-28"
+     },
+     {
+      "id": "4ac7ca4e-e3bb-4cc4-91d5-c17b963d09f8",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2012-11-28"
+     },
+     {
+      "id": "1a61cbd4-41ea-461b-bf68-5832bfda0422",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-24"
+     },
+     {
+      "id": "8f499a3a-b227-4a3b-80f9-a99d57743c59",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007"
+     },
+     {
+      "id": "f70e6138-2c32-43c6-b6a7-ade6fc7527be",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007-11-12"
+     },
+     {
+      "id": "389f42a7-071f-4b63-a7ce-ea6addc16b7d",
+      "title": "Remasters",
+      "status": "Official",
+      "release-group": {
+       "id": "115af8d3-65da-370a-b174-b42e82f470e5",
+       "title": "Remasters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     },
+     {
+      "id": "c699f9c8-8e6d-4502-b1ea-3c04e0e8fc5c",
+      "title": "Mothership",
+      "status": "Official",
+      "release-group": {
+       "id": "4511c129-cbf8-3366-891b-f1e6c8dab80c",
+       "title": "Mothership",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "2007-11-14"
+     },
+     {
+      "id": "42ae304f-54aa-38bf-9cc0-aae2f1549ca2",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "1987-03-25"
+     }
+    ],
+    "isrcs": [
+     "USAT21207039",
+     "USRH11505637",
+     "USRH11505150",
+     "USAT21300967",
+     "USAT20703881",
+     "USAT29900631"
+    ]
+   },
+   {
+    "id": "10ac721d-a2ec-46a1-8438-2e433cf22878",
+    "score": 82,
+    "title": "Houses of the Holy (rough mix with overdubs)",
+    "artist-credit": [
+     {
+      "name": "Led Zeppelin",
+      "joinphrase": "",
+      "artist": {
+       "id": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+       "name": "Led Zeppelin"
+      }
+     }
+    ],
+    "first-release-date": "2015-02-23",
+    "releases": [
+     {
+      "id": "182790b1-9e53-413d-98b5-b536379dd4c5",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-23"
+     },
+     {
+      "id": "1a61cbd4-41ea-461b-bf68-5832bfda0422",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-24"
+     },
+     {
+      "id": "74a145eb-e35c-45a2-9379-504fa0dc39f1",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-24"
+     },
+     {
+      "id": "7e886fe7-cdce-4cc4-a61f-833e24bf8121",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015"
+     },
+     {
+      "id": "fc15594a-8a87-4550-b63e-e946c20c51a7",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-24"
+     },
+     {
+      "id": "d94e4232-8e16-48e6-b54d-43e61552e92b",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-23"
+     },
+     {
+      "id": "59b57a37-24b5-4c8e-8330-260bb475caf4",
+      "title": "Physical Graffiti",
+      "status": "Official",
+      "release-group": {
+       "id": "116c9490-6af4-3827-8261-2d5b1f508fe7",
+       "title": "Physical Graffiti",
+       "primary-type": "Album"
+      },
+      "date": "2015-02-24"
+     }
+    ]
+   },
+   {
+    "id": "36c434b9-7f71-4619-a007-a5a41d379d23",
+    "score": 80,
+    "title": "Whole Lotta Led (Historical Medley): Houses of the Holy",
+    "artist-credit": [
+     {
+      "name": "Led Zeppelin",
+      "joinphrase": "",
+      "artist": {
+       "id": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+       "name": "Led Zeppelin"
+      }
+     }
+    ],
+    "first-release-date": "1997",
+    "releases": [
+     {
+      "id": "354709f5-dc25-419c-b381-6cb106d2e5a1",
+      "title": "The Girl I Love",
+      "status": "Promotion",
+      "release-group": {
+       "id": "49d8ca55-5a9a-3869-b895-2cf4b2975554",
+       "title": "The Girl I Love",
+       "primary-type": "Single"
+      },
+      "date": "1997"
+     }
+    ]
+   }
+  ]
+ }
+}

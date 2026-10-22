@@ -1,0 +1,81 @@
+{
+ "path": "recording/58bd173e-7d27-4a7a-8ff4-750d081d9368",
+ "query": {
+  "inc": "isrcs+artist-credits+releases"
+ },
+ "status": 200,
+ "body": {
+  "artist-credit": [
+   {
+    "artist": {
+     "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+     "id": "535afeda-2538-435d-9dd1-5e10be586774",
+     "country": "US",
+     "disambiguation": "",
+     "type": "Group",
+     "name": "Earth, Wind & Fire",
+     "sort-name": "Earth, Wind & Fire"
+    },
+    "joinphrase": "",
+    "name": "Earth, Wind & Fire"
+   }
+  ],
+  "first-release-date": "1982",
+  "video": false,
+  "length": 247000,
+  "releases": [
+   {
+    "packaging-id": null,
+    "disambiguation": "",
+    "packaging": null,
+    "release-events": [
+     {
+      "date": "1982",
+      "area": {
+       "iso-3166-1-codes": [
+        "JP"
+       ],
+       "sort-name": "Japan",
+       "name": "Japan",
+       "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+       "type": null,
+       "disambiguation": "",
+       "type-id": null
+      }
+     }
+    ],
+    "status-id": "518ffc83-5cde-34df-8627-81bff5093d92",
+    "artist-credit": [
+     {
+      "joinphrase": "",
+      "artist": {
+       "disambiguation": "add compilations to this artist",
+       "type": "Other",
+       "id": "89ad4ac3-39f7-470e-963a-56509c546377",
+       "country": null,
+       "type-id": "ac897045-5043-3294-969b-187360e45d86",
+       "name": "Various Artists",
+       "sort-name": "Various Artists"
+      },
+      "name": "Various Artists"
+     }
+    ],
+    "status": "Promotion",
+    "barcode": null,
+    "date": "1982",
+    "id": "443bee64-7692-4804-a347-8d6a9d5417cc",
+    "title": "All American Top 100: January 1982",
+    "country": "JP",
+    "text-representation": {
+     "script": "Latn",
+     "language": "eng"
+    },
+    "quality": "normal"
+   }
+  ],
+  "title": "Let’s Groove",
+  "id": "58bd173e-7d27-4a7a-8ff4-750d081d9368",
+  "disambiguation": "",
+  "isrcs": []
+ }
+}

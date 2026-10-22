@@ -1,0 +1,730 @@
+{
+ "path": "release-group",
+ "query": {
+  "query": "releasegroup:\"Houses of the Holy\" AND artist:\"Led Zeppelin\"",
+  "limit": "25"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:32:59.058Z",
+  "count": 2,
+  "offset": 0,
+  "release-groups": [
+   {
+    "id": "9b5006e5-b276-3a05-bcdd-8d986842320b",
+    "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "score": 100,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "94b69d88-4662-335d-a9a5-43d8aae6bf20",
+    "count": 53,
+    "title": "Houses of the Holy",
+    "first-release-date": "1973-03-28",
+    "primary-type": "Album",
+    "artist-credit": [
+     {
+      "name": "Led Zeppelin",
+      "artist": {
+       "id": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+       "name": "Led Zeppelin",
+       "sort-name": "Led Zeppelin",
+       "aliases": [
+        {
+         "sort-name": "レッド・ツェッペリン",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "レッド・ツェッペリン",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Led Zeppelin",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "Led Zeppelin",
+         "locale": "en",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "レッド・ゼップ",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "レッド・ゼップ",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "レッドゼップ",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "レッドゼップ",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "ゼップ",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "ゼップ",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "ledzep",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "ledzep",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Bootleg Zeppelin",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Bootleg Zeppelin",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "LZ",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "LZ",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Led Zepplelin",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Led Zepplelin",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Led Zepellin",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Led Zepellin",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "レッド ツェッペリン",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "レッド ツェッペリン",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "レッドツェッペリン",
+         "name": "レッドツェッペリン",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Led Zepplin",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Led Zepplin",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Led Zep",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Led Zep",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "569fd95c-ceeb-456c-908b-06670fb32f35",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "dd0ea648-5348-496a-a1d7-3948c0e776b3",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "d3d71e27-4ad0-4690-a548-cfbc733edbc8",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "21521303-6dac-40bc-ae82-b3ac0c3159d0",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "c9560d81-861d-488c-940d-11c07858fc22",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "1e4a3a8a-aafd-4987-9f5d-14e8386d413d",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "fe0dd177-b239-41eb-9dcf-40b98fd403ef",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "efd7dc22-39d7-4867-b1e1-5ced97da8253",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "cdcc97e5-60d8-3768-b36b-4b1a79ae0bb3",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "ec8b3b67-c3b5-4ea1-a2ac-e87e2dfeb58f",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "f6672e31-0000-4275-92c9-6062774baa21",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "81aa1a48-9074-448c-9d6e-d34d594c3a31",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "9897d9bb-1c80-420d-b9d5-3c05602a2aca",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "ebd1294f-9a65-4564-a515-dca022f41789",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "9116503b-3200-4df2-b8ef-5422d205b570",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "2c2bf30c-85e0-4551-9cd9-49c01b60f26f",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "a24fca7b-7eb8-4570-be29-0100c09608cb",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "1664e44d-2818-4db8-b394-74e2e915545f",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "fc45da27-7ffa-4437-8640-0ac3fa9523e4",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "6e2b95f1-36e0-4a17-93c9-86bd75f2b0e3",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "f8eaddb9-b543-4b5b-8116-ad428fd4fc6a",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "84623dd7-d022-4be5-9d82-77de44fbc734",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "0904a10c-4d57-47bb-841f-7076fc835cd4",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "8be70056-0bfe-3a48-9e02-a22a17feaa28",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "938cef50-de9a-3ced-a1fe-bdfbd3bc4315",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "0f93f60a-af48-49da-bbd3-83cb17ea45d5",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "9a0d340f-a2eb-432a-a62d-0325e60ea5d1",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "8208db93-d2a7-44cc-b893-82f55275d337",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "564dba39-a5e2-4931-bba8-9e4cbf9db6e5",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "92ecb8ac-99be-46e4-a2c1-4bdae5c7f319",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "be608ab8-3a9b-4401-b81f-7de4b6970698",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "10dd792c-567e-3cea-9046-f640116f92c5",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "19a9d8a7-2c42-41fe-a2a0-719f661a521f",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "e01d4bf1-cddd-4a2a-b7a1-553b91db18b1",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "048c8be5-c9ec-4add-8c30-85f81c9e43de",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "854143d9-d691-4644-b398-e406d73f999b",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "ce09a8d2-2e5b-3e6c-80ed-094da1a788ff",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "7273b83e-a7d9-42b3-b616-f098a8711a87",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "e8e80091-9478-453f-bdf4-bac3b8663350",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "c1809ddd-cf39-45ab-8753-1ba0b5c3bc17",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "827e1e04-da94-310a-b0a2-aa9e891fb6b3",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "e1d568b1-ce7c-4ad8-ae64-24df146e1497",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "ca26e56a-d926-4d9b-a0e0-f3adc4172328",
+      "status-id": "1156806e-d06a-38bd-83f0-cf2284a808b9",
+      "title": "Houses of the Holy",
+      "status": "Bootleg"
+     },
+     {
+      "id": "a6c0e878-9035-3c50-9ee5-d06a97648a1c",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "34e0004f-e28b-4b2b-9d9f-1e12ecf3dc2c",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "3d29a558-15fa-311c-8af7-c2eb86246518",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "3ccb4cb2-940a-4e2e-b1fd-4c0b7483280f",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "8fe63400-92d4-46c4-81fb-e7d689420734",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "9be882ef-ebdb-49be-a5cb-5e0021c05e37",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "51a4e8b4-1af1-4daf-a746-ac1c7206dd02",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "2900fd79-d344-4016-9307-83d1080b7a1b",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "3d04c0a7-5baf-4dc3-bd26-0353de034ce5",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     },
+     {
+      "id": "5edeeffa-8f11-4316-b682-8d99926d3f84",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Houses of the Holy",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 13,
+      "name": "rock"
+     },
+     {
+      "count": 1,
+      "name": "heavy metal"
+     },
+     {
+      "count": 14,
+      "name": "hard rock"
+     },
+     {
+      "count": 1,
+      "name": "folk rock"
+     },
+     {
+      "count": 5,
+      "name": "blues rock"
+     },
+     {
+      "count": 0,
+      "name": "américain"
+     },
+     {
+      "count": 7,
+      "name": "classic rock"
+     },
+     {
+      "count": 3,
+      "name": "album rock"
+     },
+     {
+      "count": 3,
+      "name": "arena rock"
+     },
+     {
+      "count": 0,
+      "name": "blues-rock"
+     },
+     {
+      "count": 0,
+      "name": "british metal"
+     },
+     {
+      "count": 0,
+      "name": "1973"
+     },
+     {
+      "count": -1,
+      "name": "should be public domain"
+     },
+     {
+      "count": 0,
+      "name": "pop/rock"
+     }
+    ]
+   },
+   {
+    "id": "02bbe7ea-8c32-367e-a6c1-718e53389c02",
+    "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+    "score": 86,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "94b69d88-4662-335d-a9a5-43d8aae6bf20",
+    "count": 1,
+    "title": "Houses of the Holy: The Revised Versions",
+    "primary-type": "Album",
+    "secondary-types": [
+     "Compilation"
+    ],
+    "secondary-type-ids": [
+     "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+    ],
+    "artist-credit": [
+     {
+      "name": "Led Zeppelin",
+      "artist": {
+       "id": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+       "name": "Led Zeppelin",
+       "sort-name": "Led Zeppelin",
+       "aliases": [
+        {
+         "sort-name": "レッド・ツェッペリン",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "レッド・ツェッペリン",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Led Zeppelin",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "Led Zeppelin",
+         "locale": "en",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "レッド・ゼップ",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "レッド・ゼップ",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "レッドゼップ",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "レッドゼップ",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "ゼップ",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "ゼップ",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "ledzep",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "ledzep",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Bootleg Zeppelin",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Bootleg Zeppelin",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "LZ",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "LZ",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Led Zepplelin",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Led Zepplelin",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Led Zepellin",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Led Zepellin",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "レッド ツェッペリン",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "レッド ツェッペリン",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "レッドツェッペリン",
+         "name": "レッドツェッペリン",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Led Zepplin",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Led Zepplin",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Led Zep",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Led Zep",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "7d4a4d1f-2218-4673-9cab-724bad63534c",
+      "status-id": "1156806e-d06a-38bd-83f0-cf2284a808b9",
+      "title": "Houses of the Holy: The Revised Versions",
+      "status": "Bootleg"
+     }
+    ]
+   }
+  ]
+ }
+}

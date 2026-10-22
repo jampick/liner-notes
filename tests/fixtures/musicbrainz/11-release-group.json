@@ -1,0 +1,453 @@
+{
+ "path": "release-group",
+ "query": {
+  "query": "releasegroup:\"Sheer Heart Attack\" AND artist:\"Queen\"",
+  "limit": "25"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:26:44.342Z",
+  "count": 2,
+  "offset": 0,
+  "release-groups": [
+   {
+    "id": "002ed683-3327-3df0-88c8-318746089925",
+    "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "score": 100,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "edbf1ee2-3861-3d95-b971-8f243cbc7e54",
+    "count": 37,
+    "title": "Sheer Heart Attack",
+    "first-release-date": "1974-11-01",
+    "primary-type": "Album",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen",
+       "sort-name": "Queen",
+       "disambiguation": "UK rock group",
+       "aliases": [
+        {
+         "sort-name": "Queen",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "Queen",
+         "locale": "en",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "皇后乐队",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "皇后乐队",
+         "locale": "zh_Hans_CN",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "クイーン",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "クイーン",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "c6383af8-729a-496c-a5e8-c803a75ebb29",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "c143e9e3-7654-4f74-823c-2d0ab2cc0372",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "451e7361-45d7-4dbf-bf40-e1b64cba2080",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "c33ab537-3828-4845-940d-c8244ae71a49",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "ed8a7224-8dd4-476f-ad5a-5b009f6266de",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "52330711-c58a-4b7c-b5b4-1ee9e701a3a3",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "6e333b1b-7525-3aed-8be4-efe24fdb35bf",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "ffc077cb-8e33-4bdb-a1f7-002efa2db993",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "44ffbcc9-96b9-4673-b63f-9b1df9e66e19",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "c9cf568f-cd9a-4e06-a203-addff8531d02",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "41cbd00b-356d-48a0-ae27-5dfe3d0ad6cb",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "68e13c87-5f82-4917-9e48-275805e9b141",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "27c87941-d5b6-43bf-b728-a76d6e07bcf3",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "6407398c-f706-423e-a0c1-f8e247e2e637",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "345b74ca-2f28-4347-9dd7-96833a72f43c",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "0bd9eb7d-2e45-49da-bf89-7d4cd9b3e552",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "0be3bd27-e5b2-411c-ab9d-3cb6f360d5de",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "629fa693-d1f6-4ef4-a927-934be9008ca8",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "56a536a1-9c6c-4805-ba32-0d841ec12dab",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "a39776a4-11e0-44f9-a074-bdaa67bf45bc",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "f410aadc-cd73-46fe-978b-0764c7cde68c",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "74b1551d-c764-4124-8795-e8d6e29d2b11",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "09d8873e-5f3c-35ef-a57e-76ab5a9fc9f6",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "481af62b-04ac-4c3f-863b-9fb2329547df",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "d8abad24-bcc0-4428-970f-0e226e4ef16d",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "22f7d7bf-dd4c-431c-9fbe-ac03eccee639",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "4ddce1c2-0815-49a6-89fb-e27aca5fe15d",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "f3b8b41e-c466-46be-995d-63f0da388749",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "a7c0da15-3ffe-40ae-bd81-b81c83dea4ed",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "0a0d8e60-594a-443e-984d-44e106ca4e79",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "e1c1fe90-6ccc-42cd-ae69-8cac3b072b2c",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "36578dcc-9a05-45f3-9c0a-58cd843f1f97",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "1ba416bb-f278-3220-b354-f6c761dc338f",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "8b75d351-e511-42af-b0f4-ee10b2663469",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "9c3991a1-7155-3f74-b33f-e48a1de9aac7",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "fedf48e5-6942-42b2-a976-0d4155fb5476",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     },
+     {
+      "id": "9c8a310a-bd5c-3b18-bee6-ef67bc932928",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Sheer Heart Attack",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 4,
+      "name": "rock"
+     },
+     {
+      "count": 0,
+      "name": "pop"
+     },
+     {
+      "count": 5,
+      "name": "progressive rock"
+     },
+     {
+      "count": 2,
+      "name": "heavy metal"
+     },
+     {
+      "count": 15,
+      "name": "hard rock"
+     },
+     {
+      "count": 1,
+      "name": "uplifting"
+     },
+     {
+      "count": 1,
+      "name": "heavy"
+     },
+     {
+      "count": 8,
+      "name": "glam rock"
+     },
+     {
+      "count": 2,
+      "name": "art rock"
+     },
+     {
+      "count": 0,
+      "name": "classic rock"
+     },
+     {
+      "count": 3,
+      "name": "album rock"
+     },
+     {
+      "count": 0,
+      "name": "pop rock"
+     },
+     {
+      "count": 0,
+      "name": "arena rock"
+     },
+     {
+      "count": -1,
+      "name": "classic pop and rock"
+     },
+     {
+      "count": -1,
+      "name": "british metal"
+     },
+     {
+      "count": -1,
+      "name": "classic hard rock"
+     },
+     {
+      "count": 1,
+      "name": "anthemic"
+     },
+     {
+      "count": -1,
+      "name": "pop/rock"
+     },
+     {
+      "count": -1,
+      "name": "contemporary pop/rock"
+     }
+    ]
+   },
+   {
+    "id": "fd315c98-8208-3813-8754-1bcac8500a1e",
+    "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+    "score": 80,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "edbf1ee2-3861-3d95-b971-8f243cbc7e54",
+    "count": 1,
+    "title": "Queen II / Sheer Heart Attack",
+    "first-release-date": "2000",
+    "primary-type": "Album",
+    "secondary-types": [
+     "Compilation"
+    ],
+    "secondary-type-ids": [
+     "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+    ],
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen",
+       "sort-name": "Queen",
+       "disambiguation": "UK rock group",
+       "aliases": [
+        {
+         "sort-name": "Queen",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "Queen",
+         "locale": "en",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "皇后乐队",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "皇后乐队",
+         "locale": "zh_Hans_CN",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "クイーン",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "クイーン",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "ba5b7bba-fde4-4fac-8b0e-d3a758667482",
+      "status-id": "1156806e-d06a-38bd-83f0-cf2284a808b9",
+      "title": "Queen II / Sheer Heart Attack",
+      "status": "Bootleg"
+     }
+    ],
+    "tags": [
+     {
+      "count": 3,
+      "name": "rock"
+     },
+     {
+      "count": 2,
+      "name": "classic rock"
+     },
+     {
+      "count": 1,
+      "name": "pop rock"
+     }
+    ]
+   }
+  ]
+ }
+}

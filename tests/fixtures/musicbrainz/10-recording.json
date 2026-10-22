@@ -1,0 +1,3437 @@
+{
+ "path": "recording",
+ "query": {
+  "query": "recording:\"Sheer Heart Attack\" AND artist:\"Queen\"",
+  "limit": "100"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:26:44.882Z",
+  "count": 49,
+  "offset": 0,
+  "recordings": [
+   {
+    "id": "2188b68b-e384-43de-b6f3-01a6755ff234",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1978-12-14: PNE Coliseum, Vancouver, BC, Canada",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "19e245b1-f924-4244-9650-6493fbfc2aa5",
+      "title": "1978-12-14: PNE Coliseum, Vancouver, BC, Canada",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "d01a24d2-dc01-395c-9b53-236ea377fbf6",
+       "title": "1978-12-14: PNE Coliseum, Vancouver, BC, Canada",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "24e13215-8d41-42a4-80a8-32d1b3bfcb87",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1979-01-24: Deutschlandhalle, Berlin, Germany",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "11ec942f-5b66-44e8-85fe-6827cf1d1ed8",
+      "title": "1979-01-24: Deutschlandhalle, Berlin, Germany",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "e8118626-332e-49f1-a878-d4077389dab2",
+       "title": "1979-01-24: Deutschlandhalle, Berlin, Germany",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "82078951-bfd8-41a8-963e-815c5daf82ed",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1979‐12‐04: City Hall, Newcastle, UK",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "b9989bbb-2f3d-42e5-87bd-663c8ba412a3",
+      "title": "1979‐12‐04: In Concert, City Hall, Newcastle, UK",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "752fd744-921d-43bb-aade-993ba698bfbb",
+       "title": "1979‐12‐04: In Concert, City Hall, Newcastle, UK",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": ""
+     }
+    ]
+   },
+   {
+    "id": "9124337a-ae13-439e-938f-e85226194620",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1982-04-16: Hallenstadion, Zürich, Switzerland",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2009",
+    "releases": [
+     {
+      "id": "8d3f612c-cfab-47fe-912e-ec8de03c2268",
+      "title": "Good Evening Zürich",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "47bea7b6-11ff-48e6-8817-4bc5dd1e7294",
+       "title": "Good Evening Zürich",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "46fcfba2-2cce-4404-a008-bbb8362c4441",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1982‐05‐21: Olympiahalle, Munich, Germany",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "a26bebc6-1f5c-4273-aac6-5530b779ec70",
+      "title": "1982‐05‐21: Olympiahalle, Munich, Germany",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "81493a78-1554-4962-8301-5fc0f9df97bb",
+       "title": "1982‐05‐21: Olympiahalle, Munich, Germany",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "376ad356-f8c3-42f3-8739-e02e0929bf08",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1994",
+    "releases": [
+     {
+      "id": "302b39e5-152d-4d72-8f89-2677e045604a",
+      "title": "Zoom 1979",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "cb77492a-4710-4043-83db-ce076d076fd6",
+       "title": "Zoom 1979",
+       "primary-type": "Album"
+      },
+      "date": "1994"
+     }
+    ]
+   },
+   {
+    "id": "9ca6b2b6-9d42-4817-80f9-a84bc137f5e9",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1982-06-05: Milton Keynes Bowl, Milton Keynes, UK",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2004-11-16",
+    "releases": [
+     {
+      "id": "d2d10b6f-69c0-4253-80b6-d26c5cdd848d",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2004-11-16"
+     },
+     {
+      "id": "6b1a1c20-e2a4-4891-b60f-88b746c4d63b",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2005-10-24"
+     },
+     {
+      "id": "5c4656dd-91ef-4a6c-8d6b-4a3436ea462a",
+      "title": "Jewels I & II",
+      "status": "Official",
+      "release-group": {
+       "id": "374afd1a-f507-4c61-8b3a-a4d7e780c593",
+       "title": "Jewels I & II",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2005-09-30"
+     },
+     {
+      "id": "3a46c9f1-e7c3-4116-87db-1cc53ebd62da",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "5b4bd051-346f-44e3-8dc7-bbbbe611b6f3",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "f6ac1e6d-7fe9-4761-a3a0-a08f59be9832",
+      "title": "Let Sao Paulo Entertain You",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "e4d71c6b-7d22-4237-8d1b-ec163530ec62",
+       "title": "Let Sao Paulo Entertain You",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2000"
+     }
+    ]
+   },
+   {
+    "id": "df6d2114-cfd3-4e92-892c-d9dce2dfc947",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2021-06-11",
+    "releases": [
+     {
+      "id": "b4dca087-afe6-41ae-a812-5e0e4f43729b",
+      "title": "Box",
+      "status": "Official",
+      "release-group": {
+       "id": "f431ed6c-8684-4191-86be-631a9255ad25",
+       "title": "Box",
+       "primary-type": "Broadcast",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "68019262-87eb-4f3a-9bbe-5778a6310506",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1985-04-25",
+    "releases": [
+     {
+      "id": "becd3da3-8df8-4d7e-aad1-c7a4f9369f43",
+      "title": "Live",
+      "status": "Official",
+      "release-group": {
+       "id": "d192fd31-ae7e-4142-9201-239088fca7d6",
+       "title": "Live",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1985-04-25"
+     }
+    ]
+   },
+   {
+    "id": "3e596516-4e2f-4361-ba5d-b003a924b73d",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "rockin Brazil radio broadcast 1981",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2021-06-11",
+    "releases": [
+     {
+      "id": "b4dca087-afe6-41ae-a812-5e0e4f43729b",
+      "title": "Box",
+      "status": "Official",
+      "release-group": {
+       "id": "f431ed6c-8684-4191-86be-631a9255ad25",
+       "title": "Box",
+       "primary-type": "Broadcast",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "3b0f905d-a163-442d-8eee-c955dadcb61f",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1993",
+    "releases": [
+     {
+      "id": "151a9da9-95f3-481a-a920-5eb1ff746dfd",
+      "title": "Live in Montreal",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "be7f65f7-d63a-47c1-aa26-d2b155dea065",
+       "title": "Live in Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1993"
+     }
+    ]
+   },
+   {
+    "id": "aff664b4-19e8-45fb-823c-a522ada5b522",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2005",
+    "releases": [
+     {
+      "id": "684d4328-802f-479f-8ce1-617c676fde71",
+      "title": "Queen On Fire (Live At The Bowl)",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2005"
+     }
+    ]
+   },
+   {
+    "id": "f14f20f9-b545-4d5f-90f1-00bcc7fdf55a",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2016",
+    "releases": [
+     {
+      "id": "9f965390-38d9-4c6e-973c-2cd9c963d2a1",
+      "title": "We Will Rock Rio: The Legendary Broadcasts",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "79ab83a6-a4ea-4de3-a07c-e89a91f5f41a",
+       "title": "We Will Rock Rio: The Legendary Broadcasts",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2016"
+     }
+    ]
+   },
+   {
+    "id": "0145f0c9-dd69-446c-87d0-e980448a63dd",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2021",
+    "releases": [
+     {
+      "id": "7198c1dd-0cf9-4575-9433-bab68ea5552d",
+      "title": "The Concert for Kampuchea",
+      "status": "Official",
+      "release-group": {
+       "id": "ef5a2075-2167-4c56-a69d-0759a4978625",
+       "title": "The Concert for Kampuchea",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2021"
+     }
+    ]
+   },
+   {
+    "id": "d359758d-25d4-48a7-95b2-8dd85dfbfbd8",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1979-12-26: Hammersmith Odeon, London, England, UK",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1979-12-26",
+    "releases": [
+     {
+      "id": "4bb7bca1-892d-4c24-80ca-f6a1d9eafea0",
+      "title": "1979-12-26: Complete Kampuchea Concert",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "e1208cfa-58f9-3909-bd3c-f7dfddec6b9c",
+       "title": "1979-12-26: Complete Kampuchea Concert",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     },
+     {
+      "id": "a353e14b-75a1-4a66-be31-863e0a31fb62",
+      "title": "Complete Kampuchea Concert",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "4f2206e5-cf48-46ae-912a-4fd1c8d7b5f7",
+       "title": "Complete Kampuchea Concert",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1979-12-26"
+     }
+    ]
+   },
+   {
+    "id": "ae530dec-4ebc-4c2c-a951-c9a9c5d2a048",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1981-02-28: Estadio José Amalfitani, Buenos Aires, Argentina",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2016",
+    "releases": [
+     {
+      "id": "99b90715-1de0-49af-9781-d628defdcdc7",
+      "title": "Transmission Impossible",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "af353db0-f864-44db-a455-3855e04dc3a6",
+       "title": "Transmission Impossible",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2020"
+     },
+     {
+      "id": "9f965390-38d9-4c6e-973c-2cd9c963d2a1",
+      "title": "We Will Rock Rio: The Legendary Broadcasts",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "79ab83a6-a4ea-4de3-a07c-e89a91f5f41a",
+       "title": "We Will Rock Rio: The Legendary Broadcasts",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2016"
+     }
+    ]
+   },
+   {
+    "id": "dc7176c8-a050-4185-8e12-e22d6f97a952",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1977-10-28",
+    "releases": [
+     {
+      "id": "769620e7-4cb4-4bb3-9e21-ec2feda6cfc7",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2008-03-30"
+     },
+     {
+      "id": "1e113a77-4d4c-4a89-9244-a58c9c3e09d6",
+      "title": "News Of The World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": ""
+     },
+     {
+      "id": "f0310788-6860-4bca-9aba-0afd91b08b43",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2021-05-19"
+     },
+     {
+      "id": "44a96087-1236-4239-bdc8-956a6047f48a",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": ""
+     },
+     {
+      "id": "5d7ea52d-575c-490d-a4a6-2baaad370cbd",
+      "title": "Deep Cuts 2 (1977-1982)",
+      "status": "Official",
+      "release-group": {
+       "id": "7cee7f39-b5a1-4e80-87ca-32ff459ba961",
+       "title": "Deep Cuts, Volume 2 (1977–1982)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-06-27"
+     },
+     {
+      "id": "c8f4e067-1f19-4fb8-ab17-7772500a21aa",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      }
+     },
+     {
+      "id": "dd052b13-05ad-43f4-a9f3-4c8ad8f24381",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2004-02-11"
+     },
+     {
+      "id": "f5c3f958-122b-4fb6-833c-5c375a7aa472",
+      "title": "Bohemian Rhapsody",
+      "release-group": {
+       "id": "ddb63b9d-3689-43a7-b6fa-cd18e6a35f31",
+       "title": "Bohemian Rhapsody",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "79248133-9140-463b-9e0f-f8c7f91c7719",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      }
+     },
+     {
+      "id": "5cb80a1a-86a2-4860-a5be-d999f83a7359",
+      "title": "Queen 40",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "00b2a4d3-96c6-42cd-a3c7-aa0e9eb61735",
+       "title": "Queen 40",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     },
+     {
+      "id": "46f9219e-65d0-4a4c-bc33-6966d6437ff5",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1984"
+     },
+     {
+      "id": "98afe3be-56d2-4472-b6fa-c7b63cf5dd95",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011-06-27"
+     },
+     {
+      "id": "90a1caba-4997-494c-8890-26f4dff213e4",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2016-09-02"
+     },
+     {
+      "id": "63a558e2-ff9a-4014-bb93-a087ec29e487",
+      "title": "Queen 40 Limited Edition Collector's Box Set Vol. 2",
+      "status": "Official",
+      "release-group": {
+       "id": "356bb224-dee9-45c8-a7a4-f75f1944c441",
+       "title": "Queen 40 Limited Edition Collector's Box Set Vol. 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-01-01"
+     },
+     {
+      "id": "4c52c8ae-0c20-4e33-9523-c0d5e22603dd",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1993"
+     },
+     {
+      "id": "8eedc7ea-0cb8-4dae-8dd7-a7979291139a",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011"
+     },
+     {
+      "id": "f5c90c2e-f36f-4198-af1a-8ca89ff88b1b",
+      "title": "Queen Rocks",
+      "status": "Official",
+      "release-group": {
+       "id": "4f3f4ca2-d468-390a-a38b-996237aae506",
+       "title": "Queen Rocks",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997-11-03"
+     },
+     {
+      "id": "93e41b82-a5da-4d0c-9473-83e1b9112f17",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1977"
+     },
+     {
+      "id": "becefa89-5226-4d41-9700-9f8dab1cb841",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1977"
+     },
+     {
+      "id": "3cb022cc-b296-4850-99a8-568a7c8e4117",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011"
+     },
+     {
+      "id": "411b1e87-c5c2-43ba-801a-2c941d85b03d",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     },
+     {
+      "id": "411b1e87-c5c2-43ba-801a-2c941d85b03d",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     },
+     {
+      "id": "a8c54d0b-49ab-44ef-92ae-d5771c31d6fa",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1986"
+     },
+     {
+      "id": "c6c7101d-fd0e-4059-810e-8f12b060231b",
+      "title": "Deep Cuts, Volume 2 (1977–1982)",
+      "status": "Official",
+      "release-group": {
+       "id": "7cee7f39-b5a1-4e80-87ca-32ff459ba961",
+       "title": "Deep Cuts, Volume 2 (1977–1982)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-06-27"
+     },
+     {
+      "id": "687336bb-aa57-4dae-8421-a6c7fe19da10",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011-06-22"
+     },
+     {
+      "id": "f687c111-ec64-35ec-8219-e6693f5b638e",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1998"
+     },
+     {
+      "id": "363cc8c5-fc37-4003-a5bc-a8a1f6d1fc23",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     },
+     {
+      "id": "5160a225-64ab-4392-a1b2-4d38149d944c",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011-12-14"
+     },
+     {
+      "id": "1ea17369-dd8d-4cdf-8e52-070f6d284172",
+      "title": "Rock Resurrection",
+      "status": "Official",
+      "release-group": {
+       "id": "28a452bb-bb91-3bfa-9a17-97534b544340",
+       "title": "Rock Resurrection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2004"
+     },
+     {
+      "id": "0a2bb1a5-1e64-46cc-94ad-95d3a7c11ab3",
+      "title": "The Complete Works",
+      "status": "Official",
+      "release-group": {
+       "id": "7e33af0b-26fc-4049-903e-591e91a9f382",
+       "title": "The Complete Works",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1985"
+     },
+     {
+      "id": "062841d2-5392-4d68-8ec4-d5399aff6cfe",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1991-02-12"
+     },
+     {
+      "id": "c2eb053d-53c1-45d7-b669-71e4721ffc16",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1987-02-04"
+     },
+     {
+      "id": "ffdf5bf5-d2f1-423d-a77e-bc66e9891e78",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2013-10-30"
+     },
+     {
+      "id": "13005c87-dfea-4859-8e2b-cff54c650c4b",
+      "title": "Queen 40",
+      "status": "Official",
+      "release-group": {
+       "id": "2f56033b-1f56-4a48-961e-8d5e78721c6f",
+       "title": "Queen 40",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-09-13"
+     },
+     {
+      "id": "363cc8c5-fc37-4003-a5bc-a8a1f6d1fc23",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     },
+     {
+      "id": "d9f31858-05dc-49b3-b8c3-5f9558168369",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011-06-27"
+     },
+     {
+      "id": "4199c795-e747-4112-99d9-71c1ad388849",
+      "title": "Deep Cuts, Volume 2 (1977–1982)",
+      "status": "Official",
+      "release-group": {
+       "id": "7cee7f39-b5a1-4e80-87ca-32ff459ba961",
+       "title": "Deep Cuts, Volume 2 (1977–1982)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-07-06"
+     },
+     {
+      "id": "4bb98161-2093-456f-b350-ec7329a31b79",
+      "title": "Miniatures: Volume 2",
+      "status": "Official",
+      "release-group": {
+       "id": "3d324823-52d7-408c-bfb8-5d3ccfeb2aae",
+       "title": "Miniatures: Volume 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998"
+     },
+     {
+      "id": "3d481e02-382c-44a4-933d-3d4f9c8d09d1",
+      "title": "The Ultimate Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "af7dafb6-06f5-408d-a15b-297861ca2adb",
+       "title": "The Ultimate Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995"
+     },
+     {
+      "id": "487cb17a-24ee-4b23-a4e1-5140499742f7",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2018-12-12"
+     },
+     {
+      "id": "0f032fad-969f-4518-993e-81743b66e70f",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2015-09-25"
+     },
+     {
+      "id": "2799db50-0bed-4fbe-a9b6-f5b6021b4e15",
+      "title": "Queen Rocks",
+      "status": "Official",
+      "release-group": {
+       "id": "4f3f4ca2-d468-390a-a38b-996237aae506",
+       "title": "Queen Rocks",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "7fc19ae9-19e5-46a3-b55d-0cc1dca866ab",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011-09-13"
+     },
+     {
+      "id": "cea4902c-c510-46d9-be5a-a290188be09a",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1977"
+     },
+     {
+      "id": "9b087fde-3bf4-4670-b176-5466a9152cdd",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     },
+     {
+      "id": "3749c3e2-ae84-4a0c-89f7-29b7e3bedbea",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1993"
+     },
+     {
+      "id": "37b21321-8675-4fc6-8864-cbf7946b606a",
+      "title": "It’s Late",
+      "status": "Official",
+      "release-group": {
+       "id": "5e586237-fb7d-42a5-b705-bdce0e8ec410",
+       "title": "It’s Late",
+       "primary-type": "Single"
+      },
+      "date": "1978-04-25"
+     },
+     {
+      "id": "13bdec67-edb6-4401-8c1a-493050bca1ba",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     },
+     {
+      "id": "13bdec67-edb6-4401-8c1a-493050bca1ba",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     },
+     {
+      "id": "4b54467a-8fd6-42b4-bb43-697018203bf7",
+      "title": "Queen Rocks",
+      "status": "Official",
+      "release-group": {
+       "id": "4f3f4ca2-d468-390a-a38b-996237aae506",
+       "title": "Queen Rocks",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997-11-19"
+     },
+     {
+      "id": "0894f6af-ac4b-4f9d-b692-e5b0d2f1ee94",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1991-02-12"
+     },
+     {
+      "id": "ef7fbadd-a206-3fdf-a54a-af3cbbc7a718",
+      "title": "Queen Rocks",
+      "status": "Official",
+      "release-group": {
+       "id": "4f3f4ca2-d468-390a-a38b-996237aae506",
+       "title": "Queen Rocks",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "686abb7b-4d21-31bc-871d-e6cbb5a93b13",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1977-11-03"
+     },
+     {
+      "id": "4a9ab197-a35b-3b41-82a9-10d04579243d",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1986"
+     },
+     {
+      "id": "fbf7e76b-98fc-3f3a-880a-952d3cd7ba84",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1993-09-27"
+     },
+     {
+      "id": "5281690f-7ba9-40d7-8417-d22473561ca4",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1977-10-28"
+     },
+     {
+      "id": "d3e628a4-4958-4a8c-8f7e-e8a5e873ec50",
+      "title": "The Singles Collection, Volume 1",
+      "status": "Official",
+      "release-group": {
+       "id": "852fd082-c253-3ebc-bf6f-ecf58f946b48",
+       "title": "The Singles Collection, Volume 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008-12-01"
+     },
+     {
+      "id": "a8cebdfb-8623-4e8f-9355-0889e61fcb54",
+      "title": "Spread Your Wings",
+      "status": "Official",
+      "release-group": {
+       "id": "276409e4-c4b0-4f42-9f47-8092db001516",
+       "title": "Spread Your Wings",
+       "primary-type": "Single"
+      },
+      "date": "1978-02"
+     },
+     {
+      "id": "9d5b1e5b-729d-3802-8236-3f21894292b7",
+      "title": "Spread Your Wings",
+      "status": "Official",
+      "release-group": {
+       "id": "276409e4-c4b0-4f42-9f47-8092db001516",
+       "title": "Spread Your Wings",
+       "primary-type": "Single"
+      },
+      "date": "1978-02"
+     },
+     {
+      "id": "6b27c114-5dcf-367c-a37f-0e3e64da7a37",
+      "title": "Spread Your Wings",
+      "status": "Official",
+      "release-group": {
+       "id": "276409e4-c4b0-4f42-9f47-8092db001516",
+       "title": "Spread Your Wings",
+       "primary-type": "Single"
+      },
+      "date": "2008-12-03"
+     },
+     {
+      "id": "7bb16d21-a385-4899-9c0a-417fdd062113",
+      "title": "Queen Rocks",
+      "status": "Official",
+      "release-group": {
+       "id": "4f3f4ca2-d468-390a-a38b-996237aae506",
+       "title": "Queen Rocks",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997-11-03"
+     },
+     {
+      "id": "aa1c6ace-1785-3fd6-b621-75c542c4db1f",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1977-11"
+     },
+     {
+      "id": "f7a1db42-b627-497c-960b-8a387741a6e6",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1977"
+     },
+     {
+      "id": "638a9b4c-d756-4cc1-8243-db9164e34cc3",
+      "title": "Deep Cuts, Volume 2 (1977–1982)",
+      "status": "Official",
+      "release-group": {
+       "id": "7cee7f39-b5a1-4e80-87ca-32ff459ba961",
+       "title": "Deep Cuts, Volume 2 (1977–1982)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-06-27"
+     },
+     {
+      "id": "16f1f353-2b8e-4ced-88fe-f9a908042eb0",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1998"
+     },
+     {
+      "id": "37bc6334-b858-49c6-a3c7-03bdf76385f0",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011-06-22"
+     },
+     {
+      "id": "32c75db9-d03a-445b-815b-d3edab9b218d",
+      "title": "Studio Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "42046267-c122-4838-a51f-a72636e7edaf",
+       "title": "Studio Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-09-25"
+     },
+     {
+      "id": "06a05e76-45b7-44f6-a3e0-1575e3bd0811",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2014"
+     },
+     {
+      "id": "80bc7464-2d84-4e90-b739-e9689ed6df83",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2014-11-04"
+     },
+     {
+      "id": "5a982840-e4b4-4f4d-a944-8bd163907ca7",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2014-10-27"
+     },
+     {
+      "id": "aa66a18c-8f4e-40e1-99f8-abcf429d0b4f",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2014"
+     },
+     {
+      "id": "e1447654-f1fb-4b04-852f-0b1c06cc50a9",
+      "title": "Queen 40",
+      "status": "Official",
+      "release-group": {
+       "id": "2f56033b-1f56-4a48-961e-8d5e78721c6f",
+       "title": "Queen 40",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-09-13"
+     },
+     {
+      "id": "934ab8c4-c04e-4f6a-8d4c-a04d9d383e70",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2001-11-21"
+     },
+     {
+      "id": "bdfde30f-4598-42fb-8cd1-eaf0a9de5374",
+      "title": "The Crown Jewels: A 25th Anniversary Celebration",
+      "status": "Official",
+      "release-group": {
+       "id": "c1e2b241-6afd-36a3-a796-297f8142304a",
+       "title": "The Crown Jewels: A 25th Anniversary Celebration",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998-11-24"
+     },
+     {
+      "id": "8d24e45a-0f22-4777-a78f-115b05ee6d82",
+      "title": "News of the World / The Miracle",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "f1ac235a-cbaa-3ed7-9380-ad507b1643cf",
+       "title": "News of the World / The Miracle",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     },
+     {
+      "id": "0060992e-439c-34b0-9aeb-9df1dcef23f3",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "1993-10-19"
+     },
+     {
+      "id": "73189176-c640-40fa-8751-7fe6598c1299",
+      "title": "The Orb",
+      "status": "Official",
+      "release-group": {
+       "id": "aed10632-8b62-4aed-b4be-af0a1bf77072",
+       "title": "The Orb",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-11-28"
+     }
+    ],
+    "isrcs": [
+     "GBCEE9800059",
+     "GBCEE7700018",
+     "GBUM71103458"
+    ]
+   },
+   {
+    "id": "df71c631-bc8a-4228-b1a9-37f87f3b9e04",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1992",
+    "releases": [
+     {
+      "id": "38a9d95a-0215-46f0-9df9-b944dab08d92",
+      "title": "You’re My Best Friend",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "7ba2a8f0-aaf4-3d37-88b1-e0083b2651a6",
+       "title": "You’re My Best Friend",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1992"
+     }
+    ]
+   },
+   {
+    "id": "15eeda54-3483-4831-bc69-6b05575e659e",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1979‐12‐03: City Hall, Newcastle, UK",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "972e7c80-0fb7-4d26-8ca3-6f42af503ef2",
+      "title": "1979-12-03: Getting Ready for the Game in Newcastle 3/12/79: City Hall, Newcastle, UK",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "148cfb25-1ede-48e5-9caa-8fcf6cf0af7f",
+       "title": "1979-12-03: Getting Ready for the Game in Newcastle 3/12/79: City Hall, Newcastle, UK",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": ""
+     }
+    ]
+   },
+   {
+    "id": "ca14e79c-0b50-4169-aaf3-a8710266271e",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2025-02-07",
+    "releases": [
+     {
+      "id": "094a8e10-2b66-45e4-8151-9a15521d2929",
+      "title": "Freddie Mercury Years",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "bcabb3cb-7a05-41f9-b968-5ddeb7a32afa",
+       "title": "Freddie Mercury Years",
+       "primary-type": "Broadcast",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2025-02-07"
+     }
+    ]
+   },
+   {
+    "id": "5436c2ae-1149-457a-bc0c-e5156fea702b",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1992",
+    "releases": [
+     {
+      "id": "680d8d36-bfe1-41ff-a79c-9f95f015aedf",
+      "title": "We Will Rock You",
+      "status": "Official",
+      "release-group": {
+       "id": "d27a5540-7424-4eec-92e6-a224c467c4bd",
+       "title": "We Will Rock You",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1992"
+     }
+    ]
+   },
+   {
+    "id": "23826249-035e-4401-9ce7-8e8b6efae750",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1978-12-01: Montreal Forum, Montreal, QC, Canada",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2016",
+    "releases": [
+     {
+      "id": "85fe5953-ee48-4b56-ba8d-09f42e2623c1",
+      "title": "Piece de resistance",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "7d7582d4-fd1e-4c49-b284-39ffbc01876f",
+       "title": "Piece de resistance",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "8b8c68b4-9b2f-42fb-98b3-2bee2f50d1a0",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "mono soundboard recorded live, 1977‐12‐11: The Summit, Houston, TX, USA",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2005",
+    "releases": [
+     {
+      "id": "a484c66f-59f8-4dcf-afb0-65b61a885d06",
+      "title": "A Night at The Summit",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "0858a711-954f-478a-92cc-4ffcb250be5b",
+       "title": "A Night at The Summit",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2005"
+     }
+    ]
+   },
+   {
+    "id": "3a8631b9-a38c-4a78-b329-45043eb204e1",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2017",
+    "releases": [
+     {
+      "id": "68b9b9c7-881e-400e-87d4-c47d91c3fa33",
+      "title": "Definitive Buenos Aires 1981 1st Night",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "fe7f41c9-98f3-47a8-8e7e-743ff49e4b07",
+       "title": "Definitive Buenos Aires 1981 1st Night",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2017"
+     }
+    ]
+   },
+   {
+    "id": "f4325242-4216-4df6-908f-f5778587090d",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1978‐12‐07: Chicago Stadium, Chicago, IL, USA",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "770736ac-b3d7-4eb6-8d49-928189309bbc",
+      "title": "Definitive Chicago 1978",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "9e84157b-4c8c-442e-aae1-8d3f76730cd7",
+       "title": "Definitive Chicago 1978",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "5a6d4454-4c43-4213-9ab3-6d3e3136ae37",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2019",
+    "releases": [
+     {
+      "id": "37cf2562-f21e-4cfe-b16b-84605aeb47bb",
+      "title": "Definitive Chicago 1980",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "7c254bd0-09ca-4dee-a286-64f8deb74c3c",
+       "title": "Definitive Chicago 1980",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2019"
+     }
+    ]
+   },
+   {
+    "id": "1c3a89f4-36b6-45f2-8020-06920f8127ee",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1981-02-16: Nippon Budokan, Tokyo, Japan",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "685bc0a1-46b8-4a17-a958-abc9a1459653",
+      "title": "The Miracle Game",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "e3002e35-296d-4094-80a0-1e2187b85718",
+       "title": "1981-02-16: Nippon Budokan, Tokyo, Japan",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "1e95b847-63d6-4980-8584-1f0243c30c63",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1982-06-05: Milton Keynes Bowl, Buckinghamshire, England, UK",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2004-10-24",
+    "releases": [
+     {
+      "id": "69363960-f41a-476a-a6de-ac5a78b405d6",
+      "title": "Queen on Fire: Live at the Bowl vol.2",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2008-06-29"
+     },
+     {
+      "id": "7ae459a1-f849-4916-b4db-6e02df55f5bd",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2024-01-31"
+     },
+     {
+      "id": "6a98c125-1213-4bb3-b0ca-176f3b676cff",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2018-09-08"
+     },
+     {
+      "id": "2897e6c1-c23c-4efb-b3f9-b34abfd1ca45",
+      "title": "On Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "a174e4a3-258d-4126-bdc0-2c24646760ae",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     },
+     {
+      "id": "25b675b9-25e9-451e-82cc-affa6040a991",
+      "title": "On Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2011-01-01"
+     },
+     {
+      "id": "2bf10d17-b78b-47f0-8bc0-b0691547ebef",
+      "title": "Queen on Fire: Live at the Bowl, Vol. 2",
+      "status": "Official",
+      "release-group": {
+       "id": "bcbcfdd4-0d65-4d85-9978-c407c6b41661",
+       "title": "Queen on Fire: Live at the Bowl, Vol. 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2008-06-29"
+     },
+     {
+      "id": "e4f06df3-0187-41f1-bed7-84b5d6b5b5c2",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2004-10-25"
+     },
+     {
+      "id": "a258abd6-6a9a-4ce9-8238-03e195174d91",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2020-02-11"
+     },
+     {
+      "id": "c165e390-b67a-44f4-ac76-ed23d5f3f522",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2004-10-25"
+     },
+     {
+      "id": "aa0e355a-7bd7-48a7-8612-e085ef7ce02e",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2004-10-27"
+     },
+     {
+      "id": "f576d74d-2df0-3318-886f-a5d7a78671e1",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2004-10-24"
+     },
+     {
+      "id": "2dc11e11-bc22-4cf2-966b-e38683a025d4",
+      "title": "Queen on Fire: Live at the Bowl",
+      "status": "Official",
+      "release-group": {
+       "id": "c9a223e1-377f-363f-9699-4d209006a2b7",
+       "title": "Queen on Fire: Live at the Bowl",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2004-10-25"
+     }
+    ],
+    "isrcs": [
+     "USHR10421351",
+     "GBCEE0400079"
+    ]
+   },
+   {
+    "id": "c07e8dbc-2366-4772-a2ae-e89f4a02f672",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1977-12-11: The Summit, Houston, TX, USA",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1992",
+    "releases": [
+     {
+      "id": "da5eae46-447d-4c58-a3de-75d36adabeb8",
+      "title": "Opera Omnia",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "22655e64-810a-35a9-b90f-b72c1977ee8f",
+       "title": "Opera Omnia",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1992"
+     }
+    ]
+   },
+   {
+    "id": "6f33cbca-421d-409c-9eb5-c39cc460fd02",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2020",
+    "releases": [
+     {
+      "id": "fc4ce4fe-00ec-4728-aa81-7a5b7b2f0f13",
+      "title": "Argentina 1981",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "47c5cbaa-c9a3-4f5e-99e9-81b9c72833f4",
+       "title": "Argentina 1981",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "fce10fc8-f0fa-4b60-8e0e-09e94e61892c",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1981",
+    "releases": [
+     {
+      "id": "4109e965-6a86-4ac7-9e9c-ba721280c59d",
+      "title": "Morumbi Stadium 1981",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "c49d505c-b1bd-4208-b092-9edbdcbe0989",
+       "title": "Morumbi Stadium 1981",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "546c5f28-b778-4385-b176-21a511a60734",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1992",
+    "releases": [
+     {
+      "id": "b11d911c-09c4-4de3-b38e-b543a157ebce",
+      "title": "Waiting on a Death Trip",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "d7b2fce5-0d0b-3969-b8e6-8e961570333b",
+       "title": "Waiting on a Death Trip",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1992"
+     }
+    ]
+   },
+   {
+    "id": "c7b79192-c476-4193-ab4c-2dbaaf40e2be",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1981-11-(24-25): Montreal Forum, Montreal, Canada",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2007-10-26",
+    "releases": [
+     {
+      "id": "83075fb3-1e85-4fe5-ae33-2cb82c9a5e2a",
+      "title": "Rock Montreal",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2007-10-29"
+     },
+     {
+      "id": "a1b1166b-6c18-4837-bfa2-5961fd0f43cd",
+      "title": "Rock Montreal",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2024-05-10"
+     },
+     {
+      "id": "617880b5-7a23-4b45-8817-8d3e362ba4f2",
+      "title": "Queen Rock Montreal",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "1586bf99-c5dd-4b0b-9c1e-a94cf3925e52",
+      "title": "Queen Rock Montreal",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2020-07-17"
+     },
+     {
+      "id": "ca4465a9-8cce-4be2-a252-26045893aef2",
+      "title": "Rock Montreal",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2024"
+     },
+     {
+      "id": "2063b13d-bdc9-4d33-9fe9-7ee02bef4e80",
+      "title": "Rock Montreal",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2007-10-31"
+     },
+     {
+      "id": "a0ca3442-8185-416b-a31d-c67953ec1174",
+      "title": "Rock Montreal",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2007"
+     },
+     {
+      "id": "d8bd3ef7-f0ff-4592-8be0-f18f15b40be2",
+      "title": "Rock Montreal",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2020-02-04"
+     },
+     {
+      "id": "7e6a49ee-9927-466c-bde2-0c4d802c24e2",
+      "title": "Rock Montreal",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2007-10-26"
+     },
+     {
+      "id": "183922a5-a5fc-4b7e-b909-82231d3bd9e5",
+      "title": "Rock Montreal",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2007-10-30"
+     }
+    ],
+    "isrcs": [
+     "GBCEE0700028"
+    ]
+   },
+   {
+    "id": "b345dd32-2a80-4925-a718-57da76a51548",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1978‐11‐19: Nassau Coliseum, Uniondale, NY, USA",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "fc0e7ca9-28fc-4111-87e4-e46c85bd41e1",
+      "title": "1978-11-19: Jazz Tour in Long Island 1978: Nassau Coliseum, Uniondale, NY, USA",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "0c230081-d58b-4675-a017-d4f7b61832a7",
+       "title": "1978-11-19: Jazz Tour in Long Island 1978: Nassau Coliseum, Uniondale, NY, USA",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": ""
+     }
+    ]
+   },
+   {
+    "id": "f34c53a3-d2d1-4b6c-9ef2-dbf83e47db99",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1977-12-11: The Summit, Houston, TX, USA",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2017",
+    "releases": [
+     {
+      "id": "05fb8fc3-bad2-40b9-a2d9-a0dbc0ec3ead",
+      "title": "Ultimate Houston 1977",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "76c32780-80c9-4fb2-aa11-6459375fbeaf",
+       "title": "Ultimate Houston 1977",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2017"
+     }
+    ]
+   },
+   {
+    "id": "8262bc31-ff0a-4921-81c6-8afc24b03b7a",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1981-11-(24-25): Montreal Forum, Montreal, Canada",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1997-12-16",
+    "releases": [
+     {
+      "id": "7c75625e-73a5-4439-8159-ca233389ba62",
+      "title": "Rock Montreal & Live Aid",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2007"
+     },
+     {
+      "id": "f51385bc-dbd0-40dc-9a96-80e013692d45",
+      "title": "We Will Rock You",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1997-12-16"
+     },
+     {
+      "id": "35c58e93-8ebf-461e-848a-e0d3ea99a14e",
+      "title": "Rock Montreal & Live Aid",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2007-10-30"
+     },
+     {
+      "id": "7d638c9c-acb8-4074-9df4-930eebc51c12",
+      "title": "Rock Montreal & Live Aid",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2007-11-21"
+     },
+     {
+      "id": "7bd09e3f-b33c-48f9-ac24-b561e0261997",
+      "title": "Rock Montreal",
+      "status": "Official",
+      "release-group": {
+       "id": "e0d97e8d-dc9e-3f1b-91a4-ec7df83eecb1",
+       "title": "Rock Montreal",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2007-10-29"
+     }
+    ]
+   },
+   {
+    "id": "272a4871-5caf-4b7d-bf32-7dfd42d27448",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1994",
+    "releases": [
+     {
+      "id": "302b39e5-152d-4d72-8f89-2677e045604a",
+      "title": "Zoom 1979",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "cb77492a-4710-4043-83db-ce076d076fd6",
+       "title": "Zoom 1979",
+       "primary-type": "Album"
+      },
+      "date": "1994"
+     }
+    ]
+   },
+   {
+    "id": "c05eba61-2566-4b4d-af4d-da75499232dd",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1979",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1979-06-22",
+    "releases": [
+     {
+      "id": "3bb3668b-a6fd-447d-afba-0a17784a8abf",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2004-10-27"
+     },
+     {
+      "id": "90eb58fb-effe-40bb-a86e-fb4b3780f341",
+      "title": "Live Killers vol.2",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2008-06-01"
+     },
+     {
+      "id": "ab0e481e-4512-4497-a74a-592c89993b8c",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "d4ba41b3-65c2-4b62-bc2f-e8b1eb11c971",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1994"
+     },
+     {
+      "id": "10e563db-4452-4d19-89bb-5889fd4053ad",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "687c3396-3696-482f-b159-f025ee241f19",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1994-06-22"
+     },
+     {
+      "id": "deac1e17-001e-4350-8ab6-0a70fbbfb4c9",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1979-06-22"
+     },
+     {
+      "id": "66cd1b8a-a59b-4184-be75-c4c0bd755973",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1979"
+     },
+     {
+      "id": "77a2cfb8-9d7a-4bd4-902e-7eaade7650c3",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1991-10-22"
+     },
+     {
+      "id": "20c88127-5100-406c-8a1e-999124869327",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1986-12-01"
+     },
+     {
+      "id": "8288dff8-cb44-465b-bcee-a8f11090f667",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1979-06-26"
+     },
+     {
+      "id": "0a2bb1a5-1e64-46cc-94ad-95d3a7c11ab3",
+      "title": "The Complete Works",
+      "status": "Official",
+      "release-group": {
+       "id": "7e33af0b-26fc-4049-903e-591e91a9f382",
+       "title": "The Complete Works",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1985"
+     },
+     {
+      "id": "ed1fc423-37a2-4280-99bf-7a93a9a9d098",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2019"
+     },
+     {
+      "id": "3d481e02-382c-44a4-933d-3d4f9c8d09d1",
+      "title": "The Ultimate Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "af7dafb6-06f5-408d-a15b-297861ca2adb",
+       "title": "The Ultimate Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995"
+     },
+     {
+      "id": "4427265d-53f0-4922-aed8-4a6cdca1f57b",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1979"
+     },
+     {
+      "id": "afc5cedd-a078-4bed-9971-58f85e5f98d7",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1986-12-01"
+     },
+     {
+      "id": "1ea82ba5-6a06-48bd-8db7-91761bc4f686",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1979-06-22"
+     },
+     {
+      "id": "86b5a0f7-a0e9-364b-b109-d25834cb7ef9",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "7b8c0279-d77d-3be4-909e-92c7bb06f074",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1979-06-22"
+     },
+     {
+      "id": "eb4b2f94-8cf6-3ada-aad7-c9b53ed9f5ad",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "da978d53-1cae-48b6-8faf-1a585259350b",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1991"
+     },
+     {
+      "id": "82de7f56-acd9-4b34-87ba-9983f6444f64",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2003-09-19"
+     },
+     {
+      "id": "e11b292d-2ec8-3fc9-9173-31e5f99b7535",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1991-10-22"
+     },
+     {
+      "id": "f9dffcec-f9ae-3320-a003-b87c1e995885",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1986-12-01"
+     },
+     {
+      "id": "69545048-77f6-498e-b9f4-9608b0d4170a",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "1979-06-22"
+     }
+    ],
+    "isrcs": [
+     "GBCEG7900021",
+     "GBCEG0100037"
+    ]
+   },
+   {
+    "id": "daec7ab7-b0f4-4b7c-bd16-6c3bdd4e5e9b",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "disambiguation": "live, 1977-12-11: The Summit, Houston, TX, USA",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2017",
+    "releases": [
+     {
+      "id": "05fb8fc3-bad2-40b9-a2d9-a0dbc0ec3ead",
+      "title": "Ultimate Houston 1977",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "76c32780-80c9-4fb2-aa11-6459375fbeaf",
+       "title": "Ultimate Houston 1977",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2017"
+     }
+    ]
+   },
+   {
+    "id": "3f94f7f9-10ac-466a-96ae-549f8ad61db2",
+    "score": 100,
+    "title": "Sheer Heart Attack",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2021-06-11",
+    "releases": [
+     {
+      "id": "b4dca087-afe6-41ae-a812-5e0e4f43729b",
+      "title": "Box",
+      "status": "Official",
+      "release-group": {
+       "id": "f431ed6c-8684-4191-86be-631a9255ad25",
+       "title": "Box",
+       "primary-type": "Broadcast",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "17adb940-1ceb-4901-8861-b5e2333f9479",
+    "score": 85,
+    "title": "Sheer Heart Attack (Remastered 2011)",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2025-06-20",
+    "releases": [
+     {
+      "id": "7e0bc631-d2ef-4409-a720-f41f3fc16e9e",
+      "title": "Heavy",
+      "status": "Official",
+      "release-group": {
+       "id": "3782b68f-95f8-4f27-b5da-10dc76b8db1d",
+       "title": "Heavy",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ],
+    "isrcs": [
+     "GBUM71103458"
+    ]
+   },
+   {
+    "id": "fdc22412-afcf-444f-8113-3263e9712c3f",
+    "score": 85,
+    "title": "Sheer Heart Attack (Rocks version)",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2011",
+    "releases": [
+     {
+      "id": "bf096071-0551-41e2-8fac-8c93a8a9b2e2",
+      "title": "Rare Cuts, Vol. 2",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "537ef529-ab87-474a-beb3-62bc4c771d9f",
+       "title": "Rare Cuts, Vol. 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     }
+    ]
+   },
+   {
+    "id": "df204b32-0675-454a-ab45-2f0a52545e1c",
+    "score": 80,
+    "title": "Sheer Heart Attack (original rough mix)",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2017-11-17",
+    "releases": [
+     {
+      "id": "411b1e87-c5c2-43ba-801a-2c941d85b03d",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     },
+     {
+      "id": "363cc8c5-fc37-4003-a5bc-a8a1f6d1fc23",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     },
+     {
+      "id": "13bdec67-edb6-4401-8c1a-493050bca1ba",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     }
+    ]
+   },
+   {
+    "id": "f380c8cd-d2d3-48cb-a8a6-ef8638500208",
+    "score": 80,
+    "title": "Sheer Heart Attack (Houston, Texas ’77)",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "1989",
+    "releases": [
+     {
+      "id": "b2f5a277-84cc-426a-ac73-54abeb72d49b",
+      "title": "Rare Live (A Concert Through Time and Space)",
+      "status": "Official",
+      "release-group": {
+       "id": "e975d495-767d-433c-85c4-6356d1a5dc3e",
+       "title": "Rare Live (A Concert Through Time and Space)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Live"
+       ]
+      },
+      "date": "1989"
+     }
+    ]
+   },
+   {
+    "id": "db8b472d-491b-41b2-9c79-23a3102f30b8",
+    "score": 76,
+    "title": "Sheer Heart Attack (live at Hammersmith, 1979)",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2014",
+    "releases": [
+     {
+      "id": "06a05e76-45b7-44f6-a3e0-1575e3bd0811",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2014"
+     }
+    ]
+   },
+   {
+    "id": "bf7a12ad-b3fb-42d5-a281-bc2128760bd6",
+    "score": 76,
+    "title": "Sheer Heart Attack (live in Paris 1979)",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2017-11-17",
+    "releases": [
+     {
+      "id": "411b1e87-c5c2-43ba-801a-2c941d85b03d",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     },
+     {
+      "id": "363cc8c5-fc37-4003-a5bc-a8a1f6d1fc23",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     },
+     {
+      "id": "13bdec67-edb6-4401-8c1a-493050bca1ba",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2017-11-17"
+     }
+    ]
+   },
+   {
+    "id": "7cd19444-5c1f-480e-b6e3-d7c023bd75dc",
+    "score": 72,
+    "title": "Sheer Heart Attack (Live, European Tour / 1979)",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2026-10-10",
+    "releases": [
+     {
+      "id": "9ea6c432-5afd-4ff2-a628-4e1717d5a6ae",
+      "title": "Live Killers",
+      "status": "Official",
+      "release-group": {
+       "id": "c8425a2f-c6fd-3656-aeda-162bf996b622",
+       "title": "Live Killers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2026-10-10"
+     }
+    ]
+   },
+   {
+    "id": "b7b882fe-2aea-431d-a35e-cc00e68dc176",
+    "score": 72,
+    "title": "Sheer Heart Attack (live in Paris, February 1979)",
+    "artist-credit": [
+     {
+      "name": "Queen",
+      "joinphrase": "",
+      "artist": {
+       "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+       "name": "Queen"
+      }
+     }
+    ],
+    "first-release-date": "2011-01-01",
+    "releases": [
+     {
+      "id": "f0310788-6860-4bca-9aba-0afd91b08b43",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2021-05-19"
+     },
+     {
+      "id": "44a96087-1236-4239-bdc8-956a6047f48a",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": ""
+     },
+     {
+      "id": "c8f4e067-1f19-4fb8-ab17-7772500a21aa",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      }
+     },
+     {
+      "id": "63a558e2-ff9a-4014-bb93-a087ec29e487",
+      "title": "Queen 40 Limited Edition Collector's Box Set Vol. 2",
+      "status": "Official",
+      "release-group": {
+       "id": "356bb224-dee9-45c8-a7a4-f75f1944c441",
+       "title": "Queen 40 Limited Edition Collector's Box Set Vol. 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-01-01"
+     },
+     {
+      "id": "5cb80a1a-86a2-4860-a5be-d999f83a7359",
+      "title": "Queen 40",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "00b2a4d3-96c6-42cd-a3c7-aa0e9eb61735",
+       "title": "Queen 40",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     },
+     {
+      "id": "8eedc7ea-0cb8-4dae-8dd7-a7979291139a",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011"
+     },
+     {
+      "id": "687336bb-aa57-4dae-8421-a6c7fe19da10",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011-06-22"
+     },
+     {
+      "id": "13005c87-dfea-4859-8e2b-cff54c650c4b",
+      "title": "Queen 40",
+      "status": "Official",
+      "release-group": {
+       "id": "2f56033b-1f56-4a48-961e-8d5e78721c6f",
+       "title": "Queen 40",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-09-13"
+     },
+     {
+      "id": "d9f31858-05dc-49b3-b8c3-5f9558168369",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011-06-27"
+     },
+     {
+      "id": "7fc19ae9-19e5-46a3-b55d-0cc1dca866ab",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011-09-13"
+     },
+     {
+      "id": "e1447654-f1fb-4b04-852f-0b1c06cc50a9",
+      "title": "Queen 40",
+      "status": "Official",
+      "release-group": {
+       "id": "2f56033b-1f56-4a48-961e-8d5e78721c6f",
+       "title": "Queen 40",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-09-13"
+     },
+     {
+      "id": "37bc6334-b858-49c6-a3c7-03bdf76385f0",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2011-06-22"
+     },
+     {
+      "id": "06a05e76-45b7-44f6-a3e0-1575e3bd0811",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2014"
+     },
+     {
+      "id": "80bc7464-2d84-4e90-b739-e9689ed6df83",
+      "title": "News of the World",
+      "status": "Official",
+      "release-group": {
+       "id": "c172ea98-3a82-3254-b8ad-25a4f465ba03",
+       "title": "News of the World",
+       "primary-type": "Album"
+      },
+      "date": "2014-11-04"
+     }
+    ],
+    "isrcs": [
+     "GBUM71103521"
+    ]
+   }
+  ]
+ }
+}

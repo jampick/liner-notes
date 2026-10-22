@@ -1,0 +1,81 @@
+{
+ "path": "recording/f71e68bd-98a5-4f30-ab72-e54b8083841b",
+ "query": {
+  "inc": "isrcs+artist-credits+releases"
+ },
+ "status": 200,
+ "body": {
+  "isrcs": [],
+  "disambiguation": "",
+  "artist-credit": [
+   {
+    "artist": {
+     "name": "George Benson",
+     "country": "US",
+     "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+     "disambiguation": "jazz guitarist/singer",
+     "sort-name": "Benson, George",
+     "type": "Person",
+     "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff"
+    },
+    "name": "George Benson",
+    "joinphrase": ""
+   }
+  ],
+  "video": false,
+  "title": "Give Me The Night",
+  "id": "f71e68bd-98a5-4f30-ab72-e54b8083841b",
+  "length": 301000,
+  "first-release-date": "1990",
+  "releases": [
+   {
+    "title": "Grand New World",
+    "artist-credit": [
+     {
+      "joinphrase": "",
+      "name": "George Benson",
+      "artist": {
+       "name": "George Benson",
+       "country": "US",
+       "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+       "disambiguation": "jazz guitarist/singer",
+       "sort-name": "Benson, George",
+       "type": "Person",
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff"
+      }
+     }
+    ],
+    "packaging": "Jewel Case",
+    "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+    "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+    "date": "1990",
+    "release-events": [
+     {
+      "date": "1990",
+      "area": {
+       "iso-3166-1-codes": [
+        "JP"
+       ],
+       "type-id": null,
+       "disambiguation": "",
+       "name": "Japan",
+       "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+       "sort-name": "Japan",
+       "type": null
+      }
+     }
+    ],
+    "text-representation": {
+     "language": "jpn",
+     "script": "Jpan"
+    },
+    "id": "a16fc29c-be2a-4615-b62b-03e97a44b608",
+    "status": "Official",
+    "quality": "normal",
+    "country": "JP",
+    "barcode": "4988014736008",
+    "disambiguation": ""
+   }
+  ]
+ }
+}
