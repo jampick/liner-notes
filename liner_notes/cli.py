@@ -306,7 +306,7 @@ def cmd_new(a):
     doc = _workflow(new, a.title, slug=a.slug, source=a.from_, with_panel=a.panel)
     where = journeytoml.folder(doc["slug"])
     how = "with a panel" if doc["panel"] else "with no panel (the playlist is the list)"
-    print(f"{doc['slug']}: started in {where}, {how}. Next: liner-notes stage {doc['slug']} heuristic --prompt")
+    print(f"{doc['slug']}: started in {where}, {how}. Next: liner-notes prompt {doc['slug']} heuristic")
     return 0
 
 
@@ -337,13 +337,17 @@ def cmd_status(a):
     return 0
 
 
-def cmd_stage(a):
+def cmd_prompt(a):
     from .workflow import stages
 
-    if a.prompt:
-        sys.stdout.write(_workflow(stages.render, a.slug, a.name))
-        return 0
-    text = sys.stdin.read() if a.accept == "-" else _read_reply(a.accept)
+    sys.stdout.write(_workflow(stages.render, a.slug, a.name))
+    return 0
+
+
+def cmd_reply(a):
+    from .workflow import stages
+
+    text = sys.stdin.read() if a.file == "-" else _read_reply(a.file)
     out = _workflow(stages.accept_reply, a.slug, a.name, text)
     print(f"{a.slug}: {a.name} accepted and signed off, in {out}")
     return 0
@@ -494,13 +498,16 @@ def parser():
     p.add_argument("--json", action="store_true", help="for scripts and the console")
     p.set_defaults(fn=cmd_status)
 
-    p = sub.add_parser("stage", help="render a stage's prompt to paste anywhere, or accept the reply")
+    p = sub.add_parser("prompt", help="print a stage's brief, inputs and reply format, to paste into any chat")
     p.add_argument("slug")
     p.add_argument("name", help="heuristic, panel, dates, eras or front")
-    how = p.add_mutually_exclusive_group(required=True)
-    how.add_argument("--prompt", action="store_true", help="print the brief, the inputs and the reply's schema")
-    how.add_argument("--accept", metavar="FILE", help="check a reply (a file, or - for stdin), write it and sign it off")
-    p.set_defaults(fn=cmd_stage)
+    p.set_defaults(fn=cmd_prompt)
+
+    p = sub.add_parser("reply", help="check a chat's reply to a stage's prompt and write it")
+    p.add_argument("slug")
+    p.add_argument("name", help="heuristic, panel, dates, eras or front")
+    p.add_argument("file", metavar="FILE", help="the reply, or - for stdin")
+    p.set_defaults(fn=cmd_reply)
 
     p = sub.add_parser("accept", help="sign off a stage as it stands: you looked and it still holds")
     p.add_argument("slug")

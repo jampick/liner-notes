@@ -50,8 +50,8 @@ def fill(capsys):
     """Make the journey and accept every stage from the fixtures, as a paste would."""
     assert run("new", "Small Trip") == 0
     for name in STAGES:
-        assert run("stage", SLUG, name, "--prompt") == 0
-        assert run("stage", SLUG, name, "--accept", FIX / FILES[name]) == 0
+        assert run("prompt", SLUG, name) == 0
+        assert run("reply", SLUG, name, FIX / FILES[name]) == 0
     capsys.readouterr()
 
 
@@ -94,9 +94,9 @@ def test_a_playlist_gets_no_panel_unless_asked(ws, tmp_path, capsys):
 def test_prompt_has_the_brief_the_inputs_and_the_schema_and_is_recorded(ws, capsys):
     assert run("new", "Small Trip") == 0
     for name in ("heuristic", "panel", "dates"):
-        run("stage", SLUG, name, "--accept", FIX / FILES[name])
+        run("reply", SLUG, name, FIX / FILES[name])
     capsys.readouterr()
-    assert run("stage", SLUG, "eras", "--prompt") == 0
+    assert run("prompt", SLUG, "eras") == 0
     out = capsys.readouterr().out
     assert "Fixture brief for the era stage" in out
     assert "1991" in out and "rehearsal" not in out  # dates.json is in, eras.json isn't written yet
@@ -109,7 +109,7 @@ def test_prompt_has_the_brief_the_inputs_and_the_schema_and_is_recorded(ws, caps
 def test_prompt_refuses_while_an_input_is_missing(ws, capsys):
     assert run("new", "Small Trip") == 0
     with pytest.raises(SystemExit) as e:
-        run("stage", SLUG, "eras", "--prompt")
+        run("prompt", SLUG, "eras")
     assert "dates.json" in str(e.value)
 
 
@@ -120,7 +120,7 @@ def test_accept_rejects_a_bad_reply_and_names_the_field(ws, tmp_path, capsys):
     reply = tmp_path / "reply.json"
     reply.write_text(json.dumps(bad))
     with pytest.raises(SystemExit) as e:
-        run("stage", SLUG, "eras", "--accept", reply)
+        run("reply", SLUG, "eras", reply)
     assert "name" in str(e.value)
     assert not (ws["dir"] / "eras.json").exists()
     assert states(capsys)["eras"]["state"] == "empty"
@@ -133,7 +133,7 @@ def test_accept_rejects_a_vote_from_a_judge_who_isnt_on_the_panel(ws, tmp_path, 
     reply = tmp_path / "reply.json"
     reply.write_text(json.dumps(p))
     with pytest.raises(SystemExit) as e:
-        run("stage", SLUG, "panel", "--accept", reply)
+        run("reply", SLUG, "panel", reply)
     assert "zed" in str(e.value)
     assert not (ws["dir"] / "panel.json").exists()
 
