@@ -14,7 +14,13 @@ from pathlib import Path
 
 from . import __version__, config, paths
 
-OK, WARN, BAD = "ok  ", "warn", "FAIL"
+OK, WARN, BAD, INFO = "ok  ", "warn", "FAIL", "info"
+
+
+def tilde(text):
+    """Paths under the home directory as ~/..., so long lines stay readable."""
+    home = str(Path.home())
+    return text.replace(home + "/", "~/") if home not in ("", "/") else text
 
 
 def _n(k, word):
@@ -106,7 +112,7 @@ def run(system, songs=False, log=print):
     def line(st, what, detail=""):
         nonlocal bad
         bad += st == BAD
-        log(f"{st} {what:22} {detail}")
+        log(f"{st} {what:22} {tilde(str(detail))}")
 
     cfg = config.load()
     line(OK, "liner-notes", f"{__version__} on Python {platform.python_version()} ({sys.executable})")
@@ -165,7 +171,7 @@ def run(system, songs=False, log=print):
         from . import overlay
 
         for r in overlay.report():
-            line(WARN, "your copy", overlay.describe(*r))
+            line(INFO if r[2] == "gone" else WARN, "your copy", overlay.describe(*r))
     else:
         env = os.environ.get("LINER_NOTES_HOME")
         fix = (

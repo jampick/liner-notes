@@ -117,9 +117,9 @@ The voice: a friend who has the records and has read the interviews. No em dashe
 
 ## Reviewing songs on your machine
 
-`liner-notes review <song id> --by NAME` records your own review in a copy of the song under `~/.local/share/liner-notes/songs/`. It stays on your machine and never edits the shipped file. `liner-notes check` counts it apart from the shipped reviews ("12 reviewed, 1 more in your copies"), because it's your review, not a maintainer's. For now your own pages also stop marking that song as draft notes; the shipped song and everyone else's pages don't change. A maintainer's review only comes through a pull request.
+`liner-notes review <song id> --by NAME` records your own review in a copy of the song under `~/.local/share/liner-notes/songs/`. It stays on your machine and never edits the shipped file. `liner-notes check` counts it apart from the shipped reviews ("12 reviewed by a person, plus 1 in your copies"), because it's your review, not a maintainer's. For now your own pages also stop marking that song as draft notes; the shipped song and everyone else's pages don't change. A maintainer's review only comes through a pull request.
 
-The copy notes which shipped version it started from, so `liner-notes doctor` tells you when the shipped song has changed since. `liner-notes review <song id> --undo` puts it back to draft, and drops the copy if the review was all it held. `liner-notes drop <song id>` removes your copy outright.
+The copy notes which shipped version it started from, so `liner-notes doctor` tells you when the shipped song has changed since. `liner-notes review <song id> --undo` puts it back to draft, and deletes the copy if you haven't changed anything else in it since it was made. `liner-notes drop <song id>` moves your copy aside to `~/.local/share/liner-notes/dropped/<date>/`, so you read the shipped song again and can still get yours back.
 
 ## What's public and what stays on your machine
 

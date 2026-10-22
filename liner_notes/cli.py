@@ -129,8 +129,8 @@ def cmd_list(a):
             print(f"{slug:24} {j['title']:28} {len(j.get('remixes') or []):3} remixes  {built}")
             continue
         reviewed, yours = overlay.review_counts(j["songs"], bank)
-        more = f"  (+{yours} in your copies)" if yours else ""
-        print(f"{slug:24} {j['title']:28} {len(j['songs']):3} songs  {reviewed:3} reviewed  {built}{more}")
+        more = f" (+{yours} yours)" if yours else ""
+        print(f"{slug:24} {j['title']:28} {len(j['songs']):3} songs  {reviewed:3} reviewed{more}  {built}")
     print(f"{len(bank.songs)} songs in the bank")
 
 
@@ -229,13 +229,23 @@ def cmd_review(a):
                 print(f"{sid}: nothing to undo, you have no copy of it")
                 continue
             s = read_json(f)
-            if s.get("base") and overlay.only_review_differs(s, shipped):
+            kind = overlay.undo_kind(s, shipped)
+            if kind == "review-only":
                 f.unlink()
                 print(f"{sid}: your review is gone; you're reading the shipped song again")
                 continue
             s["review"] = review
             overlay.write(f, s)
-            print(f"{sid}: back to draft in your copy, {f}. The copy stays because it has other changes")
+            if kind == "yours":
+                print(f"{sid}: back to draft, in {f}")
+            elif kind == "unknown":
+                print(
+                    f"{sid}: back to draft in your copy, {f}. The shipped song changed since you copied it, so liner-notes can't tell "
+                    f"your changes from the maintainer's. liner-notes doctor shows both files; "
+                    f"liner-notes drop {sid} moves yours aside"
+                )
+            else:
+                print(f"{sid}: back to draft in your copy, {f}. The copy stays because it has changes of yours besides the review")
             continue
         f, s = overlay.copy_for_writing(sid, bank)
         s["review"] = review
@@ -246,8 +256,8 @@ def cmd_review(a):
             )
         else:
             print(f"{sid}: reviewed by {review['by']}, in {f}")
-    if not a.shipped and paths.checkout():
-        print("In this checkout, review --shipped marks the shipped file instead (that's the maintainer's review)")
+    if not a.shipped and not a.undo and paths.checkout():
+        print("You're in a git checkout. If you maintain the bank, review --shipped marks the shipped file instead.")
 
 
 def cmd_drop(a):

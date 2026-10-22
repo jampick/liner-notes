@@ -104,8 +104,8 @@ def check(log=print):
                 problems.append(f"{slug}: panel quote for {sid}, which isn't in the journey")
         written = [s for s in j["songs"] if (bank.songs.get(s, {}).get("notes") or {}).get("made")]
         reviewed, yours = overlay.review_counts(j["songs"], bank)
-        more = f", {yours} more in your copies" if yours else " by a person"
-        notes.append(f"{slug}: {len(j['songs'])} songs, {len(written)} written, {reviewed} reviewed{more}")
+        more = f", plus {yours} in your copies" if yours else ""
+        notes.append(f"{slug}: {len(j['songs'])} songs, {len(written)} written, {reviewed} reviewed by a person{more}")
     for n in notes:
         log(n)
     for p in problems:

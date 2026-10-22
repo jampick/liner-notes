@@ -31,8 +31,18 @@ def shipped_song(sid):
     return f if f.is_file() else None
 
 
+def _strip(song):
+    return {k: v for k, v in song.items() if k not in ("review", "base")}
+
+
+def content_hash(song):
+    """The song's content apart from its review and base, so a copy can tell whether it was edited."""
+    return hashlib.sha256(json.dumps(_strip(song), sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode()).hexdigest()
+
+
 def base_of(shipped_file):
-    return {"version": __version__, "sha256": sha256(shipped_file)}
+    """Where a copy started: the package version, the shipped file's bytes, and the song as copied."""
+    return {"version": __version__, "sha256": sha256(shipped_file), "content": content_hash(read_json(shipped_file))}
 
 
 def copy_path(sid):
@@ -56,11 +66,28 @@ def copy_for_writing(sid, bank):
 
 def only_review_differs(copy, shipped_file):
     """True when a copy is the shipped song plus a review, nothing else."""
+    try:
+        return bool(shipped_file) and _strip(copy) == _strip(read_json(shipped_file))
+    except (OSError, ValueError):
+        return False
 
-    def strip(d):
-        return {k: v for k, v in d.items() if k not in ("review", "base")}
 
-    return bool(shipped_file) and strip(copy) == strip(read_json(shipped_file))
+def undo_kind(copy, shipped_file):
+    """What `review --undo` may do with a copy.
+
+    'review-only': unchanged since it was copied, or the same as the shipped song apart from the
+    review, so deleting it loses nothing. 'yours': no base, a song of your own. 'unknown': copied
+    before base.content existed and the shipped song has changed since, so the two can't be told
+    apart. 'changed': your edits are in it.
+    """
+    base = copy.get("base")
+    if not base:
+        return "yours"
+    if base.get("content") == content_hash(copy) or only_review_differs(copy, shipped_file):
+        return "review-only"
+    if not base.get("content") and shipped_file and base.get("sha256") != sha256(shipped_file):
+        return "unknown"
+    return "changed"
 
 
 def write(path, obj):
@@ -121,8 +148,23 @@ def describe(kind, ident, what, mine, shipped):
     )
 
 
+def _aside(src, rel):
+    """Move src under user data's dropped/<today>/rel, never over an earlier drop. Returns where it went."""
+    import datetime as dt
+    import shutil
+
+    day = paths.user_data() / "dropped" / dt.date.today().isoformat()
+    dest, n = day / rel, 1
+    while dest.exists():
+        n += 1
+        dest = day / rel.with_name(f"{rel.stem}-{n}{rel.suffix}")
+    paths.guard(dest).parent.mkdir(parents=True, exist_ok=True)
+    shutil.move(str(src), str(dest))
+    return dest
+
+
 def drop(ident):
-    """Remove your copy of a shipped song or journey. Returns (ok, message)."""
+    """Move your copy of a shipped song or journey aside, into dropped/<date>/. Returns (ok, message)."""
     for kind, f, shipped in (
         ("song", copy_path(ident), paths.home() / "songs" / f"{ident}.json"),
         ("journey", paths.user_data() / "journeys" / ident / "journey.json", paths.home() / "journeys" / ident / "journey.json"),
@@ -138,14 +180,13 @@ def drop(ident):
                 False,
                 f"{ident}: {f} is a {kind} of yours alone, not a copy of a shipped one, so drop leaves it. Delete it by hand if you mean to",
             )
-        f.unlink()
         if kind == "journey":
-            try:
-                f.parent.rmdir()
-            except OSError:
-                pass
+            dest = _aside(f.parent, Path("journeys") / ident) / "journey.json"
+        else:
+            dest = _aside(f, Path("songs") / f.name)
+        what = "your copy" if base else f"your own {kind} (it had the same id as a shipped one)"
         again = f"you're reading the shipped {kind} again" if shipped.is_file() else f"there's no shipped {kind} {ident} any more"
-        return True, f"{ident}: dropped your copy, {f}; {again}"
+        return True, f"{ident}: moved {what} to {dest}; {again}"
     return False, f"{ident}: there's no copy of it in {paths.user_data()}"
 
 
