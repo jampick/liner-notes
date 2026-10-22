@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert a journeys-pilot playlist folder into songs/, culture/ and journeys/<slug>/.
+"""Convert a journeys-pilot playlist folder into the bank: songs/, culture/ and journeys/<slug>/.
 
 python3 tools/migrate_journey.py <your pilot checkout>/playlists/<slug> [--root DIR] [--cache DIR]
 """

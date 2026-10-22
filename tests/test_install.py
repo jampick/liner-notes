@@ -51,5 +51,5 @@ def test_doctor_counts_the_shipped_bank(iso, monkeypatch):
     monkeypatch.setattr(doctor, "port_owner", lambda port: None)
     out = []
     doctor.run(Fake(), log=out.append)
-    assert any(x.startswith("ok") and "2 songs, 1 journeys" in x for x in out)
+    assert any(x.startswith("ok") and "2 songs and 1 journey shipped" in x for x in out)
     assert len(Bank().songs) == 2

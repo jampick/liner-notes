@@ -17,6 +17,10 @@ from . import __version__, config, paths
 OK, WARN, BAD = "ok  ", "warn", "FAIL"
 
 
+def _n(k, word):
+    return f"{k} {word}" + ("" if k == 1 else "s")
+
+
 def port_owner(port, proc=Path("/proc")):
     """(pid, argv) of the process listening on a loopback TCP port, from /proc, or None."""
     want = f":{port:04X}"
@@ -153,6 +157,18 @@ def run(system, songs=False, log=print):
         ("config", paths.config_file()),
     ):
         line(OK if p.exists() else WARN, name, f"{p}" + ("" if p.exists() else " (not there yet)"))
+    shipped = paths.home()
+    n_songs = len(list((shipped / "songs").glob("*.json")))
+    n_journeys = len(list((shipped / "journeys").glob("*/journey.json")))
+    if n_songs:
+        line(OK, "bank", f"{_n(n_songs, 'song')} and {_n(n_journeys, 'journey')} shipped in {shipped}")
+    else:
+        line(
+            BAD,
+            "bank",
+            f"no songs in {shipped / 'songs'}. The shipped song bank is missing from this install, so every journey "
+            "comes up empty. Reinstall liner-notes, or point LINER_NOTES_HOME at liner_notes/shipped in a checkout.",
+        )
     line(OK, "offline mode", "on: keys load the (offline) twins" if is_offline() else "off")
     have = [m for m in ("numpy", "onnxruntime", "PIL") if importlib.util.find_spec(m)]
     from .depth import model_path

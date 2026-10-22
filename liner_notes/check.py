@@ -1,6 +1,6 @@
 """`liner-notes check`: validate the bank and the journeys, and say what still needs a person.
 
-The schemas in schemas/ are JSON Schema (2020-12). The validator here covers the part of it they
+The schemas in liner_notes/schemas/ are JSON Schema (2020-12). The validator here covers the part of it they
 use (type, required, properties, items, enum, pattern, minimum, minItems, minLength) so `check`
 needs nothing outside the standard library. It also checks what a schema can't: every journey
 song exists, threads point at songs in the journey, era photographs exist, our own text has no
@@ -52,7 +52,7 @@ def validate(doc, schema, at="$"):
 
 
 def schemas():
-    d = paths.home() / "schemas"
+    d = paths.schemas_dir()
     return {n: read_json(d / f"{n}.schema.json") for n in ("song", "journey", "remix-journey", "culture-year")}
 
 
@@ -60,6 +60,8 @@ def check(log=print):
     sc = schemas()
     bank = Bank()
     problems, notes = [], []
+    if not any((paths.home() / "songs").glob("*.json")):
+        problems.append(f"the shipped bank isn't installed: no songs in {paths.home() / 'songs'}")
     for sid, s in bank.songs.items():
         f = bank.song_files[sid]
         problems += [f"{f.name}: {e}" for e in validate(s, sc["song"])]
@@ -154,7 +156,7 @@ TEXT_EXT = {
     ".service",
     "",
 }
-ERA_IMAGE = re.compile(r"journeys/[a-z0-9-]+/media/eras/era\d+\.webp")
+ERA_IMAGE = re.compile(r"(?:liner_notes/shipped/)?journeys/[a-z0-9-]+/media/eras/era\d+\.webp")
 # README screenshots: shot from public builds (no covers), photos only where the licence is free and credited.
 SCREENSHOT = re.compile(r"docs/screenshots/[a-z0-9-]+\.(webp|gif)")
 RASTER_URI = re.compile(r"data:image/(?:jpe?g|png|gif|avif|bmp)\b", re.I)
@@ -242,7 +244,9 @@ def scan_tree(root):
             if shot and (_magic_gif(p) if shot.group(1) == "gif" else _magic_webp(p)):
                 continue
             if not (ERA_IMAGE.fullmatch(rel) and _magic_webp(p)):
-                out.append(f"{rel}: the only pictures the repo carries are WebP era pictures at journeys/<slug>/media/eras/era<n>.webp")
+                out.append(
+                    f"{rel}: the only pictures the repo carries are WebP era pictures at liner_notes/shipped/journeys/<slug>/media/eras/era<n>.webp"
+                )
         elif ext in TEXT_EXT and p.stat().st_size < 50_000_000:
             try:
                 text = p.read_text(errors="ignore")
@@ -309,9 +313,9 @@ def publish(log=print):
 
     from .build import Refused, build
 
-    home = paths.home()
-    if not (home / ".git").exists():
-        log(f"liner-notes: check --publish checks a git checkout before you push, and {home} isn't one")
+    home = paths.checkout()
+    if not home:
+        log(f"liner-notes: check --publish checks a git checkout before you push, and {paths.home()} isn't one")
         return 2
     problems = [f"tree: {p}" for p in scan_tree(home)]
     bank = Bank()

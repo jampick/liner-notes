@@ -3,8 +3,11 @@
 The song bank and journeys are read from two places, user data first so a generated or edited
 song overrides the shipped one:
 
-  ~/.local/share/liner-notes/{songs,journeys,culture}   what you generate (LINER_NOTES_DATA)
-  <repo>/{songs,journeys,culture}                        what ships with Liner Notes (LINER_NOTES_HOME)
+  ~/.local/share/liner-notes/{songs,journeys,culture}   what you generate or review (LINER_NOTES_DATA)
+  liner_notes/shipped/{songs,journeys,culture}           what ships with Liner Notes (LINER_NOTES_HOME)
+
+The shipped bank is package data, so a wheel carries it and a checkout reads the same files. The
+schemas are package data too, in liner_notes/schemas.
 
 Everything personal stays out of git, in the XDG directories:
 
@@ -28,8 +31,25 @@ def _env_path(name, default):
 
 
 def home():
-    """The shipped data root: a checkout, or LINER_NOTES_HOME."""
-    return _env_path("LINER_NOTES_HOME", PACKAGE.parent)
+    """The shipped data root: the bank inside the package, or LINER_NOTES_HOME."""
+    return _env_path("LINER_NOTES_HOME", PACKAGE / "shipped")
+
+
+def schemas_dir():
+    return PACKAGE / "schemas"
+
+
+def checkout():
+    """The git checkout the shipped bank lives in, or None for an installed package.
+
+    Looks at the shipped root and two levels up (<checkout>/liner_notes/shipped), never further, so a
+    home directory kept in git doesn't count.
+    """
+    h = home()
+    for d in (h, h.parent.parent):
+        if (d / ".git").exists():
+            return d
+    return None
 
 
 def user_data():

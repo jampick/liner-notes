@@ -81,7 +81,7 @@ When YouTube stops answering (it flagged my IP twice), `liner-notes offline on` 
 ## Three layers
 
 1. **Live, for any song.** What cliamp knows: title, artist, position, lyrics, the visualizer bands, tonight's history. Free and instant, even for songs nobody has written about.
-2. **The song bank.** Notes per song in `songs/<artist>--<title>.json`, written once and reused by every journey that has the song. Every fact carries a source.
+2. **The song bank.** Notes per song in `liner_notes/shipped/songs/<artist>--<title>.json`, written once and reused by every journey that has the song. Every fact carries a source.
 3. **Journeys.** A playlist with an order through the years, eras with an essay and a photograph, threads between songs, and optionally a panel: five invented judges with a lens each who argued the list into shape. The panel is fictional and the page says so.
 
 ## Your own playlists
@@ -111,7 +111,7 @@ The bridge reads now-playing through an adapter. Each one yields the same shape:
 
 ## Contributing a song
 
-The bank grows by pull request. Copy an existing file in `songs/`, keep the shape in `schemas/song.schema.json`, and list a source for every fact. A new song starts with `"review": {"state": "draft"}`. Drafts show as "Draft notes" on the page. A maintainer reads it against its sources before it becomes `reviewed`. `liner-notes check` runs the same checks CI does.
+The bank grows by pull request. Copy an existing file in `liner_notes/shipped/songs/`, keep the shape in `liner_notes/schemas/song.schema.json`, and list a source for every fact. A new song starts with `"review": {"state": "draft"}`. Drafts show as "Draft notes" on the page. A maintainer reads it against its sources before it becomes `reviewed`. `liner-notes check` runs the same checks CI does.
 
 The voice: a friend who has the records and has read the interviews. No em dashes, no "iconic", no "timeless". Specific names, studios, samples, chart positions, years. The full rules are in the song brief.
 
@@ -143,4 +143,4 @@ Everything runs on your machine. The bridge listens on 127.0.0.1 only, checks th
 
 ## Licences
 
-Code: MIT (`LICENSE`). Song notes, journey text and culture notes in `songs/`, `journeys/` and `culture/`: CC BY-SA 4.0 (`LICENSE-CONTENT`). The writers worked largely from Wikipedia, which is CC BY-SA, so share-alike is the honest choice.
+Code: MIT (`LICENSE`). Song notes, journey text and culture notes in `liner_notes/shipped/` (`songs/`, `journeys/` and `culture/`): CC BY-SA 4.0 (`LICENSE-CONTENT`). The writers worked largely from Wikipedia, which is CC BY-SA, so share-alike is the honest choice.
