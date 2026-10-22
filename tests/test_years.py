@@ -486,3 +486,16 @@ def test_a_bad_slug_is_the_users_to_fix_not_a_bug(tmp_path, monkeypatch):
         cli.main(["generate", "--from", "Night Mix", "--slug", "City Pop"])
     assert "--slug" in str(e.value.code) and "bug" not in str(e.value.code)
     assert not (data / "journeys").exists()
+
+
+def test_a_copys_base_is_checked_against_the_schema():
+    from liner_notes.bank import problems
+
+    song = {"id": "a--b", "title": "B", "artist": "A", "year": 1980, "aliases": {}, "notes": {}, "review": {"state": "draft"}}
+    song["provenance"] = {"ai_generated": False}
+    good = {"version": "0.3.0.dev0", "sha256": "a" * 64, "content": "b" * 64}
+    assert problems({**song, "base": good}, "song") == []
+    assert problems({**song, "base": {k: v for k, v in good.items() if k != "content"}}, "song") == []  # copies from before content
+    bad = problems({**song, "base": {**good, "sha256": "nope"}}, "song")
+    assert any("base.sha256" in x for x in bad), bad
+    assert any("base" in x for x in problems({**song, "base": {"sha256": "a" * 64}}, "song"))  # no version
