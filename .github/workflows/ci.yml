@@ -52,6 +52,23 @@ jobs:
           n=$(tail -n 1 /tmp/list.txt | cut -d' ' -f1)
           test "$n" -gt 200 || { echo "only $n songs in the bank"; exit 1; }
           /tmp/clean/bin/liner-notes check
+      - name: A review lands in user data and leaves site-packages alone
+        working-directory: /tmp
+        env:
+          XDG_DATA_HOME: /tmp/xdg/data
+          XDG_CACHE_HOME: /tmp/xdg/cache
+          XDG_STATE_HOME: /tmp/xdg/state
+          XDG_CONFIG_HOME: /tmp/xdg/config
+        run: |
+          songs=$(/tmp/clean/bin/python -c 'from liner_notes import paths; print(paths.home() / "songs")')
+          f=$(ls "$songs"/*.json | head -n 1)
+          sid=$(basename "$f" .json)
+          before=$(sha256sum "$f")
+          if /tmp/clean/bin/liner-notes review "$sid"; then echo "review ran without --by"; exit 1; fi
+          /tmp/clean/bin/liner-notes review "$sid" --by CI
+          test "$(sha256sum "$f")" = "$before"
+          grep -q '"sha256"' "/tmp/xdg/data/liner-notes/songs/$sid.json"
+          /tmp/clean/bin/liner-notes doctor || true
       - name: The command runs and the bridge starts and stops
         working-directory: /tmp
         run: |
