@@ -25,7 +25,7 @@ from . import paths
 
 PROMPTS = paths.PACKAGE / "prompts"
 STYLE = paths.PACKAGE / "style.toml"
-NAMES = ("song", "era", "heuristic", "vote", "front", "picture")
+NAMES = ("song", "era", "heuristic", "vote", "front", "picture", "dates")
 PLACEHOLDER = re.compile(r"\{([a-z_]+)\}")
 FENCE = "+++"
 
@@ -159,7 +159,7 @@ def parse_prompt(text, path, style=None):
 
 
 def load_prompt(name, style=None):
-    """One of the briefs in prompts/, by name: song, era, heuristic, vote, front or picture."""
+    """One of the briefs in prompts/, by name: song, era, heuristic, vote, front, picture or dates."""
     if name not in NAMES:
         raise MethodError(f"no prompt called {name!r}; the prompts are {', '.join(NAMES)}")
     p = PROMPTS / f"{name}.md"
