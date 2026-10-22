@@ -4,7 +4,7 @@ import pytest
 
 from liner_notes import generate, method, paths
 
-NAMES = ["song", "era", "heuristic", "vote", "front", "picture"]
+NAMES = ["song", "era", "heuristic", "vote", "front", "picture", "dates"]
 
 
 @pytest.mark.parametrize("name", NAMES)
@@ -91,4 +91,14 @@ def test_a_malformed_prompt_says_what_is_wrong(tmp_path, what, text, says):
 def test_an_unknown_prompt_names_the_real_ones():
     with pytest.raises(method.MethodError) as e:
         method.load_prompt("essay")
-    assert "song, era, heuristic, vote, front, picture" in str(e.value)
+    assert "song, era, heuristic, vote, front, picture, dates" in str(e.value)
+
+
+def test_the_dates_brief_uses_the_dates_schema_field_names():
+    """Item 5's dates schema reads songs[].song, year, source, confidence, url, note and corrected_from."""
+    text = method.load_prompt("dates").text
+    for name in ("`song`", "`year`", "`source`", "`confidence`", "`url`", "`note`", "`corrected_from`"):
+        assert name in text, name
+    for value in ('"musicbrainz"', '"writer"', '"person"', '"high"', '"medium"', '"low"', '"none"', "null"):
+        assert value in text, value
+    assert "{output_schema}" in text and "{inputs}" in text
