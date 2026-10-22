@@ -3,8 +3,9 @@
 The schemas in liner_notes/schemas/ are JSON Schema (2020-12). The validator here covers the part of it they
 use (type, required, properties, items, enum, pattern, minimum, minItems, minLength) so `check`
 needs nothing outside the standard library. It also checks what a schema can't: every journey
-song exists, threads point at songs in the journey, era photographs exist, our own text has no
-em dashes, and every written song lists sources.
+song exists, threads point at songs in the journey, era photographs exist, every written song
+lists sources, and our own text in every song, journey and culture year keeps the house style in
+style.toml (banned words and constructions, no quoted lyrics).
 """
 
 import json
@@ -72,6 +73,152 @@ def year_warnings(song):
     return []
 
 
+# The text we write, as paths into each kind of file. `[]` is every item of a list, `*` every value of
+# an object. Titles, artists, albums, cities, labels, gear and URLs are names, so they aren't here.
+SONG_TEXT = (
+    "year_note",
+    "notes.made",
+    "notes.context",
+    "notes.unverified",
+    "notes.listen_for[].where",
+    "notes.listen_for[].note",
+    "notes.leads_to.why",
+    "culture[].line",
+)
+JOURNEY_TEXT = (
+    "description",
+    "kicker",
+    "lede",
+    "copy.*",
+    "eras[].name",
+    "eras[].essay",
+    "eras[].scene.artifact",
+    "panel.express.note",
+    "panel.judges.*.title",
+    "panel.judges.*.lens",
+    "panel.quotes.*.q",
+    "panel.quotes.*.quote",
+    "threads[].note",
+)
+CULTURE_TEXT = ("items[].line",)
+QUOTED = re.compile(
+    '["\\u201c]([^"\\u201c\\u201d]+)["\\u201d]'  # double quotes, straight or curly
+    "|\\u2018([^\\u2018\\u2019]+)\\u2019(?!\\w)"  # curly single quotes; an apostrophe inside is followed by a letter
+    "|(?<![\\w\\u2019])'((?:[^']|'(?=\\w))+?)'(?!\\w)"  # straight single quotes, the same way
+)
+SMALL = frozenset(
+    "a an and as at but by for from in into of on or the to with is it my me off up out down over not so than that if nor yet vs".split()
+)
+
+
+def texts(doc, spec):
+    """(field, text) for every string at the spec's paths."""
+
+    def walk(node, parts, at):
+        if not parts:
+            if isinstance(node, str) and node:
+                yield at, node
+            return
+        head, rest = parts[0], parts[1:]
+        if head == "*":
+            for k, v in node.items() if isinstance(node, dict) else ():
+                yield from walk(v, rest, f"{at}.{k}" if at else k)
+            return
+        key, many = (head[:-2], True) if head.endswith("[]") else (head, False)
+        node = node.get(key) if isinstance(node, dict) else None
+        at = f"{at}.{key}" if at else key
+        if many:
+            for i, v in enumerate(node if isinstance(node, list) else ()):
+                yield from walk(v, rest, f"{at}[{i}]")
+        else:
+            yield from walk(node, rest, at)
+
+    for path in spec:
+        yield from walk(doc, path.split("."), "")
+
+
+def _title_case(span):
+    words = re.findall(r"[^\W\d_][\w'\u2019]*", span)
+    big = [w for w in words if w.lower() not in SMALL]
+    return bool(big) and all(w[0].isupper() for w in big)
+
+
+def _span(m):
+    return next(g for g in m.groups() if g is not None)
+
+
+def _words(s):
+    return re.findall(r"[a-z][a-z'’-]*", s.lower())
+
+
+def lyric_quotes(text, style):
+    """Quoted spans that look like lyrics. The rule and its limits are under [lyrics] in style.toml."""
+    out = []
+    for m in QUOTED.finditer(text):
+        span = _span(m)
+        if len(span.split()) < style.lyrics_min_words or _title_case(span):
+            continue
+        # the words either side, stopping at the end of a sentence
+        ahead = _words(re.split(r"[.!?]\s", text[: m.start()])[-1])
+        past = _words(re.split(r"[.!?](?:\s|$)", text[m.end() :])[0])
+        near_ahead, near_past = ahead[-style.lyrics_before :], past[: style.lyrics_after]
+        if style.lyrics_speech & set(near_ahead):
+            continue
+        cued = style.lyrics_cues & set(near_ahead + near_past)
+        if not cued and ahead and ahead[-1] in ("line", "lines"):
+            cued = len(ahead) < 2 or ahead[-2] not in style.lyrics_not_lyric
+        if not cued and past and past[0] in ("line", "lines"):
+            cued = True
+        if cued:
+            out.append(span)
+    return out
+
+
+def style_problems(text, style):
+    """What in one piece of our text breaks style.toml, each with its fix."""
+    for name in style.allowed:
+        text = text.replace(name, " ")
+    out = []
+    # A title in quotes is a name: it can be called Timeless.
+    words_text = QUOTED.sub(lambda m: " " if _title_case(_span(m)) else m.group(0), text)
+    for c in style.constructions:
+        m = c.pattern.search(text)
+        if m:
+            what = "em dash" if c.id == "em-dash" else f"{c.id} ({m.group(0)!r})"
+            out.append(f"{what}; {c.fix}")
+    for _, pat in style.word_patterns:
+        m = pat.search(words_text)
+        if m:
+            out.append(f"banned word {m.group(0)!r}; {style.words_fix}")
+    out += [f"quoted lyric {s!r}; {style.lyrics_fix}" for s in lyric_quotes(text, style)]
+    return out
+
+
+def style_check(bank, style=None):
+    """style.toml over every text field of the songs, the journeys and the culture years, as problem lines."""
+    from .method import load_style
+
+    style = style or load_style()
+    out = []
+
+    def scan(f, doc, spec):
+        for field, text in texts(doc, spec):
+            out.extend(f"{f}: {field}: {p}" for p in style_problems(text, style))
+
+    for sid, s in bank.songs.items():
+        scan(bank.song_files[sid], s, SONG_TEXT)
+    for slug, j in bank.journeys.items():
+        if j.get("kind") != "remix":
+            scan(bank.journey_dirs[slug] / "journey.json", j, JOURNEY_TEXT)
+    seen = set()
+    for r in bank.roots:  # highest priority first; a year in your data hides the shipped one, as in the bank
+        for f in sorted((r / "culture/years").glob("*.json")):
+            if f.name not in seen:
+                seen.add(f.name)
+                scan(f, read_json(f), CULTURE_TEXT)
+    return out
+
+
 def schemas():
     d = paths.schemas_dir()
     return {n: read_json(d / f"{n}.schema.json") for n in ("song", "journey", "remix-journey", "culture-year")}
@@ -92,8 +239,6 @@ def check(log=print):
         n = s.get("notes") or {}
         if n.get("made") and not n.get("sources"):
             problems.append(f"{f}: has notes but no sources")
-        if "—" in json.dumps(n, ensure_ascii=False):
-            problems.append(f"{f}: em dash in the notes")
     for r in bank.roots:
         for f in sorted((r / "culture/years").glob("*.json")):
             problems += [f"{f}: {e}" for e in validate(read_json(f), sc["culture-year"])]
@@ -128,6 +273,7 @@ def check(log=print):
         reviewed, yours = overlay.review_counts(j["songs"], bank)
         more = f", plus {yours} in your copies" if yours else ""
         notes.append(f"{slug}: {len(j['songs'])} songs, {len(written)} written, {reviewed} reviewed by a person{more}")
+    problems += style_check(bank)
     for n in notes:
         log(n)
     for w in warnings:

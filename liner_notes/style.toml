@@ -1,0 +1,114 @@
+# The house style. Every prompt in prompts/ gets these rules at {style_rules}, and `liner-notes check`
+# applies them to every text field we write: song notes and culture lines, year notes, era essays and
+# names, front copy, panel quotes and judges' lenses, thread notes, and the culture years. Names
+# (titles, artists, albums, cities, labels, gear) and URLs aren't checked.
+#
+# Change a rule here and both sides change: the next prompt a writer gets, and what check refuses.
+# Bump `version` when you do, so a stage's hash shows the brief changed.
+version = 1
+
+[words]
+# The owner's stock vocabulary, plus the hype words the writer briefs already banned. Matched as whole
+# words in any case, with the plain inflections (delves, navigating, crucially).
+banned = [
+  "delve",
+  "tapestry",
+  "testament",
+  "landscape",
+  "navigate",
+  "leverage",
+  "robust",
+  "seamless",
+  "crucial",
+  "vibrant",
+  "iconic",
+  "timeless",
+  "legendary",
+  "truly",
+  "honestly",
+  "genuinely",
+  "simply",
+]
+say = "None of these words, in any form: {words}."
+fix = "say the plain thing instead"
+
+[names]
+# Proper nouns that would trip a rule. They're taken out of the text, matching case, before any rule
+# runs, so "Simply Red" passes and "simply put" doesn't.
+allowed = ["Simply Red", "Testament"]
+
+# Constructions are regular expressions (Python `re`), matched against the text with the allowed names
+# taken out. `say` is the line the prompts carry, `fix` is the end of check's message.
+[[constructions]]
+id = "em-dash"
+pattern = "\u2014"
+say = "No em dashes at all. Use commas, periods or parentheses. En dashes only in year ranges like 1976\u201378."
+fix = "use a comma, a period or parentheses"
+
+[[constructions]]
+id = "not-x-its-y"
+pattern = '''(?i)\b(?:it|this|that)(?:\s+(?:is|was)\s+not|['\u2019]s\s+not|\s+(?:isn|wasn)['\u2019]t)\b(?!\s+(?:until|only|just|yet)\b)[^.;:!?,]{1,40}[,;]\s*(?:it|this|that)(?:['\u2019]s|\s+(?:is|was))\b'''
+say = "No \"it's not X, it's Y\" framing that knocks down a claim nobody made."
+fix = "say what it is and drop the contrast"
+
+[[constructions]]
+id = "whether-youre"
+pattern = '''(?i)\bwhether\s+you(?:['\u2019]re|\s+are)\b'''
+say = "No \"whether you're X or Y\" framing of the reader."
+fix = "talk about the record, not the reader"
+
+[[constructions]]
+id = "heres-the"
+pattern = '''(?i)\bhere['\u2019]s\s+the\s+(?:thing|kicker|key|takeaway|catch)\b'''
+say = "No signposting like \"here's the thing\". Say the thing."
+fix = "cut the signpost and say the thing"
+
+[lyrics]
+# No quoted lyrics, not even one line. check can't see the lyrics, so it looks for the way a lyric
+# gets quoted: a span of at least `min_words` words in quotes (double or single, straight or curly)
+# that isn't in Title Case (Title Case is a song, album or film title), with a cue word close by.
+#   - one of `cues` among the `before` words ahead of the opening quote or the `after` words past the
+#     closing one ("in the last chorus she sings '...'", "the '...' refrain");
+#   - or `line` or `lines` right against the quote ("the opening line, '...'", "the '...' line"),
+#     unless the word ahead of it says it's another kind of line (`not_lyric`: a bass line, a panel
+#     line, a chat-up line).
+# A quote with one of the `speech` verbs among the words ahead of it is someone talking ("Scaggs said
+# '...'"), not a lyric. On the shipped bank this gives no false positives. It misses a lyric quoted
+# with no cue nearby; the prompts ask writers not to, and a person reviewing the song is the backstop.
+min_words = 3
+before = 4
+after = 3
+cues = ["sing", "sings", "sang", "sung", "singing", "lyric", "lyrics", "chorus", "verse", "refrain", "hook", "couplet"]
+not_lyric = ["bass", "panel", "chat-up", "punch", "lead", "story", "picket", "front", "time", "tag", "phone", "bottom", "finish", "production", "assembly"]
+speech = [
+  "said",
+  "says",
+  "say",
+  "told",
+  "tells",
+  "wrote",
+  "writes",
+  "called",
+  "calls",
+  "mentions",
+  "mentioned",
+  "insisted",
+  "recalled",
+  "remembered",
+  "described",
+  "describes",
+  "explained",
+  "joked",
+  "added",
+]
+say = "No lyrics, not even one quoted line. Describe what a lyric is about in your own words."
+fix = "describe what the line is about in your own words"
+
+[prompt]
+# Rules only a writer can keep. The prompts carry them; check can't test for them.
+also = [
+  "No rhetorical-question setups (\"The result? ...\"), no colon setups before a reveal, and no closing one-liner that restates the point.",
+  "No stacked hedges and no groups of three by reflex. No hype.",
+  "Vary sentence length. Concrete over abstract: names, places, gear, numbers and dates.",
+  "Never invent a quote from a real person. Paraphrase and cite, or quote only from a page you read.",
+]

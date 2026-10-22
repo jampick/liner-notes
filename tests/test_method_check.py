@@ -44,7 +44,12 @@ def test_the_test_bank_passes(home):
 SONG_CASES = [
     # (what, field the message names, change to the song, words the message must carry)
     ("banned word", "notes.made", lambda s: s["notes"].update(made="A vibrant horn line opens it."), ["'vibrant'"]),
-    ("inflected banned word", "culture[0].line", lambda s: s["culture"][0].update(line="It was navigating the charts for a year."), ["'navigating'"]),
+    (
+        "inflected banned word",
+        "culture[0].line",
+        lambda s: s["culture"][0].update(line="It was navigating the charts for a year."),
+        ["'navigating'"],
+    ),
     ("banned word in a year note", "year_note", lambda s: s.update(year_note="The crucial date is the single."), ["'crucial'"]),
     ("em dash in the notes", "notes.context", lambda s: s["notes"].update(context=f"It charted {EM} twice."), ["em dash"]),
     ("em dash in a culture line", "culture[0].line", lambda s: s["culture"][0].update(line=f"It opened {EM} in May."), ["em dash"]),
@@ -63,7 +68,9 @@ SONG_CASES = [
     (
         "quoted lyric in single quotes",
         "notes.listen_for[0].note",
-        lambda s: s["notes"].update(listen_for=[{"where": "the first verse", "note": "The opening line, 'we were dancing on the roof all night', sets it up."}]),
+        lambda s: s["notes"].update(
+            listen_for=[{"where": "the first verse", "note": "The opening line, 'we were dancing on the roof all night', sets it up."}]
+        ),
         ["lyric"],
     ),
     (
@@ -84,11 +91,16 @@ def test_check_fails_a_song(home, what, field, change, words):
     hit = [p for p in probs if f"{f}: {field}:" in p]
     assert hit, probs
     for w in words:
-        assert w in hit[0], hit[0]
+        assert w.lower() in hit[0].lower(), hit[0]
 
 
 JOURNEY_CASES = [
-    ("em dash in an era essay", "eras[0].essay", lambda j: j["eras"][0].update(essay=f"The scene moved south {EM} to London."), ["em dash"]),
+    (
+        "em dash in an era essay",
+        "eras[0].essay",
+        lambda j: j["eras"][0].update(essay=f"The scene moved south {EM} to London."),
+        ["em dash"],
+    ),
     ("banned word in an era essay", "eras[0].essay", lambda j: j["eras"][0].update(essay="A landscape of clubs."), ["'landscape'"]),
     ("banned word in the lede", "lede", lambda j: j.update(lede="A tapestry of records."), ["'tapestry'"]),
     ("em dash in the kicker", "kicker", lambda j: j.update(kicker=f"2 songs {EM} 1990"), ["em dash"]),
@@ -109,7 +121,9 @@ JOURNEY_CASES = [
     (
         "banned word in a thread note",
         "threads[0].note",
-        lambda j: j.update(threads=[{"from": "ann-artist--first-song", "to": "bob-band--second-song", "kind": "city", "note": "An iconic city."}]),
+        lambda j: j.update(
+            threads=[{"from": "ann-artist--first-song", "to": "bob-band--second-song", "kind": "city", "note": "An iconic city."}]
+        ),
         ["'iconic'"],
     ),
     (
@@ -130,7 +144,7 @@ def test_check_fails_a_journey(home, what, field, change, words):
     hit = [p for p in probs if f"{f}: {field}:" in p]
     assert hit, probs
     for w in words:
-        assert w in hit[0], hit[0]
+        assert w.lower() in hit[0].lower(), hit[0]
 
 
 def test_check_fails_a_culture_year(home):
@@ -143,8 +157,14 @@ def test_check_fails_a_culture_year(home):
 PASSES = [
     ("an allowed name", lambda s: s["notes"].update(made="Mick Hucknall sang it before Simply Red had a deal.")),
     ("a banned word in a title", lambda s: s.update(title="Timeless")),
-    ("a banned word as the lead's title", lambda s: s["notes"].update(leads_to={"artist": "X", "title": "Iconic", "year": 1980, "why": "Same room."})),
-    ("a quoted song title next to a cue", lambda s: s["notes"].update(made='The hook is lifted from Bob James\'s "You\'re as Right as Rain" (1975).')),
+    (
+        "a banned word as the lead's title",
+        lambda s: s["notes"].update(leads_to={"artist": "X", "title": "Iconic", "year": 1980, "why": "Same room."}),
+    ),
+    (
+        "a quoted song title next to a cue",
+        lambda s: s["notes"].update(made="The hook is lifted from Bob James's \"You're as Right as Rain\" (1975)."),
+    ),
     ("an interview quote with no cue", lambda s: s["notes"].update(made='He called the result "dorky, white disco funk" in an interview.')),
     ("a short quoted phrase", lambda s: s["notes"].update(made='The chorus repeats "hey, hey" twice.')),
     ("an en dash in a year range", lambda s: s.update(year_note="Recorded 1976\N{EN DASH}78.")),

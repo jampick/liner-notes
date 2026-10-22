@@ -76,7 +76,7 @@ BAD = [
     ("wrong id", '+++\nid = "era"\nversion = 1\n+++\nYou write.\n', 'id = "song"'),
     ("no version", '+++\nid = "song"\n+++\nYou write.\n', "version = <a whole number"),
     ("string version", '+++\nid = "song"\nversion = "1"\n+++\nYou write.\n', "version = <a whole number"),
-    ("bad toml", '+++\nid = song\nversion = 1\n+++\nYou write.\n', "front matter isn't TOML"),
+    ("bad toml", "+++\nid = song\nversion = 1\n+++\nYou write.\n", "front matter isn't TOML"),
 ]
 
 

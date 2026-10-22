@@ -11,7 +11,7 @@ A song MusicBrainz can't date is written with "year": null and left out of the e
 makes a year up. Every song and the journey are checked against their schemas before any is written.
 
 With --write, each missing song gets one Claude API request (Claude Opus 5.5 with web search and
-web fetch) that follows prompts/SONG-BRIEF.md and must list its sources. The brief is the cached
+web fetch) that follows prompts/song.md and must list its sources. The brief is the cached
 system prompt, so every song after the first reads it at the cache price. Every written song is
 marked a draft and AI-written; nothing becomes "reviewed" until a person says so.
 
@@ -37,7 +37,6 @@ MODEL = "claude-sonnet-5-5"
 PRICE = {"input": 2.00, "output": 10.00, "cache_read": 0.10, "cache_write": 2.50, "search": 0.01}
 # What one song costs before we've seen one: about 30k input and 6k output tokens and 8 searches.
 ESTIMATE = (30_000 * PRICE["input"] + 6_000 * PRICE["output"]) / 1e6 + 8 * PRICE["search"]
-BRIEF = paths.PACKAGE / "prompts" / "SONG-BRIEF.md"
 DEFAULT_COPY = {
     "start": "Start listening",
     "resume": "Pick up at",
@@ -50,6 +49,13 @@ DEFAULT_COPY = {
 }
 KIND_NAMES = {"ep": "EP"}  # how release kinds read on screen; the rest read as MusicBrainz names them
 FONTS = "https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Chivo+Mono:wght@400;500&display=swap"
+
+
+def brief():
+    """The song writer's brief, prompts/song.md, with the house style from style.toml filled in."""
+    from .method import load_prompt
+
+    return load_prompt("song").text
 
 
 def tracks_from_toml(name):
@@ -237,7 +243,7 @@ def write_song(client, song, effort="medium", log=print, meter=None):
 
     meter = meter or Meter()
     start = meter.spent
-    system = [{"type": "text", "text": BRIEF.read_text(), "cache_control": {"type": "ephemeral"}}]
+    system = [{"type": "text", "text": brief(), "cache_control": {"type": "ephemeral"}}]
     ask = (
         f'Write the liner notes for "{song["title"]}" by {song["artist"]}'
         + (f" (released {song['year']}, per MusicBrainz; check it)" if song.get("year") else "")
