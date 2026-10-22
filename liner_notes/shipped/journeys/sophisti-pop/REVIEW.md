@@ -17,7 +17,7 @@ you've checked its facts against the sources, then set `review.state` to `review
 - [ ] `the-style-council--long-hot-summer` Long Hot Summer, The Style Council (1983)
     - writer couldn't confirm: I couldn't find a source on what keyboards or drum sounds are on the track, so the listen-for notes stay general. The 7:04 running time quoted for the extended mix comes from a search summary, not a page I read directly.
 - [ ] `spandau-ballet--true` True, Spandau Ballet (1983)
-    - writer couldn't confirm: Folake's Marvin Gaye quote is right ("listening to Marvin all night long"). The Sade thread is my inference about taste, not a documented link; drop it if the director wants only documented threads.
+    - writer couldn't confirm: Folake's quote is right that the lyric names Marvin Gaye. The Sade thread is my inference about taste, not a documented link; drop it if the director wants only documented threads.
 - [ ] `china-crisis--wishful-thinking` Wishful Thinking, China Crisis (1983)
     - writer couldn't confirm: Tomasz's quote is wrong on the singer: Eddie Lundon sings lead on this one, not Gary Daly (Wikipedia and electricityclub.co.uk). His UK number 9 is right. Gary Johnson plays fretless bass on the album, but I couldn't confirm it on this track.
 - [ ] `the-lotus-eaters--the-first-picture-of-you` The First Picture of You, The Lotus Eaters (1983)
