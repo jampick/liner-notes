@@ -14,6 +14,16 @@
    "enum": ["musicbrainz", "writer", "person", null]
   },
   "year_musicbrainz": {"description": "MusicBrainz's year, kept when the writer's year replaced it, so check can show both.", "type": "integer"},
+  "base": {
+   "description": "On your copy of a shipped song: where it started. version is the package version, sha256 the shipped file's bytes, content the song apart from review and base when it was copied (copies made before 0.3.0.dev0 don't have content).",
+   "type": "object",
+   "required": ["version", "sha256"],
+   "properties": {
+    "version": {"type": "string", "minLength": 1},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "content": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+   }
+  },
   "release_group": {"type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"},
   "year_note": {"type": "string"},
   "album": {"type": "string"},
