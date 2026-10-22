@@ -184,8 +184,12 @@ def cmd_generate(a):
 
     if not (a.from_ or (a.provider and a.playlist)):
         sys.exit("liner-notes: give --from <cliamp playlist> or --provider P --playlist ID")
+    import re
+
     from .musicbrainz import MusicBrainzError
 
+    if a.slug and not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", a.slug):
+        sys.exit(f"liner-notes: --slug takes lowercase letters, digits and single hyphens, like city-pop; {a.slug!r} isn't one")
     try:
         generate(a.from_ or a.name, a.provider, a.playlist, a.write, a.budget, a.effort, slug=a.slug)
     except SchemaError as e:
