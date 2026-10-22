@@ -1,0 +1,81 @@
+{
+ "path": "recording/aa75beac-1577-4f0b-9869-81dc14c476cc",
+ "query": {
+  "inc": "isrcs+artist-credits+releases"
+ },
+ "status": 200,
+ "body": {
+  "length": 407226,
+  "releases": [
+   {
+    "barcode": "5012623650123",
+    "country": "GB",
+    "title": "Let's Groove",
+    "id": "2f750b96-f975-4271-bad5-bdef3bed4ec5",
+    "date": "1990",
+    "quality": "normal",
+    "text-representation": {
+     "script": "Latn",
+     "language": "eng"
+    },
+    "status": "Official",
+    "artist-credit": [
+     {
+      "joinphrase": "",
+      "artist": {
+       "name": "Earth, Wind & Fire",
+       "sort-name": "Earth, Wind & Fire",
+       "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+       "country": "US",
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "type": "Group",
+       "disambiguation": ""
+      },
+      "name": "Earth, Wind & Fire"
+     }
+    ],
+    "disambiguation": "",
+    "packaging": null,
+    "release-events": [
+     {
+      "area": {
+       "type-id": null,
+       "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+       "disambiguation": "",
+       "type": null,
+       "name": "United Kingdom",
+       "sort-name": "United Kingdom",
+       "iso-3166-1-codes": [
+        "GB"
+       ]
+      },
+      "date": "1990"
+     }
+    ],
+    "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+    "packaging-id": null
+   }
+  ],
+  "disambiguation": "",
+  "isrcs": [],
+  "title": "Let's Groove",
+  "id": "aa75beac-1577-4f0b-9869-81dc14c476cc",
+  "video": false,
+  "artist-credit": [
+   {
+    "joinphrase": "",
+    "artist": {
+     "country": "US",
+     "id": "535afeda-2538-435d-9dd1-5e10be586774",
+     "type": "Group",
+     "disambiguation": "",
+     "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+     "name": "Earth, Wind & Fire",
+     "sort-name": "Earth, Wind & Fire"
+    },
+    "name": "Earth, Wind & Fire"
+   }
+  ],
+  "first-release-date": "1990"
+ }
+}

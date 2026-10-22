@@ -1,0 +1,4255 @@
+{
+ "path": "recording",
+ "query": {
+  "query": "recording:\"Give Me the Night\" AND artist:\"George Benson\"",
+  "limit": "100"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:16:13.184Z",
+  "count": 67,
+  "offset": 0,
+  "recordings": [
+   {
+    "id": "525e3792-ea5b-4c4a-9496-5f432bf3ba93",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "part of “The Power of the LP” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2005",
+    "releases": [
+     {
+      "id": "08705778-201f-453b-b686-0b91b8816551",
+      "title": "$mall ¢hange’s ‘The Power of the LP’ ¡WFMU Marathon ’05 beeyotch!",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "d9e5db85-1c89-34bb-8c4d-4f71ad090b54",
+       "title": "$mall ¢hange’s ‘The Power of the LP’ ¡WFMU Marathon ’05 beeyotch!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "2005"
+     }
+    ]
+   },
+   {
+    "id": "3730f169-8399-44fe-bf86-4311aff0372b",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "part of “The '80s Show” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2006",
+    "releases": [
+     {
+      "id": "48f99337-a077-4a8b-b136-91de77b0c5e9",
+      "title": "The '80s Show: Music for Grown Folks, Volume 1",
+      "status": "Promotion",
+      "release-group": {
+       "id": "72193688-440c-4f9f-8f6b-a14aaadab3da",
+       "title": "The '80s Show: Music for Grown Folks, Volume 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     }
+    ]
+   },
+   {
+    "id": "9043ddbc-c3df-4867-9b80-21a897ccdfe9",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2011-05-13",
+    "releases": [
+     {
+      "id": "bb6a0fc1-1465-4e8c-bbc0-c97b1ca09d14",
+      "title": "Solid Gold: 80s Funk & Soul Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "6090f87a-7ba3-4e9f-b52c-4af160652c02",
+       "title": "Solid Gold: 80s Funk & Soul Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-05-13"
+     }
+    ]
+   },
+   {
+    "id": "f71e68bd-98a5-4f30-ab72-e54b8083841b",
+    "score": 100,
+    "title": "Give Me The Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "1990",
+    "releases": [
+     {
+      "id": "a16fc29c-be2a-4615-b62b-03e97a44b608",
+      "title": "Grand New World",
+      "status": "Official",
+      "release-group": {
+       "id": "a157c927-9d43-4822-8b29-7555c654e5f4",
+       "title": "Grand New World - Greatest Love Songs",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     }
+    ]
+   },
+   {
+    "id": "717ca25c-1ca9-4910-9b0b-ff65789a29a7",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2002",
+    "releases": [
+     {
+      "id": "38b7db62-3d58-40cc-9510-f5926ea75aa1",
+      "title": "The Songs of Rod Temperton",
+      "status": "Promotion",
+      "release-group": {
+       "id": "cf3c2e4d-49e1-41bf-8ec8-52597b75a607",
+       "title": "The Songs Of Rod Temperton",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     }
+    ]
+   },
+   {
+    "id": "2314661f-c73d-4a7e-a8ab-12845c6bee2e",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2017-06-23",
+    "releases": [
+     {
+      "id": "321bad8d-e13f-4304-a0dd-5994bf80cbf9",
+      "title": "100% Tubes de l’été 2017",
+      "status": "Official",
+      "release-group": {
+       "id": "45b0fa7b-e08f-44b7-83f3-9617f41fbfb9",
+       "title": "100% Tubes de l’été 2017",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-06-23"
+     },
+     {
+      "id": "07df7837-2f99-4780-80d2-7b5797d02ef8",
+      "title": "Golden Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "0b77b269-2f34-42c9-b1b7-168c183db7a8",
+       "title": "Golden Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "8cd0968d-82cc-4481-8c4a-d06bec6af759",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2016",
+    "releases": [
+     {
+      "id": "e969f74e-6b86-4a1e-9371-b78f7be45c47",
+      "title": "Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "7bb9b9dd-12b7-421d-a416-3e5b165ac5b3",
+       "title": "Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2016"
+     }
+    ]
+   },
+   {
+    "id": "4358da93-0e6b-4105-9cd4-0295c0df2c00",
+    "score": 100,
+    "title": "Give me the night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "809cdec9-886d-4587-9cca-44659fb1f8da",
+      "title": "Live",
+      "release-group": {
+       "id": "f796767b-74f6-429c-ba29-6d9700d723ee",
+       "title": "The Best of George Benson Live (MSN exclusive)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2000"
+     }
+    ]
+   },
+   {
+    "id": "2345b206-a793-4c2f-b75e-61c4f6982376",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "part of “Ministry of Sound: 80s Soul Jams” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2018-05-04",
+    "releases": [
+     {
+      "id": "f2bbe35f-9b12-4349-a87a-3f7be4b690c2",
+      "title": "Ministry of Sound: 80s Soul Jams",
+      "status": "Official",
+      "release-group": {
+       "id": "1510f0c8-8470-4c3c-b09e-2083953dbafc",
+       "title": "Ministry of Sound: 80s Soul Jams",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2018-05-04"
+     }
+    ]
+   },
+   {
+    "id": "5ef96c32-852f-4973-b7d2-31f2bcaf1cc8",
+    "score": 100,
+    "title": "Give Me The Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2007-10-10",
+    "releases": [
+     {
+      "id": "b6440952-43ee-415a-bacb-309d2b2a754a",
+      "title": "The George Benson Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "5b9ef4d2-f72f-4824-93f3-aef1a7570b01",
+       "title": "The George Benson Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007-10-10"
+     }
+    ]
+   },
+   {
+    "id": "ad546e96-1427-4bb0-b6ee-a6f54bfdd262",
+    "score": 100,
+    "title": "Give Me The Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2013-02-18",
+    "releases": [
+     {
+      "id": "22e19ffe-7fa5-4e6b-9120-c73ad5e1045a",
+      "title": "Mum: The Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "883abb41-45d7-4472-adbd-17ff11c63216",
+       "title": "Mum: The Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013-02-18"
+     }
+    ],
+    "isrcs": [
+     "USWB11300065"
+    ]
+   },
+   {
+    "id": "d6081682-7929-47bf-9ec2-4086ed6554b3",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2019",
+    "releases": [
+     {
+      "id": "2812439d-c295-450b-9326-dbce67525257",
+      "title": "The Ultimate Collection: Disco Inferno",
+      "status": "Official",
+      "release-group": {
+       "id": "c6a6d958-89ec-4025-8eb3-57eb17e732c1",
+       "title": "The Ultimate Collection: Disco Inferno",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2019"
+     }
+    ]
+   },
+   {
+    "id": "81b24013-478b-448b-90c5-d9420dc05c4b",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "part of “Kontor: Top of the Clubs 80s Rare Grooves” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2020-08-28",
+    "releases": [
+     {
+      "id": "15ac75c9-b2fd-474d-b546-ee2205ae3b31",
+      "title": "Kontor: Top of the Clubs 80s Rare Grooves",
+      "status": "Official",
+      "release-group": {
+       "id": "a271ea55-d9a1-430c-910f-7e0568835508",
+       "title": "Kontor: Top of the Clubs 80s Rare Grooves",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2020-08-28"
+     }
+    ]
+   },
+   {
+    "id": "70c295f5-b0e1-49fb-adc6-31935c39343c",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "1991",
+    "releases": [
+     {
+      "id": "c6c3d8a4-e803-42e7-ba25-7b4a183a10ef",
+      "title": "Midnight Moods",
+      "status": "Official",
+      "release-group": {
+       "id": "cfc4ba14-d1b9-3d16-a11a-78cbd6176f39",
+       "title": "Midnight Moods",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1991"
+     }
+    ]
+   },
+   {
+    "id": "9b241d47-43fb-4f46-b5dc-24676b90b16b",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2011",
+    "releases": [
+     {
+      "id": "d4a0437c-e6da-4315-af78-1c87e0700a96",
+      "title": "Gerard Ekdom’s BBQ Box, Volume 2",
+      "status": "Official",
+      "release-group": {
+       "id": "57ade55f-5c11-4ba9-a777-4afc7cf20f73",
+       "title": "Gerard Ekdom’s BBQ Box, Volume 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     }
+    ]
+   },
+   {
+    "id": "416f3d64-90d2-4740-80ee-5fbc53827914",
+    "score": 100,
+    "title": "Give Me The Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2011",
+    "releases": [
+     {
+      "id": "9f7b3047-118a-4803-b294-9277aa152378",
+      "title": "The Essential Selection",
+      "status": "Official",
+      "release-group": {
+       "id": "d64126b9-73f2-4be7-b0c4-c46a0b504534",
+       "title": "The Essential Selection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     }
+    ]
+   },
+   {
+    "id": "864c0bd3-b5d5-44c7-8c32-d553abbdf957",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2010-11-24",
+    "releases": [
+     {
+      "id": "88fc1b8c-b722-490c-9ba1-803c8f775628",
+      "title": "Absolute Soul",
+      "status": "Official",
+      "release-group": {
+       "id": "860d70f0-d656-458d-b9ff-6ce875724d0d",
+       "title": "Absolute Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-11-24"
+     }
+    ]
+   },
+   {
+    "id": "36f6c062-c099-4685-86ef-cdfc22f2c95b",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2010-02-01",
+    "releases": [
+     {
+      "id": "428d1505-e04d-4fb3-b4e6-7a4e52a7f655",
+      "title": "Classic Love Songs",
+      "status": "Official",
+      "release-group": {
+       "id": "f180300b-3176-457b-acde-c814abd4c077",
+       "title": "Classic Love Songs",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-02-01"
+     }
+    ]
+   },
+   {
+    "id": "11db14c6-85ad-4a18-b2bf-4b4577502e53",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "part of “Ministry of Sound: I Love Disco” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2017-12-01",
+    "releases": [
+     {
+      "id": "a84d34e6-1341-4872-ae21-ff3c882db2b8",
+      "title": "I Love Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "31bcebe5-f679-4cfb-9bc3-82b0c0126f1f",
+       "title": "I Love Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2017-12-01"
+     }
+    ]
+   },
+   {
+    "id": "c616a7ca-0e29-4ebb-a890-5a7cef60fb4f",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "1998-02-18",
+    "releases": [
+     {
+      "id": "eb7724fa-b9e3-4391-8ce5-fbcd4336ef90",
+      "title": "Music in Black, Volume 1",
+      "status": "Official",
+      "release-group": {
+       "id": "9440a7b8-bdf8-405c-9be6-52b1a1bee618",
+       "title": "Music in Black, Volume 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998-02-18"
+     }
+    ]
+   },
+   {
+    "id": "ae41da5a-e140-4aa0-a6a8-cd18e6bb0c22",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2019-08-02",
+    "releases": [
+     {
+      "id": "697d89f3-cd46-400b-9752-ba9466f22395",
+      "title": "Greatest Ever Decades 70s 80s 90s 00s",
+      "status": "Official",
+      "release-group": {
+       "id": "0cc84a8e-5ab6-4e93-beeb-5e8f2c3b309b",
+       "title": "Greatest Ever Decades",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2021"
+     },
+     {
+      "id": "63856536-f437-4482-80cf-9d031600fefe",
+      "title": "Greatest Ever Decades",
+      "status": "Official",
+      "release-group": {
+       "id": "0cc84a8e-5ab6-4e93-beeb-5e8f2c3b309b",
+       "title": "Greatest Ever Decades",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "ee33704f-2ace-4c76-968b-aae069078165",
+      "title": "Disco Now Playing",
+      "status": "Official",
+      "release-group": {
+       "id": "0a9421a9-40d0-4b69-807b-911e1a5eda3a",
+       "title": "Disco Now Playing",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2024-06-07"
+     },
+     {
+      "id": "6ea19a90-3a43-4ba8-9d29-d615d8d30e09",
+      "title": "Ultimate Singalong: The Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "bc20c738-ca4e-4f9c-b2ca-703a9ca6eab8",
+       "title": "Ultimate Singalong: The Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2019-08-02"
+     }
+    ]
+   },
+   {
+    "id": "e01fc2d8-b6ef-485a-85d2-3e5ae704817c",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2014",
+    "releases": [
+     {
+      "id": "c250b661-1c5a-4771-b915-49453f874da6",
+      "title": "Quiet Storm",
+      "status": "Official",
+      "release-group": {
+       "id": "d42c9e86-020b-4300-ac6d-9a2a8752d230",
+       "title": "Quiet Storm",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2014"
+     }
+    ]
+   },
+   {
+    "id": "b53691b0-46e9-459f-8d5b-30087e4986a3",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2013",
+    "releases": [
+     {
+      "id": "a1e820c8-149b-4dc4-8833-a94a75c96ddd",
+      "title": "1000 klassiekers: De absolute top, Vol. 5",
+      "status": "Official",
+      "release-group": {
+       "id": "f9583a47-06e8-4eb0-b5e3-f4ab0094e463",
+       "title": "1000 klassiekers: De absolute top, Vol. 5",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013"
+     }
+    ]
+   },
+   {
+    "id": "81a2252b-2db9-45f9-b914-acbeb9940b7e",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2018-01-12",
+    "releases": [
+     {
+      "id": "5320f073-daff-4837-a345-835ebec9c9fa",
+      "title": "RFM Party 80",
+      "status": "Official",
+      "release-group": {
+       "id": "54389ed1-a75b-4d52-8403-2a33cdb2b9bd",
+       "title": "RFM Party 80",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-01-12"
+     }
+    ]
+   },
+   {
+    "id": "f5847731-ba24-43ba-98e7-8c11e34b881e",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "1980",
+    "releases": [
+     {
+      "id": "6c6f9413-3500-4293-85ee-742e1f94006a",
+      "title": "80s Radio Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "d5380795-20e5-4a97-98ec-0205eedfed57",
+       "title": "80s Radio Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "e9b0dd34-1e74-4939-812c-f56f0c0df1e1",
+      "title": "Body + Soul: In the Groove",
+      "status": "Official",
+      "release-group": {
+       "id": "f9206b6c-7e28-3ae0-922b-bf9b26708f15",
+       "title": "Body + Soul: In the Groove",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "6739e79f-e1d5-4b01-84c5-f39dcc140acd",
+      "title": "forever young classic 80's",
+      "status": "Withdrawn",
+      "release-group": {
+       "id": "12b311a5-a25d-4794-9d3e-3b75dce2928e",
+       "title": "forever young classic 80's",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "ddca28bc-d129-41bc-b65d-f821163e5ec5",
+      "title": "Barbeque Summer",
+      "status": "Official",
+      "release-group": {
+       "id": "ddd08fae-cc8b-41bc-a26f-c1f30f3786f2",
+       "title": "Barbeque Summer",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2026-04-28"
+     },
+     {
+      "id": "e65c025a-f57c-41ea-8336-980d730600d7",
+      "title": "The Ultimate Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "cdc9ddc9-2b62-46c5-90ef-cca299bd847a",
+       "title": "The Ultimate Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015"
+     },
+     {
+      "id": "bf0513c6-e02d-4478-b870-eab83350675c",
+      "title": "80s Music – Greatest Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "cf1a78b2-89f8-4ff7-b952-1e810b3e0f50",
+       "title": "80s Music – Greatest Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "a7b64a4c-5a48-4283-9dd8-58900e505eaa",
+      "title": "80's Super Hits",
+      "status": "Withdrawn",
+      "release-group": {
+       "id": "95f82e35-ceff-4dc3-9dbf-4458f9a8cff6",
+       "title": "80's Super Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "25d8a8af-470b-436d-babf-284ddba45ec7",
+      "title": "The Love Songs",
+      "status": "Official",
+      "release-group": {
+       "id": "5c1de2f6-6321-467b-a69f-78dc479aaa1a",
+       "title": "The Love Songs",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1985"
+     },
+     {
+      "id": "ef242617-97db-49ef-b361-a6cf2a0ce4e9",
+      "title": "Always On My MInd - 80’s Finest",
+      "status": "Official",
+      "release-group": {
+       "id": "77618e10-76a4-4a44-8779-1c260d68cd40",
+       "title": "Always On My MInd - 80’s Finest",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "9ec53500-4dd0-4669-86b0-7b0c04daffee",
+      "title": "Funk & Soul Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "a116556d-18ef-4a6a-a01b-e7547ffb2c9b",
+       "title": "Funk & Soul Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "752d1a74-af22-4dc9-8630-28ca04c3c552",
+      "title": "The Ultimate Collection (1)",
+      "release-group": {
+       "id": "25d687a9-e2e9-4b5e-9446-a370fa8fe266",
+       "title": "The Ultimate Collection (1)"
+      },
+      "date": ""
+     },
+     {
+      "id": "7f2b5742-2826-4127-afe1-a729551c889b",
+      "title": "CD Price Attack! Extraprice on CD",
+      "status": "Promotion",
+      "release-group": {
+       "id": "7bcd89ff-6dcf-4b63-b6b6-9746f340f228",
+       "title": "CD Price Attack! Extraprice on CD",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1988"
+     },
+     {
+      "id": "e3756b38-a577-4c22-9f49-e216d71cadc6",
+      "title": "80s Dance Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "d3f079e2-513b-453f-8688-4a8d668f190a",
+       "title": "80s Dance Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "6e3eb4d6-f2e6-4c8e-9c54-3ae318300d78",
+      "title": "80s HITS – 100 Greatest Songs of the 1980s",
+      "status": "Official",
+      "release-group": {
+       "id": "a9062ef0-cd39-4dd2-b644-8ecb9ecfd2ac",
+       "title": "80s HITS – 100 Greatest Songs of the 1980s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2023-11-07"
+     },
+     {
+      "id": "b1223147-c11d-4ea3-bf67-ac934ea7c676",
+      "title": "The Ultimate Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "cdc9ddc9-2b62-46c5-90ef-cca299bd847a",
+       "title": "The Ultimate Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-03-02"
+     },
+     {
+      "id": "bb0ccb67-c4ed-4f14-98b6-46e656b5461e",
+      "title": "80’s",
+      "status": "Official",
+      "release-group": {
+       "id": "569ed6db-e070-459e-921b-e08eea6419ab",
+       "title": "80’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2022-10-21"
+     },
+     {
+      "id": "3b0b737d-1881-46eb-953c-1608087d647d",
+      "title": "Throwback 80s",
+      "status": "Official",
+      "release-group": {
+       "id": "f23daa56-e858-4972-a3fa-f9f8a77646d2",
+       "title": "Throwback 80s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2022-02-04"
+     },
+     {
+      "id": "31c76c65-d9f1-47d7-8fae-6399594e7274",
+      "title": "Perfect 80s",
+      "status": "Official",
+      "release-group": {
+       "id": "fa56d61e-abeb-4b78-9c22-db84ca46fdd7",
+       "title": "Perfect 80s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2022-04-15"
+     },
+     {
+      "id": "91382d2c-976f-4f44-94d2-5262a5fcab6a",
+      "title": "Absolute 80's",
+      "status": "Official",
+      "release-group": {
+       "id": "e7974363-f4b5-4802-87f1-713569a3251b",
+       "title": "Absolute 80's",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2021-04-09"
+     },
+     {
+      "id": "bb8e0be1-3309-4327-adf0-f92abddea491",
+      "title": "80’s Music I Haven’t Heard in a While",
+      "status": "Official",
+      "release-group": {
+       "id": "393bc379-80f4-4d25-9255-838db91f9c33",
+       "title": "80’s Music I Haven’t Heard in a While",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "ad9a8e56-c1ff-4739-842b-6b9c12e10feb",
+      "title": "The Ultimate Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "cdc9ddc9-2b62-46c5-90ef-cca299bd847a",
+       "title": "The Ultimate Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-03-02"
+     },
+     {
+      "id": "f010f812-094f-4098-9161-781533d1b131",
+      "title": "Radio Pop Hits 80’s",
+      "status": "Official",
+      "release-group": {
+       "id": "304538cc-a20d-4be9-b97d-ffd91363cb04",
+       "title": "Radio Pop Hits 80’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "d13ef800-a008-4719-a34f-817a78ac048d",
+      "title": "The Ultimate Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "cdc9ddc9-2b62-46c5-90ef-cca299bd847a",
+       "title": "The Ultimate Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-02-27"
+     },
+     {
+      "id": "6d7f528f-541c-49b4-b9d6-bb354f4195f3",
+      "title": "Rhino Hi‐Five: George Benson",
+      "status": "Official",
+      "release-group": {
+       "id": "dff9debf-f50f-48d1-a6bd-f2912ad6cc91",
+       "title": "Rhino Hi‐Five: George Benson",
+       "primary-type": "EP",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2005-05-24"
+     },
+     {
+      "id": "9f690e73-1e68-4894-af63-8d546b7b1ef6",
+      "title": "The Ultimate Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "cdc9ddc9-2b62-46c5-90ef-cca299bd847a",
+       "title": "The Ultimate Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-03-02"
+     },
+     {
+      "id": "c066e6c4-e881-4d1e-915c-f6c2c9b2dc30",
+      "title": "80’s Gold",
+      "status": "Official",
+      "release-group": {
+       "id": "10b62cfa-5689-478c-b3ec-c64a5b219a8d",
+       "title": "80’s Gold",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "ce6005da-deb7-44b2-8884-ec5d82974e04",
+      "title": "Original Album Series",
+      "status": "Official",
+      "release-group": {
+       "id": "3b990b0c-7140-439b-885d-4f5bd98a38cd",
+       "title": "Original Album Series",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-03-01"
+     },
+     {
+      "id": "46d55b7b-8901-4f2e-98b1-9c62d531d1da",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "2012-06-13"
+     },
+     {
+      "id": "471ffbf1-b289-449e-b1b2-ea96f42bf47b",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "1980"
+     },
+     {
+      "id": "c9319f18-998c-41d6-9e81-67c02979b7ce",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "1988-10-10"
+     },
+     {
+      "id": "ed52eb98-9a5a-4009-b790-fe3730070397",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "1985-11-28"
+     },
+     {
+      "id": "6a8fc3f7-5220-4798-b869-2c29b665ce29",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "1985"
+     },
+     {
+      "id": "18396958-caf4-4298-acac-18a162661649",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "2007-06-27"
+     },
+     {
+      "id": "71d5c554-d228-368c-99f7-eb3e24747b08",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "1980"
+     },
+     {
+      "id": "2cf6370d-17a8-4fb2-a2cc-08ed05c9a32f",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "2014-11-24"
+     },
+     {
+      "id": "47be5430-b7a1-486d-b059-dd1af5936e28",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "2015-07-29"
+     },
+     {
+      "id": "906f4583-b1a6-4eb2-90a0-032bbc21e85c",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "1990"
+     },
+     {
+      "id": "02b78dd6-08ad-48f7-a8bd-4ca3a098b447",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": ""
+     },
+     {
+      "id": "5d3ffe4c-0c5e-494e-873d-be835694d7e2",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "2007-09-25"
+     },
+     {
+      "id": "8fbf41b1-bdf0-4594-8251-092442720489",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "899999b9-f436-3b38-a813-893100d3169f",
+       "title": "Give Me the Night",
+       "primary-type": "Album"
+      },
+      "date": "1998"
+     },
+     {
+      "id": "95ba1a62-ff68-4d55-be6c-311ca611da75",
+      "title": "AOR Breaks: Original Classics As Sampled By Hip Hop's Finest",
+      "status": "Official",
+      "release-group": {
+       "id": "1e4dd2e8-1aa7-4159-9591-0401cea69ea6",
+       "title": "AOR Breaks: Original Classics As Sampled By Hip Hop's Finest",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2014-07-18"
+     },
+     {
+      "id": "cef0d6e6-9de0-4d27-9aa8-098506205d40",
+      "title": "100 Greatest Party Songs",
+      "status": "Official",
+      "release-group": {
+       "id": "f20f94a3-5825-47be-bdce-1da09fb64b9a",
+       "title": "100 Greatest Party Songs (2022)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2022-12-16"
+     },
+     {
+      "id": "222f4bea-fe8a-417f-b59b-2dabca4a1fca",
+      "title": "Groovy 80’s",
+      "status": "Official",
+      "release-group": {
+       "id": "8e907b5e-2194-445b-a0af-69f72958616b",
+       "title": "Groovy 80’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2020-12-04"
+     },
+     {
+      "id": "1c86fc26-6265-423e-97a6-f038aad00988",
+      "title": "Best of Super Stars, Volume 3",
+      "status": "Official",
+      "release-group": {
+       "id": "c957258e-7505-424a-840e-10666ef88851",
+       "title": "Best of Super Stars, Volume 3",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     },
+     {
+      "id": "cfcf1a61-9d13-4019-b781-df21d4567a21",
+      "title": "The Essential George Benson",
+      "status": "Official",
+      "release-group": {
+       "id": "55c356c3-e44f-3d25-a830-dad94de8d3b5",
+       "title": "The Essential George Benson",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006-03-28"
+     },
+     {
+      "id": "7e7dad24-08bc-4bd8-bf68-8c5335a633ef",
+      "title": "80s Groove, Volume II",
+      "status": "Official",
+      "release-group": {
+       "id": "9302761d-5f41-4768-af58-5cbd1ca2b474",
+       "title": "80s Groove, Volume II",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-07-25"
+     },
+     {
+      "id": "94b474ee-c8d3-4741-945a-d445b59a5cb9",
+      "title": "Black Music Lounge",
+      "status": "Official",
+      "release-group": {
+       "id": "33ca04c7-320d-49e6-91c1-b1457255f9f6",
+       "title": "Black Music Lounge",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012-08-24"
+     },
+     {
+      "id": "f6c3ab51-e2c9-4e32-896a-bc977e46f601",
+      "title": "Q: The Musical Biography of Quincy Jones",
+      "status": "Official",
+      "release-group": {
+       "id": "dd7468c3-8b61-353d-938c-105a0fb0043d",
+       "title": "Q: The Musical Biography of Quincy Jones",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001-10-16"
+     },
+     {
+      "id": "f77f4e1f-61e4-4a35-baa9-02c46de5c4a4",
+      "title": "NDR2: XXL Maxi Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "00f89a66-c9fe-4681-a61f-cab3838cfd01",
+       "title": "NDR2: XXL Maxi Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-06-17"
+     },
+     {
+      "id": "7169b271-7fe0-4ef8-acd9-a20dc7c40b61",
+      "title": "Burning Disco presented by Alcazar",
+      "status": "Official",
+      "release-group": {
+       "id": "b5988c46-b40f-41b9-a4c0-2ee2dffc1e59",
+       "title": "Burning Disco presented by Alcazar",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009-05-30"
+     },
+     {
+      "id": "2864a689-4f7c-488e-85b4-f81f9712eb26",
+      "title": "Grand 12‐Inches 10",
+      "status": "Official",
+      "release-group": {
+       "id": "ee0dfc22-96bb-42ce-bad8-d099a732a6aa",
+       "title": "Grand 12‐Inches 10",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013-06-28"
+     },
+     {
+      "id": "f5ed32df-db16-49b6-a24c-bfb66f91f3bf",
+      "title": "The Essential George Benson",
+      "status": "Official",
+      "release-group": {
+       "id": "55c356c3-e44f-3d25-a830-dad94de8d3b5",
+       "title": "The Essential George Benson",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     },
+     {
+      "id": "05b845d8-21e4-4f45-962b-3ffa8ba85f60",
+      "title": "80s Pop",
+      "status": "Official",
+      "release-group": {
+       "id": "b594dc18-70c5-426e-bcef-995d67ceb7b9",
+       "title": "80s Pop",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2019-05-03"
+     },
+     {
+      "id": "b53e147d-3bd6-4701-8223-0370824cff80",
+      "title": "Hits of the 80s",
+      "status": "Official",
+      "release-group": {
+       "id": "1d8d80fd-671a-462b-b07d-d6ca09247bee",
+       "title": "Hits of the 80s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "9da08fce-a88a-4e01-887e-4b9b61104986",
+      "title": "80’s Pop Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "d6c0860b-29aa-4e08-9e0a-ec316219e7e9",
+       "title": "80’s Pop Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-10-26"
+     },
+     {
+      "id": "1f6657ab-92f4-4229-8a7b-e175c85d6f68",
+      "title": "80er - Alle Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "3340bb67-a304-435b-862e-b8451f903894",
+       "title": "80er - Alle Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2022-09-30"
+     },
+     {
+      "id": "6f420e64-e78f-45fc-9857-9810561a4398",
+      "title": "80’s Radio Gold",
+      "status": "Official",
+      "release-group": {
+       "id": "46156118-cf69-4488-acf4-e5df8270c014",
+       "title": "80’s Radio Gold",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2020-12-11"
+     },
+     {
+      "id": "719e4e58-af7e-4857-b4a9-56ab011c7e04",
+      "title": "La Collection Georges Lang",
+      "status": "Official",
+      "release-group": {
+       "id": "f2e22c67-17e7-4eee-9db4-b75749622252",
+       "title": "La Collection Georges Lang",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-04-11"
+     },
+     {
+      "id": "32ed7bb3-c69d-4e57-bffd-3b270040f5b4",
+      "title": "La Collection Georges Lang",
+      "status": "Official",
+      "release-group": {
+       "id": "f2e22c67-17e7-4eee-9db4-b75749622252",
+       "title": "La Collection Georges Lang",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-06-06"
+     }
+    ],
+    "isrcs": [
+     "USWB11500184",
+     "USWB10201619",
+     "USWB10000902",
+     "USWB11100570"
+    ]
+   },
+   {
+    "id": "8ba84b7f-7736-4a31-bf22-aa9c171a9657",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2008",
+    "releases": [
+     {
+      "id": "097f5fb4-95d5-4ffc-8b08-eae0d0d3c613",
+      "title": "The Essential George Benson",
+      "status": "Official",
+      "release-group": {
+       "id": "baf923d8-a918-46a6-9157-2cc88cca4afc",
+       "title": "The Essential George Benson",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008"
+     }
+    ]
+   },
+   {
+    "id": "9ff10401-4265-4738-a7fd-26b909932700",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2018-01-18",
+    "releases": [
+     {
+      "id": "f10e23b4-b499-43e4-9de1-39fca6c07185",
+      "title": "80s Soul Classics 1980-1984",
+      "status": "Official",
+      "release-group": {
+       "id": "432fd1ae-3f3a-4b49-aa8b-4d969cf583bc",
+       "title": "80s Soul Classics 1980-1984",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-01-18"
+     }
+    ]
+   },
+   {
+    "id": "2b98fa3e-7f27-4655-9733-dc5f6e941e7b",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2006",
+    "releases": [
+     {
+      "id": "20d84757-80d1-4b4b-bd48-be9ff2117f90",
+      "title": "Classic Cuts Presents: 80s Night: The Ultimate DJ Collection: A to B",
+      "status": "Official",
+      "release-group": {
+       "id": "8a1c82ba-7e74-4858-bea4-10dbe1837394",
+       "title": "Classic Cuts Presents: 80s Night: The Ultimate DJ Collection: A to B",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     },
+     {
+      "id": "00744b12-d424-4e50-b841-e9508ad7ca5f",
+      "title": "Classic Cuts Presents: 80’s Night: The Ultimate DJ Collection: Special Stereo Wide Edition 16 CD Box",
+      "status": "Official",
+      "release-group": {
+       "id": "7e695fa8-79f0-3b1c-b672-f4c7e9c540e3",
+       "title": "Classic Cuts Presents: 80’s Night: The Ultimate DJ Collection: Special Stereo Wide Edition 16 CD Box",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     }
+    ]
+   },
+   {
+    "id": "ebc91043-44e8-442d-835d-6b6df62f36e6",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "part of “Nile Rodgers Presents Disco Inferno” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2014-12-08",
+    "releases": [
+     {
+      "id": "7cf681d9-4cee-4b0d-88bf-0e1d0dca5c01",
+      "title": "Nile Rodgers presents: Disco Inferno",
+      "status": "Official",
+      "release-group": {
+       "id": "ef9c1522-5818-4e7c-b830-e79b0a626a8a",
+       "title": "Nile Rodgers presents: Disco Inferno",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2014-12-08"
+     }
+    ]
+   },
+   {
+    "id": "9b10d2a4-b475-4c79-9544-f8675399c0db",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "1996",
+    "releases": [
+     {
+      "id": "65ace4fe-22fb-4a97-b597-76898e1afaa7",
+      "title": "Les Années 80 + Mode d’emploi, tome 1",
+      "status": "Official",
+      "release-group": {
+       "id": "2b20b575-1ab3-477c-91f1-630386736e96",
+       "title": "Les Années 80 + Mode d’emploi, tome 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     }
+    ]
+   },
+   {
+    "id": "c020ab9f-33ca-41be-a063-1e836fa00c03",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2011",
+    "releases": [
+     {
+      "id": "50520b9b-ec12-4d33-9c98-bb2190d64324",
+      "title": "Testament van de Eighties",
+      "status": "Official",
+      "release-group": {
+       "id": "f85e4b42-bcf4-4e62-927e-299fea467768",
+       "title": "Testament van de Eighties",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     }
+    ]
+   },
+   {
+    "id": "981eb81c-8c6b-4c5f-b8d9-339e685c8197",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2022",
+    "releases": [
+     {
+      "id": "bf284952-e673-4f4f-8194-0ae5ca34ff7d",
+      "title": "The Summer Breeze Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "84d684ab-e5b7-4c5a-87f3-067d224e5926",
+       "title": "The Summer Breeze Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2022"
+     }
+    ]
+   },
+   {
+    "id": "919aea16-496e-408e-bc34-43f5e38ab878",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2011-11-28",
+    "releases": [
+     {
+      "id": "362d384c-c1e0-4800-bdca-195a15b20df8",
+      "title": "Jackie Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "447067dc-065b-493a-a804-e16cf4bf79b6",
+       "title": "Jackie Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-11-28"
+     }
+    ]
+   },
+   {
+    "id": "649b8e09-5015-45d3-b2a0-d32ee40985a5",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2007",
+    "releases": [
+     {
+      "id": "be5030b5-df1d-4b50-9709-1c42afa6caf1",
+      "title": "Disco Wonderland",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "f04fb289-5403-42ee-95ca-e180c78faa49",
+       "title": "Disco Wonderland",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007"
+     }
+    ]
+   },
+   {
+    "id": "b314ef91-41e3-4d58-a93b-36f454e86d38",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2008-06-23",
+    "releases": [
+     {
+      "id": "def8f683-f4ff-4d18-b40e-a6a1135a57c6",
+      "title": "The Very Best of Smooth Jazz",
+      "status": "Official",
+      "release-group": {
+       "id": "d0df202e-9aac-360a-b7b6-96819a3a85eb",
+       "title": "The Very Best of Smooth Jazz",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008-06-23"
+     },
+     {
+      "id": "84c99b1c-ac1c-4d3c-bbbc-089dd1b80b97",
+      "title": "Absolute Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "7397a37d-acdc-4b89-83d7-8e512e64bbb6",
+       "title": "Absolute Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009-03-04"
+     },
+     {
+      "id": "617ede1d-396b-37a2-9e67-e8620ae83569",
+      "title": "The Very Best of Smooth Jazz",
+      "status": "Official",
+      "release-group": {
+       "id": "d0df202e-9aac-360a-b7b6-96819a3a85eb",
+       "title": "The Very Best of Smooth Jazz",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008-10-31"
+     }
+    ]
+   },
+   {
+    "id": "8aa84642-185a-45b3-805c-24785c9786e4",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "single edit",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "1980",
+    "releases": [
+     {
+      "id": "780c07c8-48ad-4b6b-8c36-f1d058039f9b",
+      "title": "NOW Yearbook Extra ’80",
+      "status": "Official",
+      "release-group": {
+       "id": "f9e74026-517d-472d-914a-66e06a0fa9a5",
+       "title": "NOW Yearbook Extra 1980",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2022-08-26"
+     },
+     {
+      "id": "a27725c2-97e7-4135-8a47-3aade63dd56b",
+      "title": "The George Benson Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "5b9ef4d2-f72f-4824-93f3-aef1a7570b01",
+       "title": "The George Benson Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "d02d5e2b-cc1f-46ee-a342-e6681ccfdbd1",
+      "title": "Platinum: The Best Hits Selection",
+      "status": "Official",
+      "release-group": {
+       "id": "01c19859-2437-3f9c-8484-94774c922da5",
+       "title": "Platinum: The Best Hits Selection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "d6cce43b-7cfc-4a19-90ee-3545c6daf8a5",
+      "title": "The Nation’s Favourite Soul",
+      "status": "Promotion",
+      "release-group": {
+       "id": "94e4b82c-e073-44be-b945-4020438b6761",
+       "title": "The Nation’s Favourite Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015"
+     },
+     {
+      "id": "56ecb3dc-cbec-46cd-b133-532cea3022b1",
+      "title": "Anthems: Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "8288de23-7172-4888-a33b-f8b586f6b268",
+       "title": "Anthems: Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-11-08"
+     },
+     {
+      "id": "d652c8d2-ec62-415d-a715-b1bef4613624",
+      "title": "Le Coffret idéal disco",
+      "status": "Official",
+      "release-group": {
+       "id": "11254038-34ce-4396-a4fc-024fd0b267e7",
+       "title": "Le Coffret idéal disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     },
+     {
+      "id": "9a009995-8f6a-45ce-9dac-57bbccce5037",
+      "title": "All The… 80s",
+      "status": "Official",
+      "release-group": {
+       "id": "c0ebc68b-3b38-4803-b86e-ca35585bf90c",
+       "title": "All The… 80s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012"
+     },
+     {
+      "id": "747b0a4d-78ec-4b7a-8ae9-4d35b43d6245",
+      "title": "Les incontournables des années 80",
+      "status": "Official",
+      "release-group": {
+       "id": "df970fa4-dabc-46b2-8fd0-cd1400d0027e",
+       "title": "Les incontournables des années 80",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995-02-23"
+     },
+     {
+      "id": "3c10b215-852c-4db3-92ff-c610e60b688f",
+      "title": "Top 100 80s",
+      "status": "Official",
+      "release-group": {
+       "id": "9035f138-bba2-4979-9228-8735ded48100",
+       "title": "Top 100 80s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2014-12-14"
+     },
+     {
+      "id": "ad0cbedd-605b-4cd7-9f6f-9ac9939027ca",
+      "title": "20th Century - Soul, R&B & Funk",
+      "status": "Official",
+      "release-group": {
+       "id": "0425df25-08c5-4c88-8dfe-471c4c8bf053",
+       "title": "20th Century - Soul, R&B & Funk",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2022-11-04"
+     },
+     {
+      "id": "634b4cd7-243a-414c-a856-f2dc8eeec463",
+      "title": "Home Office Pop Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "634982ca-25e9-4819-ac65-c8c20f03ba37",
+       "title": "Home Office Pop Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2020-03-21"
+     },
+     {
+      "id": "b9600ce1-8c0f-4cda-88ab-76efc5230cf9",
+      "title": "The George Benson Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "5b9ef4d2-f72f-4824-93f3-aef1a7570b01",
+       "title": "The George Benson Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "80303e8e-769d-4761-9680-c176fcb3ab98",
+      "title": "De Pre Historie ’80",
+      "status": "Official",
+      "release-group": {
+       "id": "36444b2c-5aa2-4340-bd58-cae6951502ab",
+       "title": "De Pre Historie ’80",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012-11-30"
+     },
+     {
+      "id": "9b3233d3-41e0-4903-9af1-571e4e1a7bd1",
+      "title": "Las 101 mejores canciones del planeta Tierra",
+      "status": "Official",
+      "release-group": {
+       "id": "e1008c54-d833-3a3f-9211-dffcc506a80c",
+       "title": "Las 101 mejores canciones del planeta Tierra",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "f33a760c-f81d-42ad-a09b-275cbd39859e",
+      "title": "R&B Anthems 1979-2009",
+      "status": "Official",
+      "release-group": {
+       "id": "d8a3478b-9760-4eb2-9394-3689fad2250f",
+       "title": "R&B Anthems 1979-2009",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009"
+     },
+     {
+      "id": "b870b93d-a8d5-4d15-bc3d-0901599896e3",
+      "title": "Nostalgie présente : Cette année‐là",
+      "status": "Official",
+      "release-group": {
+       "id": "cf122201-06cd-4b55-81d7-51cc5dd4bdda",
+       "title": "Nostalgie présente : Cette année‐là",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-03-31"
+     },
+     {
+      "id": "69901a9f-05f8-4d8a-8899-c9f4dee2eb91",
+      "title": "100 Hits: Summer",
+      "status": "Official",
+      "release-group": {
+       "id": "0a31e9f6-eca6-4250-8050-30506b819931",
+       "title": "100 Hits: Summer",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015"
+     },
+     {
+      "id": "5f387362-6394-4473-a980-abd428aa1ed4",
+      "title": "Platinum: The Best Hits Selection",
+      "status": "Official",
+      "release-group": {
+       "id": "01c19859-2437-3f9c-8484-94774c922da5",
+       "title": "Platinum: The Best Hits Selection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "a41057af-2b50-4653-a3fd-603b5efaad2c",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "88be0155-6a0f-4961-a5a5-8d902c7186a8",
+       "title": "Give Me the Night",
+       "primary-type": "Single"
+      },
+      "date": "1980"
+     },
+     {
+      "id": "8b620a46-bfc8-4ea3-a179-c5b9b0c86c41",
+      "title": "Absolute VG-Lista 1980",
+      "status": "Official",
+      "release-group": {
+       "id": "505305cf-1191-3375-a8f5-785a56028519",
+       "title": "Absolute VG-Lista 1980",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007-11-19"
+     },
+     {
+      "id": "9ada5ebf-783d-41ba-92f0-0355a25a9faa",
+      "title": "80er Pop Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "dcd645bb-cab7-472e-8b89-70c071e25ce5",
+       "title": "80er Pop Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "0a296ffd-be25-4346-a7fa-71c3e520b9ab",
+      "title": "The Trevor Nelson Collection 2",
+      "status": "Official",
+      "release-group": {
+       "id": "6fb69e17-66e2-42a5-8d29-11db50fcc674",
+       "title": "The Trevor Nelson Collection 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2014-01-10"
+     },
+     {
+      "id": "605b0095-cd4b-4356-b794-f85dd9ee99e2",
+      "title": "The Nation’s Favourite Soul",
+      "status": "Official",
+      "release-group": {
+       "id": "94e4b82c-e073-44be-b945-4020438b6761",
+       "title": "The Nation’s Favourite Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-10-06"
+     },
+     {
+      "id": "2e9bbe03-3159-4742-ad92-a1519d6eaf9f",
+      "title": "Hit Music – 100 Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "d733f106-fe7f-4d86-a6b8-baec2c358e89",
+       "title": "Hit Music – 100 Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "b9ddfd9d-0a34-453c-a3fb-eb2f78b8f099",
+      "title": "80s: The Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "b623cb89-8df1-41d0-846d-490b7ef2f51a",
+       "title": "80s: The Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2016-10-14"
+     },
+     {
+      "id": "dd2f8a38-90c8-4b59-85d4-fa72ded3645b",
+      "title": "Hits Rewind 80s–90s",
+      "status": "Official",
+      "release-group": {
+       "id": "67e4affa-0e97-4bd7-b33c-5d145a2fdf3b",
+       "title": "Hits Rewind 80s–90s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-06-08"
+     },
+     {
+      "id": "18263738-0a66-431a-b4e8-c7448ff548bf",
+      "title": "80’s the Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "e41aaef4-42a0-41cb-abae-ef5c4440c72b",
+       "title": "80’s the Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-06-23"
+     },
+     {
+      "id": "994894bf-7a8e-408c-aa16-b6d88cd54b48",
+      "title": "The Greatest Eighties Album",
+      "status": "Official",
+      "release-group": {
+       "id": "7b6d8357-359c-49f4-a9b6-9988c07e1e21",
+       "title": "The Greatest Eighties Album",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-10-12"
+     },
+     {
+      "id": "065f6787-aba7-4c94-83f7-2686599813f7",
+      "title": "100 Greatest: 80s",
+      "status": "Official",
+      "release-group": {
+       "id": "0cb6782f-baf0-4aae-88bb-cf5a00e53bf8",
+       "title": "100 Greatest: 80s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-11-10"
+     },
+     {
+      "id": "f6e41084-5cec-4c85-b376-3adfe516edff",
+      "title": "The Greatest Eighties Album",
+      "status": "Official",
+      "release-group": {
+       "id": "7b6d8357-359c-49f4-a9b6-9988c07e1e21",
+       "title": "The Greatest Eighties Album",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-10-12"
+     },
+     {
+      "id": "25040bfa-5244-4613-94ca-f2b86a4be9dd",
+      "title": "80 Hits of the ’80s",
+      "status": "Official",
+      "release-group": {
+       "id": "721a9c9b-a127-45c9-894a-bb39b83b1101",
+       "title": "80 Hits of the ’80s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2016-11-04"
+     },
+     {
+      "id": "b2a51f1c-9b88-4c2b-b186-0a9588c505f9",
+      "title": "80s Songs",
+      "status": "Official",
+      "release-group": {
+       "id": "1a4aac2e-2be1-4a4a-a0fa-9459997d5bf0",
+       "title": "80s Songs",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2019-04-19"
+     },
+     {
+      "id": "e578500c-5ca9-4178-8de4-82e4d0e1e75f",
+      "title": "80er Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "45659a00-73d5-45a2-b65f-c180e8820b7b",
+       "title": "80er Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-06-29"
+     },
+     {
+      "id": "d1046163-1318-4e96-b0b6-45f0cbc75124",
+      "title": "80er Jahre",
+      "status": "Official",
+      "release-group": {
+       "id": "58157256-eb13-4e7b-83c6-d8bcb72601f4",
+       "title": "80er Jahre",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-06-15"
+     },
+     {
+      "id": "abf0a99c-6717-4ade-b058-8d8bb162adac",
+      "title": "The George Benson Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "5b9ef4d2-f72f-4824-93f3-aef1a7570b01",
+       "title": "The George Benson Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1981"
+     },
+     {
+      "id": "bec274f7-d7b1-40d9-b6a1-dda3c8381ead",
+      "title": "The Best of George Benson",
+      "status": "Official",
+      "release-group": {
+       "id": "11f54109-04dd-36f5-bbca-b4575654d129",
+       "title": "The Best of George Benson",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "538d9f47-4f18-4385-a2f0-393af0aa6fbb",
+      "title": "80s Classic Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "3194e683-4539-4aee-8bcc-d4c97b745804",
+       "title": "80s Classic Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-02-11"
+     },
+     {
+      "id": "3073f2f9-201e-492c-a133-c07534da7734",
+      "title": "80s Classics 80s Pop 80s Bangers 80s Songs",
+      "status": "Official",
+      "release-group": {
+       "id": "d206e73e-8417-4b88-b4c9-b205343dfe4b",
+       "title": "80s Classics 80s Pop 80s Bangers 80s Songs",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "db8bfaf7-55ba-458f-930e-f27adab7812f",
+      "title": "Born and Raised in the 80s",
+      "status": "Official",
+      "release-group": {
+       "id": "869a0a30-ce6f-4f3d-a4f0-164d28978287",
+       "title": "Born and Raised in the 80s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2019-04-05"
+     },
+     {
+      "id": "13be6dcf-0f7d-40a8-8a42-65f21b08ffe6",
+      "title": "80 Smash Hits of the 80s",
+      "status": "Official",
+      "release-group": {
+       "id": "25d38fe8-d811-4dd5-a00a-8a46cfe9bdca",
+       "title": "80 Smash Hits of the 80s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-04-27"
+     },
+     {
+      "id": "2eee72d3-1607-4f95-b408-5156f4b059b9",
+      "title": "Top Hits: Ballads & Love Songs: 80’s & 90’s",
+      "status": "Official",
+      "release-group": {
+       "id": "24ba7002-87c6-4cee-8958-f0e0ef6915ed",
+       "title": "Top Hits: Ballads & Love Songs: 80’s & 90’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-12-08"
+     },
+     {
+      "id": "cf94602a-84c2-4841-8870-6b5ae440d51f",
+      "title": "Hits of the 1980s",
+      "status": "Official",
+      "release-group": {
+       "id": "55a872ac-c156-4f66-9011-9871c3462ca7",
+       "title": "Hits of the 1980s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-02-11"
+     },
+     {
+      "id": "540b149e-de57-414d-87e2-af4136b89b64",
+      "title": "Sound of the 80’s",
+      "status": "Official",
+      "release-group": {
+       "id": "5f0ba7bf-cd8e-47ff-af31-a8cce47318b3",
+       "title": "Sound of the 80’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "7f39795c-3685-4cf6-8ded-f2819768b1da",
+      "title": "80s Memories",
+      "status": "Official",
+      "release-group": {
+       "id": "6371e6ec-ffe4-47b4-b6f1-6062fc7a4516",
+       "title": "80s Memories",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "7d2176a8-4486-4cca-bc42-a801e3d2df2c",
+      "title": "The Greatest 80’s Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "045683e9-f257-4ef5-95a2-739184ba447b",
+       "title": "The Greatest 80’s Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "cb3135e0-6e52-4eea-a12d-6d683f3b0cb7",
+      "title": "Hit Mix!",
+      "status": "Official",
+      "release-group": {
+       "id": "0571c353-e497-48d2-ac8b-ee44c3b41940",
+       "title": "Hit Mix!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-12-28"
+     },
+     {
+      "id": "d39b8282-68ff-45a2-8138-740e7c303ccd",
+      "title": "Smooth 80’s",
+      "status": "Official",
+      "release-group": {
+       "id": "ae4632ae-5d44-44cf-8426-449638507f31",
+       "title": "Smooth 80’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-11-09"
+     },
+     {
+      "id": "4d573f2e-8896-4b7a-bb8c-28d4d48e320d",
+      "title": "The George Benson Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "5b9ef4d2-f72f-4824-93f3-aef1a7570b01",
+       "title": "The George Benson Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "23349ffe-d1a6-430d-9b65-b3eaf1e07f79",
+      "title": "Talents France Bleu 2017, Vol. 1",
+      "status": "Official",
+      "release-group": {
+       "id": "be178e84-f6d5-4868-89b1-23b0b3566844",
+       "title": "Talents France Bleu 2017, Vol. 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-05-12"
+     },
+     {
+      "id": "f7ec95fe-ccfb-4170-8fde-13fe598f3a65",
+      "title": "Carwash Disco Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "6a7d4ad8-55ff-431f-8edb-c01714aa895b",
+       "title": "Carwash Disco Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015"
+     },
+     {
+      "id": "8234e5ae-7b82-4744-92cb-dc16ef2b8dfd",
+      "title": "Simply Party Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "e1b0d0f6-4d60-43d7-8b3d-46649bf70799",
+       "title": "Simply Party Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-02-01"
+     },
+     {
+      "id": "460913f4-4e9a-44d1-9f36-c8b2c7f280ae",
+      "title": "80 Hits of the 80s",
+      "status": "Official",
+      "release-group": {
+       "id": "07f0c1d9-ae0f-4b8c-bf24-10ccb1f44399",
+       "title": "80 Hits of the 80s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-10-23"
+     },
+     {
+      "id": "0f6d87d0-6b85-4099-bef0-3c7add12b388",
+      "title": "100 Hits: Summer",
+      "status": "Official",
+      "release-group": {
+       "id": "0a31e9f6-eca6-4250-8050-30506b819931",
+       "title": "100 Hits: Summer",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-05-17"
+     },
+     {
+      "id": "7c43980f-5498-481a-9526-f5d7c8c84016",
+      "title": "Anthology",
+      "status": "Official",
+      "release-group": {
+       "id": "3b21db76-7cb5-3b7e-b1e2-a3b8f83b00bd",
+       "title": "Anthology",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000-10-31"
+     },
+     {
+      "id": "05a0545f-6f20-4f5b-a6c6-c245baba98c8",
+      "title": "Downtown Funk",
+      "status": "Official",
+      "release-group": {
+       "id": "f773baef-dbac-4d4d-bc5e-41f6944c2d2e",
+       "title": "Downtown Funk",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-04-20"
+     },
+     {
+      "id": "5da7b1e7-a327-4ee9-b51c-dda5c4d9172d",
+      "title": "Downtown Funk",
+      "status": "Official",
+      "release-group": {
+       "id": "f773baef-dbac-4d4d-bc5e-41f6944c2d2e",
+       "title": "Downtown Funk",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-04-20"
+     },
+     {
+      "id": "2a3da819-2c31-4cf8-ad6f-8264f7831482",
+      "title": "80 Smash Hits of the 80s",
+      "status": "Official",
+      "release-group": {
+       "id": "25d38fe8-d811-4dd5-a00a-8a46cfe9bdca",
+       "title": "80 Smash Hits of the 80s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018"
+     },
+     {
+      "id": "cfa1414d-23f1-43fb-8ecc-9c576e111b63",
+      "title": "The George Benson Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "5b9ef4d2-f72f-4824-93f3-aef1a7570b01",
+       "title": "The George Benson Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "292e30c3-3326-4ebc-8c70-c94e12dad15f",
+      "title": "The Very Best of George Benson: The Greatest Hits of All",
+      "status": "Official",
+      "release-group": {
+       "id": "4cbb9237-443d-3e92-886a-9fa621d0e9bb",
+       "title": "The Very Best of George Benson: The Greatest Hits of All",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003-06-03"
+     },
+     {
+      "id": "b7614e95-0115-4b18-bf4f-408875c14372",
+      "title": "The Very Best of George Benson",
+      "status": "Official",
+      "release-group": {
+       "id": "438f8fde-a534-35ab-983c-e01eb37288af",
+       "title": "The Very Best of George Benson",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998"
+     },
+     {
+      "id": "a533bd3a-4dba-40fa-a3c2-1068b4fea623",
+      "title": "The Greatest Hits of All",
+      "status": "Official",
+      "release-group": {
+       "id": "6b4c1721-d0d5-3352-bd9f-085817ab24e7",
+       "title": "The Greatest Hits of All",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003-07-08"
+     },
+     {
+      "id": "36c81f1a-8388-378a-9818-37231f4fb2b0",
+      "title": "The George Benson Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "5b9ef4d2-f72f-4824-93f3-aef1a7570b01",
+       "title": "The George Benson Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007-07-17"
+     },
+     {
+      "id": "0778ab12-5c66-3594-afe6-f8004635ef19",
+      "title": "The George Benson Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "5b9ef4d2-f72f-4824-93f3-aef1a7570b01",
+       "title": "The George Benson Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     },
+     {
+      "id": "92003866-6a0b-4a88-a574-bfe8494ce424",
+      "title": "The George Benson Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "5b9ef4d2-f72f-4824-93f3-aef1a7570b01",
+       "title": "The George Benson Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1988-03-31"
+     },
+     {
+      "id": "1a8e3925-c0c8-3a0b-bbf1-8e64089c2652",
+      "title": "The Best of George Benson",
+      "status": "Official",
+      "release-group": {
+       "id": "11f54109-04dd-36f5-bbca-b4575654d129",
+       "title": "The Best of George Benson",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995"
+     },
+     {
+      "id": "0f80c80c-022c-40ba-bdb2-3c5f4d606607",
+      "title": "Time 100, Volume 2: The Music of Our Lives 1980–1999",
+      "status": "Official",
+      "release-group": {
+       "id": "31bf19b5-4dea-3bc7-a65a-afd40088090d",
+       "title": "Time 100, Volume 2: The Music of Our Lives 1980–1999",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "a53a1ae0-c24a-45bc-8d40-df1302598652",
+      "title": "The Best of George Benson",
+      "status": "Official",
+      "release-group": {
+       "id": "11f54109-04dd-36f5-bbca-b4575654d129",
+       "title": "The Best of George Benson",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995-11-14"
+     },
+     {
+      "id": "a9e455d2-e0be-4b28-8901-2e57100b2146",
+      "title": "The Best of George Benson",
+      "status": "Official",
+      "release-group": {
+       "id": "11f54109-04dd-36f5-bbca-b4575654d129",
+       "title": "The Best of George Benson",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1994-08-12"
+     },
+     {
+      "id": "c317aa00-2337-4ef7-973b-a00c68d3fd6b",
+      "title": "Best of the 80’s",
+      "status": "Official",
+      "release-group": {
+       "id": "a0e5e35b-dba3-4e2e-886e-c2286b41f055",
+       "title": "Best of the 80’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-03-10"
+     },
+     {
+      "id": "fa3c78b1-4bb8-44fc-8fc4-21f2ef71e6bd",
+      "title": "100 Hits: 80s Pop",
+      "status": "Official",
+      "release-group": {
+       "id": "30a4de8d-4d77-4875-84ea-fcb9d272f2ed",
+       "title": "100 Hits: 80s Pop",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008-10-06"
+     },
+     {
+      "id": "6834e4be-fe8f-4829-9a9a-04797090a57e",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "88be0155-6a0f-4961-a5a5-8d902c7186a8",
+       "title": "Give Me the Night",
+       "primary-type": "Single"
+      },
+      "date": "1980"
+     }
+    ],
+    "isrcs": [
+     "USWB10902424",
+     "USWB19900127",
+     "USWB10301113",
+     "USWB19901848"
+    ]
+   },
+   {
+    "id": "22b71f82-6f57-4aae-bdb3-5ff22fa83e73",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2008",
+    "releases": [
+     {
+      "id": "d3d3c319-31e2-465b-a44c-20c8359698e7",
+      "title": "Ferry Maat’s Soul Show Top 100",
+      "status": "Official",
+      "release-group": {
+       "id": "b6997d15-efd4-39e7-874d-c2e6e2ef9fed",
+       "title": "Ferry Maat’s Soul Show Top 100",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008"
+     }
+    ]
+   },
+   {
+    "id": "d0356e9a-a135-4cef-801e-b20c3ff02826",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2013",
+    "releases": [
+     {
+      "id": "ab5f7ff4-9ed1-4594-95bc-702b830128e4",
+      "title": "The Magic of Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "5611e98c-dba0-4707-9e61-8a81023abf86",
+       "title": "The Magic of Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013"
+     }
+    ]
+   },
+   {
+    "id": "63979f32-0795-4077-b19b-0ca251fee656",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "part of “Bodystyling: Funky Dance Grooves” DJ-Mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2010",
+    "releases": [
+     {
+      "id": "9af309a9-081c-4e0f-9db8-3c597441a878",
+      "title": "Bodystyling: Funky Dance Grooves",
+      "release-group": {
+       "id": "8271ce52-3302-4bb0-94c5-a4e6a20ce92d",
+       "title": "Bodystyling: Funky Dance Grooves",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "58bbbef6-e6e3-41a2-857b-949d88cd5714",
+    "score": 100,
+    "title": "Give Me the Night",
+    "disambiguation": "live, 2000-05-07: Waterfront Hall, Belfast, Northern Ireland, UK",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2005-01-01",
+    "releases": [
+     {
+      "id": "9c63aa16-07d2-4535-9f57-852d87df5be0",
+      "title": "The Best of George Benson Live (MSN exclusive)",
+      "status": "Official",
+      "release-group": {
+       "id": "f796767b-74f6-429c-ba29-6d9700d723ee",
+       "title": "The Best of George Benson Live (MSN exclusive)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2005-01-01"
+     }
+    ],
+    "isrcs": [
+     "USUM70503469"
+    ]
+   },
+   {
+    "id": "f4dc4c76-79c1-4a72-90c8-1954a4d5592c",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2020-04-03",
+    "releases": [
+     {
+      "id": "e6db5b7b-d48b-49e5-a010-21b2b4dc298d",
+      "title": "Essential Classics, Vol. 563: George Benson",
+      "status": "Official",
+      "release-group": {
+       "id": "5bf66ccf-57be-469f-84d3-de1914891aa4",
+       "title": "Essential Classics, Vol. 563: George Benson",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "20da902c-5f9e-453f-9212-506624ef433c",
+      "title": "Weekend in London",
+      "status": "Official",
+      "release-group": {
+       "id": "5f9d40e7-9f23-40a5-a92c-5588fc258a85",
+       "title": "Weekend in London",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2020-11-13"
+     },
+     {
+      "id": "275619b1-b9ea-494f-8122-f75028dce572",
+      "title": "The Ghetto (live)",
+      "status": "Official",
+      "release-group": {
+       "id": "ca3fb883-d775-4734-9025-03dc25c9678d",
+       "title": "The Ghetto (live)",
+       "primary-type": "Single",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2020-06-11"
+     },
+     {
+      "id": "d5d75020-ab76-482a-bba4-3c6df73f0a8e",
+      "title": "Give Me the Night (live)",
+      "status": "Official",
+      "release-group": {
+       "id": "e07a1082-3254-45e2-98dc-1e4631ddfe7a",
+       "title": "Give Me the Night (live)",
+       "primary-type": "Single",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2020-04-03"
+     },
+     {
+      "id": "0926a765-5b58-469c-9a69-eeacea4890ec",
+      "title": "Weekend in London",
+      "status": "Official",
+      "release-group": {
+       "id": "5f9d40e7-9f23-40a5-a92c-5588fc258a85",
+       "title": "Weekend in London",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2020-11-13"
+     },
+     {
+      "id": "4666e651-ea93-485a-b2b4-18353823a55e",
+      "title": "Weekend in London",
+      "status": "Official",
+      "release-group": {
+       "id": "5f9d40e7-9f23-40a5-a92c-5588fc258a85",
+       "title": "Weekend in London",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2020-11-13"
+     },
+     {
+      "id": "832b148c-7352-4d53-b787-9bd32ee39a47",
+      "title": "Cruise Control",
+      "status": "Official",
+      "release-group": {
+       "id": "552b93de-29d5-4d57-856f-3f005966cc87",
+       "title": "Cruise Control",
+       "primary-type": "Single",
+       "secondary-types": [
+        "Live"
+       ]
+      },
+      "date": "2020-09-04"
+     }
+    ],
+    "isrcs": [
+     "NLB932000901"
+    ]
+   },
+   {
+    "id": "71afde04-5320-4e03-be6c-c48bcca0b346",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2005-12-05",
+    "releases": [
+     {
+      "id": "8d4d170b-204b-47ff-9706-bbed90c956f7",
+      "title": "Tribute To The Q (Pt. 1)",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "b224b8c2-474b-4b47-a2c3-c3e5be26e581",
+       "title": "Tribute To The Q (Pt. 1)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2005-12-05"
+     }
+    ]
+   },
+   {
+    "id": "cb8be900-0ee4-40dc-b9d7-c3cb0c9ebd75",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2009",
+    "releases": [
+     {
+      "id": "a460e72a-9250-46f7-91e3-a1a980f94cc5",
+      "title": "Radio Capital Rock n Soul",
+      "status": "Official",
+      "release-group": {
+       "id": "ae68a035-ad0c-44b9-ad86-3beedb483362",
+       "title": "Radio Capital Rock n Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009"
+     }
+    ]
+   },
+   {
+    "id": "9b7101af-f2b8-47b0-b65f-171cc23b56bd",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2015",
+    "releases": [
+     {
+      "id": "bc4c8a9f-41c7-445a-8871-8ccc091a285b",
+      "title": "Kult! Präsentiert Funky Dance Grooves: The Long Versions",
+      "status": "Official",
+      "release-group": {
+       "id": "7ddce108-2b7e-4be3-a612-d0b49499c67a",
+       "title": "Kult! Präsentiert Funky Dance Grooves: The Long Versions",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015"
+     }
+    ]
+   },
+   {
+    "id": "95ab9323-817d-4e50-8807-703faae0b992",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "1998",
+    "releases": [
+     {
+      "id": "7bb961c4-ed52-4f2e-97e3-032e551ca692",
+      "title": "Essentials …The Very Best of George Benson",
+      "status": "Official",
+      "release-group": {
+       "id": "fce92155-c2f0-4e6a-b011-42405bd39968",
+       "title": "Essentials …The Very Best of George Benson",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998"
+     }
+    ]
+   },
+   {
+    "id": "5fb30a83-7eba-4a29-99b1-86e4a98f90c8",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2008",
+    "releases": [
+     {
+      "id": "304e6961-97f1-4a03-aa38-149cbad0dd01",
+      "title": "100 Dance Collection!!! La storia della musica dance, Vol. 6",
+      "status": "Official",
+      "release-group": {
+       "id": "62f89d28-7d09-448a-b02e-ea16a7a8e89e",
+       "title": "100 Dance Collection!!! La storia della musica dance, Vol. 6",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008"
+     }
+    ]
+   },
+   {
+    "id": "e2688da5-8bf5-49b2-bef5-b0c742a067e9",
+    "score": 100,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2025-09-05",
+    "releases": [
+     {
+      "id": "ea26e105-fdb6-4b7f-9610-c51a62e6495b",
+      "title": "Summer Breezin'",
+      "status": "Official",
+      "release-group": {
+       "id": "adf93bbc-ab89-4ab7-96d5-dca91e31e3a4",
+       "title": "Summer Breezin'",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2025-09-05"
+     }
+    ]
+   },
+   {
+    "id": "863970df-6ecc-46de-853e-0587b3eb33f2",
+    "score": 94,
+    "title": "Give Me the Night (remix)",
+    "disambiguation": "part of “NYE 2022” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2021-12-23",
+    "releases": [
+     {
+      "id": "fe369082-b10e-41fb-a386-39cc46ad687a",
+      "title": "NYE 2022",
+      "status": "Official",
+      "release-group": {
+       "id": "140e9f38-4dfd-4266-9980-a0aeefc7f893",
+       "title": "NYE 2022",
+       "primary-type": "Broadcast",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      }
+     }
+    ],
+    "isrcs": [
+     "US23A1918702"
+    ]
+   },
+   {
+    "id": "6aae91bf-b4ae-4fa3-b224-ed61d2180235",
+    "score": 90,
+    "title": "Give Me the Night (long version)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "fa6e925d-261e-442f-b9c4-62564180858f",
+      "title": "Mastermix Classic Cuts, Volume 170: Soul Sessions",
+      "release-group": {
+       "id": "6904434d-1e89-4659-bdca-2c6c113551e4",
+       "title": "Mastermix Classic Cuts, Volume 170: Soul Sessions",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "35c35960-5d58-474e-93d5-5f457f8e2c55",
+    "score": 90,
+    "title": "Give Me the Night (DJ Phats)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2009",
+    "releases": [
+     {
+      "id": "0a9a9fa7-ec64-45f5-b890-c41295c09621",
+      "title": "DMC Classic Remixes 1",
+      "release-group": {
+       "id": "52a88589-fe90-4cea-a797-7fae3880fc70",
+       "title": "DMC Classic Remixes 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009"
+     }
+    ]
+   },
+   {
+    "id": "f34b4be7-12f1-4848-a69c-4801023e38c2",
+    "score": 90,
+    "title": "Give Me the Night (single version)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2024-03-09",
+    "releases": [
+     {
+      "id": "cfd5100e-7aad-4d60-bcbc-409011d80b6f",
+      "title": "Best Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "c6a53a46-3190-4981-b4f4-f33c332cee8b",
+       "title": "Best Disco",
+       "primary-type": "Album"
+      },
+      "date": "2024-03-09"
+     }
+    ],
+    "isrcs": [
+     "USWB10201619"
+    ]
+   },
+   {
+    "id": "758692e0-6b3e-4e60-a6cb-851cf7d20f43",
+    "score": 90,
+    "title": "Give Me the Night (single version)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2022",
+    "releases": [
+     {
+      "id": "782735d9-6d65-49e2-aa19-33210c387d74",
+      "title": "All Out 80's",
+      "release-group": {
+       "id": "ef8490bb-e3d0-490a-a078-25138e5b8a03",
+       "title": "All Out 80's",
+       "primary-type": "Other",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "5de12e19-1404-4e81-a401-dacb22d872d5",
+    "score": 90,
+    "title": "Give Me the Night (single version)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2021-08-13",
+    "releases": [
+     {
+      "id": "ab9ed91c-88b1-430e-a3fc-1d9164e62f71",
+      "title": "Disco Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "e1ab5296-c3ef-495a-a7f0-563440ada68d",
+       "title": "Disco Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2024-07-02"
+     },
+     {
+      "id": "1fa14fb6-66f7-4e68-9e4b-1b3516194d4a",
+      "title": "80’s UK Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "260dbd0c-0d5e-440e-b8ae-2d07ab89fd20",
+       "title": "80’s UK Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2021"
+     },
+     {
+      "id": "decf95d3-b873-47c1-ab19-a509fc84a4f7",
+      "title": "1980s Throwback",
+      "status": "Official",
+      "release-group": {
+       "id": "b33cc3f8-2c6a-469a-b533-f36470ed7cdb",
+       "title": "1980s Throwback",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ],
+    "isrcs": [
+     "USWB10201619",
+     "USWB11500184"
+    ]
+   },
+   {
+    "id": "a5c9f7a6-4e3d-4458-8cf8-2327d102c1ae",
+    "score": 90,
+    "title": "Give Me the Night (radio edit)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2022-04-29",
+    "releases": [
+     {
+      "id": "8f1fcf59-b49f-46d9-a06e-dd4774d2edb5",
+      "title": "Bravo Hits 80’s, Vol.2",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "7f355a14-3431-4cd5-907e-204b84f891d3",
+       "title": "Bravo Hits 80’s, Vol.2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2022-04-29"
+     }
+    ]
+   },
+   {
+    "id": "8950ab5f-c936-4f49-b76a-63da036a5ab6",
+    "score": 90,
+    "title": "Give Me the Night (remastered 1999)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2017",
+    "releases": [
+     {
+      "id": "705f909e-ff8d-4d1d-a41f-a6a20bdacd0d",
+      "title": "Soul Grooves",
+      "status": "Official",
+      "release-group": {
+       "id": "804d442f-9179-4379-aaa3-0feb7d75c0b9",
+       "title": "Soul Grooves",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017"
+     }
+    ]
+   },
+   {
+    "id": "d273c037-45f1-443d-b965-612e8230ce8e",
+    "score": 90,
+    "title": "Give Me the Night (single version)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2025-08-22",
+    "releases": [
+     {
+      "id": "d21b3f4f-4845-4211-8e27-4a4f19708da1",
+      "title": "Time Capsule: The 80’s",
+      "status": "Official",
+      "release-group": {
+       "id": "25d9cd23-cda3-4ed4-97e2-209b42261e3d",
+       "title": "Time Capsule: The 80’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2025-08-22"
+     }
+    ]
+   },
+   {
+    "id": "fc5198e7-63e4-4456-922d-53bc330a59e1",
+    "score": 90,
+    "title": "Give Me the Night (single version)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "3288429d-4e40-4baf-8b88-6478bbc4f461",
+      "title": "80s Music Hits",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "1231679f-0ece-4ab3-bb5a-c01143ab7261",
+       "title": "80s Music Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     }
+    ]
+   },
+   {
+    "id": "071002e5-810d-4d3c-a2d0-cc8884fa904d",
+    "score": 87,
+    "title": "Give Me the Night (DJ Phats mix)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "1998",
+    "releases": [
+     {
+      "id": "afd6ba8c-6261-4908-b03f-449bf4e792c1",
+      "title": "Club Class, Volume 11",
+      "status": "Promotion",
+      "release-group": {
+       "id": "eccf2f8a-d513-446c-bf96-050b365ccb53",
+       "title": "Club Class, Volume 11",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998"
+     }
+    ]
+   },
+   {
+    "id": "fb7f7596-515f-4b08-bba7-9ddeb3947b32",
+    "score": 87,
+    "title": "Give Me the Night (Jorun Bombay mix)",
+    "disambiguation": "part of “Summertime Vol. 9” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2018",
+    "releases": [
+     {
+      "id": "05e08647-9823-422e-ab04-8af791cdf79f",
+      "title": "Summertime Vol. 9",
+      "status": "Official",
+      "release-group": {
+       "id": "a7ffeabc-aa29-4994-ac59-c102c4a1c403",
+       "title": "Summertime Vol. 9",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2018"
+     }
+    ]
+   },
+   {
+    "id": "a0bf9d18-500b-4e7d-b570-9640f7398608",
+    "score": 84,
+    "title": "Give Me the Night (Celebrated Style Gurus remix)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2011",
+    "releases": [
+     {
+      "id": "9833c8cd-f83b-45f6-97eb-a4bb78a49dac",
+      "title": "The Best of DMC: Bootlegs, Cut-Ups and Two Trackers, Volume 6",
+      "status": "Official",
+      "release-group": {
+       "id": "e05e6220-eeee-4047-8097-58dbfe97d2af",
+       "title": "The Best of DMC: Bootlegs, Cut-Ups and Two Trackers, Volume 6",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     }
+    ]
+   },
+   {
+    "id": "d60ceec6-1a8a-4039-afc8-f6ad88f346f3",
+    "score": 83,
+    "title": "Give Me the Night",
+    "artist-credit": [
+     {
+      "name": "Steve Aoki",
+      "joinphrase": " & ",
+      "artist": {
+       "id": "a39acc4a-985e-4173-a9ed-f325f2d3bc1c",
+       "name": "Steve Aoki"
+      }
+     },
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2021-02-26",
+    "releases": [
+     {
+      "id": "9c5a3d6c-a53b-43a4-a299-79a677ed7fe6",
+      "title": "Give Me the Night",
+      "status": "Official",
+      "release-group": {
+       "id": "e2160140-0412-466e-b114-0529c2422a93",
+       "title": "Give Me the Night",
+       "primary-type": "Single"
+      },
+      "date": "2021-02-26"
+     }
+    ],
+    "isrcs": [
+     "USDM32100251"
+    ]
+   },
+   {
+    "id": "0854c84d-8b29-4861-b529-3faf7d731a2e",
+    "score": 77,
+    "title": "Give Me the Night (DJ Meme Deep in the Night mix)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2024-08-09",
+    "releases": [
+     {
+      "id": "3ba9d69f-8dbb-4e3f-9d76-45a3dc1c7bb4",
+      "title": "George Benson - Give Me the Night (DJ Meme Deep In The Night Mix)",
+      "release-group": {
+       "id": "646eb8a6-996d-4a77-a3bc-5ee4bcc10fe2",
+       "title": "George Benson - Give Me the Night (DJ Meme Deep In The Night Mix)",
+       "primary-type": "Single",
+       "secondary-types": [
+        "Remix"
+       ]
+      },
+      "date": "2024-08-09"
+     }
+    ]
+   },
+   {
+    "id": "95498ab4-f248-4663-a03e-0c5201e9da18",
+    "score": 74,
+    "title": "Give Me the Night (Conan Liquid Reel to Reel re re re-strip)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": "",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     }
+    ],
+    "first-release-date": "2020-06-05",
+    "releases": [
+     {
+      "id": "f8791991-9fc0-4a9f-b27d-77d2adf915b4",
+      "title": "Conan Liquid Reel to Reel Re Re Re-Edits, Vol. 1",
+      "status": "Official",
+      "release-group": {
+       "id": "dce9240f-34d6-4d4d-9583-0616e8e15b91",
+       "title": "Conan Liquid Reel to Reel Re Re Re-Edits, Vol. 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Remix"
+       ]
+      },
+      "date": "2020-06-05"
+     }
+    ]
+   },
+   {
+    "id": "aca79708-e460-46ea-a9ee-d6e07eb90d15",
+    "score": 72,
+    "title": "Give Me The Night (Identity Full Vocal Mix)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": " & ",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     },
+     {
+      "name": "Lemar",
+      "joinphrase": "",
+      "artist": {
+       "id": "d8a222aa-da43-442a-93cf-9806b45f5daf",
+       "name": "Lemar"
+      }
+     }
+    ],
+    "first-release-date": "2005",
+    "releases": [
+     {
+      "id": "abbdcde8-ac9b-4808-9895-1f833aab177a",
+      "title": "Give Me The Night",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "241fe9b2-2341-4f0d-9fde-5cecec3d9c54",
+       "title": "Give Me The Night"
+      },
+      "date": "2005"
+     }
+    ]
+   },
+   {
+    "id": "59910512-e56e-458d-a9de-e0b9d90d5180",
+    "score": 72,
+    "title": "Give Me The Night (Soul Avengerz Classic Mix)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": " & ",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     },
+     {
+      "name": "Lemar",
+      "joinphrase": "",
+      "artist": {
+       "id": "d8a222aa-da43-442a-93cf-9806b45f5daf",
+       "name": "Lemar"
+      }
+     }
+    ],
+    "first-release-date": "2005",
+    "releases": [
+     {
+      "id": "abbdcde8-ac9b-4808-9895-1f833aab177a",
+      "title": "Give Me The Night",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "241fe9b2-2341-4f0d-9fde-5cecec3d9c54",
+       "title": "Give Me The Night"
+      },
+      "date": "2005"
+     }
+    ]
+   },
+   {
+    "id": "d7bf5eb2-cfd7-494c-bc92-3b04bc860853",
+    "score": 72,
+    "title": "Give Me The Night (Soul Avengerz Piano Dub)",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "joinphrase": " & ",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     },
+     {
+      "name": "Lemar",
+      "joinphrase": "",
+      "artist": {
+       "id": "d8a222aa-da43-442a-93cf-9806b45f5daf",
+       "name": "Lemar"
+      }
+     }
+    ],
+    "first-release-date": "2005",
+    "releases": [
+     {
+      "id": "abbdcde8-ac9b-4808-9895-1f833aab177a",
+      "title": "Give Me The Night",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "241fe9b2-2341-4f0d-9fde-5cecec3d9c54",
+       "title": "Give Me The Night"
+      },
+      "date": "2005"
+     }
+    ]
+   },
+   {
+    "id": "89efd40a-02a6-448d-98c8-40723a43f73d",
+    "score": 13,
+    "title": "After Dark: Disco: I’m Coming Out / Last Night a DJ Saved My Life / Somebode Else’s Guy / Solid / Ain’t Nobody / A Night to Remember / The Rain / Never Too Much / Give Me the Night / I Found Lovin’ / I Found Lovin’ / Saturday Love / Got to be Real",
+    "artist-credit": [
+     {
+      "name": "Diana Ross",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "60d41417-feda-4734-bbbf-7dcc30e08a83",
+       "name": "Diana Ross"
+      }
+     },
+     {
+      "name": "Indeep",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "53382f53-cce6-4035-a7f0-a35e9f0c1215",
+       "name": "Indeep"
+      }
+     },
+     {
+      "name": "Jocelyn Brown",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "6a628a50-1c5c-4d29-a13a-79a73eb012d9",
+       "name": "Jocelyn Brown"
+      }
+     },
+     {
+      "name": "Ashford and Simpson",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "403bec82-50c4-47fe-a8be-1882a5a43d82",
+       "name": "Ashford & Simpson"
+      }
+     },
+     {
+      "name": "Rufus",
+      "joinphrase": " and ",
+      "artist": {
+       "id": "ec6b11b5-d6a6-4c77-af55-8076a160cc94",
+       "name": "Rufus"
+      }
+     },
+     {
+      "name": "Chaka Khan",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "900e9144-019d-4043-86cb-ec0e127c39d0",
+       "name": "Chaka Khan"
+      }
+     },
+     {
+      "name": "Shalamar",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "8e57b7d5-4548-4e2b-b32d-af4b4a51cb80",
+       "name": "Shalamar"
+      }
+     },
+     {
+      "name": "Oran “Juice” Jones",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "64825fc4-b748-48cf-bec5-f7d2a47ed246",
+       "name": "Oran “Juice” Jones"
+      }
+     },
+     {
+      "name": "Luther Vandross",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "816d9b5d-eaf9-4a97-b5f7-6e82cd01aafe",
+       "name": "Luther Vandross"
+      }
+     },
+     {
+      "name": "George Benson",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson"
+      }
+     },
+     {
+      "name": "Steve Walsh",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "31bf9535-94be-40dc-bae6-4a8f5c7aab17",
+       "name": "Steve Walsh"
+      }
+     },
+     {
+      "name": "Fatback Band",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "a7290418-82e2-4016-abf4-3fd3e7db926f",
+       "name": "Fatback"
+      }
+     },
+     {
+      "name": "Cherrelle",
+      "joinphrase": " with ",
+      "artist": {
+       "id": "2a0b3bf9-0d04-4e49-91f5-9530cbebab55",
+       "name": "Cherrelle"
+      }
+     },
+     {
+      "name": "Alexander O’Neal",
+      "joinphrase": " / ",
+      "artist": {
+       "id": "fc4af92a-1aa8-4f35-9aea-29b2ecbe0779",
+       "name": "Alexander O’Neal"
+      }
+     },
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2019-09",
+    "releases": [
+     {
+      "id": "3d349519-5fcc-451d-9a44-4e426e715068",
+      "title": "Mastermix Issue 399: September 2019",
+      "status": "Official",
+      "release-group": {
+       "id": "d93001c3-1fde-466c-9260-78a678b9a117",
+       "title": "Mastermix Issue 399: September 2019",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

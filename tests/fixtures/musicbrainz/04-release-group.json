@@ -1,0 +1,366 @@
+{
+ "path": "release-group",
+ "query": {
+  "query": "releasegroup:\"Got to Be Real\" AND artist:\"Cheryl Lynn\"",
+  "limit": "25"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:15:50.291Z",
+  "count": 3,
+  "offset": 0,
+  "release-groups": [
+   {
+    "id": "7f8494cc-600f-4853-96a8-098fa955cfa3",
+    "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "score": 100,
+    "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "artist-credit-id": "2bf4aefa-683b-3fbb-a61b-4f3985662218",
+    "count": 7,
+    "title": "Got to Be Real",
+    "first-release-date": "1978",
+    "primary-type": "Single",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn",
+       "sort-name": "Lynn, Cheryl",
+       "disambiguation": "1970s disco singer",
+       "aliases": [
+        {
+         "sort-name": "Linda Sheryl Smithe",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Linda Sheryl Smithe",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Smith, Lynda Cheryl",
+         "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+         "name": "Lynda Cheryl Smith",
+         "locale": null,
+         "type": "Legal name",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Lynn, Cheryl",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "Cheryl Lynn",
+         "locale": null,
+         "type": "Artist name",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Lynn Cheryl",
+         "name": "Lynn Cheryl",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Cheryl Lynne",
+         "name": "Cheryl Lynne",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "cherryl lynn",
+         "name": "cherryl lynn",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "cc07493a-85ff-49e3-8031-8ddb2c4930f1",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Got to Be Real / Star Love",
+      "status": "Official"
+     },
+     {
+      "id": "5d8c0c0a-5d6c-4c88-9573-c1cb533f7618",
+      "status-id": "1156806e-d06a-38bd-83f0-cf2284a808b9",
+      "title": "Got To Be Real (Robbie Doherty's 129 Time Edit)",
+      "status": "Bootleg"
+     },
+     {
+      "id": "5ce58c28-2623-4c8d-b12c-46307ce90282",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Got to Be Real",
+      "status": "Official"
+     },
+     {
+      "id": "3f54faa8-1676-4c53-b9fd-3630906ab7e6",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Got to Be Real / Guarantee for My Heart",
+      "status": "Official"
+     },
+     {
+      "id": "2b72c736-8381-4193-befb-6f1a4c3f0303",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Got to Be Real",
+      "status": "Official"
+     },
+     {
+      "id": "28d0f469-1281-4032-9376-c95dd82bb301",
+      "status-id": "518ffc83-5cde-34df-8627-81bff5093d92",
+      "title": "Got to Be Real",
+      "status": "Promotion"
+     },
+     {
+      "id": "393f60d8-4bab-4377-803e-beff41645fb7",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Got to Be Real",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 1,
+      "name": "disco"
+     }
+    ]
+   },
+   {
+    "id": "2bdd90c8-319e-4615-bca1-637c8da94e1b",
+    "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+    "score": 86,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "2bf4aefa-683b-3fbb-a61b-4f3985662218",
+    "count": 2,
+    "title": "Got to Be Real: The Columbia Anthology",
+    "first-release-date": "2019-06-14",
+    "primary-type": "Album",
+    "secondary-types": [
+     "Compilation"
+    ],
+    "secondary-type-ids": [
+     "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+    ],
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn",
+       "sort-name": "Lynn, Cheryl",
+       "disambiguation": "1970s disco singer",
+       "aliases": [
+        {
+         "sort-name": "Linda Sheryl Smithe",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Linda Sheryl Smithe",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Smith, Lynda Cheryl",
+         "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+         "name": "Lynda Cheryl Smith",
+         "locale": null,
+         "type": "Legal name",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Lynn, Cheryl",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "Cheryl Lynn",
+         "locale": null,
+         "type": "Artist name",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Lynn Cheryl",
+         "name": "Lynn Cheryl",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Cheryl Lynne",
+         "name": "Cheryl Lynne",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "cherryl lynn",
+         "name": "cherryl lynn",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "ca5a56a8-8997-47b7-951f-15017265f4c0",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Got to Be Real: The Columbia Anthology",
+      "status": "Official"
+     },
+     {
+      "id": "ffdd31bb-2d6b-47ef-b87b-af0c195f9dd5",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Got to Be Real: The Columbia Anthology",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 1,
+      "name": "electronic"
+     },
+     {
+      "count": 1,
+      "name": "soul"
+     },
+     {
+      "count": 1,
+      "name": "disco"
+     }
+    ]
+   },
+   {
+    "id": "9a898241-8980-3c02-8e9a-aa8dcec52212",
+    "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+    "score": 81,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "2bf4aefa-683b-3fbb-a61b-4f3985662218",
+    "count": 1,
+    "title": "The Best of Cheryl Lynn: Got to Be Real",
+    "first-release-date": "1996",
+    "primary-type": "Album",
+    "secondary-types": [
+     "Compilation"
+    ],
+    "secondary-type-ids": [
+     "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+    ],
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn",
+       "sort-name": "Lynn, Cheryl",
+       "disambiguation": "1970s disco singer",
+       "aliases": [
+        {
+         "sort-name": "Linda Sheryl Smithe",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "Linda Sheryl Smithe",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Smith, Lynda Cheryl",
+         "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+         "name": "Lynda Cheryl Smith",
+         "locale": null,
+         "type": "Legal name",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Lynn, Cheryl",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "Cheryl Lynn",
+         "locale": null,
+         "type": "Artist name",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Lynn Cheryl",
+         "name": "Lynn Cheryl",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Cheryl Lynne",
+         "name": "Cheryl Lynne",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "cherryl lynn",
+         "name": "cherryl lynn",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "842f2fdf-062d-4f68-b602-5c9b39ba8af9",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "The Best of Cheryl Lynn: Got to Be Real",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 2,
+      "name": "pop"
+     },
+     {
+      "count": 1,
+      "name": "disco"
+     }
+    ]
+   }
+  ]
+ }
+}

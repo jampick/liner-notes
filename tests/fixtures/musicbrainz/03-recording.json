@@ -1,0 +1,6378 @@
+{
+ "path": "recording",
+ "query": {
+  "query": "recording:\"Got to Be Real\" AND artist:\"Cheryl Lynn\"",
+  "limit": "100"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:15:46.763Z",
+  "count": 107,
+  "offset": 0,
+  "recordings": [
+   {
+    "id": "1d6bd850-4dde-4865-9efb-3b21cea53649",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Festa Pronta” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2005",
+    "releases": [
+     {
+      "id": "fca125bd-3348-4d7f-ba26-5973d8f95fe8",
+      "title": "Festa Pronta",
+      "status": "Official",
+      "release-group": {
+       "id": "e1e0fbb2-1946-3bfe-b96b-e24d62d8b4fb",
+       "title": "Festa Pronta",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2005"
+     }
+    ]
+   },
+   {
+    "id": "8af0edc5-5347-4239-a39b-8af98f4af520",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Festivalbar 96: Superdance Battito. bis” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996",
+    "releases": [
+     {
+      "id": "9358e7aa-cb21-4afa-a07a-cd91fb2302fa",
+      "title": "Festivalbar 96: Superdance Battito. bis",
+      "status": "Official",
+      "release-group": {
+       "id": "92f10810-1469-44be-88e2-6c6de5a9097a",
+       "title": "Festivalbar 96: Superdance Battito. bis",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     }
+    ]
+   },
+   {
+    "id": "13436513-fb02-42de-b08a-8f55f82d6c92",
+    "score": 100,
+    "title": "Got To Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996",
+    "releases": [
+     {
+      "id": "3d768a90-d506-4e90-80c6-2bd18deb70a1",
+      "title": "Club Ladies Night",
+      "status": "Official",
+      "release-group": {
+       "id": "098cad8c-d371-4a18-b885-3fee991c2a39",
+       "title": "Club Ladies Night",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     }
+    ]
+   },
+   {
+    "id": "5ebdf411-0fa0-4e42-a551-60fff4b3c3cd",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2017",
+    "releases": [
+     {
+      "id": "705f909e-ff8d-4d1d-a41f-a6a20bdacd0d",
+      "title": "Soul Grooves",
+      "status": "Official",
+      "release-group": {
+       "id": "804d442f-9179-4379-aaa3-0feb7d75c0b9",
+       "title": "Soul Grooves",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017"
+     }
+    ]
+   },
+   {
+    "id": "b7826cba-c1e7-43e2-9aed-73bf90d2938f",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "ec4ad75c-75ab-4523-b586-f3c575acdb62",
+      "title": "Superstars of ’70s Soul",
+      "status": "Official",
+      "release-group": {
+       "id": "0ed52145-98f6-419f-b0ce-eb62a8ca3f22",
+       "title": "Superstars of ’70s Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "c4876b61-561e-4826-b48a-ea5dd10da452",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2010-10-25",
+    "releases": [
+     {
+      "id": "85c59b83-8cbe-42fc-922b-f29572070423",
+      "title": "De topcollectie: ’70, Vol. 2",
+      "status": "Official",
+      "release-group": {
+       "id": "c2f5c72a-6ac2-4b9a-9491-08f7a8681383",
+       "title": "De topcollectie: ’70, Vol. 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-10-25"
+     }
+    ]
+   },
+   {
+    "id": "3771cb5b-27e0-41c9-a3ac-8f074e70b890",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1994",
+    "releases": [
+     {
+      "id": "d368e7da-36c8-4966-b2e3-da08e4ae224d",
+      "title": "100 Anthems: Funky House",
+      "status": "Official",
+      "release-group": {
+       "id": "c7b6f48a-ed6c-4765-b618-3592d0c5eb04",
+       "title": "100 Anthems: Funky House",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008"
+     },
+     {
+      "id": "69cfe4b4-1f02-443c-9e2a-6c8ca2da4514",
+      "title": "This Is Old School",
+      "status": "Official",
+      "release-group": {
+       "id": "125d177a-3ad8-4218-99c2-26203fc986d4",
+       "title": "This Is Old School",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1994"
+     }
+    ]
+   },
+   {
+    "id": "649db726-46ef-4b7c-8e2b-ce6e28bb55ab",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of \"Boxfresh Presents: Exclusive Unthugged Mix CD\" dj-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2004",
+    "releases": [
+     {
+      "id": "c7175274-9601-423f-8bbb-564c1d6df7cb",
+      "title": "Boxfresh Presents: Exclusive Unthugged Mix CD",
+      "status": "Official",
+      "release-group": {
+       "id": "84d1f918-99f5-46e4-98f4-583584dfbbfc",
+       "title": "Boxfresh Presents: Exclusive Unthugged Mix CD",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2004"
+     }
+    ]
+   },
+   {
+    "id": "af427402-d680-4bb5-af54-5ba691f6632f",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2018-07-20",
+    "releases": [
+     {
+      "id": "33842664-18b0-4b77-a33e-f0edf9dd691b",
+      "title": "Hed Kandi: Disco Kandi",
+      "status": "Official",
+      "release-group": {
+       "id": "ead65927-2d9a-4ab4-8fd5-8664e15d9936",
+       "title": "Hed Kandi: Disco Kandi",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2018-07-20"
+     },
+     {
+      "id": "c07ba342-4988-4e88-8aad-d34c1caf7884",
+      "title": "Hedkandi: Disco Kandi",
+      "status": "Official",
+      "release-group": {
+       "id": "ead65927-2d9a-4ab4-8fd5-8664e15d9936",
+       "title": "Hed Kandi: Disco Kandi",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2018-07-20"
+     }
+    ],
+    "isrcs": [
+     "USSM19914468"
+    ]
+   },
+   {
+    "id": "79613dce-ef94-411a-9889-df669b2f91dd",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2013-12-03",
+    "releases": [
+     {
+      "id": "ab5f7ff4-9ed1-4594-95bc-702b830128e4",
+      "title": "The Magic of Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "5611e98c-dba0-4707-9e61-8a81023abf86",
+       "title": "The Magic of Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013"
+     },
+     {
+      "id": "9258a3cc-1d42-4dc5-9169-b85c2456e0ee",
+      "title": "Les Plus Grands Tubes disco",
+      "status": "Official",
+      "release-group": {
+       "id": "54c971ce-72de-4227-ad8b-4360fdb444aa",
+       "title": "Les Plus Grands Tubes disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013-12-03"
+     }
+    ]
+   },
+   {
+    "id": "c39e72fd-658b-4a21-b7a1-95bc363bfa41",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Hed Kandi: Disco Kandi” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2018",
+    "releases": [
+     {
+      "id": "af33207b-6b87-40a3-9cbf-90dc817291e8",
+      "title": "Hed Kandi: Disco Kandi",
+      "status": "Official",
+      "release-group": {
+       "id": "ead65927-2d9a-4ab4-8fd5-8664e15d9936",
+       "title": "Hed Kandi: Disco Kandi",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2018"
+     }
+    ]
+   },
+   {
+    "id": "33d9e3d4-ef20-400c-806a-89bf2506c6f5",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2018-02-16",
+    "releases": [
+     {
+      "id": "d1f04704-5e72-4ebc-b5bc-8995739df937",
+      "title": "100 Hits: The Girls",
+      "status": "Official",
+      "release-group": {
+       "id": "b458339a-9a65-46f9-9e44-65192d02c42e",
+       "title": "100 Hits: The Girls",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-02-16"
+     }
+    ]
+   },
+   {
+    "id": "e60f17f4-dfe4-4672-8418-fcc37d4594e2",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Essential Grooves” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2002-01-11",
+    "releases": [
+     {
+      "id": "59ac5f3b-9c9c-4b83-a43c-a7e24539e107",
+      "title": "Twice as Nice Presents Essential Grooves",
+      "status": "Official",
+      "release-group": {
+       "id": "d992d713-5c20-4f60-b002-d2b8db3fb305",
+       "title": "Twice as Nice Presents Essential Grooves",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2002-01-11"
+     }
+    ]
+   },
+   {
+    "id": "fde80fe8-c5bc-4340-a3bf-02d516b4db1b",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996-04",
+    "releases": [
+     {
+      "id": "7ed3b20c-08a6-45a3-9337-5b9a875916af",
+      "title": "NOW Boogie Nights: Disco Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "14823322-4972-4eee-9c39-b413f2e541dc",
+       "title": "NOW Boogie Nights: Disco Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2021-09-17"
+     },
+     {
+      "id": "4093a41c-c74e-42aa-9bd2-3f63211f4150",
+      "title": "Ferry Maat’s Soul Show: The Seventies, Part 2",
+      "status": "Official",
+      "release-group": {
+       "id": "992bebd4-6fc5-3043-b2a1-18b6e6dd8fdb",
+       "title": "Ferry Maat’s Soul Show: The Seventies, Part 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "62cacbb5-8fa2-4532-ace0-f32d74ac2cc4",
+      "title": "Disco 54",
+      "status": "Official",
+      "release-group": {
+       "id": "4e331c5b-0cc8-32e9-b1c7-3c7dd1a8a82c",
+       "title": "Disco 54",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2005"
+     },
+     {
+      "id": "87ebb78a-de62-4a71-b732-0147b539adc1",
+      "title": "Back to the 80’s: Gold",
+      "status": "Official",
+      "release-group": {
+       "id": "9b5dd8ae-287d-4c66-baca-1ca45471a8c2",
+       "title": "Back to the 80’s: Gold",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009-10-12"
+     },
+     {
+      "id": "0fb5161d-9020-41ed-a5cb-8935942c0737",
+      "title": "Disco Fever: The Ultimate Disco Anthems",
+      "status": "Official",
+      "release-group": {
+       "id": "a21ea27d-fd19-4c28-b24e-8dd3361985b9",
+       "title": "Disco Fever: The Ultimate Disco Anthems",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010"
+     },
+     {
+      "id": "81c2379b-caf5-4c6a-8283-0e95613d6b04",
+      "title": "Soul – Funk – Disco (Gold Metal Box)",
+      "status": "Official",
+      "release-group": {
+       "id": "51e0bc5f-d429-4d54-8cb7-ce514ed0854c",
+       "title": "Soul – Funk – Disco (Gold Metal Box)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009"
+     },
+     {
+      "id": "ed18e117-7dc1-4cc6-a9b9-526f76ef2485",
+      "title": "Studio 54 *5th Edition* - The Biggest and Best Disco Collection Ever!",
+      "status": "Official",
+      "release-group": {
+       "id": "781b20ca-90a4-4e95-88c0-2ecf130a1639",
+       "title": "Studio 54 *5th Edition* - The Biggest and Best Disco Collection Ever!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     },
+     {
+      "id": "22d88571-30c3-4bc4-8205-a56510047ad8",
+      "title": "Dance Floor Anthems 2",
+      "status": "Official",
+      "release-group": {
+       "id": "bd853ced-4518-4976-b3bd-7099412aa96b",
+       "title": "Dance Floor Anthems 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-08-31"
+     },
+     {
+      "id": "6b54e703-8de1-4dba-ac33-5934a1c0c231",
+      "title": "NOW Yearbook Extra 1978",
+      "status": "Official",
+      "release-group": {
+       "id": "780bf843-ce0b-42b7-8ed2-3bdc576c2ca1",
+       "title": "NOW Yearbook Extra ’78",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2023-06-09"
+     },
+     {
+      "id": "13425a6d-f62f-4630-ab4b-784808df7eee",
+      "title": "The Best Disco Album in the World... Ever!",
+      "status": "Official",
+      "release-group": {
+       "id": "c32e6dc1-6726-4719-8aef-9adc58751a11",
+       "title": "The Best Disco Album in the World... Ever!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2019"
+     },
+     {
+      "id": "98471844-cc07-4c50-aca4-dd8aae2e869f",
+      "title": "Ministry of Sound: Club Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "c321229b-d9fd-4208-a891-a2fa4671e050",
+       "title": "Ministry of Sound: Club Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-04-28"
+     },
+     {
+      "id": "6cf550d8-a428-479c-b627-ca90373cfc15",
+      "title": "Mega Funk",
+      "status": "Official",
+      "release-group": {
+       "id": "cca4faca-e706-412f-9d8e-d900c457b0e8",
+       "title": "Mega Funk",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2004-09-06"
+     },
+     {
+      "id": "6a4faf00-d8bf-4061-849d-83c20bc079e2",
+      "title": "NOW Boogie Nights: Disco Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "14823322-4972-4eee-9c39-b413f2e541dc",
+       "title": "NOW Boogie Nights: Disco Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2021-09-17"
+     },
+     {
+      "id": "75513e6d-da05-4101-a174-108f0b5032d3",
+      "title": "American Dreams: The Soundtrack to Your Favourite Hit US Dramas",
+      "status": "Official",
+      "release-group": {
+       "id": "efc1e6db-136e-463a-8d9b-aea0f8df84f5",
+       "title": "American Dreams: The Soundtrack to Your Favourite Hit US Dramas",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-08-16"
+     },
+     {
+      "id": "82c4b5fa-9c87-46c2-b8e7-5e89d278ff90",
+      "title": "70’s Dance Fever",
+      "status": "Official",
+      "release-group": {
+       "id": "0113a010-d5fb-363c-8e08-d978b1b90fa6",
+       "title": "70’s Dance Fever",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996-04"
+     },
+     {
+      "id": "917102a7-e50d-47f8-a046-5d63cf5c47b8",
+      "title": "American Dreams: The Soundtrack to Your Favourite Hit US Dramas",
+      "status": "Official",
+      "release-group": {
+       "id": "efc1e6db-136e-463a-8d9b-aea0f8df84f5",
+       "title": "American Dreams: The Soundtrack to Your Favourite Hit US Dramas",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-08-16"
+     },
+     {
+      "id": "60b77854-d26f-403e-9480-0aa2f95ca6a5",
+      "title": "Back to the 70’s",
+      "status": "Official",
+      "release-group": {
+       "id": "882f2762-0a51-452b-a307-5793949fa0dd",
+       "title": "Back to the 70’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010"
+     },
+     {
+      "id": "a6c935d2-bb1a-46d7-983c-bb6ba6e27ac5",
+      "title": "Generations Funk",
+      "status": "Official",
+      "release-group": {
+       "id": "095b88e6-2be7-4f22-bc17-07561e9077fc",
+       "title": "Generations Funk",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013-03-25"
+     },
+     {
+      "id": "d9edfd3b-f978-4430-a5d1-c0ceadf6426f",
+      "title": "Disco Legends",
+      "status": "Official",
+      "release-group": {
+       "id": "15d53778-8158-438c-9ea2-b497eac51c3a",
+       "title": "Disco Legends",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010"
+     },
+     {
+      "id": "1c0377cc-82b8-4878-8c4b-35490436ddbf",
+      "title": "100 Hits: Boogie Nights",
+      "status": "Official",
+      "release-group": {
+       "id": "011f420e-e9bb-4f4a-be3b-094cb6f5d17d",
+       "title": "100 Hits: Boogie Nights",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-08-04"
+     },
+     {
+      "id": "3e458125-24e5-490b-9455-27c6b40da45a",
+      "title": "100 titres Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "219bac00-0980-4f53-8131-5cd5fec2d37c",
+       "title": "100 titres Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     },
+     {
+      "id": "2d11d815-76e0-4625-96b9-d3ddea7566ca",
+      "title": "That’s Disco: 60 All‐Time Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "0276ba5d-9a0a-3280-a25a-1bac6a96e91a",
+       "title": "That’s Disco: 60 All‐Time Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998"
+     },
+     {
+      "id": "a88574e9-ebc2-4f1d-b197-02c77f829c9a",
+      "title": "Boogie Nights: Dance Hits of the 70’s & 80’s",
+      "status": "Official",
+      "release-group": {
+       "id": "2d7cc563-54bd-32e9-8d12-d687f2d0f399",
+       "title": "Boogie Nights: Dance Hits of the 70’s & 80’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998"
+     }
+    ],
+    "isrcs": [
+     "USSM19802684"
+    ]
+   },
+   {
+    "id": "37471571-1f17-4bda-a419-1f575424e979",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2024-08-30",
+    "releases": [
+     {
+      "id": "e759d0f2-fb81-4852-b326-a9c03a098088",
+      "title": "Fetenhits: The Rare Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "347002c1-173c-4a63-b2da-ea47159bbd50",
+       "title": "Fetenhits: The Rare Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2024-08-30"
+     }
+    ]
+   },
+   {
+    "id": "41b4d085-d94a-422b-8ba7-5d06dc06460a",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2025",
+    "releases": [
+     {
+      "id": "bd041dce-9b41-468b-a055-af27c3ab123d",
+      "title": "Disco I’m Coming Out",
+      "status": "Official",
+      "release-group": {
+       "id": "86403a30-098f-4d62-90bb-208a077b7889",
+       "title": "Disco I’m Coming Out",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2025"
+     }
+    ]
+   },
+   {
+    "id": "00c44be6-a8f9-4752-b224-130f7df828db",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “The Tom Joyner Morning Show Old School Mix” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1999",
+    "releases": [
+     {
+      "id": "97ef160c-33fc-4a73-a665-9b97274c2cd6",
+      "title": "The Tom Joyner Morning Show Old School Mix",
+      "status": "Official",
+      "release-group": {
+       "id": "517e5493-30fa-39cf-a0c9-7055a83d41b9",
+       "title": "The Tom Joyner Morning Show Old School Mix",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     }
+    ]
+   },
+   {
+    "id": "8feb71ac-8cfd-43a8-8766-5eabefa8e412",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "848a7bff-408b-49f8-b829-abb8f61f950d",
+      "title": "Disco Nights Volume 7",
+      "status": "Official",
+      "release-group": {
+       "id": "be1c41c1-6d41-4e5a-ae29-29af3fc83fb6",
+       "title": "Disco Nights Volume 7",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     }
+    ]
+   },
+   {
+    "id": "38a142ce-1dc7-4ff1-804a-8dd4e3520f5e",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2009-09-05",
+    "releases": [
+     {
+      "id": "11c303f3-b1e1-4b94-96d1-83c8e6885e0f",
+      "title": "DISCO – 100 Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "4cf7287d-b53f-4e07-af4b-7663ec7c265e",
+       "title": "DISCO – 100 Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009-09-05"
+     },
+     {
+      "id": "a7022605-32d8-4ba1-acbe-e7f65701479b",
+      "title": "100 Hits: The Best Disco Album",
+      "status": "Official",
+      "release-group": {
+       "id": "1c8a3f4e-afe3-4a1b-8c73-deabc6da3460",
+       "title": "100 Hits: The Best Disco Album",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-11-02"
+     }
+    ]
+   },
+   {
+    "id": "91147506-20e0-4bb0-b84f-0cb2c3053f15",
+    "score": 100,
+    "title": "Got To Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1995",
+    "releases": [
+     {
+      "id": "6046cb98-92ee-48df-9730-cdb4b397f9cb",
+      "title": "Dancin' 'n' Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "b1cadce2-9e4f-4e36-a130-153b1a64a290",
+       "title": "Dancin' 'n' Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995"
+     }
+    ]
+   },
+   {
+    "id": "a9a4a55d-5495-4f3f-aa1c-0f989c4fe250",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2025-11-07",
+    "releases": [
+     {
+      "id": "06ecdb21-630e-43d9-a776-8fbbdc636889",
+      "title": "NOW That's What I Call An Era: Disco 1973>1980",
+      "status": "Official",
+      "release-group": {
+       "id": "676edc3f-a389-421e-af2d-3ff057b892ca",
+       "title": "NOW That's What I Call An Era - Disco: 1973-1980",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2025-11-07"
+     },
+     {
+      "id": "cbd6847e-b5c6-4a34-a5bf-fbaae709497e",
+      "title": "NOW That's What I Call An Era - Disco: 1973-1980",
+      "status": "Official",
+      "release-group": {
+       "id": "676edc3f-a389-421e-af2d-3ff057b892ca",
+       "title": "NOW That's What I Call An Era - Disco: 1973-1980",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2025-11-07"
+     }
+    ]
+   },
+   {
+    "id": "3810c474-01a7-4767-8e21-912908070017",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2002",
+    "releases": [
+     {
+      "id": "f6eb713c-6f1c-4838-82e8-ba590054f58e",
+      "title": "Electro The Breakdance Album",
+      "release-group": {
+       "id": "0b777ad4-ea80-4caf-9a5a-5a0008b6951b",
+       "title": "Electro The Breakdance Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     }
+    ]
+   },
+   {
+    "id": "c7587785-5014-49c3-a72f-ed0215d8ff8c",
+    "score": 100,
+    "title": "Got To Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1993",
+    "releases": [
+     {
+      "id": "c7eeca56-558f-44f7-b256-6ce72d0dcc2c",
+      "title": "Double Knit Dance Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "4534b9bb-4c12-41cc-ae0c-b3fd0773e895",
+       "title": "Double Knit Dance Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1993"
+     }
+    ]
+   },
+   {
+    "id": "bc7c4e10-ab18-48af-9d4b-33c3ab36f75e",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1995",
+    "releases": [
+     {
+      "id": "541f720d-8363-4c69-b0b9-aa078e1c8e6b",
+      "title": "Soul Grooves (Soul Dance, Soul Love, Soul Evergreens)",
+      "status": "Official",
+      "release-group": {
+       "id": "d09fbb52-0924-4cd0-b21c-f61f77c4a091",
+       "title": "Soul Grooves (Soul Dance, Soul Love, Soul Evergreens)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995"
+     }
+    ]
+   },
+   {
+    "id": "851b773b-efbf-4a13-a26b-67afe7595699",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "3ee5f3b5-f5eb-43eb-ad1e-14115b09d4f2",
+      "title": "Pop",
+      "status": "Official",
+      "release-group": {
+       "id": "8cea74fd-125b-4f5d-9828-1f4a88d56250",
+       "title": "Pop",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     }
+    ]
+   },
+   {
+    "id": "f7d25c22-550f-40ed-aa9b-6fbaadc0dd17",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2008-10-14",
+    "releases": [
+     {
+      "id": "7a15e420-3c75-4a0c-b61e-d4767386765a",
+      "title": "Hit Man: David Foster & Friends (Deluxe)",
+      "status": "Official",
+      "release-group": {
+       "id": "3d6a681b-18b1-48ec-862c-af5ea1290a59",
+       "title": "Hit Man: David Foster & Friends",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Live"
+       ]
+      }
+     }
+    ],
+    "isrcs": [
+     "USRE10900696"
+    ]
+   },
+   {
+    "id": "8d0b078f-3794-4bdf-970e-e3a33723f766",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2002",
+    "releases": [
+     {
+      "id": "514a3f2b-8564-41f2-a915-6bfa7e25084f",
+      "title": "Pop Life: A Celebration of Pop Culture",
+      "status": "Official",
+      "release-group": {
+       "id": "480e503b-0684-4e42-821c-d73c785270f9",
+       "title": "Pop Life: A Celebration of Pop Culture",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2002"
+     }
+    ]
+   },
+   {
+    "id": "7c586f37-7dda-43f0-9000-7834b4e08872",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2006",
+    "releases": [
+     {
+      "id": "f4059709-be69-4012-82f0-bf80c17ad633",
+      "title": "Disco Fever: Turn The Beat Around",
+      "status": "Official",
+      "release-group": {
+       "id": "a94abef7-e3a5-4853-bb2d-dbef50066b2b",
+       "title": "Disco Fever: Turn The Beat Around",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     }
+    ]
+   },
+   {
+    "id": "5ff172a7-d042-43fe-81ff-489ceec74011",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of a “Ministry of Sound: Saturday Night Club Classics” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2013-03-04",
+    "releases": [
+     {
+      "id": "865d6bd8-6ec1-4827-9f36-10c056ee7d69",
+      "title": "Saturday Night Club Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "36e46ea0-35e3-4d97-a60b-e2601dae1919",
+       "title": "Saturday Night Club Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2013-03-04"
+     }
+    ]
+   },
+   {
+    "id": "a984b0e1-b8fd-4531-a786-538c7f37e1c8",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "LP / 12\" version",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1978-10-13",
+    "releases": [
+     {
+      "id": "15619f56-245b-4a1f-a6b1-58528805ee41",
+      "title": "Box Dancing Days: Suas Noites Inesquecíveis",
+      "status": "Official",
+      "release-group": {
+       "id": "0e8c7d6d-0cc6-48c4-811b-8b902c76793e",
+       "title": "Box Dancing Days: Suas noites inesquecíveis",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "cc07493a-85ff-49e3-8031-8ddb2c4930f1",
+      "title": "Got to Be Real / Star Love",
+      "status": "Official",
+      "release-group": {
+       "id": "7f8494cc-600f-4853-96a8-098fa955cfa3",
+       "title": "Got to Be Real",
+       "primary-type": "Single"
+      },
+      "date": ""
+     },
+     {
+      "id": "e0d0b232-3aa3-4d4d-8b34-4d684c7546b4",
+      "title": "Dance Music Chronicle ~History of Dance Music",
+      "status": "Official",
+      "release-group": {
+       "id": "4ed49b5c-cd97-45eb-9e04-a6a6cc58d69a",
+       "title": "Dance Music Chronicle ~History of Dance Music",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "342fd32b-8d20-476f-b1ed-984404e24d01",
+      "title": "Ultimate Breaks & Beats: The Complete Collection",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "859a3b18-42ee-4aab-83c5-c82307844d97",
+       "title": "Ultimate Breaks & Beats: The Complete Collection",
+       "primary-type": "Other",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008-12-18"
+     },
+     {
+      "id": "58bd4889-c69d-42bb-948e-2a61880905f0",
+      "title": "Ultimate Breaks & Beats: The Complete Collection",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "859a3b18-42ee-4aab-83c5-c82307844d97",
+       "title": "Ultimate Breaks & Beats: The Complete Collection",
+       "primary-type": "Other",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     },
+     {
+      "id": "be302df5-1a71-4669-878e-1b539aa2e0a3",
+      "title": "Will & Grace: Let the Music Out!",
+      "status": "Official",
+      "release-group": {
+       "id": "3242182c-c85d-384c-bd29-1a0129aacecd",
+       "title": "Will & Grace: Let the Music Out!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "2004"
+     },
+     {
+      "id": "aa5cadb6-901b-49b2-a2b5-81a92a53add0",
+      "title": "Funky Dance Grooves, Volume 1",
+      "status": "Official",
+      "release-group": {
+       "id": "adf3ccdd-915e-4f67-8318-a37bc8d8ed2e",
+       "title": "Funky Dance Grooves, Volume 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003"
+     },
+     {
+      "id": "54f6e495-1bc1-4d86-b9a0-934af368866f",
+      "title": "The Hits Album: Floorfillers: Disco Nights",
+      "status": "Official",
+      "release-group": {
+       "id": "94862160-4bfe-4c16-b442-a773b49d64fc",
+       "title": "The Hits Album: Floorfillers: Disco Nights",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2022"
+     },
+     {
+      "id": "e969f74e-6b86-4a1e-9371-b78f7be45c47",
+      "title": "Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "7bb9b9dd-12b7-421d-a416-3e5b165ac5b3",
+       "title": "Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2016"
+     },
+     {
+      "id": "6fa58cba-3742-483f-a28a-f4eb956b048d",
+      "title": "Old Navy Soul",
+      "status": "Official",
+      "release-group": {
+       "id": "0acfb3a9-9751-493e-8302-3e82c7964dc5",
+       "title": "Old Navy Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     },
+     {
+      "id": "c28adab5-db86-4840-83e2-c6730614a745",
+      "title": "Voguing: Voguing and the House Ballroom Scene of New York City 1976-96",
+      "status": "Official",
+      "release-group": {
+       "id": "353c4e44-f53d-450b-a069-d3e49eb44ba6",
+       "title": "Voguing: Voguing and the House Ballroom Scene of New York City 1976-96",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012"
+     },
+     {
+      "id": "c28adab5-db86-4840-83e2-c6730614a745",
+      "title": "Voguing: Voguing and the House Ballroom Scene of New York City 1976-96",
+      "status": "Official",
+      "release-group": {
+       "id": "353c4e44-f53d-450b-a069-d3e49eb44ba6",
+       "title": "Voguing: Voguing and the House Ballroom Scene of New York City 1976-96",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012"
+     },
+     {
+      "id": "d81b7cee-d9d6-4db8-8635-f95640c11cb2",
+      "title": "Disco Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "81e3d6c8-ab88-4357-894c-3bd23caa3e29",
+       "title": "Disco Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "f0778e1b-dce0-4b0e-8ea9-f17df07262f6",
+      "title": "The Soul of Seduction",
+      "status": "Official",
+      "release-group": {
+       "id": "0f15a1a9-4850-41ff-b7f5-de331d7f9576",
+       "title": "The Soul of Seduction",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996-03-12"
+     },
+     {
+      "id": "a707433b-99d4-4028-9ac0-51c0603ce3d0",
+      "title": "Hits of the 70s (100 Songs)",
+      "status": "Official",
+      "release-group": {
+       "id": "7e1a9ef9-89a6-4a7b-8680-c2d816db7c8a",
+       "title": "Hits of the 70s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-07-14"
+     },
+     {
+      "id": "b10c2653-8eed-44f7-bdbd-a84f13bb47e9",
+      "title": "Hits of the 70s (50 Songs)",
+      "status": "Official",
+      "release-group": {
+       "id": "7e1a9ef9-89a6-4a7b-8680-c2d816db7c8a",
+       "title": "Hits of the 70s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-07-14"
+     },
+     {
+      "id": "0a3906e7-cecc-450e-8f86-1d3ebd769302",
+      "title": "70s Songs",
+      "status": "Official",
+      "release-group": {
+       "id": "441ff679-38a6-4a22-b67e-a2038e6b93a1",
+       "title": "70s Songs",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017"
+     },
+     {
+      "id": "1dd1a1f4-4582-42fc-a90c-c9cb679fdb78",
+      "title": "Disco Fever",
+      "status": "Official",
+      "release-group": {
+       "id": "3670cfe1-a9c1-4423-9b71-568b04587c4c",
+       "title": "Disco Fever",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998-08-26"
+     },
+     {
+      "id": "c763e455-fe1e-4312-b964-5996d6960c5a",
+      "title": "Just get Funky!",
+      "status": "Official",
+      "release-group": {
+       "id": "a6a792ae-dcdd-4308-ac3a-8890ecbe8311",
+       "title": "Just get Funky!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001-04-09"
+     },
+     {
+      "id": "562dc431-1210-46f5-ab3b-564051bf45d9",
+      "title": "Top Hits of the 70s: Chart Toppers",
+      "status": "Official",
+      "release-group": {
+       "id": "324328e0-a545-4e16-8c2d-aa5359fabf6d",
+       "title": "Top Hits of the 70s: Chart Toppers",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003"
+     },
+     {
+      "id": "8f2e862e-bac0-4314-93da-922fb41451b9",
+      "title": "100% Pure Groove, Volume 2",
+      "status": "Official",
+      "release-group": {
+       "id": "9ee545a4-1f6a-4fb9-b9f7-1365a802d2f4",
+       "title": "100% Pure Groove, Volume 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     },
+     {
+      "id": "44e9e00e-2e84-4bde-aee0-ed8732ae8c51",
+      "title": "Carlito’s Way",
+      "status": "Official",
+      "release-group": {
+       "id": "8acad672-d892-32ba-9fa2-daa4fcd3ebb2",
+       "title": "Carlito’s Way",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "1993"
+     },
+     {
+      "id": "b6371e4a-c2fe-42ce-94db-415255a2bd3c",
+      "title": "Carlito’s Way",
+      "status": "Official",
+      "release-group": {
+       "id": "8acad672-d892-32ba-9fa2-daa4fcd3ebb2",
+       "title": "Carlito’s Way",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "1993"
+     },
+     {
+      "id": "de0095e1-cb3c-4382-acab-c14172f72961",
+      "title": "Mega Soul Stars",
+      "status": "Official",
+      "release-group": {
+       "id": "3097c91a-2cc4-4a2a-b934-940efbc9930a",
+       "title": "Mega Soul Stars",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "338e222d-b272-48ca-b2b5-2eff9789ef6c",
+      "title": "1995 Sydney Gay & Lesbian Mardi Gras: The Party Anthems",
+      "status": "Official",
+      "release-group": {
+       "id": "d8f0bce8-f14d-3e88-a7e3-4e1f5333e5b2",
+       "title": "1995 Sydney Gay & Lesbian Mardi Gras: The Party Anthems",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995"
+     },
+     {
+      "id": "08c4ce0e-9c09-4057-b9ca-3d9acb20bf1c",
+      "title": "Disco Discharge: Classic Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "f5443b07-29c8-4e6c-bcbd-a70def247482",
+       "title": "Disco Discharge: Classic Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009-09-07"
+     },
+     {
+      "id": "ffdd31bb-2d6b-47ef-b87b-af0c195f9dd5",
+      "title": "Got to Be Real: The Columbia Anthology",
+      "status": "Official",
+      "release-group": {
+       "id": "2bdd90c8-319e-4615-bca1-637c8da94e1b",
+       "title": "Got to Be Real: The Columbia Anthology",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "ca5a56a8-8997-47b7-951f-15017265f4c0",
+      "title": "Got to Be Real: The Columbia Anthology",
+      "status": "Official",
+      "release-group": {
+       "id": "2bdd90c8-319e-4615-bca1-637c8da94e1b",
+       "title": "Got to Be Real: The Columbia Anthology",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2019-06-14"
+     },
+     {
+      "id": "810926f5-13fa-46ff-91d0-17d59148379f",
+      "title": "Hed Kandi: Back to Love 03.02",
+      "status": "Official",
+      "release-group": {
+       "id": "37e162d4-a481-3499-bde4-71a5d73c1f5a",
+       "title": "Hed Kandi: Back to Love 03.02",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002-06-03"
+     },
+     {
+      "id": "4690ac9f-a372-4e09-b3ca-00b768d5829e",
+      "title": "Dance Club Fever",
+      "status": "Official",
+      "release-group": {
+       "id": "5d6a4684-bbf9-459a-9189-d8f472a068b3",
+       "title": "Dance Club Fever",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997-04-22"
+     },
+     {
+      "id": "23e76eef-c4ea-4e90-a788-3a9f993e6eb1",
+      "title": "Disco Nights, Volume 1: Divas of Dance",
+      "status": "Official",
+      "release-group": {
+       "id": "85f708a5-2d30-3c67-bab3-b8ac3c9b79d0",
+       "title": "Disco Nights, Volume 1: Divas of Dance",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1994"
+     },
+     {
+      "id": "bfa3f6dd-b600-41c7-94b9-574efa101c5e",
+      "title": "Cheryl Lynn",
+      "status": "Official",
+      "release-group": {
+       "id": "8661b51e-2086-383c-8aa2-6274eccb89e2",
+       "title": "Cheryl Lynn",
+       "primary-type": "Album"
+      },
+      "date": "2014"
+     },
+     {
+      "id": "9bfed968-6278-4aa5-a8fa-1140d24cdf79",
+      "title": "Soul Hits of the ’70s: Didn’t It Blow Your Mind! Volume 20",
+      "status": "Official",
+      "release-group": {
+       "id": "72cfccd6-6188-4412-9832-83705576a36e",
+       "title": "Soul Hits of the ’70s: Didn’t It Blow Your Mind! Volume 20",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1991"
+     },
+     {
+      "id": "5348d518-bcf2-409c-a31f-bdaeb1f1d51d",
+      "title": "Ultimate Breaks & Beats, Volume 3",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "9710e7f9-c579-3087-a80d-94b88ead00e6",
+       "title": "Ultimate Breaks & Beats, Volume 3",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1986"
+     },
+     {
+      "id": "41493992-9e7f-408e-b204-476e5756739f",
+      "title": "Mastermix Classic Cuts, Volume 112: 70s 12″",
+      "status": "Official",
+      "release-group": {
+       "id": "edd56e81-db6b-41d8-80da-a4b4ce32979c",
+       "title": "Mastermix Classic Cuts, Volume 112: 70s 12″",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     },
+     {
+      "id": "fb154555-c496-4897-8988-a7f7d1ebd1e3",
+      "title": "Will & Grace: Let the Music Out!",
+      "status": "Official",
+      "release-group": {
+       "id": "3242182c-c85d-384c-bd29-1a0129aacecd",
+       "title": "Will & Grace: Let the Music Out!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "2004-09-14"
+     },
+     {
+      "id": "2139e4bf-be5e-45a3-9541-021cecc4c1fd",
+      "title": "Cheryl Lynn",
+      "status": "Official",
+      "release-group": {
+       "id": "8661b51e-2086-383c-8aa2-6274eccb89e2",
+       "title": "Cheryl Lynn",
+       "primary-type": "Album"
+      },
+      "date": ""
+     },
+     {
+      "id": "8e1a5bf4-9869-4dda-9131-fa9ef7a87022",
+      "title": "Cheryl Lynn",
+      "status": "Official",
+      "release-group": {
+       "id": "8661b51e-2086-383c-8aa2-6274eccb89e2",
+       "title": "Cheryl Lynn",
+       "primary-type": "Album"
+      },
+      "date": "2011-01-07"
+     },
+     {
+      "id": "4d8da8fd-8ce3-4557-bc7e-b51db42c524f",
+      "title": "Cheryl Lynn",
+      "status": "Official",
+      "release-group": {
+       "id": "8661b51e-2086-383c-8aa2-6274eccb89e2",
+       "title": "Cheryl Lynn",
+       "primary-type": "Album"
+      },
+      "date": "1978-10-13"
+     },
+     {
+      "id": "0a68c893-28e3-4c2a-b1c7-fd902c65e39e",
+      "title": "Die Hits der 70er: Disco Edition",
+      "status": "Official",
+      "release-group": {
+       "id": "ee15129c-6aff-3a07-8245-c36716f23fd1",
+       "title": "Die Hits der 70er: Disco Edition",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2004"
+     },
+     {
+      "id": "f8049d1b-d950-4833-9343-8b63584cb9e1",
+      "title": "A Night at the Movies",
+      "status": "Official",
+      "release-group": {
+       "id": "de05abbf-7ebd-4209-bc6b-b585ec7bf50c",
+       "title": "A Night at the Movies",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2014"
+     },
+     {
+      "id": "9bacb7e7-ef0d-4946-82db-43a8bab2494a",
+      "title": "Carlito’s Way",
+      "status": "Official",
+      "release-group": {
+       "id": "8acad672-d892-32ba-9fa2-daa4fcd3ebb2",
+       "title": "Carlito’s Way",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "1993-11-09"
+     },
+     {
+      "id": "5501c39d-d8ab-4aa3-8418-8e3158e0f47c",
+      "title": "The Real Thing",
+      "status": "Official",
+      "release-group": {
+       "id": "d0b3ae51-398c-4c58-a2b6-9442338b0549",
+       "title": "The Real Thing",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996-09-22"
+     },
+     {
+      "id": "b17110e6-d45e-4fb2-b189-f0a34f5e0365",
+      "title": "Disco Giants 4",
+      "status": "Official",
+      "release-group": {
+       "id": "98e96b02-75da-454c-b3ee-38eaa666dffd",
+       "title": "Disco Giants 4",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008"
+     },
+     {
+      "id": "576f1191-52fd-436b-8698-4a817c4ba859",
+      "title": "Funky Dance Grooves, Volume 1",
+      "status": "Official",
+      "release-group": {
+       "id": "06787d6c-6f7f-37b3-8768-7649610a1d02",
+       "title": "Funky Dance Grooves, Volume 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995"
+     },
+     {
+      "id": "e642ec9e-244f-4931-99f0-69c70d6c72e1",
+      "title": "Mighty Real: Lifebeat Dance Classics, Volume I",
+      "status": "Official",
+      "release-group": {
+       "id": "47f23417-66d4-3272-878d-fc4883b7d78e",
+       "title": "Mighty Real: Lifebeat Dance Classics, Volume I",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995-07-03"
+     },
+     {
+      "id": "5e617a0a-be92-439d-9017-7fff191b04d7",
+      "title": "Mega Hits, Volume 4: Disco Explosion",
+      "status": "Official",
+      "release-group": {
+       "id": "72ce07fd-c7af-36f4-bd5f-200c8746fd44",
+       "title": "Mega Hits, Volume 4: Disco Explosion",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997-04-24"
+     },
+     {
+      "id": "285ac07f-4b9f-4230-9c1c-69a51123f5aa",
+      "title": "Keeping the Faith",
+      "status": "Official",
+      "release-group": {
+       "id": "172ca0f7-b2e9-3aa6-a9d0-e0211b750f58",
+       "title": "Keeping the Faith",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "2000-04-18"
+     },
+     {
+      "id": "ea5821f7-209f-490b-89dd-970ed2e0d85e",
+      "title": "Phat Trax: The Best of Old School, Volume 5",
+      "status": "Official",
+      "release-group": {
+       "id": "26e2eba1-5549-371d-ae2a-ca8e0f2a09f2",
+       "title": "Phat Trax: The Best of Old School, Volume 5",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1994"
+     },
+     {
+      "id": "113a578f-5bef-4826-8399-36ab075f14b7",
+      "title": "Vintage Grooves Funk, Volume 1",
+      "status": "Official",
+      "release-group": {
+       "id": "b986cce9-cfcf-374e-b33e-90040282fcb9",
+       "title": "Vintage Grooves Funk, Volume 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007"
+     },
+     {
+      "id": "ce031431-50dc-4002-a2c3-674cfd9bda82",
+      "title": "Magnum Opus",
+      "status": "Official",
+      "release-group": {
+       "id": "e7561540-1e81-31b3-83ca-2383cabb9483",
+       "title": "Magnum Opus",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "bbd2c88e-777c-41f9-8250-61a66b27f605",
+      "title": "12\" Club Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "1fde7a2f-9a6d-4581-8b3d-6522e1d8b9e4",
+       "title": "12\" Club Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1994-06-24"
+     },
+     {
+      "id": "7f9ff4d9-0279-48c1-b7df-7c033fd2b284",
+      "title": "Undercover Brother",
+      "status": "Official",
+      "release-group": {
+       "id": "eb8cdd50-3025-3d65-bbf8-d41af8749ab6",
+       "title": "Undercover Brother",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "2002-05-21"
+     },
+     {
+      "id": "13bb3eb9-0e29-4520-9233-1897c97802a7",
+      "title": "Let the Music Play: 80s Groove",
+      "status": "Official",
+      "release-group": {
+       "id": "a07b51d5-7621-4a07-980f-a714f7cefbbf",
+       "title": "Let the Music Play: 80s Groove",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001-05-28"
+     },
+     {
+      "id": "514c5562-b657-4b7d-affd-819f02b97cbf",
+      "title": "Cheryl Lynn",
+      "status": "Official",
+      "release-group": {
+       "id": "8661b51e-2086-383c-8aa2-6274eccb89e2",
+       "title": "Cheryl Lynn",
+       "primary-type": "Album"
+      },
+      "date": "1990"
+     },
+     {
+      "id": "11c174a7-23dc-4134-89ae-630fe20e776c",
+      "title": "Oldies Forever Young",
+      "status": "Official",
+      "release-group": {
+       "id": "e1c285d0-b3d4-41a2-bedd-3a77727c22da",
+       "title": "Oldies Forever Young",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "e53a4c16-bac4-4aa9-a7af-5d9d9e342904",
+      "title": "12″ Dance: The Definitive Collection: 1978–1995",
+      "status": "Official",
+      "release-group": {
+       "id": "e17844a2-2b6e-4341-baff-1ccaad7d6030",
+       "title": "12″ Dance: The Definitive Collection: 1978–1995",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009-10-05"
+     },
+     {
+      "id": "5f116f38-f614-438a-98ed-12bbab7647d7",
+      "title": "Nights in Heaven",
+      "status": "Official",
+      "release-group": {
+       "id": "6c288918-9970-39cb-be92-c3aea39e7e36",
+       "title": "Nights in Heaven",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995"
+     },
+     {
+      "id": "5ce58c28-2623-4c8d-b12c-46307ce90282",
+      "title": "Got to Be Real",
+      "status": "Official",
+      "release-group": {
+       "id": "7f8494cc-600f-4853-96a8-098fa955cfa3",
+       "title": "Got to Be Real",
+       "primary-type": "Single"
+      },
+      "date": "1978"
+     },
+     {
+      "id": "af24c377-333f-4763-9517-d16cbd2f22b2",
+      "title": "Encore (dance version)",
+      "status": "Official",
+      "release-group": {
+       "id": "dacebbb5-4c30-407d-b73e-4adbb45bc79b",
+       "title": "Encore",
+       "primary-type": "Single"
+      },
+      "date": "1983"
+     },
+     {
+      "id": "ecfbe73b-35f0-45a0-a0d9-c175007fc9be",
+      "title": "Dance Classics, Volume 19 & 20",
+      "status": "Official",
+      "release-group": {
+       "id": "3bbe6224-a519-4671-be02-59ca1230a513",
+       "title": "Dance Classics, Volume 19 & 20",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008-09-26"
+     },
+     {
+      "id": "28d0f469-1281-4032-9376-c95dd82bb301",
+      "title": "Got to Be Real",
+      "status": "Promotion",
+      "release-group": {
+       "id": "7f8494cc-600f-4853-96a8-098fa955cfa3",
+       "title": "Got to Be Real",
+       "primary-type": "Single"
+      },
+      "date": "1978"
+     },
+     {
+      "id": "393f60d8-4bab-4377-803e-beff41645fb7",
+      "title": "Got to Be Real",
+      "status": "Official",
+      "release-group": {
+       "id": "7f8494cc-600f-4853-96a8-098fa955cfa3",
+       "title": "Got to Be Real",
+       "primary-type": "Single"
+      },
+      "date": "1978"
+     },
+     {
+      "id": "2864a689-4f7c-488e-85b4-f81f9712eb26",
+      "title": "Grand 12‐Inches 10",
+      "status": "Official",
+      "release-group": {
+       "id": "ee0dfc22-96bb-42ce-bad8-d099a732a6aa",
+       "title": "Grand 12‐Inches 10",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013-06-28"
+     },
+     {
+      "id": "600f2490-fb94-4bb1-a98c-b9ed004e2ccb",
+      "title": "Get Funked",
+      "status": "Official",
+      "release-group": {
+       "id": "96d7f4eb-02ee-4121-827a-c51a3cf763f5",
+       "title": "Get Funked",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003"
+     },
+     {
+      "id": "5f432b79-0847-4b28-a456-d1ec556e8eb5",
+      "title": "Party 2000",
+      "status": "Official",
+      "release-group": {
+       "id": "b378774d-a191-42c5-a57c-1acd5e8286e8",
+       "title": "Party 2000",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999-09-08"
+     },
+     {
+      "id": "0232f73f-2b15-4bc0-9177-70af32ba197c",
+      "title": "Great American Grooves: Dance Party",
+      "status": "Official",
+      "release-group": {
+       "id": "2a124d78-5b1b-4889-a07b-c305281809c5",
+       "title": "Great American Grooves: Dance Party",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995"
+     },
+     {
+      "id": "ef67f849-c883-4209-932b-e9d8aead47d8",
+      "title": "Old School, Volume 2",
+      "status": "Official",
+      "release-group": {
+       "id": "dfeffaa4-917b-35a5-8833-ef2dcecf5712",
+       "title": "Old School, Volume 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1994"
+     },
+     {
+      "id": "12c47b7c-b3c1-4601-8bd0-07a4a023e451",
+      "title": "Super Breaks: Return to the Old School",
+      "status": "Official",
+      "release-group": {
+       "id": "b0a37783-6a46-43fa-b86b-c25fb837d840",
+       "title": "Super Breaks: Return to the Old School",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009"
+     },
+     {
+      "id": "73ed73bc-c3d8-4ddd-ab4e-e5c28e2a7e09",
+      "title": "Jovem Pan Box, Volume 1",
+      "status": "Official",
+      "release-group": {
+       "id": "029e8a86-09c2-4bc7-8b2a-eb23a4d4b7a1",
+       "title": "Jovem Pan Box, Volume 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "1f0896d6-45e2-494a-b80b-ae95ae40d436",
+      "title": "Extended Seventies: The Dawning of the 12 inch Era",
+      "status": "Official",
+      "release-group": {
+       "id": "521ffc98-2f41-4910-a6a4-f6c579fc56cd",
+       "title": "Extended Seventies: The Dawning of the 12 inch Era",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006-05-15"
+     },
+     {
+      "id": "7d7d0813-34f1-4962-a269-8bf4e1e8df0f",
+      "title": "Let’s Dance! - The DJ’s Collection of Dance Club Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "fa52790c-84d1-477c-be41-faee8ae01529",
+       "title": "Let’s Dance! - The DJ’s Collection of Dance Club Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1987"
+     },
+     {
+      "id": "09797266-bf5d-4a28-9af8-797d77c79ab7",
+      "title": "#1 Hits of Disco: The Original Masters",
+      "status": "Official",
+      "release-group": {
+       "id": "f69ef8cd-37e5-40f9-8531-4bcf133f2a8f",
+       "title": "#1 Hits of Disco: The Original Masters",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2005"
+     },
+     {
+      "id": "113587f7-e965-4c38-82b8-27f8290070b5",
+      "title": "The Best Disco… Ever!",
+      "status": "Official",
+      "release-group": {
+       "id": "fa5b8a75-e85b-331a-b841-0d04b5705c98",
+       "title": "The Best Disco… Ever!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007-06-25"
+     }
+    ],
+    "isrcs": [
+     "USSM10028569",
+     "USSM19914468",
+     "USSM17800983"
+    ]
+   },
+   {
+    "id": "659ff00b-8328-4c1d-ad6f-3bb1271b29ee",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Ministry of Sound: Ultimate Streetdance” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2008-07-07",
+    "releases": [
+     {
+      "id": "7c95a3dd-ca55-4c8e-927b-ffda577360f4",
+      "title": "Ultimate Streetdance",
+      "status": "Official",
+      "release-group": {
+       "id": "7fddb26f-a3f1-3fac-b921-ac5916ac3969",
+       "title": "Ultimate Streetdance",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2008-07-07"
+     }
+    ]
+   },
+   {
+    "id": "d0bad192-8038-4e4a-bb5e-0cf2b65afee9",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1993",
+    "releases": [
+     {
+      "id": "9a79981a-55c7-4c52-ba3f-f340ddf8ee10",
+      "title": "Donna’s Dansfolie 76‒77‒78",
+      "status": "Official",
+      "release-group": {
+       "id": "2cda4819-4802-4964-927c-16f6dbff1f2c",
+       "title": "Donna’s Dansfolie 76‒77‒78",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1993"
+     }
+    ]
+   },
+   {
+    "id": "4b39e242-5005-41aa-99a4-a55e5cd2f1dc",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2023-11-10",
+    "releases": [
+     {
+      "id": "edb5cc53-b1e6-49b6-a791-cdf20b5c3874",
+      "title": "The Best Disco Party Album in the World… Ever!",
+      "status": "Official",
+      "release-group": {
+       "id": "460986d4-5a73-43ac-94cd-9448d591e69d",
+       "title": "The Best Disco Party Album in the World… Ever!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2023-11-10"
+     }
+    ]
+   },
+   {
+    "id": "6ba7dd79-942b-484b-826e-ea2b2116a2c6",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of a “FabricLive 14: DJ Spinbad” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2004-02-02",
+    "releases": [
+     {
+      "id": "41bac0b6-0592-4254-835b-cc83837520dc",
+      "title": "FabricLive 14: DJ Spinbad",
+      "status": "Official",
+      "release-group": {
+       "id": "b64fcbeb-6be3-3cc4-83f6-bc49b7706fd1",
+       "title": "FabricLive 14: DJ Spinbad",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2004-02-02"
+     }
+    ]
+   },
+   {
+    "id": "9d0e818f-1a7c-4e4b-8913-ef435731dcc8",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Disco Dance Hits: Good Time” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1997",
+    "releases": [
+     {
+      "id": "601a59d4-986b-4c51-a5a1-f7961417d627",
+      "title": "Disco Dance Hits: Good Time",
+      "status": "Official",
+      "release-group": {
+       "id": "a35ce40a-f9ac-32ca-b8a0-18e050f5c14c",
+       "title": "Disco Dance Hits: Good Time",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1997"
+     }
+    ]
+   },
+   {
+    "id": "66694153-c664-4817-a3de-17d7be1dd725",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2003",
+    "releases": [
+     {
+      "id": "bceb24c2-8912-445e-8e15-920ef7dae705",
+      "title": "Party Pack",
+      "status": "Official",
+      "release-group": {
+       "id": "69b3b3b5-cb47-4068-a888-efe3455e3a86",
+       "title": "Party Pack",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003"
+     }
+    ]
+   },
+   {
+    "id": "a9173e37-0808-427a-9b01-828c6e06696f",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2011",
+    "releases": [
+     {
+      "id": "d1f341a6-a1c5-41ee-ac68-3199ff90cf2b",
+      "title": "105 Disco Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "4cee6484-ca5c-4374-8904-5363f7d310e4",
+       "title": "105 Disco Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     }
+    ]
+   },
+   {
+    "id": "dc2b8b3e-51bd-4e47-9d31-9bb72dcbdd9f",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Ministry of Sound: Club Classics” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2017-04-28",
+    "releases": [
+     {
+      "id": "62b4c893-2cd7-43f6-880f-9617db550993",
+      "title": "Ministry of Sound: Club Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "c321229b-d9fd-4208-a891-a2fa4671e050",
+       "title": "Ministry of Sound: Club Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-04-28"
+     }
+    ]
+   },
+   {
+    "id": "3cca908a-157c-4436-bcca-d6b7e013d854",
+    "score": 100,
+    "title": "Got to be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2003",
+    "releases": [
+     {
+      "id": "0cb86fab-8909-46ab-b77e-cd0d1fe085f4",
+      "title": "Old Navy: Groove On Over",
+      "release-group": {
+       "id": "67ad4187-f9f5-48dd-9a6f-8a69a2ded61e",
+       "title": "Old Navy: Groove On Over",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003"
+     }
+    ]
+   },
+   {
+    "id": "acc31674-55bf-4a06-86c3-44022661fc3d",
+    "score": 100,
+    "title": "Got To Be Real",
+    "disambiguation": "part of “DJ Avery: Millennium Dance Party” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1999",
+    "releases": [
+     {
+      "id": "b8a0141b-9215-4593-a9c5-7953df9b4fac",
+      "title": "Jammin 105 Presents Millennium Dance Party",
+      "status": "Promotion",
+      "release-group": {
+       "id": "d3aff6c2-6adc-4856-b61b-de245271ede4",
+       "title": "Jammin 105 Presents Millennium Dance Party",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1999"
+     }
+    ]
+   },
+   {
+    "id": "e1ec3139-05f0-475f-8070-a1690e9d95c8",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2006",
+    "releases": [
+     {
+      "id": "74741477-c4f2-46e2-a079-bb28fdbbdd04",
+      "title": "Forever Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "2af37af7-a781-46ef-8fcc-1d082d8a973c",
+       "title": "Forever Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     }
+    ]
+   },
+   {
+    "id": "53c8e5b7-8248-4d4d-b087-af0b33513127",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2019-01-04",
+    "releases": [
+     {
+      "id": "3aaec551-944e-4dd9-80bd-60201f997910",
+      "title": "Car Songs: The 70s",
+      "status": "Official",
+      "release-group": {
+       "id": "298c0811-7139-42cd-8865-e249064775e7",
+       "title": "Car Songs: The 70s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2019-01-04"
+     }
+    ]
+   },
+   {
+    "id": "889a22bc-c00a-4ef4-b414-da1f127484f1",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2021-05-14",
+    "releases": [
+     {
+      "id": "5f82d651-9026-478f-9155-05cbdc5bb753",
+      "title": "Magic Soul",
+      "status": "Official",
+      "release-group": {
+       "id": "69cb6344-d366-49f2-ba4a-4704e67235ce",
+       "title": "Magic Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2021-05-14"
+     }
+    ]
+   },
+   {
+    "id": "bf152164-935f-43c4-b801-0c404432f341",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996",
+    "releases": [
+     {
+      "id": "9a18965e-ccdb-4138-9e96-a03fa0d10ea9",
+      "title": "Dance2Dance",
+      "status": "Official",
+      "release-group": {
+       "id": "bbda0c17-477e-4569-865c-5b27b47ae601",
+       "title": "Dance2Dance",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "12246d91-bf42-4eba-a9e8-84d014008fdc",
+      "title": "Disco Dance Hits, Volume 2: 1977-1997",
+      "status": "Official",
+      "release-group": {
+       "id": "10aa25d1-f97d-4cd7-9bec-5d1735520dcc",
+       "title": "Disco Dance Hits, Volume 2: 1977-1997",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     }
+    ]
+   },
+   {
+    "id": "384706f2-6ae0-4d36-98ce-0a47e69329f2",
+    "score": 100,
+    "title": "Got to be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2023-12-08",
+    "releases": [
+     {
+      "id": "dabc0783-d36e-480c-9e0f-aecc9e421935",
+      "title": "NOW Presents Disco",
+      "release-group": {
+       "id": "c3f45cbf-21d2-4823-aca4-2f3f6d6cb615",
+       "title": "NOW Presents Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2023-12-08"
+     }
+    ]
+   },
+   {
+    "id": "ead5be1d-5f2e-48ea-a9a5-76aa9e6b501c",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1979",
+    "releases": [
+     {
+      "id": "62610e88-319f-4aff-97e9-fae7f6baf2af",
+      "title": "Star Time",
+      "status": "Official",
+      "release-group": {
+       "id": "e1394e1e-3612-48ed-a146-05de05ee303c",
+       "title": "Star Time",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1979"
+     }
+    ]
+   },
+   {
+    "id": "7448b369-6a5e-4f28-8359-16ca12a102c7",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2011",
+    "releases": [
+     {
+      "id": "0fa7a153-d1d0-48e9-8fc4-53344acd0782",
+      "title": "1978: The Best Year of My Life",
+      "status": "Official",
+      "release-group": {
+       "id": "40178a64-1f44-4c11-bcab-1544124a5d3b",
+       "title": "1978: The Best Year of My Life",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     }
+    ]
+   },
+   {
+    "id": "7ee3cf34-60d1-49b1-a7fe-ab1d76112288",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1997",
+    "releases": [
+     {
+      "id": "a6d57203-8cb3-4114-a2d1-7ab129963a5b",
+      "title": "Disco Top 100, Volume 3",
+      "status": "Official",
+      "release-group": {
+       "id": "6b926137-16a7-3aaa-afd2-c0c92ba405a1",
+       "title": "Disco Top 100, Volume 3",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     }
+    ]
+   },
+   {
+    "id": "68c55234-106b-45ad-90fa-2fbc5953db27",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “The Party Mix: 80s Dancefloor” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2013-11-11",
+    "releases": [
+     {
+      "id": "91d08346-f591-42fa-bd5f-f0adc5131138",
+      "title": "The Party Mix: 80s Dancefloor",
+      "status": "Official",
+      "release-group": {
+       "id": "99c1ab2c-df63-44fe-a0d2-0eb1571ae300",
+       "title": "The Party Mix: 80s Dancefloor",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2013-11-11"
+     }
+    ]
+   },
+   {
+    "id": "89f30967-2262-4736-99be-694f7a1d9b8e",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2011-05-23",
+    "releases": [
+     {
+      "id": "8a895ec0-4a68-413d-a5eb-7de98cd7dd84",
+      "title": "Disco Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "c2e38ee7-1544-43d8-a8e5-0b5c26aabb9c",
+       "title": "Disco Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-05-23"
+     }
+    ],
+    "isrcs": [
+     "USSM17800983"
+    ]
+   },
+   {
+    "id": "23cda2a7-1582-4577-9bfd-dc8dfe1694f9",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1991",
+    "releases": [
+     {
+      "id": "be6f2c07-6394-4721-a7e9-e382ebfd8c05",
+      "title": "Disco Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "d0a45535-798e-4cca-b0a3-5b5858367478",
+       "title": "Disco Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1991"
+     }
+    ]
+   },
+   {
+    "id": "2a316562-b3fc-4294-bea7-b25ec783a525",
+    "score": 100,
+    "title": "Got To Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2010",
+    "releases": [
+     {
+      "id": "92e7e754-3739-4ae7-bd62-9cd36008e3f5",
+      "title": "100 Disco Hits 5CD Best album set",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "b8e37f9f-c458-4c08-9cab-97f0622bc1e1",
+       "title": "100 Disco Hits 5CD Best album set",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "2de42f40-26c0-41ec-bfd8-4fdb7833c871",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “THE BEST OF velfarre 1998” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1998-11-05",
+    "releases": [
+     {
+      "id": "b81f56ee-531a-487b-92a9-2d9063afd4c3",
+      "title": "THE BEST OF velfarre 1998",
+      "status": "Official",
+      "release-group": {
+       "id": "1a6a6383-a674-44f7-a0c4-73eaf17de218",
+       "title": "THE BEST OF velfarre 1998",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1998-11-05"
+     }
+    ]
+   },
+   {
+    "id": "f58c4829-5a0f-4f69-9d6b-74ad0bd7b366",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of \"The Mastas: The Classics, Volume 1\" dj-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1997",
+    "releases": [
+     {
+      "id": "0b56bfed-ff3e-4e77-b217-ec13efcbb34b",
+      "title": "The Mastas: The Classics, Volume 1",
+      "status": "Official",
+      "release-group": {
+       "id": "f05b817a-5c7f-418f-bf56-b6a96f0e7b86",
+       "title": "The Mastas - The Classics Vol.1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     }
+    ]
+   },
+   {
+    "id": "07c8a15c-be68-4c7c-a4ee-3957993c874e",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1995",
+    "releases": [
+     {
+      "id": "1f195fd7-dda0-4ed3-9585-eb0c14f81740",
+      "title": "Very Best of Club Classics, Volumes 1-5",
+      "status": "Promotion",
+      "release-group": {
+       "id": "40633464-a742-41d5-b564-24aa71298162",
+       "title": "Very Best of Club Classics, Volumes 1-5",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1995"
+     }
+    ]
+   },
+   {
+    "id": "b3e4a4dc-290c-46b3-a7df-f5db2c584521",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Pride98* Greatest Club Anthems” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1998",
+    "releases": [
+     {
+      "id": "965a8238-9d41-407e-a1a4-720fb197eedf",
+      "title": "Pride 98: Greatest Club Anthems",
+      "status": "Official",
+      "release-group": {
+       "id": "7edf4356-b0c1-4896-9223-868988e0c541",
+       "title": "Pride 98: Greatest Club Anthems",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1998"
+     }
+    ]
+   },
+   {
+    "id": "b29bae6a-033f-4ef6-8268-119deb47722a",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Ministry of Sound: I Love Disco” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2017-12-01",
+    "releases": [
+     {
+      "id": "a84d34e6-1341-4872-ae21-ff3c882db2b8",
+      "title": "I Love Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "31bcebe5-f679-4cfb-9bc3-82b0c0126f1f",
+       "title": "I Love Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2017-12-01"
+     }
+    ]
+   },
+   {
+    "id": "83e7565e-d695-496c-84bc-34ac3185bde6",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Back to Love” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2008-03-24",
+    "releases": [
+     {
+      "id": "f66b5076-d77d-4580-be2e-cd63d57aece6",
+      "title": "Hed Kandi: Back to Love: The Mix",
+      "status": "Official",
+      "release-group": {
+       "id": "8dea510b-8fc5-3d94-833c-181f14575300",
+       "title": "Hed Kandi: Back to Love: The Mix",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2008-03-24"
+     }
+    ]
+   },
+   {
+    "id": "65497797-ab84-4159-9ac4-40cf694d0321",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of a “The Ministry of Sound: Funk the Disco” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2016-10-28",
+    "releases": [
+     {
+      "id": "c0d2a3de-42c7-496b-b564-af3b0edad273",
+      "title": "Funk the Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "3bbe6124-c70e-4246-aae3-d1a2187b3ac6",
+       "title": "Funk the Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2016-10-28"
+     }
+    ]
+   },
+   {
+    "id": "d92b0c67-b16b-4d2b-900d-10521f2b50af",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Rewinds: It’s A Disco World” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1995",
+    "releases": [
+     {
+      "id": "4fb52a66-8f17-44b2-b0dc-0fc583c90720",
+      "title": "Rewinds: It’s a Disco World",
+      "status": "Official",
+      "release-group": {
+       "id": "862ef719-5363-3be8-a620-23dfe61d30de",
+       "title": "Rewinds: It’s a Disco World",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1995"
+     }
+    ]
+   },
+   {
+    "id": "a683a581-df33-4428-bc5c-e1fa2a63f04a",
+    "score": 100,
+    "title": "Got To Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2005-10-31",
+    "releases": [
+     {
+      "id": "af4a49b0-ed41-483f-8bc0-12d4753e94f7",
+      "title": "The Best Smooth Jazz …Ever! Vol. 2",
+      "status": "Official",
+      "release-group": {
+       "id": "cc4d6a93-621f-3fa5-9144-800766da6c81",
+       "title": "The Best Smooth Jazz …Ever! Vol. 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2005-10-31"
+     }
+    ]
+   },
+   {
+    "id": "3bd47b26-a00a-48ba-a852-279db1d900c8",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "72445176-37e5-479e-ba7f-e1c5f6c16b37",
+      "title": "The Radio Essential Series",
+      "status": "Promotion",
+      "release-group": {
+       "id": "db3380c7-102c-482f-84dd-35b18d927cd0",
+       "title": "The Radio Essential Series",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     }
+    ]
+   },
+   {
+    "id": "136721b3-0339-4005-bed7-2d276a1a193b",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Kontor: Top of the Clubs 80s Rare Grooves” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2020-08-28",
+    "releases": [
+     {
+      "id": "15ac75c9-b2fd-474d-b546-ee2205ae3b31",
+      "title": "Kontor: Top of the Clubs 80s Rare Grooves",
+      "status": "Official",
+      "release-group": {
+       "id": "a271ea55-d9a1-430c-910f-7e0568835508",
+       "title": "Kontor: Top of the Clubs 80s Rare Grooves",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2020-08-28"
+     }
+    ]
+   },
+   {
+    "id": "0e8929e9-364f-4932-ba91-56031f8f1d49",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1999",
+    "releases": [
+     {
+      "id": "558c3d6b-e7c9-40ef-8636-558a9af9586e",
+      "title": "United Colors Of Benetton: Parakeet",
+      "status": "Official",
+      "release-group": {
+       "id": "7c55c056-4234-473f-9076-3b39cb2998a6",
+       "title": "United Colors Of Benetton: Parakeet",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "c64c3d57-0229-4a1c-8d54-88ee6279bfd1",
+    "score": 100,
+    "title": "Got To Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "5af70e20-ace2-4642-959d-a00bfc6b45d3",
+      "title": "Disco Box Vol. 3 - Beat Goes On",
+      "release-group": {
+       "id": "93a6cc82-c98e-4101-b3dc-198a8192bd2e",
+       "title": "Disco Box Vol. 3 - Beat Goes On",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     }
+    ]
+   },
+   {
+    "id": "d1b9cb8b-4960-4a5b-ab58-2b13bcb9eb0b",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2020-07-17",
+    "releases": [
+     {
+      "id": "b88680df-6866-4661-b87c-961f719dcb31",
+      "title": "[ Origins ] Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "87086763-784c-4388-9735-c35d51e66785",
+       "title": "[ Origins ] Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2020-07-17"
+     }
+    ]
+   },
+   {
+    "id": "b93e0cc9-31ee-44a3-9e97-1bcf4b1e1bad",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1978",
+    "releases": [
+     {
+      "id": "90d46026-bb9a-41ce-8a15-56140f3a8ff2",
+      "title": "The Disco Years (On The Beat) (1978-1982) Volume Two",
+      "status": "Official",
+      "release-group": {
+       "id": "f629d657-68ac-3c85-981c-ae0a80898a84",
+       "title": "The Disco Years, Volume 2: On the Beat (1978-1982)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990"
+     },
+     {
+      "id": "7780cdf2-bb67-4fbc-b23b-62b0f2f6ca7a",
+      "title": "Loosewomen: Girls’ Night Out",
+      "status": "Official",
+      "release-group": {
+       "id": "270fedbe-0a3b-449c-b1af-511071d3e068",
+       "title": "Loosewomen: Girls’ Night Out",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     },
+     {
+      "id": "d2621cdb-85d7-43e0-9abc-dc50dab2d0a1",
+      "title": "100% Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "205df23f-352a-31c7-8760-8e09c66e941c",
+       "title": "100% Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "56ecb3dc-cbec-46cd-b133-532cea3022b1",
+      "title": "Anthems: Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "8288de23-7172-4888-a33b-f8b586f6b268",
+       "title": "Anthems: Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-11-08"
+     },
+     {
+      "id": "af4810aa-14ac-493b-a812-453c6fc52031",
+      "title": "Divas",
+      "status": "Official",
+      "release-group": {
+       "id": "210c31fc-d891-4f88-8c6f-4159b5d727f3",
+       "title": "Pure… Divas",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011"
+     },
+     {
+      "id": "74922ab7-c4d5-4503-aef9-19f7dfd5d186",
+      "title": "The Last Days of Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "60a6ff06-487b-30c4-bf9d-10548c40e6ba",
+       "title": "The Last Days of Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "1998"
+     },
+     {
+      "id": "cbada5d8-9cbe-4bea-880e-da510c2c3c35",
+      "title": "100 Hits Funk",
+      "status": "Official",
+      "release-group": {
+       "id": "b1b493eb-5d9f-4664-8a90-7754240573c5",
+       "title": "100 Hits: Funk",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2014-10-06"
+     },
+     {
+      "id": "9ba1452f-093c-49c0-b370-5f15221e0160",
+      "title": "Old School Soul Party",
+      "status": "Official",
+      "release-group": {
+       "id": "332c40b4-d16c-366e-ae4d-af88e109d92a",
+       "title": "Old School Soul Party",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2005-03-01"
+     },
+     {
+      "id": "e3d2b2b4-552c-480c-a78e-0beb7dfea524",
+      "title": "Step Back & Boogie",
+      "status": "Official",
+      "release-group": {
+       "id": "2665b79a-877e-3917-aea8-847dcc75f60d",
+       "title": "Step Back & Boogie",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     },
+     {
+      "id": "0bb1c5f3-0477-47cf-be86-41d01d31a3f7",
+      "title": "The 70’s Preservation Society Presents: Disco Fever",
+      "status": "Official",
+      "release-group": {
+       "id": "ad8dae49-9e24-3188-b068-b7e01f9a5704",
+       "title": "The 70’s Preservation Society Presents: Disco Fever",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1991"
+     },
+     {
+      "id": "ef1499d6-0459-436d-8a14-ecfe43369a2b",
+      "title": "We Love the Nightlife: Shake Your Booty",
+      "status": "Official",
+      "release-group": {
+       "id": "eee70e83-237c-4088-9c5d-ebe0f806f458",
+       "title": "We Love the Nightlife: Shake Your Booty",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012"
+     },
+     {
+      "id": "7141c3c3-a895-4a0e-8089-9c36c38ae166",
+      "title": "Pure… Divas",
+      "status": "Official",
+      "release-group": {
+       "id": "210c31fc-d891-4f88-8c6f-4159b5d727f3",
+       "title": "Pure… Divas",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "0aa2519f-3231-4791-b9c7-fa6488c6dc50",
+      "title": "Haynes Ultimate Guide to 70s",
+      "status": "Official",
+      "release-group": {
+       "id": "fd89abad-ce4c-4c0f-ad84-500fbf9b98e9",
+       "title": "Haynes: Ultimate Guide to the 70s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-05-18"
+     },
+     {
+      "id": "842f2fdf-062d-4f68-b602-5c9b39ba8af9",
+      "title": "The Best of Cheryl Lynn: Got to Be Real",
+      "status": "Official",
+      "release-group": {
+       "id": "9a898241-8980-3c02-8e9a-aa8dcec52212",
+       "title": "The Best of Cheryl Lynn: Got to Be Real",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     },
+     {
+      "id": "a88eb80c-ecf4-40c7-98b9-38f6ea317a45",
+      "title": "The Last Days of Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "60a6ff06-487b-30c4-bf9d-10548c40e6ba",
+       "title": "The Last Days of Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "1998"
+     },
+     {
+      "id": "9e3ae993-2dc5-4e7a-b34e-a870a01a4968",
+      "title": "Sony Music 100 Years: Soundtrack for a Century",
+      "status": "Official",
+      "release-group": {
+       "id": "c111aa39-0882-3c2b-ae91-7def56aaf0d1",
+       "title": "Sony Music 100 Years: Soundtrack for a Century",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999-10-12"
+     },
+     {
+      "id": "c5ee2f20-ea7a-4e95-bb95-b70c96b3961a",
+      "title": "Solid Gold Soul 1978",
+      "status": "Official",
+      "release-group": {
+       "id": "ebeeafcd-33cf-365d-af10-dd06b3f3ad54",
+       "title": "Solid Gold Soul 1978",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "6922a8cf-eb4c-4ab1-afd3-8b1505dc893b",
+      "title": "A Natural Woman",
+      "status": "Official",
+      "release-group": {
+       "id": "27880dc4-d2ee-457e-8804-aa84f3694333",
+       "title": "A Natural Woman",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-01-26"
+     },
+     {
+      "id": "73fadf1f-69d0-4c2f-ab66-c9a82a4a8301",
+      "title": "Soul Party Sessions",
+      "status": "Official",
+      "release-group": {
+       "id": "6032d743-d027-4558-8ee9-c0ae886ffda2",
+       "title": "Soul Party Sessions",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2005"
+     },
+     {
+      "id": "61d8937b-dfa7-4189-ad31-23328f6f6919",
+      "title": "Ultimate Disco: 60 Essential Disco Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "8828e309-917b-460e-9d90-a4cb8026d013",
+       "title": "Ultimate Disco: 60 Essential Disco Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009-09-14"
+     },
+     {
+      "id": "6b94b2c8-180b-48d1-bbf3-ec75e200435c",
+      "title": "100 Hits: Feeling Good",
+      "status": "Official",
+      "release-group": {
+       "id": "ee289957-1769-477a-a61e-6f630f8c19b8",
+       "title": "100 Hits: Feeling Good",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-02-17"
+     },
+     {
+      "id": "c1d8fab7-fb68-4244-a5e5-6035e418f63d",
+      "title": "The Ultimate Rhythm & Soul Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "3ad5d0ba-a1b4-4139-94d8-36d081bd403d",
+       "title": "The Ultimate Rhythm & Soul Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001-10-24"
+     },
+     {
+      "id": "d057172d-dc7c-4878-aae6-f8409741e914",
+      "title": "R&B: From Doo-Wop to Hip-Hop",
+      "status": "Official",
+      "release-group": {
+       "id": "bdbf7cc8-59f8-3e23-8817-ece1e07a5769",
+       "title": "R&B: From Doo-Wop to Hip-Hop",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999-10-12"
+     },
+     {
+      "id": "3c83c96d-68e0-4576-b79d-2a5fcb6d622f",
+      "title": "Sounds of the 70s: Dance",
+      "status": "Official",
+      "release-group": {
+       "id": "aa1e6441-3a94-418b-bd06-cbd206fc0a6c",
+       "title": "Sounds of the 70s: Dance",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     },
+     {
+      "id": "ed94049f-b0a1-4d2a-8d53-8ed4b262c3e5",
+      "title": "Disco Funk Fever",
+      "status": "Official",
+      "release-group": {
+       "id": "10990cdc-3349-36af-8c3b-1f3b054981a4",
+       "title": "Disco Funk Fever",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     },
+     {
+      "id": "eecb8b0c-641f-466d-bba3-ad480851fa0c",
+      "title": "Floorfillers: Disco Inferno",
+      "status": "Official",
+      "release-group": {
+       "id": "9c6f80ff-08a7-477e-924a-aae1cc3f1eb9",
+       "title": "Floorfillers: Disco Inferno",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010"
+     },
+     {
+      "id": "aca6675a-79e4-44fa-aa6a-ac6d4a5c5d24",
+      "title": "Absolute Disco 1",
+      "status": "Official",
+      "release-group": {
+       "id": "48ae8d2d-be1c-3d6c-b580-9e70d8e72fc4",
+       "title": "Absolute Disco 1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1993"
+     },
+     {
+      "id": "44f181ae-ff1c-41f5-9d63-8e948ea0729c",
+      "title": "'70s Dance Party: Boogie Nights",
+      "status": "Official",
+      "release-group": {
+       "id": "72718ffe-39ca-45c4-9728-7ae21a4003e2",
+       "title": "'70s Dance Party: Boogie Nights",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "0cc11b7b-fa72-4e5b-9f91-e4571017ba83",
+      "title": "Pure… Divas",
+      "status": "Official",
+      "release-group": {
+       "id": "210c31fc-d891-4f88-8c6f-4159b5d727f3",
+       "title": "Pure… Divas",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-06-17"
+     },
+     {
+      "id": "dfcb0e8f-4736-4d90-9b5d-ce3303a97b4d",
+      "title": "Ultimate Divas",
+      "status": "Official",
+      "release-group": {
+       "id": "f0c2d1f8-ea28-4884-90d6-87be9c4a34b6",
+       "title": "Ultimate Divas",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-09-25"
+     },
+     {
+      "id": "8e1a5bf4-9869-4dda-9131-fa9ef7a87022",
+      "title": "Cheryl Lynn",
+      "status": "Official",
+      "release-group": {
+       "id": "8661b51e-2086-383c-8aa2-6274eccb89e2",
+       "title": "Cheryl Lynn",
+       "primary-type": "Album"
+      },
+      "date": "2011-01-07"
+     },
+     {
+      "id": "28d0f469-1281-4032-9376-c95dd82bb301",
+      "title": "Got to Be Real",
+      "status": "Promotion",
+      "release-group": {
+       "id": "7f8494cc-600f-4853-96a8-098fa955cfa3",
+       "title": "Got to Be Real",
+       "primary-type": "Single"
+      },
+      "date": "1978"
+     },
+     {
+      "id": "2b72c736-8381-4193-befb-6f1a4c3f0303",
+      "title": "Got to Be Real",
+      "status": "Official",
+      "release-group": {
+       "id": "7f8494cc-600f-4853-96a8-098fa955cfa3",
+       "title": "Got to Be Real",
+       "primary-type": "Single"
+      },
+      "date": "1978"
+     },
+     {
+      "id": "03cd7f1a-14e3-4aab-a93c-00a52e8837eb",
+      "title": "Pure… Disco/Funk",
+      "status": "Official",
+      "release-group": {
+       "id": "ca98d0b5-959f-4eed-afc3-fd079ca12401",
+       "title": "Pure… Disco/Funk",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-06-17"
+     },
+     {
+      "id": "0f090ad4-7895-40fb-869d-4671b0d99f70",
+      "title": "The Ultimate Disco Album",
+      "status": "Official",
+      "release-group": {
+       "id": "a5872203-1cc0-3025-9922-1a47966d2a5b",
+       "title": "The Ultimate Disco Album",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2004"
+     },
+     {
+      "id": "4e4bd128-c4ff-485f-8e33-22c46aef53ea",
+      "title": "Boogie Nights 70s Disco Classics",
+      "status": "Promotion",
+      "release-group": {
+       "id": "10de08e6-8444-4a0c-902f-bf3404663987",
+       "title": "Boogie Nights 70s Disco Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "f4f29e7b-15a3-4e1b-a98e-8d089a4d300b",
+      "title": "Disco Fever, Volume 2",
+      "status": "Official",
+      "release-group": {
+       "id": "faaa783c-7f0c-31df-bb0c-f7bad7b2803a",
+       "title": "Disco Fever, Volume 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "6f3f41bc-9e5f-4186-b2f3-4d2eba3116ae",
+      "title": "Twice As Nice: Urban Club Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "7aa2305c-03b5-3645-8247-8b23e296f220",
+       "title": "Twice As Nice: Urban Club Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2004-12-27"
+     },
+     {
+      "id": "47f0ef8a-7bd7-4645-bf76-e14eb486a5e4",
+      "title": "The All Time Greatest Movie Songs",
+      "status": "Official",
+      "release-group": {
+       "id": "e928a262-0cf4-3673-98d0-d27db0d29557",
+       "title": "The All Time Greatest Movie Songs",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998-11-03"
+     },
+     {
+      "id": "9dce49bd-ac78-4b12-a7a9-a24bc2c14f4e",
+      "title": "Disco Fever: Young Hearts Run Free",
+      "status": "Official",
+      "release-group": {
+       "id": "4b4438f2-f065-43e8-8ed9-9735498e81ce",
+       "title": "Disco Fever: Young Hearts Run Free",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     },
+     {
+      "id": "84c99b1c-ac1c-4d3c-bbbc-089dd1b80b97",
+      "title": "Absolute Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "7397a37d-acdc-4b89-83d7-8e512e64bbb6",
+       "title": "Absolute Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009-03-04"
+     },
+     {
+      "id": "e27f98a6-4507-41e1-8195-25c8a5efcce9",
+      "title": "Girls Night Out",
+      "status": "Official",
+      "release-group": {
+       "id": "3668920d-27c2-4655-9727-010d8b6ef20a",
+       "title": "Girls Night Out",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006-05-01"
+     },
+     {
+      "id": "901245ed-ac58-44e9-8edd-fde313c66e85",
+      "title": "80s Groove",
+      "status": "Official",
+      "release-group": {
+       "id": "2b6f88bc-744e-4b94-8068-55768cdc8196",
+       "title": "80s Groove",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-07-26"
+     },
+     {
+      "id": "fd8bbb95-b44e-448c-aa17-e0c68d16dbd3",
+      "title": "Monster Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "5fa57a3c-13dc-4159-b8d2-41bc40785236",
+       "title": "Monster Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "146341a8-8a9e-4f59-8cc8-9f5ff05d0729",
+      "title": "Party Starter: Disco Mix",
+      "status": "Official",
+      "release-group": {
+       "id": "26b7a705-7c17-4918-9cd0-fdfc3f70c137",
+       "title": "Party Starter: Disco Mix",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2006"
+     },
+     {
+      "id": "7f7096d1-e3d4-4029-8688-8f10aa41da29",
+      "title": "Soul 70's Collection, Volume 4",
+      "status": "Official",
+      "release-group": {
+       "id": "16cc928a-ba45-4896-9e0a-9e7a91d43dd3",
+       "title": "Soul 70's Collection, Volume 4",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2005"
+     },
+     {
+      "id": "e12fa605-e999-4828-b97e-5c82bfd1b15f",
+      "title": "Old School Jams",
+      "status": "Official",
+      "release-group": {
+       "id": "98cfee81-0662-4a11-be8a-530ae3409f91",
+       "title": "Old School Jams",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1994-12-26"
+     },
+     {
+      "id": "41752cf0-6f71-414f-8df0-ad1568d947ba",
+      "title": "100 Discohits",
+      "status": "Official",
+      "release-group": {
+       "id": "70652ee6-e1f9-41ea-9152-a2baab454054",
+       "title": "100 Discohits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "27d8c0cb-1088-4a44-8e0a-e397c39521f1",
+      "title": "100 Hits: Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "91c65e96-d3d0-3173-8d81-f3ab7be5380e",
+       "title": "100 Hits: Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007-10-08"
+     },
+     {
+      "id": "f085d245-5fe9-4087-a05c-303109c29689",
+      "title": "Dance Floor Divas: The ’70s",
+      "status": "Official",
+      "release-group": {
+       "id": "7c37a0d1-ad48-3a15-8eec-ce1ecff19a0e",
+       "title": "Dance Floor Divas: The ’70s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     },
+     {
+      "id": "343b9a08-f7f4-3e17-ac7a-f3f973512549",
+      "title": "Boogie Nights: Classic Disco Anthems (disc 2)",
+      "status": "Official",
+      "release-group": {
+       "id": "8dda1cac-089f-3fe9-9aeb-4024fafb04fd",
+       "title": "Boogie Nights: Classic Disco Anthems",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003-09-23"
+     },
+     {
+      "id": "1a7b862d-8390-494a-ae62-2959dcf13d83",
+      "title": "Boogie Nights: Classic Disco Anthems",
+      "status": "Official",
+      "release-group": {
+       "id": "8dda1cac-089f-3fe9-9aeb-4024fafb04fd",
+       "title": "Boogie Nights: Classic Disco Anthems",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003-08-11"
+     },
+     {
+      "id": "79573def-a5dc-4ffd-a950-787b2c926501",
+      "title": "DJ Tools 16",
+      "status": "Promotion",
+      "release-group": {
+       "id": "c7383014-19de-3b9d-b32e-d6b702401be6",
+       "title": "DJ Tools 16",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "7713dd56-76ba-4302-ba3a-0e325a35762f",
+      "title": "ESPN Presents: Jock Jams, Volume 5",
+      "status": "Official",
+      "release-group": {
+       "id": "e277c972-fe09-3e25-a72c-ae42f878ff76",
+       "title": "ESPN Presents: Jock Jams, Volume 5",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999-08-24"
+     },
+     {
+      "id": "43f167c2-4fb5-4a0d-b815-9c4df0af2d2c",
+      "title": "Sex and the City: Music From and Inspired By",
+      "status": "Official",
+      "release-group": {
+       "id": "26024357-3f76-31de-9217-722f1b315b1f",
+       "title": "Sex and the City (Music From and Inspired by the TV Series)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "2004-03-01"
+     },
+     {
+      "id": "20b5e54c-885c-43f5-8f5a-1e0dcb596285",
+      "title": "Pure Groove: The Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "07f65bd9-eadd-3919-812e-d9f8e6bfc113",
+       "title": "Pure Groove: The Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "84c86921-2a0b-49f0-8c5a-3c9af17f9a54",
+      "title": "Old Skool",
+      "status": "Official",
+      "release-group": {
+       "id": "d0ec15d0-50d0-4d53-b2fb-a7f446be04d0",
+       "title": "Old Skool",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009-02-13"
+     },
+     {
+      "id": "a0287a6c-028f-4b3a-a5bb-9743536a7e56",
+      "title": "70's Pop Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "d8d8fb86-4f63-3446-a0d5-fc169c5790e5",
+       "title": "70's Pop Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001-08-21"
+     },
+     {
+      "id": "f32dbcdd-e964-4311-816e-6c9cf0785931",
+      "title": "R.E.S.P.E.C.T: A Century of Women in Music",
+      "status": "Official",
+      "release-group": {
+       "id": "89e7e86e-1fbe-344b-8843-6a341eaff2f5",
+       "title": "R.E.S.P.E.C.T: A Century of Women in Music",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999-10-05"
+     },
+     {
+      "id": "b4482419-4fee-43c3-831c-324eebd69627",
+      "title": "Mega Hits Dance Classics, Volume 2",
+      "status": "Official",
+      "release-group": {
+       "id": "78998b72-f17f-3b5f-8ca5-36bb7e419dfc",
+       "title": "Mega Hits Dance Classics, Volume 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1989"
+     },
+     {
+      "id": "cd994dbd-b188-4129-86da-aeaad8994e82",
+      "title": "Funkdamentals: Mind Blowin’ Funk Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "58beafd1-6183-49cd-9e8f-df6b9ead2093",
+       "title": "Funkdamentals: Mind Blowin’ Funk Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "ac247528-44e2-45c8-9dc4-479dbcce0e7f",
+      "title": "Eighties Soul Weekender 2",
+      "status": "Official",
+      "release-group": {
+       "id": "8b83f3d2-f38e-4a24-a0a1-2a1b971cf374",
+       "title": "Eighties Soul Weekender 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996-01-01"
+     },
+     {
+      "id": "3c0961fb-4d1c-466c-afcd-e08204233bc8",
+      "title": "Soul Hits of the 70's",
+      "status": "Official",
+      "release-group": {
+       "id": "d26ae169-55ea-35a9-b5f4-a8c6dfbf6b32",
+       "title": "Soul Hits of the 70's",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "d49e5542-9fa5-4acb-8426-d70f33cafde8",
+      "title": "Ultimate Disco Party",
+      "status": "Official",
+      "release-group": {
+       "id": "2e8c42c2-8a8a-3e6e-9209-3f741e59d2ff",
+       "title": "Ultimate Disco Party",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008-07-14"
+     },
+     {
+      "id": "9cfb2ed6-cf13-4ee5-9e0a-ed20403fdaea",
+      "title": "Mastercuts Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "108f71b5-a8f9-310c-be63-4b0dd29f2e8f",
+       "title": "Mastercuts Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007"
+     },
+     {
+      "id": "e6411271-4323-488c-ba6a-3df3bda7eae2",
+      "title": "Soul Hits of the 70’s",
+      "status": "Official",
+      "release-group": {
+       "id": "7512b3fb-8ba4-3f35-b35d-45556c98173a",
+       "title": "Soul Hits of the 70’s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     },
+     {
+      "id": "3c2e6ba7-cab1-4673-be27-94e37e35aeb8",
+      "title": "Disco Inferno",
+      "status": "Official",
+      "release-group": {
+       "id": "61411c02-5472-3904-82f4-af3a27814195",
+       "title": "Disco Inferno",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "6ec1d6a3-a1e2-4cd2-8c09-e4aceeb20933",
+      "title": "Real Funk Real Groove1",
+      "status": "Official",
+      "release-group": {
+       "id": "3464591e-3d7c-3437-b012-5f75a9915d88",
+       "title": "Real Funk Real Groove1",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     },
+     {
+      "id": "a53c1b2c-b229-4155-9bba-46016a82997a",
+      "title": "Sounds of the Seventies: More AM Nuggets",
+      "status": "Official",
+      "release-group": {
+       "id": "0a938f10-6e23-3d20-88e9-7a0831c695e0",
+       "title": "Sounds of the Seventies: More AM Nuggets",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1994"
+     },
+     {
+      "id": "e5972026-69d3-4c68-af3b-d0f3bd14506b",
+      "title": "Get Down Tonight: The Disco Explosion",
+      "status": "Official",
+      "release-group": {
+       "id": "d8c38d3b-7814-30e5-977b-a8d0762705d3",
+       "title": "Get Down Tonight: The Disco Explosion",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2004-11-16"
+     },
+     {
+      "id": "f640eb69-ce67-42bd-8870-c5a2f8b48ca7",
+      "title": "The Last Days of Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "60a6ff06-487b-30c4-bf9d-10548c40e6ba",
+       "title": "The Last Days of Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "1998-05-26"
+     },
+     {
+      "id": "e18489e0-4131-4146-9234-b527e3510a38",
+      "title": "The Ultimate Collection of Rock & Roll, Volume 8: 70's Dance All Night",
+      "status": "Official",
+      "release-group": {
+       "id": "4b5a3b6b-0493-41ef-a4b7-c63b99a7fba8",
+       "title": "The Ultimate Collection of Rock & Roll, Volume 8: 70's Dance All Night",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1996"
+     },
+     {
+      "id": "f6e2d164-a090-4370-9532-a5c5019a95b7",
+      "title": "Pottery Barn: Party of the Century",
+      "status": "Official",
+      "release-group": {
+       "id": "6ba5a12f-0213-481f-876e-8a1ef619d790",
+       "title": "Pottery Barn: Party of the Century",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "62323183-41ed-4aae-8519-9acb0d70f204",
+      "title": "Ultimate 70s",
+      "status": "Official",
+      "release-group": {
+       "id": "fd55b196-aae2-450b-b8ea-321ed4cbd9cd",
+       "title": "Ultimate 70s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015-09-25"
+     },
+     {
+      "id": "7aaf23b2-05db-411a-bf45-e1594beaac00",
+      "title": "Soul Train: The Dance Year 1979",
+      "status": "Official",
+      "release-group": {
+       "id": "41f96144-a14b-35cc-8764-4f6b63facfaf",
+       "title": "Soul Train: The Dance Year 1979",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999-10-05"
+     },
+     {
+      "id": "5dc0fe02-efbd-4d3f-a2d1-34e9622a4d08",
+      "title": "That's So Raven",
+      "status": "Official",
+      "release-group": {
+       "id": "9cecc479-ee2a-4760-9244-48f5463beb13",
+       "title": "That's So Raven",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Soundtrack"
+       ]
+      },
+      "date": "2004-05-18"
+     },
+     {
+      "id": "b630582a-9157-4582-bf62-ea64a1d95bc5",
+      "title": "Film 2000 With Jonathan Ross",
+      "status": "Official",
+      "release-group": {
+       "id": "051d678a-659d-3b33-b99c-fc86aba8d599",
+       "title": "Film 2000 With Jonathan Ross",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     },
+     {
+      "id": "f0484973-6c3e-4c6b-9c4c-8304dbcf5c3d",
+      "title": "Essential: Get the Party Started",
+      "status": "Official",
+      "release-group": {
+       "id": "b62c8aff-00bf-4bc9-b0b7-de3a777aac72",
+       "title": "Essential: Get the Party Started",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2009-10-05"
+     },
+     {
+      "id": "d3d3c319-31e2-465b-a44c-20c8359698e7",
+      "title": "Ferry Maat’s Soul Show Top 100",
+      "status": "Official",
+      "release-group": {
+       "id": "b6997d15-efd4-39e7-874d-c2e6e2ef9fed",
+       "title": "Ferry Maat’s Soul Show Top 100",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2008"
+     },
+     {
+      "id": "4085bab8-e853-4084-8b54-417e26da650d",
+      "title": "The Entertainment Weekly DISCO Collection",
+      "status": "Official",
+      "release-group": {
+       "id": "54a21b4d-f2ec-3318-ac14-db2b6ca1816b",
+       "title": "The Entertainment Weekly DISCO Collection",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1993"
+     },
+     {
+      "id": "4bc94c01-9485-4dce-bb77-6bc11d529b8b",
+      "title": "Monster Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "4c3aab2a-a9dd-371f-95f6-79b9368d8ea2",
+       "title": "Monster Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002-04-23"
+     },
+     {
+      "id": "24a0d930-0a6c-42dc-b6f1-9343cd23d878",
+      "title": "New Millennium Disco Party: The Divas",
+      "status": "Official",
+      "release-group": {
+       "id": "339c00ee-0c12-31a0-bb72-e86a38e9cd4f",
+       "title": "New Millennium Disco Party: The Divas",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     },
+     {
+      "id": "33e3e8fc-c4e8-4ebb-9c03-e253644f32ca",
+      "title": "The Ultimate Jukebox Hits of the 70s",
+      "status": "Official",
+      "release-group": {
+       "id": "e4230957-024f-3d24-8032-258d719f314c",
+       "title": "The Ultimate Jukebox Hits of the 70s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002-02-12"
+     },
+     {
+      "id": "44432f91-abf9-49c5-8825-2644fff481bb",
+      "title": "Pottery Barn: Sounds of Soul",
+      "status": "Official",
+      "release-group": {
+       "id": "353dde49-20be-3236-b214-42bea7e7b126",
+       "title": "Pottery Barn: Sounds of Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     },
+     {
+      "id": "ecfb9b69-4b51-4a77-88b0-0d569f24cdcf",
+      "title": "ESPN Presents: Jock Jams, Volume 5",
+      "status": "Official",
+      "release-group": {
+       "id": "e277c972-fe09-3e25-a72c-ae42f878ff76",
+       "title": "ESPN Presents: Jock Jams, Volume 5",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999-08-24"
+     },
+     {
+      "id": "27dae6f2-ebe8-44fe-a40b-ba2fa70779a2",
+      "title": "Instant Party Disc: Extra Strength",
+      "status": "Official",
+      "release-group": {
+       "id": "a06a1b39-1332-35c1-9e60-1eb1be240e12",
+       "title": "Instant Party Disc: Extra Strength",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999-04-06"
+     },
+     {
+      "id": "366f9055-eec6-4408-a71f-376e47b127ca",
+      "title": "Platinum R&B",
+      "status": "Official",
+      "release-group": {
+       "id": "c3497a36-245d-31b0-8895-fd1d56846604",
+       "title": "Platinum R&B",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "f2328b37-b7bd-4ac7-8f39-3c6bfa91986f",
+      "title": "The Disco Years, Volume 2: On the Beat (1978-1982)",
+      "status": "Official",
+      "release-group": {
+       "id": "f629d657-68ac-3c85-981c-ae0a80898a84",
+       "title": "The Disco Years, Volume 2: On the Beat (1978-1982)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1990-06-12"
+     },
+     {
+      "id": "73c81da3-4761-406d-8f0f-913cacb85e05",
+      "title": "Echt Kultig: Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "63e249ae-9286-4dcf-a54c-6902f436071d",
+       "title": "Echt Kultig: Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013"
+     },
+     {
+      "id": "b1b7d289-571a-4947-8315-eb7e9950da6e",
+      "title": "Body + Soul: Ladies Got Soul",
+      "status": "Official",
+      "release-group": {
+       "id": "e413c4fb-f57a-49a0-97c2-952b55f98406",
+       "title": "Body + Soul: Ladies Got Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "a296d568-7552-473b-91d9-72a7d8ea1b6d",
+      "title": "Solid Gold Funk",
+      "status": "Official",
+      "release-group": {
+       "id": "74a20836-e427-409d-91d8-771f786f73ad",
+       "title": "Solid Gold Funk",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002-02-05"
+     },
+     {
+      "id": "3bde9d58-3851-4722-b095-5bcee09e0d14",
+      "title": "Disco Fever 2",
+      "status": "Official",
+      "release-group": {
+       "id": "866cce57-5288-4c3f-b9f1-4a771d231353",
+       "title": "Disco Fever 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     },
+     {
+      "id": "571f697d-5a2a-4256-90d4-6462e7363d9f",
+      "title": "Funky Grooves",
+      "status": "Official",
+      "release-group": {
+       "id": "b48305d9-911a-4d90-ac00-a6e4c3ab3119",
+       "title": "Funky Grooves",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-03-07"
+     },
+     {
+      "id": "e1873c66-2763-4a8e-a5d4-33e976236d8b",
+      "title": "101 More Housework Songs",
+      "status": "Official",
+      "release-group": {
+       "id": "136363f7-5bb2-4b11-ae7e-4ed5d31bff27",
+       "title": "101 More Housework Songs",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2012-04-20"
+     },
+     {
+      "id": "f7ec95fe-ccfb-4170-8fde-13fe598f3a65",
+      "title": "Carwash Disco Classics",
+      "status": "Official",
+      "release-group": {
+       "id": "6a7d4ad8-55ff-431f-8edb-c01714aa895b",
+       "title": "Carwash Disco Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2015"
+     },
+     {
+      "id": "ad559ad5-9da4-467a-be01-3e88d0f9bbde",
+      "title": "Get Funky, Volume 2",
+      "status": "Official",
+      "release-group": {
+       "id": "3f65d497-cb4c-367f-9e59-273f2f6e2061",
+       "title": "Get Funky, Volume 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "3dbdfbe1-d9a3-4ba8-8a6c-0f73b7822d7e",
+      "title": "Platinum R&B Party",
+      "status": "Official",
+      "release-group": {
+       "id": "0149df56-69fd-3049-99b3-62dc7f4b00ec",
+       "title": "Platinum R&B Party",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "9067e825-651d-4151-8669-86297e49ef38",
+      "title": "100 Hits: Funk",
+      "status": "Official",
+      "release-group": {
+       "id": "b1b493eb-5d9f-4664-8a90-7754240573c5",
+       "title": "100 Hits: Funk",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2014-10-06"
+     },
+     {
+      "id": "ef7b43c7-81dd-4e4e-b4ed-dd57ad3e418d",
+      "title": "Old School Jams: The History Lesson",
+      "status": "Official",
+      "release-group": {
+       "id": "e9859235-d1ad-4d55-8bbe-7818f9a06448",
+       "title": "Old School Jams: The History Lesson",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997-12-11"
+     },
+     {
+      "id": "05833f82-6e65-4534-9217-8d73e46146e5",
+      "title": "A Night at Studio 54",
+      "status": "Bootleg",
+      "release-group": {
+       "id": "ee9eca68-2fea-4f00-9f92-8dfd8584aa52",
+       "title": "A Night at Studio 54",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998-09-01"
+     },
+     {
+      "id": "0eaf613f-9e2c-4cf4-bf7d-fdd36e71ce2b",
+      "title": "Ultimate Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "df1b1b86-64fc-4293-a26b-1401184c1878",
+       "title": "Ultimate Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-04-06"
+     },
+     {
+      "id": "4ae48d73-4193-4901-8ec7-145fc5c48fdd",
+      "title": "100 Hits: Supersonic 70s",
+      "status": "Official",
+      "release-group": {
+       "id": "b87405c7-b645-47d7-a81a-235e40a138dd",
+       "title": "100 Hits: Supersonic 70s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-05-26"
+     },
+     {
+      "id": "58ca1aa2-922b-4803-b5b7-c4bf552e5295",
+      "title": "The Box Set Series: ’70s Soul",
+      "status": "Official",
+      "release-group": {
+       "id": "ffbaa8c9-77ca-4c01-9682-80839aa3ee9f",
+       "title": "The Box Set Series: ’70s Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2014-05-27"
+     },
+     {
+      "id": "bfa3f6dd-b600-41c7-94b9-574efa101c5e",
+      "title": "Cheryl Lynn",
+      "status": "Official",
+      "release-group": {
+       "id": "8661b51e-2086-383c-8aa2-6274eccb89e2",
+       "title": "Cheryl Lynn",
+       "primary-type": "Album"
+      },
+      "date": "2014"
+     },
+     {
+      "id": "bf13ffb9-4dc3-4c22-b970-95a8f5e10200",
+      "title": "Funk Soul Anthems",
+      "status": "Official",
+      "release-group": {
+       "id": "f2d95381-bbd7-31a9-81fd-54805460bd3d",
+       "title": "Funk Soul Anthems",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2005-01-17"
+     },
+     {
+      "id": "242a9886-4e77-49af-a250-f5538f6cbd30",
+      "title": "The Disco Box",
+      "status": "Official",
+      "release-group": {
+       "id": "73e67e25-a7d3-3a08-975d-1ec0674e2041",
+       "title": "The Disco Box",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999-02-16"
+     },
+     {
+      "id": "c069fb65-1058-42b3-9c7c-72f51e0cdd1f",
+      "title": "Film Four Essential Soundtracks",
+      "status": "Official",
+      "release-group": {
+       "id": "f33132f0-7060-3e45-967f-31d0c7817b8a",
+       "title": "Film Four Essential Soundtracks",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1999"
+     },
+     {
+      "id": "eb9d2b60-282c-41e0-a1e3-8228c6b2c593",
+      "title": "Funk the Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "3bbe6124-c70e-4246-aae3-d1a2187b3ac6",
+       "title": "Funk the Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2016-10-27"
+     },
+     {
+      "id": "7e1c9a86-9987-4cc1-accf-2dd31026e26a",
+      "title": "David Foster Presents Love, Again",
+      "status": "Official",
+      "release-group": {
+       "id": "505564e5-922e-474f-9fb9-c667090bea58",
+       "title": "David Foster Presents Love, Again",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-09-15"
+     },
+     {
+      "id": "09cb3bce-681e-48fe-af1b-e38dcf99c77f",
+      "title": "Sounds of the Seventies: '70s Dance Party 1979-1981",
+      "status": "Official",
+      "release-group": {
+       "id": "4a8def93-7592-4189-bdaa-41d1414ce847",
+       "title": "Sounds of the Seventies: '70s Dance Party 1979-1981",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1997"
+     },
+     {
+      "id": "21d35462-1e41-42e9-bc06-b5b9be4885b7",
+      "title": "Now That’s What I Call Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "3155ab23-f7a7-4642-b66a-1c005fbd012e",
+       "title": "Now That’s What I Call Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013-09-26"
+     },
+     {
+      "id": "f29c96eb-6fee-4761-a77e-39fca9ccb4b4",
+      "title": "Soul of the ’70s",
+      "status": "Official",
+      "release-group": {
+       "id": "6cc653f2-4ed9-48dd-b9c3-d5a394f935d7",
+       "title": "Soul of the ’70s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2013"
+     },
+     {
+      "id": "c40e3b6e-a8c8-4ca1-91d4-66a4e239ad79",
+      "title": "Haynes: Ultimate Guide to the 70s",
+      "status": "Official",
+      "release-group": {
+       "id": "fd89abad-ce4c-4c0f-ad84-500fbf9b98e9",
+       "title": "Haynes: Ultimate Guide to the 70s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2011-07-18"
+     },
+     {
+      "id": "87a12eec-b6df-423f-8f47-7d0210303924",
+      "title": "Soul Woman",
+      "status": "Official",
+      "release-group": {
+       "id": "b9f64f56-3ca7-4d53-813f-5956764e9a10",
+       "title": "Soul Woman",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018-02-02"
+     },
+     {
+      "id": "f312966c-a24a-414a-b082-aa4faa0c8740",
+      "title": "Haynes Ultimate Guide to the 70s",
+      "status": "Official",
+      "release-group": {
+       "id": "fd89abad-ce4c-4c0f-ad84-500fbf9b98e9",
+       "title": "Haynes: Ultimate Guide to the 70s",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2018"
+     },
+     {
+      "id": "b6e3442d-9b11-478b-9f24-2b53438581cc",
+      "title": "Najlepsze Hity Dla Ciebie Filmowe",
+      "status": "Official",
+      "release-group": {
+       "id": "24c2a881-1c1f-4c47-bec7-98918176df46",
+       "title": "Najlepsze Hity Dla Ciebie Filmowe",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2014"
+     },
+     {
+      "id": "5d75149e-868e-406f-acb1-0e743b43ae67",
+      "title": "Feelin’ Good",
+      "status": "Official",
+      "release-group": {
+       "id": "92dceeba-1d22-3f9c-884a-3e0e9c3877ae",
+       "title": "Feelin’ Good",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003-07-28"
+     },
+     {
+      "id": "fb3979ee-6e5b-4cc4-860a-1ac266d53eee",
+      "title": "Cheryl Lynn",
+      "status": "Official",
+      "release-group": {
+       "id": "8661b51e-2086-383c-8aa2-6274eccb89e2",
+       "title": "Cheryl Lynn",
+       "primary-type": "Album"
+      },
+      "date": "1978"
+     },
+     {
+      "id": "84e7fe8b-aa15-4a25-9474-518efe91f4a8",
+      "title": "100 Hits: The Best Seventies Album",
+      "status": "Official",
+      "release-group": {
+       "id": "501b9845-7f61-4204-9449-f7845b404d88",
+       "title": "100 Hits: The Best Seventies Album",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017"
+     },
+     {
+      "id": "d269e138-60a7-43ef-8081-e2bb5a7f1e74",
+      "title": "A Night at Studio 54",
+      "status": "Official",
+      "release-group": {
+       "id": "ee9eca68-2fea-4f00-9f92-8dfd8584aa52",
+       "title": "A Night at Studio 54",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1979-06-25"
+     }
+    ],
+    "isrcs": [
+     "USSM19800905",
+     "USSM17800763",
+     "USSM17800040",
+     "USSM17801251"
+    ]
+   },
+   {
+    "id": "f3d960db-3589-41d6-8219-495950e86ef5",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of the dj‐mix compilation “50 Disco Hits” by Ben Liebrand",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2007",
+    "releases": [
+     {
+      "id": "722234d4-6c5b-478c-94f4-8d3c1d7dcce6",
+      "title": "50 Disco Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "0ecb5f60-356b-3248-8a2a-fa4ce09eebf0",
+       "title": "50 Disco Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2007"
+     }
+    ]
+   },
+   {
+    "id": "1323184c-b86d-4eba-b900-af2f2d7b6b8b",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Les Bains, Volume 2” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2000",
+    "releases": [
+     {
+      "id": "1b17c42a-dd20-4d74-94fe-66dc92747822",
+      "title": "Les Bains, Volume 2",
+      "status": "Official",
+      "release-group": {
+       "id": "e0579407-4ced-3a00-bcd4-a8462a5d8976",
+       "title": "Les Bains, Volume 2",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2000"
+     }
+    ]
+   },
+   {
+    "id": "5dd83a22-b3b7-44ec-aa2b-4f756226440e",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “The Wedding Mixer” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2002",
+    "releases": [
+     {
+      "id": "0b2e0a6c-df81-4dd6-8980-635122e25862",
+      "title": "The Wedding Mixer",
+      "status": "Official",
+      "release-group": {
+       "id": "ad242f55-946b-3e3f-9ae4-aab87f01140d",
+       "title": "The Wedding Mixer",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     },
+     {
+      "id": "8a35aa9a-745a-433b-a805-276a1a39073f",
+      "title": "The Wedding Mixer",
+      "status": "Official",
+      "release-group": {
+       "id": "ad242f55-946b-3e3f-9ae4-aab87f01140d",
+       "title": "The Wedding Mixer",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     }
+    ]
+   },
+   {
+    "id": "9046c041-1b40-4613-891e-06826d712f98",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “The Party Mix: Classic Soul” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2013-11-11",
+    "releases": [
+     {
+      "id": "6a56263a-f9a3-4eb3-b775-c55bdad098e4",
+      "title": "The Party Mix: Classic Soul",
+      "status": "Official",
+      "release-group": {
+       "id": "3b55a9fa-6560-4e97-998b-7b0f3246cf32",
+       "title": "The Party Mix: Classic Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2013-11-11"
+     }
+    ]
+   },
+   {
+    "id": "cb1e81c2-fa60-4449-80be-3c73ac611471",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “The Carwash Experience” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1997-07-01",
+    "releases": [
+     {
+      "id": "f178298a-7388-4f7a-8d1b-44c771131454",
+      "title": "The Carwash Experience",
+      "status": "Official",
+      "release-group": {
+       "id": "1fef6285-52ec-4c8e-91ec-1a78226706ee",
+       "title": "The Carwash Experience",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1997-07-01"
+     }
+    ]
+   },
+   {
+    "id": "782d9362-7ec5-413a-8d54-34a7b9373e4c",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1998-10-31",
+    "releases": [
+     {
+      "id": "f6b0c948-2856-40f8-9e4a-fffc401f5178",
+      "title": "Free Soul Party",
+      "release-group": {
+       "id": "0e581b17-b50b-4524-8ab1-0e1ada922bb9",
+       "title": "Free Soul Party",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998-10-31"
+     }
+    ]
+   },
+   {
+    "id": "826cd127-f83b-4edf-9636-a595badb05b5",
+    "score": 100,
+    "title": "Got to Be Real",
+    "disambiguation": "part of “Ministry of Sound: 70s Soul Jams” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2018-11-16",
+    "releases": [
+     {
+      "id": "857ea676-dad5-4161-bfd9-f94b65e5f587",
+      "title": "70s Soul Jams",
+      "status": "Official",
+      "release-group": {
+       "id": "92d26e85-18f5-42dc-81df-caf37efaf34d",
+       "title": "70s Soul Jams",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2018-11-16"
+     }
+    ]
+   },
+   {
+    "id": "4fbb74c0-f21b-432a-b626-be5b1875cfd8",
+    "score": 100,
+    "title": "Got To Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996",
+    "releases": [
+     {
+      "id": "4d5ab4be-3605-43a4-bec1-91d669efc4b3",
+      "title": "Roller Disco - Boogie From The Skating Rinks",
+      "release-group": {
+       "id": "4730713a-79ab-42f6-93ab-ef0498c53221",
+       "title": "Roller Disco - Boogie From The Skating Rinks",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "f9a2f16f-de6a-489d-a66b-102210b2b5d7",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "d4e9dcb3-a50f-44bc-8c96-66545de2f5ed",
+      "title": "Fossil - I Feel Good (Soundtrack Vol. 1)",
+      "status": "Official",
+      "release-group": {
+       "id": "5bb7c209-7f94-4ec1-9b26-da6a19afadb5",
+       "title": "Fossil - I Feel Good (Soundtrack Vol. 1)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": ""
+     }
+    ],
+    "isrcs": [
+     "USSM19800905"
+    ]
+   },
+   {
+    "id": "a5f10984-f18c-45f7-845f-f4b262aeb959",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2007",
+    "releases": [
+     {
+      "id": "32af2f47-c388-4aef-845d-29fd731a1712",
+      "title": "Uptown Saturday Night: Jump To It",
+      "status": "Official",
+      "release-group": {
+       "id": "321ec3c7-8d78-4c78-bc1c-4e78b9c1fbdf",
+       "title": "Uptown Saturday Night: Jump To It",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007"
+     }
+    ]
+   },
+   {
+    "id": "6f73ce3f-8919-47b5-a526-f27db1a09559",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "26e388a2-3eea-4867-8f4b-778c9c0777b5",
+      "title": "Mobile Beat Dance 9",
+      "release-group": {
+       "id": "7b51296d-1ee4-48a1-b144-80c152e2215d",
+       "title": "Mobile Beat Dance 9",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "72450f14-afc5-4006-b087-1f086674cb07",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2024-04-12",
+    "releases": [
+     {
+      "id": "57d49c62-c40f-4344-be2b-9ed7fc8258b6",
+      "title": "Disco Discharge: Classic Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "f5443b07-29c8-4e6c-bcbd-a70def247482",
+       "title": "Disco Discharge: Classic Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2024-04-12"
+     }
+    ]
+   },
+   {
+    "id": "bde707df-aca9-47d7-9a1e-1fcf07ad4009",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1998",
+    "releases": [
+     {
+      "id": "0431684d-f2ba-465d-b4b7-41cafee7376d",
+      "title": "Searchin’ My Soul",
+      "status": "Promotion",
+      "release-group": {
+       "id": "eded02c9-d90d-4ce1-b7a9-e4805c7c0f7a",
+       "title": "Searchin’ My Soul",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1998"
+     }
+    ]
+   },
+   {
+    "id": "03e2c591-f429-4a1c-91fe-a43c7d9c8475",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1979",
+    "releases": [
+     {
+      "id": "831bff00-4d1c-4352-b8d2-94531c1dfa0c",
+      "title": "All American Top 100: February 1979",
+      "status": "Promotion",
+      "release-group": {
+       "id": "702b34bb-5f47-4b7c-8775-79aa6553b928",
+       "title": "All American Top 100: February 1979",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1979"
+     }
+    ]
+   },
+   {
+    "id": "270afe12-d2fd-49bc-9228-fc9e32935508",
+    "score": 100,
+    "title": "Got To Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2001",
+    "releases": [
+     {
+      "id": "7609b1a8-ecbb-4275-a8ea-a5ce6cd733ab",
+      "title": "Good Times Disco Classics",
+      "release-group": {
+       "id": "f243c8fa-b1be-4b98-9ca9-c6df4e2a3e66",
+       "title": "Good Times Disco Classics",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2001"
+     }
+    ]
+   },
+   {
+    "id": "08ebe5bd-8b2e-449b-bb84-ae37b1c5899a",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2002",
+    "releases": [
+     {
+      "id": "17b59e8e-2179-4166-9058-2535ccf0434b",
+      "title": "The No. 1 Disco Album",
+      "status": "Official",
+      "release-group": {
+       "id": "366dd0cc-afad-46c5-915d-89256f441a66",
+       "title": "The No. 1 Disco Album",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     }
+    ]
+   },
+   {
+    "id": "f74e9ef2-c866-407d-bbcd-1065529ed42e",
+    "score": 100,
+    "title": "Got to Be Real",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1991",
+    "releases": [
+     {
+      "id": "3c539307-390b-4aca-b9c1-5896d58714d1",
+      "title": "Hot Classics #9",
+      "status": "Promotion",
+      "release-group": {
+       "id": "fa234955-a1b8-4d59-8c93-2571d70bd006",
+       "title": "Hot Classics #9",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1991"
+     },
+     {
+      "id": "a4b6c467-2da4-4c27-8fdc-b76f6fbbdb4d",
+      "title": "The Hot Classics Box Set",
+      "status": "Official",
+      "release-group": {
+       "id": "4ab07dc0-c9f9-3c83-ba12-9894891f631c",
+       "title": "The Hot Classics Box Set",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "1993-11"
+     },
+     {
+      "id": "9ee1ca4d-83a1-4c69-b098-0264f907eeb6",
+      "title": "Hot Tracks 15th Anniversary Collectors Edition (part 1)",
+      "status": "Promotion",
+      "release-group": {
+       "id": "e4c37f1b-d5e9-394b-bd36-f30e4dccc94d",
+       "title": "Hot Tracks 15th Anniversary Collectors Edition (part 1)",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Remix"
+       ]
+      },
+      "date": "1997-12"
+     }
+    ]
+   },
+   {
+    "id": "0b7ca23b-b838-4735-9bf7-22339c2bbdb8",
+    "score": 94,
+    "title": "Got to Be Real '95",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996",
+    "releases": [
+     {
+      "id": "c10a8d65-c2a4-42b5-8122-03cca8b2956d",
+      "title": "Good Time",
+      "status": "Official",
+      "release-group": {
+       "id": "07d62121-bb81-4fe9-b473-4110fb33cb3a",
+       "title": "Good Time",
+       "primary-type": "Album"
+      },
+      "date": "1996"
+     }
+    ]
+   },
+   {
+    "id": "f5b3ee5e-035d-4a55-8a2e-87d1bbeb499f",
+    "score": 94,
+    "title": "Got to Be Real '95",
+    "disambiguation": "part of “Velfarre Complete Best 1994 - 2006” DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2006-11-29",
+    "releases": [
+     {
+      "id": "9a67fdcc-8ec6-472e-b926-7935e6528f3c",
+      "title": "Velfarre Complete Best 1994 – 2006",
+      "status": "Official",
+      "release-group": {
+       "id": "0133c3b2-bc51-4578-bdc4-05e983af5c2c",
+       "title": "Velfarre Complete Best 1994 – 2006",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "2006-11-29"
+     }
+    ]
+   },
+   {
+    "id": "de6c4458-89cd-44c1-887a-0b38e8d511e3",
+    "score": 94,
+    "title": "Got To Be Real '95",
+    "disambiguation": "part of \"The Best of Velfarre 1996\" DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996-11-06",
+    "releases": [
+     {
+      "id": "aed46228-f03d-47ed-8701-d6e44141d02a",
+      "title": "The Best of Velfarre 1996",
+      "status": "Official",
+      "release-group": {
+       "id": "75a09666-e512-443b-a305-314b5a280297",
+       "title": "The Best of Velfarre 1996",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1996-11-06"
+     }
+    ]
+   },
+   {
+    "id": "3d975dad-be08-438c-bc33-08be175d2fa3",
+    "score": 94,
+    "title": "Got to Be Real (original)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2004",
+    "releases": [
+     {
+      "id": "a5b32b4f-a187-4ae8-bfda-da9938c766b0",
+      "title": "Friday Nite Disco, Volume I",
+      "status": "Official",
+      "release-group": {
+       "id": "a9f528e1-d7fc-488c-ae8e-cd01be830627",
+       "title": "Friday Nite Disco, Volume I",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2004"
+     }
+    ]
+   },
+   {
+    "id": "fd9b9c36-16d1-4242-b4a4-863af7ca2961",
+    "score": 90,
+    "title": "Got to Be Real (single version)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2007-09-09",
+    "releases": [
+     {
+      "id": "f49d8624-02f8-413d-9904-936e25df3f0b",
+      "title": "Best Of Cheryl Lynn",
+      "status": "Official",
+      "release-group": {
+       "id": "c37858dd-691e-494c-89d7-34498ab4d775",
+       "title": "Best Of Cheryl Lynn",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2010-08-30"
+     },
+     {
+      "id": "6fe885e2-e2d8-41ad-b4e1-28e0eab996a8",
+      "title": "’70s Greatest Hits",
+      "status": "Official",
+      "release-group": {
+       "id": "3aa78981-ebf1-4fe6-85ec-88e0c82142a0",
+       "title": "’70s Greatest Hits",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007-09-09"
+     }
+    ],
+    "isrcs": [
+     "USSM17800040"
+    ]
+   },
+   {
+    "id": "cce6209b-6030-4426-8e1b-075b821cabee",
+    "score": 90,
+    "title": "Got to Be Real (12″ version)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2017",
+    "releases": [
+     {
+      "id": "92783ecf-b669-4c03-b63d-bbdede596724",
+      "title": "Twelve Inch Seventies: More, More, More",
+      "status": "Official",
+      "release-group": {
+       "id": "68a708c1-59e4-4eea-a55e-8be2da159680",
+       "title": "Twelve Inch Seventies: More, More, More",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017"
+     }
+    ]
+   },
+   {
+    "id": "2adac54a-7b09-4bb8-ba29-0b9f4eaf671e",
+    "score": 90,
+    "title": "Got to Be Real (original mix)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2003",
+    "releases": [
+     {
+      "id": "b418e327-957c-419c-97c4-708a7fe729fe",
+      "title": "Classic Beats, Vol. 19",
+      "status": "Promotion",
+      "release-group": {
+       "id": "1abf448a-b82f-483e-9be7-d72577bc9c6e",
+       "title": "Classic Beats, Vol. 19",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2003"
+     }
+    ]
+   },
+   {
+    "id": "49f4d144-279c-4c55-90a0-100db71214b4",
+    "score": 90,
+    "title": "Got to Be Real (album version)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2007",
+    "releases": [
+     {
+      "id": "03843a32-a3b6-4212-a544-93a9385dfef1",
+      "title": "Boogie Wonderland: The Legendary Sound of 70s Disco",
+      "status": "Official",
+      "release-group": {
+       "id": "36f445f9-c111-4d75-aab6-d14be3435608",
+       "title": "Boogie Wonderland: The Legendary Sound of 70s Disco",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2007"
+     }
+    ]
+   },
+   {
+    "id": "a948f09d-3ecf-402b-bcfe-c4684aa464c4",
+    "score": 90,
+    "title": "Got to Be Real (OSSX remix)",
+    "disambiguation": "part of “Berrakka at the Miami Grand Prix 2025” DJ‐mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2025-06-06",
+    "releases": [
+     {
+      "id": "9f741a8c-7264-477d-b462-b37c659a3b20",
+      "title": "Berrakka at the Miami Grand Prix 2025",
+      "status": "Official",
+      "release-group": {
+       "id": "adff967b-dc3a-4f71-962f-df9e531fbc75",
+       "title": "Berrakka at the Miami Grand Prix 2025",
+       "primary-type": "Broadcast",
+       "secondary-types": [
+        "Live",
+        "DJ-mix"
+       ]
+      }
+     }
+    ],
+    "isrcs": [
+     "US23A8062094"
+    ]
+   },
+   {
+    "id": "2aa382f1-6217-44aa-8680-9c79e90230ba",
+    "score": 87,
+    "title": "Got to Be Real (Classic Paradise mix)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996",
+    "releases": [
+     {
+      "id": "3f54faa8-1676-4c53-b9fd-3630906ab7e6",
+      "title": "Got to Be Real / Guarantee for My Heart",
+      "status": "Official",
+      "release-group": {
+       "id": "7f8494cc-600f-4853-96a8-098fa955cfa3",
+       "title": "Got to Be Real",
+       "primary-type": "Single"
+      },
+      "date": "1996"
+     }
+    ]
+   },
+   {
+    "id": "fc52c8d8-96c1-43a2-ad35-41f440cd2801",
+    "score": 87,
+    "title": "Got to Be Real (US single version)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2017-11-10",
+    "releases": [
+     {
+      "id": "ba0e601e-4f7f-44f0-ba52-27f38ff535a4",
+      "title": "FTG Presents The Vaults, Vol. 4",
+      "status": "Official",
+      "release-group": {
+       "id": "87bf3460-9053-4b1a-8a57-9432ab9cb756",
+       "title": "FTG Presents The Vaults, Vol. 4",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2017-11-10"
+     }
+    ]
+   },
+   {
+    "id": "b19e5ece-ca10-424e-a818-ebdaf949556c",
+    "score": 87,
+    "title": "Got to Be Real (12″ disco mix)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ]
+   },
+   {
+    "id": "6752212a-35c5-4af0-b0f1-795c8cde8177",
+    "score": 87,
+    "title": "Got to Be Real (Classic Paradise radio)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996-05-08",
+    "releases": [
+     {
+      "id": "df9abfcd-43d4-4c4d-b321-c922e6663b29",
+      "title": "Got To Be Remixes!",
+      "status": "Official",
+      "release-group": {
+       "id": "7db1586e-129f-4ea0-9c5e-fbb7fe93a075",
+       "title": "Got to Be Remixes!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Remix"
+       ]
+      },
+      "date": "1996-05-08"
+     },
+     {
+      "id": "5a4277bf-9bc8-458e-80d2-3c17ce3a74d3",
+      "title": "Got to Be Remixes!",
+      "status": "Official",
+      "release-group": {
+       "id": "7db1586e-129f-4ea0-9c5e-fbb7fe93a075",
+       "title": "Got to Be Remixes!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Remix"
+       ]
+      },
+      "date": "1996"
+     }
+    ]
+   },
+   {
+    "id": "4a371118-c321-4464-80e8-fd81193906ca",
+    "score": 87,
+    "title": "Got To Be Real (Original 12\" Mix)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "2002",
+    "releases": [
+     {
+      "id": "745166e2-2666-4ddc-b509-64ccf792390a",
+      "title": "Muschihaus, Volume Four",
+      "status": "Official",
+      "release-group": {
+       "id": "c19585dd-0934-31cf-8f51-23581152cd82",
+       "title": "Muschihaus, Volume Four",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation"
+       ]
+      },
+      "date": "2002"
+     }
+    ]
+   },
+   {
+    "id": "1eb7a891-36d3-4162-bff3-40b1714bd052",
+    "score": 87,
+    "title": "Got to Be Real (Classic Paradise mix)",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996-05-08",
+    "releases": [
+     {
+      "id": "df9abfcd-43d4-4c4d-b321-c922e6663b29",
+      "title": "Got To Be Remixes!",
+      "status": "Official",
+      "release-group": {
+       "id": "7db1586e-129f-4ea0-9c5e-fbb7fe93a075",
+       "title": "Got to Be Remixes!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Remix"
+       ]
+      },
+      "date": "1996-05-08"
+     },
+     {
+      "id": "5a4277bf-9bc8-458e-80d2-3c17ce3a74d3",
+      "title": "Got to Be Remixes!",
+      "status": "Official",
+      "release-group": {
+       "id": "7db1586e-129f-4ea0-9c5e-fbb7fe93a075",
+       "title": "Got to Be Remixes!",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "Remix"
+       ]
+      },
+      "date": "1996"
+     }
+    ]
+   },
+   {
+    "id": "e833401b-13b8-4f2a-a91d-eaa4773bd781",
+    "score": 84,
+    "title": "Got to Be Real ’95 (Classic Paradise mix)",
+    "disambiguation": "part of \"The Best of Maharaja Night 1996\" DJ-mix",
+    "artist-credit": [
+     {
+      "name": "Cheryl Lynn",
+      "joinphrase": "",
+      "artist": {
+       "id": "c2b8f775-455c-44c3-97ca-f377938da19e",
+       "name": "Cheryl Lynn"
+      }
+     }
+    ],
+    "first-release-date": "1996-11-06",
+    "releases": [
+     {
+      "id": "422b7295-4395-4410-ab5e-8eac4a7cac9b",
+      "title": "The Best of Maharaja Night 1996",
+      "release-group": {
+       "id": "619ad721-6729-4c44-969e-5254926160c3",
+       "title": "The Best of Maharaja Night 1996",
+       "primary-type": "Album",
+       "secondary-types": [
+        "Compilation",
+        "DJ-mix"
+       ]
+      },
+      "date": "1996-11-06"
+     }
+    ]
+   }
+  ]
+ }
+}

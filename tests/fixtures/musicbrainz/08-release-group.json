@@ -1,0 +1,1201 @@
+{
+ "path": "release-group",
+ "query": {
+  "query": "releasegroup:\"Let's Groove\" AND artist:\"Earth, Wind & Fire\"",
+  "limit": "25"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:16:20.283Z",
+  "count": 8,
+  "offset": 0,
+  "release-groups": [
+   {
+    "id": "a7a31779-ea19-4aac-b117-a49abae4301f",
+    "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "score": 100,
+    "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "artist-credit-id": "57858ce2-7391-370e-b8dd-c6f3b5e997bb",
+    "count": 3,
+    "title": "Let's Groove",
+    "first-release-date": "1981",
+    "primary-type": "Single",
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire",
+       "sort-name": "Earth, Wind & Fire",
+       "aliases": [
+        {
+         "sort-name": "アース・ウィンド＆ファイア",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "アース・ウィンド＆ファイア",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "アース、ウインド&ファイアー",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "アース、ウインド&ファイアー",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind & Fire",
+         "name": "Earth Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth , Win and Fire",
+         "name": "Earth , Win and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind & Fire",
+         "name": "Earth,Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind + Fire",
+         "name": "Earth, Wind + Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind and Fire",
+         "name": "Earth Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind and Fire",
+         "name": "Earth, Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind, and Fire",
+         "name": "Earth, Wind, and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Heart, Wind & Fire",
+         "name": "Heart, Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind,Fire",
+         "name": "Earth,Wind,Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "7e17e5ef-e417-4ed0-b507-f9d2757ee65b",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Let's Groove",
+      "status": "Official"
+     },
+     {
+      "id": "744f4ce0-25ac-4996-906a-f37dad85f64a",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Let's Groove / Fantasy (disco version)",
+      "status": "Official"
+     },
+     {
+      "id": "2f750b96-f975-4271-bad5-bdef3bed4ec5",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Let's Groove",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 1,
+      "name": "electronic"
+     },
+     {
+      "count": 1,
+      "name": "pop"
+     },
+     {
+      "count": 1,
+      "name": "disco"
+     },
+     {
+      "count": 1,
+      "name": "dance classics"
+     }
+    ]
+   },
+   {
+    "id": "36383a9f-e470-3913-9730-0054fe8b74c1",
+    "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+    "score": 100,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "57858ce2-7391-370e-b8dd-c6f3b5e997bb",
+    "count": 1,
+    "title": "Let's Groove",
+    "first-release-date": "1990",
+    "primary-type": "Album",
+    "secondary-types": [
+     "Compilation"
+    ],
+    "secondary-type-ids": [
+     "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+    ],
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire",
+       "sort-name": "Earth, Wind & Fire",
+       "aliases": [
+        {
+         "sort-name": "アース・ウィンド＆ファイア",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "アース・ウィンド＆ファイア",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "アース、ウインド&ファイアー",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "アース、ウインド&ファイアー",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind & Fire",
+         "name": "Earth Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth , Win and Fire",
+         "name": "Earth , Win and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind & Fire",
+         "name": "Earth,Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind + Fire",
+         "name": "Earth, Wind + Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind and Fire",
+         "name": "Earth Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind and Fire",
+         "name": "Earth, Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind, and Fire",
+         "name": "Earth, Wind, and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Heart, Wind & Fire",
+         "name": "Heart, Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind,Fire",
+         "name": "Earth,Wind,Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "7bb9cdfd-fa44-499f-bc9b-9fb4c856e60e",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Let's Groove",
+      "status": "Official"
+     }
+    ]
+   },
+   {
+    "id": "12852dd5-75a3-3e88-a850-fd4ee0037e4f",
+    "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+    "score": 100,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "57858ce2-7391-370e-b8dd-c6f3b5e997bb",
+    "count": 1,
+    "title": "Let's Groove",
+    "first-release-date": "1997-06-02",
+    "primary-type": "Album",
+    "secondary-types": [
+     "Compilation"
+    ],
+    "secondary-type-ids": [
+     "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+    ],
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire",
+       "sort-name": "Earth, Wind & Fire",
+       "aliases": [
+        {
+         "sort-name": "アース・ウィンド＆ファイア",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "アース・ウィンド＆ファイア",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "アース、ウインド&ファイアー",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "アース、ウインド&ファイアー",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind & Fire",
+         "name": "Earth Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth , Win and Fire",
+         "name": "Earth , Win and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind & Fire",
+         "name": "Earth,Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind + Fire",
+         "name": "Earth, Wind + Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind and Fire",
+         "name": "Earth Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind and Fire",
+         "name": "Earth, Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind, and Fire",
+         "name": "Earth, Wind, and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Heart, Wind & Fire",
+         "name": "Heart, Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind,Fire",
+         "name": "Earth,Wind,Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "c76e3dee-9d98-42b0-95c7-f5716a593547",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Let's Groove",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 2,
+      "name": "electronic"
+     },
+     {
+      "count": 1,
+      "name": "funk"
+     },
+     {
+      "count": 2,
+      "name": "disco"
+     },
+     {
+      "count": 1,
+      "name": "funk soul"
+     }
+    ]
+   },
+   {
+    "id": "64c91e1c-6847-3844-9a74-f847b4236391",
+    "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+    "score": 100,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "57858ce2-7391-370e-b8dd-c6f3b5e997bb",
+    "count": 1,
+    "title": "Let's Groove",
+    "first-release-date": "1996",
+    "primary-type": "Album",
+    "secondary-types": [
+     "Compilation"
+    ],
+    "secondary-type-ids": [
+     "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+    ],
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire",
+       "sort-name": "Earth, Wind & Fire",
+       "aliases": [
+        {
+         "sort-name": "アース・ウィンド＆ファイア",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "アース・ウィンド＆ファイア",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "アース、ウインド&ファイアー",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "アース、ウインド&ファイアー",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind & Fire",
+         "name": "Earth Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth , Win and Fire",
+         "name": "Earth , Win and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind & Fire",
+         "name": "Earth,Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind + Fire",
+         "name": "Earth, Wind + Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind and Fire",
+         "name": "Earth Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind and Fire",
+         "name": "Earth, Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind, and Fire",
+         "name": "Earth, Wind, and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Heart, Wind & Fire",
+         "name": "Heart, Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind,Fire",
+         "name": "Earth,Wind,Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "58a8db1f-9608-4038-b0af-ef8f48dbe4db",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Let's Groove",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 2,
+      "name": "funk"
+     },
+     {
+      "count": 1,
+      "name": "soul"
+     },
+     {
+      "count": 1,
+      "name": "disco"
+     }
+    ]
+   },
+   {
+    "id": "2416dddd-59e4-31c9-a9db-6635e89c983f",
+    "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+    "score": 94,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "57858ce2-7391-370e-b8dd-c6f3b5e997bb",
+    "count": 1,
+    "title": "Let's Groove Tonight",
+    "first-release-date": "1997",
+    "primary-type": "Album",
+    "secondary-types": [
+     "Compilation"
+    ],
+    "secondary-type-ids": [
+     "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+    ],
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire",
+       "sort-name": "Earth, Wind & Fire",
+       "aliases": [
+        {
+         "sort-name": "アース・ウィンド＆ファイア",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "アース・ウィンド＆ファイア",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "アース、ウインド&ファイアー",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "アース、ウインド&ファイアー",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind & Fire",
+         "name": "Earth Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth , Win and Fire",
+         "name": "Earth , Win and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind & Fire",
+         "name": "Earth,Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind + Fire",
+         "name": "Earth, Wind + Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind and Fire",
+         "name": "Earth Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind and Fire",
+         "name": "Earth, Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind, and Fire",
+         "name": "Earth, Wind, and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Heart, Wind & Fire",
+         "name": "Heart, Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind,Fire",
+         "name": "Earth,Wind,Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "171550ea-52bd-4274-a83b-55da5c371980",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Let's Groove Tonight",
+      "status": "Official"
+     }
+    ]
+   },
+   {
+    "id": "8a37dd24-2cf1-328f-9351-9502938b4b1b",
+    "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+    "score": 87,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "57858ce2-7391-370e-b8dd-c6f3b5e997bb",
+    "count": 1,
+    "title": "Let's Groove: Six Great Hits",
+    "first-release-date": "1997",
+    "primary-type": "Album",
+    "secondary-types": [
+     "Compilation"
+    ],
+    "secondary-type-ids": [
+     "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+    ],
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire",
+       "sort-name": "Earth, Wind & Fire",
+       "aliases": [
+        {
+         "sort-name": "アース・ウィンド＆ファイア",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "アース・ウィンド＆ファイア",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "アース、ウインド&ファイアー",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "アース、ウインド&ファイアー",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind & Fire",
+         "name": "Earth Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth , Win and Fire",
+         "name": "Earth , Win and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind & Fire",
+         "name": "Earth,Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind + Fire",
+         "name": "Earth, Wind + Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind and Fire",
+         "name": "Earth Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind and Fire",
+         "name": "Earth, Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind, and Fire",
+         "name": "Earth, Wind, and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Heart, Wind & Fire",
+         "name": "Heart, Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind,Fire",
+         "name": "Earth,Wind,Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "cc57db6a-0a29-47d0-b48c-2ba64406cf3b",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Let's Groove: Six Great Hits",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 1,
+      "name": "rock/pop"
+     }
+    ]
+   },
+   {
+    "id": "eaa794b9-60a0-466b-8b40-07b581f4a5ec",
+    "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "score": 87,
+    "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "artist-credit-id": "57858ce2-7391-370e-b8dd-c6f3b5e997bb",
+    "count": 1,
+    "title": "Let's Groove (Flash 89 Edit)",
+    "first-release-date": "2019-06-16",
+    "primary-type": "Single",
+    "secondary-types": [
+     "Remix"
+    ],
+    "secondary-type-ids": [
+     "0c60f497-ff81-3818-befd-abfc84a4858b"
+    ],
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire",
+       "sort-name": "Earth, Wind & Fire",
+       "aliases": [
+        {
+         "sort-name": "アース・ウィンド＆ファイア",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "アース・ウィンド＆ファイア",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "アース、ウインド&ファイアー",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "アース、ウインド&ファイアー",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind & Fire",
+         "name": "Earth Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth , Win and Fire",
+         "name": "Earth , Win and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind & Fire",
+         "name": "Earth,Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind + Fire",
+         "name": "Earth, Wind + Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind and Fire",
+         "name": "Earth Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind and Fire",
+         "name": "Earth, Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind, and Fire",
+         "name": "Earth, Wind, and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Heart, Wind & Fire",
+         "name": "Heart, Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind,Fire",
+         "name": "Earth,Wind,Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "7a7c5572-2c6c-4cd2-a11e-f34d4ccf508e",
+      "status-id": "518ffc83-5cde-34df-8627-81bff5093d92",
+      "title": "Let's Groove (Flash 89 Edit)",
+      "status": "Promotion"
+     }
+    ]
+   },
+   {
+    "id": "e7be6d35-d806-32ed-9942-9fab524df476",
+    "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+    "score": 78,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "57858ce2-7391-370e-b8dd-c6f3b5e997bb",
+    "count": 2,
+    "title": "Let's Groove: The Best of Earth, Wind & Fire",
+    "first-release-date": "1996-10-01",
+    "primary-type": "Album",
+    "secondary-types": [
+     "Compilation"
+    ],
+    "secondary-type-ids": [
+     "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+    ],
+    "artist-credit": [
+     {
+      "name": "Earth, Wind & Fire",
+      "artist": {
+       "id": "535afeda-2538-435d-9dd1-5e10be586774",
+       "name": "Earth, Wind & Fire",
+       "sort-name": "Earth, Wind & Fire",
+       "aliases": [
+        {
+         "sort-name": "アース・ウィンド＆ファイア",
+         "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+         "name": "アース・ウィンド＆ファイア",
+         "locale": null,
+         "type": "Search hint",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "アース、ウインド&ファイアー",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "アース、ウインド&ファイアー",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind & Fire",
+         "name": "Earth Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth , Win and Fire",
+         "name": "Earth , Win and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind & Fire",
+         "name": "Earth,Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind + Fire",
+         "name": "Earth, Wind + Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth Wind and Fire",
+         "name": "Earth Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind and Fire",
+         "name": "Earth, Wind and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth, Wind, and Fire",
+         "name": "Earth, Wind, and Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Heart, Wind & Fire",
+         "name": "Heart, Wind & Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Earth,Wind,Fire",
+         "name": "Earth,Wind,Fire",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "5495da88-3952-47c3-8b4c-c080a5336c67",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "All Time Best",
+      "status": "Official"
+     },
+     {
+      "id": "aab11ecc-cc95-4e34-816e-79276b5d25bb",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Let's Groove: The Best of Earth, Wind & Fire",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 1,
+      "name": "funk"
+     },
+     {
+      "count": 1,
+      "name": "soul"
+     },
+     {
+      "count": 1,
+      "name": "disco"
+     }
+    ]
+   }
+  ]
+ }
+}

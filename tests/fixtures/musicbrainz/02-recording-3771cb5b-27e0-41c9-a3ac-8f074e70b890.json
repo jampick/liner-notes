@@ -1,0 +1,129 @@
+{
+ "path": "recording/3771cb5b-27e0-41c9-a3ac-8f074e70b890",
+ "query": {
+  "inc": "isrcs+artist-credits+releases"
+ },
+ "status": 200,
+ "body": {
+  "length": 240333,
+  "releases": [
+   {
+    "release-events": [
+     {
+      "date": "1994",
+      "area": {
+       "type": null,
+       "sort-name": "Canada",
+       "iso-3166-1-codes": [
+        "CA"
+       ],
+       "id": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+       "name": "Canada",
+       "type-id": null,
+       "disambiguation": ""
+      }
+     }
+    ],
+    "packaging": "Jewel Case",
+    "country": "CA",
+    "title": "This Is Old School",
+    "text-representation": {
+     "language": "eng",
+     "script": null
+    },
+    "disambiguation": "",
+    "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+    "barcode": "063961205426",
+    "status": "Official",
+    "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+    "artist-credit": [
+     {
+      "artist": {
+       "id": "89ad4ac3-39f7-470e-963a-56509c546377",
+       "country": null,
+       "name": "Various Artists",
+       "type-id": "ac897045-5043-3294-969b-187360e45d86",
+       "disambiguation": "add compilations to this artist",
+       "type": "Other",
+       "sort-name": "Various Artists"
+      },
+      "name": "Various Artists",
+      "joinphrase": ""
+     }
+    ],
+    "quality": "normal",
+    "id": "69cfe4b4-1f02-443c-9e2a-6c8ca2da4514",
+    "date": "1994"
+   },
+   {
+    "text-representation": {
+     "script": "Latn",
+     "language": "eng"
+    },
+    "release-events": [
+     {
+      "date": "2008",
+      "area": {
+       "type-id": null,
+       "disambiguation": "",
+       "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+       "name": "United Kingdom",
+       "type": null,
+       "iso-3166-1-codes": [
+        "GB"
+       ],
+       "sort-name": "United Kingdom"
+      }
+     }
+    ],
+    "packaging": null,
+    "country": "GB",
+    "title": "100 Anthems: Funky House",
+    "quality": "normal",
+    "id": "d368e7da-36c8-4966-b2e3-da08e4ae224d",
+    "date": "2008",
+    "disambiguation": "",
+    "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+    "barcode": "876492002934",
+    "status": "Official",
+    "packaging-id": null,
+    "artist-credit": [
+     {
+      "artist": {
+       "sort-name": "Various Artists",
+       "type": "Other",
+       "name": "Various Artists",
+       "country": null,
+       "id": "89ad4ac3-39f7-470e-963a-56509c546377",
+       "disambiguation": "add compilations to this artist",
+       "type-id": "ac897045-5043-3294-969b-187360e45d86"
+      },
+      "name": "Various Artists",
+      "joinphrase": ""
+     }
+    ]
+   }
+  ],
+  "disambiguation": "",
+  "artist-credit": [
+   {
+    "joinphrase": "",
+    "artist": {
+     "sort-name": "Lynn, Cheryl",
+     "type": "Person",
+     "disambiguation": "1970s disco singer",
+     "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+     "name": "Cheryl Lynn",
+     "country": "US",
+     "id": "c2b8f775-455c-44c3-97ca-f377938da19e"
+    },
+    "name": "Cheryl Lynn"
+   }
+  ],
+  "video": false,
+  "isrcs": [],
+  "title": "Got to Be Real",
+  "id": "3771cb5b-27e0-41c9-a3ac-8f074e70b890",
+  "first-release-date": "1994"
+ }
+}

@@ -1,0 +1,489 @@
+{
+ "path": "release-group",
+ "query": {
+  "query": "releasegroup:\"Give Me the Night\" AND artist:\"George Benson\"",
+  "limit": "25"
+ },
+ "status": 200,
+ "body": {
+  "created": "2026-10-22T19:16:14.641Z",
+  "count": 5,
+  "offset": 0,
+  "release-groups": [
+   {
+    "id": "88be0155-6a0f-4961-a5a5-8d902c7186a8",
+    "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "score": 100,
+    "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "artist-credit-id": "51b195a3-5e79-3149-b7fe-c7108017628b",
+    "count": 2,
+    "title": "Give Me the Night",
+    "first-release-date": "1980",
+    "primary-type": "Single",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson",
+       "sort-name": "Benson, George",
+       "disambiguation": "jazz guitarist/singer",
+       "aliases": [
+        {
+         "sort-name": "Georges Benson",
+         "name": "Georges Benson",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "G. Benson",
+         "name": "G. Benson",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "a41057af-2b50-4653-a3fd-603b5efaad2c",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "6834e4be-fe8f-4829-9a9a-04797090a57e",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 1,
+      "name": "electronic"
+     },
+     {
+      "count": 1,
+      "name": "disco"
+     },
+     {
+      "count": 1,
+      "name": "electronic/ambient/rhythm and blues/jazz"
+     }
+    ]
+   },
+   {
+    "id": "899999b9-f436-3b38-a813-893100d3169f",
+    "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "score": 100,
+    "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+    "artist-credit-id": "51b195a3-5e79-3149-b7fe-c7108017628b",
+    "count": 13,
+    "title": "Give Me the Night",
+    "first-release-date": "1980",
+    "primary-type": "Album",
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson",
+       "sort-name": "Benson, George",
+       "disambiguation": "jazz guitarist/singer",
+       "aliases": [
+        {
+         "sort-name": "Georges Benson",
+         "name": "Georges Benson",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "G. Benson",
+         "name": "G. Benson",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "8fbf41b1-bdf0-4594-8251-092442720489",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "5d3ffe4c-0c5e-494e-873d-be835694d7e2",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "471ffbf1-b289-449e-b1b2-ea96f42bf47b",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "47be5430-b7a1-486d-b059-dd1af5936e28",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "2cf6370d-17a8-4fb2-a2cc-08ed05c9a32f",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "18396958-caf4-4298-acac-18a162661649",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "ed52eb98-9a5a-4009-b790-fe3730070397",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "c9319f18-998c-41d6-9e81-67c02979b7ce",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "46d55b7b-8901-4f2e-98b1-9c62d531d1da",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "71d5c554-d228-368c-99f7-eb3e24747b08",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "02b78dd6-08ad-48f7-a8bd-4ca3a098b447",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "906f4583-b1a6-4eb2-90a0-032bbc21e85c",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     },
+     {
+      "id": "6a8fc3f7-5220-4798-b869-2c29b665ce29",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 3,
+      "name": "jazz"
+     },
+     {
+      "count": 2,
+      "name": "disco"
+     },
+     {
+      "count": 1,
+      "name": "jazz-funk"
+     },
+     {
+      "count": 1,
+      "name": "contemporary jazz"
+     },
+     {
+      "count": 3,
+      "name": "jazz pop"
+     },
+     {
+      "count": 2,
+      "name": "soul jazz"
+     },
+     {
+      "count": 2,
+      "name": "smooth jazz"
+     },
+     {
+      "count": 0,
+      "name": "jazz-pop"
+     },
+     {
+      "count": 1,
+      "name": "smooth soul"
+     },
+     {
+      "count": 2,
+      "name": "contemporary r&b"
+     }
+    ]
+   },
+   {
+    "id": "e07a1082-3254-45e2-98dc-1e4631ddfe7a",
+    "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "score": 94,
+    "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "artist-credit-id": "51b195a3-5e79-3149-b7fe-c7108017628b",
+    "count": 1,
+    "title": "Give Me the Night (live)",
+    "first-release-date": "2020-04-03",
+    "primary-type": "Single",
+    "secondary-types": [
+     "Live"
+    ],
+    "secondary-type-ids": [
+     "6fd474e2-6b58-3102-9d17-d6f7eb7da0a0"
+    ],
+    "artist-credit": [
+     {
+      "name": "George Benson",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson",
+       "sort-name": "Benson, George",
+       "disambiguation": "jazz guitarist/singer",
+       "aliases": [
+        {
+         "sort-name": "Georges Benson",
+         "name": "Georges Benson",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "G. Benson",
+         "name": "G. Benson",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "d5d75020-ab76-482a-bba4-3c6df73f0a8e",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night (live)",
+      "status": "Official"
+     }
+    ],
+    "tags": [
+     {
+      "count": 1,
+      "name": "jazz"
+     }
+    ]
+   },
+   {
+    "id": "241fe9b2-2341-4f0d-9fde-5cecec3d9c54",
+    "score": 87,
+    "artist-credit-id": "d184098a-1c8c-3035-b1bc-9ace7c0fbbb4",
+    "count": 1,
+    "title": "Give Me The Night",
+    "first-release-date": "2005",
+    "artist-credit": [
+     {
+      "joinphrase": " & ",
+      "name": "George Benson",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson",
+       "sort-name": "Benson, George",
+       "disambiguation": "jazz guitarist/singer",
+       "aliases": [
+        {
+         "sort-name": "Georges Benson",
+         "name": "Georges Benson",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "G. Benson",
+         "name": "G. Benson",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     },
+     {
+      "name": "Lemar",
+      "artist": {
+       "id": "d8a222aa-da43-442a-93cf-9806b45f5daf",
+       "name": "Lemar",
+       "sort-name": "Lemar",
+       "aliases": [
+        {
+         "sort-name": "レマー",
+         "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+         "name": "レマー",
+         "locale": "ja",
+         "type": "Artist name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Obika, Lemare Izubundu Nnagdziem",
+         "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+         "name": "Lemare Izubundu Nnagdziem Obika",
+         "locale": null,
+         "type": "Legal name",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "Obika, Lemar",
+         "name": "Lemar Obika",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "abbdcde8-ac9b-4808-9895-1f833aab177a",
+      "status-id": "1156806e-d06a-38bd-83f0-cf2284a808b9",
+      "title": "Give Me The Night",
+      "status": "Bootleg"
+     }
+    ],
+    "tags": [
+     {
+      "count": 1,
+      "name": "electronic"
+     },
+     {
+      "count": 1,
+      "name": "house"
+     }
+    ]
+   },
+   {
+    "id": "e2160140-0412-466e-b114-0529c2422a93",
+    "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "score": 82,
+    "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+    "artist-credit-id": "a46f703c-f34d-4550-8463-7fab51ee3cf4",
+    "count": 1,
+    "title": "Give Me the Night",
+    "first-release-date": "2021-02-26",
+    "primary-type": "Single",
+    "artist-credit": [
+     {
+      "joinphrase": " & ",
+      "name": "Steve Aoki",
+      "artist": {
+       "id": "a39acc4a-985e-4173-a9ed-f325f2d3bc1c",
+       "name": "Steve Aoki",
+       "sort-name": "Aoki, Steve",
+       "aliases": [
+        {
+         "sort-name": "Aoki, Steven Hiroyuki",
+         "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+         "name": "Steven Hiroyuki Aoki",
+         "locale": "en",
+         "type": "Legal name",
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "スティーヴン・ヒロユキ・アオキ",
+         "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+         "name": "スティーヴン・ヒロユキ・アオキ",
+         "locale": "ja",
+         "type": "Legal name",
+         "primary": true,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     },
+     {
+      "name": "George Benson",
+      "artist": {
+       "id": "467f69b6-8d6d-4d2c-bfad-e89adf2806ff",
+       "name": "George Benson",
+       "sort-name": "Benson, George",
+       "disambiguation": "jazz guitarist/singer",
+       "aliases": [
+        {
+         "sort-name": "Georges Benson",
+         "name": "Georges Benson",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        },
+        {
+         "sort-name": "G. Benson",
+         "name": "G. Benson",
+         "locale": null,
+         "type": null,
+         "primary": null,
+         "begin-date": null,
+         "end-date": null
+        }
+       ]
+      }
+     }
+    ],
+    "releases": [
+     {
+      "id": "9c5a3d6c-a53b-43a4-a299-79a677ed7fe6",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "Give Me the Night",
+      "status": "Official"
+     }
+    ]
+   }
+  ]
+ }
+}
