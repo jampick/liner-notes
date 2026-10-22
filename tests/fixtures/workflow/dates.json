@@ -1,0 +1,6 @@
+{
+ "songs": [
+  {"song": "ann-artist--first-song", "year": 1990, "source": "musicbrainz", "confidence": "high"},
+  {"song": "bob-band--second-song", "year": 1991, "source": "person", "confidence": "high", "note": "Single, before the album."}
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "title": "Small Trip",
+ "titleA": "Small",
+ "titleB": "Trip",
+ "kicker": "Two songs, 1990 to 1991",
+ "description": "A two-song test journey.",
+ "lede": "Two songs from a rehearsal room.",
+ "copy": {"start": "Start listening", "credits": "Picked by a fictional panel."},
+ "express": {"note": "The short way.", "songs": ["ann-artist--first-song"]},
+ "threads": [{"from": "ann-artist--first-song", "to": "bob-band--second-song", "kind": "place", "note": "Same rehearsal room."}]
+}
