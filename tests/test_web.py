@@ -141,3 +141,20 @@ def test_fake_bridge_answers_like_the_bridge(served):
     assert r.status == 403 and json.loads(body) == fake.C.token_refusal()
     assert call(port, "POST", "/cmd", {"op": "dance"}, {"X-Liner-Token": "tok"})[0].status == 400
     assert call(port, "POST", "/cmd", {"op": "next"}, {"X-Liner-Token": "tok"})[0].status == 200
+
+
+def test_fixtures_carry_the_journey_threads(tmp_path, monkeypatch):
+    """scenarios.js finds a thread in fixtures.json, wherever the bank sits on disk."""
+    monkeypatch.setattr(fake, "video", lambda path, secs: False)
+    fake.fixtures(tmp_path)
+    m = json.loads((tmp_path / "fixtures.json").read_text())
+    era = {s["id"]: s["era"] for s in m["stops"]}
+    assert any(t["from"] in era and t["to"] in era and era[t["from"]] != era[t["to"]] and t.get("note") for t in m["threads"])
+
+
+def test_no_tool_reads_the_bank_from_the_repo_root():
+    """The bank lives in liner_notes/shipped; a tool joining ROOT with songs/ or journeys/ is reading a folder that's gone."""
+    old = re.compile(r"""ROOT[^\n]{0,40}?['"/](songs|journeys|culture|schemas)['"/]""")
+    files = [*ROOT.glob("tools/*.js"), *ROOT.glob("tools/*.py"), *ROOT.glob(".github/workflows/*.yml")]
+    hits = [f"{f.name}:{n}" for f in files for n, line in enumerate(f.read_text().splitlines(), 1) if old.search(line)]
+    assert not hits, hits

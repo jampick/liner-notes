@@ -68,7 +68,14 @@ jobs:
           /tmp/clean/bin/liner-notes review "$sid" --by CI
           test "$(sha256sum "$f")" = "$before"
           grep -q '"sha256"' "/tmp/xdg/data/liner-notes/songs/$sid.json"
-          /tmp/clean/bin/liner-notes doctor || true
+          /tmp/clean/bin/liner-notes doctor > /tmp/doctor.txt || true
+          grep '^ok   bank ' /tmp/doctor.txt
+          if grep -q "$sid" /tmp/doctor.txt; then echo "doctor flagged a fresh copy"; exit 1; fi
+          echo " " >> "$f"
+          /tmp/clean/bin/liner-notes doctor > /tmp/doctor.txt || true
+          grep "^warn your copy .*$sid: stale" /tmp/doctor.txt
+          /tmp/clean/bin/liner-notes drop "$sid"
+          test ! -e "/tmp/xdg/data/liner-notes/songs/$sid.json"
       - name: The command runs and the bridge starts and stops
         working-directory: /tmp
         run: |
