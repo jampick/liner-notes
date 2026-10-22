@@ -475,3 +475,14 @@ def test_review_refuses_to_write_a_broken_song(tmp_path, monkeypatch):
     copy = tmp_path / "data/songs/a--b.json"
     assert not copy.exists()
     assert str(copy) in str(e.value.code) and "title" in str(e.value.code)
+
+
+def test_a_bad_slug_is_the_users_to_fix_not_a_bug(tmp_path, monkeypatch):
+    from liner_notes import cli
+
+    data = setup(tmp_path, monkeypatch)
+    monkeypatch.setattr("liner_notes.resolve.resolve", lambda artist, title, yt=None: lookup(artist, title, yt))
+    with pytest.raises(SystemExit) as e:
+        cli.main(["generate", "--from", "Night Mix", "--slug", "City Pop"])
+    assert "--slug" in str(e.value.code) and "bug" not in str(e.value.code)
+    assert not (data / "journeys").exists()
