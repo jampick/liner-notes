@@ -6,7 +6,7 @@ import subprocess
 
 import pytest
 
-from liner_notes import cli, doctor, paths
+from liner_notes import cli, doctor, overlay, paths
 from liner_notes import generate as gen
 from liner_notes.bank import read_json, write_json
 from tests.helpers_build import iso, make_bank  # noqa: F401
@@ -25,6 +25,11 @@ def shipped(iso, monkeypatch):
     return iso["home"] / "songs" / f"{SID}.json"
 
 
+def tilde(p):
+    h = str(paths.Path.home())
+    return str(p).replace(h + "/", "~/", 1)
+
+
 def doctor_lines():
     out = []
     doctor.run(Fake(), log=out.append)
@@ -37,7 +42,8 @@ def test_review_writes_an_overlay_and_leaves_the_shipped_file_alone(iso, shipped
     assert shipped.read_bytes() == before
     mine = read_json(iso["data"] / "songs" / f"{SID}.json")
     assert mine["review"]["state"] == "reviewed" and mine["review"]["by"] == "Ann Reader"
-    assert mine["base"] == {"version": cli.__version__, "sha256": hashlib.sha256(before).hexdigest()}
+    assert mine["base"]["version"] == cli.__version__ and mine["base"]["sha256"] == hashlib.sha256(before).hexdigest()
+    assert mine["base"]["content"] == overlay.content_hash(read_json(shipped))
     out = capsys.readouterr().out
     assert "your review" in out and "maintainer" in out
 
@@ -77,11 +83,43 @@ def test_undo_keeps_a_copy_with_other_changes(iso, shipped, capsys):
     assert "stays" in capsys.readouterr().out
 
 
-def test_drop_removes_your_copy(iso, shipped, capsys):
+def test_undo_drops_a_stale_copy_that_only_held_the_review(iso, shipped, capsys):
+    cli.main(["review", SID, "--by", "Ann Reader"])
+    s = read_json(shipped)
+    s["title"] = "First Song (corrected)"
+    write_json(shipped, s)
+    capsys.readouterr()
+    cli.main(["review", SID, "--undo"])
+    assert not (iso["data"] / "songs" / f"{SID}.json").exists()
+    out = capsys.readouterr().out
+    assert "shipped song again" in out and "other changes" not in out
+
+
+def test_undo_on_an_old_stale_copy_doesnt_claim_other_changes(iso, shipped, capsys):
+    mine = iso["data"] / "songs" / f"{SID}.json"
+    cli.main(["review", SID, "--by", "Ann Reader"])
+    c = read_json(mine)
+    del c["base"]["content"]  # made before base.content existed
+    write_json(mine, c)
+    s = read_json(shipped)
+    s["title"] = "First Song (corrected)"
+    write_json(shipped, s)
+    capsys.readouterr()
+    cli.main(["review", SID, "--undo"])
+    out = capsys.readouterr().out
+    assert mine.exists() and "other changes" not in out and "can't tell" in out and f"liner-notes drop {SID}" in out
+
+
+def test_drop_moves_your_copy_aside(iso, shipped, capsys):
+    import datetime as dt
+
     cli.main(["review", SID, "--by", "Ann Reader"])
     assert cli.main(["drop", SID]) == 0
     assert not (iso["data"] / "songs" / f"{SID}.json").exists()
-    assert "shipped song again" in capsys.readouterr().out
+    kept = iso["data"] / "dropped" / dt.date.today().isoformat() / "songs" / f"{SID}.json"
+    assert read_json(kept)["review"]["by"] == "Ann Reader"
+    out = capsys.readouterr().out
+    assert "shipped song again" in out and str(kept) in out
     assert cli.main(["drop", SID]) == 1
     assert "no copy" in capsys.readouterr().out
 
@@ -90,6 +128,15 @@ def test_drop_drops_a_journey_copy(iso, shipped):
     j = iso["data"] / "journeys/test-trip/journey.json"
     write_json(j, read_json(iso["home"] / "journeys/test-trip/journey.json"))
     assert cli.main(["drop", "test-trip"]) == 0 and not j.exists()
+    assert list((iso["data"] / "dropped").glob("*/journeys/test-trip/journey.json"))
+
+
+def test_drop_twice_in_a_day_keeps_both(iso, shipped):
+    for by in ("Ann Reader", "Bo Reader"):
+        cli.main(["review", SID, "--by", by])
+        cli.main(["drop", SID])
+    kept = sorted((iso["data"] / "dropped").glob(f"*/songs/{SID}*.json"))
+    assert sorted(read_json(k)["review"]["by"] for k in kept) == ["Ann Reader", "Bo Reader"]
 
 
 def test_drop_leaves_a_song_of_your_own(iso, shipped, capsys):
@@ -108,8 +155,12 @@ def test_review_of_your_own_song_says_nothing_about_a_maintainer(iso, shipped, c
 
 def test_review_in_a_checkout_points_at_shipped(iso, shipped, capsys):
     subprocess.run(["git", "init", "-q", str(iso["home"])], check=True)
+    cli.main(["review", SID, "--undo"])
+    assert "--shipped" not in capsys.readouterr().out
     cli.main(["review", SID, "--by", "Ann Reader"])
-    assert "--shipped" in capsys.readouterr().out
+    assert "If you maintain the bank, review --shipped" in capsys.readouterr().out
+    cli.main(["review", SID, "--undo"])
+    assert "--shipped" not in capsys.readouterr().out
 
 
 def test_check_counts_your_reviews_apart(iso, shipped, capsys):
@@ -118,7 +169,10 @@ def test_check_counts_your_reviews_apart(iso, shipped, capsys):
     cli.main(["review", SID, "--by", "Ann Reader"])
     out = []
     check.check(log=lambda *a: out.append(" ".join(map(str, a))))
-    assert "test-trip: 2 songs, 2 written, 0 reviewed, 1 more in your copies" in out
+    assert "test-trip: 2 songs, 2 written, 0 reviewed by a person, plus 1 in your copies" in out
+    capsys.readouterr()
+    cli.main(["list"])
+    assert "  0 reviewed (+1 yours)  not built" in capsys.readouterr().out
 
 
 def test_review_needs_by(iso, shipped, capsys):
@@ -137,7 +191,7 @@ def test_doctor_flags_a_stale_overlay(iso, shipped):
     write_json(shipped, s)
     hits = [x for x in doctor_lines() if SID in x]
     assert hits and hits[0].startswith("warn your copy") and "stale" in hits[0] and "changed after" in hits[0]
-    assert f"liner-notes drop {SID}" in hits[0] and str(shipped) in hits[0]
+    assert f"liner-notes drop {SID}" in hits[0] and tilde(shipped) in hits[0]
 
 
 def test_doctor_flags_an_id_collision(iso, shipped):
@@ -151,7 +205,19 @@ def test_doctor_tags_a_copy_whose_song_is_gone(iso, shipped):
     cli.main(["review", SID, "--by", "Ann Reader"])
     shipped.unlink()
     hits = [x for x in doctor_lines() if SID in x]
-    assert hits and hits[0].startswith("warn your copy") and f"{SID}: gone." in hits[0]
+    assert hits and hits[0].startswith("info your copy") and f"{SID}: gone." in hits[0]
+
+
+def test_doctor_writes_home_as_a_tilde(iso, shipped, monkeypatch):
+    monkeypatch.setenv("HOME", str(iso["home"].parent))
+    cli.main(["review", SID, "--by", "Ann Reader"])
+    s = read_json(shipped)
+    s["title"] = "Changed"
+    write_json(shipped, s)
+    lines = doctor_lines()
+    hit = next(x for x in lines if SID in x)
+    assert f"~/data/songs/{SID}.json" in hit and f"~/home/songs/{SID}.json" in hit
+    assert not any(str(iso["home"].parent) + "/" in x for x in lines)
 
 
 def test_doctor_skips_copies_when_the_bank_is_missing(iso, shipped, tmp_path, monkeypatch):

@@ -18,6 +18,18 @@ from tests.test_play import Fake
 REPO = paths.PACKAGE.parent
 
 
+def short(p):
+    return str(p).replace(str(paths.Path.home()) + "/", "~/", 1)
+
+
+def test_the_version_marks_the_new_layout():
+    """Copies record the version they were made under; 0.2.0 was the layout without a bank in the wheel."""
+    from liner_notes import __version__
+
+    declared = tomllib.loads((REPO / "pyproject.toml").read_text())["project"]["version"]
+    assert declared == __version__ == "0.3.0.dev0"
+
+
 def test_the_bank_and_schemas_live_in_the_package(monkeypatch):
     monkeypatch.delenv("LINER_NOTES_HOME", raising=False)
     assert paths.home().is_relative_to(paths.PACKAGE), f"{paths.home()} is outside the package, so a wheel won't carry it"
@@ -51,8 +63,8 @@ def test_doctor_says_when_the_bank_is_missing(iso, tmp_path, monkeypatch):
     out = []
     assert doctor.run(Fake(), log=out.append) == 1
     bank = [x for x in out if x[5:].startswith("bank ")]
-    assert bank and bank[0].startswith("FAIL") and "no songs" in bank[0] and str(empty) in bank[0]
-    assert f"LINER_NOTES_HOME is set to {empty}" in bank[0]
+    assert bank and bank[0].startswith("FAIL") and "no songs" in bank[0] and short(empty) in bank[0]
+    assert f"LINER_NOTES_HOME is set to {short(empty)}" in bank[0]
 
 
 def test_doctor_says_how_to_reinstall(iso, tmp_path, monkeypatch):
