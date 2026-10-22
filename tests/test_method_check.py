@@ -186,3 +186,98 @@ def test_the_shipped_bank_has_no_style_problems(monkeypatch):
     found = check.style_check(bank)
     assert found == [], "\n".join(found[:20])
     assert len(bank.songs) > 200 and len(bank.journeys) >= 6
+
+
+# Fix round after the leads' reviews.
+
+BAR, EN = "\N{HORIZONTAL BAR}", "\N{EN DASH}"
+
+
+def problems_in(text):
+    from liner_notes.method import load_style
+
+    return check.style_problems(text, load_style())
+
+
+FAILS = [
+    ("a horizontal bar", f"It came back {BAR} slower.", "em dash"),
+    ("a spaced en dash", f"It came back {EN} slower.", "em dash"),
+    ("two hyphens as a dash", "It came back -- slower.", "em dash"),
+    ("an allowed name inside a longer word", "Simply Redundant drums.", "'Simply'"),
+    ("Testament is no longer allowed", "Testament to the hours they put in.", "'Testament'"),
+    ("an -ily form", "The legendarily loud drums.", "'legendarily'"),
+    ("readable name for the contrast", "It's not a ballad, it's a slow burn.", "it's-not-X-it's-Y framing"),
+    ("readable name for whether you're", "Whether you're new to it or not.", "whether-you're framing"),
+]
+
+
+@pytest.mark.parametrize("what,text,says", FAILS, ids=[c[0] for c in FAILS])
+def test_the_style_catches(what, text, says):
+    found = problems_in(text)
+    assert any(says in p for p in found), found
+
+
+PASSES_TOO = [
+    ("an en dash in a range", f"Recorded 1976{EN}78."),
+    ("a word inside a URL", "The label page is at https://example.org/iconic-records/seamless and says 1979."),
+    ("a speech verb further back", "Rolling Stone wrote that the hook was 'too clever by half' in its review."),
+    ("a speech verb close by", 'In the chorus, as Daly said, "we only had one take left" was the mood.'),
+]
+
+
+@pytest.mark.parametrize("what,text", PASSES_TOO, ids=[c[0] for c in PASSES_TOO])
+def test_the_style_lets_through(what, text):
+    assert problems_in(text) == []
+
+
+def test_a_name_hit_says_how_to_allow_it(home):
+    edit(home / SONG, lambda s: s["notes"].update(made="It came out on Robust Records in Leeds."))
+    code, probs = run_check()
+    from liner_notes.method import user_style_path
+
+    assert code == 1 and probs, probs
+    assert "if it's a name, add it to [names] allowed in" in probs[0] and str(user_style_path()) in probs[0], probs[0]
+
+
+def test_a_lowercase_hit_doesnt_suggest_a_name(home):
+    edit(home / SONG, lambda s: s["notes"].update(made="A robust mix."))
+    _, probs = run_check()
+    assert probs and "[names]" not in probs[0], probs[0]
+
+
+def test_your_style_file_adds_words_and_names(home):
+    from liner_notes.method import user_style_path
+
+    f = user_style_path()
+    f.parent.mkdir(parents=True, exist_ok=True)
+    f.write_text('[words]\nbanned = ["groovesome"]\n\n[names]\nallowed = ["Robust Records"]\n')
+    edit(home / SONG, lambda s: s["notes"].update(made="It came out on Robust Records, a groovesome label."))
+    code, probs = run_check()
+    assert code == 1 and len(probs) == 1 and "'groovesome'" in probs[0], probs
+
+
+def test_your_style_file_cant_remove_a_house_rule(home):
+    from liner_notes.method import MethodError, load_style, user_style_path
+
+    f = user_style_path()
+    f.parent.mkdir(parents=True, exist_ok=True)
+    f.write_text('[words]\nbanned = []\nsay = "anything goes"\n')
+    with pytest.raises(MethodError) as e:
+        load_style()
+    assert str(f) in str(e.value) and "words.banned" in str(e.value)
+
+
+def test_the_missed_lyrics_are_gone_from_the_shipped_files():
+    """Four quoted lyrics the cue rule can't see, rewritten by hand. They stay out."""
+    gone = {
+        "songs/china-crisis--black-man-ray.json": "Yes, yes, I could be wrong",
+        "songs/simply-red--holding-back-the-years.json": "Strangled by the wishes",
+        "songs/spandau-ballet--true.json": "Marvin all night long",
+        "journeys/yacht-rock/journey.json": "between the moon and New York City",
+    }
+    for rel, line in gone.items():
+        assert line not in (paths.home() / rel).read_text(), rel
+    assert "keep holding on" not in (paths.home() / "songs/simply-red--holding-back-the-years.json").read_text()
+    review = paths.PACKAGE / "shipped/journeys/sophisti-pop/REVIEW.md"
+    if review.exists():
+        assert "Marvin all night long" not in review.read_text()

@@ -102,3 +102,71 @@ def test_the_dates_brief_uses_the_dates_schema_field_names():
     for value in ('"musicbrainz"', '"writer"', '"person"', '"high"', '"medium"', '"low"', '"none"', "null"):
         assert value in text, value
     assert "{output_schema}" in text and "{inputs}" in text
+
+
+# Fix round after the leads' reviews.
+
+
+def test_load_style_sees_an_edit(tmp_path, monkeypatch):
+    import os
+
+    monkeypatch.setenv("LINER_NOTES_CONFIG", str(tmp_path / "config.toml"))
+    f = method.user_style_path()
+    f.write_text('[words]\nbanned = ["groovesome"]\n')
+    assert "groovesome" in method.load_style().banned
+    f.write_text('[words]\nbanned = ["funkadelicious"]\n')
+    st = f.stat()
+    os.utime(f, ns=(st.st_atime_ns, st.st_mtime_ns + 5_000_000_000))
+    style = method.load_style()
+    assert "funkadelicious" in style.banned and "groovesome" not in style.banned
+
+
+def test_liner_notes_prompts_points_at_another_folder(tmp_path, monkeypatch):
+    import os
+
+    monkeypatch.setenv("LINER_NOTES_PROMPTS", str(tmp_path))
+    f = tmp_path / "era.md"
+    f.write_text('+++\nid = "era"\nversion = 7\n+++\nTry this.\n\n{style_rules}\n\n{inputs}\n')
+    p = method.load_prompt("era")
+    assert p.version == 7 and p.path == f and "{style_rules}" not in p.text and "vibrant" in p.text
+    f.write_text('+++\nid = "era"\nversion = 8\n+++\nAgain.\n')
+    st = f.stat()
+    os.utime(f, ns=(st.st_atime_ns, st.st_mtime_ns + 5_000_000_000))
+    assert method.load_prompt("era").version == 8
+    # a brief the folder doesn't have comes from the package
+    assert method.load_prompt("song").path == paths.PACKAGE / "prompts" / "song.md"
+
+
+def test_era_brief_asks_for_one_era_and_the_panel_check():
+    t = method.load_prompt("era").text
+    assert "one era" in t
+    for f in ("`panel_check`", "`song`", "`judge`", "`quote`", "`verdict`", "`note`", "`source`", '"holds"', '"wrong"', '"unconfirmed"'):
+        assert f in t, f
+    for f in ("`cities`", "`labels`", "`gear`", "`artifact`"):
+        assert f in t, f
+
+
+def test_vote_brief_matches_the_panel_format():
+    t = method.load_prompt("vote").text
+    assert "or veto" not in t and "`veto`" in t and "`by`" in t and "`why`" in t
+    assert "gets checked later" not in t
+    assert "Don't shade a vote" in t
+    assert "seed list" in t or "playlist" in t
+    assert "Fairweather" not in t and "Oyelaran" not in t
+
+
+def test_picture_brief_allows_gear_names_not_lettering():
+    t = method.load_prompt("picture").text
+    assert "never brands" not in t and "lettering" in t
+    assert "recording studio live room, 1979" not in t
+    assert "It isn't a photograph" not in t
+
+
+def test_dates_brief_keeps_an_unconfirmed_year():
+    t = method.load_prompt("dates").text
+    assert 'confidence "low"' in t and "(or as it was)" not in t
+
+
+def test_front_brief_leaves_credits_to_the_tool():
+    t = method.load_prompt("front").text
+    assert "`credits`" not in t and "`companion`" in t
