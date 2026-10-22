@@ -1,35 +1,176 @@
 {
  "public": false,
- "rule": {"yes": 4, "of": 5},
  "judges": {
-  "pia": {"name": "Pia Hartnell", "title": "the Purist", "lens": "Only the recording that counts.", "veto": true},
-  "dov": {"name": "Dov Amari", "title": "the Chart Reader", "lens": "Where it peaked and for how long."},
-  "ula": {"name": "Ula Ferreira", "title": "the Arranger", "lens": "The chart on the music stand."},
-  "kip": {"name": "Kip Lawson", "title": "the Digger", "lens": "Samples and covers."},
-  "ros": {"name": "Ros Tanaka", "title": "the Host", "lens": "Would a room move."}
+  "pia": {
+   "name": "Pia Hartnell",
+   "title": "the Purist",
+   "lens": "Only the recording that counts.",
+   "veto": true
+  },
+  "dov": {
+   "name": "Dov Amari",
+   "title": "the Chart Reader",
+   "lens": "Where it peaked and for how long."
+  },
+  "ula": {
+   "name": "Ula Ferreira",
+   "title": "the Arranger",
+   "lens": "The chart on the music stand."
+  },
+  "kip": {
+   "name": "Kip Lawson",
+   "title": "the Digger",
+   "lens": "Samples and covers."
+  },
+  "ros": {
+   "name": "Ros Tanaka",
+   "title": "the Host",
+   "lens": "Would a room move."
+  }
  },
  "candidates": [
-  {"song": "ann-artist--first-song", "title": "First Song", "artist": "Ann Artist",
-   "votes": {"pia": {"vote": "yes", "why": "The original take."}, "dov": {"vote": "yes", "why": "Top ten."},
-             "ula": {"vote": "yes", "why": "The horn line."}, "kip": {"vote": "yes", "why": "Sampled twice."},
-             "ros": {"vote": "yes", "why": "Everyone sings it."}},
-   "quote": {"j": "ros", "q": "Everyone in the room sings the chorus."}},
-  {"song": "bob-band--second-song", "title": "Second Song", "artist": "Bob Band",
-   "votes": {"pia": {"vote": "yes", "why": "Their best take."}, "dov": {"vote": "no", "why": "Peaked at 40."},
-             "ula": {"vote": "yes", "why": "The bass sits low."}, "kip": {"vote": "yes", "why": "Covered in 2004."},
-             "ros": {"vote": "yes", "why": "Slow dance."}}},
-  {"song": "cat-crew--third-song", "title": "Third Song", "artist": "Cat Crew",
-   "votes": {"pia": {"vote": "no", "why": "A re-recording."}, "dov": {"vote": "yes", "why": "Number one."},
-             "ula": {"vote": "yes", "why": "Nice voicings."}, "kip": {"vote": "yes", "why": "Sampled."},
-             "ros": {"vote": "yes", "why": "Floor filler."}},
-   "veto": {"by": "pia", "why": "This is the 1995 re-recording, not the one that counts."}},
-  {"song": "dee-duo--fourth-song", "title": "Fourth Song", "artist": "Dee Duo",
-   "votes": {"pia": {"vote": "yes", "why": "Fine."}, "dov": {"vote": "no", "why": "Never charted."},
-             "ula": {"vote": "yes", "why": "Odd meter."}, "kip": {"vote": "no", "why": "Nobody sampled it."},
-             "ros": {"vote": "yes", "why": "Good opener."}}},
-  {"song": "eve-echo--fifth-song", "title": "Fifth Song", "artist": "Eve Echo",
-   "votes": {"pia": {"vote": "no", "why": "Wrong era."}, "dov": {"vote": "no", "why": "Missed."},
-             "ula": {"vote": "no", "why": "Thin."}, "kip": {"vote": "no", "why": "No."},
-             "ros": {"vote": "yes", "why": "I like it."}}}
+  {
+   "song": "ann-artist--first-song",
+   "title": "First Song",
+   "artist": "Ann Artist",
+   "votes": {
+    "pia": {
+     "vote": "yes",
+     "why": "The original take."
+    },
+    "dov": {
+     "vote": "yes",
+     "why": "Top ten."
+    },
+    "ula": {
+     "vote": "yes",
+     "why": "The horn line."
+    },
+    "kip": {
+     "vote": "yes",
+     "why": "Sampled twice."
+    },
+    "ros": {
+     "vote": "yes",
+     "why": "Everyone sings it."
+    }
+   },
+   "quote": {
+    "j": "ros",
+    "q": "Everyone in the room sings the chorus."
+   }
+  },
+  {
+   "song": "bob-band--second-song",
+   "title": "Second Song",
+   "artist": "Bob Band",
+   "votes": {
+    "pia": {
+     "vote": "yes",
+     "why": "Their best take."
+    },
+    "dov": {
+     "vote": "no",
+     "why": "Peaked at 40."
+    },
+    "ula": {
+     "vote": "yes",
+     "why": "The bass sits low."
+    },
+    "kip": {
+     "vote": "yes",
+     "why": "Covered in 2004."
+    },
+    "ros": {
+     "vote": "yes",
+     "why": "Slow dance."
+    }
+   }
+  },
+  {
+   "song": "cat-crew--third-song",
+   "title": "Third Song",
+   "artist": "Cat Crew",
+   "votes": {
+    "pia": {
+     "vote": "no",
+     "why": "A re-recording."
+    },
+    "dov": {
+     "vote": "yes",
+     "why": "Number one."
+    },
+    "ula": {
+     "vote": "yes",
+     "why": "Nice voicings."
+    },
+    "kip": {
+     "vote": "yes",
+     "why": "Sampled."
+    },
+    "ros": {
+     "vote": "yes",
+     "why": "Floor filler."
+    }
+   },
+   "veto": {
+    "by": "pia",
+    "why": "This is the 1995 re-recording, not the one that counts."
+   }
+  },
+  {
+   "song": "dee-duo--fourth-song",
+   "title": "Fourth Song",
+   "artist": "Dee Duo",
+   "votes": {
+    "pia": {
+     "vote": "yes",
+     "why": "Fine."
+    },
+    "dov": {
+     "vote": "no",
+     "why": "Never charted."
+    },
+    "ula": {
+     "vote": "yes",
+     "why": "Odd meter."
+    },
+    "kip": {
+     "vote": "no",
+     "why": "Nobody sampled it."
+    },
+    "ros": {
+     "vote": "yes",
+     "why": "Good opener."
+    }
+   }
+  },
+  {
+   "song": "eve-echo--fifth-song",
+   "title": "Fifth Song",
+   "artist": "Eve Echo",
+   "votes": {
+    "pia": {
+     "vote": "no",
+     "why": "Wrong era."
+    },
+    "dov": {
+     "vote": "no",
+     "why": "Missed."
+    },
+    "ula": {
+     "vote": "no",
+     "why": "Thin."
+    },
+    "kip": {
+     "vote": "no",
+     "why": "No."
+    },
+    "ros": {
+     "vote": "yes",
+     "why": "I like it."
+    }
+   }
+  }
  ]
 }

@@ -1,0 +1,29 @@
+{
+ "essay": "Two records from two bands who shared a rehearsal room above a shop in Leeds.",
+ "scene": {
+  "cities": [
+   "Leeds"
+  ],
+  "labels": [
+   "Small Records"
+  ],
+  "gear": [
+   "Fender Rhodes"
+  ],
+  "artifact": "A rehearsal room key on a shoelace."
+ },
+ "sources": [
+  "https://example.org/a"
+ ],
+ "unverified": "",
+ "panel_check": [
+  {
+   "song": "ann-artist--first-song",
+   "judge": "ros",
+   "quote": "Everyone in the room sings the chorus.",
+   "verdict": "holds",
+   "note": "",
+   "source": "https://example.org/a"
+  }
+ ]
+}

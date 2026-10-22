@@ -491,6 +491,8 @@ def parser():
     p.add_argument("--slug", help="the journey's file and page name (default: made from the title)")
     p.add_argument("--from", dest="from_", metavar="PLAYLIST", help="an .m3u or cliamp .toml file, or a saved cliamp playlist's name")
     p.add_argument("--panel", action="store_true", default=None, help="with --from: argue the list with a panel anyway")
+    p.add_argument("--rule", default="4/5", help="yes votes needed of the panel's size, like 4/5 (the default)")
+    p.add_argument("--json", action="store_true")
     p.set_defaults(fn=cmd_new)
 
     p = sub.add_parser("status", help="each stage of the journeys you're making: empty, draft, stale, unsigned or ok")
@@ -501,23 +503,34 @@ def parser():
     p = sub.add_parser("prompt", help="print a stage's brief, inputs and reply format, to paste into any chat")
     p.add_argument("slug")
     p.add_argument("name", help="heuristic, panel, dates, eras or front")
+    p.add_argument("--era", type=int, metavar="N")
+    p.add_argument("--json", action="store_true")
     p.set_defaults(fn=cmd_prompt)
 
     p = sub.add_parser("reply", help="check a chat's reply to a stage's prompt and write it")
     p.add_argument("slug")
     p.add_argument("name", help="heuristic, panel, dates, eras or front")
     p.add_argument("file", metavar="FILE", help="the reply, or - for stdin")
+    p.add_argument("--era", type=int, metavar="N")
+    p.add_argument("--json", action="store_true")
     p.set_defaults(fn=cmd_reply)
 
     p = sub.add_parser("accept", help="sign off a stage as it stands: you looked and it still holds")
     p.add_argument("slug")
     p.add_argument("name", help="heuristic, panel, dates, eras or front")
+    p.add_argument("--json", action="store_true")
     p.set_defaults(fn=cmd_accept)
 
     p = sub.add_parser("assemble", help="write the journey.json the page reads from the stage files")
     p.add_argument("slug")
     p.add_argument("--force", action="store_true", help="assemble even with stages that aren't ok")
+    p.add_argument("--json", action="store_true")
     p.set_defaults(fn=cmd_assemble)
+
+    p = sub.add_parser("dates-apply", help="write a journey's corrected years into your copies of the songs")
+    p.add_argument("slug")
+    p.add_argument("--json", action="store_true")
+    p.set_defaults(fn=lambda a: sys.exit("liner-notes: dates-apply isn't written yet"))
 
     p = sub.add_parser("watch-page")  # internal: started by play, remembers where the page window is moved
     p.add_argument("address")
