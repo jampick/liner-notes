@@ -162,7 +162,7 @@ def lyric_quotes(text, style):
         ahead = _words(re.split(r"[.!?]\s", text[: m.start()])[-1])
         past = _words(re.split(r"[.!?](?:\s|$)", text[m.end() :])[0])
         near_ahead, near_past = ahead[-style.lyrics_before :], past[: style.lyrics_after]
-        if style.lyrics_speech & set(near_ahead):
+        if style.lyrics_speech & set(ahead):  # someone talking, anywhere earlier in the sentence
             continue
         cued = style.lyrics_cues & set(near_ahead + near_past)
         if not cued and ahead and ahead[-1] in ("line", "lines"):
@@ -174,22 +174,30 @@ def lyric_quotes(text, style):
     return out
 
 
+URL = re.compile(r"https?://\S+")
+
+
 def style_problems(text, style):
     """What in one piece of our text breaks style.toml, each with its fix."""
-    for name in style.allowed:
-        text = text.replace(name, " ")
+    text = URL.sub(" ", text)
+    for pat in style.allowed_patterns:
+        text = pat.sub(" ", text)
     out = []
     # A title in quotes is a name: it can be called Timeless.
     words_text = QUOTED.sub(lambda m: " " if _title_case(_span(m)) else m.group(0), text)
     for c in style.constructions:
         m = c.pattern.search(text)
         if m:
-            what = "em dash" if c.id == "em-dash" else f"{c.id} ({m.group(0)!r})"
+            what = c.name if c.id == "em-dash" else f"{c.name} ({m.group(0)!r})"
             out.append(f"{what}; {c.fix}")
     for _, pat in style.word_patterns:
         m = pat.search(words_text)
         if m:
-            out.append(f"banned word {m.group(0)!r}; {style.words_fix}")
+            msg = f"banned word {m.group(0)!r}; {style.words_fix}"
+            ahead = words_text[: m.start()].rstrip()
+            if m.group(0)[0].isupper() and ahead and ahead[-1] not in ".!?:\"'\u201c\u2018(" and style.user_path:
+                msg += f"; if it's a name, add it to [names] allowed in {style.user_path}"
+            out.append(msg)
     out += [f"quoted lyric {s!r}; {style.lyrics_fix}" for s in lyric_quotes(text, style)]
     return out
 

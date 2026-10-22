@@ -1,6 +1,6 @@
 +++
 id = "dates"
-version = 1
+version = 2
 description = "Each song's year, where it came from and how sure we are. Never a made-up year."
 +++
 # Liner Notes: dates brief
@@ -25,14 +25,16 @@ A person beats a writer, and a writer beats MusicBrainz.
 
 ## Never invent a year
 
-If you can't find a year you'd stand behind, leave `year` as null (or as it was) and `confidence` "none", and say in `note` what you looked at. A song with no year is left out of the eras until someone finds one. A guess that looks right does more harm, because nobody looks at it again.
+A MusicBrainz year you couldn't confirm stays, with `source` "musicbrainz", `confidence` "low" and a `note` on what you looked at. A song with no year stays null with `confidence` "none", and the `note` says what you looked at; until someone finds a year, it's left out of the eras. A guess that looks right does more harm, because nobody looks at it again.
 
 ## What to write for every song
+
+One entry per song, in a `songs` list:
 
 - `song`: the song's id, exactly as in the inputs.
 - `year`: the year, or null.
 - `source`: "musicbrainz", "writer", "person", or null when there's no year.
-- `confidence`: "high" (two good sources agree, or the label's own page), "medium" (one good source), "low" (one weak source, or sources disagree and you picked one), "none" (no year).
+- `confidence`: "high" (two good sources agree, or the label's own page), "medium" (one good source), "low" (one weak source, sources disagree and you picked one, or a MusicBrainz year you couldn't confirm), "none" (no year).
 - `url`: the page that settles it, when you read one.
 - `note`: a short plain sentence when anything needs explaining: a correction, a disagreement between sources, a person's year you'd question. Leave it out otherwise.
 - `corrected_from`: only on a song whose year you changed: the year it had before, or null.

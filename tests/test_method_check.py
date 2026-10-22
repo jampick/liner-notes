@@ -77,7 +77,7 @@ SONG_CASES = [
         "it's not X, it's Y",
         "notes.made",
         lambda s: s["notes"].update(made="It's not a ballad, it's a slow burn."),
-        ["not-x-its-y", "drop the contrast"],
+        ["it's-not-X-it's-Y framing", "drop the contrast"],
     ),
 ]
 
@@ -105,7 +105,12 @@ JOURNEY_CASES = [
     ("banned word in the lede", "lede", lambda j: j.update(lede="A tapestry of records."), ["'tapestry'"]),
     ("em dash in the kicker", "kicker", lambda j: j.update(kicker=f"2 songs {EM} 1990"), ["em dash"]),
     ("em dash in front copy", "copy.credits", lambda j: j.update(copy={"credits": f"Picked {EM} by us."}), ["em dash"]),
-    ("whether you're", "description", lambda j: j.update(description="Whether you're new to it or not, two songs."), ["whether-youre"]),
+    (
+        "whether you're",
+        "description",
+        lambda j: j.update(description="Whether you're new to it or not, two songs."),
+        ["whether-you're framing"],
+    ),
     (
         "banned word in a panel quote",
         "panel.quotes.ann-artist--first-song.q",

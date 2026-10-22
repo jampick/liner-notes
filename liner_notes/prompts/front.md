@@ -1,6 +1,6 @@
 +++
 id = "front"
-version = 1
+version = 2
 description = "The journey's front page: title, kicker, lede, the express route, the page's small copy and the threads between songs."
 +++
 # Liner Notes: front page brief
@@ -16,7 +16,7 @@ The journey's heuristic, its eras, its songs with their notes, and the panel (if
 - `description`: one plain sentence for search results and link previews: how many songs, from what to what, and what the page gives you.
 - `lede`: one paragraph, 60 to 120 words, that opens the page. Start with a person, a place or a fact from the story, not with the genre's definition. End by saying what the page is: these songs, one at a time, in the order the records came out.
 - `express`: four or five songs, one per era where you can, for someone with ten minutes, and a one-line `note` on whose picks they are ("the Purist's one-per-era picks").
-- `copy`: the small text on the page. `start` (the play button, two to four words with a little of the journey's flavour), `resume`, `express`, `panelNote` (if there's a panel, say plainly it's invented and the facts under each song are real and sourced), `endKept`, `endEmpty` and `credits` (who picked the songs, where the research came from, where previews and pictures came from).
+- `copy`: the small text on the page. `start` (the play button, two to four words with a little of the journey's flavour), `resume`, `express`, `companion` (one line for someone already playing the full playlist in their player), `panelNote` (if there's a panel, say plainly it's invented and the facts under each song are real and sourced), `endKept` and `endEmpty`. Don't write the credits: the tool works out who picked, wrote and reviewed what from the journey's files.
 - `threads`: connections between two songs on the journey: a shared sample, singer, player, producer, studio, label, writer, city, or an influence. Each has `from` and `to` (song ids from the inputs), a `kind` (sample, singer, producer, session, influence, soundtrack, city, label, writer) and a one-sentence `note`. Only threads the notes back up.
 
 ## Voice

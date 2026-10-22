@@ -164,7 +164,7 @@ def test_picture_brief_allows_gear_names_not_lettering():
 
 def test_dates_brief_keeps_an_unconfirmed_year():
     t = method.load_prompt("dates").text
-    assert 'confidence "low"' in t and "(or as it was)" not in t
+    assert '`confidence` "low"' in t and "(or as it was)" not in t
 
 
 def test_front_brief_leaves_credits_to_the_tool():

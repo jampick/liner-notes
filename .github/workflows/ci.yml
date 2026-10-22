@@ -52,6 +52,8 @@ jobs:
           n=$(tail -n 1 /tmp/list.txt | cut -d' ' -f1)
           test "$n" -gt 200 || { echo "only $n songs in the bank"; exit 1; }
           /tmp/clean/bin/liner-notes check
+          # every brief loads from the installed wheel, with the house style filled in
+          /tmp/clean/bin/python -c 'from liner_notes.method import NAMES, load_prompt; [print(n, load_prompt(n).version) for n in NAMES]'
       - name: A review lands in user data and leaves site-packages alone
         working-directory: /tmp
         env:

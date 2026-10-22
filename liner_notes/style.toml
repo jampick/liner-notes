@@ -4,12 +4,18 @@
 # (titles, artists, albums, cities, labels, gear) and URLs aren't checked.
 #
 # Change a rule here and both sides change: the next prompt a writer gets, and what check refuses.
-# Bump `version` when you do, so a stage's hash shows the brief changed.
+# A loaded prompt has these rules filled in, so a stage that hashes the prompt's text sees the change.
+# Bump `version` too, as a note to people.
+#
+# You can add to this list without editing the package: put a style.toml beside your config.toml
+# (~/.config/liner-notes/style.toml) with more [words] banned and more [names] allowed. It can't
+# remove anything here.
 version = 1
 
 [words]
-# The owner's stock vocabulary, plus the hype words the writer briefs already banned. Matched as whole
-# words in any case, with the plain inflections (delves, navigating, crucially).
+# Words that make prose sound written by committee, plus hype words. Matched as whole words in any
+# case, with the plain inflections (delves, navigating, crucially, legendarily). Derived nouns such
+# as vibrancy aren't matched.
 banned = [
   "delve",
   "tapestry",
@@ -33,32 +39,41 @@ say = "None of these words, in any form: {words}."
 fix = "say the plain thing instead"
 
 [names]
-# Proper nouns that would trip a rule. They're taken out of the text, matching case, before any rule
-# runs, so "Simply Red" passes and "simply put" doesn't.
-allowed = ["Simply Red", "Testament"]
+# Proper nouns that would trip a rule. They're taken out of the text, matching case and on word
+# boundaries, before any rule runs, so "Simply Red" passes and "simply put" and "Simply Redundant"
+# don't. A banned word with a capital letter in the middle of a sentence is probably a name, and
+# check says how to add it to your own list.
+allowed = ["Simply Red"]
 
 # Constructions are regular expressions (Python `re`), matched against the text with the allowed names
-# taken out. `say` is the line the prompts carry, `fix` is the end of check's message.
+# and any URLs taken out. `name` is what check calls the rule, `say` is the line the prompts carry,
+# `fix` is the end of check's message.
 [[constructions]]
 id = "em-dash"
-pattern = "\u2014"
-say = "No em dashes at all. Use commas, periods or parentheses. En dashes only in year ranges like 1976\u201378."
+name = "em dash"
+# the em dash, the horizontal bar, and the stand-ins: a spaced en dash or two hyphens. A year range
+# like 1976\u201378 has no spaces, so it passes.
+pattern = '\u2014|\u2015|\s\u2013\s|\s--\s'
+say = "No em dashes at all, and no spaced en dash or double hyphen standing in for one. Use commas, periods or parentheses. En dashes only in year ranges like 1976\u201378."
 fix = "use a comma, a period or parentheses"
 
 [[constructions]]
 id = "not-x-its-y"
+name = "it's-not-X-it's-Y framing"
 pattern = '''(?i)\b(?:it|this|that)(?:\s+(?:is|was)\s+not|['\u2019]s\s+not|\s+(?:isn|wasn)['\u2019]t)\b(?!\s+(?:until|only|just|yet)\b)[^.;:!?,]{1,40}[,;]\s*(?:it|this|that)(?:['\u2019]s|\s+(?:is|was))\b'''
 say = "No \"it's not X, it's Y\" framing that knocks down a claim nobody made."
 fix = "say what it is and drop the contrast"
 
 [[constructions]]
 id = "whether-youre"
+name = "whether-you're framing"
 pattern = '''(?i)\bwhether\s+you(?:['\u2019]re|\s+are)\b'''
 say = "No \"whether you're X or Y\" framing of the reader."
 fix = "talk about the record, not the reader"
 
 [[constructions]]
 id = "heres-the"
+name = "here's-the signpost"
 pattern = '''(?i)\bhere['\u2019]s\s+the\s+(?:thing|kicker|key|takeaway|catch)\b'''
 say = "No signposting like \"here's the thing\". Say the thing."
 fix = "cut the signpost and say the thing"
@@ -72,8 +87,8 @@ fix = "cut the signpost and say the thing"
 #   - or `line` or `lines` right against the quote ("the opening line, '...'", "the '...' line"),
 #     unless the word ahead of it says it's another kind of line (`not_lyric`: a bass line, a panel
 #     line, a chat-up line).
-# A quote with one of the `speech` verbs among the words ahead of it is someone talking ("Scaggs said
-# '...'"), not a lyric. On the shipped bank this gives no false positives. It misses a lyric quoted
+# A quote with one of the `speech` verbs anywhere ahead of it in the same sentence is someone talking
+# ("Scaggs said '...'", "Rolling Stone wrote that the hook was '...'"), not a lyric. On the shipped bank this gives no false positives. It misses a lyric quoted
 # with no cue nearby; the prompts ask writers not to, and a person reviewing the song is the backstop.
 min_words = 3
 before = 4
