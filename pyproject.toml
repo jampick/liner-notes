@@ -27,6 +27,10 @@ include = ["liner_notes*"]
 [tool.setuptools.package-data]
 liner_notes = ["web/*", "prompts/*", "data/*", "schemas/*.json", "shipped/**/*"]
 
+[tool.setuptools.exclude-package-data]
+# The journeys' working notes stay in the repo; the tool doesn't read them.
+liner_notes = ["shipped/journeys/*/REVIEW.md", "shipped/journeys/*/CORRECTIONS.md"]
+
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]

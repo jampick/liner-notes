@@ -120,14 +120,17 @@ def cmd_migrate(a):
 
 
 def cmd_list(a):
+    from . import overlay
+
     bank = Bank()
     for slug, j in sorted(bank.journeys.items()):
         built = "built" if (paths.dist() / f"{slug}.html").exists() else "not built"
         if j.get("kind") == "remix":
             print(f"{slug:24} {j['title']:28} {len(j.get('remixes') or []):3} remixes  {built}")
             continue
-        reviewed = sum(1 for s in j["songs"] if (bank.songs.get(s, {}).get("review") or {}).get("state") == "reviewed")
-        print(f"{slug:24} {j['title']:28} {len(j['songs']):3} songs  {reviewed:3} reviewed  {built}")
+        reviewed, yours = overlay.review_counts(j["songs"], bank)
+        more = f"  (+{yours} in your copies)" if yours else ""
+        print(f"{slug:24} {j['title']:28} {len(j['songs']):3} songs  {reviewed:3} reviewed  {built}{more}")
     print(f"{len(bank.songs)} songs in the bank")
 
 
@@ -187,14 +190,15 @@ def cmd_generate(a):
 def cmd_review(a):
     """Mark songs as checked by a person, after you've read them against their sources.
 
-    The review goes into your copy in user data (an overlay) and counts as yours alone. --shipped
-    is for the maintainer: it marks the shipped file itself, and only in a git checkout.
+    The review goes into your copy in user data and counts as yours alone. --shipped is for the
+    maintainer: it marks the shipped file itself, and only in a git checkout.
     """
     from . import overlay
 
     if not a.undo and not (a.by or "").strip():
         sys.exit(
-            "liner-notes: review needs --by NAME, the name to record as the reviewer (it goes into the song file, so pick one you are happy to share)"
+            "liner-notes: review needs --by NAME, the name to record as the reviewer. "
+            "It's saved in your copy of the song, and goes with it if you ever share the file"
         )
     bank = Bank()
     review = {
@@ -218,15 +222,43 @@ def cmd_review(a):
             write_json(f, s)
             print(f"{sid}: {review['state']} in the shipped file {f}")
             continue
+        shipped = overlay.shipped_song(sid)
+        if a.undo:
+            f = overlay.copy_path(sid)
+            if not f.is_file():
+                print(f"{sid}: nothing to undo, you have no copy of it")
+                continue
+            s = read_json(f)
+            if s.get("base") and overlay.only_review_differs(s, shipped):
+                f.unlink()
+                print(f"{sid}: your review is gone; you're reading the shipped song again")
+                continue
+            s["review"] = review
+            overlay.write(f, s)
+            print(f"{sid}: back to draft in your copy, {f}. The copy stays because it has other changes")
+            continue
         f, s = overlay.copy_for_writing(sid, bank)
         s["review"] = review
         overlay.write(f, s)
-        if a.undo:
-            print(f"{sid}: back to draft in your copy, {f}")
-        else:
+        if s.get("base"):
             print(
                 f"{sid}: reviewed by {review['by']} in your copy, {f}. This is your review; the shipped song stays as the maintainer left it"
             )
+        else:
+            print(f"{sid}: reviewed by {review['by']}, in {f}")
+    if not a.shipped and paths.checkout():
+        print("In this checkout, review --shipped marks the shipped file instead (that's the maintainer's review)")
+
+
+def cmd_drop(a):
+    from . import overlay
+
+    rc = 0
+    for ident in a.ids:
+        ok, msg = overlay.drop(ident)
+        print(msg)
+        rc = rc or (0 if ok else 1)
+    return rc
 
 
 def parser():
@@ -322,12 +354,16 @@ def parser():
     p.add_argument("--effort", default="medium", choices=["low", "medium", "high", "xhigh", "max"])
     p.set_defaults(fn=cmd_generate)
 
-    p = sub.add_parser("review", help="mark songs as checked by a person")
-    p.add_argument("songs", nargs="+")
-    p.add_argument("--by", metavar="NAME", help="who reviewed it (required, and written into the file)")
-    p.add_argument("--undo", action="store_true")
+    p = sub.add_parser("review", help="mark songs as checked by a person (your review, kept in your copy)")
+    p.add_argument("songs", nargs="+", metavar="ID", help="song ids, like steely-dan--peg (the file names in the bank)")
+    p.add_argument("--by", metavar="NAME", help="who reviewed it (required; saved in your copy of the song)")
+    p.add_argument("--undo", action="store_true", help="put the song back to draft, and drop your copy if the review was all it held")
     p.add_argument("--shipped", action="store_true", help="maintainer only, in a git checkout: mark the shipped file itself")
     p.set_defaults(fn=cmd_review)
+
+    p = sub.add_parser("drop", help="remove your copy of a shipped song or journey, so you read the shipped one again")
+    p.add_argument("ids", nargs="+", metavar="ID", help="song ids or journey slugs")
+    p.set_defaults(fn=cmd_drop)
 
     p = sub.add_parser("watch-page")  # internal: started by play, remembers where the page window is moved
     p.add_argument("address")

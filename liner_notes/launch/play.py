@@ -48,7 +48,7 @@ def set_offline(on):
     f = offline_file()
     if on:
         f.parent.mkdir(parents=True, exist_ok=True)
-        f.write_text("on\n")
+        paths.guard(f).write_text("on\n")
     else:
         f.unlink(missing_ok=True)
 

@@ -407,7 +407,8 @@ def fixtures(out):
         (out / d).mkdir(parents=True, exist_ok=True)
     slug = "downtempo-drift"
     empty_cache = Path(tempfile.mkdtemp())  # no covers, the way a fresh install starts
-    data, _, meta = build.compose(slug, Bank(), cache=empty_cache)
+    bank = Bank()
+    data, _, meta = build.compose(slug, bank, cache=empty_cache)
     (out / "dist" / f"{slug}.html").write_text(build.render(data, meta))
     # A second journey, to check the switch between journeys: the same notes under another slug.
     other = dict(data, slug="drift-b", title="Drift B", titleA="Drift", titleB="B")
@@ -460,6 +461,8 @@ def fixtures(out):
         "still_stops": [pick(s) for s in stops[4:8]],
         "video_stops": [pick(s) for s in stops[:4]],
         "videos": have_video,
+        # The journey's threads by song id, so scenarios needn't know where the bank sits on disk.
+        "threads": bank.journeys[slug].get("threads") or [],
         "remix": remix_ids,
         # A song from a playlist with no journey, with a cover in the cache.
         "offsong": {

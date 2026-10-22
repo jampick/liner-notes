@@ -504,8 +504,7 @@ scenarios['no-drift-over-cliamp'] = async () => {
 // straight to that song, era card or not.
 scenarios['thread-cards'] = async () => {
   const m = M(), byId = new Map(m.stops.map(s => [s.id, s]));
-  const J = JSON.parse(fs.readFileSync(path.join(ROOT, 'journeys', m.slug, 'journey.json')));
-  const th = J.threads.find(t => byId.has(t.from) && byId.has(t.to) && byId.get(t.from).era !== byId.get(t.to).era && t.note);
+  const th = (m.threads || []).find(t => byId.has(t.from) && byId.has(t.to) && byId.get(t.from).era !== byId.get(t.to).era && t.note);
   if (!check('fixture has a thread across eras', !!th)) return;
   const from = byId.get(th.from), to = byId.get(th.to);
   put({ now: { ok: false, reason: 'stopped' } });

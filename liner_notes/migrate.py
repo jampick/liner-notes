@@ -134,7 +134,7 @@ def migrate(folder, root=None, cache=None, log=print):
         dest = cache / "covers" / f"{sid}.webp"
         if cover.exists() and not dest.exists():
             dest.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(cover, dest)
+            shutil.copy2(cover, paths.guard(dest))
 
     # Culture: years into the year bank, per-song items into the songs, artists into one map.
     artists = {}
@@ -168,7 +168,7 @@ def migrate(folder, root=None, cache=None, log=print):
             dest = cache / sub / p.name
             if not dest.exists():
                 dest.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(p, dest)
+                shutil.copy2(p, paths.guard(dest))
     sc = folder / "stage-cache.json"
     if sc.exists():
         hf = cache / "http.json"
@@ -186,7 +186,7 @@ def migrate(folder, root=None, cache=None, log=print):
         img = folder / "media/eras" / f"era{n}.webp"
         if img.exists():
             (jdir / "media/eras").mkdir(parents=True, exist_ok=True)
-            shutil.copy2(img, jdir / "media/eras" / img.name)
+            shutil.copy2(img, paths.guard(jdir / "media/eras" / img.name))
         eras.append(
             {
                 "n": n,
@@ -253,7 +253,7 @@ def migrate(folder, root=None, cache=None, log=print):
     }
     write_json(jdir / "journey.json", journey)
     if (folder / "CORRECTIONS.md").exists():
-        shutil.copy2(folder / "CORRECTIONS.md", jdir / "CORRECTIONS.md")
+        shutil.copy2(folder / "CORRECTIONS.md", paths.guard(jdir / "CORRECTIONS.md"))
     _review_todo(jdir, journey, root)
     log(f"{slug}: {len(order)} songs ({created} new, {merged} already in the bank), {len(eras)} eras, {len(threads)} threads")
     return journey
@@ -274,7 +274,7 @@ def _review_todo(jdir, journey, root):
         lines.append(f"- [{mark}] `{sid}` {s['title']}, {s['artist']} ({s['year']})")
         if s["notes"].get("unverified"):
             lines.append(f"    - writer couldn't confirm: {s['notes']['unverified']}")
-    (jdir / "REVIEW.md").write_text("\n".join(lines) + "\n")
+    paths.atomic_write(jdir / "REVIEW.md", "\n".join(lines) + "\n")
 
 
 def migrate_remix(folder, root=None, log=print):

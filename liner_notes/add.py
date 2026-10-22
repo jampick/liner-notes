@@ -53,7 +53,7 @@ def add(slug, provider="youtube", dry_run=False, force=False, log=print):
         if dest.exists() and not force:
             raise SystemExit(f"liner-notes: {dest} already exists; --force replaces it")
         dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_text(text)
+        paths.guard(dest).write_text(text)
         log(f"wrote {dest} ({len(j['songs']) - len(skipped)} tracks). In cliamp: L, then pick {j['title']!r}.")
         return dest
 

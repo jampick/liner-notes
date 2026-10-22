@@ -238,7 +238,7 @@ def chromium_step(pilot_state, procs=None):
 
 def copy_profile(src, dest):
     """Copy a Chromium profile without its caches or locks, all or nothing. Returns the files copied."""
-    tmp = dest.with_name(f".{dest.name}.tmp")
+    tmp = paths.guard(dest).with_name(f".{dest.name}.tmp")
     if tmp.exists():
         shutil.rmtree(tmp)
     shutil.copytree(src, tmp, symlinks=True, ignore=shutil.ignore_patterns(*CHROMIUM_SKIP))
@@ -316,6 +316,7 @@ def run(src, dry_run=False, bank=None, pilot_cache=None, pilot_state=None, log=p
 
 def _apply(s):
     """One step. Returns what happened: copied, hardlink, symlink, profile, same or differs."""
+    paths.guard(s.dest)
     s.dest.parent.mkdir(parents=True, exist_ok=True)
     if s.how == "profile":
         blob = json.dumps(s.blob)

@@ -10,7 +10,7 @@ em dashes, and every written song lists sources.
 import json
 import re
 
-from . import paths
+from . import overlay, paths
 from .bank import Bank, read_json
 
 TYPES = {"object": dict, "array": list, "string": str, "integer": int, "number": (int, float), "boolean": bool, "null": type(None)}
@@ -103,13 +103,14 @@ def check(log=print):
             if sid not in songs:
                 problems.append(f"{slug}: panel quote for {sid}, which isn't in the journey")
         written = [s for s in j["songs"] if (bank.songs.get(s, {}).get("notes") or {}).get("made")]
-        reviewed = [s for s in j["songs"] if (bank.songs.get(s, {}).get("review") or {}).get("state") == "reviewed"]
-        notes.append(f"{slug}: {len(j['songs'])} songs, {len(written)} written, {len(reviewed)} reviewed by a person")
+        reviewed, yours = overlay.review_counts(j["songs"], bank)
+        more = f", {yours} more in your copies" if yours else " by a person"
+        notes.append(f"{slug}: {len(j['songs'])} songs, {len(written)} written, {reviewed} reviewed{more}")
     for n in notes:
         log(n)
     for p in problems:
         log("problem:", p)
-    log(f"{len(bank.songs)} songs, {len(bank.journeys)} journeys, {len(problems)} problems")
+    log(f"{len(bank.songs)} songs, {len(bank.journeys)} journeys, {len(problems)} problem{'' if len(problems) == 1 else 's'}")
     return 1 if problems else 0
 
 

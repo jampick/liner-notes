@@ -152,9 +152,21 @@ def audio_file(yt):
     return None
 
 
+def guard(path):
+    """Refuse a write into an installed package. Every writer calls this, through atomic_write or directly.
+
+    Keyed on where the package itself lives, not on LINER_NOTES_HOME: a package with no git checkout
+    around it is an install, whatever the environment says.
+    """
+    path = Path(path)
+    if not (PACKAGE.parent / ".git").exists() and path.resolve().is_relative_to(PACKAGE.resolve()):
+        raise PermissionError(f"liner-notes: not writing {path}: it's inside the installed package. Changes go to {user_data()}")
+    return path
+
+
 def atomic_write(path, data):
     """Write a file so a reader sees the old one or the new one, never half of either."""
-    path = Path(path)
+    path = guard(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     blob = data.encode() if isinstance(data, str) else data
     fd, tmp = tempfile.mkstemp(dir=path.parent, prefix=f".{path.name}.", suffix=".tmp")

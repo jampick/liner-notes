@@ -1,6 +1,6 @@
 The song notes, journey text and culture notes in liner_notes/shipped/
-(songs/, journeys/ and culture/) are licensed under the Creative Commons Attribution-ShareAlike 4.0
-International License (CC BY-SA 4.0).
+(songs/, journeys/ and culture/) are licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
 
 Full legal text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
@@ -10,8 +10,8 @@ say if you changed them, and share your changes under the same licence.
 
 The notes were written by an AI model (Claude, by Anthropic) working from the
 sources listed in each file, and are marked "draft" until a person has checked
-them. The era photographs in liner_notes/shipped/journeys/*/media/eras/ were generated with an AI
-image model and are covered by the same licence.
+them. The era photographs in liner_notes/shipped/journeys/*/media/eras/ were
+generated with an AI image model and are covered by the same licence.
 
 Album covers, Wikipedia pictures, lyrics and audio previews are not part of
 this repository and are not covered by this licence. They belong to their

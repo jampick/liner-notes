@@ -162,17 +162,22 @@ def run(system, songs=False, log=print):
     n_journeys = len(list((shipped / "journeys").glob("*/journey.json")))
     if n_songs:
         line(OK, "bank", f"{_n(n_songs, 'song')} and {_n(n_journeys, 'journey')} shipped in {shipped}")
+        from . import overlay
+
+        for r in overlay.report():
+            line(WARN, "your copy", overlay.describe(*r))
     else:
+        env = os.environ.get("LINER_NOTES_HOME")
+        fix = (
+            f"LINER_NOTES_HOME is set to {env}, which has no songs/. Unset it, or point it at liner_notes/shipped in a checkout."
+            if env
+            else "Reinstall with: pipx reinstall liner-notes"
+        )
         line(
             BAD,
             "bank",
-            f"no songs in {shipped / 'songs'}. The shipped song bank is missing from this install, so every journey "
-            "comes up empty. Reinstall liner-notes, or point LINER_NOTES_HOME at liner_notes/shipped in a checkout.",
+            f"no songs in {shipped / 'songs'}. The shipped song bank is missing, so every journey comes up empty. {fix}",
         )
-    from . import overlay
-
-    for kind, ident, what in overlay.report():
-        line(WARN, f"{kind} overlay", f"{ident}: {overlay.WHY[what]}")
     line(OK, "offline mode", "on: keys load the (offline) twins" if is_offline() else "off")
     have = [m for m in ("numpy", "onnxruntime", "PIL") if importlib.util.find_spec(m)]
     from .depth import model_path
