@@ -286,3 +286,129 @@ def test_the_missed_lyrics_are_gone_from_the_shipped_files():
     review = paths.PACKAGE / "shipped/journeys/sophisti-pop/REVIEW.md"
     if review.exists():
         assert "Marvin all night long" not in review.read_text()
+
+
+# Second fix round.
+
+SUNG = [
+    ("a singing cue beats a speech verb", "In an interview he said little, but in the chorus she sings 'between the moon and the city'."),
+    ("a lyric cue with called", "Called the best thing on the record, the chorus goes 'we only had one take left' twice."),
+]
+
+
+@pytest.mark.parametrize("what,text", SUNG, ids=[c[0] for c in SUNG])
+def test_a_sung_quote_is_a_lyric_whoever_spoke(what, text):
+    assert any("quoted lyric" in p for p in problems_in(text)), what
+
+
+def test_a_listen_for_note_is_read_with_its_where(home):
+    edit(
+        home / SONG,
+        lambda s: s["notes"].update(
+            listen_for=[{"where": "the last lines", "note": "'we were dancing on the roof all night' closes it out."}]
+        ),
+    )
+    code, probs = run_check()
+    assert code == 1 and any(f"{home / SONG}: notes.listen_for[0].note: quoted lyric" in p for p in probs), probs
+
+
+def remix_journey(root):
+    jdir = root / "journeys/remix-trip"
+    jdir.mkdir(parents=True)
+    write_json(
+        jdir / "journey.json",
+        {
+            "slug": "remix-trip",
+            "kind": "remix",
+            "title": "Remix Trip",
+            "description": "Two remixes.",
+            "kicker": "2 remixes",
+            "songs": ["ann-artist--first-song"],
+            "remixes": [
+                {
+                    "title": "First Song (Club Mix)",
+                    "song": "First Song",
+                    "artist": "Ann Artist",
+                    "path": "https://example.org/remix",
+                    "id": "CCCCCCCCCCC",
+                    "original": {"song": "ann-artist--first-song"},
+                }
+            ],
+            "panel": {"quotes": {"First Song": {"who": "A, the Keeper", "quote": "Keeps the hook.", "votes": "5/5"}}},
+        },
+    )
+    return jdir / "journey.json"
+
+
+def test_a_remix_journey_is_checked(home):
+    f = remix_journey(home)
+    assert run_check() == (0, [])
+    edit(f, lambda j: j["panel"]["quotes"]["First Song"].update(quote=f"Keeps the hook {EM} all of it."))
+    code, probs = run_check()
+    assert code == 1 and any(f"{f}: panel.quotes.First Song.quote: em dash" in p for p in probs), probs
+    edit(f, lambda j: j.update(kicker="2 vibrant remixes"))
+    assert any(f"{f}: kicker: banned word" in p for p in run_check()[1])
+
+
+def test_your_banned_words_leave_the_shipped_bank_alone(iso, monkeypatch):  # noqa: F811
+    """Shipped files are judged by the house style; your additions judge your own files."""
+    from liner_notes.method import user_style_path
+
+    monkeypatch.delenv("LINER_NOTES_HOME", raising=False)
+    user_style_path().write_text('[words]\nbanned = ["soulful"]\n')
+    shipped = check.style_check(Bank())
+    assert shipped == [], shipped[:3]
+    mine = iso["data"] / "songs/ann-artist--first-song.json"
+    make_bank(iso["data"])
+    edit(mine, lambda s: s["notes"].update(made="A soulful take."))
+    found = check.style_check(Bank())
+    assert len(found) == 1 and str(mine) in found[0] and "'soulful'" in found[0], found
+
+
+@pytest.mark.parametrize("name", ["Vibrant", "vibrant", "\N{EM DASH}", "Big -- Band"])
+def test_your_style_file_cant_allow_a_house_rule_away(name):
+    from liner_notes.method import MethodError, load_style, user_style_path
+
+    f = user_style_path()
+    f.write_text(f'[names]\nallowed = ["{name}"]\n')
+    with pytest.raises(MethodError) as e:
+        load_style()
+    assert str(f) in str(e.value) and "\n" not in str(e.value)
+
+
+def test_your_style_file_can_allow_a_real_name():
+    from liner_notes.method import load_style, user_style_path
+
+    user_style_path().write_text('[names]\nallowed = ["Robust Records"]\n')
+    assert "Robust Records" in load_style().allowed
+
+
+def test_a_broken_style_file_is_one_line_from_check(home):
+    from liner_notes.method import user_style_path
+
+    f = user_style_path()
+    f.write_text("[words\nbanned = ")
+    said = []
+    code = check.check(log=lambda *a: said.append(" ".join(map(str, a))))
+    assert code == 2 and len(said) == 1 and str(f) in said[0] and "\n" not in said[0], said
+
+
+def test_tests_never_read_your_real_style_file():
+    from pathlib import Path
+
+    from liner_notes.method import user_style_path
+
+    assert not user_style_path().is_relative_to(Path.home() / ".config"), user_style_path()
+
+
+LEFTOVERS = {
+    "songs/steely-dan--hey-nineteen.json": "The Cuervo Gold, the fine Colombian, make tonight",
+    "songs/toto--rosanna.json": "meet you all the way",
+    "journeys/yacht-rock/journey.json": "such a long way to go",
+    "journeys/yacht-house/journey.json": "and I can't let go",
+}
+
+
+def test_the_leftover_lyrics_are_gone_too():
+    for rel, line in LEFTOVERS.items():
+        assert line not in (paths.home() / rel).read_text(), rel

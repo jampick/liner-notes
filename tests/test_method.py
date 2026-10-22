@@ -170,3 +170,40 @@ def test_dates_brief_keeps_an_unconfirmed_year():
 def test_front_brief_leaves_credits_to_the_tool():
     t = method.load_prompt("front").text
     assert "`credits`" not in t and "`companion`" in t
+
+
+# Second fix round.
+
+
+def test_prompt_text_is_the_house_brief_and_render_adds_yours():
+    """text is the same on every machine, so stages can hash it; render is what you send."""
+    before = method.load_prompt("era")
+    f = method.user_style_path()
+    f.write_text('[words]\nbanned = ["groovesome"]\n')
+    p = method.load_prompt("era")
+    assert p.text == before.text and "groovesome" not in p.text
+    out = p.render(inputs="X")
+    assert "groovesome" in out and "X" in out
+    assert out.index("groovesome") > out.index("X") or "## Your additions" in out
+
+
+def test_render_adds_nothing_without_a_style_file():
+    p = method.load_prompt("song")
+    assert p.render() == p.text and generate.brief() == p.render()
+
+
+def test_the_caches_keep_one_entry_per_file():
+    f = method.user_style_path()
+    for i in range(5):
+        f.write_text(f'[words]\nbanned = ["groove{i}"]\n')
+        st = f.stat()
+        import os
+
+        os.utime(f, ns=(st.st_atime_ns, st.st_mtime_ns + (i + 1) * 1_000_000_000))
+        method.load_style()
+        method.load_prompt("era")
+    assert len(method._STYLES) <= 2 and len(method._PROMPTS) <= len(method.NAMES)
+
+
+def test_vote_brief_doesnt_mention_the_removed_example():
+    assert "example" not in method.load_prompt("vote").text.split("## The rule")[0]
