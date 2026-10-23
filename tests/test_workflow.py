@@ -788,9 +788,65 @@ def test_a_quote_the_era_writer_marked_wrong_holds_the_journey_until_its_edited(
     assert "Everyone in the room sings the chorus." in said and "wrong" in said and f"liner-notes accept {SLUG} panel" in said
     assert "B-side" in refused("assemble", SLUG, "--force")
     edit_json(ws["dir"] / "panel.json", lambda p: p["candidates"][0]["quote"].update(q="A top ten hit in 1990."))
-    for name in ("panel", "front"):
+    for name in ("panel", "eras", "front"):
         assert run("accept", SLUG, name) == 0
     assert run("assemble", SLUG) == 0
+
+
+def test_a_panel_check_row_must_carry_the_quote_as_it_was_shown(ws, tmp_path, capsys):
+    fill(ws, capsys)
+
+    def trimmed(d):
+        _wrong(d)
+        d["panel_check"][0]["quote"] = "Everyone sings the chorus."
+
+    msg = refused("reply", SLUG, "eras", _era_reply(tmp_path, trimmed), "--era", 1)
+    assert "$.panel_check[0].quote" in msg and "Everyone in the room sings the chorus." in msg and "copy" in msg
+    # Only surrounding whitespace is forgiven.
+    padded = _era_reply(tmp_path, lambda d: (_wrong(d), d["panel_check"][0].update(quote="  Everyone in the room sings the chorus. ")))
+    assert run("reply", SLUG, "eras", padded, "--era", 1) == 0
+
+
+def test_editing_a_quote_sends_the_era_that_carries_it_back_to_its_writer(ws, tmp_path, capsys):
+    fill(ws, capsys, upto="dates")
+    _two_eras(ws)
+    for n, sid in ((1, PICKS[0]), (2, PICKS[1])):
+        assert run("reply", SLUG, "eras", _one_row(tmp_path, sid), "--era", n) == 0
+    assert run("accept", SLUG, "eras") == 0
+    edit_json(ws["dir"] / "panel.json", lambda p: p["candidates"][1]["quote"].update(q="Cut live in one pass at a church hall."))
+    assert run("accept", SLUG, "panel") == 0
+    st = states(capsys)["eras"]
+    assert st["state"] == "stale" and st["stale"] == ["a panel quote in the era changed"]
+    assert "--era 2" in st["next"] and "--era 1" not in st["next"]
+
+
+def test_building_twice_with_no_edits_goes_through(ws, capsys):
+    fill(ws, capsys)
+    assert run("assemble", SLUG) == 0
+    assert run("build", SLUG, "--public") == 0
+    assert run("build", SLUG, "--public") == 0
+
+
+def test_the_vote_brief_seats_as_many_judges_as_the_rule(ws, monkeypatch, capsys):
+    monkeypatch.delenv("LINER_NOTES_PROMPTS")
+    assert run("new", "Small Trip", "--rule", "3/4") == 0
+    assert run("reply", SLUG, "heuristic", FIX / "heuristic.md") == 0
+    capsys.readouterr()
+    assert run("prompt", SLUG, "panel") == 0
+    out = capsys.readouterr().out
+    assert "Seat four judges" in out and "The four judges" in out and "five judges" not in out.lower()
+
+
+def test_status_counts_one_candidate_in_the_singular(ws, tmp_path, capsys):
+    fill(ws, capsys, upto="heuristic")
+    p = read_json(FIX / "panel.json")
+    _off_bank(p)
+    write(tmp_path / "panel.json", p)
+    assert run("reply", SLUG, "panel", tmp_path / "panel.json") == 0
+    capsys.readouterr()
+    run("status", SLUG)
+    out = capsys.readouterr().out
+    assert "1 candidate not in your bank" in out
 
 
 def test_an_unconfirmed_quote_is_a_warning_not_a_hold(ws, tmp_path, capsys):
