@@ -24,6 +24,14 @@
    "verdict": "holds",
    "note": "",
    "source": "https://example.org/a"
+  },
+  {
+   "song": "bob-band--second-song",
+   "judge": "pia",
+   "quote": "Their best take, cut live in one pass.",
+   "verdict": "holds",
+   "note": "",
+   "source": "https://example.org/a"
   }
  ]
 }

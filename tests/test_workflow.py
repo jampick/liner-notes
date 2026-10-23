@@ -37,7 +37,10 @@ def ws(iso, tmp_path, monkeypatch):
     shutil.copytree(FIX / "prompts", prompts)
     monkeypatch.setenv("LINER_NOTES_PROMPTS", str(prompts))
     monkeypatch.setitem(sys.modules, "anthropic", None)  # nothing here may create a client
-    return {"dir": iso["data"] / "work" / SLUG, "prompts": prompts, **iso}
+    from liner_notes.workflow import journeytoml
+
+    # The folder the code under test uses, so a run against older code fails on behaviour, not on a path.
+    return {"dir": journeytoml.folder(SLUG), "prompts": prompts, **iso}
 
 
 def run(*argv):
@@ -493,7 +496,9 @@ def test_the_rule_is_the_journeys_and_a_reply_cant_change_it(ws, tmp_path, capsy
     assert run("new", "Small Trip", "--rule", "3/5") == 0
     assert status(capsys)["rule"] == {"yes": 3, "of": 5, "veto": True}
     run("reply", SLUG, "heuristic", FIX / "heuristic.md")
-    assert run("reply", SLUG, "panel", FIX / "panel.json") == 0
+    r = tmp_path / "reply.json"
+    write(r, {k: v for k, v in read_json(FIX / "panel.json").items() if k != "rule"})
+    assert run("reply", SLUG, "panel", r) == 0
     assert "dee-duo--fourth-song" in status(capsys)["picks"]  # 3 yes votes pass a 3 of 5 rule
     r = tmp_path / "reply.json"
     write(r, read_json(FIX / "panel.json") | {"rule": {"yes": 1, "of": 5}})
@@ -614,8 +619,8 @@ def test_assemble_writes_a_journey_the_page_reads_and_only_build_makes_it_live(w
     capsys.readouterr()
     run("list")
     assert SLUG not in capsys.readouterr().out
-    page = tmp_path / "page.html"
-    assert run("build", SLUG, "--public", "--out", page) == 0
+    assert run("build", SLUG, "--public") == 0
+    page = ws["dist"] / f"{SLUG}.public.html"
     assert SLUG in Bank().journeys and (ws["data"] / "journeys" / SLUG / "media/eras/era1.webp").exists()
     data = json.loads(page.read_text().split("window.JOURNEY = ", 1)[1].split(";</script>", 1)[0])
     assert [s["title"] for s in data["stops"]] == ["First Song", "Second Song"]
@@ -702,8 +707,8 @@ def test_a_build_that_refuses_the_page_leaves_the_journey_off_the_bank(ws, tmp_p
     fill(ws, capsys)
     assert run("assemble", SLUG) == 0
     (ws["dir"] / "media/eras/era1.webp").unlink()  # the page refuses an era with no picture
-    assert run("build", SLUG, "--public", "--out", tmp_path / "page.html") == 1
-    assert SLUG not in Bank().journeys
+    assert run("build", SLUG, "--public") == 1
+    assert SLUG not in Bank().journeys and not (ws["data"] / "journeys" / SLUG).exists()
 
 
 def test_every_stage_renders_from_the_shipped_briefs_with_nothing_left_unfilled(ws, monkeypatch, capsys):
@@ -732,3 +737,329 @@ def test_accept_clears_a_prompt_nobody_answered(ws, capsys):
     assert "rendered" in tomllib.loads((ws["dir"] / "journey.toml").read_text())["stages"]["front"]
     assert run("accept", SLUG, "front") == 0
     assert "rendered" not in tomllib.loads((ws["dir"] / "journey.toml").read_text())["stages"]["front"]
+
+
+# third round: the panel_check is read
+
+
+def _era_reply(tmp_path, fn):
+    d = read_json(FIX / "era-1.json")
+    fn(d)
+    r = tmp_path / "era.json"
+    write(r, d)
+    return r
+
+
+def test_an_era_reply_needs_a_row_for_every_panel_quote_it_was_shown(ws, tmp_path, capsys):
+    fill(ws, capsys, upto="dates")
+    eras_skeleton(ws)
+    r = _era_reply(tmp_path, lambda d: d["panel_check"].pop())
+    msg = refused("reply", SLUG, "eras", r, "--era", 1)
+    assert "$.panel_check" in msg and "bob-band--second-song" in msg
+    r = _era_reply(tmp_path, lambda d: d.pop("panel_check"))
+    assert "$.panel_check" in refused("reply", SLUG, "eras", r, "--era", 1)
+
+
+def test_an_era_reply_lands_with_its_sources_and_panel_check(ws, capsys):
+    fill(ws, capsys)
+    era = read_json(ws["dir"] / "eras.json")["eras"][0]
+    assert era["sources"] == ["https://example.org/a"] and era["unverified"] == "" and len(era["panel_check"]) == 2
+
+
+def test_an_era_reply_cant_rename_an_era_the_person_named(ws, tmp_path, capsys):
+    fill(ws, capsys, upto="dates")
+    eras_skeleton(ws)
+    r = _era_reply(tmp_path, lambda d: d.update(name="A writer's name"))
+    assert run("reply", SLUG, "eras", r, "--era", 1) == 0
+    assert read_json(ws["dir"] / "eras.json")["eras"][0]["name"] == "The small years"
+
+
+def _wrong(d):
+    d["panel_check"][0].update(verdict="wrong", note="It was a B-side, never sung by the whole room.")
+
+
+def test_a_quote_the_era_writer_marked_wrong_holds_the_journey_until_its_edited(ws, tmp_path, capsys):
+    fill(ws, capsys)
+    assert run("reply", SLUG, "eras", _era_reply(tmp_path, _wrong), "--era", 1) == 0
+    assert run("accept", SLUG, "eras") == 0
+    assert run("accept", SLUG, "front") == 0
+    st = status(capsys)
+    assert st["ready"] is False
+    said = " ".join(st["problems"])
+    assert "Everyone in the room sings the chorus." in said and "wrong" in said and f"liner-notes accept {SLUG} panel" in said
+    assert "B-side" in refused("assemble", SLUG, "--force")
+    edit_json(ws["dir"] / "panel.json", lambda p: p["candidates"][0]["quote"].update(q="A top ten hit in 1990."))
+    for name in ("panel", "front"):
+        assert run("accept", SLUG, name) == 0
+    assert run("assemble", SLUG) == 0
+
+
+def test_an_unconfirmed_quote_is_a_warning_not_a_hold(ws, tmp_path, capsys):
+    fill(ws, capsys)
+    r = _era_reply(tmp_path, lambda d: d["panel_check"][0].update(verdict="unconfirmed", note="No source either way."))
+    assert run("reply", SLUG, "eras", r, "--era", 1) == 0
+    assert run("accept", SLUG, "eras") == 0
+    assert run("accept", SLUG, "front") == 0
+    got = out_json(capsys, "assemble", SLUG)
+    assert any("unconfirmed" in w for w in got["warnings"])
+
+
+# only picks need the bank
+
+
+def _off_bank(p):
+    p["candidates"][4].update(title="Nobody Knows", artist="No Band")
+    del p["candidates"][4]["song"]
+
+
+def test_a_cut_candidate_the_bank_doesnt_have_stays_in_the_panel(ws, tmp_path, capsys):
+    fill(ws, capsys, upto="heuristic")
+    p = read_json(FIX / "panel.json")
+    _off_bank(p)
+    r = tmp_path / "panel.json"
+    write(r, p)
+    got = out_json(capsys, "reply", SLUG, "panel", r)
+    assert "1 not in your bank" in got["summary"]
+    assert read_json(ws["dir"] / "panel.json")["candidates"][4]["song"] == "no-band--nobody-knows"
+    assert run("accept", SLUG, "panel") == 0
+    st = status(capsys)
+    assert st["candidates_not_in_bank"] == ["no-band--nobody-knows"] and st["picks"] == PICKS
+
+
+def test_a_pick_the_bank_doesnt_have_is_accepted_and_holds_assemble(ws, tmp_path, capsys):
+    fill(ws, capsys, upto="heuristic")
+    p = read_json(FIX / "panel.json")
+    p["candidates"][1].update(title="New Song", artist="Unknown Band")
+    del p["candidates"][1]["song"]
+    r = tmp_path / "panel.json"
+    write(r, p)
+    assert run("reply", SLUG, "panel", r) == 0
+    assert run("accept", SLUG, "panel") == 0
+    st = status(capsys)
+    assert st["songs_missing"] == ["unknown-band--new-song"] and st["ready"] is False
+
+
+def test_the_panel_prompt_for_an_idea_lists_the_banks_songs(ws, capsys):
+    fill(ws, capsys, upto="heuristic")
+    assert run("prompt", SLUG, "panel") == 0
+    out = capsys.readouterr().out
+    assert "cat-crew--third-song" in out and "Fay Five" in out
+
+
+def test_a_playlist_song_the_bank_doesnt_have_never_assembles(ws, tmp_path, capsys):
+    m3u = tmp_path / "list.m3u"
+    m3u.write_text(M3U + "#EXTINF:-1,Unknown Band - New Song\nhttps://example.org/3\n")
+    assert run("new", "Small Trip", "--from", m3u) == 0
+    assert run("reply", SLUG, "heuristic", FIX / "heuristic.md") == 0
+    d = read_json(FIX / "dates.json")
+    d["songs"].append(
+        {"song": "unknown-band--new-song", "year": 1991, "source": "writer", "confidence": "low", "url": "https://example.org/c"}
+    )
+    write(tmp_path / "dates.json", d)
+    assert run("reply", SLUG, "dates", tmp_path / "dates.json") == 0
+    eras_skeleton(ws)
+    assert run("reply", SLUG, "eras", _era_reply(tmp_path, lambda d: d.update(panel_check=[])), "--era", 1) == 0
+    assert run("reply", SLUG, "front", FIX / "front.json") == 0
+    for name in ("heuristic", "dates", "eras", "front"):
+        assert run("accept", SLUG, name) == 0
+    st = status(capsys)
+    assert st["songs_missing"] == ["unknown-band--new-song"] and st["ready"] is False
+    assert "unknown-band--new-song" in refused("assemble", SLUG, "--force")
+
+
+# every pick has its own quote
+
+
+def test_a_pick_without_a_quote_is_refused_and_a_hand_edit_without_one_is_broken(ws, tmp_path, capsys):
+    fill(ws, capsys, upto="heuristic")
+    p = read_json(FIX / "panel.json")
+    del p["candidates"][1]["quote"]
+    r = tmp_path / "panel.json"
+    write(r, p)
+    assert "$.candidates[1].quote" in refused("reply", SLUG, "panel", r)
+    assert run("reply", SLUG, "panel", FIX / "panel.json") == 0
+    edit_json(ws["dir"] / "panel.json", lambda p: p["candidates"][0].pop("quote"))
+    assert states(capsys)["panel"]["state"] == "broken"
+
+
+# eras staleness clears era by era
+
+
+def _two_eras(ws):
+    eras_skeleton(ws)
+    write(ws["dir"] / "eras.json", {"eras": [{"name": "Early", "from": 1990, "to": 1990}, {"name": "Late", "from": 1991, "to": 1991}]})
+
+
+def _one_row(tmp_path, sid):
+    return _era_reply(tmp_path, lambda d: d.update(panel_check=[x for x in d["panel_check"] if x["song"] == sid]))
+
+
+def test_eras_staleness_clears_once_each_era_is_redone(ws, tmp_path, capsys):
+    fill(ws, capsys, upto="dates")
+    _two_eras(ws)
+    for n, sid in ((1, PICKS[0]), (2, PICKS[1])):
+        assert run("prompt", SLUG, "eras", "--era", n) == 0
+        assert run("reply", SLUG, "eras", _one_row(tmp_path, sid), "--era", n) == 0
+    assert run("accept", SLUG, "eras") == 0
+    with open(ws["dir"] / "heuristic.md", "a") as f:
+        f.write("One more rule.\n")
+    assert run("accept", SLUG, "heuristic") == 0
+    assert run("prompt", SLUG, "eras", "--era", 2) == 0
+    assert run("reply", SLUG, "eras", _one_row(tmp_path, PICKS[1]), "--era", 2) == 0
+    st = states(capsys)["eras"]
+    assert st["state"] == "stale" and "--era 1" in st["next"] and "--era 2" not in st["next"]
+    assert run("prompt", SLUG, "eras", "--era", 1) == 0
+    assert run("reply", SLUG, "eras", _one_row(tmp_path, PICKS[0]), "--era", 1) == 0
+    assert states(capsys)["eras"]["state"] == "draft"
+
+
+# the house style at accept and assemble
+
+
+def test_accept_checks_the_house_style_of_a_hand_edit(ws, capsys):
+    fill(ws, capsys)
+    edit_json(ws["dir"] / "front.json", lambda d: d.update(kicker="Two songs — 1990 to 1991"))
+    assert "$.kicker" in refused("accept", SLUG, "front")
+
+
+def test_assemble_checks_the_house_style_of_the_files_as_they_are(ws, capsys):
+    fill(ws, capsys)
+    f = Path(os.environ["LINER_NOTES_STYLE"])
+    f.write_text('[words]\nbanned = ["rehearsal"]\n')
+    touch_later(f)
+    assert status(capsys)["ready"] is False
+    msg = refused("assemble", SLUG, "--force")
+    assert "rehearsal" in msg and "eras.json" in msg
+
+
+# era pictures
+
+
+def test_an_era_picture_outside_media_is_refused_at_assemble(ws, capsys):
+    fill(ws, capsys)
+    (ws["dir"] / "era1.webp").write_bytes(b"RIFF0000WEBPVP8 ")
+    edit_json(ws["dir"] / "eras.json", lambda d: d["eras"][0].update(image="era1.webp"))
+    for name in ("eras", "front"):
+        assert run("accept", SLUG, name) == 0
+    assert "media/" in refused("assemble", SLUG, "--force")
+
+
+def test_a_named_era_picture_thats_missing_is_refused_at_assemble(ws, capsys):
+    fill(ws, capsys)
+    (ws["dir"] / "media/eras/era1.webp").unlink()
+    assert "era1.webp" in refused("assemble", SLUG, "--force")
+
+
+def test_build_says_where_a_missing_era_picture_goes(ws, capsys):
+    fill(ws, capsys)
+    edit_json(ws["dir"] / "eras.json", lambda d: d["eras"][0].pop("image"))
+    for name in ("eras", "front"):
+        assert run("accept", SLUG, name) == 0
+    assert run("assemble", SLUG) == 0
+    capsys.readouterr()
+    assert run("build", SLUG, "--public") == 1
+    said = " ".join(capsys.readouterr())
+    assert "media/" in said and '"image"' in said and "item 8" in said and "--force" in said
+    assert not (ws["data"] / "journeys" / SLUG).exists()
+
+
+# build
+
+
+def test_a_build_with_out_previews_without_publishing(ws, tmp_path, capsys):
+    fill(ws, capsys)
+    assert run("assemble", SLUG) == 0
+    page = tmp_path / "preview.html"
+    assert run("build", SLUG, "--public", "--out", page) == 0
+    assert page.exists() and SLUG not in Bank().journeys and not (ws["data"] / "journeys" / SLUG).exists()
+
+
+def test_a_build_that_crashes_leaves_nothing_behind(ws, monkeypatch, capsys):
+    from liner_notes import build as buildmod
+
+    fill(ws, capsys)
+    assert run("assemble", SLUG) == 0
+
+    def boom(*a, **kw):
+        raise RuntimeError("the template broke")
+
+    monkeypatch.setattr(buildmod, "build", boom)
+    with pytest.raises(RuntimeError):
+        run("build", SLUG, "--public")
+    assert not (ws["data"] / "journeys" / SLUG).exists()
+
+
+def test_build_wont_overwrite_a_hand_edit_to_the_bank_copy_without_replace(ws, capsys):
+    fill(ws, capsys)
+    assert run("assemble", SLUG) == 0
+    assert run("build", SLUG, "--public") == 0
+    mine = ws["data"] / "journeys" / SLUG / "journey.json"
+    edit_json(mine, lambda j: j.update(pins={"ann-artist--first-song": {"youtube": "AAAAAAAAAAA"}}))
+    msg = refused("build", SLUG, "--public")
+    assert "--replace" in msg
+    assert "pins" in read_json(mine) and read_json(mine)["pins"]
+    assert run("build", SLUG, "--public", "--replace") == 0
+    assert read_json(mine)["pins"] == {}
+
+
+# the vote brief takes the journey's rule
+
+
+def test_the_shipped_vote_brief_carries_the_journeys_rule(ws, monkeypatch, capsys):
+    monkeypatch.delenv("LINER_NOTES_PROMPTS")
+    assert run("new", "Small Trip", "--rule", "3/4") == 0
+    assert run("reply", SLUG, "heuristic", FIX / "heuristic.md") == 0
+    capsys.readouterr()
+    assert run("prompt", SLUG, "panel") == 0
+    out = capsys.readouterr().out
+    assert "3 yes votes of 4" in out and "4 yes votes of 5" not in out and "{rule}" not in out
+
+
+# the reviewer's surviving mutants
+
+
+def test_dates_at_equal_rank_to_the_bank_still_hold_assemble(ws, tmp_path, capsys):
+    fill(ws, capsys)
+    f = ws["home"] / "songs" / "ann-artist--first-song.json"
+    edit_json(f, lambda s: s.update(year_source="writer"))
+    assert run("accept", SLUG, "dates") == 0
+    assert run("reply", SLUG, "dates", _corrected_dates(tmp_path)) == 0
+    for name in ("dates", "eras"):
+        assert run("accept", SLUG, name) == 0
+    assert "dates-apply" in refused("assemble", SLUG, "--force")
+
+
+def test_dates_apply_leaves_a_year_that_outranks_dates_json(ws, tmp_path, capsys):
+    fill(ws, capsys)
+    f = ws["home"] / "songs" / "ann-artist--first-song.json"
+    edit_json(f, lambda s: s.update(year_source="person"))
+    assert run("accept", SLUG, "dates") == 0
+    assert run("reply", SLUG, "dates", _corrected_dates(tmp_path)) == 0
+    assert run("accept", SLUG, "dates") == 0
+    assert run("dates-apply", SLUG) == 0
+    assert not (ws["data"] / "songs" / "ann-artist--first-song.json").exists()
+
+
+@pytest.mark.parametrize(
+    "fn, field",
+    [
+        (lambda d: d["songs"][0].update(year=1991, source="writer", corrected_from=1990), "$.songs[0].url"),
+        (lambda d: d["songs"].append(dict(d["songs"][0])), "listed twice"),
+    ],
+)
+def test_a_dates_reply_is_refused_by_field(ws, tmp_path, capsys, fn, field):
+    fill(ws, capsys, upto="panel")
+    d = read_json(FIX / "dates.json")
+    fn(d)
+    r = tmp_path / "dates.json"
+    write(r, d)
+    assert field in refused("reply", SLUG, "dates", r)
+
+
+def test_a_new_reply_field_list_with_the_same_brief_makes_the_stage_stale(ws, monkeypatch, capsys):
+    from liner_notes.workflow import fields
+
+    fill(ws, capsys)
+    real = fields.field_list
+    monkeypatch.setattr(fields, "field_list", lambda s: real(s) + "\n- `mood` (text, optional)")
+    assert "front brief" in " ".join(states(capsys)["front"]["stale"])

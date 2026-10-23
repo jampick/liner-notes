@@ -1,5 +1,9 @@
 {
  "public": false,
+ "rule": {
+  "yes": 4,
+  "of": 5
+ },
  "judges": {
   "pia": {
    "name": "Pia Hartnell",
@@ -85,6 +89,10 @@
      "vote": "yes",
      "why": "Slow dance."
     }
+   },
+   "quote": {
+    "j": "pia",
+    "q": "Their best take, cut live in one pass."
    }
   },
   {
