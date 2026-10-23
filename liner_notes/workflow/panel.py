@@ -51,11 +51,12 @@ def count(panel, rule):
 
 
 def resolve(panel, bank):
-    """Fill in each candidate's song id from the bank, by id, then by artist and title. Returns the
-    candidates it couldn't place, as problem lines."""
+    """Fill in each candidate's song id: the bank's, by id or by artist and title, or for a song the
+    bank doesn't have, the id it would get. Returns the ids the bank doesn't have. A candidate that
+    isn't a pick never needs to be in the bank; a pick does, and assemble holds until it is."""
     by_key = {(key(s.get("artist", "")), key(s.get("title", ""))): sid for sid, s in bank.songs.items()}
-    errs = []
-    for i, c in enumerate(panel.get("candidates") or []):
+    off = []
+    for c in panel.get("candidates") or []:
         if not isinstance(c, dict):
             continue
         sid = c.get("song")
@@ -63,17 +64,13 @@ def resolve(panel, bank):
             continue
         guess = song_id(c.get("artist", ""), c.get("title", ""))
         found = guess if guess in bank.songs else by_key.get((key(c.get("artist", "")), key(c.get("title", ""))))
-        if found:
-            c["song"] = found
-        else:
-            errs.append(
-                f"$.candidates[{i}].song: no song in the bank for {c.get('artist')!r}, {c.get('title')!r} "
-                f"(looked for {sid or guess}); every candidate has to be a song the bank already has"
-            )
-    return errs
+        c["song"] = found or sid or guess
+        if not found:
+            off.append(c["song"])
+    return off
 
 
-def problems(panel, rule, bank=None):
+def problems(panel, rule):
     """The schema, then what it can't say, each as a `$.field: message` line."""
     errs = validate(panel, schema("panel"))
     if errs:
@@ -103,8 +100,6 @@ def problems(panel, rule, bank=None):
             errs.append(f"{at}.song: missing")
         elif sid in seen:
             errs.append(f"{at}.song: {sid} is listed twice")
-        elif bank is not None and sid not in bank.songs:
-            errs.append(f"{at}.song: {sid} isn't in the song bank")
         seen.add(sid)
         for jid in judges:
             if jid not in c["votes"]:
@@ -123,6 +118,8 @@ def problems(panel, rule, bank=None):
             elif veto["by"] not in holders:
                 errs.append(f"{at}.veto.by: {veto['by']} doesn't hold the veto on this panel")
         q = c.get("quote")
+        if not q and verdict(c, rule) == "pick":
+            errs.append(f"{at}.quote: missing; every pick needs a quote of its own for the page, from one judge")
         if q and q["j"] not in judges:
             errs.append(f"{at}.quote.j: {q['j']} isn't a judge on this panel")
     return errs

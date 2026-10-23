@@ -45,8 +45,14 @@ def check(ctx, stages=None):
     for st in stages:
         if st["state"] in SIGN_OFF:
             holds.append(st)
-        if st["state"] in ("not started", "broken"):
-            problems.append(f"{st['name']} is {st['state']}: {st['next']}")
+        if st["state"] == "not started":
+            problems.append(f"{st['name']} is not started: {st['next']}")
+        elif st["state"] == "broken":
+            problems.append(
+                f"{st['name']} is broken, {st['file']}: "
+                + "; ".join(st["problems"])
+                + f". Fix it, then liner-notes accept {ctx.slug} {st['name']}"
+            )
         elif st["problems"]:
             problems.append(f"{st['name']}: " + "; ".join(st["problems"]))
     if problems:
@@ -72,12 +78,19 @@ def check(ctx, stages=None):
     for n, e in enumerate(eras, 1):
         if e["from"] > e["to"]:
             problems.append(f"era {n} ({e['name']}) runs backwards, {e['from']} to {e['to']}")
-        if e.get("image") and not (ctx.dir / e["image"]).is_file():
+        img = e.get("image") or ""
+        if img and (not img.startswith("media/") or ".." in img.split("/")):
+            problems.append(
+                f"era {n} ({e['name']}) names the picture {img}; pictures go in media/ in {ctx.dir}, "
+                f'with "image": "media/<file>" in eras.json, since build copies only that folder'
+            )
+        elif img and not (ctx.dir / img).is_file():
             problems.append(f"era {n} ({e['name']}) names the picture {e['image']}, and {ctx.dir / e['image']} isn't there")
         elif not e.get("image"):
             warnings.append(f"era {n} ({e['name']}) has no picture, and build refuses a page without one unless you --force it")
         if not (e.get("essay") or "").strip() or not e.get("scene"):
             problems.append(f"era {n} ({e['name']}) has no essay or scene yet: liner-notes prompt {slug} eras --era {n}")
+    problems += quote_problems(ctx, eras, warnings)
     for sid in songs:
         s = bank.songs.get(sid)
         if not s:
@@ -89,14 +102,34 @@ def check(ctx, stages=None):
     return holds, problems, warnings
 
 
-def _quote(c, judges):
-    if c.get("quote"):
-        return {k: v for k, v in c["quote"].items() if k in ("j", "q", "dissent")}
-    for jid in judges:
-        v = c["votes"].get(jid) or {}
-        if v.get("vote") == "yes":
-            return {"j": jid, "q": v["why"]}
-    return None
+def quote_problems(ctx, eras, warnings):
+    """A panel quote an era writer marked "wrong" holds the journey while panel.json still carries
+    those exact words; editing the quote clears it, and --force doesn't skip it. "unconfirmed" is a
+    warning."""
+    if not ctx.doc["panel"]:
+        return []
+    p = ctx.read(PANEL.file) or {}
+    judges = p.get("judges") or {}
+    cands = {c.get("song"): c for c in p.get("candidates") or [] if isinstance(c, dict)}
+    out = []
+    for n, e in enumerate(eras, 1):
+        for row in e.get("panel_check") or []:
+            c = cands.get(row.get("song")) or {}
+            q = (c.get("quote") or {}).get("q")
+            if q is None or q != row.get("quote"):
+                continue
+            who = (judges.get(row.get("judge")) or {}).get("name") or row.get("judge")
+            where = f" ({row['source']})" if row.get("source") else ""
+            said = f"{c.get('title')!r}: {who}'s quote {q!r} was marked {row['verdict']} by the era {n} writer: {row.get('note') or 'no note'}{where}"
+            if row.get("verdict") == "wrong":
+                out.append(f"{said}. Edit the quote in panel.json, then liner-notes accept {ctx.slug} panel")
+            elif row.get("verdict") == "unconfirmed":
+                warnings.append(said)
+    return out
+
+
+def _quote(c):
+    return {k: v for k, v in c["quote"].items() if k in ("j", "q", "dissent")}
 
 
 def assemble(slug, force=False):
@@ -126,7 +159,7 @@ def assemble(slug, force=False):
         cand = {c["song"]: c for c in p["candidates"]}
         journey_panel = {
             "judges": {jid: {k: j[k] for k in ("name", "title", "lens") if k in j} for jid, j in p["judges"].items()},
-            "quotes": {sid: q for sid in songs if (q := _quote(cand[sid], p["judges"]))},
+            "quotes": {sid: _quote(cand[sid]) for sid in songs},
         }
     express = front.get("express") or {}
     journey_panel["express"] = {"note": express.get("note", ""), "songs": list(express.get("songs") or [])}

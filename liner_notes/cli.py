@@ -141,22 +141,54 @@ def cmd_build(a):
         return 1 if build_all(public=a.public, force=a.force) else 0
     if not a.slug:
         sys.exit("liner-notes: name a journey, or --all")
-    from .workflow.journeytoml import Problem
-    from .workflow.publish import publish
+    from .workflow import publish as work
 
-    try:
-        live = publish(a.slug)  # a journey in the making goes live here, and only here
-    except Problem as e:
-        sys.exit(f"liner-notes: {e}")
+    if work.work_journey(a.slug) is not None:
+        return _build_work(a, work)
     try:
         _, problems = build(a.slug, out=a.out, public=a.public, video=a.video, force=a.force)
     except Refused as e:
-        if live:
-            live.undo()
         print(f"liner-notes: {e}", file=sys.stderr)
         return 1
-    if live:
-        print(f"{a.slug}: copied from the work folder into your bank, {live.dir}")
+    return 1 if a.strict and problems else 0
+
+
+def _build_work(a, work):
+    """A journey in the making: --out previews it from the work folder; otherwise it's copied into
+    your bank and stays there only if the page is built."""
+    from .build import Refused, build
+    from .workflow.journeytoml import Problem
+
+    if not a.force:
+        missing = work.missing_pictures(a.slug)
+        if missing:
+            for m in missing:
+                print(f"liner-notes: {m}", file=sys.stderr)
+            return 1
+    if a.out:
+        try:
+            _, problems = build(a.slug, out=a.out, public=a.public, video=a.video, force=a.force, bank=work.preview_bank(a.slug))
+        except Refused as e:
+            print(f"liner-notes: {e}", file=sys.stderr)
+            return 1
+        print(f"{a.slug}: a preview from the work folder; it isn't live (build without --out makes it live)")
+        return 1 if a.strict and problems else 0
+    try:
+        live = work.publish(a.slug, replace=a.replace)
+    except Problem as e:
+        sys.exit(f"liner-notes: {e}")
+    built = False
+    try:
+        _, problems = build(a.slug, public=a.public, video=a.video, force=a.force)
+        built = True
+    except Refused as e:
+        print(f"liner-notes: {e}", file=sys.stderr)
+        return 1
+    finally:
+        if not built:
+            live.undo()
+    live.keep()
+    print(f"{a.slug}: copied from the work folder into your bank, {live.dir}")
     return 1 if a.strict and problems else 0
 
 
@@ -349,7 +381,11 @@ def _print_status(st):
         if s["next"]:
             print(f"  {'':10} {'':12} {s['next']}")
     if st.get("picks") is not None:
-        print(f"  panel: {len(st['picks'])} picks, {len(st['close_calls'])} close calls")
+        off = st.get("candidates_not_in_bank") or []
+        print(
+            f"  panel: {len(st['picks'])} picks, {len(st['close_calls'])} close calls"
+            + (f"; {len(off)} candidates not in your bank" if off else "")
+        )
         for o in st.get("overrides") or []:
             print(f"    override: {o['song']} to {o['to']}, because {o['why']}")
     songs = st.get("songs")
@@ -514,6 +550,7 @@ def parser():
     p.add_argument("--video", action="store_true", help="personal use only: muted synced music video on the stage")
     p.add_argument("--force", action="store_true", help="write the page even when something is wrong")
     p.add_argument("--strict", action="store_true", help="exit 1 when anything is missing")
+    p.add_argument("--replace", action="store_true", help="a journey in the making: overwrite your bank copy even if you edited it")
     p.set_defaults(fn=cmd_build)
 
     p = sub.add_parser("media", help="fetch covers and stage pictures into the cache")

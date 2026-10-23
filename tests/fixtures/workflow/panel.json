@@ -124,6 +124,11 @@
    "veto": {
     "by": "pia",
     "why": "This is the 1995 re-recording, not the one that counts."
+   },
+   "quote": {
+    "j": "pia",
+    "q": "The 1995 re-recording, not the one that counts.",
+    "dissent": true
    }
   },
   {
@@ -151,6 +156,10 @@
      "vote": "yes",
      "why": "Good opener."
     }
+   },
+   "quote": {
+    "j": "dov",
+    "q": "It never charted, and the room stayed seated."
    }
   },
   {
@@ -178,6 +187,10 @@
      "vote": "yes",
      "why": "I like it."
     }
+   },
+   "quote": {
+    "j": "ros",
+    "q": "Only the host wanted it."
    }
   }
  ]

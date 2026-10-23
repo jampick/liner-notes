@@ -237,7 +237,7 @@ def file_problems(ctx, stage, obj):
     if stage is HEURISTIC:
         return [] if obj.strip() else ["$: the heuristic is empty"]
     if stage is PANEL:
-        return panel.problems(obj, ctx.rule, ctx.bank)
+        return panel.problems(obj, ctx.rule)
     if stage is DATES:
         return dates_problems(ctx, obj)
     if stage is FRONT:
@@ -264,12 +264,14 @@ def read_output(ctx, stage):
     except UnicodeDecodeError:
         return None, [f"{stage.file} isn't UTF-8 text"]
     if stage is HEURISTIC:
-        return text, file_problems(ctx, stage, text)
+        return text, file_problems(ctx, stage, text) or style_lines(text)
     try:
         obj = json.loads(text)
     except ValueError as e:
         return None, [f"{stage.file} isn't JSON (line {e.lineno}, column {e.colno})"]
-    return obj, file_problems(ctx, stage, obj)
+    # The house style, and your own additions to it, as the file is now: a hand edit is held to
+    # the same bar as a reply.
+    return obj, file_problems(ctx, stage, obj) or style_lines(obj)
 
 
 # status
@@ -288,7 +290,7 @@ def stage_status(ctx, stage):
     rec = ctx.doc["stages"].get(stage.name) or {}
     slug = ctx.slug
     st = {"name": stage.name, "file": stage.file, "state": "accepted", "stale": [], "edited": False}
-    st |= {"by": rec.get("by"), "waiting": [], "problems": [], "next": ""}
+    st |= {"by": rec.get("by"), "waiting": [], "problems": [], "behind": [], "next": ""}
     now = ctx.input_hashes(stage)
     st["waiting"] = [i for i, h in now.items() if h is None]
     rerun = f"liner-notes prompt {slug} {stage.name}" + (f" --era {next_era(ctx) or 1}" if stage is ERAS else "")
@@ -311,18 +313,31 @@ def stage_status(ctx, stage):
         st["next"] = f"fix {stage.file} (the problems are listed), then {accept}"
         return st
     then = rec.get("inputs") or {}
+    behind = []
     if rec.get("output"):
-        for i, h in now.items():
-            if h is None:
-                st["stale"].append(f"{LABEL.get(i, i)} is missing")
-            elif then.get(i) != h:
-                st["stale"].append(f"{LABEL.get(i, i)} changed")
+        # Eras are made one at a time, so each era keeps the inputs it was made from; the stage is
+        # stale while any era is behind, and fresh again once each of those is redone or accepted.
+        parts = rec.get("parts") if stage is ERAS and rec.get("parts") else {"all": then}
+        changed = {}
+        for part, hashes in sorted(parts.items()):
+            for i, h in now.items():
+                if h is None:
+                    changed[f"{LABEL.get(i, i)} is missing"] = 1
+                elif hashes.get(i) != h:
+                    changed[f"{LABEL.get(i, i)} changed"] = 1
+                    if part.startswith("era-"):
+                        behind.append(int(part[4:]))
+        st["stale"] = list(changed)
         if LABEL["songs"] + " changed" in st["stale"]:  # the years follow the list; one reason is enough
             st["stale"] = [x for x in st["stale"] if x != LABEL["bank-years"] + " changed"]
         st["stale"] += brief_stale(stage, rec.get("prompt"))
     st["edited"] = bool(rec.get("output")) and rec.get("by") == "accept" and hashing.of_file(out) != rec["output"]
     if st["stale"]:
         st["state"] = "stale"
+        if behind:
+            eras = sorted(set(behind))
+            rerun = ", ".join(f"liner-notes prompt {slug} eras --era {n}" for n in eras)
+            st["behind"] = eras
         st["next"] = f"rerun it ({rerun}), or if it still holds: {accept}"
     elif rec.get("by") != "accept":
         st["state"] = "draft"
@@ -356,6 +371,8 @@ def status_of(ctx):
     if doc["panel"]:
         c = ctx.panel_count or {}
         out["picks"], out["close_calls"], out["overrides"] = c.get("picks"), c.get("close_calls"), c.get("overrides")
+        cands = [x.get("song") for x in (ctx.read(PANEL.file) or {}).get("candidates") or [] if isinstance(x, dict)]
+        out["candidates_not_in_bank"] = [x for x in cands if x and x not in ctx.bank.songs]
     holds, problems, _ = check(ctx, stages)
     out["holds"], out["problems"] = holds, problems
     out["ready"] = not holds and not problems
@@ -387,6 +404,31 @@ def _section(title, body):
     return f"### {title}\n\n{body.strip()}\n"
 
 
+def rule_text(rule):
+    veto = " and no veto. {y} yes votes and a veto is a close call, not a pick." if rule.get("veto") else "."
+    return f"A song gets in with at least {rule['yes']} yes votes of {rule['of']}" + veto.format(y=rule["yes"])
+
+
+def era_quotes(ctx, era):
+    """The panel quotes the era writer is shown for era N: one per song in the era that has one."""
+    if not ctx.doc["panel"]:
+        return []
+    eras = (ctx.read(ERAS.file) or {}).get("eras") or []
+    if not 1 <= era <= len(eras):
+        return []
+    e = eras[era - 1]
+    dates = {r["song"]: r for r in (ctx.read(DATES.file) or {}).get("songs") or []}
+    p = ctx.read(PANEL.file) or {}
+    judges = p.get("judges") or {}
+    quotes = {c["song"]: c["quote"] for c in p.get("candidates") or [] if isinstance(c, dict) and c.get("quote")}
+    out = []
+    for r in _rows(ctx, ctx.songs or [], dates):
+        q = quotes.get(r["song"])
+        if q and r.get("year") is not None and e["from"] <= r["year"] <= e["to"]:
+            out.append({"song": r["song"], "judge": q["j"], "judge_name": (judges.get(q["j"]) or {}).get("name"), "quote": q["q"]})
+    return out
+
+
 def inputs_text(ctx, stage, era=None):
     doc = ctx.doc
     seed = doc["seed"]
@@ -411,6 +453,16 @@ def inputs_text(ctx, stage, era=None):
         r = ctx.rule
         veto = ", and one judge holds the veto" if r.get("veto") else ""
         parts.append(_section("The rule", f"A song gets in with {r['yes']} yes votes of {r['of']}{veto}. Seat {r['of']} judges."))
+        if not doc["seed"].get("from"):
+            songs = sorted(ctx.bank.songs.items(), key=lambda kv: (kv[1].get("artist", ""), kv[1].get("title", "")))
+            rows = [f"- `{sid}`: {x.get('artist')}, {x.get('title')} ({x.get('year') or 'no year'})" for sid, x in songs]
+            parts.append(
+                _section(
+                    "Songs the bank has",
+                    "Name these by their id. A song from outside this list can stay on the ballot, "
+                    "but as a pick it can't be built until the song is added to the bank.\n\n" + "\n".join(rows),
+                )
+            )
         return "\n".join(parts)
     dates = {r["song"]: r for r in (ctx.read(DATES.file) or {}).get("songs") or []}
     quotes, judges = {}, {}
@@ -426,12 +478,13 @@ def inputs_text(ctx, stage, era=None):
         others = [f"- Era {n}: {x.get('name') or '(no name yet)'}, {x['from']} to {x['to']}" for n, x in enumerate(eras, 1) if n != era]
         if others:
             parts.append(_section("The other eras", "\n".join(others)))
+        shown = {q["song"]: q for q in era_quotes(ctx, era)}
         rows = []
         for r in _rows(ctx, ctx.songs, dates):
             if r.get("year") is not None and e["from"] <= r["year"] <= e["to"]:
-                q = quotes.get(r["song"])
-                if q:
-                    r["panel_quote"] = {"judge": q["j"], "judge_name": (judges.get(q["j"]) or {}).get("name"), "quote": q["q"]}
+                if r["song"] in shown:
+                    q = shown[r["song"]]
+                    r["panel_quote"] = {"judge": q["judge"], "judge_name": q["judge_name"], "quote": q["quote"]}
                 rows.append(r)
         parts.append(_section("The songs in this era", _dump(rows)))
         return "\n".join(parts)
@@ -492,7 +545,8 @@ def render(slug, name, era=None):
             _check_era(ctx, era)
         p = load_brief(stage)
         values = {"inputs": inputs_text(ctx, stage, era), "output_schema": output_schema_text(stage)}
-        text = p.render(**values)
+        extra = {"rule": rule_text(ctx.rule)} if stage is PANEL else {}
+        text = p.render(**values, **extra)
         for k, v in values.items():
             if "{" + k + "}" not in p.text and not (stage is HEURISTIC and k == "output_schema"):
                 text += f"\n\n{v}\n"
@@ -506,12 +560,13 @@ def render(slug, name, era=None):
 
 def _record(ctx, stage, by, inputs, prompt, part=None):
     rec = ctx.doc["stages"].setdefault(stage.name, {})
-    if by == "reply" and stage is ERAS and rec.get("by") == "reply":
-        # Several era replies make one draft: an input an earlier era was written against, which has
-        # moved since, keeps its old hash so the draft shows stale.
-        now = ctx.input_hashes(stage)
-        old = rec.get("inputs") or {}
-        inputs = {i: old[i] if old.get(i) and old[i] != now.get(i) else h for i, h in inputs.items()}
+    if stage is ERAS:
+        # Each era keeps the inputs it was made from. An accept vouches for every era as it stands.
+        if by == "accept":
+            n = len((ctx.read(ERAS.file) or {}).get("eras") or [])
+            rec["parts"] = {f"era-{k}": dict(inputs) for k in range(1, n + 1)}
+        else:
+            rec.setdefault("parts", {})[part] = dict(inputs)
     rec["by"] = by
     rec["on"] = dt.date.today().isoformat()
     rec["inputs"] = inputs
@@ -533,7 +588,11 @@ def _summary(ctx, stage, obj, era=None):
     if stage is PANEL:
         c = panel.count(obj, ctx.rule)
         titles = {x["song"]: x["title"] for x in obj["candidates"]}
-        return f"{len(c['picks'])} picks, {len(c['close_calls'])} close calls: " + ", ".join(titles[s] for s in c["picks"])
+        off = [x["song"] for x in obj["candidates"] if x["song"] not in ctx.bank.songs]
+        picks_off = [titles[s] for s in c["picks"] if s in off]
+        more = f", {len(off)} not in your bank" + (f" ({len(picks_off)} of them picks: {', '.join(picks_off)})" if picks_off else "")
+        head = f"{len(obj['candidates'])} candidates{more}; {len(c['picks'])} picks, {len(c['close_calls'])} close calls"
+        return head + ": " + ", ".join(titles[s] for s in c["picks"])
     if stage is DATES:
         fixed = [r for r in obj["songs"] if r.get("corrected_from") is not None]
         names = {s: (ctx.bank.songs.get(s) or {}).get("title", s) for s in ctx.songs}
@@ -555,6 +614,14 @@ def _merge_era(ctx, reply, era):
     for k in ("from", "to"):
         if k in reply and reply[k] != mine.get(k):
             errs.append(f"$.{k}: era {era} runs {mine.get('from')} to {mine.get('to')}; a reply can't move its bounds")
+    if errs:
+        return None, errs
+    rows = reply.get("panel_check") or []
+    for q in era_quotes(ctx, era):
+        if not any(r.get("song") == q["song"] and r.get("judge") == q["judge"] for r in rows):
+            errs.append(
+                f"$.panel_check: no row for {q['song']}'s quote from {q['judge']} ({q['quote']!r}); every quote shown gets a verdict"
+            )
     if errs:
         return None, errs
     merged = dict(mine)
@@ -591,8 +658,9 @@ def accept_reply(slug, name, text, era=None):
                 obj, errs = _merge_era(ctx, reply, era)
             else:
                 obj = reply
-                errs = panel.resolve(obj, ctx.bank) if stage is PANEL and isinstance(obj, dict) else []
-                errs = errs or file_problems(ctx, stage, obj)
+                if stage is PANEL and isinstance(obj, dict):
+                    panel.resolve(obj, ctx.bank)
+                errs = file_problems(ctx, stage, obj)
             errs = errs or style_lines(reply)
             data = None if errs else json.dumps(obj, indent=1, ensure_ascii=False) + "\n"
         if errs:

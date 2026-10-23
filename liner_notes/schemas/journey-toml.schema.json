@@ -2,7 +2,7 @@
  "$schema": "https://json-schema.org/draft/2020-12/schema",
  "$id": "https://github.com/jampick/liner-notes/schemas/journey-toml.schema.json",
  "title": "journey.toml, read as TOML: what a journey is and where each stage stands",
- "description": "For each stage: by is reply (a chat's reply, not yet accepted) or accept (a person looked); inputs the sha256 of each input when the output was made (taken when its prompt was rendered, for a reply); output the sha256 of the output then; prompt the brief it answered ({id, version, hash}). rendered holds a prompt shown and not yet answered, per part (all, or era-N). status compares these with the files now and reruns nothing.",
+ "description": "For each stage: by is reply (a chat's reply, not yet accepted) or accept (a person looked); inputs the sha256 of each input when the output was made (taken when its prompt was rendered, for a reply); output the sha256 of the output then; prompt the brief it answered ({id, version, hash}). rendered holds a prompt shown and not yet answered, per part (all, or era-N); for eras, parts holds the inputs each era was made from. status compares these with the files now and reruns nothing.",
  "type": "object",
  "required": ["schema", "slug", "title", "panel", "seed"],
  "properties": {
@@ -30,6 +30,11 @@
     "tracks": {"description": "The playlist's entries as Artist - Title, beside songs, for the prompts.", "type": "array", "items": {"type": "string"}}
    }
   },
-  "stages": {"type": "object"}
+  "stages": {"type": "object"},
+  "published": {
+   "description": "What build last copied into your bank: the sha256 of that journey.json, so a hand edit there isn't overwritten without --replace.",
+   "type": "object",
+   "properties": {"hash": {"type": "string"}}
+  }
  }
 }

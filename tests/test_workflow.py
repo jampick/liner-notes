@@ -521,7 +521,6 @@ def _drop_judge(p):
         (lambda p: p["judges"]["dov"].update(name="Pia Hartnell"), "$.judges.dov.name"),
         (_drop_judge, "$.judges"),
         (lambda p: p["candidates"][2].update(veto={"by": "dov", "why": "No."}), "$.candidates[2].veto.by"),
-        (lambda p: p["candidates"][4].update(song="", title="Nobody Knows", artist="No Band"), "$.candidates[4].song"),
     ],
 )
 def test_a_panel_reply_that_breaks_the_rules_is_refused_by_field(ws, tmp_path, capsys, fn, field):
@@ -918,7 +917,7 @@ def test_eras_staleness_clears_once_each_era_is_redone(ws, tmp_path, capsys):
 
 def test_accept_checks_the_house_style_of_a_hand_edit(ws, capsys):
     fill(ws, capsys)
-    edit_json(ws["dir"] / "front.json", lambda d: d.update(kicker="Two songs — 1990 to 1991"))
+    edit_json(ws["dir"] / "front.json", lambda d: d.update(kicker="Two songs \u2014 1990 to 1991"))
     assert "$.kicker" in refused("accept", SLUG, "front")
 
 

@@ -1,6 +1,6 @@
 +++
 id = "vote"
-version = 3
+version = 4
 description = "The panel: five invented judges vote on every candidate against the heuristic, with a reason each."
 +++
 # Liner Notes: panel brief
@@ -19,7 +19,7 @@ One judge holds the veto, usually the purist. The veto means "this isn't the thi
 
 ## The rule
 
-A song gets in with at least 4 yes votes of 5 and no veto. You don't decide that: you vote, and `liner-notes` counts. Four yes votes and a veto is a close call, not a pick.
+{rule} You don't decide that: you vote, and `liner-notes` counts.
 
 ## What to write for every candidate
 
