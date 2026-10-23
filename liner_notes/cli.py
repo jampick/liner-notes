@@ -384,7 +384,7 @@ def _print_status(st):
         off = st.get("candidates_not_in_bank") or []
         print(
             f"  panel: {len(st['picks'])} picks, {len(st['close_calls'])} close calls"
-            + (f"; {len(off)} candidates not in your bank" if off else "")
+            + (f"; {len(off)} candidate{'' if len(off) == 1 else 's'} not in your bank" if off else "")
         )
         for o in st.get("overrides") or []:
             print(f"    override: {o['song']} to {o['to']}, because {o['why']}")

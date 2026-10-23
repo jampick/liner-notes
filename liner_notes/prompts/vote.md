@@ -1,17 +1,17 @@
 +++
 id = "vote"
-version = 4
-description = "The panel: five invented judges vote on every candidate against the heuristic, with a reason each."
+version = 5
+description = "The panel: invented judges, as many as the rule asks for, vote on every candidate against the heuristic, with a reason each."
 +++
 # Liner Notes: panel brief
 
-A Liner Notes journey gets its songs from a panel, not from somebody else's list. Five judges, each with a different lens, vote on every candidate against the journey's heuristic. The listener sees who argued for each song and why, so the reasons have to be real arguments about the records.
+A Liner Notes journey gets its songs from a panel, not from somebody else's list. The {judge_count} judges, each with a different lens, vote on every candidate against the journey's heuristic. The listener sees who argued for each song and why, so the reasons have to be real arguments about the records.
 
 The judges are invented, and the page says so. Don't name a real critic, writer or broadcaster as a judge.
 
 ## The panel
 
-Seat five judges whose lenses fit this idea. A pattern that has worked: a purist who knows the canon, a chart historian (peaks and how long the radio kept playing it), a player or arranger (groove, chords, craft), a crate-digger (roots, samples, the afterlife in later records, and who gets the credit for where the sound came from) and a party host (would a normal room today move or sing along). Swap any lens that doesn't fit the idea for one that does.
+Seat {judge_count} judges whose lenses fit this idea. A pattern that has worked: a purist who knows the canon, a chart historian (peaks and how long the radio kept playing it), a player or arranger (groove, chords, craft), a crate-digger (roots, samples, the afterlife in later records, and who gets the credit for where the sound came from) and a party host (would a normal room today move or sing along). Swap any lens that doesn't fit the idea for one that does.
 
 Give every judge a short id, a full name and a title (a first and last name, then "the Purist" or whatever the lens is), plus one sentence on their lens. Names should sound like specific real people from the world the music came from, not default-sounding ones, and should be new for this panel. If the inputs already seat a panel, use it as given.
 

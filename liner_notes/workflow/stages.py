@@ -43,6 +43,7 @@ FRONT = Stage("front", "front.json", "front")
 ALL = (HEURISTIC, PANEL, DATES, ERAS, FRONT)
 
 LABEL = {"seed": "the seed in journey.toml", "songs": "the song list", "bank-years": "a song's year in the bank"}
+LABEL["panel-quotes"] = "a panel quote in the era"
 WAITING = {"songs": "the panel's picks", "bank-years": "the panel's picks", "seed": "journey.toml"}
 COVERAGE = "isn't on this journey"
 RANK = {"person": 3, "writer": 2, "musicbrainz": 1, None: 0}
@@ -128,8 +129,13 @@ class Ctx:
             return hashing.of_value(years)
         return hashing.of_file(self.dir / name)
 
-    def input_hashes(self, stage):
-        return {i: self.input_hash(i) for i in self.inputs(stage)}
+    def input_hashes(self, stage, era=None):
+        """Each input's hash. For one era, the panel quotes it carries count too, so editing a quote
+        sends that era back to its writer."""
+        out = {i: self.input_hash(i) for i in self.inputs(stage)}
+        if stage is ERAS and era and self.doc["panel"]:
+            out["panel-quotes"] = hashing.of_value([[q["song"], q["judge"], q["quote"]] for q in era_quotes(self, era)])
+        return out
 
 
 # the brief
@@ -320,7 +326,8 @@ def stage_status(ctx, stage):
         parts = rec.get("parts") if stage is ERAS and rec.get("parts") else {"all": then}
         changed = {}
         for part, hashes in sorted(parts.items()):
-            for i, h in now.items():
+            here = ctx.input_hashes(stage, int(part[4:])) if part.startswith("era-") else now
+            for i, h in here.items():
                 if h is None:
                     changed[f"{LABEL.get(i, i)} is missing"] = 1
                 elif hashes.get(i) != h:
@@ -330,6 +337,8 @@ def stage_status(ctx, stage):
         st["stale"] = list(changed)
         if LABEL["songs"] + " changed" in st["stale"]:  # the years follow the list; one reason is enough
             st["stale"] = [x for x in st["stale"] if x != LABEL["bank-years"] + " changed"]
+        if "dates.json changed" in st["stale"]:  # a year moving a song between eras moves its quote too
+            st["stale"] = [x for x in st["stale"] if x != LABEL["panel-quotes"] + " changed"]
         st["stale"] += brief_stale(stage, rec.get("prompt"))
     st["edited"] = bool(rec.get("output")) and rec.get("by") == "accept" and hashing.of_file(out) != rec["output"]
     if st["stale"]:
@@ -402,6 +411,13 @@ def _dump(x):
 
 def _section(title, body):
     return f"### {title}\n\n{body.strip()}\n"
+
+
+WORDS = ("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve")
+
+
+def count_word(n):
+    return WORDS[n] if 0 <= n < len(WORDS) else str(n)
 
 
 def rule_text(rule):
@@ -534,7 +550,7 @@ def render(slug, name, era=None):
         ctx = Ctx(doc)
         stage = ctx.stage(name)
         part = _part(stage, era)
-        now = ctx.input_hashes(stage)
+        now = ctx.input_hashes(stage, era)
         missing = [i for i, h in now.items() if h is None]
         if missing:
             what = ", ".join(
@@ -545,7 +561,7 @@ def render(slug, name, era=None):
             _check_era(ctx, era)
         p = load_brief(stage)
         values = {"inputs": inputs_text(ctx, stage, era), "output_schema": output_schema_text(stage)}
-        extra = {"rule": rule_text(ctx.rule)} if stage is PANEL else {}
+        extra = {"rule": rule_text(ctx.rule), "judge_count": count_word(ctx.rule["of"])} if stage is PANEL else {}
         text = p.render(**values, **extra)
         for k, v in values.items():
             if "{" + k + "}" not in p.text and not (stage is HEURISTIC and k == "output_schema"):
@@ -564,7 +580,7 @@ def _record(ctx, stage, by, inputs, prompt, part=None):
         # Each era keeps the inputs it was made from. An accept vouches for every era as it stands.
         if by == "accept":
             n = len((ctx.read(ERAS.file) or {}).get("eras") or [])
-            rec["parts"] = {f"era-{k}": dict(inputs) for k in range(1, n + 1)}
+            rec["parts"] = {f"era-{k}": ctx.input_hashes(stage, k) for k in range(1, n + 1)}
         else:
             rec.setdefault("parts", {})[part] = dict(inputs)
     rec["by"] = by
@@ -617,6 +633,11 @@ def _merge_era(ctx, reply, era):
     if errs:
         return None, errs
     rows = reply.get("panel_check") or []
+    shown = {(q["song"], q["judge"]): q["quote"] for q in era_quotes(ctx, era)}
+    for i, r in enumerate(rows):
+        want = shown.get((r.get("song"), r.get("judge")))
+        if want is not None and (r.get("quote") or "").strip() != want.strip():
+            errs.append(f"$.panel_check[{i}].quote: {r.get('quote')!r} isn't the quote as it was shown; copy it exactly: {want!r}")
     for q in era_quotes(ctx, era):
         if not any(r.get("song") == q["song"] and r.get("judge") == q["judge"] for r in rows):
             errs.append(
@@ -670,9 +691,10 @@ def accept_reply(slug, name, text, era=None):
         if rendered:
             inputs, prompt = rendered["inputs"], rendered
         else:
-            inputs, prompt = ctx.input_hashes(stage), brief_mark(stage)
+            inputs, prompt = ctx.input_hashes(stage, era), brief_mark(stage)
         _record(ctx, stage, "reply", inputs, prompt, part)
-        changed = [LABEL.get(i, i) for i, h in inputs.items() if h != ctx.input_hash(i)]
+        now = ctx.input_hashes(stage, era)
+        changed = [LABEL.get(i, i) for i, h in inputs.items() if h != now.get(i)]
         summary = _summary(ctx, stage, obj, era)
     return {"file": str(out), "summary": summary, "state": "stale" if changed else "draft", "changed": changed}
 
