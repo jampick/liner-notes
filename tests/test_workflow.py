@@ -1062,3 +1062,14 @@ def test_a_new_reply_field_list_with_the_same_brief_makes_the_stage_stale(ws, mo
     real = fields.field_list
     monkeypatch.setattr(fields, "field_list", lambda s: real(s) + "\n- `mood` (text, optional)")
     assert "front brief" in " ".join(states(capsys)["front"]["stale"])
+
+
+def test_an_era_reply_with_no_quotes_to_check_still_gives_an_empty_panel_check(ws, tmp_path, capsys):
+    m3u = tmp_path / "list.m3u"
+    m3u.write_text(M3U)
+    assert run("new", "Small Trip", "--from", m3u) == 0
+    assert run("reply", SLUG, "heuristic", FIX / "heuristic.md") == 0
+    assert run("reply", SLUG, "dates", FIX / "dates.json") == 0
+    eras_skeleton(ws)
+    assert "$.panel_check" in refused("reply", SLUG, "eras", _era_reply(tmp_path, lambda d: d.pop("panel_check")), "--era", 1)
+    assert run("reply", SLUG, "eras", _era_reply(tmp_path, lambda d: d.update(panel_check=[])), "--era", 1) == 0
