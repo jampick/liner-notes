@@ -24,6 +24,10 @@ def cmd_serve(a):
 def cmd_loudness(a):
     from . import loudness
 
+    if a.action == "restore":
+        if config.load()["loudness"].get("enabled"):  # off: the bridge never touched the volume
+            loudness.restore()
+        return
     table = loudness.Table()
     if a.action == "scan":
         done, failed = loudness.scan(table=table)
@@ -321,7 +325,7 @@ def parser():
     p.set_defaults(fn=cmd_serve)
 
     p = sub.add_parser("loudness", help="per-song loudness: measure the cached audio, or show the table")
-    p.add_argument("action", choices=["show", "scan"], nargs="?", default="show")
+    p.add_argument("action", choices=["show", "scan", "restore"], nargs="?", default="show", help="restore: 0 dB and Autogain back")
     p.set_defaults(fn=cmd_loudness)
 
     p = sub.add_parser("play", help="play a cliamp playlist in order and open its page (for a key)")

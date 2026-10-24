@@ -678,6 +678,8 @@ def make_server(port=PORT, lan=False, token=None, roots=None, adapter=None, tls=
     Returns (server, pairing token); the pairing token is None unless lan. The page token is in state()/token."""
     lib = Library(roots)
     now = Now(lib, adapter or adapters.pick(), observers=[leveler.observe] if leveler else ())
+    if leveler:
+        leveler.poll = lambda: now.adapter.now()
     pair = (token or tokens.pairing_token()) if lan else None
     srv = Server((bind or ("0.0.0.0" if lan else "127.0.0.1"), port), lambda *a: None, max_connections=LAN_MAX_CONNECTIONS if lan else None)
     srv.RequestHandlerClass = make_handler(lib, now, srv.server_address[1], lan, pair, "https" if tls else "http")
@@ -753,8 +755,8 @@ def _stop(*_):
 def serve(port=PORT, lan=False, token=None, tailscale=False, adapter=None, level=False):
     """level: keep every song at the same loudness by setting cliamp's gain (see loudness.py)."""
     setup_logging()
-    signal.signal(signal.SIGTERM, _stop)  # so a systemd stop runs the finally below
     leveler = loudness.Leveler() if level else None
+    old_term = signal.signal(signal.SIGTERM, _stop) if leveler else None  # so a systemd stop runs the finally below
     tls, bind, host = None, None, None
     if tailscale:
         try:
@@ -785,3 +787,4 @@ def serve(port=PORT, lan=False, token=None, tailscale=False, adapter=None, level
         if leveler:
             leveler.close()
             leveler.restore()
+            signal.signal(signal.SIGTERM, old_term)

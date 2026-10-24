@@ -19,6 +19,7 @@ A song with a reading gets target - lufs (never louder than the peak allows, nev
 MAX_BOOST up) on cliamp's PipeWire stream, with Easy Effects bypassed. A song without one plays at
 0 dB with Easy Effects on, so Autogain covers it the first time. Only the bridge's leveler
 changes anything, and only when [loudness] enabled is true in config.toml (the default).
+`liner-notes loudness restore` puts back 0 dB and Autogain; the service runs it after every stop.
 """
 
 import datetime as dt
@@ -42,7 +43,7 @@ MAX_BOOST = 6.0  # dB; a very quiet master stays a little quiet rather than hiss
 CEILING = -1.0  # dBTP: the boost stops where the loudest peak would reach this
 HEARD_SHARE = 0.9  # a song heard live counts once this much of it played without a jump
 JUMP = 3.0  # seconds off the expected position that count as a seek
-SETTLE = 8.0  # seconds after a change before positions are checked for jumps
+SETTLE = 8.0  # seconds after a change to wait for the new song's own position
 AUDIO_EXT = (".webm", ".m4a", ".opus", ".mp3", ".ogg", ".flac", ".wav")
 SUMMARY_I = re.compile(r"\bI:\s+(-?[\d.]+|-inf) LUFS")
 SUMMARY_PEAK = re.compile(r"\bPeak:\s+(-?[\d.]+|-inf) dBFS")
@@ -155,95 +156,76 @@ class Sound:
     def __init__(self, run=subprocess.run):
         self.run = run
 
-    def _out(self, *cmd):
+    def _run(self, *cmd):
+        """(ok, stdout); ok is False when the command failed or couldn't start."""
         try:
-            return self.run(list(cmd), capture_output=True, text=True, timeout=3).stdout
+            r = self.run(list(cmd), capture_output=True, text=True, timeout=3)
         except (OSError, subprocess.SubprocessError):
-            return ""
+            return False, ""
+        return r.returncode == 0, r.stdout or ""
 
     def stream(self):
-        """(sink-input index, sink name) for cliamp's stream, or None."""
+        """cliamp's sink-input index, or None."""
         if not shutil.which("pactl"):
             return None
         try:
-            sinks = {s["index"]: s["name"] for s in json.loads(self._out("pactl", "-f", "json", "list", "short", "sinks") or "[]")}
-            for s in json.loads(self._out("pactl", "-f", "json", "list", "sink-inputs") or "[]"):
+            for s in json.loads(self._run("pactl", "-f", "json", "list", "sink-inputs")[1] or "[]"):
                 if self.APP in ((s.get("properties") or {}).get("application.name") or ""):
-                    return s["index"], sinks.get(s.get("sink"), "")
+                    return s["index"]
         except (ValueError, KeyError, TypeError):
             pass
         return None
 
+    @staticmethod
+    def volume(db):
+        """pactl's absolute volume for a gain in dB. A value with a sign (+3dB, -3dB) would be a step
+        from the current volume, so this is the raw number: PulseAudio's scale is cubic, 65536 = 0 dB."""
+        return str(round(65536 * 10 ** (db / 60)))
+
     def set_gain(self, index, db):
-        self._out("pactl", "set-sink-input-volume", str(index), f"{db:+.1f}dB")
+        """True when pactl took it (False also when the index is gone, e.g. cliamp restarted)."""
+        return self._run("pactl", "set-sink-input-volume", str(index), self.volume(db))[0]
 
     def bypass(self, on):
         if shutil.which("easyeffects"):
-            self._out("easyeffects", "-b", "1" if on else "2")
+            self._run("easyeffects", "-b", "1" if on else "2")
 
-    def recorder(self, sink):
-        """A process writing what goes into `sink` as raw s16le 48 kHz stereo on stdout, or None."""
-        exe = shutil.which("pw-record")
+    def recorder(self, index):
+        """A process writing cliamp's stream alone (sink input `index`) as raw s16le 48 kHz stereo, or None."""
+        exe = shutil.which("parec")
         if not exe:
             return None
-        cmd = [
-            exe,
-            "-P",
-            "{ stream.capture.sink=true node.dont-reconnect=true }",
-            "--target",
-            sink,
-            "--rate",
-            "48000",
-            "--channels",
-            "2",
-            "--format",
-            "s16",
-            "-",
-        ]
+        cmd = [exe, f"--monitor-stream={index}", "--raw", "--format=s16le", "--rate=48000", "--channels=2", "--latency-msec=200"]
         try:
             return subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
         except OSError:
             return None
 
 
-class Listener:
-    """Measures one song as it plays: pw-record into ffmpeg's ebur128, stopped at the next change."""
+METER = ["-nostats", "-hide_banner", "-f", "s16le", "-ar", "48000", "-ac", "2", "-i", "-"]
+METER += ["-af", "ebur128=peak=true:framelog=quiet", "-f", "null", "-"]
 
-    def __init__(self, sound, sink):
-        self.rec = sound.recorder(sink)
-        self.meter, self.text, self.started = None, "", time.monotonic()
+
+class Listener:
+    """Measures one play as it happens: parec into ffmpeg's ebur128. stop() ends the recording at
+    once; result() then waits for ffmpeg's summary."""
+
+    def __init__(self, sound, index):
+        self.rec, self.meter, self.text = sound.recorder(index), None, ""
         exe = ffmpeg()
         if not self.rec or not exe:
-            self.close()
+            self.stop()
             return
-        cmd = [
-            "nice",
-            "-n",
-            "19",
-            exe,
-            "-nostats",
-            "-hide_banner",
-            "-f",
-            "s16le",
-            "-ar",
-            "48000",
-            "-ac",
-            "2",
-            "-i",
-            "-",
-            "-af",
-            "ebur128=peak=true",
-            "-f",
-            "null",
-            "-",
-        ]
         try:
-            self.meter = subprocess.Popen(cmd, stdin=self.rec.stdout, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
+            self.meter = subprocess.Popen(
+                ["nice", "-n", "19", exe, *METER], stdin=self.rec.stdout, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True
+            )
         except OSError:
-            self.close()
+            self.stop()
             return
         self.rec.stdout.close()  # ffmpeg owns the pipe now
-        threading.Thread(target=self._read, name="liner-notes-loudness", daemon=True).start()
+        self.reader = threading.Thread(target=self._read, name="liner-notes-loudness", daemon=True)
+        self.reader.start()
 
     def _read(self):
         self.text = self.meter.stderr.read()
@@ -252,131 +234,183 @@ class Listener:
     def alive(self):
         return self.meter is not None
 
-    def finish(self):
-        """Stop and return (lufs, peak, seconds heard), or None."""
-        if not self.alive:
-            return None
-        heard = time.monotonic() - self.started
-        self.close()
-        try:
-            self.meter.wait(timeout=5)
-        except subprocess.TimeoutExpired:
-            self.meter.kill()
-            return None
-        time.sleep(0.05)  # let the reader thread take the last of stderr
-        got = parse_summary(self.text)
-        return (*got, heard) if got else None
-
-    def close(self):
+    def stop(self):
         if self.rec and self.rec.poll() is None:
             self.rec.terminate()
             try:
                 self.rec.wait(timeout=2)
             except subprocess.TimeoutExpired:
                 self.rec.kill()
+                self.rec.wait()
+
+    def result(self):
+        """(lufs, peak) once ffmpeg has finished, or None."""
+        if not self.alive:
+            return None
+        self.stop()
+        try:
+            self.meter.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            self.meter.kill()
+            self.meter.wait()
+            return None
+        self.reader.join(timeout=1)
+        return parse_summary(self.text)
+
+
+class Play:
+    """What the leveler knows about the play under way: which song, and how much of it was heard.
+
+    Coverage is judged by position, not wall time, so a pause doesn't count as listening: the
+    span from the lowest to the highest position seen must cover HEARD_SHARE of the song, with no
+    jump in between (a paused sample should stay put, a playing one move with the clock)."""
+
+    def __init__(self, key, source, duration, listener=None):
+        self.key, self.source, self.duration, self.listener = key, source, duration, listener
+        self.low = self.high = None
+        self.last = None  # (position, position_at, state)
+        self.clean, self.started, self.settle_until = True, False, time.monotonic() + SETTLE
+
+    def see(self, np):
+        if not self.started:  # cliamp shows the last song's position until the new stream starts
+            if np.position > 3 and time.monotonic() < self.settle_until:
+                return
+            self.started = True
+        if self.last:
+            pos, at, state = self.last
+            expected = pos + (np.position_at - at if state == "playing" else 0.0)
+            if abs(np.position - expected) > JUMP:
+                self.clean = False
+        self.last = (np.position, np.position_at, np.state)
+        self.low = np.position if self.low is None else min(self.low, np.position)
+        self.high = np.position if self.high is None else max(self.high, np.position)
+
+    def heard(self):
+        return 0.0 if self.low is None else self.high - self.low
+
+    def counts(self):
+        return self.clean and bool(self.duration) and self.heard() >= HEARD_SHARE * self.duration
 
 
 class Leveler:
     """Sets cliamp's gain at every song change, and hears the songs it has no reading for.
 
     observe(np, changed) is called by the bridge with every NowPlaying, changed=True when the track
-    is a new one; the work happens on its own thread so the bridge never waits on pactl. A position
-    that jumps (a seek) spoils a live reading, since part of the song went unheard."""
+    is a new one; the work happens on its own thread so the bridge never waits on pactl. The same
+    song coming back from a blip in the player (None and back) isn't a new play; the same song
+    starting over (repeat) is."""
 
-    def __init__(self, table=None, sound=None, target=TARGET):
+    def __init__(self, table=None, sound=None, target=TARGET, poll=None, poll_every=2.0):
+        """poll() returns the player's NowPlaying; while a song is being heard it's asked every
+        poll_every seconds, since cliamp only sends events on changes."""
         self.table, self.sound, self.target = table or Table(), sound or Sound(), target
+        self.poll, self.poll_every = poll, poll_every
         self.lock = threading.Lock()
         self.wake = threading.Condition(self.lock)
-        self.pending, self.closed = None, False
-        self.listening = None  # (key, duration, Listener, clean)
-        self.last = None  # (position, monotonic time, state) of the last update, for jumps
-        self.changed_at = 0.0
-        self.applied = None  # (key, gain or None)
-        threading.Thread(target=self._loop, name="liner-notes-leveler", daemon=True).start()
+        self.pending = None
+        self.play = None  # the Play under way
+        self.index = None  # cliamp's sink-input, looked up again when pactl refuses it
+        self.restore()  # whatever a crashed bridge left behind
+        self.thread = threading.Thread(target=self._loop, name="liner-notes-leveler", daemon=True)
+        self.thread.start()
 
     def observe(self, np, changed):
+        if not np:
+            return
+        key = key_for(np.as_track())
         with self.lock:
-            now = time.monotonic()
-            if changed:
-                self.pending, self.last, self.changed_at = ("track", np), None, now
+            play = self.play
+            same = play is not None and (play.key, play.source) == (key, np.source)
+            restart = same and play.last is not None and np.position < 3 and play.last[0] > np.position + 10
+            if (changed and not same) or restart or (play is None and self.pending is None):
+                self.pending = np
                 self.wake.notify()
                 return
-            if not np or not self.listening:
-                return
-            if now - self.changed_at < SETTLE:  # cliamp shows the old position until the stream starts
-                self.last = None
-                return
-            if self.last and np.state == "playing" and self.last[2] == "playing":
-                expected = self.last[0] + (now - self.last[1])
-                if abs(np.position - expected) > JUMP:
-                    self.listening = (*self.listening[:3], False)
-            self.last = (np.position, now, np.state)
+            if same and play.listener:
+                play.see(np)
 
-    def close(self):
+    def close(self, wait=3.0):
         with self.lock:
-            self.closed, self.pending = True, ("close", None)
+            self.pending = "close"
             self.wake.notify()
+        self.thread.join(wait)
 
     def _loop(self):
         while True:
             with self.lock:
-                self.wake.wait_for(lambda: self.pending is not None)
-                what, np = self.pending
-                self.pending = None
+                if not self.wake.wait_for(lambda: self.pending is not None, self.poll_every):
+                    listening = self.play is not None and self.play.listener is not None
+                    np = None
+                else:
+                    np, self.pending = self.pending, None
+                    old, self.play = self.play, None
+            if np is None:
+                if listening and self.poll:
+                    try:
+                        self.observe(self.poll(), False)
+                    except Exception:
+                        log.debug("poll failed", exc_info=True)
+                continue
             try:
-                self._finish_listening()
-                if what == "close":
+                if old and old.listener:
+                    old.listener.stop()
+                if np == "close":
+                    self._keep(old)
                     return
-                self._apply(np)
+                self._apply(np)  # first, so the gain is in before the new song's first beat
+                self._keep(old)
             except Exception:
                 log.exception("leveling failed")
 
-    def _finish_listening(self):
-        with self.lock:
-            cur, self.listening = self.listening, None
-        if not cur:
+    def _keep(self, play):
+        """Store a live reading when the play was heard through."""
+        if not play or not play.listener:
             return
-        key, duration, listener, clean = cur
-        got = listener.finish()
-        if not got or not clean or not duration or got[2] < HEARD_SHARE * duration or not math.isfinite(got[0]):
+        got = play.listener.result()
+        if not got or not math.isfinite(got[0]) or not play.counts():
             log.info(
-                "loudness of %s not kept (heard %s of %ss%s)",
-                key,
-                f"{got[2]:.0f}s" if got else "nothing",
-                duration,
-                "" if clean else ", jumped",
+                "loudness of %s not kept (heard %.0f of %ss%s)", play.key, play.heard(), play.duration, "" if play.clean else ", jumped"
             )
             return
-        row = self.table.put(key, got[0], got[1], "heard")
-        log.info("loudness of %s heard: %s LUFS, peak %s", key, row["lufs"], row["peak"])
+        row = self.table.put(play.key, got[0], got[1], "heard")
+        log.info("loudness of %s heard: %s LUFS, peak %s", play.key, row["lufs"], row["peak"])
+
+    def _gain(self, db):
+        """Set cliamp's gain; looks for its stream again when the cached one is gone. False: no stream."""
+        if self.index is not None and self.sound.set_gain(self.index, db):
+            return True
+        self.index = self.sound.stream()
+        return self.index is not None and self.sound.set_gain(self.index, db)
 
     def _apply(self, np):
-        if not np or np.state == "stopped" or np.source != "cliamp":  # the gain is on cliamp's stream
-            return
-        track = np.as_track()
-        key = key_for(track)
-        stream = self.sound.stream()
-        if not key or not stream:
-            return
-        index, sink = stream
-        gain = gain_for(self.table.get(key) or {}, self.target)
-        if gain is None:
-            self.sound.set_gain(index, 0.0)
-            self.sound.bypass(False)
-            listener = Listener(self.sound, sink)
-            if listener.alive:
-                with self.lock:
-                    self.listening = (key, np.duration, listener, True)
-            log.info("%s: no reading yet, Autogain covers it%s", key, " while it's measured" if listener.alive else "")
-        else:
-            self.sound.set_gain(index, gain)
-            self.sound.bypass(True)
-            log.info("%s: %+.1f dB", key, gain)
-        self.applied = (key, gain)
+        key, listener = key_for(np.as_track()), None
+        try:
+            if np.state == "stopped" or np.source != "cliamp" or not key:  # the gain is on cliamp's stream
+                return
+            gain = gain_for(self.table.get(key) or {}, self.target)
+            if not self._gain(0.0 if gain is None else gain):
+                return
+            self.sound.bypass(gain is not None)
+            if gain is not None:
+                log.info("%s: %+.1f dB", key, gain)
+                return
+            listener = Listener(self.sound, self.index)
+            listener = listener if listener.alive else None
+            log.info("%s: no reading yet, Autogain covers it%s", key, " while it's measured" if listener else "")
+        finally:
+            with self.lock:  # remembered even when nothing was set, so the next update isn't a new play
+                self.play = Play(key, np.source, np.duration, listener)
 
     def restore(self):
         """Back to 0 dB with Easy Effects on, as if the leveler had never run."""
-        stream = self.sound.stream()
-        if stream:
-            self.sound.set_gain(stream[0], 0.0)
+        self._gain(0.0)
         self.sound.bypass(False)
+
+
+def restore(sound=None):
+    """0 dB on cliamp's stream and Easy Effects on: `liner-notes loudness restore`, after the service stops."""
+    sound = sound or Sound()
+    index = sound.stream()
+    if index is not None:
+        sound.set_gain(index, 0.0)
+    sound.bypass(False)
