@@ -219,6 +219,20 @@ def test_updates_within_a_play_set_nothing_again(tmp_path):
     lev.close()
 
 
+def test_updates_while_a_change_is_applied_dont_apply_it_again(tmp_path):
+    lev, sound = leveler(tmp_path)
+    slow = sound.set_gain
+    sound.set_gain = lambda i, db: time.sleep(0.3) or slow(i, db)
+    lev.observe(np_for("loudloudxxx"), True)
+    for pos in range(10):
+        time.sleep(0.05)
+        lev.observe(np_for("loudloudxxx", position=pos / 10), False)
+    assert wait_for(lambda: len(sound.calls) >= 2)
+    time.sleep(0.5)
+    assert sound.calls == [("gain", 7, -10.0), ("bypass", True)]
+    lev.close()
+
+
 def test_a_new_stream_index_is_found_again(tmp_path):
     lev, sound = leveler(tmp_path)
     lev.observe(np_for("loudloudxxx"), True)

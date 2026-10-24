@@ -307,7 +307,7 @@ class Leveler:
         self.poll, self.poll_every = poll, poll_every
         self.lock = threading.Lock()
         self.wake = threading.Condition(self.lock)
-        self.pending = None
+        self.pending, self.busy = None, False  # busy: an update is being applied
         self.play = None  # the Play under way
         self.index = None  # cliamp's sink-input, looked up again when pactl refuses it
         self.restore()  # whatever a crashed bridge left behind
@@ -322,7 +322,7 @@ class Leveler:
             play = self.play
             same = play is not None and (play.key, play.source) == (key, np.source)
             restart = same and play.last is not None and np.position < 3 and play.last[0] > np.position + 10
-            if (changed and not same) or restart or (play is None and self.pending is None):
+            if (changed and not same) or restart or (play is None and self.pending is None and not self.busy):
                 self.pending = np
                 self.wake.notify()
                 return
@@ -343,7 +343,7 @@ class Leveler:
                     np = None
                 else:
                     np, self.pending = self.pending, None
-                    old, self.play = self.play, None
+                    old, self.play, self.busy = self.play, None, True
             if np is None:
                 if listening and self.poll:
                     try:
@@ -361,6 +361,9 @@ class Leveler:
                 self._keep(old)
             except Exception:
                 log.exception("leveling failed")
+            finally:
+                with self.lock:
+                    self.busy = False
 
     def _keep(self, play):
         """Store a live reading when the play was heard through."""
