@@ -142,11 +142,12 @@ class PlaylistFile:
 class Now:
     """The latest now-playing, kept fresh by the adapter's events and the Clock's sampler."""
 
-    def __init__(self, lib, adapter, latency=None, watch_every=2.0, repick_every=10.0, playlist_file=None):
+    def __init__(self, lib, adapter, latency=None, watch_every=2.0, repick_every=10.0, playlist_file=None, observers=()):
         self.lib, self.adapter = lib, adapter
         self.watch_every, self.repick_every = watch_every, repick_every
         self.np, self.version, self.gen = None, 0, 0
         self.track = None
+        self.observers = list(observers)  # f(np, changed) after every update, changed=True on a new track (the leveler)
         self.cond = threading.Condition()
         self.qrev, self.qjourney, self.qbusy = None, None, False
         self.sticky = None  # ((track, generation), journey, why) for the play under way
@@ -164,13 +165,19 @@ class Now:
     def _update(self, np):
         with self.cond:
             track = np.track_key() if np else None
-            if track != self.track:
+            new_track = track != self.track
+            if new_track:
                 self.track, self.gen = track, self.gen + 1
             changed = (np.key() if np else None) != (self.np.key() if self.np else None)
             self.np = np
             if changed:
                 self.version += 1
                 self.cond.notify_all()
+        for f in self.observers:
+            try:
+                f(np, new_track)
+            except Exception:
+                log.exception("now-playing observer failed")
         if np and np.meta.get("playlist_revision") is not None and np.meta["playlist_revision"] != self.qrev:
             self._queue_hint(np.meta["playlist_revision"])
 

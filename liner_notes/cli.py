@@ -17,7 +17,26 @@ def cmd_serve(a):
     from . import adapters, bridge
 
     adapter = adapters.pick(a.player) if a.player else adapters.pick()
-    bridge.serve(a.port, lan=a.lan, tailscale=a.tailscale, adapter=adapter)
+    level = bool(config.load()["loudness"].get("enabled"))
+    bridge.serve(a.port, lan=a.lan, tailscale=a.tailscale, adapter=adapter, level=level)
+
+
+def cmd_loudness(a):
+    from . import loudness
+
+    table = loudness.Table()
+    if a.action == "scan":
+        done, failed = loudness.scan(table=table)
+        print(f"measured {done}, no reading for {failed}; table in {table.path}")
+        return
+    if not table.rows:
+        print(f"no readings yet in {table.path}; `liner-notes loudness scan` measures the cached audio")
+        return
+    for key, row in sorted(table.rows.items(), key=lambda kv: kv[1].get("lufs") or 0):
+        g = loudness.gain_for(row)
+        print(
+            f"{key:40.40}  {row.get('lufs'):6.1f} LUFS  peak {row.get('peak') if row.get('peak') is not None else '-':>5}  {g:+5.1f} dB  {row.get('from')}"
+        )
 
 
 def playing_journey(port):
@@ -300,6 +319,10 @@ def parser():
     p.add_argument("--lan", action="store_true", help="also serve your network, behind a pairing token (plain http)")
     p.add_argument("--tailscale", action="store_true", help="serve HTTPS on this machine's ts.net name, behind a pairing token")
     p.set_defaults(fn=cmd_serve)
+
+    p = sub.add_parser("loudness", help="per-song loudness: measure the cached audio, or show the table")
+    p.add_argument("action", choices=["show", "scan"], nargs="?", default="show")
+    p.set_defaults(fn=cmd_loudness)
 
     p = sub.add_parser("play", help="play a cliamp playlist in order and open its page (for a key)")
     p.add_argument("name", help="a short name from [keys] in config.toml, or a playlist name")

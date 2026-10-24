@@ -7,6 +7,9 @@
     workspace = 2            where the page opens the first time (then it remembers where you moved it)
     cliamp_workspace = 3     where a cold-started cliamp goes, silently
 
+    [loudness]
+    enabled = true           every song at the same level from its first beat (loudness.py)
+
 Anything missing falls back to the defaults below, so an empty or absent file is fine. There are no
 default keys: a playlist's full name always works, and liner_notes/data/config.example.toml shows the rest.
 """
@@ -22,6 +25,7 @@ DEFAULTS = {
     "keys": {},  # your own playlists, in your config.toml; liner_notes/data/config.example.toml shows the shape
     "stage": {"workspace": 2, "cliamp_workspace": 3, "browser": ""},
     "depth": {"model": "~/.local/state/omarchy/astro-arc/motion/depth-anything-v2-small.onnx"},
+    "loudness": {"enabled": True},  # the bridge sets cliamp's gain per song (loudness.py)
 }
 
 
