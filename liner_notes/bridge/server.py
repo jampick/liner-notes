@@ -23,6 +23,7 @@ import os
 import queue
 import re
 import select
+import signal
 import socket
 import ssl
 import subprocess
@@ -34,7 +35,7 @@ from email.utils import formatdate
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-from .. import __version__, adapters, paths
+from .. import __version__, adapters, loudness, paths
 from ..ids import youtube_id
 from . import contract, media, tokens
 from .bands import Bands
@@ -671,11 +672,14 @@ def setup_logging():
     lg.setLevel(level)
 
 
-def make_server(port=PORT, lan=False, token=None, roots=None, adapter=None, tls=None, bind=None):
+def make_server(port=PORT, lan=False, token=None, roots=None, adapter=None, tls=None, bind=None, leveler=None):
     """tls = (cert file, key file) serves HTTPS, which a phone needs for Wake Lock and offline caching.
+    leveler (a loudness.Leveler) sets cliamp's gain at every song change; only serve() passes one.
     Returns (server, pairing token); the pairing token is None unless lan. The page token is in state()/token."""
     lib = Library(roots)
-    now = Now(lib, adapter or adapters.pick())
+    now = Now(lib, adapter or adapters.pick(), observers=[leveler.observe] if leveler else ())
+    if leveler:
+        leveler.poll = lambda: now.adapter.now()
     pair = (token or tokens.pairing_token()) if lan else None
     srv = Server((bind or ("0.0.0.0" if lan else "127.0.0.1"), port), lambda *a: None, max_connections=LAN_MAX_CONNECTIONS if lan else None)
     srv.RequestHandlerClass = make_handler(lib, now, srv.server_address[1], lan, pair, "https" if tls else "http")
@@ -744,8 +748,15 @@ def announce_pairing(url, tailscale, out=None):
     return f
 
 
-def serve(port=PORT, lan=False, token=None, tailscale=False, adapter=None):
+def _stop(*_):
+    raise KeyboardInterrupt
+
+
+def serve(port=PORT, lan=False, token=None, tailscale=False, adapter=None, level=False):
+    """level: keep every song at the same loudness by setting cliamp's gain (see loudness.py)."""
     setup_logging()
+    leveler = loudness.Leveler() if level else None
+    old_term = signal.signal(signal.SIGTERM, _stop) if leveler else None  # so a systemd stop runs the finally below
     tls, bind, host = None, None, None
     if tailscale:
         try:
@@ -754,7 +765,7 @@ def serve(port=PORT, lan=False, token=None, tailscale=False, adapter=None):
             sys.exit(f"liner-notes: {e}")
         tls, lan = (crt, key), True
     try:
-        srv, pair = make_server(port, lan, token, adapter=adapter, tls=tls, bind=bind)
+        srv, pair = make_server(port, lan, token, adapter=adapter, tls=tls, bind=bind, leveler=leveler)
     except OSError as e:
         busy = e.errno == errno.EADDRINUSE
         holder = port_holder(port) if busy else None
@@ -772,3 +783,8 @@ def serve(port=PORT, lan=False, token=None, tailscale=False, adapter=None):
         srv.serve_forever()
     except KeyboardInterrupt:
         pass
+    finally:
+        if leveler:
+            leveler.close()
+            leveler.restore()
+            signal.signal(signal.SIGTERM, old_term)
