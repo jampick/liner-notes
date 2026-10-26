@@ -198,6 +198,10 @@ def brief_stale(stage, used):
 # checking an output
 
 
+def plural(n, word):
+    return f"{n} {word}" + ("" if n == 1 else "s")
+
+
 def style_lines(obj, at="$"):
     """The house style (style.toml) over every prose field, as `$.field: problem` lines."""
     from ..method import load_style
@@ -270,7 +274,7 @@ def read_output(ctx, stage):
     except UnicodeDecodeError:
         return None, [f"{stage.file} isn't UTF-8 text"]
     if stage is HEURISTIC:
-        return text, file_problems(ctx, stage, text) or style_lines(text)
+        return text, file_problems(ctx, stage, text) or style_lines(text, at=stage.file)
     try:
         obj = json.loads(text)
     except ValueError as e:
@@ -616,7 +620,7 @@ def _summary(ctx, stage, obj, era=None):
         return f"{len(obj['songs'])} years, {len(fixed)} corrected{more}"
     if stage is ERAS:
         e = obj["eras"][era - 1]
-        return f"era {era} of {len(obj['eras'])}, {e.get('name')}: {len(e['essay'].split())} words, {len(e.get('sources') or [])} sources"
+        return f"era {era} of {len(obj['eras'])}, {e.get('name')}: {len(e['essay'].split())} words, {plural(len(e.get('sources') or []), 'source')}"
     return f"{obj['title']}: {obj['kicker']}"
 
 
@@ -671,7 +675,7 @@ def accept_reply(slug, name, text, era=None):
             raise Problem(f"{what}: the {name} stage reads {said}, and it isn't there yet")
         if stage is HEURISTIC:
             obj = replies.unwrap(text).strip()
-            errs = file_problems(ctx, stage, obj) or style_lines(obj)
+            errs = file_problems(ctx, stage, obj) or style_lines(obj, at=stage.file)
             data = obj + "\n"
         else:
             reply = replies.parse_json(text, what)

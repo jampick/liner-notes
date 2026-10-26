@@ -285,6 +285,14 @@ def test_a_reply_that_breaks_the_house_style_is_refused_by_field(ws, tmp_path, c
     assert field in msg
 
 
+def test_a_heuristic_that_breaks_the_house_style_names_its_file(ws, tmp_path, capsys):
+    assert run("new", "Small Trip") == 0
+    r = tmp_path / "reply.md"
+    r.write_text("Songs from a vibrant scene, 1979\u20131990.\n")
+    msg = refused("reply", SLUG, "heuristic", r)
+    assert "heuristic.md:" in msg and "$:" not in msg
+
+
 def test_an_era_reply_fills_one_era_and_cant_move_its_bounds(ws, tmp_path, capsys):
     fill(ws, capsys, upto="dates")
     eras_skeleton(ws)
