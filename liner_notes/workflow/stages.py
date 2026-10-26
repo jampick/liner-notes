@@ -245,7 +245,7 @@ def dates_problems(ctx, d):
 def file_problems(ctx, stage, obj):
     """What's wrong with a stage's whole output file."""
     if stage is HEURISTIC:
-        return [] if obj.strip() else ["$: the heuristic is empty"]
+        return [] if obj.strip() else [f"{stage.file}: the heuristic is empty"]
     if stage is PANEL:
         return panel.problems(obj, ctx.rule)
     if stage is DATES:
@@ -617,7 +617,7 @@ def _summary(ctx, stage, obj, era=None):
         fixed = [r for r in obj["songs"] if r.get("corrected_from") is not None]
         names = {s: (ctx.bank.songs.get(s) or {}).get("title", s) for s in ctx.songs}
         more = ": " + ", ".join(f"{names.get(r['song'], r['song'])} {r['corrected_from']} to {r['year']}" for r in fixed) if fixed else ""
-        return f"{len(obj['songs'])} years, {len(fixed)} corrected{more}"
+        return f"{plural(len(obj['songs']), 'year')}, {len(fixed)} corrected{more}"
     if stage is ERAS:
         e = obj["eras"][era - 1]
         return f"era {era} of {len(obj['eras'])}, {e.get('name')}: {len(e['essay'].split())} words, {plural(len(e.get('sources') or []), 'source')}"

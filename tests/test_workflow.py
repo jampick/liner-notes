@@ -297,7 +297,11 @@ def test_an_era_reply_fills_one_era_and_cant_move_its_bounds(ws, tmp_path, capsy
     fill(ws, capsys, upto="dates")
     eras_skeleton(ws)
     edit_json(ws["dir"] / "eras.json", lambda d: d["eras"].append({"name": "Later", "from": 1992, "to": 1993}))
+    capsys.readouterr()
     assert run("reply", SLUG, "eras", FIX / "era-1.json", "--era", 1) == 0
+    assert len(read_json(FIX / "era-1.json")["sources"]) == 1
+    said = capsys.readouterr().out
+    assert "1 source" in said and "1 sources" not in said
     eras = read_json(ws["dir"] / "eras.json")["eras"]
     assert eras[0]["scene"]["cities"] == ["Leeds"] and eras[0]["from"] == 1990 and eras[0]["name"] == "The small years"
     assert eras[1] == {"name": "Later", "from": 1992, "to": 1993}
