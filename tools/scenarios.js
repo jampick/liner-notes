@@ -501,7 +501,7 @@ scenarios['no-drift-over-cliamp'] = async () => {
 };
 
 // The era card pages back and forth: buttons always, the arrows on a card opened from the era row. On a card that
-// came up during a walk, → still carries on into the era.
+// came up during a walk the arrows keep their old meaning (→ carries on into the era, ← does nothing).
 scenarios['era-paging'] = async () => {
   const m = M();
   put({ now: { ok: false, reason: 'stopped' } });
@@ -513,10 +513,16 @@ scenarios['era-paging'] = async () => {
   const ns = await page.$$eval('#eraRow button', bs => bs.map(b => b.dataset.era));
   if (!check('fixture has three eras or more', names.length >= 3, String(names.length))) return ctx.close();
   await page.click('#eraRow button >> nth=0'); await sleep(400);
-  check('the first era has no previous', await page.isHidden('#eraPrev') && await page.isVisible('#eraNext'));
-  check('the card opens with Into the era focused', await page.evaluate(() => document.activeElement.id) === 'eraGo');
+  const box = async sel => (await page.$(sel)).boundingBox();
+  check('the first era has no previous', await page.isDisabled('#eraPrev') && await page.isHidden('#eraPrev') && await page.isVisible('#eraNext'));
+  check('the card opens with its title focused', await page.evaluate(() => document.activeElement.id) === 'eraTitle');
+  check('the arrows hint shows on a card from the era row', await page.isVisible('#eraHint'));
+  const nextAt = (await box('#eraNext')).x;
+  check('Next era names where it goes', (await page.getAttribute('#eraNext', 'aria-label')) === `Next era: ${names[1]}`);
   await page.click('#eraNext'); await sleep(300);
   check('Next era shows the second era', await text(page, '#eraTitle') === names[1], await text(page, '#eraTitle'));
+  check('Next era stays put when Previous comes back', (await box('#eraNext')).x === nextAt, `${nextAt} -> ${(await box('#eraNext')).x}, num ${await text(page, '#eraNum')}`);
+  check('paging is announced', (await text(page, '#live')).includes(names[1]), await text(page, '#live'));
   await page.keyboard.press('ArrowRight'); await sleep(300);
   check('→ pages to the third era', await text(page, '#eraTitle') === names[2], await text(page, '#eraTitle'));
   await page.keyboard.press('ArrowLeft'); await sleep(300);
@@ -525,15 +531,16 @@ scenarios['era-paging'] = async () => {
   check('Enter on Next era pages, it doesn\'t close the card', await text(page, '#eraTitle') === names[2] && await page.isVisible('#eracard'));
   await page.keyboard.press('ArrowLeft'); await sleep(300);
   await shot(page, 'era-paging');
-  for (let k = 0; k < names.length; k++) { if (await page.isHidden('#eraNext')) break; await page.click('#eraNext'); await sleep(200); }
-  check('the last era has no next', await text(page, '#eraTitle') === names.at(-1) && await page.isVisible('#eraPrev'));
+  for (let k = 0; k < names.length; k++) { if (await page.isDisabled('#eraNext')) break; await page.click('#eraNext'); await sleep(200); }
+  check('the last era has no next', await text(page, '#eraTitle') === names.at(-1) && await page.isHidden('#eraNext') && await page.isVisible('#eraPrev'));
   await page.click('#eraPrev'); await sleep(300);
   const era = ns.at(-2);
   await page.focus('#eraGo'); await page.keyboard.press('Enter'); await sleep(900);
-  check('closing the card gives focus back outside it', await page.evaluate(() => !document.activeElement.closest('#eracard')));
+  check('closing the card gives focus back to the era button that opened it',
+    await page.evaluate(() => document.activeElement === document.querySelector('#eraRow button')), await page.evaluate(() => document.activeElement.outerHTML.slice(0, 80)));
   const at = await page.evaluate(() => +new URLSearchParams(location.hash.slice(1)).get('s'));
   check('Into the era goes to the paged-to era\'s first song', m.stops.find(s => String(s.era) === era)?.n === at && !(await page.isVisible('#eracard')), `${at}`);
-  // A walk: the card that comes up at an era's edge still closes on →.
+  // A walk: the card that comes up at an era's edge keeps the arrows' old meaning. ← does nothing, → carries on.
   const edge = m.stops.findIndex((s, k) => k && s.era !== m.stops[k - 1].era);
   await page.goto(B + `/p/${m.slug}.html#s=${m.stops[edge - 1].n}`); await page.reload(); await sleep(900);
   if (await page.isVisible('#opening')) { await page.click('#start'); await sleep(900); }
@@ -541,6 +548,11 @@ scenarios['era-paging'] = async () => {
   await page.keyboard.press('ArrowRight');
   const card = await within(page, 2000, () => !document.querySelector('#eracard').hidden);
   check('walking over an era\'s edge shows its card', card !== null);
+  const walkTitle = await text(page, '#eraTitle');
+  check('the arrows hint stays off on a walk card', await page.isHidden('#eraHint'));
+  await page.keyboard.press('ArrowLeft'); await sleep(300);
+  check('← on a walk card neither pages nor makes it a chosen card',
+    await text(page, '#eraTitle') === walkTitle && await page.isVisible('#eracard') && !(await page.getAttribute('#eracard', 'data-manual')));
   await page.keyboard.press('ArrowRight');
   check('→ on that card carries on into the era', (await within(page, 2000, () => document.querySelector('#eracard').hidden)) !== null);
   await ctx.close();

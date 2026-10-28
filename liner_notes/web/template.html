@@ -213,8 +213,11 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
 .eracard .inner { position: relative; max-width: 1360px; margin: 0 auto; padding: 56px max(20px, env(safe-area-inset-left, 0px)) 56px; display: flex; flex-direction: column; gap: 22px; }
 .eracard .num { color: var(--amber); }
 .eratop { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-.eratop .num { margin-right: 12px; }
+.eratop .num { margin-right: 12px; min-width: 32ch; }
 .eratop .ghost { min-height: 44px; }
+.eratop .ghost:disabled { visibility: hidden; }
+.eratop .hint { color: var(--faint); font-size: 11px; letter-spacing: .1em; }
+#eraTitle:focus { outline: none; }
 .eracard h2 { margin: 0; font-family: var(--display); font-weight: 300; font-size: clamp(48px, 8vw, 120px); line-height: .9; letter-spacing: -0.03em; max-width: 12ch; }
 .eracard .essay { max-width: 62ch; font-size: 19px; line-height: 1.65; color: #cfdcdb; margin: 0; }
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 18px; max-width: 980px; }
@@ -469,8 +472,8 @@ html, body { overflow-x: clip; }
 <section class="layer eracard" id="eracard" hidden aria-labelledby="eraTitle">
   <img id="eraImg" alt="">
   <div class="inner">
-    <div class="eratop"><div class="mono num" id="eraNum"></div><button class="ghost" id="eraPrev" type="button">← Previous era</button><button class="ghost" id="eraNext" type="button">Next era →</button></div>
-    <h2 id="eraTitle"></h2>
+    <div class="eratop"><div class="mono num" id="eraNum"></div><button class="ghost" id="eraPrev" type="button">← Previous era</button><button class="ghost" id="eraNext" type="button">Next era →</button><span class="mono hint" id="eraHint" hidden>← → to page</span></div>
+    <h2 id="eraTitle" tabindex="-1"></h2>
     <p class="essay" id="eraEssay"></p>
     <div class="facts" id="eraFacts"></div>
     <div class="songs" id="eraSongs"></div>
@@ -868,7 +871,9 @@ html, body { overflow-x: clip; }
     await stopAudio(reduced ? 0.05 : 0.6);
     render(); if (!stg.on) window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
     // A thread is a jump to one song: its era card waits for a walk into that era.
-    if (s.era !== prevEra && !state.erasShown.has(s.era) && state.started && !stg.on && auto !== 'thread') return showEra(s.era, false, auto === 'follow');
+    // Nor does following cliamp swap out a card someone opened from the era row and is reading.
+    const reading = !$('#eracard').hidden && $('#eracard').dataset.manual;
+    if (s.era !== prevEra && !state.erasShown.has(s.era) && state.started && !stg.on && auto !== 'thread' && !reading) return showEra(s.era, false, auto === 'follow');
     if (sync.on) setPaused(!(sync.now && stopFor(sync.now) === s && sync.now.state === 'playing'));
     else if (!state.companion || auto === true) playPreview(true);
   }
@@ -885,8 +890,12 @@ html, body { overflow-x: clip; }
   }
 
   /* ---------- era card ---------- */
+  let eraTimer = 0;
   function showEra(n, manual = false, autoClose = false) {
-    const e = eras.find(x => x.n === n); if (!e) return; state.erasShown.add(n);
+    const e = eras.find(x => x.n === n); if (!e) return;
+    // Paging reads a card without walking into its era, so only the card that opens counts as shown.
+    const paging = !$('#eracard').hidden;
+    if (!paging) state.erasShown.add(n);
     if (e.image) $('#eraImg').src = e.image; $('#eraNum').textContent = `Era ${n} of ${eras.length} · ${e.years}`; $('#eraTitle').textContent = e.name; $('#eraEssay').textContent = e.essay;
     const f = $('#eraFacts'); f.replaceChildren();
     const fact = (h, t) => t && f.append(el('div', {}, el('h3', { text: h }), el('p', { text: t })));
@@ -894,16 +903,23 @@ html, body { overflow-x: clip; }
     fact('Where', (sc.cities || []).join(', ')); fact('Labels', (sc.labels || []).join(', ')); fact('Gear', (sc.gear || []).join(', ')); fact('The artifact', sc.artifact);
     const sg = $('#eraSongs'); sg.replaceChildren(); stops.filter(s => s.era === n).forEach(s => sg.append(el('span', { text: `${s.title}` })));
     stopAudio(0.4).then(() => setPaused(true));
-    const paging = !$('#eracard').hidden;
-    if (!paging) { open('#eracard'); $('#eraGo').focus({ preventScroll: true }); }
-    if (autoClose) setTimeout(() => { if (!$('#eracard').hidden && $('#eraTitle').textContent === e.name) $('#eraGo').click(); }, 7000);
-    $('#eraGo').onclick = () => { close('#eracard'); if (manual) { const k = stops.findIndex(s => s.era === n); if (k !== state.i && stops[state.i].era !== n) return go(k); } if (!state.companion && !sync.on) playPreview(true); };
+    // Focus goes to the title, which is always on screen; Enter there still means Into the era.
+    if (!paging) { open('#eracard'); $('#eraTitle').focus({ preventScroll: true }); }
+    clearTimeout(eraTimer);
+    if (autoClose) eraTimer = setTimeout(() => { if (!$('#eracard').hidden) $('#eraGo').click(); }, 7000);
+    $('#eraGo').onclick = () => { close('#eracard'); state.erasShown.add(n); if (manual) { const k = stops.findIndex(s => s.era === n); if (k !== state.i && stops[state.i].era !== n) return go(k); } if (!state.companion && !sync.on) playPreview(true); };
     // Paging to another era counts as choosing it, so Into the era then goes to its first song.
     const at = eras.indexOf(e), prev = eras[at - 1], next = eras[at + 1];
-    $('#eraPrev').hidden = !prev; $('#eraPrev').onclick = () => prev && showEra(prev.n, true);
-    $('#eraNext').hidden = !next; $('#eraNext').onclick = () => next && showEra(next.n, true);
+    // At the ends a button is disabled and invisible but keeps its place, so the other one doesn't slide under the pointer.
+    const pager = (b, to, word) => { b.disabled = !to; b.title = to ? `${word} era: ${to.name}` : ''; b.setAttribute('aria-label', to ? `${word} era: ${to.name}` : `No ${word.toLowerCase()} era`); b.onclick = () => to && showEra(to.n, true); };
+    pager($('#eraPrev'), prev, 'Previous'); pager($('#eraNext'), next, 'Next');
     $('#eracard').dataset.manual = manual ? '1' : '';
-    if (paging) { $('#eracard').scrollTop = 0; if (document.activeElement && document.activeElement.hidden) $('#eraGo').focus({ preventScroll: true }); }
+    $('#eraHint').hidden = !manual;
+    if (paging) {
+      $('#eracard').scrollTop = 0;
+      if (!document.activeElement || document.activeElement.disabled) $('#eraTitle').focus({ preventScroll: true });
+      live.textContent = `Era ${n} of ${eras.length}, ${e.name}, ${e.years}`;
+    }
   }
 
   /* ---------- map ---------- */
@@ -973,9 +989,9 @@ html, body { overflow-x: clip; }
     if (stg.on) return stageKey(ev);
     const o = anyOpen();
     if (ev.key === 'Escape') { if (o === '#eracard') $('#eraGo').click(); else if (o && o !== '#opening') close(o); return; }
-    // On a card opened from the era row the arrows page through the eras; on one that came up during a walk,
-    // → still carries on into the era, so walking with the arrows doesn't change.
-    if (o === '#eracard' && ev.key === 'ArrowLeft') { ev.preventDefault(); $('#eraPrev').click(); return; }
+    // On a card opened from the era row the arrows page through the eras. On one that came up during a walk they
+    // keep their old meaning: → carries on into the era and ← does nothing.
+    if (o === '#eracard' && ev.key === 'ArrowLeft' && $('#eracard').dataset.manual) { ev.preventDefault(); $('#eraPrev').click(); return; }
     if (o === '#eracard' && ev.key === 'ArrowRight' && $('#eracard').dataset.manual) { ev.preventDefault(); $('#eraNext').click(); return; }
     if (o === '#eracard' && ev.key === 'Enter' && ev.target.closest('#eraPrev, #eraNext')) return;
     if (o === '#eracard' && (ev.key === 'Enter' || ev.key === 'ArrowRight')) { ev.preventDefault(); $('#eraGo').click(); return; }
