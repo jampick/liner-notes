@@ -533,6 +533,7 @@ scenarios['era-paging'] = async () => {
   await shot(page, 'era-paging');
   for (let k = 0; k < names.length; k++) { if (await page.isDisabled('#eraNext')) break; await page.click('#eraNext'); await sleep(200); }
   check('the last era has no next', await text(page, '#eraTitle') === names.at(-1) && await page.isHidden('#eraNext') && await page.isVisible('#eraPrev'));
+  check('reaching the last era moves focus to the title, not the page', await page.evaluate(() => document.activeElement.id) === 'eraTitle', await page.evaluate(() => document.activeElement.tagName));
   await page.click('#eraPrev'); await sleep(300);
   const era = ns.at(-2);
   await page.focus('#eraGo'); await page.keyboard.press('Enter'); await sleep(900);

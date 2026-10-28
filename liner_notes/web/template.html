@@ -216,8 +216,9 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
 .eratop .num { margin-right: 12px; min-width: 32ch; }
 .eratop .ghost { min-height: 44px; }
 .eratop .ghost:disabled { visibility: hidden; }
-.eratop .hint { color: var(--faint); font-size: 11px; letter-spacing: .1em; }
+.eratop .hint { color: var(--mid); font-size: 11px; letter-spacing: .1em; }
 #eraTitle:focus { outline: none; }
+#eraTitle:focus-visible { text-decoration: underline 2px var(--amber); text-underline-offset: 10px; }
 .eracard h2 { margin: 0; font-family: var(--display); font-weight: 300; font-size: clamp(48px, 8vw, 120px); line-height: .9; letter-spacing: -0.03em; max-width: 12ch; }
 .eracard .essay { max-width: 62ch; font-size: 19px; line-height: 1.65; color: #cfdcdb; margin: 0; }
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 18px; max-width: 980px; }
@@ -917,7 +918,8 @@ html, body { overflow-x: clip; }
     $('#eraHint').hidden = !manual;
     if (paging) {
       $('#eracard').scrollTop = 0;
-      if (!document.activeElement || document.activeElement.disabled) $('#eraTitle').focus({ preventScroll: true });
+      const f = document.activeElement;
+      if (!f || f.disabled || !f.closest('#eracard')) $('#eraTitle').focus({ preventScroll: true });
       live.textContent = `Era ${n} of ${eras.length}, ${e.name}, ${e.years}`;
     }
   }
