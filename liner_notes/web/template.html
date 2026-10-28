@@ -212,6 +212,9 @@ details.src ol { margin: 8px 0 0; padding-left: 20px; word-break: break-word; }
 .eracard::before { content: ""; position: fixed; inset: 0; background: linear-gradient(90deg, rgba(5,11,13,.94) 0%, rgba(5,11,13,.78) 48%, rgba(5,11,13,.25) 100%); }
 .eracard .inner { position: relative; max-width: 1360px; margin: 0 auto; padding: 56px max(20px, env(safe-area-inset-left, 0px)) 56px; display: flex; flex-direction: column; gap: 22px; }
 .eracard .num { color: var(--amber); }
+.eratop { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.eratop .num { margin-right: 12px; }
+.eratop .ghost { min-height: 44px; }
 .eracard h2 { margin: 0; font-family: var(--display); font-weight: 300; font-size: clamp(48px, 8vw, 120px); line-height: .9; letter-spacing: -0.03em; max-width: 12ch; }
 .eracard .essay { max-width: 62ch; font-size: 19px; line-height: 1.65; color: #cfdcdb; margin: 0; }
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 18px; max-width: 980px; }
@@ -466,7 +469,7 @@ html, body { overflow-x: clip; }
 <section class="layer eracard" id="eracard" hidden aria-labelledby="eraTitle">
   <img id="eraImg" alt="">
   <div class="inner">
-    <div class="mono num" id="eraNum"></div>
+    <div class="eratop"><div class="mono num" id="eraNum"></div><button class="ghost" id="eraPrev" type="button">← Previous era</button><button class="ghost" id="eraNext" type="button">Next era →</button></div>
     <h2 id="eraTitle"></h2>
     <p class="essay" id="eraEssay"></p>
     <div class="facts" id="eraFacts"></div>
@@ -891,9 +894,16 @@ html, body { overflow-x: clip; }
     fact('Where', (sc.cities || []).join(', ')); fact('Labels', (sc.labels || []).join(', ')); fact('Gear', (sc.gear || []).join(', ')); fact('The artifact', sc.artifact);
     const sg = $('#eraSongs'); sg.replaceChildren(); stops.filter(s => s.era === n).forEach(s => sg.append(el('span', { text: `${s.title}` })));
     stopAudio(0.4).then(() => setPaused(true));
-    open('#eracard');
+    const paging = !$('#eracard').hidden;
+    if (!paging) { open('#eracard'); $('#eraGo').focus({ preventScroll: true }); }
     if (autoClose) setTimeout(() => { if (!$('#eracard').hidden && $('#eraTitle').textContent === e.name) $('#eraGo').click(); }, 7000);
     $('#eraGo').onclick = () => { close('#eracard'); if (manual) { const k = stops.findIndex(s => s.era === n); if (k !== state.i && stops[state.i].era !== n) return go(k); } if (!state.companion && !sync.on) playPreview(true); };
+    // Paging to another era counts as choosing it, so Into the era then goes to its first song.
+    const at = eras.indexOf(e), prev = eras[at - 1], next = eras[at + 1];
+    $('#eraPrev').hidden = !prev; $('#eraPrev').onclick = () => prev && showEra(prev.n, true);
+    $('#eraNext').hidden = !next; $('#eraNext').onclick = () => next && showEra(next.n, true);
+    $('#eracard').dataset.manual = manual ? '1' : '';
+    if (paging) { $('#eracard').scrollTop = 0; if (document.activeElement && document.activeElement.hidden) $('#eraGo').focus({ preventScroll: true }); }
   }
 
   /* ---------- map ---------- */
@@ -963,6 +973,11 @@ html, body { overflow-x: clip; }
     if (stg.on) return stageKey(ev);
     const o = anyOpen();
     if (ev.key === 'Escape') { if (o === '#eracard') $('#eraGo').click(); else if (o && o !== '#opening') close(o); return; }
+    // On a card opened from the era row the arrows page through the eras; on one that came up during a walk,
+    // → still carries on into the era, so walking with the arrows doesn't change.
+    if (o === '#eracard' && ev.key === 'ArrowLeft') { ev.preventDefault(); $('#eraPrev').click(); return; }
+    if (o === '#eracard' && ev.key === 'ArrowRight' && $('#eracard').dataset.manual) { ev.preventDefault(); $('#eraNext').click(); return; }
+    if (o === '#eracard' && ev.key === 'Enter' && ev.target.closest('#eraPrev, #eraNext')) return;
     if (o === '#eracard' && (ev.key === 'Enter' || ev.key === 'ArrowRight')) { ev.preventDefault(); $('#eraGo').click(); return; }
     if (o || LIVE) return;
     const k = ev.key.toLowerCase();

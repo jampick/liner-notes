@@ -500,6 +500,52 @@ scenarios['no-drift-over-cliamp'] = async () => {
   await ctx.close();
 };
 
+// The era card pages back and forth: buttons always, the arrows on a card opened from the era row. On a card that
+// came up during a walk, → still carries on into the era.
+scenarios['era-paging'] = async () => {
+  const m = M();
+  put({ now: { ok: false, reason: 'stopped' } });
+  const { ctx, page } = await newPage();
+  await page.goto(B + `/p/${m.slug}.html#s=1`);
+  await page.click('#start'); await sleep(900);
+  if (await page.isVisible('#eracard')) { await page.click('#eraGo'); await sleep(600); }
+  const names = await page.$$eval('#eraRow button', bs => bs.map(b => b.textContent));
+  const ns = await page.$$eval('#eraRow button', bs => bs.map(b => b.dataset.era));
+  if (!check('fixture has three eras or more', names.length >= 3, String(names.length))) return ctx.close();
+  await page.click('#eraRow button >> nth=0'); await sleep(400);
+  check('the first era has no previous', await page.isHidden('#eraPrev') && await page.isVisible('#eraNext'));
+  check('the card opens with Into the era focused', await page.evaluate(() => document.activeElement.id) === 'eraGo');
+  await page.click('#eraNext'); await sleep(300);
+  check('Next era shows the second era', await text(page, '#eraTitle') === names[1], await text(page, '#eraTitle'));
+  await page.keyboard.press('ArrowRight'); await sleep(300);
+  check('→ pages to the third era', await text(page, '#eraTitle') === names[2], await text(page, '#eraTitle'));
+  await page.keyboard.press('ArrowLeft'); await sleep(300);
+  check('← pages back', await text(page, '#eraTitle') === names[1], await text(page, '#eraTitle'));
+  await page.focus('#eraNext'); await page.keyboard.press('Enter'); await sleep(300);
+  check('Enter on Next era pages, it doesn\'t close the card', await text(page, '#eraTitle') === names[2] && await page.isVisible('#eracard'));
+  await page.keyboard.press('ArrowLeft'); await sleep(300);
+  await shot(page, 'era-paging');
+  for (let k = 0; k < names.length; k++) { if (await page.isHidden('#eraNext')) break; await page.click('#eraNext'); await sleep(200); }
+  check('the last era has no next', await text(page, '#eraTitle') === names.at(-1) && await page.isVisible('#eraPrev'));
+  await page.click('#eraPrev'); await sleep(300);
+  const era = ns.at(-2);
+  await page.focus('#eraGo'); await page.keyboard.press('Enter'); await sleep(900);
+  check('closing the card gives focus back outside it', await page.evaluate(() => !document.activeElement.closest('#eracard')));
+  const at = await page.evaluate(() => +new URLSearchParams(location.hash.slice(1)).get('s'));
+  check('Into the era goes to the paged-to era\'s first song', m.stops.find(s => String(s.era) === era)?.n === at && !(await page.isVisible('#eracard')), `${at}`);
+  // A walk: the card that comes up at an era's edge still closes on →.
+  const edge = m.stops.findIndex((s, k) => k && s.era !== m.stops[k - 1].era);
+  await page.goto(B + `/p/${m.slug}.html#s=${m.stops[edge - 1].n}`); await page.reload(); await sleep(900);
+  if (await page.isVisible('#opening')) { await page.click('#start'); await sleep(900); }
+  if (await page.isVisible('#eracard')) { await page.click('#eraGo'); await sleep(600); }
+  await page.keyboard.press('ArrowRight');
+  const card = await within(page, 2000, () => !document.querySelector('#eracard').hidden);
+  check('walking over an era\'s edge shows its card', card !== null);
+  await page.keyboard.press('ArrowRight');
+  check('→ on that card carries on into the era', (await within(page, 2000, () => document.querySelector('#eracard').hidden)) !== null);
+  await ctx.close();
+};
+
 // A thread's far end on the chart: hovering it (or its line) shows the thread's card there, and following it goes
 // straight to that song, era card or not.
 scenarios['thread-cards'] = async () => {
